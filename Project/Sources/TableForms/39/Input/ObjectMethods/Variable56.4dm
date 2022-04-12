@@ -1,0 +1,1 @@
+viReceiptID:=CounterNew(->[QQQScript:12])

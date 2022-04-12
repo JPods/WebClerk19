@@ -1,0 +1,97 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"WASales": {
+					"type": "webArea",
+					"left": 18,
+					"top": 46,
+					"width": 891,
+					"height": 724,
+					"events": [
+						"onLoad",
+						"onBeginURLLoading",
+						"onURLResourceLoading",
+						"onEndURLLoading",
+						"onURLLoadingError",
+						"onURLFiltering",
+						"onOpenExternalLink"
+					],
+					"webEngine": "embedded",
+					"urlSource": "",
+					"method": "ObjectMethods/WASales.4dm",
+					"dataSource": "WASales",
+					"progressSource": "",
+					"methodsAccessibility": "all"
+				},
+				"b21": {
+					"type": "button",
+					"text": "Inspector",
+					"top": 14,
+					"left": 396,
+					"width": 106,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/b21.4dm"
+				},
+				"b1": {
+					"type": "button",
+					"text": "Inspector",
+					"top": 14,
+					"left": 548,
+					"width": 106,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/b1.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 15,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

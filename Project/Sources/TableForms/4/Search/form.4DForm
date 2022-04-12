@@ -1,0 +1,574 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 19,
+	"markerBody": 260,
+	"markerBreak": 286,
+	"markerFooter": 312,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable47": {
+					"type": "input",
+					"top": 16,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItem",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable47.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable48": {
+					"type": "input",
+					"top": 36,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemDscrp",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable48.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable50": {
+					"type": "input",
+					"top": 55,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemType",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable50.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable51": {
+					"type": "input",
+					"top": 75,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemsProfile1",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable51.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable52": {
+					"type": "input",
+					"top": 94,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemsProfile2",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable52.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable53": {
+					"type": "input",
+					"top": 114,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemsProfile3",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable53.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable54": {
+					"type": "input",
+					"top": 133,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemsProfile4",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable54.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable13725": {
+					"type": "input",
+					"top": 153,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemKeyWords",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable13725.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable49": {
+					"type": "input",
+					"top": 172,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemMfgItemNum",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable49.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable169": {
+					"type": "input",
+					"top": 192,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemMfgID",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable169.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable170": {
+					"type": "input",
+					"top": 211,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemVendorID",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable170.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable171": {
+					"type": "input",
+					"top": 231,
+					"left": 122,
+					"width": 151,
+					"height": 17,
+					"dataSource": "srItemSpecID",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable171.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "button",
+					"top": 24,
+					"left": 300,
+					"width": 73,
+					"height": 21,
+					"dataSource": "b3",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "k",
+					"shortcutAccel": true,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Clear",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable26": {
+					"type": "checkbox",
+					"top": 50,
+					"left": 289,
+					"width": 21,
+					"height": 16,
+					"dataSource": "bMultiSr",
+					"text": ":16789,13",
+					"textAlign": "center",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable24": {
+					"type": "button",
+					"top": 83,
+					"left": 300,
+					"width": 73,
+					"height": 21,
+					"dataSource": "bSearch",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[Return]",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,62",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text27": {
+					"type": "text",
+					"top": 18,
+					"left": 22,
+					"width": 93,
+					"height": 15,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "ItemNum"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 37,
+					"left": 22,
+					"width": 93,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Description"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 57,
+					"left": 22,
+					"width": 93,
+					"height": 15,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "typeID"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 76,
+					"left": 22,
+					"width": 93,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Profile1"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 96,
+					"left": 22,
+					"width": 93,
+					"height": 15,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Profile2"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 115,
+					"left": 22,
+					"width": 93,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Profile3"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 135,
+					"left": 22,
+					"width": 93,
+					"height": 15,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Profile4"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 154,
+					"left": 22,
+					"width": 93,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Keyword"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 174,
+					"left": 22,
+					"width": 93,
+					"height": 15,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Mfr ItemNum"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 52,
+					"left": 306,
+					"width": 89,
+					"height": 15,
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "Combination"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 146,
+					"left": 308,
+					"width": 57,
+					"height": 16,
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": ":16789,92"
+				},
+				"Variable23": {
+					"type": "input",
+					"top": 165,
+					"left": 306,
+					"width": 60,
+					"height": 15,
+					"dataSource": "viRecordsInSelection",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text133": {
+					"type": "text",
+					"top": 193,
+					"left": 22,
+					"width": 93,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "mfrID"
+				},
+				"Text135": {
+					"type": "text",
+					"top": 213,
+					"left": 22,
+					"width": 93,
+					"height": 15,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "VendorID"
+				},
+				"Text136": {
+					"type": "text",
+					"top": 232,
+					"left": 22,
+					"width": 93,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"text": "SpecID"
+				},
+				"Variable3": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"action": "cancel",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

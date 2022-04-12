@@ -1,0 +1,812 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 441,
+	"markerBreak": 463,
+	"markerFooter": 484,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle12": {
+					"type": "rectangle",
+					"top": 551,
+					"left": 211,
+					"width": 39,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"Rectangle13": {
+					"type": "rectangle",
+					"top": 551,
+					"left": 319,
+					"width": 56,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"Rectangle15": {
+					"type": "rectangle",
+					"top": 551,
+					"left": 417,
+					"width": 41,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#AAAAAA"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 37,
+					"left": 82,
+					"width": 540,
+					"height": 110,
+					"fill": "transparent",
+					"stroke": "#555555"
+				},
+				"Variable3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 24,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 29,
+					"height": 24,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "button",
+					"top": 26,
+					"left": 0,
+					"width": 1,
+					"height": 10,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"display": false,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable11": {
+					"type": "button",
+					"top": 2,
+					"left": 100,
+					"width": 88,
+					"height": 16,
+					"dataSource": "b12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Load from folder",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable8": {
+					"type": "button",
+					"top": 19,
+					"left": 363,
+					"width": 73,
+					"height": 16,
+					"dataSource": "b13",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Show Recs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable3540": {
+					"type": "button",
+					"top": 552,
+					"left": 465,
+					"width": 70,
+					"height": 16,
+					"dataSource": "b7",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Prefix Docs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable3540.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable7": {
+					"type": "button",
+					"top": 19,
+					"left": 100,
+					"width": 88,
+					"height": 16,
+					"dataSource": "b11",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Save to folder",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable7.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable24": {
+					"type": "button",
+					"top": 133,
+					"left": 42,
+					"width": 39,
+					"height": 17,
+					"dataSource": "b15",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Apply",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable13": {
+					"type": "button",
+					"top": 2,
+					"left": 465,
+					"width": 75,
+					"height": 16,
+					"dataSource": "b10",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Draft HTML",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable6": {
+					"type": "button",
+					"top": 552,
+					"left": 543,
+					"width": 70,
+					"height": 16,
+					"dataSource": "b9",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Prefix Multi",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable30": {
+					"type": "input",
+					"top": 57,
+					"left": 85,
+					"width": 33,
+					"height": 16,
+					"dataSource": "iLoText5",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"min": 6000,
+					"max": 0,
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable30.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 57,
+					"left": 120,
+					"width": 501,
+					"height": 16,
+					"dataSource": "iLoText2",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 76,
+					"left": 85,
+					"width": 268,
+					"height": 16,
+					"dataSource": "iLoText3",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 76,
+					"left": 355,
+					"width": 266,
+					"height": 16,
+					"dataSource": "iLoText4",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable15": {
+					"type": "input",
+					"top": 95,
+					"left": 85,
+					"width": 536,
+					"height": 16,
+					"dataSource": "iLoText8",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable15.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable16": {
+					"type": "input",
+					"top": 114,
+					"left": 86,
+					"width": 535,
+					"height": 31,
+					"dataSource": "iLoText10",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable16.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable23": {
+					"type": "plugin",
+					"top": 151,
+					"left": 2,
+					"width": 620,
+					"height": 397,
+					"dataSource": "eHttpEdit",
+					"pluginAreaKind": "%CUTAreaListPro",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onPluginArea",
+						"onDataChange"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 38,
+					"left": 85,
+					"width": 536,
+					"height": 16,
+					"dataSource": "iLoText1",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable10.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 79,
+					"left": 6,
+					"width": 71,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Description"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 105,
+					"left": 6,
+					"width": 71,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Keywords"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 50,
+					"left": 6,
+					"width": 71,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Pubish/Title"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 65,
+					"left": 6,
+					"width": 71,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Name/Event"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 15,
+					"left": 320
+				},
+				"Variable31": {
+					"type": "button",
+					"top": 552,
+					"left": 261,
+					"width": 52,
+					"height": 16,
+					"dataSource": "b3",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Suffix",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable31.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable33": {
+					"type": "button",
+					"top": 19,
+					"left": 297,
+					"width": 65,
+					"height": 16,
+					"dataSource": "b5",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Save Recs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable33.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text50": {
+					"type": "text",
+					"top": 554,
+					"left": 0,
+					"width": 69,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Apply2Docs"
+				},
+				"Variable203": {
+					"type": "input",
+					"top": 552,
+					"left": 212,
+					"width": 37,
+					"height": 16,
+					"dataSource": "iLoText11",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"min": 6000,
+					"max": 0,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable205": {
+					"type": "input",
+					"top": 552,
+					"left": 418,
+					"width": 39,
+					"height": 16,
+					"dataSource": "iLoText13",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"min": 6000,
+					"max": 0,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable206": {
+					"type": "input",
+					"top": 552,
+					"left": 320,
+					"width": 54,
+					"height": 16,
+					"dataSource": "iLoText14",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"min": 6000,
+					"max": 0,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text51": {
+					"type": "text",
+					"top": 554,
+					"left": 172,
+					"width": 39,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "from 2"
+				},
+				"Text52": {
+					"type": "text",
+					"top": 554,
+					"left": 375,
+					"width": 39,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "from 2"
+				},
+				"Variable207": {
+					"type": "button",
+					"top": 2,
+					"left": 543,
+					"width": 29,
+					"height": 16,
+					"dataSource": "b12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "TN",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable207.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable324": {
+					"type": "button",
+					"top": 2,
+					"left": 576,
+					"width": 40,
+					"height": 16,
+					"dataSource": "b14",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Form",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable324.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable325": {
+					"type": "button",
+					"top": 2,
+					"left": 297,
+					"width": 65,
+					"height": 16,
+					"dataSource": "b1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Load Recs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable325.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable326": {
+					"type": "button",
+					"top": 2,
+					"left": 363,
+					"width": 73,
+					"height": 16,
+					"dataSource": "b2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Reload Recs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable326.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text89": {
+					"type": "text",
+					"top": 37,
+					"left": 48,
+					"width": 29,
+					"height": 11,
+					"stroke": "#009900",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Path"
+				},
+				"Variable389": {
+					"type": "button",
+					"top": 37,
+					"left": 8,
+					"width": 71,
+					"height": 12,
+					"dataSource": "b6",
+					"text": "Load from Records",
+					"display": false,
+					"method": "ObjectMethods/Variable389.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable685": {
+					"type": "button",
+					"top": 133,
+					"left": 2,
+					"width": 39,
+					"height": 17,
+					"dataSource": "b17",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Show",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable685.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable857": {
+					"type": "button",
+					"top": 2,
+					"left": 190,
+					"width": 102,
+					"height": 16,
+					"dataSource": "b2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Merge Folder/Recs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable857.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1278": {
+					"type": "button",
+					"top": 19,
+					"left": 465,
+					"width": 75,
+					"height": 16,
+					"dataSource": "b7",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssCheckboxLable",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "PartsPages",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable1278.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

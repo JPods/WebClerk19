@@ -1,0 +1,21 @@
+//%attributes = {"publishedWeb":true}
+//p_Page:=""    //cannot be reset here
+pvTerms:=""
+pvTermState:=""
+pvRepAcct:=""
+pvRepCo:=""
+vShipper:=""
+vShipperID:=""
+vFrghtType:=""
+pvFAX:=""
+pvPhone:=""
+pvTimesPrnt:=""
+MfgName:=""
+MfgAddress:=""
+MfgAttn:=""
+MfgPhone:=""
+MfgFAX:=""
+VendAddress:=""
+ShipAddress:=""
+CustAddress:=""
+P_ClearUserVars

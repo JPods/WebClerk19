@@ -1,0 +1,1 @@
+entryEntity.role:=DE_PopUpArray(-><>aJobType)

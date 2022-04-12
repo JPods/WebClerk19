@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="10510">
+	<com.4d>
+		<database>
+			<cache flush_buffer_delay="20s" size_maximum="800" size_minimum="200" size_reserved="1000"/>
+			<cpu_priority/>
+			<data_storage allow_data_read_only="true"/>
+			<misc automatic_transactions="false" standard_xpath="false"/>
+		</database>
+		<interface>
+			<user can_change_password="true" formula_editor_with_full_lists="true" splash_screen="false"/>
+			<misc/>
+			<shortcuts>
+				<add_subform key_code="9" shift="false"/>
+				<cancel_input_form command="true" key_code="46"/>
+				<accept_input_form command="true" key_code="3"/>
+			</shortcuts>
+			<developper allow_read_only_structure="true" display_toolbar="true"/>
+		</interface>
+		<general allow_user_settings="true" startup_environnement="1">
+			<font font_name="Consolas" font_size="14"/>
+		</general>
+		<compiler>
+			<options compilation_path="1" error_file="true" fat_binary="true" range_checking="true"/>
+			<typage default_for_button="2" default_for_numeric="1"/>
+		</compiler>
+		<server>
+			<network>
+				<options publication_name="CommerceExpert_v19_r1" use_legacy_network_layer="false"/>
+				<client_server connections_timeout="60" use_encryption="false"/>
+			</network>
+			<ip_config>
+				<allow_deny_table>
+					<allow_deny address="*" allow="true"/>
+					<allow_deny address="*" allow="true"/>
+				</allow_deny_table>
+			</ip_config>
+			<misc/>
+		</server>
+		<web>
+			<standalone_server>
+				<misc use_4dvar_comments="true" use_js_for_entry_control="false"/>
+				<options>
+					<web_processes max_concurrent="32000" timeout_for_inactives="5"/>
+					<text_conversion standard_set="ISO-8859-1"/>
+					<cache cache_max_size="0" use_4d_web_cache="false"/>
+					<filters allow_4dsync_urls="true"/>
+				</options>
+				<webservices>
+					<server allow_requests="false"/>
+				</webservices>
+				<configuration automatic_session_management="false" port_number="80"/>
+			</standalone_server>
+			<remote>
+				<misc/>
+				<configuration allow_ssl="false" automatic_session_management="false"/>
+				<options>
+					<web_processes timeout_for_inactives="5"/>
+					<filters allow_4dsync_urls="true"/>
+					<cache use_4d_web_cache="false"/>
+				</options>
+			</remote>
+		</web>
+		<deployment>
+			<options/>
+		</deployment>
+		<sql>
+			<publication port_number="19812"/>
+		</sql>
+		<php ip_address="127.0.0.1"/>
+	</com.4d>
+</preferences>

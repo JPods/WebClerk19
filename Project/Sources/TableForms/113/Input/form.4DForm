@@ -1,0 +1,428 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 430,
+	"markerBreak": 430,
+	"markerFooter": 444,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text11": {
+					"type": "text",
+					"top": 97,
+					"left": 44,
+					"width": 430,
+					"height": 12,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "ItemsCarried"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 146,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "UniqueID : "
+				},
+				"Text14": {
+					"type": "text",
+					"top": 177,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ItemNum : "
+				},
+				"Text15": {
+					"type": "text",
+					"top": 208,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Description : "
+				},
+				"Text16": {
+					"type": "text",
+					"top": 239,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "mfrID : "
+				},
+				"Text17": {
+					"type": "text",
+					"top": 270,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Value : "
+				},
+				"Text18": {
+					"type": "text",
+					"top": 301,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "customerID : "
+				},
+				"Text19": {
+					"type": "text",
+					"top": 332,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CustomerName : "
+				},
+				"Text20": {
+					"type": "text",
+					"top": 363,
+					"left": 45,
+					"width": 147,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ZipCustomer : "
+				},
+				"UniqueID": {
+					"type": "input",
+					"top": 144,
+					"left": 198,
+					"width": 86,
+					"height": 17,
+					"dataSource": "[ItemsCarried:113]idUnique:1",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ItemNum": {
+					"type": "input",
+					"top": 175,
+					"left": 198,
+					"width": 418,
+					"height": 17,
+					"dataSource": "[ItemsCarried:113]ItemNum:2",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 206,
+					"left": 198,
+					"width": 438,
+					"height": 17,
+					"dataSource": "[ItemsCarried:113]Description:3",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"mfrID": {
+					"type": "input",
+					"top": 237,
+					"left": 198,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[ItemCarried:113]mfrid:4",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Value": {
+					"type": "input",
+					"top": 268,
+					"left": 198,
+					"width": 97,
+					"height": 17,
+					"dataSource": "[ItemsCarried:113]Value:5",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"customerID": {
+					"type": "input",
+					"top": 299,
+					"left": 198,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[ItemCarried:113]customerid:6",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CustomerName": {
+					"type": "input",
+					"top": 330,
+					"left": 198,
+					"width": 438,
+					"height": 17,
+					"dataSource": "[ItemsCarried:113]CustomerName:7",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ZipCustomer": {
+					"type": "input",
+					"top": 361,
+					"left": 198,
+					"width": 144,
+					"height": 17,
+					"dataSource": "[ItemsCarried:113]ZipCustomer:8",
+					"class": "\cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable63": {
+					"type": "button",
+					"top": 50,
+					"left": 1,
+					"width": 3,
+					"height": 5,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Text11"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 2,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

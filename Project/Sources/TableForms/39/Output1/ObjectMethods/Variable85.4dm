@@ -1,0 +1,5 @@
+CREATE SET:C116([PO:39]; "Current")
+<>ptCurTable:=(->[PO:39])
+CREATE SET:C116(<>ptCurTable->; "<>curSelSet")
+UNLOAD RECORD:C212(<>ptCurTable->)
+<>processAlt:=New process:C317("B2BPOStatusGet"; <>tcPrsMemory; String:C10(Count user processes:C343)+"- POStatus")

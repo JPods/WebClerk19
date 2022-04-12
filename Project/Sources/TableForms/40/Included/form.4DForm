@@ -1,0 +1,669 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1600,
+					"height": 19,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "#FFFFFF"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Field8": {
+					"type": "input",
+					"top": 21,
+					"left": 1,
+					"width": 22,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]complete:25",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 21,
+					"left": 28,
+					"width": 107,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]itemNum:2",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 21,
+					"left": 138,
+					"width": 219,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]description:6",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 21,
+					"left": 377,
+					"width": 47,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]qtyOrdered:3",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 21,
+					"left": 428,
+					"width": 46,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]qtyBackLogged:5",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 21,
+					"left": 478,
+					"width": 47,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]unitCost:7",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 21,
+					"left": 528,
+					"width": 69,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]poNum:1",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 21,
+					"left": 600,
+					"width": 89,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]dateExpected:15",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 21,
+					"left": 694,
+					"width": 89,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]orderNum:16",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 21,
+					"left": 788,
+					"width": 78,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]vendorId:24",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 21,
+					"left": 869,
+					"width": 89,
+					"height": 14,
+					"dataSource": "[QQQPOLine:40]idUnique:32",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 3,
+					"left": 28,
+					"width": 107,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16789,75"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 3,
+					"left": 136,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 3,
+					"left": 138,
+					"width": 236,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16791,241"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 3,
+					"left": 375,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 3,
+					"left": 377,
+					"width": 47,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16790,182"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 3,
+					"left": 526,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 3,
+					"left": 528,
+					"width": 69,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16793,247"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 3,
+					"left": 425,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 3,
+					"left": 428,
+					"width": 46,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16792,56"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 3,
+					"left": 476,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 3,
+					"left": 478,
+					"width": 46,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16793,248"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 3,
+					"left": 598,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 3,
+					"left": 600,
+					"width": 89,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16793,249"
+				},
+				"Line9": {
+					"type": "line",
+					"top": 3,
+					"left": 24,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line10": {
+					"type": "line",
+					"top": 3,
+					"left": 692,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 3,
+					"left": 694,
+					"width": 89,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "SalesOrder"
+				},
+				"Line11": {
+					"type": "line",
+					"top": 4,
+					"left": 786,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 3,
+					"left": 788,
+					"width": 78,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "VendorID"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 4,
+					"left": 34,
+					"width": 100,
+					"height": 13,
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 4,
+					"left": 146,
+					"width": 226,
+					"height": 13,
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line12": {
+					"type": "line",
+					"top": 3,
+					"left": 867,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 3,
+					"left": 869,
+					"width": 89,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "UniqueID"
+				},
+				"Invisible Button6": {
+					"type": "button",
+					"top": 4,
+					"left": 377,
+					"width": 47,
+					"height": 13,
+					"dataSource": "oLoSort3",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 4,
+					"left": 429,
+					"width": 46,
+					"height": 13,
+					"dataSource": "oLoSort4",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button4": {
+					"type": "button",
+					"top": 4,
+					"left": 480,
+					"width": 45,
+					"height": 13,
+					"dataSource": "oLoSort5",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button5": {
+					"type": "button",
+					"top": 4,
+					"left": 531,
+					"width": 70,
+					"height": 13,
+					"dataSource": "oLoSort6",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button7": {
+					"type": "button",
+					"top": 4,
+					"left": 604,
+					"width": 85,
+					"height": 13,
+					"dataSource": "oLoSort7",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button8": {
+					"type": "button",
+					"top": 4,
+					"left": 698,
+					"width": 85,
+					"height": 13,
+					"dataSource": "oLoSort8",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button9": {
+					"type": "button",
+					"top": 4,
+					"left": 791,
+					"width": 74,
+					"height": 13,
+					"dataSource": "oLoSort9",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button10": {
+					"type": "button",
+					"top": 4,
+					"left": 873,
+					"width": 85,
+					"height": 13,
+					"dataSource": "oLoSort10",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line8": {
+					"type": "line",
+					"top": 21,
+					"left": 136,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 21,
+					"left": 375,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line14": {
+					"type": "line",
+					"top": 21,
+					"left": 526,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line15": {
+					"type": "line",
+					"top": 21,
+					"left": 425,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 21,
+					"left": 476,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line17": {
+					"type": "line",
+					"top": 21,
+					"left": 598,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line18": {
+					"type": "line",
+					"top": 21,
+					"left": 24,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line19": {
+					"type": "line",
+					"top": 21,
+					"left": 692,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line20": {
+					"type": "line",
+					"top": 22,
+					"left": 786,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				},
+				"Line21": {
+					"type": "line",
+					"top": 21,
+					"left": 867,
+					"height": 14,
+					"stroke": "#AAAAAA"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

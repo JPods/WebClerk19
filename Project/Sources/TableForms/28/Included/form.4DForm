@@ -1,0 +1,843 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 0,
+					"width": 1600,
+					"height": 18,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "#FFFFFF"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Field12": {
+					"type": "checkbox",
+					"top": 21,
+					"left": 6,
+					"width": 15,
+					"height": 14,
+					"dataSource": "[Payment:28]JournalOK:51",
+					"text": " ",
+					"class": "\cssInput16",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "checkbox",
+					"top": 21,
+					"left": 28,
+					"width": 15,
+					"height": 14,
+					"dataSource": "[Payment:28]JrnlComplete:16",
+					"text": " ",
+					"class": "\cssInput16",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 21,
+					"left": 49,
+					"width": 73,
+					"height": 14,
+					"dataSource": "[Payment:28]customerid:4",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 21,
+					"left": 126,
+					"width": 29,
+					"height": 14,
+					"dataSource": "[Payment:28]TypePayment:6",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field178": {
+					"type": "input",
+					"top": 21,
+					"left": 156,
+					"width": 31,
+					"height": 14,
+					"dataSource": "[Payment:28]CardApproval:15",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 21,
+					"left": 191,
+					"width": 68,
+					"height": 14,
+					"dataSource": "[Payment:28]invoiceNum:3",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 21,
+					"left": 263,
+					"width": 63,
+					"height": 14,
+					"dataSource": "[Payment:28]DateReceived:10",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 21,
+					"left": 330,
+					"width": 78,
+					"height": 14,
+					"dataSource": "[Payment:28]Amount:1",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 21,
+					"left": 412,
+					"width": 78,
+					"height": 14,
+					"dataSource": "[Payment:28]AmountAvailable:19",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 21,
+					"left": 493,
+					"width": 46,
+					"height": 14,
+					"dataSource": "[Payment:28]NameOnAcct:11",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field91": {
+					"type": "input",
+					"top": 21,
+					"left": 542,
+					"width": 64,
+					"height": 14,
+					"dataSource": "[Payment:28]Company:48",
+					"class": "\cssInput16",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field92": {
+					"type": "input",
+					"top": 21,
+					"left": 610,
+					"width": 30,
+					"height": 14,
+					"dataSource": "[Payment:28]BankDeposit:7",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field93": {
+					"type": "input",
+					"top": 21,
+					"left": 643,
+					"width": 30,
+					"height": 14,
+					"dataSource": "[Payment:28]DepositAccount:29",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 21,
+					"left": 677,
+					"width": 98,
+					"height": 14,
+					"dataSource": "[Payment:28]Comment:5",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 21,
+					"left": 778,
+					"width": 64,
+					"height": 14,
+					"dataSource": "[Payment:28]DateDeposit:49",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 21,
+					"left": 844,
+					"width": 64,
+					"height": 14,
+					"dataSource": "[Payment:28]DateOfStatement:30",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 3,
+					"left": 263,
+					"width": 63,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16793,89"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 3,
+					"left": 493,
+					"width": 46,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16790,7"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 3,
+					"left": 191,
+					"width": 68,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16789,23"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 3,
+					"left": 330,
+					"width": 77,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16789,153"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 0,
+					"left": 48,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 3,
+					"left": 127,
+					"width": 50,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "TypePay"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 0,
+					"left": 124,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 3,
+					"left": 49,
+					"width": 72,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16793,90"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 0,
+					"left": 607,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 0,
+					"left": 261,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 0,
+					"left": 328,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line8": {
+					"type": "line",
+					"top": 0,
+					"left": 409,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 3,
+					"left": 412,
+					"width": 76,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16793,91"
+				},
+				"Line9": {
+					"type": "line",
+					"top": 0,
+					"left": 491,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 3,
+					"left": 677,
+					"width": 77,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16789,145"
+				},
+				"Line91": {
+					"type": "line",
+					"top": 0,
+					"left": 540,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line92": {
+					"type": "line",
+					"top": 0,
+					"left": 674,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line93": {
+					"type": "line",
+					"top": 0,
+					"left": 189,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text81": {
+					"type": "text",
+					"top": 3,
+					"left": 542,
+					"width": 64,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Company"
+				},
+				"Text82": {
+					"type": "text",
+					"top": 3,
+					"left": 610,
+					"width": 63,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Bank"
+				},
+				"Line105": {
+					"type": "line",
+					"top": 0,
+					"left": 641,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line310": {
+					"type": "line",
+					"top": 23,
+					"left": 155,
+					"height": 13,
+					"stroke": "#DDDDDD"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 0,
+					"left": 776,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line10": {
+					"type": "line",
+					"top": 0,
+					"left": 843,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 3,
+					"left": 778,
+					"width": 64,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Deposited"
+				},
+				"Line11": {
+					"type": "line",
+					"top": 0,
+					"left": 24,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 3,
+					"left": 844,
+					"width": 64,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Statement"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 3,
+					"left": 1,
+					"width": 23,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "JOK"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 3,
+					"left": 25,
+					"width": 23,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Jrl"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 3,
+					"left": 1,
+					"width": 22,
+					"height": 14,
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 3,
+					"left": 26,
+					"width": 20,
+					"height": 14,
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 3,
+					"left": 54,
+					"width": 63,
+					"height": 14,
+					"dataSource": "oLoSort3",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button4": {
+					"type": "button",
+					"top": 3,
+					"left": 125,
+					"width": 56,
+					"height": 14,
+					"dataSource": "oLoSort4",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button5": {
+					"type": "button",
+					"top": 3,
+					"left": 196,
+					"width": 57,
+					"height": 14,
+					"dataSource": "oLoSort5",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button6": {
+					"type": "button",
+					"top": 3,
+					"left": 266,
+					"width": 57,
+					"height": 14,
+					"dataSource": "oLoSort6",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button7": {
+					"type": "button",
+					"top": 3,
+					"left": 337,
+					"width": 61,
+					"height": 14,
+					"dataSource": "oLoSort7",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button8": {
+					"type": "button",
+					"top": 3,
+					"left": 418,
+					"width": 61,
+					"height": 14,
+					"dataSource": "oLoSort8",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button9": {
+					"type": "button",
+					"top": 3,
+					"left": 498,
+					"width": 38,
+					"height": 14,
+					"dataSource": "oLoSort9",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button10": {
+					"type": "button",
+					"top": 3,
+					"left": 545,
+					"width": 58,
+					"height": 14,
+					"dataSource": "oLoSort10",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button11": {
+					"type": "button",
+					"top": 3,
+					"left": 617,
+					"width": 51,
+					"height": 14,
+					"dataSource": "oLoSort11",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button12": {
+					"type": "button",
+					"top": 3,
+					"left": 676,
+					"width": 63,
+					"height": 14,
+					"dataSource": "oLoSort12",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button13": {
+					"type": "button",
+					"top": 3,
+					"left": 780,
+					"width": 60,
+					"height": 14,
+					"dataSource": "oLoSort13",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button14": {
+					"type": "button",
+					"top": 3,
+					"left": 847,
+					"width": 60,
+					"height": 14,
+					"dataSource": "oLoSort14",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button14.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

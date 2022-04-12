@@ -1,0 +1,1 @@
+diaItemSpec(->aPoItemNum{aPOLineAction}; ->aPoDescpt{aPOLineAction})

@@ -1,0 +1,663 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 267,
+	"markerBreak": 267,
+	"markerFooter": 267,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 301,
+					"left": 95,
+					"width": 349,
+					"height": 91,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 221,
+					"left": 95,
+					"width": 349,
+					"height": 27,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 247,
+					"left": 95,
+					"width": 61,
+					"height": 53,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 247,
+					"left": 241,
+					"width": 64,
+					"height": 53,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Variable3": {
+					"type": "pictureButton",
+					"top": 327,
+					"left": 62,
+					"width": 30,
+					"height": 24,
+					"dataSource": "bDateTime2",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 34,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 8,
+					"left": 98,
+					"width": 262,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "center",
+					"text": ":16789,47"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 222,
+					"left": 7,
+					"width": 86,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16792,218"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 235,
+					"left": 10,
+					"width": 83,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": ":16792,219"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 248,
+					"left": 7,
+					"width": 86,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16792,215"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 261,
+					"left": 34,
+					"width": 59,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16792,220"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 274,
+					"left": 34,
+					"width": 59,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16789,64"
+				},
+				"Variable414": {
+					"type": "button",
+					"top": 8,
+					"left": 372,
+					"width": 72,
+					"height": 19,
+					"dataSource": "b48",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssButtonSmall",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Add Items",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable414.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable14": {
+					"type": "plugin",
+					"top": 32,
+					"left": 10,
+					"width": 434,
+					"height": 186,
+					"dataSource": "eXRefList",
+					"pluginAreaKind": "%CUTAreaListPro",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPluginArea",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable15": {
+					"type": "input",
+					"top": 222,
+					"left": 96,
+					"width": 124,
+					"height": 12,
+					"dataSource": "v2",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable15.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable16": {
+					"type": "input",
+					"top": 222,
+					"left": 221,
+					"width": 222,
+					"height": 12,
+					"dataSource": "v1",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable17": {
+					"type": "input",
+					"top": 235,
+					"left": 96,
+					"width": 283,
+					"height": 12,
+					"dataSource": "v4",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable17.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable18": {
+					"type": "input",
+					"top": 235,
+					"left": 380,
+					"width": 62,
+					"height": 12,
+					"dataSource": "v5",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable18.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable19": {
+					"type": "input",
+					"top": 248,
+					"left": 96,
+					"width": 59,
+					"height": 12,
+					"dataSource": "vR2",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable19.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 248,
+					"left": 242,
+					"width": 62,
+					"height": 12,
+					"dataSource": "vR4",
+					"stroke": "#666666",
+					"class": "\cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable20": {
+					"type": "input",
+					"top": 261,
+					"left": 96,
+					"width": 59,
+					"height": 12,
+					"dataSource": "vR1",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable20.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 261,
+					"left": 242,
+					"width": 62,
+					"height": 12,
+					"dataSource": "vR3",
+					"stroke": "#666666",
+					"class": "\cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable21": {
+					"type": "input",
+					"top": 274,
+					"left": 96,
+					"width": 59,
+					"height": 12,
+					"dataSource": "vi1",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable21.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable24": {
+					"type": "input",
+					"top": 274,
+					"left": 242,
+					"width": 62,
+					"height": 12,
+					"dataSource": "v7",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable22": {
+					"type": "input",
+					"top": 287,
+					"left": 96,
+					"width": 59,
+					"height": 12,
+					"dataSource": "v6",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable22.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable25": {
+					"type": "input",
+					"top": 287,
+					"left": 242,
+					"width": 62,
+					"height": 12,
+					"dataSource": "vR5",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable25.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable23": {
+					"type": "input",
+					"top": 302,
+					"left": 96,
+					"width": 331,
+					"height": 89,
+					"dataSource": "vText1",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable7": {
+					"type": "button",
+					"top": 262,
+					"left": 7,
+					"width": 36,
+					"height": 18,
+					"dataSource": "b46",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssButtonSmall",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,175",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable7.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable8": {
+					"type": "button",
+					"top": 284,
+					"left": 7,
+					"width": 36,
+					"height": 18,
+					"dataSource": "b47",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssButtonSmall",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,176",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 289,
+					"left": 55,
+					"width": 38,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16791,35"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 274,
+					"left": 208,
+					"width": 30,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16789,81"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 247,
+					"left": 176,
+					"width": 62,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16792,221"
+				},
+				"Variable11": {
+					"type": "button",
+					"top": 26,
+					"left": 0,
+					"width": 2,
+					"height": 8,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 303,
+					"left": 46,
+					"width": 47,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16789,145"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 261,
+					"left": 176,
+					"width": 62,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16792,222"
+				},
+				"Variable13": {
+					"type": "button",
+					"top": 261,
+					"left": 182,
+					"width": 58,
+					"height": 12,
+					"dataSource": "b48",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 287,
+					"left": 306,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"text": ":16792,223"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 287,
+					"left": 187,
+					"width": 52,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": ":16792,224"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

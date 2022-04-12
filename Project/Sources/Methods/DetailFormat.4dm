@@ -1,0 +1,11 @@
+//%attributes = {"publishedWeb":true}
+C_LONGINT:C283($1; $doNum)
+C_TEXT:C284($str8)
+C_REAL:C285(pExtCost; pExtPrice)
+$doNum:=Num:C11($1>1)
+$str8:="###,###,##0"+("."*$doNum)+("0"*($1-1)*$doNum)
+OBJECT SET FORMAT:C236(pUnitCost; $str8)
+//SET FORMAT(pDiscnt;$str8)
+OBJECT SET FORMAT:C236(pDscntPrice; $str8)
+OBJECT SET FORMAT:C236(pUnitPrice; $str8)
+OBJECT SET FORMAT:C236(pExtPrice; $str8)

@@ -1,0 +1,669 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1600,
+					"height": 19,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"UniqueID": {
+					"type": "input",
+					"top": 22,
+					"left": 0,
+					"width": 70,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]idUnique:1",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"AlphaKey": {
+					"type": "input",
+					"top": 22,
+					"left": 73,
+					"width": 121,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]WordOnly:3",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"LongKey": {
+					"type": "input",
+					"top": 22,
+					"left": 198,
+					"width": 70,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]EnterValueLong:4",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Class": {
+					"type": "input",
+					"top": 22,
+					"left": 271,
+					"width": 149,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]Reference:6",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"TableNum": {
+					"type": "input",
+					"top": 22,
+					"left": 424,
+					"width": 24,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]tableNum:2",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field79": {
+					"type": "input",
+					"top": 22,
+					"left": 451,
+					"width": 24,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]fieldNum:7",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Variable27": {
+					"type": "input",
+					"top": 22,
+					"left": 481,
+					"width": 51,
+					"height": 14,
+					"dataSource": "iLo35String1",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable27.4dm",
+					"events": [
+						"onDisplayDetail"
+					]
+				},
+				"Variable28": {
+					"type": "input",
+					"top": 22,
+					"left": 536,
+					"width": 80,
+					"height": 14,
+					"dataSource": "iLo35String2",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable28.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Keyword": {
+					"type": "input",
+					"top": 22,
+					"left": 618,
+					"width": 118,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]RelatedAlpha:8",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Keyword1": {
+					"type": "input",
+					"top": 22,
+					"left": 740,
+					"width": 118,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Word:99]RelatedLongInt:9",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 4,
+					"left": 621,
+					"width": 117,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "RelatedAlpha"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 4,
+					"left": 3,
+					"width": 67,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "UniqueID"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 4,
+					"left": 427,
+					"width": 21,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Tbl"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 4,
+					"left": 76,
+					"width": 119,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Keyword/BubbleID"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 4,
+					"left": 274,
+					"width": 144,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Reference/ModelID"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 4,
+					"left": 201,
+					"width": 67,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "EnterNum"
+				},
+				"Text80": {
+					"type": "text",
+					"top": 4,
+					"left": 454,
+					"width": 22,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Fld"
+				},
+				"Text81": {
+					"type": "text",
+					"top": 4,
+					"left": 482,
+					"width": 50,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Table"
+				},
+				"Text82": {
+					"type": "text",
+					"top": 4,
+					"left": 535,
+					"width": 50,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Field"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 4,
+					"left": 743,
+					"width": 117,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "RelatedLongInt"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 3,
+					"left": 0,
+					"width": 65,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 3,
+					"left": 75,
+					"width": 104,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 3,
+					"left": 200,
+					"width": 67,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort3",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button4": {
+					"type": "button",
+					"top": 3,
+					"left": 272,
+					"width": 106,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort4",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button5": {
+					"type": "button",
+					"top": 3,
+					"left": 425,
+					"width": 24,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort5",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button6": {
+					"type": "button",
+					"top": 3,
+					"left": 452,
+					"width": 24,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort6",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button9": {
+					"type": "button",
+					"top": 3,
+					"left": 619,
+					"width": 80,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort7",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button10": {
+					"type": "button",
+					"top": 3,
+					"left": 741,
+					"width": 87,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "oLoSort8",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter": {
+					"type": "splitter",
+					"top": 0,
+					"left": 71,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 0,
+					"left": 196,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter2": {
+					"type": "splitter",
+					"top": 0,
+					"left": 269,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter3": {
+					"type": "splitter",
+					"top": 0,
+					"left": 421,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter4": {
+					"type": "splitter",
+					"top": 0,
+					"left": 449,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter5": {
+					"type": "splitter",
+					"top": 0,
+					"left": 476,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter6": {
+					"type": "splitter",
+					"top": 0,
+					"left": 532,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter7": {
+					"type": "splitter",
+					"top": 0,
+					"left": 616,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter8": {
+					"type": "splitter",
+					"top": 0,
+					"left": 738,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter9": {
+					"type": "splitter",
+					"top": 0,
+					"left": 860,
+					"width": 2,
+					"height": 39,
+					"sizingX": "move",
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

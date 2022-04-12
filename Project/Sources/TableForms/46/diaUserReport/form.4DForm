@@ -1,0 +1,206 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 620,
+	"height": 440,
+	"markerBody": 240,
+	"markerBreak": 240,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 9,
+					"left": 103,
+					"width": 331,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "center",
+					"fontFamily": "System Font",
+					"fontSize": 12,
+					"text": ":16789,47"
+				},
+				"Variable2": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 34,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Return]",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "button",
+					"top": 26,
+					"left": 0,
+					"width": 2,
+					"height": 8,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable6": {
+					"type": "plugin",
+					"top": 39,
+					"left": 7,
+					"width": 607,
+					"height": 360,
+					"dataSource": "eReportList",
+					"pluginAreaKind": "%CUTAreaListPro",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPluginArea",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Variable7": {
+					"type": "button",
+					"top": 403,
+					"left": 419,
+					"width": 95,
+					"height": 20,
+					"dataSource": "b21",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16794,36",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable8": {
+					"type": "button",
+					"top": 403,
+					"left": 519,
+					"width": 95,
+					"height": 20,
+					"dataSource": "b22",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16794,37",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable4": {
+					"type": "button",
+					"top": 408,
+					"left": 376,
+					"width": 10,
+					"height": 14,
+					"dataSource": "iLoInteger15",
+					"display": false,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

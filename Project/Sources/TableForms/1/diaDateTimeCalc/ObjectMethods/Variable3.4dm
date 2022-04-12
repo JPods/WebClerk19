@@ -1,0 +1,1 @@
+vlDTStart:=DateTime_Enter(vdStDate; vtStTime)

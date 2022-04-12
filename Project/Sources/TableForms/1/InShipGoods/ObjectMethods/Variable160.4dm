@@ -1,0 +1,1 @@
+iLoReal10:=vrVendorInvoiceAmount-vrVendorInvoiceFreight-iLoReal9

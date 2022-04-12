@@ -1,0 +1,1 @@
+[UsageSummary:33]PeriodDate:2:=Date_ThisMon([UsageSummary:33]PeriodDate:2; 0)

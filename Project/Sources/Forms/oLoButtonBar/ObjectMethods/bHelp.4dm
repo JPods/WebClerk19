@@ -1,0 +1,1 @@
+﻿﻿HelpPopUp(<>viHelpSet; "oLo_"+Table name:C256(ptCurTable))

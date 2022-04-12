@@ -1,0 +1,85 @@
+﻿{"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":0,"bottomMargin":0,"menuBar":"Menu Bar #1","markerBody":324,"markerBreak":324,"markerFooter":324,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onActivate","onDeactivate","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onUnload","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"Variable9":{"type":"dropdown","top":8,"left":416,"width":120,"height":22,"dataSource":"<>aTableNames","dataSourceTypeHint":"arrayNumber","numberFormat":":16789,13","class":"cssPopups"},"Rectangle2":{"type":"rectangle","top":9,"left":167,"width":186,"height":38,"fill":"transparent","stroke":"#666666"},"Text1":{"type":"text","top":13,"left":358,"width":55,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Table"},"Text2":{"type":"text","top":37,"left":358,"width":55,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":":16792,210"},"Rectangle3":{"type":"rectangle","top":34,"left":416,"width":120,"height":19,"fill":"transparent","stroke":"#555555"},"Field1":{"type":"input","top":10,"left":170,"width":182,"height":17,"dataSource":"[QQQLetter:20]Name:1","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field2":{"type":"input","top":29,"left":170,"width":182,"height":17,"dataSource":"[QQQLetter:20]Topic:3","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field3":{"type":"input","top":35,"left":419,"width":116,"height":17,"dataSource":"[QQQLetter:20]printApplication:4","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field5":{"type":"checkbox","top":57,"left":166,"width":64,"height":14,"dataSource":"[QQQLetter:20]Active:7","text":"Active","stroke":"#000000","class":"cssCheckboxLable"},"Field6":{"type":"checkbox","top":57,"left":228,"width":195,"height":14,"dataSource":"[QQQLetter:20]MySalesService:10","text":"MySalesService","stroke":"#000000","class":"cssCheckboxLable"},"Text44":{"type":"text","top":12,"left":110,"width":54,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Name"},"Text45":{"type":"text","top":31,"left":110,"width":54,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Topic"},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Variable63":{"type":"button","top":50,"left":1,"width":3,"height":5,"dataSource":"bdEnterKey","shortcutKey":"[Enter]","display":false},"WebTech":{"type":"webArea","top":100,"left":3,"width":784,"height":527,"sizingX":"grow","sizingY":"grow","dataSource":"WebTech","urlSource":"Web Area_url","progressSource":"Web Area_progress","contextMenu":"none","borderStyle":"none"},"Edit6":{"type":"button","top":75,"left":142,"width":96,"height":20,"dataSource":"b33","text":"Load TinyMCE","fontFamily":"System Font","fontSize":12},"Edit8":{"type":"button","top":75,"left":26,"width":96,"height":20,"dataSource":"b1","text":"Load Body","fontFamily":"System Font","fontSize":12}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}}}

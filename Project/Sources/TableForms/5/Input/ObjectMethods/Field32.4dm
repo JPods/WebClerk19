@@ -1,0 +1,1 @@
+[Usage:5]PeriodDate:2:=Date:C102(String:C10(Month of:C24([Usage:5]PeriodDate:2))+"/1/"+String:C10(Year of:C25([Usage:5]PeriodDate:2)))

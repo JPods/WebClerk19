@@ -1,0 +1,239 @@
+﻿{
+	"memorizeGeometry": true,
+	"windowMinWidth": 800,
+	"windowMinHeight": 600,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 19,
+	"markerBody": 260,
+	"markerBreak": 286,
+	"markerFooter": 312,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"bDelete": {
+					"type": "button",
+					"top": 22,
+					"left": 275,
+					"width": 74,
+					"height": 23,
+					"dataSource": "bDelete",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[Enter]",
+					"class": "\cssInput",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Delete",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bDelete.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"vtSetName": {
+					"type": "input",
+					"top": 57,
+					"left": 100,
+					"width": 249,
+					"height": 18,
+					"dataSource": "vtSetName",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "plugin",
+					"top": 100,
+					"left": 20,
+					"width": 760,
+					"height": 440,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "eFileList",
+					"pluginAreaKind": "%CUTAreaListPro",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onPluginArea",
+						"onDataChange"
+					],
+					"customProperties": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9InllcyIgPz4KPEFMUCB2ZXJzaW9uPSIweDBhMDAwMTBmIiBjYWNoZVNpemU9IjEwMjQiPgo8Q29sdW1ucyAvPgo8RHJhdyByb3dJbmRlbnQ9IjMuMDA7MS4wMCIgaGVhZGVySW5kZW50PSIzLjAwOzIuMDAiIGZvb3RlckluZGVudD0iMy4wMDsyLjAwIiBzaG93Q29sRGl2aWRlcj0iMSIgY29sRGl2aWRlckNvbG9yPSIjZmY4MDgwODAiIHNob3dSb3dEaXZpZGVyPSIxIiByb3dEaXZpZGVyQ29sb3I9IiNmZjgwODA4MCIgbWlzY0NvbG9yMT0iI2ZmZWVlZWVlIiBtaXNjQ29sb3IyPSIjZmZmZmZmZmYiIG1pc2NDb2xvcjM9IiNmZmVlZWVlZSIgbWlzY0NvbG9yND0iI2ZmZWVlZWVlIiBtaXNjQ29sb3I1PSIjMDBmZmZmZmYiIGFsdFJvd0NvbG9yUGFyYW1zPSIxIiBhbHRSb3dDb2xvcj0iI2ZmZWVlZWVlIiBmcmFtZUNvbG9yPSIjZmYwMDAwMDAiIC8+CjxEcmFnIC8+CjxTZWxlY3QgLz4KPFNvcnQgLz4KPEVkaXQgY2xpY2tIb2xkRGVsYXk9IjMwIiBjb3B5RmllbGREZWxpbWl0ZXI9IiYjeDA5OyIgY29weVJlY29yZERlbGltaXRlcj0iJiN4MEQ7JiN4MEE7IiAvPgo8QVA+CjxDb2x1bW4gZGF0YVR5cGU9IjUiIHdpZHRoPSIwIiB1c2VyV2lkdGg9IjAiIGhlYWRlclRleHQ9IkRlZmF1bHQiPgo8aGVhZGVyU3R5bGUgZm9udD0iTHVjaWRhIEdyYW5kZSIgc2l6ZT0iMTMiIHRleHRDb2xvcj0iI2ZmMDAwMDAwIiBiYWNrQ29sb3I9IiMwMGZmZmZmZiIgLz4KPGxpc3RTdHlsZSBmb250PSJMdWNpZGEgR3JhbmRlIiBzaXplPSIxMyIgdGV4dENvbG9yPSIjZmYwMDAwMDAiIGJhY2tDb2xvcj0iIzAwZmZmZmZmIiAvPgo8Zm9vdGVyU3R5bGUgZm9udD0iTHVjaWRhIEdyYW5kZSIgc2l6ZT0iMTMiIHRleHRDb2xvcj0iI2ZmMDAwMDAwIiBiYWNrQ29sb3I9IiMwMGZmZmZmZiIgLz4KPC9Db2x1bW4+CjwvQVA+CjxQcmludCBicmVha0RpdmlkZXJDb2xvcj0iI2ZmMDAwMDAwIiBoZWFkZXJEaXZpZGVyQ29sb3I9IiNmZjAwMDAwMCIgLz4KPC9BTFA+Cg=="
+				},
+				"bShow": {
+					"type": "button",
+					"top": 22,
+					"left": 99,
+					"width": 74,
+					"height": 23,
+					"dataSource": "bShow",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[Enter]",
+					"class": "\cssInput",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Show",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bShow.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable5": {
+					"type": "button",
+					"top": 37,
+					"left": 0,
+					"width": 2,
+					"height": 11,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 57,
+					"left": 23,
+					"width": 69,
+					"height": 18,
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"textAlign": "right",
+					"text": "Set Name"
+				},
+				"Variable3": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable4": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 34,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"bSave": {
+					"type": "button",
+					"top": 23,
+					"left": 187,
+					"width": 73,
+					"height": 23,
+					"dataSource": "bSave",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[Enter]",
+					"class": "\cssInput",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Save",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bSave.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

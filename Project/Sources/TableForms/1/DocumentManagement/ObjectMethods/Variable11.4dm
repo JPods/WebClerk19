@@ -1,0 +1,1 @@
+DocLoadFromFolder(0)

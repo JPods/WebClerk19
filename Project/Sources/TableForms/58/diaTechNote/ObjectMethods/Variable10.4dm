@@ -1,0 +1,1 @@
+TN_SrRec(->[TechNote:58]Subject:6; Self:C308)

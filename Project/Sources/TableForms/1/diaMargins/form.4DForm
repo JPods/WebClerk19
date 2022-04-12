@@ -1,0 +1,373 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 344,
+	"markerBreak": 344,
+	"markerFooter": 357,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 278,
+					"left": 10,
+					"width": 51,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,153"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 295,
+					"left": 19,
+					"width": 42,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,154"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 312,
+					"left": 19,
+					"width": 42,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,155"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 329,
+					"left": 19,
+					"width": 42,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,156"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 15,
+					"left": 128,
+					"width": 438,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "center",
+					"text": ":16789,47"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 277,
+					"left": 67,
+					"width": 100,
+					"height": 69,
+					"fill": "transparent",
+					"stroke": "#404040"
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 278,
+					"left": 68,
+					"width": 98,
+					"height": 16,
+					"dataSource": "vR1",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 295,
+					"left": 68,
+					"width": 98,
+					"height": 16,
+					"dataSource": "vR2",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 312,
+					"left": 68,
+					"width": 98,
+					"height": 16,
+					"dataSource": "vR3",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 329,
+					"left": 68,
+					"width": 98,
+					"height": 16,
+					"dataSource": "vR4",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "##0.00%",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable13": {
+					"type": "button",
+					"top": 33,
+					"left": 0,
+					"width": 2,
+					"height": 11,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text34": {
+					"type": "text",
+					"top": 282,
+					"left": 224,
+					"width": 324,
+					"height": 46,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Totals are for all lines if no lines are selected or only the lines selected.  Editing effects all lines if none are selected or only those selected."
+				},
+				"Variable3": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 34,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 10,
+					"top": 28,
+					"width": 632,
+					"height": 245,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"method": "ObjectMethods/List Box.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "Margin",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 70,
+							"dataSource": "aQtyOrd"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Description"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 210,
+							"dataSource": "aPartDesc"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Quantity"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 70,
+							"dataSource": "aPartQty"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Price"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 70,
+							"dataSource": "aQtyOnHand"
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Cost"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"width": 70,
+							"dataSource": "aCosts"
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "ItemNum"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "aPartNum"
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 28,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

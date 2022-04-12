@@ -1,0 +1,1 @@
+jDateTimeRecov(vlDTEnd; ->vdEndDate; ->vtEndTime)

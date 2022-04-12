@@ -1,0 +1,1 @@
+diaItemSpec(->aiItemNum{aiLineAction}; ->aiDescpt{aiLineAction})

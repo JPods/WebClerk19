@@ -1,0 +1,138 @@
+{
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 54,
+	"markerBreak": 54,
+	"markerFooter": 54,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onCloseBox",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button": {
+					"type": "button",
+					"top": 6,
+					"left": 10,
+					"width": 44,
+					"height": 16,
+					"dataSource": "Copy",
+					"text": "Copy",
+					"fontFamily": "System Font",
+					"fontSize": 8,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 6,
+					"left": 59,
+					"width": 44,
+					"height": 16,
+					"dataSource": "Clear",
+					"text": "Clear",
+					"fontFamily": "System Font",
+					"fontSize": 8,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"iLoaText1": {
+					"type": "dropdown",
+					"top": 6,
+					"left": 106,
+					"width": 121,
+					"height": 12,
+					"dataSource": "iLoaText1",
+					"method": "ObjectMethods/iLoaText1.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 24,
+					"left": 5,
+					"width": 345,
+					"height": 33,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vMessage",
+					"fontFamily": "Consolas",
+					"fontSize": 10,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"right": 350
+				},
+				"b1": {
+					"type": "button",
+					"top": 6,
+					"left": 307,
+					"width": 43,
+					"height": 12,
+					"dataSource": "query structure",
+					"display": false,
+					"method": "ObjectMethods/b1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 5,
+					"left": 230,
+					"width": 60,
+					"height": 14,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 13
+}

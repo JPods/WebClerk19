@@ -1,0 +1,407 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onDataChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Order_Inc_LB": {
+					"type": "listbox",
+					"left": 11,
+					"top": 32,
+					"width": 614,
+					"height": 210,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"alternateFill": "automatic",
+					"movableRows": false,
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.Order_Inc_LB.data",
+					"currentItemSource": "Form:C1466.Order_Inc_LB.cur",
+					"currentItemPositionSource": "Form:C1466.Order_Inc_LB.pos",
+					"selectedItemsSource": "Form:C1466.Order_Inc_LB.sel",
+					"metaSource": "Order_Inc_LB",
+					"columns": [
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_actionBy_",
+								"text": "ActionBy"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_actionBy_"
+							},
+							"name": "Column_LB_OrderInclude_actionBy_",
+							"className": "LB_OrderInclude",
+							"valueName": "actionBy",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.actionBy",
+							"dataSource": "This:C1470.actionBy",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_action_",
+								"text": "Action"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_action_"
+							},
+							"name": "Column_LB_OrderInclude_action_",
+							"className": "LB_OrderInclude",
+							"valueName": "action",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.action",
+							"dataSource": "This:C1470.action",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_actionDate_",
+								"text": "ActionDate"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_actionDate_"
+							},
+							"name": "Column_LB_OrderInclude_actionDate_",
+							"className": "LB_OrderInclude",
+							"valueName": "actionDate",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionDate",
+							"dataSource": "This:C1470.actionDate",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_actionTime_",
+								"text": "ActionTime"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_actionTime_"
+							},
+							"name": "Column_LB_OrderInclude_actionTime_",
+							"className": "LB_OrderInclude",
+							"valueName": "actionTime",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionTime",
+							"dataSource": "This:C1470.actionTime",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_address1_",
+								"text": "Address1"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_address1_"
+							},
+							"name": "Column_LB_OrderInclude_address1_",
+							"className": "LB_OrderInclude",
+							"valueName": "address1",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.address1",
+							"dataSource": "This:C1470.address1",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_amountBackLog_",
+								"text": "AmountBackLog"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_amountBackLog_"
+							},
+							"name": "Column_LB_OrderInclude_amountBackLog_",
+							"className": "LB_OrderInclude",
+							"valueName": "amountBackLog",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.amountBackLog",
+							"dataSource": "This:C1470.amountBackLog",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_total_",
+								"text": "Total"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_total_"
+							},
+							"name": "Column_LB_OrderInclude_total_",
+							"className": "LB_OrderInclude",
+							"valueName": "total",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.total",
+							"dataSource": "This:C1470.total",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_attention_",
+								"text": "Attention"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_attention_"
+							},
+							"name": "Column_LB_OrderInclude_attention_",
+							"className": "LB_OrderInclude",
+							"valueName": "attention",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.attention",
+							"dataSource": "This:C1470.attention",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_contractDetailTag_",
+								"text": "ContractDetailTag"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_contractDetailTag_"
+							},
+							"name": "Column_LB_OrderInclude_contractDetailTag_",
+							"className": "LB_OrderInclude",
+							"valueName": "contractDetailTag",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.contractDetailTag",
+							"dataSource": "This:C1470.contractDetailTag",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_customerPO_",
+								"text": "CustomerPO"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_customerPO_"
+							},
+							"name": "Column_LB_OrderInclude_customerPO_",
+							"className": "LB_OrderInclude",
+							"valueName": "customerPO",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.customerPO",
+							"dataSource": "This:C1470.customerPO",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_dateInvoiceComp_",
+								"text": "DateInvoiceComp"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_dateInvoiceComp_"
+							},
+							"name": "Column_LB_OrderInclude_dateInvoiceComp_",
+							"className": "LB_OrderInclude",
+							"valueName": "dateInvoiceComp",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.dateInvoiceComp",
+							"dataSource": "This:C1470.dateInvoiceComp",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_dateNeeded_",
+								"text": "DateNeeded"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_dateNeeded_"
+							},
+							"name": "Column_LB_OrderInclude_dateNeeded_",
+							"className": "LB_OrderInclude",
+							"valueName": "dateNeeded",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.dateNeeded",
+							"dataSource": "This:C1470.dateNeeded",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_OrderInclude_orderNum_",
+								"text": "OrderNum"
+							},
+							"footer": {
+								"name": "Footer_LB_OrderInclude_orderNum_"
+							},
+							"name": "Column_LB_OrderInclude_orderNum_",
+							"className": "LB_OrderInclude",
+							"valueName": "orderNum",
+							"align": 4,
+							"format": "###,###,###,##0",
+							"width": 80,
+							"formula": "This.orderNum",
+							"dataSource": "This:C1470.orderNum",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "Query",
+					"top": 7,
+					"left": 18,
+					"width": 65,
+					"height": 16
+				},
+				"searchWidget": {
+					"type": "input",
+					"left": 98,
+					"top": 9,
+					"width": 229,
+					"height": 17,
+					"dataSource": "Form:C1466.Order_Inc_LB.search",
+					"events": [
+						"onAfterEdit"
+					],
+					"method": "ObjectMethods/searchWidget.4dm"
+				},
+				"Subform": {
+					"type": "subform",
+					"left": 637,
+					"top": 27,
+					"width": 387,
+					"height": 215,
+					"dataSource": "Form:C1466.Order_Inc_LB.cur",
+					"table": "Order",
+					"listForm": "",
+					"detailForm": "Order_Inc_Sub",
+					"method": ""
+				}
+			}
+		}
+	],
+	"geometryStamp": 27,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

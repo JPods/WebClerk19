@@ -1,0 +1,1 @@
+entryEntity.Currency:=DE_PopUpArray(Self:C308)

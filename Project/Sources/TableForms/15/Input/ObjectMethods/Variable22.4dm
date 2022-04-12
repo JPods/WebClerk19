@@ -1,0 +1,1 @@
+entryEntity.TypeSale:=DE_PopUpArray(-><>aTypeSale)

@@ -1,0 +1,8 @@
+//%attributes = {"publishedWeb":true}
+C_LONGINT:C283($1)
+ARRAY REAL:C219(LSDistAmts; $1)
+ARRAY TEXT:C222(LSGLAcctNo; $1)
+ARRAY TEXT:C222(LSGLDepNo; $1)
+ARRAY TEXT:C222(LSGLPrfCtr; $1)
+ARRAY TEXT:C222(aGLAll; $1)
+ARRAY TEXT:C222(aGLType; $1)

@@ -1,0 +1,310 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "611pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button14": {
+					"type": "button",
+					"top": 194,
+					"left": 159,
+					"width": 133,
+					"height": 28,
+					"dataSource": "B12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Local Conflicts",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button18": {
+					"type": "button",
+					"top": 157,
+					"left": 159,
+					"width": 133,
+					"height": 29,
+					"dataSource": "B16",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Pending",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button18.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button19": {
+					"type": "button",
+					"top": 157,
+					"left": 297,
+					"width": 133,
+					"height": 29,
+					"dataSource": "B17",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Processed",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button19.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button20": {
+					"type": "button",
+					"top": 157,
+					"left": 436,
+					"width": 85,
+					"height": 29,
+					"dataSource": "B18",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "All",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button20.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 128,
+					"left": 81,
+					"width": 133,
+					"height": 15,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "SyncRecord"
+				},
+				"Button5": {
+					"type": "button",
+					"top": 194,
+					"left": 436,
+					"width": 85,
+					"height": 28,
+					"dataSource": "B34",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Ignored",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 157,
+					"left": 46,
+					"width": 107,
+					"height": 16,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Local"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 238,
+					"left": 46,
+					"width": 107,
+					"height": 16,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Remote"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"top": 87,
+					"left": 159,
+					"width": 194,
+					"height": 30,
+					"dataSource": "bAllTables",
+					"text": "All Relationships",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 274,
+					"left": 159,
+					"width": 133,
+					"height": 29,
+					"dataSource": "B12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Local Conflicts",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button8": {
+					"type": "button",
+					"top": 238,
+					"left": 159,
+					"width": 133,
+					"height": 29,
+					"dataSource": "B16",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Pending",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 238,
+					"left": 297,
+					"width": 133,
+					"height": 29,
+					"dataSource": "B17",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Processed",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button10": {
+					"type": "button",
+					"top": 238,
+					"left": 436,
+					"width": 85,
+					"height": 29,
+					"dataSource": "B18",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "All",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button11": {
+					"type": "button",
+					"top": 274,
+					"left": 436,
+					"width": 85,
+					"height": 29,
+					"dataSource": "B34",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"focusable": false,
+					"text": "Ignored",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 69,
+					"left": 62,
+					"width": 263,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontSize": 12,
+					"text": "From Record Passing Editor -- Look at features"
+				}
+			}
+		}
+	]
+}

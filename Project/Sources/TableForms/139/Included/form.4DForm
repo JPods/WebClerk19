@@ -1,0 +1,289 @@
+﻿{
+	"destination": "listScreen",
+	"inheritedFormTable": 139,
+	"rightMargin": 16,
+	"bottomMargin": 10,
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "612pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1620,
+					"height": 20,
+					"sizingX": "grow",
+					"stroke": "transparent"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": -4,
+					"left": 0,
+					"width": 1620,
+					"height": 23,
+					"sizingX": "grow",
+					"fill": "#C6DAF8",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Splitter": {
+					"type": "splitter",
+					"top": 0,
+					"left": 136,
+					"width": 1,
+					"height": 39,
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter1": {
+					"type": "splitter",
+					"top": 0,
+					"left": 229,
+					"width": 1,
+					"height": 39,
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Splitter11": {
+					"type": "splitter",
+					"top": 0,
+					"left": 297,
+					"width": 1,
+					"height": 39,
+					"dataSource": "Splitter",
+					"splitterMode": "move",
+					"borderStyle": "solid",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 21,
+					"left": 2,
+					"width": 133,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[Discussion:139]TableName:1",
+					"class": "\cssInput16",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 21,
+					"left": 139,
+					"width": 89,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[Discussion:139]customerid:7",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 21,
+					"left": 231,
+					"width": 67,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[Discussion:139]ItemNum:8",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 21,
+					"left": 299,
+					"width": 473,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[Discussion:139]Summary:9",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 3,
+					"left": 2,
+					"width": 132,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "TableName"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 3,
+					"left": 231,
+					"width": 67,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "ItemNum"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 3,
+					"left": 139,
+					"width": 89,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "customerID"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 3,
+					"left": 300,
+					"width": 80,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Summary"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 3,
+					"left": 2,
+					"width": 100,
+					"height": 13,
+					"sizingX": "grow",
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 3,
+					"left": 139,
+					"width": 84,
+					"height": 13,
+					"sizingX": "grow",
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 3,
+					"left": 229,
+					"width": 71,
+					"height": 13,
+					"sizingX": "grow",
+					"dataSource": "oLoSort3",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button5": {
+					"type": "button",
+					"top": 0,
+					"left": 300,
+					"width": 102,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "oLoSort5",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

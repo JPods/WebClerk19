@@ -1,0 +1,1 @@
+QUERY:C277([QQQTemplate:130]; [QQQTemplate:130]Purpose:4=Self:C308->+"@")

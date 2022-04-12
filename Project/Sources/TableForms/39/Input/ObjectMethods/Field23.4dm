@@ -1,0 +1,1 @@
+Exch_dRate(->[PO:39]currency:46; ->[PO:39]exchangeRate:45)

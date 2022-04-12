@@ -1,0 +1,894 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"LB_Included": {
+					"type": "listbox",
+					"left": 8,
+					"top": 8,
+					"width": 537,
+					"height": 350,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"alternateFill": "#FFFAE6",
+					"movableRows": false,
+					"listboxType": "collection",
+					"dataSource": "LB_Included.ents",
+					"currentItemSource": "LB_Included.cur",
+					"currentItemPositionSource": "LB_Included.pos",
+					"selectedItemsSource": "LB_Included.sel",
+					"columns": [
+						{
+							"header": {
+								"name": "Header_LB_Invoice_actionBy_",
+								"text": "ActionBy"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionBy_"
+							},
+							"name": "Column_LB_Invoice_actionBy_",
+							"className": "LB_Invoice",
+							"valueName": "actionBy",
+							"align": 1,
+							"format": "",
+							"width": 87,
+							"formula": "This.actionBy",
+							"dataSource": "This:C1470.actionBy",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_action_",
+								"text": "Action"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_action_"
+							},
+							"name": "Column_LB_Invoice_action_",
+							"className": "LB_Invoice",
+							"valueName": "action",
+							"align": 1,
+							"format": "",
+							"width": 82,
+							"formula": "This.action",
+							"dataSource": "This:C1470.action",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_actionDate_",
+								"text": "ActionDate"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionDate_"
+							},
+							"name": "Column_LB_Invoice_actionDate_",
+							"className": "LB_Invoice",
+							"valueName": "actionDate",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionDate",
+							"dataSource": "This:C1470.actionDate",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_actionTime_",
+								"text": "ActionTime"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionTime_"
+							},
+							"name": "Column_LB_Invoice_actionTime_",
+							"className": "LB_Invoice",
+							"valueName": "actionTime",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionTime",
+							"dataSource": "This:C1470.actionTime",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_total_",
+								"text": "Total"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_total_"
+							},
+							"name": "Column_LB_Invoice_total_",
+							"className": "LB_Invoice",
+							"valueName": "total",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.total",
+							"dataSource": "This:C1470.total",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_balanceDue_",
+								"text": "BalanceDue"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_balanceDue_"
+							},
+							"name": "Column_LB_Invoice_balanceDue_",
+							"className": "LB_Invoice",
+							"valueName": "balanceDue",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.balanceDue",
+							"dataSource": "This:C1470.balanceDue",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_bill2Company_",
+								"text": "Bill2Company"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_bill2Company_"
+							},
+							"name": "Column_LB_Invoice_bill2Company_",
+							"className": "LB_Invoice",
+							"valueName": "bill2Company",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.bill2Company",
+							"dataSource": "This:C1470.bill2Company",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_dateLinked_",
+								"text": "DateLinked"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_dateLinked_"
+							},
+							"name": "Column_LB_Invoice_dateLinked_",
+							"className": "LB_Invoice",
+							"valueName": "dateLinked",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.dateLinked",
+							"dataSource": "This:C1470.dateLinked",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_datePaid_",
+								"text": "DatePaid"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_datePaid_"
+							},
+							"name": "Column_LB_Invoice_datePaid_",
+							"className": "LB_Invoice",
+							"valueName": "datePaid",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.datePaid",
+							"dataSource": "This:C1470.datePaid",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_dateShipped_",
+								"text": "DateShipped"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_dateShipped_"
+							},
+							"name": "Column_LB_Invoice_dateShipped_",
+							"className": "LB_Invoice",
+							"valueName": "dateShipped",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.dateShipped",
+							"dataSource": "This:C1470.dateShipped",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_invoiceNum_",
+								"text": "InvoiceNum"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_invoiceNum_"
+							},
+							"name": "Column_LB_Invoice_invoiceNum_",
+							"className": "LB_Invoice",
+							"valueName": "invoiceNum",
+							"align": 4,
+							"format": "###,###,###,##0",
+							"width": 80,
+							"formula": "This.invoiceNum",
+							"dataSource": "This:C1470.invoiceNum",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_orderNum_",
+								"text": "OrderNum"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_orderNum_"
+							},
+							"name": "Column_LB_Invoice_orderNum_",
+							"className": "LB_Invoice",
+							"valueName": "orderNum",
+							"align": 4,
+							"format": "###,###,###,##0",
+							"width": 80,
+							"formula": "This.orderNum",
+							"dataSource": "This:C1470.orderNum",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_terms_",
+								"text": "Terms"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_terms_"
+							},
+							"name": "Column_LB_Invoice_terms_",
+							"className": "LB_Invoice",
+							"valueName": "terms",
+							"align": 1,
+							"format": "",
+							"width": 49,
+							"formula": "This.terms",
+							"dataSource": "This:C1470.terms",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_typeSale_",
+								"text": "TypeSale"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_typeSale_"
+							},
+							"name": "Column_LB_Invoice_typeSale_",
+							"className": "LB_Invoice",
+							"valueName": "typeSale",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.typeSale",
+							"dataSource": "This:C1470.typeSale",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						}
+					]
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 68,
+					"left": 982,
+					"width": 41,
+					"height": 158
+				},
+				"Field1": {
+					"type": "input",
+					"top": 8,
+					"left": 628,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]customerID:1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 27,
+					"left": 628,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]idNum:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 52,
+					"left": 628,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]tableNum:3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 71,
+					"left": 840,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]dateDue:5",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 71,
+					"left": 628,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]docRefid:4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 109,
+					"left": 840,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]origValue:11",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 90,
+					"left": 628,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]terms:10",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 128,
+					"left": 840,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]unAppliedValue:6",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 109,
+					"left": 628,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]sourceKey:8",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 10,
+					"left": 864,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[Ledger:30]expireDate:9",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 29,
+					"left": 864,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[Ledger:30]discntPotential:12",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 10,
+					"left": 549,
+					"width": 72,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,113"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 29,
+					"left": 549,
+					"width": 72,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,108"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 54,
+					"left": 549,
+					"width": 72,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "TableNum"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 73,
+					"left": 549,
+					"width": 72,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,115"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 92,
+					"left": 549,
+					"width": 72,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16791,162"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 111,
+					"left": 549,
+					"width": 72,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,116"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 73,
+					"left": 774,
+					"width": 61,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,117"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 111,
+					"left": 774,
+					"width": 61,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,118"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 130,
+					"left": 774,
+					"width": 61,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,119"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 12,
+					"left": 798,
+					"width": 63,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,120"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 31,
+					"left": 798,
+					"width": 63,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,121"
+				},
+				"Field12": {
+					"type": "input",
+					"top": 90,
+					"left": 840,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]tableName:13",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 92,
+					"left": 774,
+					"width": 61,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16791,149"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 54,
+					"left": 774,
+					"width": 61,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,122"
+				},
+				"Field13": {
+					"type": "input",
+					"top": 149,
+					"left": 558,
+					"width": 409,
+					"height": 209,
+					"dataSource": "[Ledger:30]comment:7",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 52,
+					"left": 840,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[Ledger:30]dateDocument:14",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable50": {
+					"type": "button",
+					"top": 71,
+					"left": 556,
+					"width": 65,
+					"height": 18,
+					"dataSource": "b10",
+					"display": false,
+					"method": "ObjectMethods/Variable50.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 143,
+					"left": 558,
+					"width": 99,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Comment"
+				}
+			}
+		}
+	],
+	"geometryStamp": 123,
+	"method": "method.4dm"
+}

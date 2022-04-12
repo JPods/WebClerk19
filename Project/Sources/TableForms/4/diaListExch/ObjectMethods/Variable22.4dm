@@ -1,0 +1,1 @@
+doSearch:=9*Num:C11(vRLo1#0)

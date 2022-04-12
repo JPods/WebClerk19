@@ -1,0 +1,893 @@
+﻿{
+	"destination": "listScreen",
+	"rightMargin": 16,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onDataChange",
+		"onDragOver",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1600,
+					"height": 19,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "#FFFFFF"
+				}
+			}
+		},
+		{
+			"objects": {
+				"S1_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 296,
+					"width": 62,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "AisleID : "
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 296,
+					"width": 62,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]Aisle:16",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S2_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 499,
+					"width": 62,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "Bin : "
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 495,
+					"width": 62,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]Bin:19",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S3_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 362,
+					"width": 62,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "Column : "
+				},
+				"S3_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 361,
+					"width": 62,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]Column:17",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S5_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 567,
+					"width": 88,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "DateCounted : "
+				},
+				"S8_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 104,
+					"width": 98,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "LocationID : "
+				},
+				"S8_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 104,
+					"width": 98,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]LocationID:4",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S9_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 1195,
+					"width": 64,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "PO : "
+				},
+				"S9_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 1194,
+					"width": 64,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]PoNum:9",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S10_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 1088,
+					"width": 106,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "POLineUniqueID : "
+				},
+				"S11_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 75,
+					"width": 26,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "Priority : "
+				},
+				"S11_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 75,
+					"width": 26,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]Priority:14",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S12_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 660,
+					"width": 70,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "QtyLastCounted : "
+				},
+				"S12_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 652,
+					"width": 78,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]QtyLastCounted:7",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S13_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 23,
+					"width": 50,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "QtyOH : "
+				},
+				"S14_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 931,
+					"width": 153,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "ReceivedBy : "
+				},
+				"S15_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 429,
+					"width": 66,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "Shelf : "
+				},
+				"S15_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 426,
+					"width": 66,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]Shelf:18",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S16_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 1262,
+					"width": 64,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "UniqueID : "
+				},
+				"S16_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 1262,
+					"width": 64,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]idUnique:1",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S17_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 740,
+					"width": 119,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "VendorPackingList : "
+				},
+				"S17_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 734,
+					"width": 119,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]VendorPackingList:12",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S18_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 862,
+					"width": 66,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "VendorPOs : "
+				},
+				"S18_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 857,
+					"width": 66,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]VendorPOs:11",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S19_Text": {
+					"type": "text",
+					"top": 3,
+					"left": 204,
+					"width": 88,
+					"height": 14,
+					"sizingX": "grow",
+					"class": "cssInputLabel",
+					"text": "WarehouseID : "
+				},
+				"S19_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 205,
+					"width": 88,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]Warehouse:3",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S5_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 560,
+					"width": 88,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]DateReceived:6",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S10_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 1084,
+					"width": 106,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]idUniquePOLine:10",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S13_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 0,
+					"width": 71,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]QtyOH:5",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"S14_Field": {
+					"type": "input",
+					"top": 21,
+					"left": 927,
+					"width": 153,
+					"height": 14,
+					"sizingX": "grow",
+					"dataSource": "[ItemWarehouse:117]ReceivedBy:13",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Line27": {
+					"type": "line",
+					"top": 0,
+					"left": 102,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 0,
+					"left": 203,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 0,
+					"left": 294,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 0,
+					"left": 359,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 0,
+					"left": 424,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 0,
+					"left": 493,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line9": {
+					"type": "line",
+					"top": 0,
+					"left": 558,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line10": {
+					"type": "line",
+					"top": 0,
+					"left": 558,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 0,
+					"left": 558,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line17": {
+					"type": "line",
+					"top": 0,
+					"left": 73,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line19": {
+					"type": "line",
+					"top": 0,
+					"left": 650,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line21": {
+					"type": "line",
+					"top": 0,
+					"left": 732,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line23": {
+					"type": "line",
+					"top": 0,
+					"left": 855,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line25": {
+					"type": "line",
+					"top": 0,
+					"left": 925,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line28": {
+					"type": "line",
+					"top": 0,
+					"left": 1082,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line30": {
+					"type": "line",
+					"top": 0,
+					"left": 1192,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Line32": {
+					"type": "line",
+					"top": 0,
+					"left": 1260,
+					"height": 39,
+					"stroke": "#A8A8A8"
+				},
+				"Button1": {
+					"type": "button",
+					"top": 3,
+					"left": 75,
+					"width": 27,
+					"height": 13,
+					"dataSource": "b1",
+					"display": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 3,
+					"left": 104,
+					"width": 69,
+					"height": 13,
+					"dataSource": "b1",
+					"display": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 3,
+					"left": 207,
+					"width": 69,
+					"height": 13,
+					"dataSource": "b3",
+					"display": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 3,
+					"left": 296,
+					"width": 57,
+					"height": 13,
+					"dataSource": "b4",
+					"display": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 3,
+					"left": 362,
+					"width": 57,
+					"height": 13,
+					"dataSource": "b5",
+					"display": false,
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 3,
+					"left": 428,
+					"width": 57,
+					"height": 13,
+					"dataSource": "b6",
+					"display": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 3,
+					"left": 494,
+					"width": 57,
+					"height": 13,
+					"dataSource": "b7",
+					"display": false,
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button10": {
+					"type": "button",
+					"top": 3,
+					"left": 567,
+					"width": 72,
+					"height": 13,
+					"dataSource": "b10",
+					"display": false,
+					"method": "ObjectMethods/Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button12": {
+					"type": "button",
+					"top": 3,
+					"left": 17,
+					"width": 44,
+					"height": 13,
+					"dataSource": "b12",
+					"display": false,
+					"method": "ObjectMethods/Button12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button13": {
+					"type": "button",
+					"top": 3,
+					"left": 660,
+					"width": 70,
+					"height": 13,
+					"dataSource": "b13",
+					"display": false,
+					"method": "ObjectMethods/Button13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button14": {
+					"type": "button",
+					"top": 3,
+					"left": 734,
+					"width": 95,
+					"height": 13,
+					"dataSource": "b14",
+					"display": false,
+					"method": "ObjectMethods/Button14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button15": {
+					"type": "button",
+					"top": 3,
+					"left": 857,
+					"width": 66,
+					"height": 13,
+					"dataSource": "b15",
+					"display": false,
+					"method": "ObjectMethods/Button15.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button16": {
+					"type": "button",
+					"top": 3,
+					"left": 931,
+					"width": 66,
+					"height": 13,
+					"dataSource": "b16",
+					"display": false,
+					"method": "ObjectMethods/Button16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button17": {
+					"type": "button",
+					"top": 3,
+					"left": 1084,
+					"width": 91,
+					"height": 13,
+					"dataSource": "b17",
+					"display": false,
+					"method": "ObjectMethods/Button17.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button18": {
+					"type": "button",
+					"top": 3,
+					"left": 1195,
+					"width": 53,
+					"height": 13,
+					"dataSource": "b18",
+					"display": false,
+					"method": "ObjectMethods/Button18.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button19": {
+					"type": "button",
+					"top": 3,
+					"left": 1262,
+					"width": 53,
+					"height": 13,
+					"dataSource": "b19",
+					"display": false,
+					"method": "ObjectMethods/Button19.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

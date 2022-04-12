@@ -1,0 +1,9 @@
+If ([Employee:19]obGeneral:79=Null:C1517)
+	[Employee:19]obGeneral:79:=New object:C1471
+End if 
+If ([Employee:19]objective:80=Null:C1517)
+	[Employee:19]objective:80:=New object:C1471
+End if 
+If ([Employee:19]preference:29=Null:C1517)
+	[Employee:19]preference:29:=New object:C1471
+End if 

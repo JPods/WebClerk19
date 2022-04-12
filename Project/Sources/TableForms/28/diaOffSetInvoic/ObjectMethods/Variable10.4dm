@@ -1,0 +1,1 @@
+pDiff:=pTotal+pPayment

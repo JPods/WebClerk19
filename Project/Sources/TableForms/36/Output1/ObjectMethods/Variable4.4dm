@@ -1,0 +1,1 @@
+BarC_MultiLabel(->[DInventory:36]; ->[DInventory:36]qtyOnHand:2; ->[DInventory:36]itemNum:1; ->[DInventory:36]typeid:14; ->[DInventory:36]docid:9; ->[DInventory:36]idNumLine:10)

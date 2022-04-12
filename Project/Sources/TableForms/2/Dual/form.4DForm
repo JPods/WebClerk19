@@ -1,0 +1,2409 @@
+{
+	"destination": "detailScreen",
+	"memorizeGeometry": true,
+	"windowMinWidth": 640,
+	"windowMinHeight": 480,
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"listbox": {
+					"type": "listbox",
+					"dataSource": "cSelection",
+					"top": 104,
+					"left": 0,
+					"width": 787,
+					"height": 496,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"headerHeight": "2em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"memorizeValue": false,
+					"class": "cssInput16",
+					"method": "ObjectMethods/listbox.4dm",
+					"currentItemSource": "eRecord",
+					"currentItemPositionSource": "row_l",
+					"columns": [
+						{
+							"name": "company",
+							"dataSource": "This:C1470.company",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Company",
+								"name": "Header1"
+							},
+							"footer": {
+								"name": "1"
+							}
+						},
+						{
+							"name": "action",
+							"dataSource": "This:C1470.action",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Action",
+								"name": "2"
+							},
+							"footer": {
+								"name": "3"
+							}
+						},
+						{
+							"name": "actionBy",
+							"dataSource": "This:C1470.actionBy",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Action by",
+								"name": "4"
+							},
+							"footer": {
+								"name": "5"
+							}
+						},
+						{
+							"name": "actionDate",
+							"dataSource": "This:C1470.actionDate",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Action Date",
+								"name": "6"
+							},
+							"footer": {
+								"name": "7"
+							}
+						},
+						{
+							"name": "address1",
+							"dataSource": "This:C1470.address1",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Address1",
+								"name": "8"
+							},
+							"footer": {
+								"name": "9"
+							}
+						},
+						{
+							"name": "city",
+							"dataSource": "This:C1470.city",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "City",
+								"name": "10"
+							},
+							"footer": {
+								"name": "11"
+							}
+						},
+						{
+							"name": "nameFirst",
+							"dataSource": "This:C1470.nameFirst",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Name First",
+								"name": "12"
+							},
+							"footer": {
+								"name": "13"
+							}
+						},
+						{
+							"name": "nameLast",
+							"dataSource": "This:C1470.nameLast",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Name Last",
+								"name": "14"
+							},
+							"footer": {
+								"name": "15"
+							}
+						},
+						{
+							"name": "state",
+							"dataSource": "This:C1470.state",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "State",
+								"name": "16"
+							},
+							"footer": {
+								"name": "17"
+							}
+						},
+						{
+							"name": "typeSale",
+							"dataSource": "This:C1470.typeSale",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Type Sale",
+								"name": "18"
+							},
+							"footer": {
+								"name": "19"
+							}
+						}
+					]
+				},
+				"label_customerID": {
+					"type": "text",
+					"text": "customerID:",
+					"top": 21,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_customerID": {
+					"type": "input",
+					"dataSource": "[Customer:2]customerID:1",
+					"top": 21,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_company": {
+					"type": "text",
+					"text": "company:",
+					"top": 58,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_company": {
+					"type": "input",
+					"dataSource": "[Customer:2]company:2",
+					"top": 58,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_title": {
+					"type": "text",
+					"text": "title:",
+					"top": 95,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_title": {
+					"type": "input",
+					"dataSource": "[Customer:2]title:3",
+					"top": 95,
+					"left": 928,
+					"width": 250,
+					"height": 170
+				},
+				"label_address1": {
+					"type": "text",
+					"text": "address1:",
+					"top": 285,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_address1": {
+					"type": "input",
+					"dataSource": "[Customer:2]address1:4",
+					"top": 285,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_address2": {
+					"type": "text",
+					"text": "address2:",
+					"top": 322,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_address2": {
+					"type": "input",
+					"dataSource": "[Customer:2]address2:5",
+					"top": 322,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_city": {
+					"type": "text",
+					"text": "city:",
+					"top": 359,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_city": {
+					"type": "input",
+					"dataSource": "[Customer:2]city:6",
+					"top": 359,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_state": {
+					"type": "text",
+					"text": "state:",
+					"top": 396,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_state": {
+					"type": "input",
+					"dataSource": "[Customer:2]state:7",
+					"top": 396,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_zip": {
+					"type": "text",
+					"text": "zip:",
+					"top": 433,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_zip": {
+					"type": "input",
+					"dataSource": "[Customer:2]zip:8",
+					"top": 433,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_country": {
+					"type": "text",
+					"text": "country:",
+					"top": 470,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_country": {
+					"type": "input",
+					"dataSource": "[Customer:2]country:9",
+					"top": 470,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_obSync": {
+					"type": "text",
+					"text": "obSync:",
+					"top": 507,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_obSync": {
+					"type": "input",
+					"dataSource": "[Customer:2]obSync:10",
+					"top": 507,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_shipTo": {
+					"type": "text",
+					"text": "shipTo:",
+					"top": 544,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_shipTo": {
+					"type": "input",
+					"dataSource": "[Customer:2]shipTo:11",
+					"top": 544,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_shipVia": {
+					"type": "text",
+					"text": "shipVia:",
+					"top": 581,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_shipVia": {
+					"type": "input",
+					"dataSource": "[Customer:2]shipVia:12",
+					"top": 581,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_phone": {
+					"type": "text",
+					"text": "phone:",
+					"top": 618,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_phone": {
+					"type": "input",
+					"dataSource": "[Customer:2]phone:13",
+					"top": 618,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dateOpened": {
+					"type": "text",
+					"text": "dateOpened:",
+					"top": 655,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dateOpened": {
+					"type": "input",
+					"dataSource": "[Customer:2]dateOpened:14",
+					"top": 655,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_comment": {
+					"type": "text",
+					"text": "comment:",
+					"top": 692,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_comment": {
+					"type": "input",
+					"dataSource": "[Customer:2]comment:15",
+					"top": 692,
+					"left": 928,
+					"width": 250,
+					"height": 170
+				},
+				"label_sICCode": {
+					"type": "text",
+					"text": "sICCode:",
+					"top": 882,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_sICCode": {
+					"type": "input",
+					"dataSource": "[Customer:2]sICCode:16",
+					"top": 882,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_prospect": {
+					"type": "text",
+					"text": "prospect:",
+					"top": 919,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_prospect": {
+					"type": "input",
+					"dataSource": "[Customer:2]prospect:17",
+					"top": 919,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_typeSale": {
+					"type": "text",
+					"text": "typeSale:",
+					"top": 956,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_typeSale": {
+					"type": "input",
+					"dataSource": "[Customer:2]typeSale:18",
+					"top": 956,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_budget": {
+					"type": "text",
+					"text": "budget:",
+					"top": 993,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_budget": {
+					"type": "input",
+					"dataSource": "[Customer:2]budget:19",
+					"top": 993,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_invoiceCount": {
+					"type": "text",
+					"text": "invoiceCount:",
+					"top": 1030,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_invoiceCount": {
+					"type": "input",
+					"dataSource": "[Customer:2]invoiceCount:20",
+					"top": 1030,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_need": {
+					"type": "text",
+					"text": "need:",
+					"top": 1067,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_need": {
+					"type": "input",
+					"dataSource": "[Customer:2]need:21",
+					"top": 1067,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_shippingDays": {
+					"type": "text",
+					"text": "shippingDays:",
+					"top": 1104,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_shippingDays": {
+					"type": "input",
+					"dataSource": "[Customer:2]shippingDays:22",
+					"top": 1104,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_nameLast": {
+					"type": "text",
+					"text": "nameLast:",
+					"top": 1141,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_nameLast": {
+					"type": "input",
+					"dataSource": "[Customer:2]nameLast:23",
+					"top": 1141,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_shipInstruct": {
+					"type": "text",
+					"text": "shipInstruct:",
+					"top": 1178,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_shipInstruct": {
+					"type": "input",
+					"dataSource": "[Customer:2]shipInstruct:24",
+					"top": 1178,
+					"left": 928,
+					"width": 250,
+					"height": 170
+				},
+				"label_responseDate": {
+					"type": "text",
+					"text": "responseDate:",
+					"top": 1368,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_responseDate": {
+					"type": "input",
+					"dataSource": "[Customer:2]responseDate:25",
+					"top": 1368,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_profile1": {
+					"type": "text",
+					"text": "profile1:",
+					"top": 1405,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_profile1": {
+					"type": "input",
+					"dataSource": "[Customer:2]profile1:26",
+					"top": 1405,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_profile2": {
+					"type": "text",
+					"text": "profile2:",
+					"top": 1442,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_profile2": {
+					"type": "input",
+					"dataSource": "[Customer:2]profile2:27",
+					"top": 1442,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_profile3": {
+					"type": "text",
+					"text": "profile3:",
+					"top": 1479,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_profile3": {
+					"type": "input",
+					"dataSource": "[Customer:2]profile3:28",
+					"top": 1479,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_profile4": {
+					"type": "text",
+					"text": "profile4:",
+					"top": 1516,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_profile4": {
+					"type": "input",
+					"dataSource": "[Customer:2]profile4:29",
+					"top": 1516,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_profile5": {
+					"type": "text",
+					"text": "profile5:",
+					"top": 1553,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_profile5": {
+					"type": "input",
+					"dataSource": "[Customer:2]profile5:30",
+					"top": 1553,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_profile6": {
+					"type": "text",
+					"text": "profile6:",
+					"top": 1590,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_profile6": {
+					"type": "input",
+					"dataSource": "[Customer:2]profile6:31",
+					"top": 1590,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_profile7": {
+					"type": "text",
+					"text": "profile7:",
+					"top": 1627,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_profile7": {
+					"type": "input",
+					"dataSource": "[Customer:2]profile7:32",
+					"top": 1627,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_terms": {
+					"type": "text",
+					"text": "terms:",
+					"top": 1664,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_terms": {
+					"type": "input",
+					"dataSource": "[Customer:2]terms:33",
+					"top": 1664,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_badCheck": {
+					"type": "text",
+					"text": "badCheck:",
+					"top": 1701,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_badCheck": {
+					"type": "input",
+					"dataSource": "[Customer:2]badCheck:34",
+					"top": 1701,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_badCheckDate": {
+					"type": "text",
+					"text": "badCheckDate:",
+					"top": 1738,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_badCheckDate": {
+					"type": "input",
+					"dataSource": "[Customer:2]badCheckDate:35",
+					"top": 1738,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_discount": {
+					"type": "text",
+					"text": "discount:",
+					"top": 1775,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_discount": {
+					"type": "input",
+					"dataSource": "[Customer:2]discount:36",
+					"top": 1775,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_creditLimit": {
+					"type": "text",
+					"text": "creditLimit:",
+					"top": 1812,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_creditLimit": {
+					"type": "input",
+					"dataSource": "[Customer:2]creditLimit:37",
+					"top": 1812,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_highCredit": {
+					"type": "text",
+					"text": "highCredit:",
+					"top": 1849,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_highCredit": {
+					"type": "input",
+					"dataSource": "[Customer:2]highCredit:38",
+					"top": 1849,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_creditApproval": {
+					"type": "text",
+					"text": "creditApproval:",
+					"top": 1886,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_creditApproval": {
+					"type": "input",
+					"dataSource": "[Customer:2]creditApproval:39",
+					"top": 1886,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_daysPay": {
+					"type": "text",
+					"text": "daysPay:",
+					"top": 1923,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_daysPay": {
+					"type": "input",
+					"dataSource": "[Customer:2]daysPay:40",
+					"top": 1923,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_balanceCurrent": {
+					"type": "text",
+					"text": "balanceCurrent:",
+					"top": 1960,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balanceCurrent": {
+					"type": "input",
+					"dataSource": "[Customer:2]balanceCurrent:41",
+					"top": 1960,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_balanceDue": {
+					"type": "text",
+					"text": "balanceDue:",
+					"top": 1997,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balanceDue": {
+					"type": "input",
+					"dataSource": "[Customer:2]balanceDue:42",
+					"top": 1997,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_balPastPeriod1": {
+					"type": "text",
+					"text": "balPastPeriod1:",
+					"top": 2034,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balPastPeriod1": {
+					"type": "input",
+					"dataSource": "[Customer:2]balPastPeriod1:43",
+					"top": 2034,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_balPastPeriod2": {
+					"type": "text",
+					"text": "balPastPeriod2:",
+					"top": 2071,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balPastPeriod2": {
+					"type": "input",
+					"dataSource": "[Customer:2]balPastPeriod2:44",
+					"top": 2071,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_balPastPeriod3": {
+					"type": "text",
+					"text": "balPastPeriod3:",
+					"top": 2108,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balPastPeriod3": {
+					"type": "input",
+					"dataSource": "[Customer:2]balPastPeriod3:45",
+					"top": 2108,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_salesMTD": {
+					"type": "text",
+					"text": "salesMTD:",
+					"top": 2145,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_salesMTD": {
+					"type": "input",
+					"dataSource": "[Customer:2]salesMTD:46",
+					"top": 2145,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_salesYTD": {
+					"type": "text",
+					"text": "salesYTD:",
+					"top": 2182,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_salesYTD": {
+					"type": "input",
+					"dataSource": "[Customer:2]salesYTD:47",
+					"top": 2182,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_salesLastYr": {
+					"type": "text",
+					"text": "salesLastYr:",
+					"top": 2219,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_salesLastYr": {
+					"type": "input",
+					"dataSource": "[Customer:2]salesLastYr:48",
+					"top": 2219,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_lastSaleDate": {
+					"type": "text",
+					"text": "lastSaleDate:",
+					"top": 2256,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_lastSaleDate": {
+					"type": "input",
+					"dataSource": "[Customer:2]lastSaleDate:49",
+					"top": 2256,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_lastSaleAmount": {
+					"type": "text",
+					"text": "lastSaleAmount:",
+					"top": 2293,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_lastSaleAmount": {
+					"type": "input",
+					"dataSource": "[Customer:2]lastSaleAmount:50",
+					"top": 2293,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_lastPayDate": {
+					"type": "text",
+					"text": "lastPayDate:",
+					"top": 2330,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_lastPayDate": {
+					"type": "input",
+					"dataSource": "[Customer:2]lastPayDate:51",
+					"top": 2330,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_lastPayAmount": {
+					"type": "text",
+					"text": "lastPayAmount:",
+					"top": 2367,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_lastPayAmount": {
+					"type": "input",
+					"dataSource": "[Customer:2]lastPayAmount:52",
+					"top": 2367,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_creditCardNum": {
+					"type": "text",
+					"text": "creditCardNum:",
+					"top": 2404,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_creditCardNum": {
+					"type": "input",
+					"dataSource": "[Customer:2]creditCardNum:53",
+					"top": 2404,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_creditCardExpir": {
+					"type": "text",
+					"text": "creditCardExpir:",
+					"top": 2441,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_creditCardExpir": {
+					"type": "input",
+					"dataSource": "[Customer:2]creditCardExpir:54",
+					"top": 2441,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_daysAvgPaid": {
+					"type": "text",
+					"text": "daysAvgPaid:",
+					"top": 2478,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_daysAvgPaid": {
+					"type": "input",
+					"dataSource": "[Customer:2]daysAvgPaid:55",
+					"top": 2478,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_taxExemptid": {
+					"type": "text",
+					"text": "taxExemptid:",
+					"top": 2515,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_taxExemptid": {
+					"type": "input",
+					"dataSource": "[Customer:2]taxExemptid:56",
+					"top": 2515,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_zone": {
+					"type": "text",
+					"text": "zone:",
+					"top": 2552,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_zone": {
+					"type": "input",
+					"dataSource": "[Customer:2]zone:57",
+					"top": 2552,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_repID": {
+					"type": "text",
+					"text": "repID:",
+					"top": 2589,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_repID": {
+					"type": "input",
+					"dataSource": "[Customer:2]repID:58",
+					"top": 2589,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_salesNameID": {
+					"type": "text",
+					"text": "salesNameID:",
+					"top": 2626,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_salesNameID": {
+					"type": "input",
+					"dataSource": "[Customer:2]salesNameID:59",
+					"top": 2626,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_action": {
+					"type": "text",
+					"text": "action:",
+					"top": 2663,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_action": {
+					"type": "input",
+					"dataSource": "[Customer:2]action:60",
+					"top": 2663,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_actionDate": {
+					"type": "text",
+					"text": "actionDate:",
+					"top": 2700,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_actionDate": {
+					"type": "input",
+					"dataSource": "[Customer:2]actionDate:61",
+					"top": 2700,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_adSource": {
+					"type": "text",
+					"text": "adSource:",
+					"top": 2737,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_adSource": {
+					"type": "input",
+					"dataSource": "[Customer:2]adSource:62",
+					"top": 2737,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dateService": {
+					"type": "text",
+					"text": "dateService:",
+					"top": 2774,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dateService": {
+					"type": "input",
+					"dataSource": "[Customer:2]dateService:63",
+					"top": 2774,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_lateNotice": {
+					"type": "text",
+					"text": "lateNotice:",
+					"top": 2811,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_lateNotice": {
+					"type": "input",
+					"dataSource": "[Customer:2]lateNotice:64",
+					"top": 2811,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_taxJuris": {
+					"type": "text",
+					"text": "taxJuris:",
+					"top": 2848,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_taxJuris": {
+					"type": "input",
+					"dataSource": "[Customer:2]taxJuris:65",
+					"top": 2848,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_fax": {
+					"type": "text",
+					"text": "fax:",
+					"top": 2885,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_fax": {
+					"type": "input",
+					"dataSource": "[Customer:2]fax:66",
+					"top": 2885,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_mfrLocationid": {
+					"type": "text",
+					"text": "mfrLocationid:",
+					"top": 2922,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_mfrLocationid": {
+					"type": "input",
+					"dataSource": "[Customer:2]mfrLocationid:67",
+					"top": 2922,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_phonePrefix": {
+					"type": "text",
+					"text": "phonePrefix:",
+					"top": 2959,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_phonePrefix": {
+					"type": "input",
+					"dataSource": "[Customer:2]phonePrefix:68",
+					"top": 2959,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_phoneSuffix": {
+					"type": "text",
+					"text": "phoneSuffix:",
+					"top": 2996,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_phoneSuffix": {
+					"type": "input",
+					"dataSource": "[Customer:2]phoneSuffix:69",
+					"top": 2996,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_division": {
+					"type": "text",
+					"text": "division:",
+					"top": 3033,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_division": {
+					"type": "input",
+					"dataSource": "[Customer]division",
+					"top": 3033,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_actionTime": {
+					"type": "text",
+					"text": "actionTime:",
+					"top": 3070,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_actionTime": {
+					"type": "input",
+					"dataSource": "[Customer:2]actionTime:71",
+					"top": 3070,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_individual": {
+					"type": "text",
+					"text": "individual:",
+					"top": 3107,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_individual": {
+					"type": "input",
+					"dataSource": "[Customer:2]individual:72",
+					"top": 3107,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_nameFirst": {
+					"type": "text",
+					"text": "nameFirst:",
+					"top": 3144,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_nameFirst": {
+					"type": "input",
+					"dataSource": "[Customer:2]nameFirst:73",
+					"top": 3144,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_tallyStatus": {
+					"type": "text",
+					"text": "tallyStatus:",
+					"top": 3181,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_tallyStatus": {
+					"type": "input",
+					"dataSource": "[Customer:2]tallyStatus:74",
+					"top": 3181,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_costsYTD": {
+					"type": "text",
+					"text": "costsYTD:",
+					"top": 3218,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_costsYTD": {
+					"type": "input",
+					"dataSource": "[Customer:2]costsYTD:75",
+					"top": 3218,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_costsMTD": {
+					"type": "text",
+					"text": "costsMTD:",
+					"top": 3255,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_costsMTD": {
+					"type": "input",
+					"dataSource": "[Customer:2]costsMTD:76",
+					"top": 3255,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_addrAltBillTo": {
+					"type": "text",
+					"text": "addrAltBillTo:",
+					"top": 3292,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_addrAltBillTo": {
+					"type": "input",
+					"dataSource": "[Customer:2]addrAltBillTo:77",
+					"top": 3292,
+					"left": 928,
+					"width": 250,
+					"height": 170
+				},
+				"label_balanceOpenOrders": {
+					"type": "text",
+					"text": "balanceOpenOrders:",
+					"top": 3482,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balanceOpenOrders": {
+					"type": "input",
+					"dataSource": "[Customer:2]balanceOpenOrders:78",
+					"top": 3482,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_alertMessage": {
+					"type": "text",
+					"text": "alertMessage:",
+					"top": 3519,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_alertMessage": {
+					"type": "input",
+					"dataSource": "[Customer:2]alertMessage:79",
+					"top": 3519,
+					"left": 928,
+					"width": 250,
+					"height": 170
+				},
+				"label_salesGL": {
+					"type": "text",
+					"text": "salesGL:",
+					"top": 3709,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_salesGL": {
+					"type": "input",
+					"dataSource": "[Customer:2]salesGL:80",
+					"top": 3709,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_email": {
+					"type": "text",
+					"text": "email:",
+					"top": 3746,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_email": {
+					"type": "input",
+					"dataSource": "[Customer:2]email:81",
+					"top": 3746,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_serviceHrAvail": {
+					"type": "text",
+					"text": "serviceHrAvail:",
+					"top": 3783,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_serviceHrAvail": {
+					"type": "input",
+					"dataSource": "[Customer:2]serviceHrAvail:82",
+					"top": 3783,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_questionAns": {
+					"type": "text",
+					"text": "questionAns:",
+					"top": 3820,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_questionAns": {
+					"type": "input",
+					"dataSource": "[Customer:2]questionAns:83",
+					"top": 3820,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_remoteUser": {
+					"type": "text",
+					"text": "remoteUser:",
+					"top": 3857,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_remoteUser": {
+					"type": "input",
+					"dataSource": "[Customer:2]remoteUser:84",
+					"top": 3857,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_futureDue": {
+					"type": "text",
+					"text": "futureDue:",
+					"top": 3894,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_futureDue": {
+					"type": "input",
+					"dataSource": "[Customer:2]futureDue:85",
+					"top": 3894,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dunsNumber": {
+					"type": "text",
+					"text": "dunsNumber:",
+					"top": 3931,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dunsNumber": {
+					"type": "input",
+					"dataSource": "[Customer:2]dunsNumber:86",
+					"top": 3931,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dbScore": {
+					"type": "text",
+					"text": "dbScore:",
+					"top": 3968,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dbScore": {
+					"type": "input",
+					"dataSource": "[Customer:2]dbScore:87",
+					"top": 3968,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dbScoreDate": {
+					"type": "text",
+					"text": "dbScoreDate:",
+					"top": 4005,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dbScoreDate": {
+					"type": "input",
+					"dataSource": "[Customer:2]dbScoreDate:88",
+					"top": 4005,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_currency": {
+					"type": "text",
+					"text": "currency:",
+					"top": 4042,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_currency": {
+					"type": "input",
+					"dataSource": "[Customer:2]currency:89",
+					"top": 4042,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_domain": {
+					"type": "text",
+					"text": "domain:",
+					"top": 4079,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_domain": {
+					"type": "input",
+					"dataSource": "[Customer:2]domain:90",
+					"top": 4079,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_publish": {
+					"type": "text",
+					"text": "publish:",
+					"top": 4116,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_publish": {
+					"type": "input",
+					"dataSource": "[Customer:2]publish:91",
+					"top": 4116,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_contactBillTo": {
+					"type": "text",
+					"text": "contactBillTo:",
+					"top": 4153,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_contactBillTo": {
+					"type": "input",
+					"dataSource": "[Customer:2]contactBillTo:92",
+					"top": 4153,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_contactShipTo": {
+					"type": "text",
+					"text": "contactShipTo:",
+					"top": 4190,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_contactShipTo": {
+					"type": "input",
+					"dataSource": "[Customer:2]contactShipTo:93",
+					"top": 4190,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_webPage": {
+					"type": "text",
+					"text": "webPage:",
+					"top": 4227,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_webPage": {
+					"type": "input",
+					"dataSource": "[Customer:2]webPage:94",
+					"top": 4227,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_upsResidential": {
+					"type": "text",
+					"text": "upsResidential:",
+					"top": 4264,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_upsResidential": {
+					"type": "input",
+					"dataSource": "[Customer:2]upsResidential:95",
+					"top": 4264,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_upsBillingOption": {
+					"type": "text",
+					"text": "upsBillingOption:",
+					"top": 4301,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_upsBillingOption": {
+					"type": "input",
+					"dataSource": "[Customer:2]upsBillingOption:96",
+					"top": 4301,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_upsReceiverAcct": {
+					"type": "text",
+					"text": "upsReceiverAcct:",
+					"top": 4338,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_upsReceiverAcct": {
+					"type": "input",
+					"dataSource": "[Customer:2]upsReceiverAcct:97",
+					"top": 4338,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_optOut": {
+					"type": "text",
+					"text": "optOut:",
+					"top": 4375,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_optOut": {
+					"type": "input",
+					"dataSource": "[Customer:2]optOut:98",
+					"top": 4375,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_phoneCell": {
+					"type": "text",
+					"text": "phoneCell:",
+					"top": 4412,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_phoneCell": {
+					"type": "input",
+					"dataSource": "[Customer:2]phoneCell:99",
+					"top": 4412,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_nameNick": {
+					"type": "text",
+					"text": "nameNick:",
+					"top": 4449,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_nameNick": {
+					"type": "input",
+					"dataSource": "[Customer:2]nameNick:100",
+					"top": 4449,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_nameMiddle": {
+					"type": "text",
+					"text": "nameMiddle:",
+					"top": 4486,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_nameMiddle": {
+					"type": "input",
+					"dataSource": "[Customer:2]nameMiddle:101",
+					"top": 4486,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_salesAllTime": {
+					"type": "text",
+					"text": "salesAllTime:",
+					"top": 4523,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_salesAllTime": {
+					"type": "input",
+					"dataSource": "[Customer:2]salesAllTime:102",
+					"top": 4523,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_costsAllTime": {
+					"type": "text",
+					"text": "costsAllTime:",
+					"top": 4560,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_costsAllTime": {
+					"type": "input",
+					"dataSource": "[Customer:2]costsAllTime:103",
+					"top": 4560,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_balanceTotalExposure": {
+					"type": "text",
+					"text": "balanceTotalExposure:",
+					"top": 4597,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balanceTotalExposure": {
+					"type": "input",
+					"dataSource": "[Customer:2]balanceTotalExposure:104",
+					"top": 4597,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_balanceAvailablePayments": {
+					"type": "text",
+					"text": "balanceAvailablePayments:",
+					"top": 4634,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_balanceAvailablePayments": {
+					"type": "input",
+					"dataSource": "[Customer:2]balanceAvailablePayments:105",
+					"top": 4634,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_siteID": {
+					"type": "text",
+					"text": "siteID:",
+					"top": 4671,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_siteID": {
+					"type": "input",
+					"dataSource": "[Customer:2]siteID:106",
+					"top": 4671,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dateLastUpdated": {
+					"type": "text",
+					"text": "dateLastUpdated:",
+					"top": 4708,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dateLastUpdated": {
+					"type": "input",
+					"dataSource": "[Customer:2]dateLastUpdated:107",
+					"top": 4708,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_lng": {
+					"type": "text",
+					"text": "lng:",
+					"top": 4745,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_lng": {
+					"type": "input",
+					"dataSource": "[Customer:2]lng:108",
+					"top": 4745,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_shipPartial": {
+					"type": "text",
+					"text": "shipPartial:",
+					"top": 4782,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_shipPartial": {
+					"type": "input",
+					"dataSource": "[Customer:2]shipPartial:109",
+					"top": 4782,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_emailVerified": {
+					"type": "text",
+					"text": "emailVerified:",
+					"top": 4819,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_emailVerified": {
+					"type": "input",
+					"dataSource": "[Customer:2]emailVerified:110",
+					"top": 4819,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dateRetired": {
+					"type": "text",
+					"text": "dateRetired:",
+					"top": 4856,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dateRetired": {
+					"type": "input",
+					"dataSource": "[Customer:2]dateRetired:111",
+					"top": 4856,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_creditCardEncode": {
+					"type": "text",
+					"text": "creditCardEncode:",
+					"top": 4893,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_creditCardEncode": {
+					"type": "input",
+					"dataSource": "[Customer:2]creditCardEncode:112",
+					"top": 4893,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_upsInsureShipping": {
+					"type": "text",
+					"text": "upsInsureShipping:",
+					"top": 4930,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_upsInsureShipping": {
+					"type": "input",
+					"dataSource": "[Customer:2]upsInsureShipping:113",
+					"top": 4930,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_creditCardCVV": {
+					"type": "text",
+					"text": "creditCardCVV:",
+					"top": 4967,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_creditCardCVV": {
+					"type": "input",
+					"dataSource": "[Customer:2]creditCardCVV:114",
+					"top": 4967,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_minimumOpening": {
+					"type": "text",
+					"text": "minimumOpening:",
+					"top": 5004,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_minimumOpening": {
+					"type": "input",
+					"dataSource": "[Customer:2]minimumOpening:118",
+					"top": 5004,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_minimumReorder": {
+					"type": "text",
+					"text": "minimumReorder:",
+					"top": 5041,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_minimumReorder": {
+					"type": "input",
+					"dataSource": "[Customer:2]minimumReorder:119",
+					"top": 5041,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_territoryid": {
+					"type": "text",
+					"text": "territoryid:",
+					"top": 5078,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_territoryid": {
+					"type": "input",
+					"dataSource": "[Customer:2]territoryid:120",
+					"top": 5078,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_salesDivision": {
+					"type": "text",
+					"text": "salesDivision:",
+					"top": 5115,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_salesDivision": {
+					"type": "input",
+					"dataSource": "[Customer:2]salesDivision:121",
+					"top": 5115,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_remoteid": {
+					"type": "text",
+					"text": "remoteid:",
+					"top": 5152,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_remoteid": {
+					"type": "input",
+					"dataSource": "[Customer:2]remoteid:122",
+					"top": 5152,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dtLastSync": {
+					"type": "text",
+					"text": "dtLastSync:",
+					"top": 5189,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dtLastSync": {
+					"type": "input",
+					"dataSource": "[Customer:2]dtLastSync:123",
+					"top": 5189,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_sector": {
+					"type": "text",
+					"text": "sector:",
+					"top": 5226,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_sector": {
+					"type": "input",
+					"dataSource": "[Customer:2]sector:124",
+					"top": 5226,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_dateConverted": {
+					"type": "text",
+					"text": "dateConverted:",
+					"top": 5263,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_dateConverted": {
+					"type": "input",
+					"dataSource": "[Customer:2]dateConverted:125",
+					"top": 5263,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_keyText": {
+					"type": "text",
+					"text": "keyText:",
+					"top": 5300,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_keyText": {
+					"type": "input",
+					"dataSource": "[Customer:2]keyText:126",
+					"top": 5300,
+					"left": 928,
+					"width": 250,
+					"height": 170
+				},
+				"label_id": {
+					"type": "text",
+					"text": "id:",
+					"top": 5490,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_id": {
+					"type": "input",
+					"dataSource": "[Customer:2]id:127",
+					"top": 5490,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_customerID2nd": {
+					"type": "text",
+					"text": "customerID2nd:",
+					"top": 5527,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_customerID2nd": {
+					"type": "input",
+					"dataSource": "[Customer:2]customerID2nd:128",
+					"top": 5527,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_imagePath": {
+					"type": "text",
+					"text": "imagePath:",
+					"top": 5564,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_imagePath": {
+					"type": "input",
+					"dataSource": "[Customer:2]imagePath:129",
+					"top": 5564,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_health": {
+					"type": "text",
+					"text": "health:",
+					"top": 5601,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_health": {
+					"type": "input",
+					"dataSource": "[Customer:2]health:130",
+					"top": 5601,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_rank": {
+					"type": "text",
+					"text": "rank:",
+					"top": 5638,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_rank": {
+					"type": "input",
+					"dataSource": "[Customer:2]rank:131",
+					"top": 5638,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_remoteRecordID": {
+					"type": "text",
+					"text": "remoteRecordID:",
+					"top": 5675,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_remoteRecordID": {
+					"type": "input",
+					"dataSource": "[Customer:2]remoteRecordID:132",
+					"top": 5675,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_objective": {
+					"type": "text",
+					"text": "objective:",
+					"top": 5712,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_objective": {
+					"type": "input",
+					"dataSource": "[Customer:2]objective:133",
+					"top": 5712,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_keyTags": {
+					"type": "text",
+					"text": "keyTags:",
+					"top": 5749,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_keyTags": {
+					"type": "input",
+					"dataSource": "[Customer:2]keyTags:134",
+					"top": 5749,
+					"left": 928,
+					"width": 250,
+					"height": 170
+				},
+				"label_lat": {
+					"type": "text",
+					"text": "lat:",
+					"top": 5939,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_lat": {
+					"type": "input",
+					"dataSource": "[Customer:2]lat:135",
+					"top": 5939,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_obGeneral": {
+					"type": "text",
+					"text": "obGeneral:",
+					"top": 5976,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_obGeneral": {
+					"type": "input",
+					"dataSource": "[Customer:2]obGeneral:136",
+					"top": 5976,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_obExchange": {
+					"type": "text",
+					"text": "obExchange:",
+					"top": 6013,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_obExchange": {
+					"type": "input",
+					"dataSource": "[Customer:2]obExchange:137",
+					"top": 6013,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_emailStatus": {
+					"type": "text",
+					"text": "emailStatus:",
+					"top": 6050,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_emailStatus": {
+					"type": "input",
+					"dataSource": "[Customer:2]emailStatus:138",
+					"top": 6050,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_actionBy": {
+					"type": "text",
+					"text": "actionBy:",
+					"top": 6087,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_actionBy": {
+					"type": "input",
+					"dataSource": "[Customer:2]actionBy:139",
+					"top": 6087,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_obWeb": {
+					"type": "text",
+					"text": "obWeb:",
+					"top": 6124,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_obWeb": {
+					"type": "input",
+					"dataSource": "[Customer:2]obWeb:140",
+					"top": 6124,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				},
+				"label_actionDuration": {
+					"type": "text",
+					"text": "actionDuration:",
+					"top": 6161,
+					"left": 818,
+					"width": 100,
+					"height": 17
+				},
+				"field_actionDuration": {
+					"type": "input",
+					"dataSource": "[Customer:2]actionDuration:141",
+					"top": 6161,
+					"left": 928,
+					"width": 250,
+					"height": 17
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 206,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"inheritedForm": "oLoHeader"
+}

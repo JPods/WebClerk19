@@ -1,0 +1,1 @@
+pDiff:=Round:C94(pTotal-pPayment; <>tcDecimalTt)

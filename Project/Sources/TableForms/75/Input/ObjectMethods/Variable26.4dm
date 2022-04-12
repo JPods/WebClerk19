@@ -1,0 +1,1 @@
+[EventLog:75]dtEvent:1:=DateTime_Enter(vdDate; vtTime)

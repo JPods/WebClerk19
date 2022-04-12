@@ -1,0 +1,2 @@
+﻿myOK:=0
+CANCEL:C270

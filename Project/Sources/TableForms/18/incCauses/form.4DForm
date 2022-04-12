@@ -1,0 +1,188 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 0,
+					"width": 1600,
+					"height": 18,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "#FFFFFF"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 3,
+					"left": 2,
+					"width": 118,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16790,122"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 0,
+					"left": 121,
+					"height": 39
+				},
+				"Text2": {
+					"type": "text",
+					"top": 3,
+					"left": 123,
+					"width": 20,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16792,192"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 21,
+					"left": 1,
+					"width": 119,
+					"height": 16,
+					"dataSource": "[QQQCause:18]Cause:2",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 21,
+					"left": 125,
+					"width": 30,
+					"height": 16,
+					"dataSource": "[QQQCause:18]SequenceNum:1",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable1": {
+					"type": "button",
+					"top": 43,
+					"left": 390,
+					"width": 92,
+					"height": 21,
+					"dataSource": "bReturn",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "\u001B",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,51",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable2": {
+					"type": "button",
+					"top": 49,
+					"left": 385,
+					"width": 4,
+					"height": 11,
+					"dataSource": "b60",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

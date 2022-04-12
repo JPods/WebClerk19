@@ -1,0 +1,1 @@
+ALERT:C41("DateCreated will be set when the Item record is created, and is therefore not directly editable.\n\nIf this date is incorrect, please inform IT.")

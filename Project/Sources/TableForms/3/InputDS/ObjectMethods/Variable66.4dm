@@ -1,0 +1,1 @@
+entryEntity.upsBillingOption:=DE_PopUpArray(Self:C308)

@@ -1,0 +1,1 @@
+pQtyShip:=pQtyOrd-pQtyBL

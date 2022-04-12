@@ -1,0 +1,3 @@
+DB_TableAll("SalesJournal")
+
+

@@ -1,0 +1,1 @@
+Exch_dRate(->[Proposal:42]currency:55; ->[Proposal:42]exchangeRate:54)

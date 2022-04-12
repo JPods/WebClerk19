@@ -1,0 +1,1 @@
+Srvc_AddRec(Num:C11(Record number:C243([QQQCustomer:2])>-1))

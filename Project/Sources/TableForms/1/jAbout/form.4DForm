@@ -1,0 +1,259 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 291,
+	"markerBreak": 301,
+	"markerFooter": 301,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Picture9": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 572,
+					"height": 415,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture9.tif"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Variable1": {
+					"type": "input",
+					"top": 96,
+					"left": 87,
+					"width": 109,
+					"height": 12,
+					"dataSource": "Storage:C1525.version.rev",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 12
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 100,
+					"left": 401,
+					"width": 113,
+					"height": 12,
+					"dataSource": "vi1",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 12
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 113,
+					"left": 87,
+					"width": 109,
+					"height": 12,
+					"dataSource": "Storage:C1525.version.date",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 12
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 113,
+					"left": 401,
+					"width": 113,
+					"height": 12,
+					"dataSource": "vi2",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 12
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 180,
+					"left": 45,
+					"width": 474,
+					"height": 27,
+					"dataSource": "Storage:C1525.default.company",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 12
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 265,
+					"left": 45,
+					"width": 474,
+					"height": 29,
+					"dataSource": "<>vAppStored",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 12
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 345,
+					"left": 45,
+					"width": 474,
+					"height": 29,
+					"dataSource": "<>vDataStored",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 12
+				},
+				"Variable8": {
+					"type": "button",
+					"top": 387,
+					"left": 481,
+					"width": 81,
+					"height": 20,
+					"dataSource": "bOK",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"action": "accept",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,51",
+					"iconFrames": 4,
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 105,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

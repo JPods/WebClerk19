@@ -1,0 +1,1 @@
+[Payment:28]AmountAvailable:19:=[Payment:28]Amount:1-Old:C35([Payment:28]Amount:1)

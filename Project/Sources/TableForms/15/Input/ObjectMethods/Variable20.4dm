@@ -1,0 +1,1 @@
+entryEntity.Terms:=DE_PopUpArray(-><>aTerms)

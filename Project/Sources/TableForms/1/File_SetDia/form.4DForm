@@ -1,0 +1,164 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable8": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable9": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 34,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"lbTables": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.cTables",
+					"top": 41,
+					"left": 25,
+					"width": 228,
+					"height": 674,
+					"visibility": "visible",
+					"sizingX": "move",
+					"sizingY": "fixed",
+					"headerHeight": "1em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"currentItemSource": "Form:C1466.tableCurrent",
+					"currentItemPositionSource": "Form:C1466.tablePosition",
+					"selectedItemsSource": "Form:C1466.tablesSelected",
+					"class": "cssInput16",
+					"events": [
+						"onLoad",
+						"onClick"
+					],
+					"selectionMode": "single",
+					"showHeaders": true,
+					"method": "ObjectMethods/lbTables.4dm",
+					"borderStyle": "double",
+					"columns": [
+						{
+							"header": {
+								"name": "Header1",
+								"text": "Table Name"
+							},
+							"name": "Column_tableName",
+							"footer": {
+								"name": "Footer9"
+							},
+							"width": 160,
+							"dataSource": "This:C1470.tableName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Num"
+							},
+							"name": "Column_tableNum",
+							"footer": {
+								"name": "Footer10"
+							},
+							"width": 55,
+							"maxWidth": 100,
+							"dataSource": "This:C1470.tableNum",
+							"enterable": false
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 26,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

@@ -1,0 +1,377 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 322,
+	"height": 116,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 126,
+	"markerBreak": 126,
+	"markerFooter": 126,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 52,
+					"left": 11,
+					"width": 96,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16791,137"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 68,
+					"left": 11,
+					"width": 96,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16791,138"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 85,
+					"left": 11,
+					"width": 96,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16791,139"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 102,
+					"left": 11,
+					"width": 96,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16791,140"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 86,
+					"left": 161,
+					"width": 22,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16791,141"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 66,
+					"left": 235,
+					"width": 87,
+					"height": 26,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16791,142"
+				},
+				"Variable1": {
+					"type": "checkbox",
+					"top": 7,
+					"left": 124,
+					"width": 198,
+					"height": 17,
+					"dataSource": "bFixbyDays",
+					"text": ":16791,143",
+					"class": "cssCheckboxLable",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable2": {
+					"type": "checkbox",
+					"top": 27,
+					"left": 124,
+					"width": 198,
+					"height": 17,
+					"dataSource": "bSkipWkEnd",
+					"text": ":16791,144",
+					"class": "cssCheckboxLable",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 50,
+					"left": 111,
+					"width": 72,
+					"height": 14,
+					"dataSource": "vDate1",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 50,
+					"left": 184,
+					"width": 37,
+					"height": 14,
+					"dataSource": "v1",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 67,
+					"left": 111,
+					"width": 72,
+					"height": 14,
+					"dataSource": "vdDateBeg",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 67,
+					"left": 184,
+					"width": 37,
+					"height": 14,
+					"dataSource": "v2",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 84,
+					"left": 111,
+					"width": 46,
+					"height": 14,
+					"dataSource": "vi4",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 84,
+					"left": 184,
+					"width": 37,
+					"height": 14,
+					"dataSource": "[Customer:2]shippingDays:22",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 101,
+					"left": 111,
+					"width": 72,
+					"height": 14,
+					"dataSource": "vdDateEnd",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 101,
+					"left": 184,
+					"width": 37,
+					"height": 14,
+					"dataSource": "v3",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable12": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"action": "cancel",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable13": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 34,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"action": "accept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

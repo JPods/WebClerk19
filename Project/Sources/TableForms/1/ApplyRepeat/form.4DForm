@@ -1,0 +1,241 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 338,
+	"markerBreak": 371,
+	"markerFooter": 405,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 107,
+					"left": 7,
+					"width": 468,
+					"height": 85,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 48,
+					"left": 11,
+					"width": 54,
+					"height": 20,
+					"dataSource": "curTableNum",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 14,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 48,
+					"left": 67,
+					"width": 221,
+					"height": 20,
+					"dataSource": "vText1",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 14,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable8": {
+					"type": "dropdown",
+					"top": 74,
+					"left": 9,
+					"width": 282,
+					"height": 28,
+					"dataSource": "theFields",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"fontFamily": "System Font Regular",
+					"fontSize": 14,
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 109,
+					"left": 9,
+					"width": 465,
+					"height": 80,
+					"dataSource": "vText1",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 14,
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 46,
+					"left": 9,
+					"width": 58,
+					"height": 24,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Variable22": {
+					"type": "button",
+					"top": 48,
+					"left": 0,
+					"width": 2,
+					"height": 14,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable22.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 46,
+					"left": 67,
+					"width": 222,
+					"height": 24,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Variable3": {
+					"type": "button",
+					"top": 198,
+					"left": 7,
+					"width": 267,
+					"height": 28,
+					"dataSource": "b1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "a",
+					"shortcutAccel": true,
+					"fontFamily": "Geneva",
+					"fontSize": 14,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Apply 2 Selected",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable20": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable20.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable21": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 36,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable21.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

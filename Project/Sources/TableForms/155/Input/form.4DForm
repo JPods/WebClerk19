@@ -1,0 +1,596 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerBody": 730,
+	"markerBreak": 730,
+	"markerFooter": 740,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "611pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text43": {
+					"type": "text",
+					"top": 162,
+					"left": 19,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Body1 : "
+				},
+				"Text44": {
+					"type": "text",
+					"top": 117,
+					"left": 166,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "customerID : "
+				},
+				"Text45": {
+					"type": "text",
+					"top": 37,
+					"left": 166,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "DTCreated : "
+				},
+				"Text46": {
+					"type": "text",
+					"top": 137,
+					"left": 166,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "ItemNum : "
+				},
+				"Text47": {
+					"type": "text",
+					"top": 233,
+					"left": 19,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "KeyText : "
+				},
+				"Text48": {
+					"type": "text",
+					"top": 376,
+					"left": 19,
+					"width": 93,
+					"height": 77,
+					"textAlign": "right",
+					"text": "Object : "
+				},
+				"Text49": {
+					"type": "text",
+					"top": 96,
+					"left": 740,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "OrderNum : "
+				},
+				"Text50": {
+					"type": "text",
+					"top": 116,
+					"left": 500,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "PONum : "
+				},
+				"Text51": {
+					"type": "text",
+					"top": 304,
+					"left": 19,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Script : "
+				},
+				"Text52": {
+					"type": "text",
+					"top": 57,
+					"left": 166,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "TableName1 : "
+				},
+				"Text53": {
+					"type": "text",
+					"top": 77,
+					"left": 166,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "TableName2 : "
+				},
+				"Text54": {
+					"type": "text",
+					"top": 96,
+					"left": 508,
+					"width": 85,
+					"height": 17,
+					"textAlign": "right",
+					"text": "taskID : "
+				},
+				"Text56": {
+					"type": "text",
+					"top": 57,
+					"left": 508,
+					"width": 85,
+					"height": 17,
+					"textAlign": "right",
+					"text": "UUIDTable1 : "
+				},
+				"DTCreated": {
+					"type": "input",
+					"top": 37,
+					"left": 264,
+					"width": 64,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]DTCreated:15",
+					"dataSourceTypeHint": "integer",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"TableName1": {
+					"type": "input",
+					"top": 57,
+					"left": 264,
+					"width": 198,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]TableName1:4",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"UUIDForeign": {
+					"type": "input",
+					"top": 57,
+					"left": 598,
+					"width": 358,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]Table1Id:2",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"TableName2": {
+					"type": "input",
+					"top": 77,
+					"left": 264,
+					"width": 198,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]TableName2:16",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"UUIDForeign1": {
+					"type": "input",
+					"top": 76,
+					"left": 598,
+					"width": 358,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]Table2Id:17",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"VendorID": {
+					"type": "input",
+					"top": 97,
+					"left": 264,
+					"width": 198,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]vendorID:6",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"taskID": {
+					"type": "input",
+					"top": 96,
+					"left": 598,
+					"width": 118,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]taskid:14",
+					"dataSourceTypeHint": "integer",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"OrderNum": {
+					"type": "input",
+					"top": 96,
+					"left": 838,
+					"width": 118,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]orderNum:7",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"customerID": {
+					"type": "input",
+					"top": 117,
+					"left": 264,
+					"width": 198,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]customerid:5",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"PONum": {
+					"type": "input",
+					"top": 116,
+					"left": 598,
+					"width": 118,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]poNum:8",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"ItemNum": {
+					"type": "input",
+					"top": 137,
+					"left": 264,
+					"width": 198,
+					"height": 17,
+					"dataSource": "[UUIDConnection:155]ItemNum:13",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Body1": {
+					"type": "input",
+					"top": 162,
+					"left": 117,
+					"width": 864,
+					"height": 65,
+					"sizingX": "grow",
+					"dataSource": "[UUIDConnection:155]Body1:10",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"KeyText": {
+					"type": "input",
+					"top": 233,
+					"left": 117,
+					"width": 864,
+					"height": 65,
+					"sizingX": "grow",
+					"dataSource": "[UUIDConnection:155]KeyText:9",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Script": {
+					"type": "input",
+					"top": 304,
+					"left": 117,
+					"width": 864,
+					"height": 65,
+					"sizingX": "grow",
+					"dataSource": "[UUIDConnection:155]Script:12",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Object": {
+					"type": "input",
+					"top": 376,
+					"left": 117,
+					"width": 864,
+					"height": 125,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[UUIDConnection:155]Object:11",
+					"dataSourceTypeHint": "object",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"multiline": "yes",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text59": {
+					"type": "text",
+					"top": 97,
+					"left": 166,
+					"width": 93,
+					"height": 17,
+					"textAlign": "right",
+					"text": "VendorID : "
+				},
+				"Text1": {
+					"type": "text",
+					"top": 76,
+					"left": 508,
+					"width": 85,
+					"height": 17,
+					"textAlign": "right",
+					"text": "UUIDTable2 : "
+				}
+			}
+		}
+	],
+	"geometryStamp": 2,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

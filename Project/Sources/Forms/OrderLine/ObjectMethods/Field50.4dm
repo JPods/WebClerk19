@@ -1,0 +1,1 @@
+Exch_dRate(->[Order:3]currency:69; ->[Order:3]exchangeRate:68)

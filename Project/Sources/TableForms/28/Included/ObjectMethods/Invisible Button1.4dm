@@ -1,0 +1,1 @@
+SortOutputLayoutHeader(->[Payment:28]JournalOK:51)

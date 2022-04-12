@@ -1,0 +1,1 @@
+jDateTimeRecov([DInventory:36]DTCreated:15; ->vDate1; ->vTime1)

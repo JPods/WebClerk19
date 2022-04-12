@@ -1,0 +1,1 @@
+jDialPhone(->[QQQVendor:38]FAX:13; ->[QQQVendor:38]PhonePrefix:11; ->[QQQVendor:38]PhoneSuffix:12)

@@ -1,0 +1,1 @@
+entryEntity.taxJuris:=DE_PopUpArray(Self:C308)

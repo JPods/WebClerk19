@@ -1,0 +1,1 @@
+[QQQGLAccount:53]FileRefNum:2:=<>aTableNums{<>aTableNames}

@@ -1,0 +1,11 @@
+Prs_ListActive
+C_LONGINT:C283($found)
+C_LONGINT:C283($w)
+$w:=Find in array:C230(<>aPrsNameWeb; "WC_@")
+If ($w>0)
+	OBJECT SET ENABLED:C1123(b8; True:C214)
+	OBJECT SET ENABLED:C1123(b7; False:C215)
+Else 
+	OBJECT SET ENABLED:C1123(b8; False:C215)
+	OBJECT SET ENABLED:C1123(b7; True:C214)
+End if 

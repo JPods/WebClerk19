@@ -1,0 +1,7 @@
+C_LONGINT:C283($dtBegin; $dtEnd)
+$dtBegin:=DateTime_Enter(Current date:C33; ?00:00:00?)
+$dtEnd:=DateTime_Enter(Current date:C33; ?23:59:59?)
+//QUERY([EventLog];[EventLog]customerID#"";*)
+QUERY:C277([EventLog:75]; [EventLog:75]dtEvent:1>=$dtBegin; *)
+QUERY:C277([EventLog:75];  & [EventLog:75]dtEvent:1<=$dtEnd)
+//ProcessTableOpen (Table(->[EventLog])*-1)

@@ -1,0 +1,1 @@
+vtTime:=jDateTimeRTime([DInventory:36]DTCreated:15)

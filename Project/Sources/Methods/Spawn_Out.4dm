@@ -1,0 +1,18 @@
+//%attributes = {"publishedWeb":true}
+//C_TEXT($theAcct)
+//C_POINTER($ptTable)
+//CONFIRM("")
+//If ($ptTable=(->[Employee]))
+//QUERY([Customer];[Customer]salesNameID=$theAcct)
+//Records_Out (->[Customer];"";0)
+//QUERY([Order];[Order]salesNameID=$theAcct)
+//Records_Out (->[Customer];"";0)
+//ALL RECORDS([Item])
+//Records_Out (->[Item];"";0)
+//QUERY([Customer];[Customer]salesNameID=$theAcct)
+//Records_Out (->[Customer];"";0)
+//QUERY([Customer];[Customer]salesNameID=$theAcct)
+//Records_Out (->[Customer];"";0)
+//QUERY([Customer];[Customer]salesNameID=$theAcct)
+//Records_Out (->[Customer];"";0)
+//End if 

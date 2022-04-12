@@ -1,0 +1,1 @@
+[ProposalLine:43]extendedWt:19:=[ProposalLine:43]unitWeight:22*[ProposalLine:43]qty:3

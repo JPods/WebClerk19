@@ -1,0 +1,265 @@
+﻿{
+	"destination": "detailScreen",
+	"width": 600,
+	"height": 400,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 4,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 36,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAcceptB",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable28": {
+					"type": "button",
+					"top": 31,
+					"left": 0,
+					"width": 3,
+					"height": 12,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable28.4dm"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 51,
+					"left": 134,
+					"width": 81,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Set Quantities"
+				},
+				"Variable47": {
+					"type": "input",
+					"top": 9,
+					"left": 225,
+					"width": 344,
+					"height": 14,
+					"dataSource": "srItem",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/sr_ItemNum"
+					},
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable48": {
+					"type": "input",
+					"top": 30,
+					"left": 225,
+					"width": 344,
+					"height": 14,
+					"dataSource": "srItemDscrp",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/sr_ItemDescrip"
+					},
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable13725": {
+					"type": "input",
+					"top": 51,
+					"left": 225,
+					"width": 344,
+					"height": 38,
+					"dataSource": "srItemKeyWords",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/sr_ItemKeyword"
+					},
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable41": {
+					"type": "dropdown",
+					"top": 66,
+					"left": 129,
+					"width": 86,
+					"height": 16,
+					"dataSource": "iLoaText1",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"method": "ObjectMethods/Variable41.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable55": {
+					"type": "plugin",
+					"top": 90,
+					"left": 34,
+					"width": 537,
+					"height": 300,
+					"dataSource": "eEstimate",
+					"pluginAreaKind": "%CUTAreaListPro",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable55.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onPluginArea",
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 65,
+					"left": 34,
+					"width": 80,
+					"height": 17,
+					"dataSource": "b1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssButtonSmall",
+					"focusable": false,
+					"text": "Calc",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 11,
+					"left": 134,
+					"width": 81,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "ItemNum"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 32,
+					"left": 134,
+					"width": 81,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Description"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

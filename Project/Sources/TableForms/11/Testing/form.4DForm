@@ -1,0 +1,802 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 19,
+	"markerBody": 256,
+	"markerBreak": 281,
+	"markerFooter": 307,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle73": {
+					"type": "rectangle",
+					"top": 80,
+					"left": 126,
+					"width": 100,
+					"height": 76,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 62,
+					"left": 377,
+					"width": 101,
+					"height": 116,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Field5": {
+					"type": "input",
+					"top": 81,
+					"left": 128,
+					"width": 97,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]ApprovedNameID:2",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 100,
+					"left": 128,
+					"width": 97,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]DateEntered:1",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 119,
+					"left": 128,
+					"width": 97,
+					"height": 17,
+					"defaultValue": "3",
+					"dataSource": "[QQQCarrier:11]ZipLength:19",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field8_first": {
+					"type": "radio",
+					"top": 171,
+					"left": 25,
+					"width": 109,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]CostType:20",
+					"text": "$ Per Shipment",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"radioGroup": "Field8_group",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field8": {
+					"type": "radio",
+					"top": 171,
+					"left": 154,
+					"width": 123,
+					"height": 17,
+					"dataSource": "Not:C34([QQQCarrier:11]CostType:20)",
+					"text": "$ Per Unit Wt",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"radioGroup": "Field8_group",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 64,
+					"left": 378,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]scacCode:28",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 83,
+					"left": 378,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]Factor:5",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "0.000 ;0.000-",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 102,
+					"left": 378,
+					"width": 99,
+					"height": 17,
+					"defaultValue": "25",
+					"dataSource": "[QQQCarrier:11]AvgBoxWt:8",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "###,##0.######",
+					"min": 1E-05,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 121,
+					"left": 378,
+					"width": 29,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]ServcIndicator:32",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field280": {
+					"type": "input",
+					"top": 121,
+					"left": 408,
+					"width": 69,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]ServiceType:34",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field33": {
+					"type": "input",
+					"top": 140,
+					"left": 378,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]CarrierName:40",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field34": {
+					"type": "input",
+					"top": 159,
+					"left": 378,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]CarrierCode:41",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Rectangle72": {
+					"type": "rectangle",
+					"top": 62,
+					"left": 641,
+					"width": 101,
+					"height": 154,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Field13": {
+					"type": "input",
+					"top": 64,
+					"left": 642,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]CODCharge:7",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 83,
+					"left": 642,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]HandlingCharge:9",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 102,
+					"left": 642,
+					"width": 50,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]InsureAt:27",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field16": {
+					"type": "input",
+					"top": 102,
+					"left": 693,
+					"width": 48,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]InsureIncrement:23",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 121,
+					"left": 642,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]InsuranceRate:24",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field32": {
+					"type": "input",
+					"top": 140,
+					"left": 642,
+					"width": 50,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]InsureMinimum:38",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field30": {
+					"type": "input",
+					"top": 140,
+					"left": 693,
+					"width": 46,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]InsureMinumumCharge:39",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 159,
+					"left": 642,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]TrackingRate:25",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 178,
+					"left": 642,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]CallTagRate:26",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field314": {
+					"type": "input",
+					"top": 197,
+					"left": 642,
+					"width": 99,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]FuelFactor:35",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "0.000 ;0.000-",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field247": {
+					"type": "checkbox",
+					"top": 62,
+					"left": 755,
+					"width": 124,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]Residential:33",
+					"text": "Residential",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 68,
+					"left": 289,
+					"width": 79,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,118"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 124,
+					"left": 263,
+					"width": 105,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Srv Ind/Type"
+				},
+				"Text32": {
+					"type": "text",
+					"top": 201,
+					"left": 533,
+					"width": 101,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Fuel Factor"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 119,
+					"left": 10,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "ZipLength"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 101,
+					"left": 10,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "DateEntered"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 81,
+					"left": 10,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "ApprovedBy"
+				},
+				"Text66": {
+					"type": "text",
+					"top": 102,
+					"left": 256,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Avg Box Wt"
+				},
+				"Text67": {
+					"type": "text",
+					"top": 82,
+					"left": 256,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Factor"
+				},
+				"Text68": {
+					"type": "text",
+					"top": 68,
+					"left": 556,
+					"width": 78,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "COD"
+				},
+				"Text69": {
+					"type": "text",
+					"top": 124,
+					"left": 508,
+					"width": 126,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "InsureRate"
+				},
+				"Text70": {
+					"type": "text",
+					"top": 103,
+					"left": 523,
+					"width": 111,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "InsureAt/Incr"
+				},
+				"Text71": {
+					"type": "text",
+					"top": 84,
+					"left": 523,
+					"width": 111,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Handling"
+				},
+				"Text72": {
+					"type": "text",
+					"top": 182,
+					"left": 508,
+					"width": 126,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CallTagRate"
+				},
+				"Text73": {
+					"type": "text",
+					"top": 160,
+					"left": 523,
+					"width": 111,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TrackRate"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 142,
+					"left": 488,
+					"width": 145,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "InsureMinimum/Charge"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 144,
+					"left": 263,
+					"width": 105,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CarrierName"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 163,
+					"left": 263,
+					"width": 105,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CarrierCode"
+				},
+				"Field36": {
+					"type": "input",
+					"top": 138,
+					"left": 128,
+					"width": 97,
+					"height": 17,
+					"defaultValue": "3",
+					"dataSource": "[Carrier:11]siteid:36",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 138,
+					"left": 10,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "siteID"
+				},
+				"Field37": {
+					"type": "checkbox",
+					"top": 85,
+					"left": 755,
+					"width": 124,
+					"height": 17,
+					"dataSource": "[QQQCarrier:11]ZoneByCountry:46",
+					"text": "ZoneByCountry",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "right",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

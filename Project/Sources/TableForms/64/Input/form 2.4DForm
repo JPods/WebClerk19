@@ -1,0 +1,85 @@
+﻿{"memorizeGeometry":true,"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":20,"bottomMargin":20,"menuBar":"Menu Bar #1","markerBody":499,"markerBreak":499,"markerFooter":507,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onActivate","onDeactivate","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onUnload","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[{"objects":{"Rectangle38":{"type":"rectangle","top":48,"left":321,"width":409,"height":19,"fill":"transparent","stroke":"#666666"},"Rectangle37":{"type":"rectangle","top":10,"left":321,"width":178,"height":38,"fill":"transparent","stroke":"#666666"},"Field1":{"type":"input","top":11,"left":324,"width":174,"height":17,"dataSource":"[ItemSerialAction:64]ItemNum:8","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field2":{"type":"input","top":30,"left":324,"width":174,"height":17,"dataSource":"[ItemSerialAction:64]ItemSerialID:1","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field3":{"type":"input","top":49,"left":324,"width":405,"height":17,"dataSource":"[ItemSerialAction:64]SerialNum:2","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Text45":{"type":"text","top":13,"left":187,"width":129,"height":12,"stroke":"#009900","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":"ItemNum"},"Text48":{"type":"text","top":32,"left":188,"width":128,"height":12,"stroke":"#009900","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":"Serial RecID"},"Text49":{"type":"text","top":51,"left":188,"width":128,"height":12,"stroke":"#009900","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":"SerialNum"},"Variable23":{"type":"button","top":11,"left":204,"width":114,"height":17,"dataSource":"bDomain","text":":16789,13","display":false},"Variable14":{"type":"button","top":31,"left":204,"width":114,"height":16,"dataSource":"b16","text":":16789,13","display":false},"Variable16":{"type":"button","top":52,"left":204,"width":114,"height":16,"dataSource":"b17","text":":16789,13","display":false},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Variable63":{"type":"button","top":50,"left":1,"width":3,"height":5,"dataSource":"bdEnterKey","shortcutKey":"[Enter]","display":false}}},{"objects":{"Rectangle2":{"type":"rectangle","top":159,"left":834,"width":129,"height":76,"fill":"transparent","stroke":"#666666"},"Rectangle1":{"type":"rectangle","top":159,"left":151,"width":235,"height":19,"fill":"transparent","stroke":"#666666"},"Rectangle36":{"type":"rectangle","top":227,"left":151,"width":236,"height":19,"fill":"transparent","stroke":"#666666"},"Rectangle35":{"type":"rectangle","top":184,"left":151,"width":138,"height":38,"fill":"transparent","stroke":"#666666"},"Variable11":{"type":"input","top":160,"left":261,"width":124,"height":17,"dataSource":"vsSrlDocTyp","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Rectangle34":{"type":"rectangle","top":253,"left":151,"width":839,"height":343,"fill":"transparent","stroke":"#666666"},"Field6":{"type":"input","top":204,"left":154,"width":134,"height":17,"dataSource":"[ItemSerialAction:64]DateAction:6","dataSourceTypeHint":"date","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","entryFilter":{"$ref":"/SOURCES/filters.json#/##~1##~1##"},"dragging":"none","dropping":"none"},"Field7":{"type":"input","top":228,"left":154,"width":232,"height":17,"dataSource":"[ItemSerialAction:64]Action:7","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Variable9":{"type":"button","top":161,"left":463,"width":95,"height":34,"dataSource":"bSerialOrd","tooltip":{"$ref":"/SOURCES/tips.json#/Report123456789"},"class":"cssInput16","stroke":"#000000","focusable":false,"text":":16794,226","iconFrames":4,"style":"bevel"},"Field8":{"type":"checkbox","top":89,"left":836,"width":125,"height":16,"dataSource":"[ItemSerialAction:64]Claim:13","text":"Claim","stroke":"#000000","class":"cssCheckboxLable"},"Field9":{"type":"checkbox","top":109,"left":836,"width":125,"height":16,"dataSource":"[ItemSerialAction:64]ClaimVendor:15","text":"Claim Vendor","stroke":"#000000","class":"cssCheckboxLable"},"Field10":{"type":"checkbox","top":129,"left":836,"width":125,"height":16,"dataSource":"[ItemSerialAction:64]Complete:9","text":"Complete","stroke":"#000000","class":"cssCheckboxLable"},"Field11":{"type":"input","top":160,"left":837,"width":125,"height":17,"dataSource":"[ItemSerialAction:64]VendorID:14","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field12":{"type":"input","top":179,"left":837,"width":125,"height":17,"dataSource":"[ItemSerialAction:64]CostType:11","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field13":{"type":"input","top":198,"left":837,"width":125,"height":17,"dataSource":"[ItemSerialAction:64]Cost:10","dataSourceTypeHint":"number","stroke":"#000000","class":"cssInput","textAlign":"right","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field14":{"type":"input","top":217,"left":837,"width":125,"height":17,"dataSource":"[ItemSerialAction:64]Price:12","dataSourceTypeHint":"number","stroke":"#000000","class":"cssInput","textAlign":"right","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Variable10":{"type":"pictureButton","top":287,"left":93,"width":42,"height":33,"dataSource":"bDateTime2","rowCount":4,"picture":"/RESOURCES/Images/library/DateTimeButton.png","switchWhenRollover":true,"switchBackWhenReleased":true,"useLastFrameAsDisabled":true},"Field4":{"type":"input","top":160,"left":154,"width":105,"height":17,"dataSource":"[ItemSerialAction:64]tableNum:3","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field5":{"type":"input","top":185,"left":154,"width":134,"height":17,"dataSource":"[ItemSerialAction:64]DocID:4","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Text1":{"type":"text","top":162,"left":700,"width":130,"height":12,"stroke":"#009900","class":"cssInputLabel","textAlign":"right","text":":16790,184"},"Text2":{"type":"text","top":181,"left":700,"width":130,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":":16794,227"},"Text3":{"type":"text","top":200,"left":700,"width":130,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":":16789,154"},"Text4":{"type":"text","top":219,"left":700,"width":130,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":":16792,220"},"Text50":{"type":"text","top":163,"left":18,"width":128,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":"TableRef"},"Text51":{"type":"text","top":187,"left":18,"width":128,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":"DocID"},"Text52":{"type":"text","top":206,"left":18,"width":128,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Date Action"},"Text53":{"type":"text","top":230,"left":18,"width":128,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Action"},"Text54":{"type":"text","top":257,"left":18,"width":128,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Comment"},"Variable18":{"type":"button","top":160,"left":715,"width":115,"height":16,"dataSource":"bVendor","text":":16789,13","display":false},"Field15":{"type":"input","top":254,"left":154,"width":834,"height":341,"dataSource":"[ItemSerialAction:64]Comment:5","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","spellcheck":true,"contextMenu":"none","dragging":"none","dropping":"none"}}},{"objects":{"Field258":{"type":"input","top":131,"left":28,"width":952,"height":449,"dataSource":"[ItemSerialAction:64]ObGeneral:20","dataSourceTypeHint":"object","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Text5":{"type":"text","top":110,"left":31,"width":91,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"left","text":"ObGeneral"}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}}}

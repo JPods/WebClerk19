@@ -1,0 +1,1 @@
+vR1:=[POReceipt:95]VendorInvoiceAmount:7-[POReceipt:95]StackValues:10-[POReceipt:95]VendorInvoiceFreight:6

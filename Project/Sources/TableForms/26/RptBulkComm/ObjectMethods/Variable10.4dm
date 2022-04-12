@@ -1,0 +1,1 @@
+vComByRep:=Subtotal:C97(vComAmount)

@@ -1,0 +1,226 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 1,
+	"markerBody": 78,
+	"markerBreak": 78,
+	"markerFooter": 78,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 13,
+					"left": 111,
+					"width": 117,
+					"height": 53,
+					"fill": "transparent",
+					"stroke": "#555555"
+				},
+				"Total": {
+					"type": "input",
+					"top": 14,
+					"left": 112,
+					"width": 115,
+					"height": 12,
+					"dataSource": "[Invoice:26]total:18",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"BalanceDue": {
+					"type": "input",
+					"top": 27,
+					"left": 112,
+					"width": 115,
+					"height": 12,
+					"dataSource": "[Invoice:26]balanceDue:44",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"AppliedDiscount": {
+					"type": "input",
+					"top": 40,
+					"left": 112,
+					"width": 115,
+					"height": 12,
+					"dataSource": "[Invoice:26]appliedDiscount:45",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"AppliedAmount": {
+					"type": "input",
+					"top": 53,
+					"left": 112,
+					"width": 115,
+					"height": 12,
+					"dataSource": "[Invoice:26]appliedAmount:46",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 53,
+					"left": 3,
+					"width": 100,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": "AppliedAmount"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 40,
+					"left": 3,
+					"width": 100,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": "AppliedDiscount"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 27,
+					"left": 3,
+					"width": 100,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": "BalanceDue"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 14,
+					"left": 3,
+					"width": 100,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "\cssButtonSmall",
+					"textAlign": "right",
+					"text": "Total"
+				},
+				"Variable1": {
+					"type": "button",
+					"top": 74,
+					"left": 81,
+					"width": 97,
+					"height": 20,
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"action": "cancel",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"focusable": false,
+					"text": "Button",
+					"iconFrames": 4,
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

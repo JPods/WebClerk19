@@ -1,0 +1,229 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Thermometer": {
+					"type": "progress",
+					"top": 56,
+					"left": 60,
+					"width": 741,
+					"height": 22,
+					"dataSource": "Web Area_progress",
+					"continuousExecution": false,
+					"min": 0,
+					"max": 100,
+					"graduationStep": 10,
+					"step": 10,
+					"class": "cssInputSmall",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"4DDOC_BtPrevious": {
+					"type": "button",
+					"top": 6,
+					"left": 10,
+					"width": 117,
+					"height": 41,
+					"dataSource": "4DDOC_BtPrevious",
+					"action": "openBackURL",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"focusable": false,
+					"text": ":<>StrLang,43",
+					"icon": "/RESOURCES/Images/library/2023.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "toolbar",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onLongClick"
+					]
+				},
+				"4DDOC_BtNext": {
+					"type": "button",
+					"top": 6,
+					"left": 136,
+					"width": 117,
+					"height": 41,
+					"dataSource": "4DDOC_BtNext",
+					"action": "openForwardURL",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"focusable": false,
+					"text": ":◊StrLang,44",
+					"icon": "/RESOURCES/Images/library/2024.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "toolbar",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onLongClick"
+					]
+				},
+				"CurrentURL": {
+					"type": "input",
+					"top": 60,
+					"left": 67,
+					"width": 740,
+					"height": 12,
+					"sizingX": "grow",
+					"sizingY": "move",
+					"dataSource": "CurrentURL",
+					"class": "\cssButtonSmall",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"method": "ObjectMethods/CurrentURL.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RoundArea2": {
+					"type": "picture",
+					"top": 12,
+					"left": 565,
+					"width": 220,
+					"height": 32,
+					"sizingX": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/RoundArea.png"
+				},
+				"FocusRing2": {
+					"type": "picture",
+					"top": 12,
+					"left": 565,
+					"width": 220,
+					"height": 32,
+					"sizingX": "move",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/FocusRing.png"
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 20,
+					"left": 586,
+					"width": 180,
+					"height": 11,
+					"sizingX": "move",
+					"dataSource": "vSearchValue2",
+					"class": "cssInputSmall",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"SearchCriteria2": {
+					"type": "input",
+					"top": 20,
+					"left": 585,
+					"width": 175,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "vSearchCriteria2",
+					"stroke": "#888888",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"method": "ObjectMethods/SearchCriteria2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Texte2": {
+					"type": "text",
+					"top": 57,
+					"left": 9,
+					"width": 31,
+					"height": 12,
+					"class": "\cssButtonSmall",
+					"text": "URL :"
+				},
+				"Web Area": {
+					"type": "webArea",
+					"top": 80,
+					"left": 1,
+					"width": 799,
+					"height": 445,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "mybrowser",
+					"urlSource": "CurrentURL",
+					"progressSource": "Web Area_progress",
+					"contextMenu": "none",
+					"borderStyle": "none"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

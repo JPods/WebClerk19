@@ -1,0 +1,1 @@
+entryEntity.UPSBillingOption:=DE_PopUpArray(Self:C308)

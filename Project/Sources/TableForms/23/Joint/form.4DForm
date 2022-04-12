@@ -1,0 +1,352 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"LBPopup": {
+					"type": "listbox",
+					"left": 48,
+					"top": 67,
+					"width": 548,
+					"height": 490,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.cPopup",
+					"listboxType": "collection",
+					"class": "cssInput",
+					"selectionMode": "single",
+					"currentItemSource": "Form:C1466.PopupCurrent",
+					"currentItemPositionSource": "Form:C1466.PopupPosition",
+					"selectedItemsSource": "Form:C1466.PopupSelected",
+					"method": "ObjectMethods/LBPopup.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "ListName",
+								"name": "Header1_Popup"
+							},
+							"name": "Column1_Popup",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.listName",
+							"enterable": true
+						},
+						{
+							"header": {
+								"name": "Header2_Popup",
+								"text": "ArrayName",
+								"fontStyle": "italic"
+							},
+							"name": "Column2_Popup",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.arrayName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header3_Popup",
+								"text": "WhereUsed"
+							},
+							"name": "Column3_Popup",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.whereUsed",
+							"enterable": true
+						},
+						{
+							"header": {
+								"name": "Header4_Popup",
+								"text": "IDNum"
+							},
+							"name": "Column4_Popup",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.idNum",
+							"enterable": false,
+							"numberFormat": "###,##0.00 ;###,##0.00-"
+						}
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 67,
+					"left": 906,
+					"width": 121,
+					"height": 209,
+					"dataSource": "[PopUp:23]whereUsed:7",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "Button",
+					"top": 22,
+					"left": 352,
+					"width": 170,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"bSubAdd": {
+					"type": "pictureButton",
+					"top": 22,
+					"left": 692,
+					"width": 69,
+					"height": 36,
+					"dataSource": "bSubAdd",
+					"shortcutKey": "+",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/Plus.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/bSubAdd.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bSubDel": {
+					"type": "pictureButton",
+					"top": 22,
+					"left": 767,
+					"width": 69,
+					"height": 36,
+					"dataSource": "bSubDel",
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/MinusButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/bSubDel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"LBPopupChoice": {
+					"type": "listbox",
+					"left": 611,
+					"top": 67,
+					"width": 275,
+					"height": 490,
+					"events": [
+						"onDataChange",
+						"onHeaderClick"
+					],
+					"method": "ObjectMethods/LBPopupChoice.4dm",
+					"dataSource": "Form:C1466.cPopupChoice",
+					"listboxType": "collection",
+					"currentItemSource": "Form:C1466.PopupChoiceCurrent",
+					"currentItemPositionSource": "Form:C1466.PopupChoicePosition",
+					"selectedItemsSource": "Form:C1466.PopupChoiceSelected",
+					"scrollbarHorizontal": "hidden",
+					"borderStyle": "double",
+					"selectionMode": "single",
+					"alternateFill": "#fffacd",
+					"columns": [
+						{
+							"header": {
+								"text": "Choice",
+								"name": "Header1_PopupChoice"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer5"
+							},
+							"dataSource": "This:C1470.choice",
+							"width": 133
+						},
+						{
+							"header": {
+								"name": "Header2_PopupChoice",
+								"text": "Alternate"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.alternate"
+						}
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 22,
+					"left": 157,
+					"width": 170,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bCancel.4dm"
+				},
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 58,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

@@ -1,0 +1,1 @@
+TextToDocument(->vText1)

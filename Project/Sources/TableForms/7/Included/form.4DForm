@@ -1,0 +1,251 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1600,
+					"height": 19,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "#FFFFFF"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Field1": {
+					"type": "checkbox",
+					"top": 21,
+					"left": 6,
+					"width": 13,
+					"height": 14,
+					"dataSource": "[QQQReference:7]Approval:12",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 21,
+					"left": 27,
+					"width": 65,
+					"height": 14,
+					"dataSource": "[QQQReference:7]Company:2",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 21,
+					"left": 96,
+					"width": 99,
+					"height": 14,
+					"dataSource": "[QQQReference:7]Switchboard:9",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 21,
+					"left": 198,
+					"width": 177,
+					"height": 14,
+					"dataSource": "[QQQReference:7]Contact:10",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Line2": {
+					"type": "line",
+					"top": 0,
+					"left": 25,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 3,
+					"left": 27,
+					"width": 65,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16789,25"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 0,
+					"left": 93,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 3,
+					"left": 96,
+					"width": 99,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16789,12"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 0,
+					"left": 196,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 3,
+					"left": 198,
+					"width": 87,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16791,135"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 4,
+					"left": 29,
+					"width": 61,
+					"height": 13,
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 4,
+					"left": 105,
+					"width": 80,
+					"height": 13,
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 4,
+					"left": 203,
+					"width": 80,
+					"height": 13,
+					"dataSource": "oLoSort3",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

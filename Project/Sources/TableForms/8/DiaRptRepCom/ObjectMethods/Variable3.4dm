@@ -1,0 +1,1 @@
+vComName:=aComNames{aComNames}

@@ -1,0 +1,835 @@
+﻿{
+	"windowMinWidth": 635,
+	"windowMaxWidth": 2000,
+	"windowMinHeight": 435,
+	"windowMaxHeight": 2000,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onLosingFocus",
+		"onGettingFocus",
+		"onMenuSelect",
+		"onCloseBox",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onLoadRecord"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperWidth": "845pt",
+		"paperHeight": "653pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		{
+			"objects": {
+				"SplashBG": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1005,
+					"height": 695,
+					"fill": "#DDDDDD",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"top": 100,
+					"left": 58,
+					"width": 425,
+					"height": 30,
+					"class": "cssInput",
+					"text": "Orders"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 223,
+					"left": 305,
+					"width": 358,
+					"height": 275
+				},
+				"Variable4": {
+					"type": "pictureButton",
+					"top": 270,
+					"left": 314,
+					"width": 346,
+					"height": 194,
+					"dataSource": "bSpiralArrow",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/SpiralArrowBox.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 436,
+					"left": 437,
+					"width": 169,
+					"height": 12,
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 12,
+					"text": "Power and Excellence"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 454,
+					"left": 354,
+					"width": 303,
+					"height": 33,
+					"fontFamily": "Arial",
+					"fontSize": 10,
+					"text": "People and resources rallied by leadership achieve objectives\nthrough relentless cycles of implement, test, plan, change...."
+				},
+				"Variable5": {
+					"type": "pictureButton",
+					"top": 230,
+					"left": 498,
+					"width": 36,
+					"height": 36,
+					"dataSource": "bGlobe",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Globe.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "button",
+					"top": 248,
+					"left": 46,
+					"width": 61,
+					"height": 96,
+					"dataSource": "b2",
+					"shortcutKey": "v",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"display": false,
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 197,
+					"left": 303,
+					"width": 93,
+					"height": 21,
+					"stroke": "#AAAAAA",
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "Sales"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 238,
+					"left": 322,
+					"width": 155,
+					"height": 21,
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "CommerceExpert"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 238,
+					"left": 551,
+					"width": 103,
+					"height": 21,
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "WebClerk"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 256,
+					"left": 325,
+					"width": 148,
+					"stroke": "#FFB107",
+					"strokeWidth": 2
+				},
+				"Line2": {
+					"type": "line",
+					"top": 256,
+					"left": 553,
+					"width": 80,
+					"stroke": "#FFB107",
+					"strokeWidth": 2
+				},
+				"Variable86": {
+					"type": "dropdown",
+					"top": 481,
+					"left": 512,
+					"width": 148,
+					"height": 15,
+					"dataSource": "<>aTableNames",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"method": "ObjectMethods/Variable86.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "button",
+					"top": 223,
+					"left": 680,
+					"width": 137,
+					"height": 275,
+					"dataSource": "b4",
+					"shortcutKey": "v",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"display": false,
+					"method": "ObjectMethods/Variable2.4dm"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 68,
+					"left": 583,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Transfer"
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 101,
+					"left": 506,
+					"width": 425,
+					"height": 29,
+					"class": "cssInput",
+					"text": "Invoices"
+				},
+				"vrOrdersAmountToday": {
+					"type": "input",
+					"top": 159,
+					"left": 128,
+					"width": 160,
+					"height": 17,
+					"dataSource": "vrOrdersAmountToday",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput",
+					"focusable": false,
+					"borderStyle": "double",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/$ 0"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"vrInvoicesAmountToday": {
+					"type": "input",
+					"top": 159,
+					"left": 576,
+					"width": 160,
+					"height": 17,
+					"dataSource": "vrInvoicesAmountToday",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput",
+					"focusable": false,
+					"borderStyle": "double",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/$ 0"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"vrInvoicesAmountMonth": {
+					"type": "input",
+					"top": 159,
+					"left": 750,
+					"width": 160,
+					"height": 17,
+					"dataSource": "vrInvoicesAmountMonth",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput",
+					"focusable": false,
+					"borderStyle": "double",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/$ 0"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 139,
+					"left": 128,
+					"width": 160,
+					"height": 17,
+					"class": "\cssInput",
+					"textAlign": "left",
+					"text": "Today"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 139,
+					"left": 303,
+					"width": 160,
+					"height": 17,
+					"class": "\cssInput",
+					"textAlign": "left",
+					"text": "This Month"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 139,
+					"left": 576,
+					"width": 160,
+					"height": 17,
+					"class": "\cssInput",
+					"textAlign": "left",
+					"text": "Today"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 139,
+					"left": 750,
+					"width": 77,
+					"height": 17,
+					"class": "\cssInput",
+					"textAlign": "left",
+					"text": "This Month"
+				},
+				"vrOrdersAmountMonth": {
+					"type": "input",
+					"top": 159,
+					"left": 304,
+					"width": 160,
+					"height": 17,
+					"dataSource": "vrOrdersAmountMonth",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput",
+					"focusable": false,
+					"borderStyle": "double",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/$ 0"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 159,
+					"left": 61,
+					"width": 60,
+					"height": 17,
+					"class": "\cssInput",
+					"textAlign": "right",
+					"text": "Amount"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 159,
+					"left": 508,
+					"width": 60,
+					"height": 17,
+					"class": "\cssInput",
+					"textAlign": "right",
+					"text": "Amount"
+				},
+				"Invisible Button": {
+					"type": "button",
+					"top": 101,
+					"left": 59,
+					"width": 85,
+					"height": 23,
+					"dataSource": "Invisible Button",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 100,
+					"left": 508,
+					"width": 85,
+					"height": 23,
+					"dataSource": "Invisible Button",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 68,
+					"left": 651,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Inventory"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 68,
+					"left": 336,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Contacts"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 68,
+					"left": 402,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Interactions"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 68,
+					"left": 136,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Orders"
+				},
+				"Group Box2": {
+					"type": "groupBox",
+					"top": 8,
+					"left": 141,
+					"width": 340,
+					"height": 20,
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"text": "Sales\r"
+				},
+				"Group Box3": {
+					"type": "groupBox",
+					"top": 8,
+					"left": 587,
+					"width": 342,
+					"height": 20,
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"text": "Production\r\r\r\r\r\r\r\r\r"
+				},
+				"pbProducts1": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 600,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbProducts",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Transfer.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbProducts1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 68,
+					"left": 583,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Transfer"
+				},
+				"pbInventoryLog": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 668,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbInventoryLog",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/InventoryLog.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbInventoryLog.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 68,
+					"left": 651,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Inventory"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 68,
+					"left": 854,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "QuickQuote\r"
+				},
+				"pbQuickQuote": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 871,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbQuickQuote",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/QuickQuote-3.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbQuickQuote.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"pbCustomers": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 289,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbCustomers",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Customers.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbCustomers.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text19": {
+					"type": "text",
+					"top": 68,
+					"left": 270,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Customers"
+				},
+				"pbContacts": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 355,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbContacts",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Contacts.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbContacts.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 68,
+					"left": 336,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Contacts"
+				},
+				"pbInteractions": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 421,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbInteractions",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Interactions.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbInteractions.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 68,
+					"left": 402,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Interactions"
+				},
+				"pbInvoices": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 222,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbInvoices",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Invoices.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbInvoices.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text22": {
+					"type": "text",
+					"top": 68,
+					"left": 203,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Invoices"
+				},
+				"pbOrders": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 153,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbOrders",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Orders.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbOrders.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text27": {
+					"type": "text",
+					"top": 68,
+					"left": 136,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Orders"
+				},
+				"pbProducts": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 804,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbProducts",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Products.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbProducts.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text24": {
+					"type": "text",
+					"top": 68,
+					"left": 787,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "Products"
+				},
+				"pbRTI": {
+					"type": "pictureButton",
+					"top": 31,
+					"left": 736,
+					"width": 36,
+					"height": 36,
+					"dataSource": "pbRTI",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/RTI.svg",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/pbRTI.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text26": {
+					"type": "text",
+					"top": 68,
+					"left": 719,
+					"width": 70,
+					"height": 16,
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"textAlign": "center",
+					"text": "RTI"
+				},
+				"btTableDropDown": {
+					"type": "button",
+					"top": 115,
+					"left": 951,
+					"width": 5,
+					"height": 15,
+					"dataSource": "btTableDropDown",
+					"shortcutKey": "t",
+					"display": false,
+					"method": "ObjectMethods/btTableDropDown.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group28": [
+				"pbRTI",
+				"Text26"
+			],
+			"Group30": [
+				"Text18",
+				"pbQuickQuote"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"Group Box",
+					"Group Box1",
+					"Group Box2",
+					"Group Box3"
+				]
+			},
+			"View 3": {
+				"objects": [
+					"Text25",
+					"Text10",
+					"Text20",
+					"Text21",
+					"Text23",
+					"pbProducts1",
+					"Text9",
+					"pbInventoryLog",
+					"Text11",
+					"Group30",
+					"pbCustomers",
+					"Text19",
+					"pbContacts",
+					"Text12",
+					"pbInteractions",
+					"Text17",
+					"pbInvoices",
+					"Text22",
+					"pbOrders",
+					"Text27",
+					"pbProducts",
+					"Text24",
+					"Group28"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 13,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

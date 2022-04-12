@@ -1,0 +1,1 @@
+Itm_ListArrows(2; eItemInv; ->aLsSrRec; ->aItemLines)  //down; area; available; selected

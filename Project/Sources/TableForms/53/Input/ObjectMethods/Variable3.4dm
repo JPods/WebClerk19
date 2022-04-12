@@ -1,0 +1,1 @@
+entryEntity.typeid:=DE_PopUpArray(Self:C308)

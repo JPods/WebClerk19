@@ -1,0 +1,556 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 445,
+	"markerBreak": 448,
+	"markerFooter": 452,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 67,
+					"left": 364,
+					"width": 181,
+					"height": 38,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle40": {
+					"type": "rectangle",
+					"top": 11,
+					"left": 436,
+					"width": 109,
+					"height": 57,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 70,
+					"left": 269,
+					"width": 74,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,83"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 89,
+					"left": 289,
+					"width": 54,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,85"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 49,
+					"left": 21,
+					"width": 108,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16790,86"
+				},
+				"Variable2": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 68,
+					"left": 367,
+					"width": 177,
+					"height": 14,
+					"dataSource": "srPO",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "0000-0000",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "button",
+					"top": 18,
+					"left": 166,
+					"width": 86,
+					"height": 16,
+					"dataSource": "b20",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16790,87",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable8": {
+					"type": "button",
+					"top": 39,
+					"left": 166,
+					"width": 86,
+					"height": 17,
+					"dataSource": "b24",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16790,90",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable14": {
+					"type": "button",
+					"top": 61,
+					"left": 166,
+					"width": 86,
+					"height": 17,
+					"dataSource": "b21",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16790,93",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable217": {
+					"type": "checkbox",
+					"top": 14,
+					"left": 347,
+					"width": 20,
+					"height": 13,
+					"dataSource": "b41",
+					"text": " ",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"stroke": "#000000",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable212": {
+					"type": "input",
+					"top": 12,
+					"left": 439,
+					"width": 105,
+					"height": 14,
+					"dataSource": "vR1",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable218": {
+					"type": "checkbox",
+					"top": 33,
+					"left": 347,
+					"width": 12,
+					"height": 13,
+					"dataSource": "b42",
+					"text": " ",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"stroke": "#000000",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable12": {
+					"type": "input",
+					"top": 31,
+					"left": 439,
+					"width": 105,
+					"height": 14,
+					"dataSource": "vR2",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable219": {
+					"type": "checkbox",
+					"top": 52,
+					"left": 347,
+					"width": 12,
+					"height": 13,
+					"dataSource": "b43",
+					"text": " ",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"stroke": "#000000",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable215": {
+					"type": "input",
+					"top": 50,
+					"left": 439,
+					"width": 105,
+					"height": 14,
+					"dataSource": "vR3",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable220": {
+					"type": "checkbox",
+					"top": 88,
+					"left": 347,
+					"width": 17,
+					"height": 14,
+					"dataSource": "b44",
+					"text": " ",
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"stroke": "#000000",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable16": {
+					"type": "input",
+					"top": 87,
+					"left": 367,
+					"width": 177,
+					"height": 14,
+					"dataSource": "v1",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable6": {
+					"type": "button",
+					"top": 17,
+					"left": 549,
+					"width": 85,
+					"height": 17,
+					"dataSource": "b25",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16790,88",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable9": {
+					"type": "button",
+					"top": 39,
+					"left": 549,
+					"width": 85,
+					"height": 17,
+					"dataSource": "b26",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16790,91",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable15": {
+					"type": "button",
+					"top": 60,
+					"left": 549,
+					"width": 85,
+					"height": 17,
+					"dataSource": "b27",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16790,94",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable15.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable10": {
+					"type": "button",
+					"top": 39,
+					"left": 639,
+					"width": 85,
+					"height": 17,
+					"dataSource": "b28",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,102",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable10.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text33": {
+					"type": "text",
+					"top": 63,
+					"left": 647,
+					"width": 77,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Opt to PoLn"
+				},
+				"Variable284": {
+					"type": "button",
+					"top": 17,
+					"left": 639,
+					"width": 85,
+					"height": 17,
+					"dataSource": "b25",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Edit Receipt",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable284.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 14,
+					"left": 360,
+					"width": 72,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Duty"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 33,
+					"left": 360,
+					"width": 72,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Non-Product"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 52,
+					"left": 360,
+					"width": 72,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "VAT"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 255,
+					"top": 158,
+					"width": 844,
+					"height": 538,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"method": "ObjectMethods/List Box.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 3,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

@@ -1,0 +1,533 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerBody": 265,
+	"markerBreak": 265,
+	"markerFooter": 275,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 229,
+					"left": 11,
+					"width": 209,
+					"height": 14,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Variable2": {
+					"type": "listbox",
+					"top": 58,
+					"left": 10,
+					"width": 127,
+					"height": 156,
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"fontSize": 9,
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Variable2_Column1",
+							"dataSource": "<>aProcesses",
+							"width": 112,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontSize": 9,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Header1",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontSize": 9
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontSize": 9
+							}
+						}
+					]
+				},
+				"Variable3": {
+					"type": "listbox",
+					"top": 58,
+					"left": 138,
+					"width": 141,
+					"height": 156,
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"fontSize": 9,
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Variable3_Column1",
+							"dataSource": "aAttributes",
+							"width": 126,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontSize": 9,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Header2",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontSize": 9
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontSize": 9
+							}
+						}
+					]
+				},
+				"Variable4": {
+					"type": "listbox",
+					"top": 58,
+					"left": 280,
+					"width": 144,
+					"height": 156,
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"fontSize": 9,
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "Variable4_Column1",
+							"dataSource": "aCauses",
+							"width": 129,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontSize": 9,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Header3",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"fontSize": 9
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontSize": 9
+							}
+						}
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 230,
+					"left": 12,
+					"width": 207,
+					"height": 12,
+					"dataSource": "v1s50",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "radio",
+					"top": 227,
+					"left": 228,
+					"width": 92,
+					"height": 13,
+					"dataSource": "b1",
+					"text": ":16789,167",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable7": {
+					"type": "radio",
+					"top": 244,
+					"left": 228,
+					"width": 92,
+					"height": 13,
+					"dataSource": "b2",
+					"text": ":16789,168",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable8": {
+					"type": "radio",
+					"top": 261,
+					"left": 228,
+					"width": 92,
+					"height": 13,
+					"dataSource": "b3",
+					"text": ":16789,169",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable9": {
+					"type": "button",
+					"top": 251,
+					"left": 36,
+					"width": 36,
+					"height": 22,
+					"dataSource": "b20",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,86",
+					"iconFrames": 4,
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable10": {
+					"type": "button",
+					"top": 251,
+					"left": 78,
+					"width": 36,
+					"height": 22,
+					"dataSource": "b21",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,87",
+					"iconFrames": 4,
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable11": {
+					"type": "button",
+					"top": 251,
+					"left": 120,
+					"width": 36,
+					"height": 22,
+					"dataSource": "b22",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,88",
+					"iconFrames": 4,
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable12": {
+					"type": "button",
+					"top": 251,
+					"left": 162,
+					"width": 36,
+					"height": 22,
+					"dataSource": "b23",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "[up arrow]",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,152",
+					"iconFrames": 4,
+					"style": "bevel",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 23,
+					"left": 35,
+					"width": 387,
+					"height": 16,
+					"stroke": "#000000",
+					"textAlign": "center",
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"text": ":16792,189"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 42,
+					"left": 137,
+					"width": 143,
+					"height": 173,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 42,
+					"left": 9,
+					"width": 129,
+					"height": 173,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 43,
+					"left": 12,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"textAlign": "center",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"text": ":16789,162"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 43,
+					"left": 139,
+					"width": 124,
+					"height": 12,
+					"stroke": "#000000",
+					"textAlign": "center",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"text": ":16789,163"
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 42,
+					"left": 279,
+					"width": 146,
+					"height": 173,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 43,
+					"left": 281,
+					"width": 127,
+					"height": 12,
+					"stroke": "#000000",
+					"textAlign": "center",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"text": ":16789,164"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 57,
+					"left": 9,
+					"width": 415,
+					"height": 1,
+					"strokeWidth": 0.1,
+					"strokeDashArray": "1 1"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 217,
+					"left": 10,
+					"width": 184,
+					"height": 12,
+					"stroke": "#000000",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"text": ":16792,190"
+				},
+				"Variable13": {
+					"type": "button",
+					"top": 221,
+					"left": 361,
+					"width": 8,
+					"height": 8,
+					"dataSource": "bKeyCancel",
+					"action": "cancel",
+					"shortcutKey": ".",
+					"shortcutAccel": true,
+					"display": false,
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable14": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"action": "accept",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,389 @@
+{
+	"users": {
+		"designer": {
+			"password": "NsMqwyLaEELf4Z0pjoX9Dw==",
+			"alias": "jitCorp"
+		},
+		"administrator": {
+			"alias": "Admin"
+		},
+		"ESites": {
+			"password": "gfHZroj72qzo5CJsqusgyw=="
+		},
+		"Parts_Prep": {
+			"password": "wCakQnALIaS8wHWDaW21iQ=="
+		},
+		"VeryLimited": {
+			"password": "UyZaxUYiIX2L1ulRGsLQvw=="
+		},
+		"RTI_Plant2": {
+			"password": "dobMIHxbKYt/GF2W+8C1HQ=="
+		},
+		"Stock Room": {
+			"password": "gQbJF9Q5dINdbQJC0h7xxA=="
+		},
+		"EDI": {
+			"password": "oJhTnRwGy7YCfMdW1o3y5A=="
+		},
+		"Email": {
+			"password": "OFcFfKJ5EYGFkHE/SsTQHA=="
+		},
+		"WebClerk": {
+			"password": "sbFlwpN4OehK44qpPzoHWw=="
+		}
+	},
+	"groups": {
+		"OnlyTally": {
+			"users": [
+				"Admin",
+				"EDI",
+				"Email"
+			]
+		},
+		"AdjustByItem": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"EditItem": {
+			"users": [
+				"Admin"
+			]
+		},
+		"Sales": {
+			"users": [
+				"ESites",
+				"WebClerk"
+			],
+			"groups": [
+				"ViewCommission",
+				"Costing",
+				"Time",
+				"Term",
+				"EditReportScript",
+				"ProductInvoice",
+				"EditOrder",
+				"EditInvoice",
+				"Credit",
+				"Discount",
+				"ChangeSalesID",
+				"CommissionInvoice"
+			]
+		},
+		"ViewCommission": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"Costing": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Parts_Prep",
+				"RTI_Plant2",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"Time": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"RemoteUserPassword": {
+			"users": [
+				"Admin"
+			]
+		},
+		"Designer": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"ItemClone": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"VeryLimited": {
+			"users": [
+				"Parts_Prep",
+				"VeryLimited",
+				"Email"
+			]
+		},
+		"CreditCardView": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"Term": {
+			"users": [
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"Sync": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"RemoteUser": {
+			"users": [
+				"Admin"
+			]
+		},
+		"PackingManual": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"EditReportScript": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"RTI_Plant2",
+				"Stock Room",
+				"EDI",
+				"WebClerk"
+			]
+		},
+		"ProductInvoice": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"EditBOM": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"Test": {
+			"users": [
+				"Admin"
+			]
+		},
+		"EditOrder": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"EditInvoice": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"Default": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"MakePayment": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"UnlockRecord": {
+			"users": [
+				"jitCorp",
+				"Admin"
+			]
+		},
+		"AdjustByBOM": {
+			"users": [
+				"Admin",
+				"Parts_Prep",
+				"RTI_Plant2"
+			]
+		},
+		"Inventory": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"Import": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"4D_Write": {},
+		"Shipping": {
+			"users": [
+				"Admin"
+			],
+			"groups": [
+				"Costing",
+				"PackingManual",
+				"EditOrder",
+				"EditInvoice",
+				"AdjustByBOM"
+			]
+		},
+		"Credit": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"EditPO": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"AdminControl": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"Export": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"EditQuickQuote": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"Archive": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"Employee": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"Delete": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"Discount": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"ChangeSalesID": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"Control": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"EditInvoiceLine": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"CommissionInvoice": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"Accounting": {
+			"users": [
+				"jitCorp",
+				"Admin"
+			]
+		},
+		"Apply2Selection": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		}
+	},
+	"sqlSchemaGranters": {
+		"DEFAULT_SCHEMA": {
+			"readOnlyAccessGroup": "*",
+			"readWriteAccessGroup": "*",
+			"allAccessGroup": ""
+		}
+	},
+	"remoteGranters": {
+		"web": "AdminControl",
+		"soap": "AdminControl",
+		"oci": "*",
+		"write": "4D_Write",
+		"view": "*",
+		"odbcPro": "*"
+	},
+	"settings": {
+		"localGenericWebUser": "jitCorp",
+		"designAccessGroup": "*",
+		"localMobileAccessGroupRW": "*",
+		"remoteMobileAccessGroupRW": "*",
+		"remoteGenericWebUser": "jitCorp",
+		"remoteDefaultUser": ""
+	}
+}

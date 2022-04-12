@@ -1,0 +1,12 @@
+//%attributes = {"publishedWeb":true}
+C_LONGINT:C283($1)
+ARRAY REAL:C219(aExUnitPrc; $1)
+//ARRAY REAL(aExExtPrc;$1)
+ARRAY REAL:C219(aExUnitCost; $1)
+//ARRAY REAL(aExExtCost;$1)
+//ARRAY REAL(aExBackLog;$1)
+//ARRAY REAL(aExTaxIn;$1)
+ARRAY REAL:C219(aExTaxOut; $1)
+//ARRAY REAL(aExComSale;$1)
+//ARRAY REAL(aExComRep;$1)
+ARRAY LONGINT:C221(aExLnNum; $1)

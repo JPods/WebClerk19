@@ -1,0 +1,601 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onTimer",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Form.LB_Draft.cur": {
+					"type": "input",
+					"left": 272,
+					"top": 383,
+					"width": 307,
+					"height": 209,
+					"dataSourceTypeHint": "object",
+					"dataSource": "Form:C1466.LB_Draft.cur",
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"scrollbarVertical": "visible",
+					"borderStyle": "double",
+					"class": "cssInput"
+				},
+				"Form.row": {
+					"type": "input",
+					"left": 277,
+					"top": 606,
+					"width": 99,
+					"height": 17,
+					"dataSource": "Form:C1466.row",
+					"borderStyle": "double",
+					"class": "cssInput",
+					"sizingX": "fixed"
+				},
+				"vtFieldList": {
+					"type": "input",
+					"left": 750,
+					"top": 87,
+					"width": 476,
+					"height": 17,
+					"dataSource": "vtFieldList",
+					"borderStyle": "double",
+					"class": "cssInput",
+					"sizingX": "fixed"
+				},
+				"clear_i": {
+					"type": "button",
+					"text": "Clear",
+					"top": 10,
+					"left": 1065,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/clear_i.4dm",
+					"dataSource": "clear_i",
+					"sizingX": "fixed"
+				},
+				"bSave_l": {
+					"type": "button",
+					"text": "ReadOutPut",
+					"top": 11,
+					"left": 272,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bSave_l.4dm",
+					"dataSource": "bSave_l",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"bDefault": {
+					"type": "button",
+					"text": "Load Default\t",
+					"top": 41,
+					"left": 395,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bDefault.4dm",
+					"sizingX": "fixed"
+				},
+				"tableName": {
+					"type": "input",
+					"left": 462,
+					"top": 87,
+					"width": 158,
+					"height": 17,
+					"dataSource": "tableName",
+					"borderStyle": "double",
+					"class": "cssInput",
+					"sizingX": "fixed"
+				},
+				"Form.LB_Draft.sel": {
+					"type": "input",
+					"left": 272,
+					"top": 635,
+					"width": 307,
+					"height": 197,
+					"dataSourceTypeHint": "object",
+					"dataSource": "Form:C1466.LB_Draft.sel",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"scrollbarVertical": "visible",
+					"method": "ObjectMethods/Form.LB_Draft.sel.4dm",
+					"borderStyle": "double",
+					"class": "cssInput",
+					"bottom": 832
+				},
+				"bShow_l": {
+					"type": "button",
+					"text": "Show Default",
+					"top": 11,
+					"left": 395,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bShow_l.4dm",
+					"dataSource": "bShow_l",
+					"sizingX": "fixed"
+				},
+				"bBuildArray1": {
+					"type": "button",
+					"text": "Selected-old",
+					"top": 11,
+					"left": 1189,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bBuildArray1.4dm",
+					"sizingX": "fixed"
+				},
+				"_Button_CaptureObject": {
+					"type": "button",
+					"text": "CaptureListBox",
+					"top": 41,
+					"left": 272,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/_Button_CaptureObject.4dm",
+					"dataSource": "bCapture",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"Text": {
+					"type": "text",
+					"text": "TableName",
+					"top": 87,
+					"left": 384,
+					"width": 73,
+					"height": 16,
+					"textAlign": "right",
+					"sizingX": "fixed"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "FieldList",
+					"top": 87,
+					"left": 687,
+					"width": 58,
+					"height": 16,
+					"textAlign": "right",
+					"sizingX": "fixed"
+				},
+				"obHarvest": {
+					"type": "input",
+					"left": 612,
+					"top": 410,
+					"width": 687,
+					"height": 422,
+					"dataSourceTypeHint": "object",
+					"dataSource": "Form:C1466.obHarvest",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"scrollbarVertical": "visible",
+					"method": "ObjectMethods/obHarvest.4dm",
+					"borderStyle": "double",
+					"class": "cssInput",
+					"bottom": 832
+				},
+				"bGetListBox": {
+					"type": "button",
+					"text": "Harvest ListBox",
+					"top": 382,
+					"left": 612,
+					"width": 120,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bGetListBox.4dm",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"purpose_t": {
+					"type": "input",
+					"left": 789,
+					"top": 385,
+					"width": 93,
+					"height": 17,
+					"class": "cssInput",
+					"dataSource": "purpose_t",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Purpose",
+					"top": 386,
+					"left": 741,
+					"width": 43,
+					"height": 16,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"role_t": {
+					"type": "input",
+					"left": 941,
+					"top": 385,
+					"width": 93,
+					"height": 17,
+					"class": "cssInput",
+					"dataSource": "role_t",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"role_tag": {
+					"type": "text",
+					"text": "Role",
+					"top": 386,
+					"left": 893,
+					"width": 43,
+					"height": 16,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"bBuildHarvest": {
+					"type": "button",
+					"text": "Build Harvest",
+					"top": 380,
+					"left": 1070,
+					"width": 120,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bBuildHarvest.4dm",
+					"dataSource": "",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"bAddColumn": {
+					"type": "button",
+					"text": "AddColumn",
+					"top": 11,
+					"left": 519,
+					"width": 113,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bAddColumn.4dm",
+					"sizingX": "fixed"
+				},
+				"bRemoveColumn": {
+					"type": "button",
+					"text": "RemoveColumn",
+					"top": 41,
+					"left": 519,
+					"width": 113,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bRemoveColumn.4dm",
+					"sizingX": "fixed"
+				},
+				"column_i": {
+					"type": "input",
+					"left": 629,
+					"top": 87,
+					"width": 50,
+					"height": 17,
+					"dataSource": "column_i",
+					"borderStyle": "double",
+					"class": "cssInput",
+					"sizingX": "fixed"
+				},
+				"bBuildFromText": {
+					"type": "button",
+					"text": "Build FieldList",
+					"top": 11,
+					"left": 750,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bBuildFromText.4dm",
+					"sizingX": "fixed"
+				},
+				"vtLabel": {
+					"type": "input",
+					"left": 750,
+					"top": 58,
+					"width": 476,
+					"height": 17,
+					"dataSource": "vtLabelList",
+					"borderStyle": "double",
+					"class": "cssInput",
+					"sizingX": "fixed"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Lables",
+					"top": 58,
+					"left": 687,
+					"width": 58,
+					"height": 16,
+					"textAlign": "right",
+					"sizingX": "fixed"
+				},
+				"bBuildSelected": {
+					"type": "button",
+					"text": "Selected",
+					"top": 84,
+					"left": 272,
+					"width": 110,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bBuildSelected.4dm",
+					"sizingX": "fixed"
+				},
+				"LB_Tables": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.LB_Tables.ents",
+					"top": 10,
+					"left": 9,
+					"width": 229,
+					"height": 298,
+					"visibility": "visible",
+					"sizingX": "move",
+					"sizingY": "fixed",
+					"headerHeight": "1em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"currentItemSource": "Form:C1466.LB_Tables.cur",
+					"currentItemPositionSource": "Form:C1466.LB_Tables.pos",
+					"selectedItemsSource": "Form:C1466.LB_Tables.sel",
+					"class": "cssInput16",
+					"events": [
+						"onLoad",
+						"onClick"
+					],
+					"selectionMode": "single",
+					"showHeaders": true,
+					"method": "ObjectMethods/LB_Tables.4dm",
+					"borderStyle": "double",
+					"columns": [
+						{
+							"header": {
+								"name": "Header1",
+								"text": "tableName"
+							},
+							"name": "Column_tableName",
+							"footer": {
+								"name": "Footer9"
+							},
+							"width": 160,
+							"dataSource": "This:C1470.tableName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "tableNumber"
+							},
+							"name": "Column_tableNum",
+							"footer": {
+								"name": "Footer10"
+							},
+							"width": 55,
+							"maxWidth": 100,
+							"dataSource": "This:C1470.tableNum",
+							"enterable": false
+						}
+					]
+				},
+				"LB_Fields": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.LB_Fields.ents",
+					"top": 317,
+					"left": 9,
+					"width": 229,
+					"height": 515,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"headerHeight": "1em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"currentItemSource": "Form:C1466.LB_Fields.cur",
+					"currentItemPositionSource": "Form:C1466.LB_Fields.pos",
+					"selectedItemsSource": "Form:C1466.LB_Fields.sel",
+					"class": "cssInput16",
+					"events": [
+						"onSelectionChange"
+					],
+					"selectionMode": "multiple",
+					"showHeaders": true,
+					"borderStyle": "double",
+					"method": "ObjectMethods/LB_Fields.4dm",
+					"bottom": 832,
+					"columns": [
+						{
+							"header": {
+								"name": "Header3",
+								"text": "fieldName"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.fieldName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "fieldType"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 50,
+							"dataSource": "This:C1470.type",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "type"
+							},
+							"name": "This.type",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSourceTypeHint": "number",
+							"width": 50,
+							"dataSource": "This:C1470.fieldType",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Num"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.fieldNumber",
+							"width": 50,
+							"dataSourceTypeHint": "number",
+							"enterable": false
+						}
+					]
+				},
+				"SF_Draft": {
+					"type": "subform",
+					"left": 1028,
+					"top": 199,
+					"width": 285,
+					"height": 170
+				},
+				"LB_Draft": {
+					"type": "listbox",
+					"left": 272,
+					"top": 117,
+					"width": 725,
+					"height": 246,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.LB_Draft.ents",
+					"listboxType": "collection",
+					"currentItemSource": "Form:C1466.LB_Draft.cur",
+					"currentItemPositionSource": "Form:C1466.LB_Draft.pos",
+					"selectedItemsSource": "Form:C1466.LB_Draft.sel",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header7"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer5"
+							}
+						}
+					]
+				}
+			},
+			"entryOrder": [
+				"bShow_l",
+				"bAddColumn",
+				"bSave_l",
+				"bDefault",
+				"bRemoveColumn",
+				"_Button_CaptureObject",
+				"clear_i",
+				"tableName",
+				"column_i",
+				"vtFieldList",
+				"Form.row",
+				"bBuildArray1",
+				"Form.LB_Draft.cur",
+				"Form.LB_Draft.sel",
+				"bGetListBox",
+				"obHarvest",
+				"purpose_t",
+				"role_t",
+				"bBuildHarvest",
+				"bBuildFromText",
+				"vtLabel",
+				"bBuildSelected",
+				"LB_Tables",
+				"LB_Fields",
+				"SF_Draft",
+				"LB_Draft"
+			]
+		}
+	],
+	"geometryStamp": 1204,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"inheritedForm": "",
+	"menuBar": "Menu Bar #1",
+	"memorizeGeometry": true
+}

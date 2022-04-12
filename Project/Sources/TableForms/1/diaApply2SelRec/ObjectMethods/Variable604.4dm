@@ -1,0 +1,1 @@
+vStr255:=Get text from pasteboard:C524

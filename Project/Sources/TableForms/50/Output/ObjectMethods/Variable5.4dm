@@ -1,0 +1,1 @@
+SumOutPutLayOut(->[SalesJournal:50]Debit:4; ->vR1; ->[SalesJournal:50]Credit:5; ->vR2)

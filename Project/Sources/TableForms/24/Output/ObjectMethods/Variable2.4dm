@@ -1,0 +1,16 @@
+C_LONGINT:C283($i; $k)
+$k:=Records in selection:C76([Project:24])
+CONFIRM:C162("Recalc total for "+String:C10($k)+" records.")
+FIRST RECORD:C50([Project:24])
+For ($i; 1; $k)
+	QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Project:24]customerid:4)
+	QUERY:C277([Order:3]; [Order:3]projectNum:50=[Project:24]projectNum:1)
+	QUERY:C277([Service:6]; [Service:6]projectNum:28=[Project:24]projectNum:1)
+	QUERY:C277([Invoice:26]; [Invoice:26]projectNum:50=[Project:24]projectNum:1)
+	QUERY:C277([PO:39]; [PO:39]projectNum:6=[Project:24]projectNum:1)
+	QUERY:C277([InventoryStack:29]; [InventoryStack:29]projectNum:4=[Project:24]projectNum:1)
+	QUERY:C277([Proposal:42]; [Proposal:42]projectNum:22=[Project:24]projectNum:1)
+	calcJobTotals
+	SAVE RECORD:C53([Project:24])
+	NEXT RECORD:C51([Project:24])
+End for 

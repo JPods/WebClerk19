@@ -1,0 +1,1 @@
+jExpImpSave("Export Pattern"; "SYLK")

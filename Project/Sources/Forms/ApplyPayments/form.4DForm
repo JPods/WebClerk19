@@ -1,0 +1,1211 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"LBPaymentArrays": {
+					"type": "listbox",
+					"left": 174,
+					"top": 382,
+					"width": 673,
+					"height": 180,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"method": "ObjectMethods/LBPaymentArrays.4dm",
+					"alternateFill": "#FFFADC",
+					"columns": [
+						{
+							"name": "Column_LBReplaceName_aPayInvs_",
+							"dataSource": "aPayInvs",
+							"header": {
+								"name": "Header_LBReplaceName_aPayInvs_",
+								"text": "Ref Inv"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayInvs_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aPayments_",
+							"dataSource": "aPayments",
+							"header": {
+								"name": "Header_LBReplaceName_aPayments_",
+								"text": "Amt Avail"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayments_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aPayOrig_",
+							"dataSource": "aPayOrig",
+							"header": {
+								"name": "Header_LBReplaceName_aPayOrig_",
+								"text": "Orig Amt"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayOrig_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aPayDate_",
+							"dataSource": "aPayDate",
+							"header": {
+								"name": "Header_LBReplaceName_aPayDate_",
+								"text": "Paid"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayDate_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1,
+							"width": 98
+						},
+						{
+							"name": "Column_LBReplaceName_aPayType_",
+							"dataSource": "aPayType",
+							"header": {
+								"name": "Header_LBReplaceName_aPayType_",
+								"text": "Type"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayType_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aPayCom_",
+							"dataSource": "aPayCom",
+							"header": {
+								"name": "Header_LBReplaceName_aPayCom_",
+								"text": "Com"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayCom_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aPayOrds_",
+							"dataSource": "aPayOrds",
+							"header": {
+								"name": "Header_LBReplaceName_aPayOrds_",
+								"text": "Ref Ord"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayOrds_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aPayCust_",
+							"dataSource": "aPayCust",
+							"header": {
+								"name": "Header_LBReplaceName_aPayCust_",
+								"text": "Cust"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayCust_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aPayRecs _",
+							"dataSource": "aPayRecs ",
+							"header": {
+								"name": "Header_LBReplaceName_aPayRecs _",
+								"text": "Recs"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aPayRecs _"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Column_LBReplaceName_aidPayment_",
+								"text": "ID"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "aidPayment"
+						}
+					]
+				},
+				"LBInvoiceArrays": {
+					"type": "listbox",
+					"left": 174,
+					"top": 79,
+					"width": 673,
+					"height": 231,
+					"events": [
+						"onClick",
+						"onSelectionChange"
+					],
+					"method": "ObjectMethods/LBInvoiceArrays.4dm",
+					"movableRows": true,
+					"sortable": true,
+					"focusable": true,
+					"alternateFill": "#FFFADC",
+					"columns": [
+						{
+							"name": "Column_LBReplaceName_aInvoices_",
+							"dataSource": "aInvoices",
+							"header": {
+								"name": "Header_LBReplaceName_aInvoices_",
+								"text": "Invoice"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvoices_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": true,
+							"enterable": false,
+							"width": 91
+						},
+						{
+							"name": "Column_LBReplaceName_aUnPaid_",
+							"dataSource": "aUnPaid",
+							"header": {
+								"name": "Header_LBReplaceName_aUnPaid_",
+								"text": "Unpaid Amt"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aUnPaid_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": true,
+							"enterable": false,
+							"width": 110,
+							"textFormat": {
+								"$ref": "/SOURCES/filters.json#/Cr$"
+							}
+						},
+						{
+							"name": "Column_LBReplaceName_aInvDiscountAmounts_",
+							"dataSource": "aInvDiscountAmounts",
+							"header": {
+								"name": "Header_LBReplaceName_aInvDiscountAmounts_",
+								"text": "Dscnt"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvDiscountAmounts_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": true,
+							"enterable": false
+						},
+						{
+							"name": "Column_LBReplaceName_aInvTotals_",
+							"dataSource": "aInvTotals",
+							"header": {
+								"name": "Header_LBReplaceName_aInvTotals_",
+								"text": "Total Amt"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvTotals_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": true,
+							"enterable": false
+						},
+						{
+							"name": "Column_LBReplaceName_aInvDays_",
+							"dataSource": "aInvDays",
+							"header": {
+								"name": "Header_LBReplaceName_aInvDays_",
+								"text": "Dys"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvDays_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": true,
+							"enterable": false
+						},
+						{
+							"name": "Column_LBReplaceName_aInvTerms_",
+							"dataSource": "aInvTerms",
+							"header": {
+								"name": "Header_LBReplaceName_aInvTerms_",
+								"text": "Trm"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvTerms_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": true,
+							"enterable": false
+						},
+						{
+							"name": "Column_LBReplaceName_aInvDate_",
+							"dataSource": "aInvDate",
+							"header": {
+								"name": "Header_LBReplaceName_aInvDate_",
+								"text": "Date"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvDate_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": true,
+							"enterable": false
+						},
+						{
+							"name": "Column_LBReplaceName_aIvcProfile_",
+							"dataSource": "aIvcProfile",
+							"header": {
+								"name": "Header_LBReplaceName_aIvcProfile_",
+								"text": "IvcProfile"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aIvcProfile_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aIvcProfile2_",
+							"dataSource": "aIvcProfile2",
+							"header": {
+								"name": "Header_LBReplaceName_aIvcProfile2_",
+								"text": "IvcProfile2"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aIvcProfile2_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aCustPO_",
+							"dataSource": "aCustPO",
+							"header": {
+								"name": "Header_LBReplaceName_aCustPO_",
+								"text": "CustPO"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aCustPO_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aInvDisApp_",
+							"dataSource": "aInvDisApp",
+							"header": {
+								"name": "Header_LBReplaceName_aInvDisApp_",
+								"text": "DisApp"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvDisApp_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aOrders_",
+							"dataSource": "aOrders",
+							"header": {
+								"name": "Header_LBReplaceName_aOrders_",
+								"text": "Order"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aOrders_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aInvCust_",
+							"dataSource": "aInvCust",
+							"header": {
+								"name": "Header_LBReplaceName_aInvCust_",
+								"text": "Cust"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvCust_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						},
+						{
+							"name": "Column_LBReplaceName_aInvRecs_",
+							"dataSource": "aInvRecs",
+							"header": {
+								"name": "Header_LBReplaceName_aInvRecs_",
+								"text": "Rec"
+							},
+							"footer": {
+								"name": "Footer_LBReplaceName_aInvRecs_"
+							},
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"resizable": 1
+						}
+					]
+				},
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 433,
+					"left": 37,
+					"width": 132,
+					"height": 76,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 319,
+					"left": 679,
+					"width": 168,
+					"height": 56,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 321,
+					"left": 173,
+					"width": 127,
+					"height": 37,
+					"fill": "transparent"
+				},
+				"Variable15": {
+					"type": "button",
+					"top": 104,
+					"left": 20,
+					"width": 108,
+					"height": 28,
+					"dataSource": "b23",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,15",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable15.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable19": {
+					"type": "button",
+					"top": 135,
+					"left": 20,
+					"width": 108,
+					"height": 28,
+					"dataSource": "b25",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,17",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable19.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable20": {
+					"type": "button",
+					"top": 175,
+					"left": 20,
+					"width": 108,
+					"height": 28,
+					"dataSource": "b24",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,18",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable20.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable21": {
+					"type": "button",
+					"top": 207,
+					"left": 20,
+					"width": 108,
+					"height": 27,
+					"dataSource": "b26",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,19",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable21.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable22": {
+					"type": "checkbox",
+					"top": 213,
+					"left": 135,
+					"width": 26,
+					"height": 18,
+					"dataSource": "b27",
+					"text": ":16789,13",
+					"fontFamily": "System Font",
+					"fontSize": 17,
+					"stroke": "#000000",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable23": {
+					"type": "button",
+					"top": 248,
+					"left": 20,
+					"width": 108,
+					"height": 28,
+					"dataSource": "b12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,20",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable24": {
+					"type": "button",
+					"top": 280,
+					"left": 20,
+					"width": 108,
+					"height": 28,
+					"dataSource": "bPayment",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,21",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "button",
+					"top": 280,
+					"left": 138,
+					"width": 27,
+					"height": 28,
+					"dataSource": "bdCash",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_Clone"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "dC",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable38": {
+					"type": "input",
+					"top": 322,
+					"left": 174,
+					"width": 124,
+					"height": 16,
+					"dataSource": "pPayment",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable38.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable42": {
+					"type": "checkbox",
+					"top": 340,
+					"left": 145,
+					"width": 20,
+					"height": 16,
+					"dataSource": "bCredit",
+					"text": ":16789,13",
+					"class": "cssInputSmall",
+					"stroke": "#000000",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable39": {
+					"type": "input",
+					"top": 341,
+					"left": 174,
+					"width": 124,
+					"height": 16,
+					"dataSource": "pDiff",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable26": {
+					"type": "button",
+					"top": 321,
+					"left": 420,
+					"width": 19,
+					"height": 19,
+					"dataSource": "b31",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,22",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable26.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable27": {
+					"type": "button",
+					"top": 342,
+					"left": 420,
+					"width": 19,
+					"height": 18,
+					"dataSource": "b32",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,22",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable27.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable41": {
+					"type": "input",
+					"top": 339,
+					"left": 682,
+					"width": 164,
+					"height": 16,
+					"dataSource": "viLoR2",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable43": {
+					"type": "checkbox",
+					"top": 408,
+					"left": 20,
+					"width": 146,
+					"height": 21,
+					"dataSource": "bpayAlt",
+					"text": ":16789,41",
+					"class": "cssInputSmall",
+					"stroke": "#000000",
+					"method": "ObjectMethods/Variable43.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable44": {
+					"type": "input",
+					"top": 434,
+					"left": 40,
+					"width": 128,
+					"height": 16,
+					"dataSource": "sAltCo",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable44.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable45": {
+					"type": "input",
+					"top": 453,
+					"left": 40,
+					"width": 128,
+					"height": 16,
+					"dataSource": "sAltPhone",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable45.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable46": {
+					"type": "input",
+					"top": 472,
+					"left": 40,
+					"width": 100,
+					"height": 16,
+					"dataSource": "sAltZip",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable46.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable47": {
+					"type": "input",
+					"top": 491,
+					"left": 40,
+					"width": 128,
+					"height": 16,
+					"dataSource": "sAltAcct",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable47.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable25": {
+					"type": "button",
+					"top": 535,
+					"left": 138,
+					"width": 27,
+					"height": 28,
+					"dataSource": "bdCash2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_Clone"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "dC",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable25.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable17": {
+					"type": "button",
+					"top": 42,
+					"left": 174,
+					"width": 117,
+					"height": 27,
+					"dataSource": "b28",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "π",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,16",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable17.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 78,
+					"left": 98,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,31"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 381,
+					"left": 98,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,32"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 340,
+					"left": 38,
+					"width": 106,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16789,33"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 322,
+					"left": 37,
+					"width": 128,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16789,34"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 321,
+					"left": 445,
+					"width": 238,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16789,35"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 341,
+					"left": 445,
+					"width": 238,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16789,36"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 190,
+					"left": 132,
+					"width": 23,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16789,37"
+				},
+				"Variable29": {
+					"type": "input",
+					"top": 320,
+					"left": 682,
+					"width": 25,
+					"height": 16,
+					"dataSource": "viRecordsInSelection",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Variable30": {
+					"type": "input",
+					"top": 320,
+					"left": 709,
+					"width": 137,
+					"height": 16,
+					"dataSource": "viLoR1",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 322,
+					"left": 614,
+					"width": 62,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,38"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 341,
+					"left": 614,
+					"width": 62,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,39"
+				},
+				"Variable31": {
+					"type": "input",
+					"top": 358,
+					"left": 682,
+					"width": 164,
+					"height": 16,
+					"dataSource": "viLoR3",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text19": {
+					"type": "text",
+					"top": 360,
+					"left": 614,
+					"width": 62,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,40"
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 31,
+					"left": 310,
+					"width": 129,
+					"height": 38,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Variable48": {
+					"type": "input",
+					"top": 32,
+					"left": 312,
+					"width": 59,
+					"height": 16,
+					"dataSource": "vCurr",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable49": {
+					"type": "input",
+					"top": 51,
+					"left": 312,
+					"width": 126,
+					"height": 16,
+					"dataSource": "vrCurrValue",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"textFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text24": {
+					"type": "text",
+					"top": 15,
+					"left": 310,
+					"width": 119,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16789,46"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 32,
+					"left": 373,
+					"width": 65,
+					"height": 16,
+					"dataSource": "[Invoice:26]exchangeRate:61",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Variable869": {
+					"type": "input",
+					"top": 472,
+					"left": 142,
+					"width": 26,
+					"height": 16,
+					"dataSource": "sAltDivision",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "button",
+					"top": 325,
+					"left": 310,
+					"width": 46,
+					"height": 28,
+					"dataSource": "b11",
+					"stroke": "#008000",
+					"focusable": false,
+					"text": "Debit",
+					"iconFrames": 4,
+					"style": "bevel",
+					"borderStyle": "solid",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable4": {
+					"type": "button",
+					"top": 325,
+					"left": 365,
+					"width": 46,
+					"height": 28,
+					"dataSource": "b13",
+					"stroke": "#FF0000",
+					"focusable": false,
+					"text": "Credit",
+					"iconFrames": 4,
+					"style": "bevel",
+					"borderStyle": "solid",
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 10
+}

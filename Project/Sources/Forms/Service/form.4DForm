@@ -1,0 +1,325 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 10,
+					"left": 704,
+					"width": 91,
+					"height": 95,
+					"fill": "transparent",
+					"stroke": "#404040"
+				},
+				"Text383": {
+					"type": "text",
+					"top": 13,
+					"left": 611,
+					"width": 89,
+					"height": 12,
+					"stroke": "#097400",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "AltDate"
+				},
+				"Variable58": {
+					"type": "button",
+					"top": 11,
+					"left": 616,
+					"width": 86,
+					"height": 16,
+					"dataSource": "bService",
+					"text": ":16789,13",
+					"display": false
+				},
+				"Field4311": {
+					"type": "input",
+					"top": 11,
+					"left": 707,
+					"width": 87,
+					"height": 17,
+					"dataSource": "[Customer:2]dateService:63",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Field3": {
+					"type": "input",
+					"top": 30,
+					"left": 707,
+					"width": 87,
+					"height": 17,
+					"dataSource": "[Customer:2]dateOpened:14",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Field98": {
+					"type": "input",
+					"top": 49,
+					"left": 707,
+					"width": 87,
+					"height": 17,
+					"dataSource": "[Customer:2]dateConverted:125",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Field4": {
+					"type": "input",
+					"top": 68,
+					"left": 707,
+					"width": 87,
+					"height": 17,
+					"dataSource": "[Customer:2]lastSaleDate:49",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Field96": {
+					"type": "input",
+					"top": 87,
+					"left": 707,
+					"width": 87,
+					"height": 17,
+					"dataSource": "[Customer:2]dateRetired:111",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Text384": {
+					"type": "text",
+					"top": 32,
+					"left": 611,
+					"width": 89,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "OpenOn"
+				},
+				"Text385": {
+					"type": "text",
+					"top": 70,
+					"left": 612,
+					"width": 88,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "LastSale"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 89,
+					"left": 611,
+					"width": 89,
+					"height": 12,
+					"stroke": "#097400",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": " Retire Date"
+				},
+				"Variable149": {
+					"type": "button",
+					"top": 87,
+					"left": 617,
+					"width": 85,
+					"height": 17,
+					"dataSource": "bService",
+					"text": ":16789,13",
+					"display": false
+				},
+				"Text42": {
+					"type": "text",
+					"top": 51,
+					"left": 611,
+					"width": 89,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Converted"
+				},
+				"_LB_Service_": {
+					"type": "listbox",
+					"left": 5,
+					"top": 10,
+					"width": 591,
+					"height": 540,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDrop"
+					],
+					"listboxType": "collection",
+					"selectionMode": "multiple",
+					"dropping": "custom",
+					"dataSource": "_LB_Service_.ents",
+					"singleClickEdit": false,
+					"method": "ObjectMethods/_LB_Service_.4dm",
+					"currentItemSource": "_LB_Service_.cur",
+					"currentItemPositionSource": "_LB_Service_.pos",
+					"selectedItemsSource": "_LB_Service_.sel",
+					"stroke": "automatic",
+					"headerHeight": "17px",
+					"metaSource": "_LB_Service_.meta",
+					"alternateFill": "#FFFADC",
+					"columns": [
+						{
+							"header": {
+								"text": "Path",
+								"name": "Header2"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.path"
+						},
+						{
+							"header": {
+								"name": "Header7",
+								"text": "Description"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer7"
+							},
+							"width": 325,
+							"dataSource": "This:C1470.description"
+						},
+						{
+							"header": {
+								"name": "Header8",
+								"text": "Date"
+							},
+							"name": "Column7",
+							"footer": {
+								"name": "Footer8"
+							},
+							"width": 63,
+							"dataSource": "This:C1470.date",
+							"dataSourceTypeHint": "date"
+						},
+						{
+							"header": {
+								"name": "Header9",
+								"text": "Size"
+							},
+							"name": "Column8",
+							"footer": {
+								"name": "Footer9"
+							},
+							"width": 68,
+							"dataSource": "This:C1470.size",
+							"dataSourceTypeHint": "number"
+						}
+					]
+				},
+				"SF_QA": {
+					"type": "subform",
+					"left": 0,
+					"top": 77,
+					"width": 983,
+					"height": 593,
+					"method": "ObjectMethods/SF_QA.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"dataSource": "Document"
+				}
+			}
+		}
+	],
+	"geometryStamp": 14
+}

@@ -1,0 +1,1 @@
+iLoReal11:=vrVendorInvoiceFreight-iLoReal8

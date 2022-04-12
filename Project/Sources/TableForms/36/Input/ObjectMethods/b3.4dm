@@ -1,0 +1,15 @@
+C_LONGINT:C283(bdInventory)
+Case of 
+	: ([DInventory:36]typeID:14="SO")
+		QUERY:C277([Order:3]; [Order:3]orderNum:2=[DInventory:36]docid:9)
+		DB_ShowCurrentSelection(->[Order:3])
+	: ([DInventory:36]typeID:14="IV")
+		QUERY:C277([Invoice:26]; [Invoice:26]invoiceNum:2=[DInventory:36]docid:9)
+		DB_ShowCurrentSelection(->[Invoice:26])
+	: ([DInventory:36]typeID:14="PO")
+		QUERY:C277([PO:39]; [PO:39]poNum:5=[DInventory:36]docid:9)
+		DB_ShowCurrentSelection(->[PO:39])
+	: ([DInventory:36]typeID:14="WT")
+		QUERY:C277([WorkOrder:66]; [WorkOrder:66]woNum:29=[DInventory:36]docid:9)
+		DB_ShowCurrentSelection(->[WorkOrder:66])
+End case 

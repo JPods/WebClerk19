@@ -1,0 +1,85 @@
+﻿{"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":0,"bottomMargin":0,"menuBar":"Menu Bar #1","markerBody":249,"markerBreak":249,"markerFooter":249,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onActivate","onDeactivate","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onUnload","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"Rectangle11":{"type":"rectangle","top":26,"left":802,"width":120,"height":38,"fill":"transparent","stroke":"#666666"},"Rectangle10":{"type":"rectangle","top":27,"left":226,"width":441,"height":38,"fill":"transparent","stroke":"#666666"},"Rectangle1":{"type":"rectangle","top":465,"left":22,"width":973,"height":201,"fill":"transparent","stroke":"#666666"},"Field5":{"type":"checkbox","top":9,"left":226,"width":207,"height":14,"dataSource":"[QQQTaxJurisdiction:14]Active:3","text":"Active","stroke":"#000000","class":"cssCheckboxLable"},"Field1":{"type":"input","top":28,"left":229,"width":437,"height":17,"dataSource":"[QQQTaxJurisdiction:14]TaxName:5","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field2":{"type":"input","top":47,"left":229,"width":437,"height":17,"dataSource":"[QQQTaxJurisdiction:14]TaxPayGLAcct:4","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field3":{"type":"input","top":27,"left":805,"width":116,"height":17,"dataSource":"[QQQTaxJurisdiction:14]TaxJurisdiction:1","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field7":{"type":"input","top":46,"left":805,"width":116,"height":17,"dataSource":"[QQQTaxJurisdiction:14]TaxService:8","class":"cssInput","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field4":{"type":"input","top":72,"left":190,"width":116,"height":17,"dataSource":"[QQQTaxJurisdiction:14]TaxRateSales:2","dataSourceTypeHint":"number","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"solid","contextMenu":"none","dragging":"none","dropping":"none"},"Field6":{"type":"input","top":94,"left":190,"width":788,"height":112,"dataSource":"[QQQTaxJurisdiction:14]TaxScriptOnSales:12","class":"cssInput","borderStyle":"solid","contextMenu":"none","scrollbarVertical":"visible","dragging":"none","dropping":"none"},"Field9":{"type":"input","top":212,"left":190,"width":116,"height":17,"dataSource":"[QQQTaxJurisdiction:14]TaxRateCost:10","dataSourceTypeHint":"number","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"solid","contextMenu":"none","dragging":"none","dropping":"none"},"Field8":{"type":"input","top":234,"left":190,"width":788,"height":86,"dataSource":"[QQQTaxJurisdiction:14]TaxScriptOnCost:11","class":"cssInput","borderStyle":"solid","contextMenu":"none","scrollbarVertical":"visible","dragging":"none","dropping":"none"},"Field10":{"type":"input","top":328,"left":190,"width":116,"height":17,"dataSource":"[QQQTaxJurisdiction:14]TaxRateOnShipping:16","dataSourceTypeHint":"number","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"solid","contextMenu":"none","dragging":"none","dropping":"none"},"Field11":{"type":"input","top":350,"left":190,"width":788,"height":86,"dataSource":"[QQQTaxJurisdiction:14]TaxScriptOnShipping:17","class":"cssInput","borderStyle":"solid","contextMenu":"none","scrollbarVertical":"visible","dragging":"none","dropping":"none"},"Subform1":{"type":"subform","top":443,"left":25,"width":953,"height":224,"dataSourceTypeHint":"text","table":25,"detailForm":"iTerritories_9","listForm":"Included","scrollbarVertical":"visible","deletableInList":false,"doubleClickInRowAction":"editSubrecord","doubleClickInEmptyAreaAction":"addSubrecord","printFrame":"fixed","borderStyle":"solid"},"Text55":{"type":"text","top":74,"left":70,"width":115,"height":16,"stroke":"#000000","class":"cssInput16","textAlign":"right","fontWeight":"bold","text":"Sales Tax Rate"},"Text56":{"type":"text","top":29,"left":696,"width":103,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"JurisdictionID"},"Text57":{"type":"text","top":49,"left":120,"width":103,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"GLAccount"},"Text58":{"type":"text","top":30,"left":120,"width":103,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Name"},"Text1":{"type":"text","top":48,"left":696,"width":103,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Tax Service"},"Text2":{"type":"text","top":214,"left":70,"width":115,"height":16,"stroke":"#000000","class":"cssInput16","textAlign":"right","fontWeight":"bold","text":"Cost Tax Rate"},"Text3":{"type":"text","top":93,"left":20,"width":165,"height":16,"class":"cssInput16","textAlign":"right","fontWeight":"bold","text":"Script, Sales Based Tax"},"Text5":{"type":"text","top":234,"left":19,"width":166,"height":16,"class":"cssInput16","textAlign":"right","fontWeight":"bold","text":"Script, Cost Based Tax"},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Text4":{"type":"text","top":330,"left":70,"width":115,"height":16,"stroke":"#000000","class":"cssInput16","textAlign":"right","fontWeight":"bold","text":"Ship Tax Rate"},"Text6":{"type":"text","top":350,"left":19,"width":166,"height":16,"class":"cssInput16","textAlign":"right","fontWeight":"bold","text":"Script, Shipping Tax"}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}}}

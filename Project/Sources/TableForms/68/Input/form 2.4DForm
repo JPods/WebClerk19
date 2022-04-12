@@ -1,0 +1,85 @@
+﻿{"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":0,"bottomMargin":0,"menuBar":"Menu Bar #1","markerHeader":24,"markerBody":440,"markerBreak":440,"markerFooter":440,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onActivate","onDeactivate","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onUnload","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"Rectangle3":{"type":"rectangle","top":108,"left":284,"width":161,"height":19,"fill":"transparent","stroke":"#666666"},"Rectangle2":{"type":"rectangle","top":146,"left":285,"width":160,"height":57,"fill":"transparent","stroke":"#666666"},"Rectangle1":{"type":"rectangle","top":16,"left":284,"width":161,"height":76,"fill":"transparent","stroke":"#666666"},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field4":{"type":"input","top":17,"left":287,"width":157,"height":17,"dataSource":"[WOdraw:68]orderNum:1","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","textAlign":"center","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Field6":{"type":"input","top":36,"left":287,"width":157,"height":17,"dataSource":"[WOdraw:68]ItemNum:2","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field7":{"type":"input","top":55,"left":287,"width":157,"height":17,"dataSource":"[WOdraw:68]QtyTaken:5","dataSourceTypeHint":"number","stroke":"#000000","class":"cssInput","textAlign":"right","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field8":{"type":"input","top":74,"left":287,"width":157,"height":17,"dataSource":"[WOdraw:68]nameid:6","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Variable8":{"type":"dropdown","top":82,"left":155,"width":105,"height":22,"dataSource":"aNameID","dataSourceTypeHint":"arrayNumber","numberFormat":":16789,13","class":"cssPopups","textDecoration":"underline"},"Field5":{"type":"input","top":109,"left":287,"width":157,"height":17,"dataSource":"[WOdraw:68]SalesOrdLine:11","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","textAlign":"center","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field1":{"type":"input","top":147,"left":288,"width":156,"height":17,"dataSource":"[WOdraw:68]DateTaken:3","dataSourceTypeHint":"date","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","entryFilter":{"$ref":"/SOURCES/filters.json#/##~1##~1####"},"dragging":"none","dropping":"none"},"Field2":{"type":"input","top":166,"left":288,"width":156,"height":17,"dataSource":"[WOdraw:68]TimeTaken:4","dataSourceTypeHint":"time","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field3":{"type":"input","top":185,"left":288,"width":156,"height":17,"dataSource":"[WOdraw:68]Cost:7","dataSourceTypeHint":"number","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field258":{"type":"input","top":231,"left":8,"width":992,"height":449,"dataSource":"[WOdraw:68]ObGeneral:18","dataSourceTypeHint":"object","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Text1":{"type":"text","top":38,"left":166,"width":114,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":":16791,109"},"Text2":{"type":"text","top":57,"left":166,"width":114,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":":16795,13"},"Text3":{"type":"text","top":19,"left":166,"width":114,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":":16790,113"},"Text4":{"type":"text","top":168,"left":235,"width":45,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":":16790,144"},"Text5":{"type":"text","top":149,"left":235,"width":45,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":":16791,34"},"Text6":{"type":"text","top":187,"left":235,"width":45,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":":16789,154"},"Text7":{"type":"text","top":111,"left":166,"width":114,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"SOLine"},"Variable23":{"type":"button","top":36,"left":166,"width":115,"height":16,"dataSource":"bItem","text":":16789,13","display":false},"Variable16":{"type":"button","top":17,"left":166,"width":115,"height":17,"dataSource":"bOrder","text":":16789,13","display":false},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Text49":{"type":"text","top":210,"left":11,"width":91,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"left","text":"ObGeneral"}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}},"$4d":{"version":"1","kind":"form"}}

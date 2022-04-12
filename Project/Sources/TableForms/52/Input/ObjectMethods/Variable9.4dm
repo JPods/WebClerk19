@@ -1,0 +1,1 @@
+QUERY:C277([Payment:28]; [Payment:28]jrnlid:25=[CashJournal:52]linkid:9)

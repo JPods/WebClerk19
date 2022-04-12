@@ -1,0 +1,880 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Round Rectangle1": {
+					"type": "rectangle",
+					"top": 240,
+					"left": 32,
+					"width": 548,
+					"height": 153,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle4": {
+					"type": "rectangle",
+					"top": 193,
+					"left": 32,
+					"width": 548,
+					"height": 26,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"_FIELD_Invoice_Number_": {
+					"type": "input",
+					"top": 198,
+					"left": 181,
+					"width": 96,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Invoices:2]Invoice_Number:2",
+					"class": "Texts13B",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_Date_": {
+					"type": "input",
+					"top": 198,
+					"left": 453,
+					"width": 116,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Invoices:2]Creation_Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "Texts13B",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_LB_INVOICE_LINES": {
+					"type": "listbox",
+					"top": 406,
+					"left": 26,
+					"width": 566,
+					"height": 295,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"movableRows": false,
+					"headerHeight": "23px",
+					"table": 3,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"scrollbarVertical": "hidden",
+					"horizontalLineStroke": "transparent",
+					"stroke": "#212121",
+					"alternateFill": "automatic",
+					"fontFamily": "Arial",
+					"fontSize": 13,
+					"borderStyle": "none",
+					"method": "ObjectMethods/_LB_INVOICE_LINES.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onAlternateClick",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "_FIELD_Line_Number_",
+							"dataSource": "[INVOICE_LINES:3]Line_Number:12",
+							"width": 39,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "left",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": ":xliff:Line_NumberS",
+								"stroke": "#212121",
+								"textAlign": "left",
+								"verticalAlign": "middle",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"fontFamily": "Arial",
+								"fontSize": 13
+							}
+						},
+						{
+							"name": "_FIELD_Product_Ref_",
+							"dataSource": "[INVOICE_LINES:3]Product_ID:3",
+							"dataSourceTypeHint": "integer",
+							"width": 81,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "left",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": ":xliff:L_Product_Ref",
+								"stroke": "#212121",
+								"textAlign": "left",
+								"verticalAlign": "middle",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"fontFamily": "Arial",
+								"fontSize": 13
+							}
+						},
+						{
+							"name": "_FIELD_Product_Name_",
+							"dataSource": "Util25_Print_GiveProductName",
+							"width": 158,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "left",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": ":xliff:Name",
+								"stroke": "#212121",
+								"textAlign": "left",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "_TOTAL_TEXT_Quantity",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"textAlign": "right",
+								"fontFamily": "Arial",
+								"fontSize": 11
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "[INVOICE_LINES:3]Quantity:6",
+							"dataSourceTypeHint": "number",
+							"width": 43,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Long",
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "right",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": ":xliff:Qty",
+								"stroke": "#212121",
+								"textAlign": "right",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "_TOTAL_Quantity",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|Long",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"fill": "#D8DCE3",
+								"fontFamily": "Arial",
+								"fontSize": 11
+							}
+						},
+						{
+							"name": "Column14",
+							"dataSource": "[INVOICE_LINES:3]Unit_Price:7",
+							"dataSourceTypeHint": "number",
+							"width": 63,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency",
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "right",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": ":xliff:PUP",
+								"stroke": "#212121",
+								"textAlign": "right",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer12",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"fontFamily": "Arial",
+								"fontSize": 11
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "[INVOICE_LINES:3]Discount_Rate:8",
+							"dataSourceTypeHint": "number",
+							"width": 63,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Percent",
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "right",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": ":xliff:Discount",
+								"stroke": "#212121",
+								"textAlign": "right",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "Footer11",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"fontFamily": "Arial",
+								"fontSize": 11
+							}
+						},
+						{
+							"name": "Column15",
+							"dataSource": "[INVOICE_LINES:3]Tax_Rate:9",
+							"dataSourceTypeHint": "number",
+							"width": 45,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Percent",
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "right",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header16",
+								"text": ":xliff:L_Tax",
+								"stroke": "#212121",
+								"textAlign": "right",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "_TOTAL_TEXT_Total",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"textAlign": "right",
+								"fontFamily": "Arial",
+								"fontSize": 11
+							}
+						},
+						{
+							"name": "Column16",
+							"dataSource": "[INVOICE_LINES:3]Total:10",
+							"dataSourceTypeHint": "number",
+							"width": 74,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"numberFormat": "|Currency",
+							"stroke": "#212121",
+							"alternateFill": "#F3F5FA",
+							"textAlign": "right",
+							"fontFamily": "Arial",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header17",
+								"text": ":xliff:Total",
+								"stroke": "#212121",
+								"textAlign": "right",
+								"fontFamily": "Arial",
+								"fontSize": 11,
+								"fontWeight": "bold"
+							},
+							"footer": {
+								"name": "_TOTAL_Total",
+								"dataSourceTypeHint": "number",
+								"numberFormat": "|Currency",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#212121",
+								"fill": "#D8DCE3",
+								"fontFamily": "Arial",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"Client_ID1": {
+					"type": "input",
+					"top": 42,
+					"left": 210,
+					"width": 147,
+					"height": 81,
+					"dataSource": "vLogo",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Client_ID2": {
+					"type": "input",
+					"top": 126,
+					"left": 60,
+					"width": 447,
+					"height": 17,
+					"dataSource": "vName",
+					"class": "Texts14B",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 198,
+					"left": 369,
+					"width": 74,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Date"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 198,
+					"left": 42,
+					"width": 133,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Invoice_Number"
+				},
+				"_FIELD_Totals_1": {
+					"type": "text",
+					"top": 711,
+					"left": 395,
+					"width": 94,
+					"height": 16,
+					"sizingX": "move",
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Total"
+				},
+				"_FIELD_Date_1": {
+					"type": "input",
+					"top": 711,
+					"left": 494,
+					"width": 86,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "[Invoices:2]Subtotal_BT:5",
+					"dataSourceTypeHint": "number",
+					"class": "Texts13N",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text24": {
+					"type": "text",
+					"top": 735,
+					"left": 395,
+					"width": 94,
+					"height": 16,
+					"sizingX": "move",
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Total_Tax"
+				},
+				"_FIELD_Totals_2": {
+					"type": "input",
+					"top": 735,
+					"left": 494,
+					"width": 86,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "[Invoices:2]Tax:6",
+					"dataSourceTypeHint": "number",
+					"class": "Texts13N",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Currency"
+					},
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text25": {
+					"type": "text",
+					"top": 760,
+					"left": 395,
+					"width": 94,
+					"height": 16,
+					"sizingX": "move",
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Total"
+				},
+				"_FIELD_Totals_3": {
+					"type": "input",
+					"top": 760,
+					"left": 494,
+					"width": 86,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "[Invoices:2]Total:7",
+					"dataSourceTypeHint": "number",
+					"class": "Texts13N",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Long"
+					},
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELDNE_Name_1": {
+					"type": "input",
+					"top": 245,
+					"left": 203,
+					"width": 276,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Clients:1]Name:2",
+					"class": "Texts13N",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELDNE_Address_1": {
+					"type": "input",
+					"top": 266,
+					"left": 203,
+					"width": 276,
+					"height": 31,
+					"sizingX": "grow",
+					"dataSource": "[Clients:1]Address:3",
+					"class": "Texts13N",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELDNE_City_1": {
+					"type": "input",
+					"top": 308,
+					"left": 313,
+					"width": 176,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Clients:1]City:5",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELDNE_State_1": {
+					"type": "input",
+					"top": 328,
+					"left": 203,
+					"width": 176,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Clients:1]State:6",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELDNE_Country1": {
+					"type": "input",
+					"top": 349,
+					"left": 203,
+					"width": 176,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Clients:1]Country:17",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text10_DNE_": {
+					"type": "text",
+					"top": 245,
+					"left": 105,
+					"width": 94,
+					"height": 16,
+					"stroke": "#808080",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Name"
+				},
+				"Text11_DNE_": {
+					"type": "text",
+					"top": 266,
+					"left": 105,
+					"width": 94,
+					"height": 16,
+					"stroke": "#808080",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Address"
+				},
+				"Text12_DNE_": {
+					"type": "text",
+					"top": 308,
+					"left": 215,
+					"width": 94,
+					"height": 16,
+					"stroke": "#808080",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:City"
+				},
+				"Text13_DNE_": {
+					"type": "text",
+					"top": 328,
+					"left": 105,
+					"width": 94,
+					"height": 16,
+					"stroke": "#808080",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:State"
+				},
+				"Text14_DNE_": {
+					"type": "text",
+					"top": 349,
+					"left": 105,
+					"width": 94,
+					"height": 16,
+					"stroke": "#808080",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Country"
+				},
+				"_FIELDNE_City_2": {
+					"type": "input",
+					"top": 308,
+					"left": 203,
+					"width": 56,
+					"height": 16,
+					"dataSource": "[Clients:1]Zip_Code:7",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text15_DNE_": {
+					"type": "text",
+					"top": 308,
+					"left": 105,
+					"width": 94,
+					"height": 16,
+					"stroke": "#808080",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:ZIPCode"
+				},
+				"_FIELDNE_City_5": {
+					"type": "input",
+					"top": 370,
+					"left": 203,
+					"width": 356,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Clients:1]eAddresses:19.eMail",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text19_DNE_": {
+					"type": "text",
+					"top": 370,
+					"left": 105,
+					"width": 94,
+					"height": 16,
+					"stroke": "#808080",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Email"
+				},
+				"Text10_DNE_1": {
+					"type": "text",
+					"top": 178,
+					"left": 181,
+					"width": 214,
+					"height": 17,
+					"stroke": "#808080",
+					"class": "Texts14B",
+					"textAlign": "center",
+					"text": ":xliff:Invoice"
+				},
+				"Text10_DNE_2": {
+					"type": "text",
+					"top": 226,
+					"left": 181,
+					"width": 214,
+					"height": 17,
+					"stroke": "#808080",
+					"class": "Texts14B",
+					"textAlign": "center",
+					"text": ":xliff:Client"
+				},
+				"Client_ID3": {
+					"type": "input",
+					"top": 146,
+					"left": 60,
+					"width": 447,
+					"height": 15,
+					"dataSource": "vAddress",
+					"class": "Texts12N",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 2
+}

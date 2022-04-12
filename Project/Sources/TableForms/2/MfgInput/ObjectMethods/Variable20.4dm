@@ -1,0 +1,1 @@
+ContactFromAttn(->[QQQCustomer:2]nameLast:23)

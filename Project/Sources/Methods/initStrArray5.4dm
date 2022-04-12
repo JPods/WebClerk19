@@ -1,0 +1,7 @@
+//%attributes = {"publishedWeb":true}
+C_LONGINT:C283($1)
+ARRAY TEXT:C222(a20Str1; $1)
+ARRAY TEXT:C222(a20Str2; $1)
+ARRAY TEXT:C222(a20Str3; $1)
+ARRAY TEXT:C222(a20Str4; $1)
+ARRAY TEXT:C222(a20Str5; $1)

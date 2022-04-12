@@ -1,0 +1,1 @@
+jDateTimeRecov(vlDTStart; ->vdStDate; ->vtStTime)

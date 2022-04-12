@@ -1,0 +1,1 @@
+vRM1:=Margin4Price([Item:4]priceA:2; [Item:4]costAverage:13)

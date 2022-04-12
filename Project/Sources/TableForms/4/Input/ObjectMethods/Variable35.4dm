@@ -1,0 +1,1 @@
+entryEntity.Profile2:=DE_PopUpArray(Self:C308)

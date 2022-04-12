@@ -1,0 +1,1 @@
+pExtWt:=pUtWt*pQtyOrd

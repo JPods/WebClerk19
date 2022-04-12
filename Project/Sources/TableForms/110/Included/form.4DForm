@@ -1,0 +1,694 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1600,
+					"height": 19,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "#FFFFFF"
+				}
+			}
+		},
+		{
+			"objects": {
+				"UniqueID": {
+					"type": "input",
+					"top": 21,
+					"left": 1,
+					"width": 67,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]idUnique:1",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNumMaster": {
+					"type": "input",
+					"top": 21,
+					"left": 74,
+					"width": 84,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]CustomerName:6",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNumMaster1": {
+					"type": "input",
+					"top": 21,
+					"left": 167,
+					"width": 93,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]CustomerNameAtMfr:39",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"custVendID1": {
+					"type": "input",
+					"top": 21,
+					"left": 266,
+					"width": 67,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]customerid:2",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"custVendID": {
+					"type": "input",
+					"top": 21,
+					"left": 339,
+					"width": 67,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]MfrAccountNum:37",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FieldID": {
+					"type": "input",
+					"top": 21,
+					"left": 415,
+					"width": 59,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]Value:4",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNum": {
+					"type": "input",
+					"top": 21,
+					"left": 481,
+					"width": 67,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]mfrid:3",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNum1": {
+					"type": "input",
+					"top": 21,
+					"left": 556,
+					"width": 78,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]Class:9",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ValueID": {
+					"type": "input",
+					"top": 21,
+					"left": 641,
+					"width": 89,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]ManufacturerName:5",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Template": {
+					"type": "input",
+					"top": 21,
+					"left": 735,
+					"width": 82,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]ZipCustomer:8",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTLastUpdate": {
+					"type": "input",
+					"top": 21,
+					"left": 821,
+					"width": 79,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]DateLastUpdate:7",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Template1": {
+					"type": "input",
+					"top": 21,
+					"left": 904,
+					"width": 82,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]StatusRelationship:12",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTLastUpdate1": {
+					"type": "input",
+					"top": 21,
+					"left": 990,
+					"width": 79,
+					"height": 14,
+					"dataSource": "[MfrCustomerXRef:110]StatusFinancial:13",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Line11": {
+					"type": "line",
+					"top": 0,
+					"left": 73,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line13": {
+					"type": "line",
+					"top": 0,
+					"left": 480,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line14": {
+					"type": "line",
+					"top": 0,
+					"left": 640,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line15": {
+					"type": "line",
+					"top": 0,
+					"left": 734,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 0,
+					"left": 820,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 3,
+					"left": 3,
+					"width": 67,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "UniqueID"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 3,
+					"left": 78,
+					"width": 84,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Customer"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 3,
+					"left": 419,
+					"width": 59,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Value"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 3,
+					"left": 485,
+					"width": 67,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "MfgID"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 3,
+					"left": 645,
+					"width": 87,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Manufacturer"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 3,
+					"left": 825,
+					"width": 79,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "LastUpdate"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 3,
+					"left": 740,
+					"width": 78,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Zip"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 3,
+					"left": 559,
+					"width": 78,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Class"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 0,
+					"left": 554,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line10": {
+					"type": "line",
+					"top": 0,
+					"left": 166,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 3,
+					"left": 343,
+					"width": 67,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "MfrCustID"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 0,
+					"left": 414,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 3,
+					"left": 270,
+					"width": 67,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "custVendID"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 0,
+					"left": 338,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 2,
+					"left": 1,
+					"width": 51,
+					"height": 14,
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 2,
+					"left": 76,
+					"width": 51,
+					"height": 14,
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 2,
+					"left": 267,
+					"width": 62,
+					"height": 14,
+					"dataSource": "oLoSort3",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button4": {
+					"type": "button",
+					"top": 2,
+					"left": 340,
+					"width": 62,
+					"height": 14,
+					"dataSource": "oLoSort4",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button5": {
+					"type": "button",
+					"top": 2,
+					"left": 417,
+					"width": 62,
+					"height": 14,
+					"dataSource": "oLoSort5",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button6": {
+					"type": "button",
+					"top": 2,
+					"left": 483,
+					"width": 62,
+					"height": 14,
+					"dataSource": "oLoSort6",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button7": {
+					"type": "button",
+					"top": 2,
+					"left": 556,
+					"width": 62,
+					"height": 14,
+					"dataSource": "oLoSort7",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button8": {
+					"type": "button",
+					"top": 2,
+					"left": 643,
+					"width": 89,
+					"height": 14,
+					"dataSource": "oLoSort8",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button9": {
+					"type": "button",
+					"top": 2,
+					"left": 736,
+					"width": 64,
+					"height": 14,
+					"dataSource": "oLoSort9",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button10": {
+					"type": "button",
+					"top": 2,
+					"left": 823,
+					"width": 64,
+					"height": 14,
+					"dataSource": "oLoSort10",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line7": {
+					"type": "line",
+					"top": 0,
+					"left": 265,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 3,
+					"left": 170,
+					"width": 84,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "CustomerAtMfr"
+				},
+				"Invisible Button11": {
+					"type": "button",
+					"top": 2,
+					"left": 169,
+					"width": 80,
+					"height": 14,
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line9": {
+					"type": "line",
+					"top": 0,
+					"left": 903,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line12": {
+					"type": "line",
+					"top": 0,
+					"left": 989,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 3,
+					"left": 994,
+					"width": 79,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "StatusFinancial"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 3,
+					"left": 909,
+					"width": 78,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "StatusRelation"
+				},
+				"Invisible Button12": {
+					"type": "button",
+					"top": 2,
+					"left": 907,
+					"width": 74,
+					"height": 14,
+					"dataSource": "oLoSort9",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button13": {
+					"type": "button",
+					"top": 2,
+					"left": 992,
+					"width": 79,
+					"height": 14,
+					"dataSource": "oLoSort10",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button13.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 2
+}

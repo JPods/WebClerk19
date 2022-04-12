@@ -1,0 +1,242 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"_PROP_Customer_contactBillTo_": {
+					"type": "input",
+					"top": 94,
+					"left": 13,
+					"width": 100,
+					"height": 16,
+					"dataSource": "entryEntity.contactBillTo",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Customer:2]contactBillTo:92"
+				},
+				"_PROP_Customer_contactShipTo_": {
+					"type": "input",
+					"top": 137,
+					"left": 13,
+					"width": 100,
+					"height": 16,
+					"dataSource": "entryEntity.contactShipTo",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Customer:2]contactShipTo:93"
+				},
+				"Rectangle13": {
+					"type": "rectangle",
+					"top": 136,
+					"left": 10,
+					"width": 104,
+					"height": 19,
+					"fill": "transparent"
+				},
+				"Rectangle35": {
+					"type": "rectangle",
+					"top": 93,
+					"left": 10,
+					"width": 104,
+					"height": 19,
+					"fill": "transparent"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 78,
+					"left": 10,
+					"width": 44,
+					"height": 13,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "BillTo"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 122,
+					"left": 10,
+					"width": 44,
+					"height": 13,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ShipTo"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 11,
+					"left": 6,
+					"width": 101,
+					"height": 13,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Contacts"
+				},
+				"Variable23": {
+					"type": "pictureButton",
+					"top": 27,
+					"left": 41,
+					"width": 69,
+					"height": 36,
+					"dataSource": "bSubAdd",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_Add"
+					},
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/Plus.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable25": {
+					"type": "button",
+					"top": 195,
+					"left": 14,
+					"width": 49,
+					"height": 22,
+					"dataSource": "b11",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "QQ",
+					"style": "bevel",
+					"method": "ObjectMethods/Variable25.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable121": {
+					"type": "button",
+					"top": 8,
+					"left": 47,
+					"width": 62,
+					"height": 17,
+					"dataSource": "bContacts",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable121.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable21913": {
+					"type": "button",
+					"top": 73,
+					"left": 7,
+					"width": 44,
+					"height": 18,
+					"dataSource": "bBillContact",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/CommandKey"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable21913.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable21914": {
+					"type": "button",
+					"top": 118,
+					"left": 8,
+					"width": 49,
+					"height": 17,
+					"dataSource": "bShipContact",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/CommandKey"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable21914.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 119,
+					"top": 11,
+					"width": 419,
+					"height": 431,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 22
+}

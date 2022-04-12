@@ -1,0 +1,378 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Invisible Button": {
+					"type": "button",
+					"top": 203,
+					"left": 273,
+					"width": 68,
+					"height": 135,
+					"dataSource": "Invisible Button",
+					"shortcutKey": "[Return]",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Round Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 350,
+					"height": 350,
+					"fill": "#AAAAAA",
+					"borderRadius": 5
+				},
+				"calNum": {
+					"type": "input",
+					"top": 16,
+					"left": 11,
+					"width": 326,
+					"height": 30,
+					"dataSource": "calcString",
+					"class": "cssHeadPage",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button15": {
+					"type": "button",
+					"top": 201,
+					"left": 260,
+					"width": 81,
+					"height": 139,
+					"dataSource": "ButtonEnter",
+					"shortcutKey": "[Enter]",
+					"text": "Enter",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button15.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 61,
+					"left": 8,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button1",
+					"shortcutKey": "1",
+					"text": "1",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 61,
+					"left": 90,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button2",
+					"shortcutKey": "2",
+					"text": "2",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 61,
+					"left": 172,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button3",
+					"shortcutKey": "3",
+					"text": "3",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 61,
+					"left": 260,
+					"width": 40,
+					"height": 69,
+					"dataSource": "ButtonClear",
+					"shortcutKey": " ",
+					"text": "Clear",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button12": {
+					"type": "button",
+					"top": 61,
+					"left": 303,
+					"width": 38,
+					"height": 69,
+					"dataSource": "ButtonBackSpace",
+					"shortcutKey": "[Backspace]",
+					"text": "Back",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button12.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 131,
+					"left": 8,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button4",
+					"shortcutKey": "4",
+					"text": "4",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 131,
+					"left": 90,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button5",
+					"shortcutKey": "5",
+					"text": "5",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 131,
+					"left": 172,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button6",
+					"shortcutKey": "6",
+					"text": "6",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button14": {
+					"type": "button",
+					"top": 131,
+					"left": 260,
+					"width": 81,
+					"height": 69,
+					"dataSource": "ButtonCancel",
+					"shortcutKey": "[Esc]",
+					"text": "Cancel",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button14.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 201,
+					"left": 8,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button7",
+					"shortcutKey": "7",
+					"text": "7",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button10": {
+					"type": "button",
+					"top": 201,
+					"left": 90,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button8",
+					"shortcutKey": "8",
+					"text": "8",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button10.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button11": {
+					"type": "button",
+					"top": 201,
+					"left": 172,
+					"width": 81,
+					"height": 69,
+					"dataSource": "Button9",
+					"shortcutKey": "9",
+					"text": "9",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button11.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button13": {
+					"type": "button",
+					"top": 271,
+					"left": 8,
+					"width": 163,
+					"height": 69,
+					"dataSource": "Button0",
+					"shortcutKey": "0",
+					"text": "0",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button13.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Button8": {
+					"type": "button",
+					"top": 271,
+					"left": 172,
+					"width": 81,
+					"height": 69,
+					"dataSource": "ButtonDot",
+					"shortcutKey": ".",
+					"text": ".",
+					"class": "\cssInput16",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Oval1": {
+					"type": "oval",
+					"top": 303,
+					"left": 208,
+					"width": 8,
+					"height": 7,
+					"fill": "#000000"
+				},
+				"Text": {
+					"type": "text",
+					"top": 114,
+					"left": 261,
+					"width": 38,
+					"height": 12,
+					"textAlign": "center",
+					"fontFamily": "System Font",
+					"fontSize": 9,
+					"text": "[Space]"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

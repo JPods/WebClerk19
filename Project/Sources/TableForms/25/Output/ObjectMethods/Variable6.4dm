@@ -1,0 +1,1 @@
+QUERY:C277([Territory:25]; [Territory:25]territoryid:3=Self:C308->+"@")

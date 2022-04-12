@@ -1,0 +1,676 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"listbox": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.currentSelection",
+					"top": 84,
+					"left": 25,
+					"width": 573,
+					"height": 300,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"headerHeight": "2em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"columns": [
+						{
+							"name": "active",
+							"dataSource": "This:C1470.active",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Active",
+								"name": ""
+							},
+							"footer": {
+								"name": "1"
+							}
+						},
+						{
+							"name": "dtLastSync",
+							"dataSource": "This:C1470.dtLastSync",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Dt Last Sync",
+								"name": "2"
+							},
+							"footer": {
+								"name": "3"
+							}
+						},
+						{
+							"name": "id",
+							"dataSource": "This:C1470.id",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Id",
+								"name": "4"
+							},
+							"footer": {
+								"name": "5"
+							}
+						},
+						{
+							"name": "idNum",
+							"dataSource": "This:C1470.idNum",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Id num",
+								"name": "6"
+							},
+							"footer": {
+								"name": "7"
+							}
+						},
+						{
+							"name": "payCardAccount",
+							"dataSource": "This:C1470.payCardAccount",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Pay Card Account",
+								"name": "8"
+							},
+							"footer": {
+								"name": "9"
+							}
+						},
+						{
+							"name": "payDebitAccount",
+							"dataSource": "This:C1470.payDebitAccount",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Pay Debit Account",
+								"name": "10"
+							},
+							"footer": {
+								"name": "11"
+							}
+						},
+						{
+							"name": "paymentName",
+							"dataSource": "This:C1470.paymentName",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Payment Name",
+								"name": "12"
+							},
+							"footer": {
+								"name": "13"
+							}
+						},
+						{
+							"name": "tenderClass",
+							"dataSource": "This:C1470.tenderClass",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Tender Class",
+								"name": "14"
+							},
+							"footer": {
+								"name": "15"
+							}
+						}
+					]
+				},
+				"Round Rectangle3": {
+					"type": "rectangle",
+					"top": 84,
+					"left": 604,
+					"width": 615,
+					"height": 293,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"stroke": "#FFFFFF",
+					"borderRadius": 5
+				},
+				"Round Rectangle10_2_": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 1014,
+					"width": 88,
+					"height": 26,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle13_2_": {
+					"type": "rectangle",
+					"top": 120,
+					"left": 1014,
+					"width": 197,
+					"height": 26,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle6_2_": {
+					"type": "rectangle",
+					"top": 306,
+					"left": 1014,
+					"width": 197,
+					"height": 26,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle7_2_": {
+					"type": "rectangle",
+					"top": 150,
+					"left": 1014,
+					"width": 197,
+					"height": 122,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle10_1_": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 714,
+					"width": 188,
+					"height": 26,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle13_1_": {
+					"type": "rectangle",
+					"top": 246,
+					"left": 714,
+					"width": 88,
+					"height": 26,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Text2": {
+					"type": "text",
+					"top": 93,
+					"left": 625,
+					"width": 138,
+					"height": 16,
+					"class": "Texts13N",
+					"fontWeight": "bold",
+					"text": "General Information"
+				},
+				"Round Rectangle4": {
+					"type": "rectangle",
+					"top": 120,
+					"left": 714,
+					"width": 188,
+					"height": 26,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle5_1_": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 714,
+					"width": 188,
+					"height": 26,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle6_1_": {
+					"type": "rectangle",
+					"top": 306,
+					"left": 714,
+					"width": 188,
+					"height": 26,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"Round Rectangle7_1_": {
+					"type": "rectangle",
+					"top": 150,
+					"left": 714,
+					"width": 188,
+					"height": 92,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"_FIELD_Name_": {
+					"type": "input",
+					"top": 124,
+					"left": 720,
+					"width": 176,
+					"height": 16,
+					"sizingX": "fixed",
+					"dataSource": "eRecord.id",
+					"class": "Texts13N",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_Address_1_": {
+					"type": "input",
+					"top": 156,
+					"left": 720,
+					"width": 176,
+					"height": 76,
+					"sizingX": "fixed",
+					"dataSource": "eRecord.address1",
+					"class": "Texts13N",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_ZIP_1_": {
+					"type": "input",
+					"top": 250,
+					"left": 720,
+					"width": 76,
+					"height": 16,
+					"sizingX": "fixed",
+					"dataSource": "eRecord.zip",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_City__1_": {
+					"type": "input",
+					"top": 280,
+					"left": 720,
+					"width": 176,
+					"height": 16,
+					"sizingX": "fixed",
+					"dataSource": "eRecord.city",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_State__1_": {
+					"type": "input",
+					"top": 311,
+					"left": 720,
+					"width": 176,
+					"height": 16,
+					"sizingX": "fixed",
+					"dataSource": "eRecord.phone",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_Country_1_": {
+					"type": "input",
+					"top": 341,
+					"left": 720,
+					"width": 176,
+					"height": 16,
+					"sizingX": "fixed",
+					"dataSource": "eRecord.actionBy",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_ZIP_2_": {
+					"type": "input",
+					"top": 124,
+					"left": 1020,
+					"width": 185,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "eRecord.nameLast",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_Address_2_": {
+					"type": "input",
+					"top": 156,
+					"left": 1020,
+					"width": 185,
+					"height": 106,
+					"sizingX": "grow",
+					"dataSource": "eRecord.comment",
+					"class": "Texts13N",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_State__2_": {
+					"type": "input",
+					"top": 311,
+					"left": 1020,
+					"width": 185,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "eRecord.phoneCell",
+					"dataSourceTypeHint": "text",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_FIELD_Country_2_": {
+					"type": "input",
+					"top": 281,
+					"left": 1020,
+					"width": 76,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.editEntity.Discount_Rate",
+					"dataSourceTypeHint": "number",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Percent"
+					},
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 124,
+					"left": 612,
+					"width": 94,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "id"
+				},
+				"Text5_1_": {
+					"type": "text",
+					"top": 156,
+					"left": 612,
+					"width": 94,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Address"
+				},
+				"Text6_1_": {
+					"type": "text",
+					"top": 281,
+					"left": 612,
+					"width": 94,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:City"
+				},
+				"Text7_1_": {
+					"type": "text",
+					"top": 311,
+					"left": 612,
+					"width": 94,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "Phone"
+				},
+				"Round Rectangle9": {
+					"type": "rectangle",
+					"top": 88,
+					"left": 814,
+					"width": 88,
+					"height": 26,
+					"sizingX": "move",
+					"fill": "#BBBBBB",
+					"stroke": "#999999",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"_ID_": {
+					"type": "input",
+					"top": 93,
+					"left": 820,
+					"width": 76,
+					"height": 16,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.editEntity.ID",
+					"dataSourceTypeHint": "number",
+					"stroke": "#FFFFFF",
+					"class": "Texts13N",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text8_1_": {
+					"type": "text",
+					"top": 341,
+					"left": 612,
+					"width": 94,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "Action By"
+				},
+				"Text11_1_": {
+					"type": "text",
+					"top": 251,
+					"left": 612,
+					"width": 94,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "Zip"
+				},
+				"Text5_2_": {
+					"type": "text",
+					"top": 156,
+					"left": 900,
+					"width": 108,
+					"height": 46,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "Comment"
+				},
+				"Text7_2_": {
+					"type": "text",
+					"top": 311,
+					"left": 900,
+					"width": 108,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "Phone Cell"
+				},
+				"Text8_2_": {
+					"type": "text",
+					"top": 281,
+					"left": 900,
+					"width": 108,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": ":xliff:Discount Rate"
+				},
+				"Text11_2_": {
+					"type": "text",
+					"top": 125,
+					"left": 900,
+					"width": 108,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "Last Name"
+				},
+				"Round Rectangle6_2_1": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 1014,
+					"width": 197,
+					"height": 26,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "#D8DCE3",
+					"strokeWidth": 2,
+					"borderRadius": 5
+				},
+				"_FIELD_State__2_1": {
+					"type": "input",
+					"top": 341,
+					"left": 1020,
+					"width": 185,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "eRecord.actionDate",
+					"dataSourceTypeHint": "date",
+					"class": "Texts13N",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text7_2_1": {
+					"type": "text",
+					"top": 341,
+					"left": 900,
+					"width": 108,
+					"height": 16,
+					"stroke": "#696969",
+					"class": "Texts13N",
+					"textAlign": "right",
+					"text": "Action Date"
+				}
+			}
+		}
+	],
+	"geometryStamp": 7,
+	"inheritedForm": "oLoHeader"
+}

@@ -1,0 +1,404 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onTimer",
+		"onAfterEdit",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "612pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vhNow": {
+					"type": "input",
+					"top": 14,
+					"left": 76,
+					"width": 80,
+					"height": 22,
+					"dataSource": "vhNow",
+					"dataSourceTypeHint": "time",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"vhNext": {
+					"type": "input",
+					"top": 14,
+					"left": 227,
+					"width": 80,
+					"height": 22,
+					"dataSource": "vhNext",
+					"dataSourceTypeHint": "time",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"vtStatus": {
+					"type": "input",
+					"top": 14,
+					"left": 317,
+					"width": 143,
+					"height": 22,
+					"dataSource": "vtStatus",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"vbShow": {
+					"type": "checkbox",
+					"top": 38,
+					"left": 472,
+					"width": 161,
+					"height": 32,
+					"dataSource": "vbShow",
+					"text": "Show CronManager",
+					"class": "cssInput",
+					"method": "ObjectMethods/vbShow.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 14,
+					"left": 27,
+					"width": 47,
+					"height": 22,
+					"class": "cssInput",
+					"textAlign": "left",
+					"text": "Time"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 14,
+					"left": 177,
+					"width": 44,
+					"height": 22,
+					"class": "cssInput",
+					"textAlign": "left",
+					"text": "Next"
+				},
+				"Thermometer": {
+					"type": "progress",
+					"top": 132,
+					"left": 548,
+					"width": 1,
+					"height": 1,
+					"dataSource": "Thermometer",
+					"continuousExecution": false,
+					"min": 0,
+					"max": 100,
+					"graduationStep": 10,
+					"step": 10,
+					"enterable": true
+				},
+				"vtUser": {
+					"type": "input",
+					"top": 45,
+					"left": 71,
+					"width": 80,
+					"height": 18,
+					"dataSource": "vtUser",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"vtMachine": {
+					"type": "input",
+					"top": 45,
+					"left": 245,
+					"width": 215,
+					"height": 18,
+					"dataSource": "vtMachine",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 45,
+					"left": 27,
+					"width": 47,
+					"height": 18,
+					"class": "cssInput",
+					"textAlign": "left",
+					"text": "User:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 45,
+					"left": 177,
+					"width": 64,
+					"height": 18,
+					"class": "cssInput",
+					"textAlign": "left",
+					"text": "Machine:"
+				},
+				"viRecords": {
+					"type": "input",
+					"top": 14,
+					"left": 568,
+					"width": 80,
+					"height": 22,
+					"dataSource": "viRecords",
+					"dataSourceTypeHint": "number",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 14,
+					"left": 472,
+					"width": 86,
+					"height": 22,
+					"class": "cssInput",
+					"textAlign": "left",
+					"text": "CronJobs:"
+				},
+				"LB_CronJob": {
+					"type": "listbox",
+					"listboxType": "collection",
+					"method": "LB_CronJob",
+					"metaSource": "LB_CronJob",
+					"dataSource": "Form:C1466.LB_CronJob.data",
+					"currentItemSource": "Form.LB_CronJob.cur",
+					"currentItemPositionSource": "Form.LB_CronJob.pos",
+					"selectedItemsSource": "Form.LB_CronJob.sel",
+					"left": 16,
+					"top": 71,
+					"width": 632,
+					"height": 189,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"objectName": "This.active",
+							"width": 40,
+							"dataSource": "This.active",
+							"header": {
+								"name": "This.active",
+								"text": "Active"
+							},
+							"footer": {
+								"name": "Footer_LB_CronJob_active_"
+							},
+							"textAlign": "center",
+							"align": 3,
+							"format": "",
+							"fieldType": 6,
+							"name": "Column1",
+							"enterable": false
+						},
+						{
+							"objectName": "This.comment",
+							"width": 120,
+							"dataSource": "This.comment",
+							"header": {
+								"name": "This.comment",
+								"text": "Comment"
+							},
+							"footer": {
+								"name": "Footer_LB_CronJob_comment_"
+							},
+							"textAlign": "left",
+							"align": 2,
+							"format": "",
+							"fieldType": 2,
+							"name": "Column2",
+							"enterable": false
+						},
+						{
+							"objectName": "This.cronString",
+							"width": 120,
+							"dataSource": "This.cronString",
+							"header": {
+								"name": "This.cronString",
+								"text": "CronString"
+							},
+							"footer": {
+								"name": "Footer_LB_CronJob_cronString_"
+							},
+							"textAlign": "left",
+							"align": 2,
+							"format": "",
+							"fieldType": 0,
+							"name": "Column3",
+							"enterable": false
+						},
+						{
+							"objectName": "This.displayRecords",
+							"width": 40,
+							"dataSource": "This.displayRecords",
+							"header": {
+								"name": "This.displayRecords",
+								"text": "DisplayRecords"
+							},
+							"footer": {
+								"name": "Footer_LB_CronJob_displayRecords_"
+							},
+							"textAlign": "center",
+							"align": 3,
+							"format": "",
+							"fieldType": 6,
+							"name": "Column4",
+							"enterable": false
+						},
+						{
+							"objectName": "This.eventName",
+							"width": 120,
+							"dataSource": "This.eventName",
+							"header": {
+								"name": "This.eventName",
+								"text": "EventName"
+							},
+							"footer": {
+								"name": "Footer_LB_CronJob_eventName_"
+							},
+							"textAlign": "left",
+							"align": 2,
+							"format": "",
+							"fieldType": 0,
+							"name": "Column5",
+							"enterable": false
+						},
+						{
+							"objectName": "This.machineName",
+							"width": 120,
+							"dataSource": "This.machineName",
+							"header": {
+								"name": "This.machineName",
+								"text": "MachineName"
+							},
+							"footer": {
+								"name": "Footer_LB_CronJob_machineName_"
+							},
+							"textAlign": "left",
+							"align": 2,
+							"format": "",
+							"fieldType": 0,
+							"name": "Column6",
+							"enterable": false
+						},
+						{
+							"objectName": "This.tableName",
+							"width": 120,
+							"dataSource": "This.tableName",
+							"header": {
+								"name": "This.tableName",
+								"text": "TableName"
+							},
+							"footer": {
+								"name": "Footer_LB_CronJob_tableName_"
+							},
+							"textAlign": "left",
+							"align": 2,
+							"format": "",
+							"fieldType": 0,
+							"name": "Column7",
+							"enterable": false
+						}
+					]
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 10,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

@@ -1,0 +1,551 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable1": {
+					"type": "input",
+					"top": 7,
+					"left": 109,
+					"width": 623,
+					"height": 14,
+					"dataSource": "HTTPClient_URL",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Radio Button1": {
+					"type": "radio",
+					"top": 83,
+					"left": 109,
+					"width": 60,
+					"height": 16,
+					"dataSource": "HTTPClient_GetRequest",
+					"text": "Get",
+					"class": "cssInputSmall",
+					"radioGroup": "Group1",
+					"events": [
+						"onClick"
+					]
+				},
+				"Radio Button2": {
+					"type": "radio",
+					"top": 83,
+					"left": 179,
+					"width": 60,
+					"height": 16,
+					"dataSource": "HTTPClient_PostRequest",
+					"text": "Post",
+					"class": "cssInputSmall",
+					"radioGroup": "Group1",
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"top": 120,
+					"left": 12,
+					"width": 306,
+					"height": 231,
+					"resizingMode": "legacy",
+					"dataSource": "HTTPClient_ParamListbox",
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "HTTPClient_ParamName",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Geneva",
+							"fontSize": 9,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Name",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"fontFamily": "Geneva",
+								"fontSize": 9
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Geneva",
+								"fontSize": 9
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "HTTPClient_ParamValue",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Geneva",
+							"fontSize": 9,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Value",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"fontFamily": "Geneva",
+								"fontSize": 9
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "Geneva",
+								"fontSize": 9
+							}
+						}
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 372,
+					"left": 12,
+					"width": 306,
+					"height": 144,
+					"dataSource": "HTTPSendText",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 46,
+					"left": 331,
+					"width": 80,
+					"height": 20,
+					"dataSource": "HTTPClient_SendButton",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "Send",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 29,
+					"left": 482,
+					"width": 250,
+					"height": 14,
+					"dataSource": "HTTP_URL",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 45,
+					"left": 482,
+					"width": 250,
+					"height": 14,
+					"dataSource": "HTTP_Host",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 62,
+					"left": 482,
+					"width": 250,
+					"height": 14,
+					"dataSource": "HTTP_Path",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 102,
+					"left": 482,
+					"width": 57,
+					"height": 14,
+					"dataSource": "HTTP_Protocol",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 102,
+					"left": 587,
+					"width": 42,
+					"height": 14,
+					"dataSource": "HTTP_Port",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 102,
+					"left": 690,
+					"width": 42,
+					"height": 14,
+					"dataSource": "HTTP_TimeOut",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 122,
+					"left": 331,
+					"width": 383,
+					"height": 228,
+					"dataSource": "HTTPClient_Response",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Radio Button3": {
+					"type": "checkbox",
+					"top": 355,
+					"left": 331,
+					"width": 248,
+					"height": 13,
+					"dataSource": "HTTP_TestMode",
+					"text": "See message being sent",
+					"fontSize": 9,
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 372,
+					"left": 331,
+					"width": 398,
+					"height": 144,
+					"dataSource": "HTTPFullSend",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 9,
+					"left": 44,
+					"width": 45,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "URL :"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 356,
+					"left": 12,
+					"width": 140,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"text": "Overriding message"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 101,
+					"left": 331,
+					"width": 92,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"text": "Response :"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 86,
+					"left": 5,
+					"width": 83,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Request Method :"
+				},
+				"Picture Button1": {
+					"type": "pictureButton",
+					"top": 97,
+					"left": 273,
+					"width": 23,
+					"height": 20,
+					"dataSource": "HTTPClient_AddParamButton",
+					"columnCount": 3,
+					"picture": "/RESOURCES/Images/library/PlusButton.png",
+					"switchContinuously": true,
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Picture Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture Button2": {
+					"type": "pictureButton",
+					"top": 97,
+					"left": 296,
+					"width": 23,
+					"height": 20,
+					"dataSource": "HTTPClient_DelParamButton",
+					"columnCount": 3,
+					"picture": "/RESOURCES/Images/library/MinusButton (24576).png",
+					"switchContinuously": true,
+					"loopBackToFirstFrame": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Picture Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 31,
+					"left": 420,
+					"width": 54,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "URL :"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 47,
+					"left": 420,
+					"width": 54,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Host :"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 104,
+					"left": 420,
+					"width": 54,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Protocol :"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 64,
+					"left": 420,
+					"width": 54,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Path :"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 104,
+					"left": 546,
+					"width": 33,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Port :"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 104,
+					"left": 634,
+					"width": 48,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "TimeOut :"
+				},
+				"Variable20": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable20.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 102,
+					"left": 12,
+					"width": 122,
+					"height": 11,
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"text": "Parameters to pass"
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 79,
+					"left": 482,
+					"width": 250,
+					"height": 14,
+					"dataSource": "HTTP_ContentType",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 81,
+					"left": 389,
+					"width": 85,
+					"height": 13,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Content-Type ;"
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"Radio Button1",
+				"Radio Button2"
+			]
+		},
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

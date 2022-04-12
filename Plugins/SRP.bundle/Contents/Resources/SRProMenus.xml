@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus version="1">
+	<!-- Editor menu bar -->
+	<menu id="SRP_Menubar">
+		<menu text="SRP_File" id="18001">
+			<item text="SRP_New" id="101"/>
+			<item text="SRP_Open" id="102" shortcut="O"/>
+			<item text="SRP_Close" id="103" shortcut="W" enabled="false"/>
+			<item text="-"/>
+			<item text="SRP_Save" id="104" shortcut="S"/>
+			<item text="SRP_SaveAs" id="105" shortcut="S" shift="true"/>
+			<item text="-"/>
+			<item text="SRP_Export" id="106"/>
+			<item text="-"/>
+			<item text="SRP_Preview" id="107" shortcut="/"/>
+			<item text="SRP_PageSetup" id="108"/>
+			<item text="SRP_JobSetup" id="111"/>
+			<item text="SRP_Print" id="109" shortcut="P"/>
+			<item text="-"/>
+			<item text="SRP_Zoom" id="110" shortcut="\"/>
+		</menu>
+
+		<menu text="SRP_Edit" id="18002">
+			<item text="SRP_Undo" id="201" standard_action="17" shortcut="Z"/>
+			<item text="SRP_Redo" id="218" standard_action="31" shortcut="Z" shift="true"/>
+			<item text="-"/>
+			<item text="SRP_Cut" id="202" standard_action="18" shortcut="X"/>
+			<item text="SRP_Copy" id="203" standard_action="19" shortcut="C"/>
+			<item text="SRP_Paste" id="204" standard_action="20" shortcut="V"/>
+			<item text="SRP_Clear" id="205" standard_action="21"/>
+			<item text="SRP_SelectAll" id="206" standard_action="22" shortcut="A"/>
+			<item text="-"/>
+			<item text="SRP_Duplicate" id="207" shortcut="D"/>
+			<item text="SRP_ModifyObj" id="208" shortcut="M"/>
+			<item text="SRP_ChangeObj" id="209"/>
+			<item text="SRP_PositionObj" id="210" shortcut="P" shift="true"/>
+			<item text="-"/>
+			<menu text="SRP_ModifySec" id="211">
+				<item text="SRP_SecHeader" id="1001"/>
+				<item text="SRP_SecHeader2" id="1018"/>
+				<item text="SRP_SecHeader3" id="1019"/>
+				<item text="SRP_SecSubHdr1" id="1002"/>
+				<item text="SRP_SecSubHdr2" id="1003"/>
+				<item text="SRP_SecSubHdr3" id="1004"/>
+				<item text="SRP_SecSubHdr4" id="1005"/>
+				<item text="SRP_SecSubHdr5" id="1006"/>
+				<item text="SRP_SecSubHdr6" id="1007"/>
+				<item text="SRP_SecBody" id="1008"/>
+				<item text="SRP_SecSubTot6" id="1009"/>
+				<item text="SRP_SecSubTot5" id="1010"/>
+				<item text="SRP_SecSubTot4" id="1011"/>
+				<item text="SRP_SecSubTot3" id="1012"/>
+				<item text="SRP_SecSubTot2" id="1013"/>
+				<item text="SRP_SecSubTot1" id="1014"/>
+				<item text="SRP_SecTotal" id="1015"/>
+				<item text="SRP_SecFooter" id="1016"/>
+				<item text="SRP_SecFooter2" id="1020"/>
+				<item text="SRP_SecFooter3" id="1021"/>
+				<item text="SRP_SecWatermark" id="1017"/>
+	  		</menu>
+			<item text="SRP_PositionSec" id="212" shortcut="E"/>
+			<item text="SRP_AddDelSec" id="213"/>
+			<item text="SRP_ShowHideSec" id="239"/>
+			<item text="SRP_ReportOptions" id="200"/>
+			<item text="SRP_ListObjects" id="240" shortcut="F" option="true"/>
+<!--			<item text="SRP_FindObjects" id="241" shortcut="F" shift="true" option="true"/>	-->
+			<item text="SRP_InsertTableColumn" id="244"/>
+		</menu>
+
+		<menu text="SRP_Object" id="18005">
+			<item text="SRP_BringToFront" id="214" shortcut="F"/>
+			<item text="SRP_BringForwards" id="215" shortcut="F" shift="true"/>
+			<item text="SRP_SendToBack" id="216" shortcut="B"/>
+			<item text="SRP_SendBackwards" id="217" shortcut="B" shift="true"/>
+			<item text="SRP_OrderByPosition" id="242"/>
+			<item text="SRP_ReverseOrder" id="243"/>
+			<item text="-"/>
+			<item text="SRP_Group" id="219" shortcut="G"/>
+			<item text="SRP_Ungroup" id="220" shortcut="G" shift="true"/>
+			<item text="-"/>
+			<item text="SRP_Lock" id="221"/>
+			<item text="SRP_Unlock" id="222"/>
+			<item text="-"/>
+			<menu text="SRP_AlignObjects" id="260">
+				<item text="SRP_AlignHLeft" id="261"/>
+				<item text="SRP_AlignHCenter" id="262"/>
+				<item text="SRP_AlignHRight" id="263"/>
+				<item text="-"/>
+				<item text="SRP_AlignVTop" id="264"/>
+				<item text="SRP_AlignVCenter" id="265"/>
+				<item text="SRP_AlignVBottom" id="266"/>
+			</menu>
+			<item text="-"/>
+			<item text="SRP_Hide" id="223"/>
+			<item text="SRP_HideOthers" id="228"/>
+			<item text="SRP_Show" id="224"/>
+			<item text="-"/>
+<!--			<item text="SRP_DontPrint" id="225"/>	-->
+			<menu text="SRP_Font" id="226" fontMenu="true"/>
+			<menu text="SRP_Style" id="227">
+				<item text="SRP_Plain" id="1201" shortcut="N" shift="true"/>
+				<item text="SRP_Bold" id="1202"/>
+				<item text="SRP_Italic" id="1203"/>
+				<item text="SRP_Underline" id="1204"/>
+				<item text="SRP_Strikethrough" id="1205"/>
+<!--				<item text="-"/>
+				<item text="SRP_Lowercase" id="1206"/>
+				<item text="SRP_Uppercase" id="1207"/>
+				<item text="SRP_Capitals" id="1208"/>	-->
+			</menu>
+			<menu text="SRP_Size" id="18017">
+				<item text="SRP_Size6" id="6001"/>
+				<item text="SRP_Size7" id="6002"/>
+				<item text="SRP_Size8" id="6003"/>
+				<item text="SRP_Size9" id="6004"/>
+				<item text="SRP_Size10" id="6005"/>
+				<item text="SRP_Size11" id="6006"/>
+				<item text="SRP_Size12" id="6007"/>
+				<item text="SRP_Size14" id="6008"/>
+				<item text="SRP_Size18" id="6009"/>
+				<item text="SRP_Size24" id="6010"/>
+				<item text="SRP_Size36" id="6011"/>
+				<item text="-"/>
+				<item text="SRP_Size+" id="6013" shortcut="+" shift="true"/>
+				<item text="SRP_Size-" id="6012" shortcut="-" shift="true"/>
+				<item text="-"/>
+				<item text="SRP_SizeOther" id="6014"/>
+			</menu>
+			<menu text="SRP_LineThickness" id="18020">
+				<item text="SRP_LineHair" id="5001"/>
+				<item text="SRP_Line1" id="5002"/>
+				<item text="SRP_Line2" id="5003"/>
+				<item text="SRP_Line3" id="5004"/>
+				<item text="SRP_Line4" id="5005"/>
+				<item text="SRP_Line5" id="5006"/>
+				<item text="SRP_Line6" id="5007"/>
+				<item text="SRP_Line7" id="5008"/>
+				<item text="SRP_Line8" id="5009"/>
+			</menu>
+			<menu text="SRP_DashStyle" id="18021">
+				<item text="SRP_Dash_Solid" id="5020"/>
+				<item text="SRP_Dash_Dash" id="5021"/>
+				<item text="SRP_Dash_Dot" id="5022"/>
+				<item text="SRP_Dash_DashDot" id="5023"/>
+				<item text="SRP_Dash_DashDotDot" id="5024"/>
+			</menu>
+<!--			<item text="SRP_TextColor" id="229"/>
+			<item text="-"/>	-->
+			<menu text="SRP_HorAlign" id="230">
+				<item text="SRP_Default" id="1400"/>
+				<item text="SRP_Left" id="1401"/>
+				<item text="SRP_Center" id="1402"/>
+				<item text="SRP_Right" id="1403"/>
+				<item text="SRP_Justify" id="1404"/>
+				<item text="SRP_FullJustify" id="1405"/>
+			</menu>
+			<menu text="SRP_VertAlign" id="231">
+				<item text="SRP_Default" id="1500"/>
+				<item text="SRP_Top" id="1501"/>
+				<item text="SRP_Center" id="1502"/>
+				<item text="SRP_Bottom" id="1503"/>
+			</menu>
+<!--			<item text="-"/>	-->
+			<item text="SRP_LineSpace+" id="232" shortcut="+" shift="true" option="true"/>
+			<item text="SRP_LineSpace-" id="233" shortcut="-" shift="true" option="true"/>
+<!--			<item text="-"/>	-->
+			<item text="SRP_AutoWrap" id="234"/>
+			<item text="SRP_AdjustObjSize" id="235" shortcut="P" option="true"/>
+		</menu>
+
+		<menu text="SRP_View" id="18003">
+			<item text="SRP_PhysicalPage" id="301"/>
+			<item text="SRP_PrintableArea" id="302"/>
+			<item text="-"/>
+			<item text="SRP_ShowRuler" id="303" shortcut="R" shift="true"/>
+			<menu text="SRP_RulerUnits" id="304">
+				<item text="SRP_UnitPoint" id="1101"/>
+ 				<item text="SRP_UnitMM" id="1102"/>
+				<item text="SRP_UnitInch" id="1103"/>
+ 			</menu>
+			<item text="-"/>
+			<item text="SRP_ShowGrid" id="305" shortcut="D" shift="true"/>
+			<item text="SRP_SnapToGrid" id="319"/>
+			<item text="-"/>
+			<item text="SRP_ShowGuides" id="306" shortcut="G" shift="true"/>
+			<item text="SRP_SnapToGuides" id="320"/>
+			<item text="SRP_LockGuides" id="307"/>
+			<item text="-"/>
+			<item text="SRP_ShowSections" id="308"/>
+			<item text="SRP_LockSections" id="309"/>
+			<item text="-"/>
+			<item text="SRP_ShowMargins" id="310" shortcut="M" shift="true"/>
+			<item text="-"/>
+			<item text="SRP_ShowBorders" id="311" shortcut="O" shift="true"/>
+			<menu text="SRP_Content" id="321">
+				<item text="SRP_ObjNormal" id="314" shortcut="K" shift="true"/>
+				<item text="-"/>
+				<item text="SRP_ObjNames" id="315"/>
+				<item text="SRP_ObjAlias" id="313" shortcut="A" shift="true"/>
+				<item text="SRP_ObjIDs" id="316"/>
+				<item text="SRP_ObjFormats" id="317"/>
+				<item text="SRP_ObjPrintOrder" id="312" shortcut="Y" shift="true"/>
+				<item text="SRP_ObjSize" id="326"/>
+				<item text="SRP_ObjValues" id="318" shortcut="V" shift="true"/>
+  			</menu>
+			<item text="-"/>
+			<item text="SRP_Scale100" id="322" shortcut="0"/>
+			<item text="SRP_ScaleWISIWYG" id="323" shortcut="="/>
+			<item text="SRP_Scale+" id="324" shortcut="+"/>
+			<item text="SRP_Scale-" id="325" shortcut="-"/>
+			<item text="-"/>
+			<menu text="SRP_Page" id="330">
+				<item text="SRP_Page1" id="331" shortcut="1" option="true"/>
+				<item text="SRP_Page2" id="332" shortcut="2" option="true"/>
+				<item text="SRP_Page3" id="333" shortcut="3" option="true"/>
+				<item text="-"/>
+				<item text="SRP_PageAll" id="334" shortcut="4" option="true"/>
+  			</menu>
+
+			<item text="-"/>
+			<menu text="SRP_Palette" id="370">
+				<item text="SRP_PaletteT0" id="371"/>
+				<item text="SRP_PaletteT1" id="372"/>
+				<item text="SRP_PaletteT2" id="373"/>
+				<item text="SRP_PaletteT3" id="374"/>
+			</menu>
+		</menu>
+
+		<menu text="SRP_DB" id="18004">
+			<item text="SRP_MainTable" id="401"/>
+			<item text="SRP_SelectRecords" id="402"/>
+			<item text="SRP_OrderRecords" id="403"/>
+			<item text="-"/>
+			<item text="SRP_PrintedSec" id="404"/>
+			<item text="-"/>
+			<menu text="SRP_Scripts" id="405">
+				<item text="SRP_StartScript" id="7001"/>
+				<item text="SRP_BodyScript" id="7002"/>
+				<item text="SRP_EndScript" id="7003"/>
+  			</menu>
+		</menu>
+	</menu>
+
+	<!-- variables menu -->
+<!--	unused
+	<menu id="SRP_Variables">
+		<item text="SRDate"/>
+		<item text="SRTime"/>
+		<item text="SRPage"/>
+		<item text="SRPages"/>
+		<item text="SRRecord"/>
+	</menu>
+unused	-->
+
+	<!-- formatting menu -->
+<!--	unused
+	<menu id="SRP_Formats">
+		<menu text="SRP_FormatDate" id="8001">
+			<item text="SRP_DateFormat1" id="1"/>
+			<item text="SRP_DateFormat2" id="2"/>
+			<item text="SRP_DateFormat3" id="3"/>
+			<item text="SRP_DateFormat4" id="4"/>
+			<item text="SRP_DateFormat5" id="5"/>
+			<item text="SRP_DateFormat6" id="6"/>
+			<item text="SRP_DateFormat7" id="7"/>
+			<item text="SRP_DateFormat8" id="8"/>
+			<item text="SRP_DateFormat9" id="100"/>
+		</menu>
+		<menu text="SRP_FormatTime" id="8002">
+			<item text="SRP_TimeFormat1" id="1"/>
+			<item text="SRP_TimeFormat2" id="2"/>
+			<item text="SRP_TimeFormat3" id="3"/>
+			<item text="SRP_TimeFormat4" id="4"/>
+			<item text="SRP_TimeFormat5" id="5"/>
+			<item text="SRP_TimeFormat6" id="6"/>
+			<item text="SRP_TimeFormat7" id="7"/>
+			<item text="SRP_TimeFormat8" id="8"/>
+			<item text="SRP_TimeFormat9" id="9"/>
+			<item text="SRP_TimeFormat10" id="100"/>
+		</menu>
+		<menu text="SRP_FormatNumber" id="8003">
+			<item text="SRP_NumberFormat1" id="### ### ##0.00"/>
+			<item text="SRP_NumberFormat2" id="### ### ##0"/>
+			<item text="SRP_NumberFormat3" id="### ##0"/>
+			<item text="SRP_NumberFormat4" id="###,###,##0.00"/>
+			<item text="SRP_NumberFormat5" id="###,###,##0"/>
+		</menu>
+	</menu>
+unused	-->
+
+</menus>

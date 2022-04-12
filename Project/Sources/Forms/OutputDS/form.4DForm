@@ -1,0 +1,115 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onSelectionChange",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"tableName": {
+					"type": "input",
+					"left": 1276,
+					"top": 31,
+					"width": 158,
+					"height": 17,
+					"dataSource": "tableName",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"focusable": false
+				},
+				"Text": {
+					"type": "text",
+					"text": "TableName",
+					"top": 10,
+					"left": 1276,
+					"width": 73,
+					"height": 16,
+					"textAlign": "right"
+				},
+				"SF_Input": {
+					"type": "subform",
+					"left": 530,
+					"top": 99,
+					"width": 1012,
+					"height": 725,
+					"method": "ObjectMethods/SF_Input.4dm",
+					"right": 1542,
+					"dataSource": "entryEntity",
+					"bottom": 824
+				},
+				"SF_List": {
+					"type": "subform",
+					"left": 5,
+					"top": 99,
+					"width": 520,
+					"height": 725,
+					"method": "ObjectMethods/SF_List.4dm",
+					"right": 525,
+					"dataSource": "",
+					"events": [
+						"onLoad"
+					],
+					"bottom": 824
+				},
+				"aSalesTables_o": {
+					"type": "tab",
+					"top": 64,
+					"left": 59,
+					"width": 323,
+					"height": 26,
+					"dataSource": "aSalesTables",
+					"dataSourceTypeHint": "arrayText",
+					"class": "cssPopups",
+					"method": "ObjectMethods/aSalesTables_o.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					],
+					"fontSize": 10
+				}
+			}
+		}
+	],
+	"geometryStamp": 302,
+	"inheritedForm": "oLoButtonBar",
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Menu Bar #1",
+	"width": 1560,
+	"height": 840
+}

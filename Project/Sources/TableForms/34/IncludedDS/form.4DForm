@@ -1,0 +1,397 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onClick",
+		"onDoubleClick",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"LB_Include": {
+					"type": "listbox",
+					"left": 9,
+					"top": 12,
+					"width": 990,
+					"height": 210,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"alternateFill": "#FFFAE6",
+					"movableRows": false,
+					"listboxType": "collection",
+					"dataSource": "LB_Included_ent",
+					"currentItemSource": "LB_Included.cur",
+					"currentItemPositionSource": "LB_Included.pos",
+					"selectedItemsSource": "LB_Included.sel",
+					"columns": [
+						{
+							"header": {
+								"name": "Header_LB_Invoice_actionBy_",
+								"text": "ActionBy"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionBy_"
+							},
+							"name": "Column_LB_Invoice_actionBy_",
+							"className": "LB_Invoice",
+							"valueName": "actionBy",
+							"align": 1,
+							"format": "",
+							"width": 87,
+							"formula": "This.actionBy",
+							"dataSource": "This:C1470.actionBy",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_action_",
+								"text": "Action"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_action_"
+							},
+							"name": "Column_LB_Invoice_action_",
+							"className": "LB_Invoice",
+							"valueName": "action",
+							"align": 1,
+							"format": "",
+							"width": 82,
+							"formula": "This.action",
+							"dataSource": "This:C1470.action",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_actionDate_",
+								"text": "ActionDate"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionDate_"
+							},
+							"name": "Column_LB_Invoice_actionDate_",
+							"className": "LB_Invoice",
+							"valueName": "actionDate",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionDate",
+							"dataSource": "This:C1470.actionDate",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_actionTime_",
+								"text": "ActionTime"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionTime_"
+							},
+							"name": "Column_LB_Invoice_actionTime_",
+							"className": "LB_Invoice",
+							"valueName": "actionTime",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionTime",
+							"dataSource": "This:C1470.actionTime",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_total_",
+								"text": "Total"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_total_"
+							},
+							"name": "Column_LB_Invoice_total_",
+							"className": "LB_Invoice",
+							"valueName": "total",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.total",
+							"dataSource": "This:C1470.total",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_balanceDue_",
+								"text": "BalanceDue"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_balanceDue_"
+							},
+							"name": "Column_LB_Invoice_balanceDue_",
+							"className": "LB_Invoice",
+							"valueName": "balanceDue",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.balanceDue",
+							"dataSource": "This:C1470.balanceDue",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_bill2Company_",
+								"text": "Bill2Company"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_bill2Company_"
+							},
+							"name": "Column_LB_Invoice_bill2Company_",
+							"className": "LB_Invoice",
+							"valueName": "bill2Company",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.bill2Company",
+							"dataSource": "This:C1470.bill2Company",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_dateLinked_",
+								"text": "DateLinked"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_dateLinked_"
+							},
+							"name": "Column_LB_Invoice_dateLinked_",
+							"className": "LB_Invoice",
+							"valueName": "dateLinked",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.dateLinked",
+							"dataSource": "This:C1470.dateLinked",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_datePaid_",
+								"text": "DatePaid"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_datePaid_"
+							},
+							"name": "Column_LB_Invoice_datePaid_",
+							"className": "LB_Invoice",
+							"valueName": "datePaid",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.datePaid",
+							"dataSource": "This:C1470.datePaid",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_dateShipped_",
+								"text": "DateShipped"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_dateShipped_"
+							},
+							"name": "Column_LB_Invoice_dateShipped_",
+							"className": "LB_Invoice",
+							"valueName": "dateShipped",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.dateShipped",
+							"dataSource": "This:C1470.dateShipped",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_invoiceNum_",
+								"text": "InvoiceNum"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_invoiceNum_"
+							},
+							"name": "Column_LB_Invoice_invoiceNum_",
+							"className": "LB_Invoice",
+							"valueName": "invoiceNum",
+							"align": 4,
+							"format": "###,###,###,##0",
+							"width": 80,
+							"formula": "This.invoiceNum",
+							"dataSource": "This:C1470.invoiceNum",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_orderNum_",
+								"text": "OrderNum"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_orderNum_"
+							},
+							"name": "Column_LB_Invoice_orderNum_",
+							"className": "LB_Invoice",
+							"valueName": "orderNum",
+							"align": 4,
+							"format": "###,###,###,##0",
+							"width": 80,
+							"formula": "This.orderNum",
+							"dataSource": "This:C1470.orderNum",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_terms_",
+								"text": "Terms"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_terms_"
+							},
+							"name": "Column_LB_Invoice_terms_",
+							"className": "LB_Invoice",
+							"valueName": "terms",
+							"align": 1,
+							"format": "",
+							"width": 49,
+							"formula": "This.terms",
+							"dataSource": "This:C1470.terms",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_typeSale_",
+								"text": "TypeSale"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_typeSale_"
+							},
+							"name": "Column_LB_Invoice_typeSale_",
+							"className": "LB_Invoice",
+							"valueName": "typeSale",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.typeSale",
+							"dataSource": "This:C1470.typeSale",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 7,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

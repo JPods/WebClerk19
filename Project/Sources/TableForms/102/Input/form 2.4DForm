@@ -1,0 +1,85 @@
+﻿{"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":20,"bottomMargin":20,"menuBar":"Menu Bar #1","markerBody":568,"markerBreak":568,"markerFooter":585,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"ClassID":{"type":"input","top":53,"left":209,"width":414,"height":17,"dataSource":"[Catalog:102]ClassID:2","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Path1":{"type":"input","top":88,"left":209,"width":414,"height":88,"sizingX":"grow","dataSource":"[Catalog:102]Path1:3","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Path2":{"type":"input","top":185,"left":209,"width":414,"height":89,"sizingX":"grow","dataSource":"[Catalog:102]Path2:4","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Headers":{"type":"input","top":283,"left":209,"width":414,"height":88,"sizingX":"grow","dataSource":"[Catalog:102]Headers:5","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Columns":{"type":"input","top":380,"left":209,"width":69,"height":17,"dataSource":"[Catalog:102]Columns:6","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"UniqueID":{"type":"input","top":18,"left":209,"width":80,"height":17,"dataSource":"[Catalog:102]idUnique:1","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Text21":{"type":"text","top":20,"left":126,"width":75,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"UniqueID"},"Text22":{"type":"text","top":55,"left":126,"width":75,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"ClassID"},"Text23":{"type":"text","top":90,"left":126,"width":75,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Path1"},"Text24":{"type":"text","top":187,"left":126,"width":75,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Path2"},"Text25":{"type":"text","top":285,"left":126,"width":75,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Headers"},"Text26":{"type":"text","top":382,"left":126,"width":75,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Columns"},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}}}

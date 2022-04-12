@@ -1,0 +1,2 @@
+C_LONGINT:C283(viScreenWarning)
+viScreenWarning:=iLoInteger2

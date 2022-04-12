@@ -1,0 +1,587 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 1070,
+	"height": 758,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 477,
+	"markerBreak": 477,
+	"markerFooter": 477,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Picture14": {
+					"type": "picture",
+					"top": 54,
+					"left": 12,
+					"width": 801,
+					"height": 610,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/FlowChart.001.png"
+				},
+				"Variable2": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 304,
+					"width": 308,
+					"height": 52,
+					"dataSource": "b20",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Logos.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"MarketPotential_o": {
+					"type": "pictureButton",
+					"top": 72,
+					"left": 80,
+					"width": 103,
+					"height": 34,
+					"dataSource": "bMarketPotential",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCMarketPotential (31125).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/MarketPotential_o.4dm"
+				},
+				"CustomerWants_o": {
+					"type": "pictureButton",
+					"top": 72,
+					"left": 233,
+					"width": 103,
+					"height": 34,
+					"dataSource": "bCustomerWants",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCCustomerWants (31121).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"YourCapabilities_o": {
+					"type": "pictureButton",
+					"top": 72,
+					"left": 382,
+					"width": 103,
+					"height": 34,
+					"dataSource": "b11",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCYourCapabilities (31141).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"SetObjectives": {
+					"type": "pictureButton",
+					"top": 151,
+					"left": 422,
+					"width": 152,
+					"height": 20,
+					"dataSource": "b24",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCSetObjectives (31137).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bForecast": {
+					"type": "pictureButton",
+					"top": 234,
+					"left": 498,
+					"width": 95,
+					"height": 37,
+					"dataSource": "bForecast",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCForecast.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bForecast.4dm"
+				},
+				"bOrder": {
+					"type": "pictureButton",
+					"top": 338,
+					"left": 279,
+					"width": 103,
+					"height": 49,
+					"dataSource": "bOrder",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCOrderEntry (31126).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bOrder.4dm"
+				},
+				"Contactb": {
+					"type": "pictureButton",
+					"top": 355,
+					"left": 85,
+					"width": 103,
+					"height": 49,
+					"dataSource": "Contactb",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCContactManagement (31119).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Contactb.4dm"
+				},
+				"Proposalb": {
+					"type": "pictureButton",
+					"top": 445,
+					"left": 85,
+					"width": 103,
+					"height": 49,
+					"dataSource": "Proposalb",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCProposals (31130).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Proposalb.4dm"
+				},
+				"bInventoryStack": {
+					"type": "pictureButton",
+					"top": 617,
+					"left": 85,
+					"width": 102,
+					"height": 32,
+					"dataSource": "bInventoryStack",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCReceivePOs (31132).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bInventoryStack.4dm"
+				},
+				"bPJ": {
+					"type": "pictureButton",
+					"top": 617,
+					"left": 489,
+					"width": 109,
+					"height": 34,
+					"dataSource": "bPJ",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCPurchaseJournals.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bPJ.4dm"
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"action": "cancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"bSalesService3": {
+					"type": "pictureButton",
+					"top": 428,
+					"left": 257,
+					"width": 137,
+					"height": 86,
+					"dataSource": "bSalesService3",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCWorkFlow (31140).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bSalesService3.4dm"
+				},
+				"SalesServiceb": {
+					"type": "pictureButton",
+					"top": 231,
+					"left": 64,
+					"width": 131,
+					"height": 86,
+					"dataSource": "SalesServiceb",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCCommitedToNeed.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/SalesServiceb.4dm"
+				},
+				"bInvoice": {
+					"type": "pictureButton",
+					"top": 319,
+					"left": 475,
+					"width": 137,
+					"height": 86,
+					"dataSource": "bInvoice",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCBackOrderManagement (31114).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bInvoice.4dm"
+				},
+				"bShipWindowb": {
+					"type": "pictureButton",
+					"top": 446,
+					"left": 491,
+					"width": 103,
+					"height": 49,
+					"dataSource": "bShipWindowb",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCShip (31138).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bShipWindowb.4dm"
+				},
+				"bPayment": {
+					"type": "pictureButton",
+					"top": 448,
+					"left": 685,
+					"width": 103,
+					"height": 49,
+					"dataSource": "bPayment",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCPayments (31127).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bPayment.4dm"
+				},
+				"bPayApply": {
+					"type": "pictureButton",
+					"top": 338,
+					"left": 685,
+					"width": 103,
+					"height": 49,
+					"dataSource": "bPayApply",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCCollections (31116).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bPayApply.4dm"
+				},
+				"bManageFinancialRisk": {
+					"type": "pictureButton",
+					"top": 154,
+					"left": 689,
+					"width": 95,
+					"height": 49,
+					"dataSource": "bManageFinancialRisk",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCManageFinancialRisk.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bManageFinancialRisk.4dm"
+				},
+				"bPO": {
+					"type": "pictureButton",
+					"top": 527,
+					"left": 85,
+					"width": 102,
+					"height": 32,
+					"dataSource": "bPO",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCPOs (31129).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bPO.4dm"
+				},
+				"bSalesService2": {
+					"type": "pictureButton",
+					"top": 573,
+					"left": 85,
+					"width": 102,
+					"height": 32,
+					"dataSource": "bSalesService2",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCScheduler.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bSalesService2.4dm"
+				},
+				"bSJ": {
+					"type": "pictureButton",
+					"top": 554,
+					"left": 489,
+					"width": 109,
+					"height": 34,
+					"dataSource": "bSJ",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCSalesJournals (31135).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bSJ.4dm"
+				},
+				"bCJ": {
+					"type": "pictureButton",
+					"top": 549,
+					"left": 682,
+					"width": 109,
+					"height": 34,
+					"dataSource": "bCJ",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCCashJournals.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bCJ.4dm"
+				},
+				"bGL": {
+					"type": "pictureButton",
+					"top": 617,
+					"left": 682,
+					"width": 109,
+					"height": 34,
+					"dataSource": "bGL",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCGeneralJournals (31123).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bGL.4dm"
+				},
+				"PerformanceReviews": {
+					"type": "pictureButton",
+					"top": 183,
+					"left": 421,
+					"width": 152,
+					"height": 20,
+					"dataSource": "b10",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCPerformanceReviews (31128).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Commisions_o": {
+					"type": "pictureButton",
+					"top": 168,
+					"left": 239,
+					"width": 152,
+					"height": 20,
+					"dataSource": "bCommisions",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCCommissions (31117).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bService": {
+					"type": "pictureButton",
+					"top": 242,
+					"left": 239,
+					"width": 152,
+					"height": 20,
+					"dataSource": "bService",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCCustomerService (31120).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bService.4dm"
+				},
+				"bSyncing_o": {
+					"type": "pictureButton",
+					"top": 72,
+					"left": 686,
+					"width": 103,
+					"height": 34,
+					"dataSource": "bSyncing",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCSyncing (31139).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bSyncing_o.4dm"
+				},
+				"bReporting_o": {
+					"type": "pictureButton",
+					"top": 72,
+					"left": 536,
+					"width": 103,
+					"height": 34,
+					"dataSource": "bReporting",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/FCReporting (31134).png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bReporting_o.4dm"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 676,
+					"left": 49,
+					"width": 487,
+					"height": 12,
+					"textAlign": "center",
+					"fontFamily": "Arial",
+					"fontSize": 10,
+					"text": "Sales: The process of profiting by pleasing customers with greater value than the cost to compete."
+				},
+				"LB_Tables": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.LB_Tables.data",
+					"top": 54,
+					"left": 823,
+					"width": 229,
+					"height": 674,
+					"visibility": "visible",
+					"sizingX": "move",
+					"sizingY": "fixed",
+					"headerHeight": "1em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"currentItemSource": "Form:C1466.LB_Table.cur",
+					"currentItemPositionSource": "Form:C1466.LB_Table.pos",
+					"selectedItemsSource": "Form:C1466.LB_Table.sel",
+					"class": "cssInput16",
+					"events": [
+						"onLoad",
+						"onClick"
+					],
+					"selectionMode": "single",
+					"showHeaders": true,
+					"method": "ObjectMethods/LB_Tables.4dm",
+					"borderStyle": "double",
+					"columns": [
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Table Name"
+							},
+							"name": "Column_tableName1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 160,
+							"dataSource": "This:C1470.tableName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Num"
+							},
+							"name": "Column_tableNum1",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 55,
+							"maxWidth": 100,
+							"dataSource": "This:C1470.tableNum",
+							"enterable": false
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 81,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

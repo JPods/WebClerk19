@@ -1,0 +1,64 @@
+//%attributes = {"publishedWeb":true}
+//Procedure: OrdLnRays
+ARRAY LONGINT:C221(aoLinesDelete; 0)
+//
+ARRAY LONGINT:C221(aoLineAction; $1)  //initialize the array to 0's in the elements
+ARRAY LONGINT:C221(aOLineNum; $1)
+ARRAY TEXT:C222(aOItemNum; $1)
+ARRAY TEXT:C222(aOAltItem; $1)
+ARRAY REAL:C219(aOQtyOrder; $1)
+ARRAY REAL:C219(aOQtyShip; $1)
+ARRAY REAL:C219(aOQtyBL; $1)
+ARRAY REAL:C219(aOQtyCanceled; $1)
+//
+ARRAY TEXT:C222(aOLnCmplt; $1)
+//
+ARRAY TEXT:C222(aODescpt; $1)
+ARRAY REAL:C219(aOUnitPrice; $1)
+ARRAY REAL:C219(aODiscnt; $1)
+ARRAY REAL:C219(aODscntUP; $1)
+ARRAY LONGINT:C221(aOPQDIR; $1)  //Item Record Number, for lookup
+ARRAY REAL:C219(aOExtPrice; $1)
+ARRAY REAL:C219(aOUnitCost; $1)
+ARRAY REAL:C219(aOExtCost; $1)
+//
+ARRAY REAL:C219(aOBackLog; $1)
+ARRAY TEXT:C222(aOTaxable; $1)
+ARRAY REAL:C219(aOSaleTax; $1)
+ARRAY REAL:C219(aOTaxCost; $1)
+ARRAY REAL:C219(aOSaleComm; $1)
+ARRAY REAL:C219(aOSalesRate; $1)
+ARRAY REAL:C219(aORepComm; $1)
+ARRAY REAL:C219(aORepRate; $1)
+//
+ARRAY TEXT:C222(aOUnitMeas; $1)
+ARRAY REAL:C219(aOUnitWt; $1)
+ARRAY REAL:C219(aOExtWt; $1)
+ARRAY LONGINT:C221(aOLocation; $1)
+ARRAY REAL:C219(aOQtyOpen; $1)
+ARRAY LONGINT:C221(aOSerialRc; $1)
+ARRAY TEXT:C222(aOSerialNm; $1)
+ARRAY TEXT:C222(aOPricePt; $1)
+ARRAY LONGINT:C221(aOSeq; $1)
+ARRAY DATE:C224(aODateReq; $1)
+ARRAY DATE:C224(aoDateShipOn; $1)
+ARRAY DATE:C224(aODateShipped; $1)
+ARRAY TEXT:C222(aoProdBy; $1)
+ARRAY TEXT:C222(aoLnComment; $1)
+ARRAY TEXT:C222(aoShipOrdSt; $1)
+ARRAY TEXT:C222(aoProfile1; $1)
+ARRAY TEXT:C222(aoProfile2; $1)
+ARRAY TEXT:C222(aoProfile3; $1)
+
+ARRAY LONGINT:C221(aoUniqueID; $1)
+ARRAY LONGINT:C221(aoPrintThis; $1)
+ARRAY TEXT:C222(aoLocationBin; $1)
+//
+ARRAY TEXT:C222(aOOgItem; $1)
+ARRAY REAL:C219(aOOgQOrd; $1)
+ARRAY REAL:C219(aOOgQShip; $1)
+ARRAY REAL:C219(aOOgCancel; $1)
+ARRAY REAL:C219(aOOgBLQ; $1)
+ARRAY LONGINT:C221(aOOgLine; $1)
+
+ARRAY LONGINT:C221(aoLnSelect; 0)

@@ -1,0 +1,92 @@
+//%attributes = {"publishedWeb":true}
+// Modified by: Bill James (2015-12-16T00:00:00: qqqWords TestThis)
+//Method: Ingram_BuildSpec
+// If (Size of array(aText1)=0)
+// ARRAY TEXT(aText1;68)
+// aText1{1}:="ISBN"
+// aText1{2}:="Ingram Dept Code"
+// aText1{3}:="Title"
+// aText1{4}:="short title"
+// aText1{5}:="Edition number"
+// aText1{6}:="Edition Description"
+// aText1{7}:="Abridging Edition Flag"
+// aText1{8}:="Large print flag"
+// aText1{9}:="Series ID"
+// aText1{10}:="Series Number"
+// aText1{11}:="Contributor1"
+// aText1{12}:="Contributor 1 Role"
+// aText1{13}:="Contributor2"
+// aText1{14}:="2 Role"
+// aText1{15}:="Contributor 3"
+// aText1{16}:="3 Role"
+// aText1{17}:="publisher"
+// aText1{18}:="Publication date"
+// aText1{19}:="Street date"
+// aText1{20}:="BISAC Binding Type"
+// aText1{21}:="BISAC Media Type"
+// aText1{22}:="BISAC Children Book Type"
+// aText1{23}:="Ingram Suggested Retail Price"
+// aText1{24}:="Freight-Pass Thru Price"
+// aText1{25}:="Discount code"
+// aText1{26}:="Discount %"
+// aText1{27}:="Greenlight Code"
+// aText1{28}:="Return Flag"
+// aText1{29}:="Strippable Indicator"
+// aText1{30}:="Final Publisher Return Date"
+// aText1{31}:="UPC Code"
+// aText1{32}:="Ingram Subject"
+// aText1{33}:="BISAC Subject 1"
+// aText1{34}:="BISAC Subject 1 Description"
+// aText1{35}:="BISAC Subject 2"
+// aText1{36}:="BISAC Subject 2 Description"
+// aText1{37}:="BISAC Subject 3"
+// aText1{38}:="BISAC Subject 3 Description"
+// aText1{39}:="Audience Age_Min"
+// aText1{40}:="Audience Age_Max"
+// aText1{41}:="Audience Grade_Min"
+// aText1{42}:="Audience Grade_Max"
+// aText1{43}:="Library of Congress Card Number"
+// aText1{44}:="Dewey Decimal Classification No"
+// aText1{45}:="Library of Congress Subject Heading 1"
+// aText1{46}:="LC Subject Heading 2"
+// aText1{47}:="Pages"
+// aText1{48}:="Playtime"
+// aText1{49}:="Number of units"
+// aText1{50}:="Weight"
+// aText1{51}:="length"
+// aText1{52}:="Width"
+// aText1{53}:="Height"
+// aText1{54}:="Dump/Display Flag"
+// aText1{55}:="Monthly Add/Charge Flag"
+// aText1{56}:="Weekly Add/Charge Flag"
+// aText1{57}:="On Demand Print Flag"
+// aText1{58}:="Lexile Reading Level"
+// aText1{59}:="Publisher Code"
+// aText1{60}:="Sprint Arbor Division Flag"
+// aText1{61}:="Leading Article Flag"
+// aText1{62}:="Illustration Flag"
+// aText1{63}:="Content Language"
+// aText1{64}:="Spring Arbor Product Type"
+// aText1{65}:="Spring Arbor Subject Catagory"
+// aText1{66}:="Publisher's Suggested List Price"
+// aText1{67}:="Accessory Code"
+// aText1{68}:=""
+// End if 
+// aText2{68}:=""
+// If (Records in selection([ItemSpec])=0)
+// CREATE RECORD([ItemSpec])
+// 
+// [ItemSpec]ItemNum:=aText2{1}
+// End if 
+// [ItemSpec]Specification:="<Table width=510 border=2> "
+// For ($i;1;17)
+// [ItemSpec]Specification:=[ItemSpec]Specification+" <tr>"+"<td><b>"+aText1{$i}+"</b></td>"+"<td><b>"+aText1{($i+1)}+"</b></td>"+"<td><b>"+aText1{($i+2)}+"</b></td>"+"<td><b>"+aText1{($i+3)}+"</b></td></tr>"
+// [ItemSpec]Specification:=[ItemSpec]Specification+" <tr>"+"<td>"+aText2{$i}+"</td>"+"<td>"+aText2{($i+1)}+"</td>"+"<td>"+aText2{($i+2)}+"</td>"+"<td>"+aText2{($i+3)}+"</td></tr>"
+// $i:=$i+4
+// End for 
+// [ItemSpec]Specification:=[ItemSpec]Specification+"</Table>"
+// If (aText2{12}#"")
+// [ItemSpec]Specification:=[ItemSpec]Specification+"<Table width=510 border=2><TR><TD>"+aText2{7}+"</TD></TR>"
+// [ItemSpec]Specification:=[ItemSpec]Specification+"<TR><TD>"+aText2{12}+"</TD></TR> </Table>"
+// End if 
+// SAVE RECORD([ItemSpec])

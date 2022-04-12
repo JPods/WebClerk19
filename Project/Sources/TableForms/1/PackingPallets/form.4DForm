@@ -1,0 +1,649 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Button4": {
+					"type": "button",
+					"top": 54,
+					"left": 65,
+					"width": 51,
+					"height": 40,
+					"dataSource": "b4",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "DateRange",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 55,
+					"left": 217,
+					"width": 56,
+					"height": 14,
+					"dataSource": "iLoDate1",
+					"dataSourceTypeHint": "date",
+					"class": "cssInputSmall",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 77,
+					"left": 217,
+					"width": 56,
+					"height": 14,
+					"dataSource": "iLoDate2",
+					"dataSourceTypeHint": "date",
+					"class": "cssInputSmall",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 54,
+					"left": 344,
+					"width": 51,
+					"height": 40,
+					"dataSource": "b6",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "UnClose",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 54,
+					"left": 421,
+					"width": 51,
+					"height": 40,
+					"dataSource": "b2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "New",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button5": {
+					"type": "button",
+					"top": 54,
+					"left": 486,
+					"width": 51,
+					"height": 40,
+					"dataSource": "b5",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "Delete",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"top": 274,
+					"left": 360,
+					"width": 73,
+					"height": 25,
+					"dataSource": "iLoLongInt1",
+					"text": "Move Pallet",
+					"class": "cssInputSmall",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable27": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable27.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable39": {
+					"type": "button",
+					"top": 26,
+					"left": 0,
+					"width": 3,
+					"height": 8,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable39.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Text1269": {
+					"type": "text",
+					"top": 8,
+					"left": 52,
+					"width": 64,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "right",
+					"text": "Cust/Vend"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 30,
+					"left": 71,
+					"width": 45,
+					"height": 12,
+					"stroke": "#00BB00",
+					"class": "cssButtonSmall",
+					"textAlign": "right",
+					"text": "Order"
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 278,
+					"left": 18,
+					"width": 33,
+					"height": 14,
+					"dataSource": "iNumPallets",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 278,
+					"left": 182,
+					"width": 41,
+					"height": 14,
+					"dataSource": "iNumBoxes",
+					"class": "cssInputSmall",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 280,
+					"left": 55,
+					"width": 31,
+					"height": 12,
+					"class": "cssButtonSmall",
+					"text": "Pallets"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 280,
+					"left": 226,
+					"width": 29,
+					"height": 12,
+					"class": "cssButtonSmall",
+					"text": "Boxes "
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 278,
+					"left": 256,
+					"width": 60,
+					"height": 14,
+					"dataSource": "iBoxSO",
+					"dataSourceTypeHint": "number",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable10.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 281,
+					"left": 320,
+					"width": 29,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssButtonSmall",
+					"text": "Order "
+				},
+				"Text6": {
+					"type": "text",
+					"top": 280,
+					"left": 152,
+					"width": 29,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssButtonSmall",
+					"text": "Order "
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 280,
+					"left": 152,
+					"width": 26,
+					"height": 13,
+					"dataSource": "Invisible Button1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 279,
+					"left": 318,
+					"width": 31,
+					"height": 14,
+					"dataSource": "Invisible Button2",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 278,
+					"left": 88,
+					"width": 60,
+					"height": 14,
+					"dataSource": "iPalletSO",
+					"dataSourceTypeHint": "number",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 29,
+					"left": 121,
+					"width": 72,
+					"height": 14,
+					"dataSource": "srSO",
+					"dataSourceTypeHint": "number",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"top": 8,
+					"left": 426,
+					"width": 54,
+					"height": 13,
+					"dataSource": "b3",
+					"text": "Ignore",
+					"class": "cssInputSmall",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 29,
+					"left": 426,
+					"width": 57,
+					"height": 14,
+					"dataSource": "iLoReal1",
+					"class": "cssInputSmall",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 7,
+					"left": 121,
+					"width": 72,
+					"height": 14,
+					"dataSource": "iLoText1",
+					"class": "cssInputSmall",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 29,
+					"left": 234,
+					"width": 185,
+					"height": 14,
+					"dataSource": "iLoText2",
+					"class": "cssInputSmall",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 30,
+					"left": 489,
+					"width": 76,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"textAlign": "left",
+					"text": "Weight Pallet"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 30,
+					"left": 199,
+					"width": 33,
+					"height": 12,
+					"class": "cssButtonSmall",
+					"text": "ShipTo"
+				},
+				"Variable12": {
+					"type": "input",
+					"top": 7,
+					"left": 234,
+					"width": 185,
+					"height": 14,
+					"dataSource": "iLoText3",
+					"class": "cssInputSmall",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text8": {
+					"type": "text",
+					"top": 8,
+					"left": 199,
+					"width": 33,
+					"height": 12,
+					"class": "cssButtonSmall",
+					"text": "BillTo"
+				},
+				"Button3": {
+					"type": "button",
+					"top": 54,
+					"left": 279,
+					"width": 51,
+					"height": 40,
+					"dataSource": "b3",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "Close",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 54,
+					"left": 12,
+					"width": 51,
+					"height": 40,
+					"dataSource": "b1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "Open",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 273,
+					"left": 468,
+					"width": 69,
+					"height": 25,
+					"dataSource": "b33",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "Remove Pack",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Pop-up_Drop-down List1": {
+					"type": "dropdown",
+					"top": 56,
+					"left": 124,
+					"width": 86,
+					"height": 18,
+					"dataSource": "aTmp20Str4",
+					"class": "cssPopups",
+					"method": "ObjectMethods/Pop-up_Drop-down List1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable13": {
+					"type": "button",
+					"top": 29,
+					"left": 71,
+					"width": 46,
+					"height": 15,
+					"dataSource": "b41",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable14": {
+					"type": "button",
+					"top": 78,
+					"left": 135,
+					"width": 66,
+					"height": 14,
+					"dataSource": "b14",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Print",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Subform": {
+					"type": "subform",
+					"left": 271,
+					"top": 544,
+					"width": 937,
+					"height": 228,
+					"method": "ObjectMethods/Subform.4dm"
+				},
+				"Subform1": {
+					"type": "subform",
+					"left": 271,
+					"top": 305,
+					"width": 937,
+					"height": 228,
+					"method": "ObjectMethods/Subform1.4dm"
+				},
+				"Subform2": {
+					"type": "subform",
+					"left": 271,
+					"top": 99,
+					"width": 937,
+					"height": 168,
+					"method": "ObjectMethods/Subform2.4dm"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 10,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

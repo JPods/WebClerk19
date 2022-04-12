@@ -1,0 +1,26 @@
+//%attributes = {"publishedWeb":true}
+C_LONGINT:C283($1)  //1=srch, 2=modify, 3=locked
+C_TEXT:C284(lbOrdNum; lbMfgOrd; lbCustPo)
+Case of 
+	: ($1=1)  //searching
+		OBJECT SET FONT STYLE:C166(lbOrd; 1)
+		OBJECT SET FONT STYLE:C166(lbCustPo; 1)
+		OBJECT SET FONT STYLE:C166(lbMfgOrd; 1)
+		OBJECT SET ENTERABLE:C238(srOrd; True:C214)
+		OBJECT SET ENTERABLE:C238(srCustPo; True:C214)
+		OBJECT SET ENTERABLE:C238(srMfgOrd; True:C214)
+	: ($1=2)  //enterable
+		OBJECT SET FONT STYLE:C166(lbOrd; 2)
+		OBJECT SET FONT STYLE:C166(lbCustPo; 0)
+		OBJECT SET FONT STYLE:C166(lbMfgOrd; 0)
+		OBJECT SET ENTERABLE:C238(srOrd; False:C215)
+		OBJECT SET ENTERABLE:C238(srCustPo; True:C214)
+		OBJECT SET ENTERABLE:C238(srMfgOrd; True:C214)
+	: ($1=3)  //locked
+		OBJECT SET FONT STYLE:C166(lbOrd; 2)
+		OBJECT SET FONT STYLE:C166(lbCustPo; 2)
+		OBJECT SET FONT STYLE:C166(lbMfgOrd; 2)
+		OBJECT SET ENTERABLE:C238(srOrd; False:C215)
+		OBJECT SET ENTERABLE:C238(srCustPo; False:C215)
+		OBJECT SET ENTERABLE:C238(srMfgOrd; False:C215)
+End case 

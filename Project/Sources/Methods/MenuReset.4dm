@@ -1,0 +1,63 @@
+//%attributes = {"publishedWeb":true}
+If (False:C215)
+	//Method: MenuReset
+	//Date: 03/11/03
+	//Who: Bill
+	//Description: 
+End if 
+
+C_LONGINT:C283($1)
+If (vhere=0)
+	Wcc_ReduceSelection(1)
+End if 
+Case of 
+	: (False:C215)  //($1=1)
+		SET MENU BAR:C67(1)
+		SET MENU ITEM SHORTCUT:C423(1; 8; 80)
+		SET MENU ITEM SHORTCUT:C423(1; 9; Character code:C91("["))
+		SET MENU ITEM SHORTCUT:C423(1; 12; 76)
+		SET MENU ITEM SHORTCUT:C423(1; 13; Character code:C91("'"))
+		SET MENU ITEM SHORTCUT:C423(1; 27; 81)
+		//
+		SET MENU ITEM SHORTCUT:C423(2; 2; 78)
+		SET MENU ITEM SHORTCUT:C423(2; 3; 83)
+		SET MENU ITEM SHORTCUT:C423(2; 4; 68)
+		SET MENU ITEM SHORTCUT:C423(2; 5; 75)
+		SET MENU ITEM SHORTCUT:C423(2; 11; 70)
+		SET MENU ITEM SHORTCUT:C423(2; 12; 73)
+		SET MENU ITEM SHORTCUT:C423(2; 13; 69)
+		SET MENU ITEM SHORTCUT:C423(2; 14; 71)
+		SET MENU ITEM SHORTCUT:C423(2; 15; 72)
+		SET MENU ITEM SHORTCUT:C423(2; 20; 82)
+		SET MENU ITEM SHORTCUT:C423(2; 21; 49)
+		SET MENU ITEM SHORTCUT:C423(2; 22; 50)
+		SET MENU ITEM SHORTCUT:C423(2; 25; 51)
+		SET MENU ITEM SHORTCUT:C423(2; 26; 52)
+		SET MENU ITEM SHORTCUT:C423(2; 27; 53)
+		//
+		SET MENU ITEM SHORTCUT:C423(3; 2; Character code:C91("8"))
+		SET MENU ITEM SHORTCUT:C423(3; 7; Character code:C91("7"))
+		SET MENU ITEM SHORTCUT:C423(3; 8; Character code:C91("6"))
+		SET MENU ITEM SHORTCUT:C423(3; 9; Character code:C91("9"))
+		SET MENU ITEM SHORTCUT:C423(3; 20; Character code:C91("5"))
+		//
+		SET MENU ITEM SHORTCUT:C423(4; 1; 66)  //B
+		SET MENU ITEM SHORTCUT:C423(4; 9; 77)  //M
+		SET MENU ITEM SHORTCUT:C423(4; 10; Character code:C91(","))
+		SET MENU ITEM SHORTCUT:C423(4; 19; Character code:C91("\\"))
+		SET MENU ITEM SHORTCUT:C423(4; 23; Character code:C91("/"))
+		//
+		SET MENU ITEM SHORTCUT:C423(5; 1; Character code:C91("O"))
+		SET MENU ITEM SHORTCUT:C423(5; 7; Character code:C91("U"))
+		//
+		SET MENU ITEM SHORTCUT:C423(6; 1; Character code:C91("J"))
+		SET MENU ITEM SHORTCUT:C423(6; 9; Character code:C91("T"))
+		SET MENU ITEM SHORTCUT:C423(6; 15; Character code:C91("Y"))
+		SET WINDOW TITLE:C213("Sales Department - "+Storage:C1525.default.company)
+	: ($1=0)
+		Open window:C153(19; 165; 19; 165; 1)
+		DIALOG:C40([Control:1]; "OpenClose")
+		CLOSE WINDOW:C154
+	Else 
+		SET MENU BAR:C67($1)
+End case 

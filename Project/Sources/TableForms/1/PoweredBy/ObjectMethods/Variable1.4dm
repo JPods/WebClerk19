@@ -1,0 +1,3 @@
+If (Before:C29)
+	GET PICTURE RESOURCE:C502(22119; pagePict3)
+End if 

@@ -1,0 +1,1 @@
+vTextSummary:=WC_jitNum2Name(vTextSummary; "numbered")

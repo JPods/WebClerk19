@@ -1,0 +1,1 @@
+vlDTEnd:=DateTime_Enter(vdEndDate; vtEndTime)

@@ -1,0 +1,712 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerBody": 450,
+	"markerBreak": 450,
+	"markerFooter": 460,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vRecNum": {
+					"type": "input",
+					"top": 111,
+					"left": 571,
+					"width": 100,
+					"height": 12,
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Record Number"
+					},
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vRecNum.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"top": 108,
+					"left": 24,
+					"width": 532,
+					"height": 12,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"text": "CallReports"
+				},
+				"Line16": {
+					"type": "line",
+					"top": 92,
+					"left": 19,
+					"width": 661,
+					"sizingX": "grow"
+				},
+				"bFirst": {
+					"type": "button",
+					"top": 16,
+					"left": 21,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bFirst",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/First Record"
+					},
+					"action": "firstRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "First",
+					"icon": "/RESOURCES/Images/library/GLASS - First Record.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 16,
+					"left": 84,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bPrevious",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Previous Record"
+					},
+					"action": "previousRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Previous",
+					"icon": "/RESOURCES/Images/library/GLASS - Previous Record.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 16,
+					"left": 147,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bNext",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Next Record"
+					},
+					"action": "nextRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Next",
+					"icon": "/RESOURCES/Images/library/GLASS - Next Record.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "button",
+					"top": 16,
+					"left": 210,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bLast",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Last Record"
+					},
+					"action": "lastRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Last",
+					"icon": "/RESOURCES/Images/library/GLASS - Last Record.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bFirstPage": {
+					"type": "button",
+					"top": 16,
+					"left": 273,
+					"width": 53,
+					"height": 63,
+					"dataSource": "bFirstPage",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/First Page"
+					},
+					"action": "firstPage",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "First page",
+					"icon": "/RESOURCES/Images/library/GLASS - First Page.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLastPage": {
+					"type": "button",
+					"top": 16,
+					"left": 341,
+					"width": 52,
+					"height": 63,
+					"dataSource": "bLastPage",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Last Page"
+					},
+					"action": "lastPage",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Last page",
+					"icon": "/RESOURCES/Images/library/GLASS - Last Page.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDelete": {
+					"type": "button",
+					"top": 16,
+					"left": 408,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bDelete",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Delete Record"
+					},
+					"action": "deleteRecord",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Delete",
+					"icon": "/RESOURCES/Images/library/GLASS - Delete Record.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 16,
+					"left": 471,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bCancel",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Cancel"
+					},
+					"action": "cancel",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Cancel",
+					"icon": "/RESOURCES/Images/library/GLASS - Cancel.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 16,
+					"left": 534,
+					"width": 48,
+					"height": 63,
+					"dataSource": "bValidate",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"action": "accept",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Validate",
+					"icon": "/RESOURCES/Images/library/GLASS - OK.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 141,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Who : "
+				},
+				"Text18": {
+					"type": "text",
+					"top": 163,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Subject : "
+				},
+				"Text19": {
+					"type": "text",
+					"top": 185,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Status : "
+				},
+				"Text20": {
+					"type": "text",
+					"top": 207,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Phone : "
+				},
+				"Text21": {
+					"type": "text",
+					"top": 229,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "MessageID : "
+				},
+				"Text22": {
+					"type": "text",
+					"top": 251,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "Action : "
+				},
+				"Text23": {
+					"type": "text",
+					"top": 273,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "EmailMessage : "
+				},
+				"Text24": {
+					"type": "text",
+					"top": 296,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "From : "
+				},
+				"Text25": {
+					"type": "text",
+					"top": 318,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "PathToAttachments : "
+				},
+				"Text26": {
+					"type": "text",
+					"top": 340,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "DateCreate : "
+				},
+				"Text27": {
+					"type": "text",
+					"top": 362,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "DocReference : "
+				},
+				"Text28": {
+					"type": "text",
+					"top": 404,
+					"left": 235,
+					"width": 103,
+					"height": 12,
+					"class": "cssInputSmall",
+					"textAlign": "right",
+					"text": "MessageText : "
+				},
+				"Who": {
+					"type": "input",
+					"top": 141,
+					"left": 343,
+					"width": 280,
+					"height": 17,
+					"dataSource": "[CallReport:34]Attention:18",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Subject": {
+					"type": "input",
+					"top": 163,
+					"left": 343,
+					"width": 313,
+					"height": 17,
+					"dataSource": "[CallReport:34]Subject:14",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Status": {
+					"type": "input",
+					"top": 185,
+					"left": 343,
+					"width": 280,
+					"height": 17,
+					"dataSource": "[CallReport:34]Status:34",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Phone": {
+					"type": "input",
+					"top": 207,
+					"left": 343,
+					"width": 140,
+					"height": 17,
+					"dataSource": "[CallReport:34]Phone:36",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"MessageID": {
+					"type": "input",
+					"top": 229,
+					"left": 343,
+					"width": 313,
+					"height": 17,
+					"dataSource": "[CallReport:34]MessageID:53",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Action": {
+					"type": "input",
+					"top": 251,
+					"left": 343,
+					"width": 280,
+					"height": 17,
+					"dataSource": "[CallReport:34]Action:15",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"EmailMessage": {
+					"type": "checkbox",
+					"top": 273,
+					"left": 343,
+					"width": 56,
+					"height": 17,
+					"dataSource": "[CallReport:34]EmailMessage:10",
+					"text": "Yes",
+					"stroke": "#000000",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"From": {
+					"type": "input",
+					"top": 296,
+					"left": 343,
+					"width": 313,
+					"height": 17,
+					"dataSource": "[CallReport:34]From:49",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"PathToAttachments": {
+					"type": "input",
+					"top": 318,
+					"left": 343,
+					"width": 313,
+					"height": 17,
+					"dataSource": "[CallReport:34]PathToAttachments:52",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"DateCreate": {
+					"type": "input",
+					"top": 340,
+					"left": 343,
+					"width": 70,
+					"height": 17,
+					"dataSource": "[CallReport:34]DateCreate:17",
+					"dataSourceTypeHint": "date",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"DocReference": {
+					"type": "input",
+					"top": 362,
+					"left": 343,
+					"width": 234,
+					"height": 39,
+					"dataSource": "[CallReport:34]KeyText:20",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"MessageText": {
+					"type": "input",
+					"top": 406,
+					"left": 343,
+					"width": 234,
+					"height": 39,
+					"dataSource": "[CallReport:34]MessageText:51",
+					"class": "cssInputSmall",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"waEmail": {
+					"type": "webArea",
+					"top": 148,
+					"left": 53,
+					"width": 193,
+					"height": 289,
+					"dataSource": "waEmail",
+					"urlSource": "Web Area_url",
+					"progressSource": "Web Area_progress",
+					"contextMenu": "none",
+					"borderStyle": "none"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"vRecNum",
+					"Text15",
+					"Line16"
+				]
+			},
+			"View 3": {
+				"objects": [
+					"bFirst",
+					"bPrevious",
+					"bNext",
+					"bLast",
+					"bFirstPage",
+					"bLastPage",
+					"bDelete",
+					"bCancel",
+					"bValidate"
+				]
+			},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

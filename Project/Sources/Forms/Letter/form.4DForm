@@ -1,0 +1,268 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "612pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable4": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 2,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bConvert": {
+					"type": "checkbox",
+					"top": 29,
+					"left": 303,
+					"width": 115,
+					"height": 13,
+					"dataSource": "bConvert",
+					"text": "Show Values",
+					"class": "cssButtonSmall",
+					"stroke": "#000000",
+					"method": "ObjectMethods/bConvert.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable24": {
+					"type": "button",
+					"top": 24,
+					"left": 696,
+					"width": 80,
+					"height": 22,
+					"dataSource": "bSave",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "System Font",
+					"fontSize": 10,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Save",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable12": {
+					"type": "button",
+					"top": 24,
+					"left": 574,
+					"width": 80,
+					"height": 22,
+					"dataSource": "bNew",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "System Font",
+					"fontSize": 10,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "New",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable9": {
+					"type": "dropdown",
+					"top": 26,
+					"left": 401,
+					"width": 123,
+					"height": 18,
+					"dataSource": "SRVarNames",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable11": {
+					"type": "button",
+					"top": 31,
+					"left": 0,
+					"width": 2,
+					"height": 9,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"WebTech": {
+					"type": "webArea",
+					"top": 68,
+					"left": 303,
+					"width": 784,
+					"height": 565,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WebTech",
+					"urlSource": "Web Area_url",
+					"progressSource": "Web Area_progress",
+					"contextMenu": "none",
+					"borderStyle": "none",
+					"method": "ObjectMethods/WebTech.4dm",
+					"events": [
+						"onLoad",
+						"onEndURLLoading"
+					]
+				},
+				"LBLetter": {
+					"type": "listbox",
+					"left": 19,
+					"top": 68,
+					"width": 273,
+					"height": 565,
+					"events": [
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.cLetter",
+					"listboxType": "collection",
+					"class": "cssInput",
+					"currentItemSource": "Form:C1466.cLetterCurrent",
+					"currentItemPositionSource": "Form:C1466.cLetterPosition",
+					"selectedItemsSource": "Form:C1466.cLetterSelected",
+					"method": "ObjectMethods/LBLetter.4dm",
+					"alternateFill": "#fffacd",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header_Letter_name"
+							},
+							"name": "Column_Letter_name",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.name",
+							"enterable": true,
+							"events": [
+								"onDataChange"
+							]
+						},
+						{
+							"header": {
+								"name": "Header_Letter_topic",
+								"text": "Topic"
+							},
+							"name": "Column_Letter_topic",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.topic",
+							"enterable": true,
+							"events": [
+								"onDataChange"
+							]
+						}
+					]
+				},
+				"bDelete": {
+					"type": "button",
+					"top": 24,
+					"left": 977,
+					"width": 80,
+					"height": 22,
+					"dataSource": "bDelete",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "System Font",
+					"fontSize": 10,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Delete",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bDelete.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				}
+			},
+			"entryOrder": [
+				"bConvert",
+				"Variable24",
+				"Variable12",
+				"Variable9",
+				"Variable11",
+				"WebTech",
+				"LBLetter",
+				"bDelete"
+			]
+		}
+	],
+	"geometryStamp": 76,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

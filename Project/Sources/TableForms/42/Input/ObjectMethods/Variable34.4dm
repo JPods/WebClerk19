@@ -1,0 +1,1 @@
+diaItemSpec(->aPItemNum{aPLineAction}; ->aPDescpt{aPLineAction})

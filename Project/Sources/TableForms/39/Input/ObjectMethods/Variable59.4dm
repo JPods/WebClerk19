@@ -1,0 +1,1 @@
+entryEntity.buyer:=DE_PopUpArray(Self:C308)

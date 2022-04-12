@@ -1,0 +1,10 @@
+//%attributes = {"publishedWeb":true}
+C_LONGINT:C283($1)
+ARRAY TEXT:C222(aGLDiv; $1)
+ARRAY TEXT:C222(aGLAcct; $1)
+ARRAY TEXT:C222(aGLSource; $1)
+ARRAY TEXT:C222(aGLNote; $1)
+ARRAY DATE:C224(aGLDate; $1)
+ARRAY REAL:C219(aGLDebit; $1)
+ARRAY REAL:C219(aGLCredit; $1)
+ARRAY LONGINT:C221(aGLPosted; $1)

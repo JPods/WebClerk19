@@ -1,0 +1,16 @@
+//%attributes = {"publishedWeb":true}
+//Procedure: TC_InsrtTimeAry
+C_LONGINT:C283($0)
+$0:=Size of array:C274(aTCTimeRecs)+1
+INSERT IN ARRAY:C227(aTCNameID; $0)
+INSERT IN ARRAY:C227(aTCSignedIN; $0)
+INSERT IN ARRAY:C227(aTCTimeIn; $0)
+INSERT IN ARRAY:C227(aTCTimeOut; $0)
+INSERT IN ARRAY:C227(aTCDateIn; $0)
+INSERT IN ARRAY:C227(aTCDateOut; $0)
+INSERT IN ARRAY:C227(aTCLapsed; $0)
+INSERT IN ARRAY:C227(aTCHourWage; $0)
+INSERT IN ARRAY:C227(aTCExtWage; $0)
+INSERT IN ARRAY:C227(aTCActivity; $0)
+INSERT IN ARRAY:C227(aTCOrdNum; $0)
+INSERT IN ARRAY:C227(aTCTimeRecs; $0)

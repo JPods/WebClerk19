@@ -1,0 +1,1 @@
+oLo20Str1:=String:C10(jDateTimeRDate([WebTempRec:101]DTCreated:16); 1)

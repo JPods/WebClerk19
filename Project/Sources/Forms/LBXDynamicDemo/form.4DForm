@@ -1,0 +1,228 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"PDDLDISP": {
+					"type": "dropdown",
+					"top": 8,
+					"left": 10,
+					"width": 223,
+					"height": 22,
+					"dataSource": "PDDLDISP",
+					"focusable": false,
+					"class": "dropDownTextSize",
+					"method": "ObjectMethods/PDDLDISP.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Subform": {
+					"type": "subform",
+					"top": 8,
+					"left": 443,
+					"width": 1000,
+					"height": 858,
+					"sizingY": "grow",
+					"dataSource": "Subform",
+					"dataSourceTypeHint": "undefined",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "system"
+				},
+				"jsonText": {
+					"type": "input",
+					"top": 304,
+					"left": 10,
+					"width": 418,
+					"height": 241,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "jsonText",
+					"class": "jsonTextSize",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 271,
+					"left": 10,
+					"width": 192,
+					"height": 22,
+					"text": "Update Listbox definition",
+					"class": "dropDownTextSize",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"demoText": {
+					"type": "input",
+					"top": 50,
+					"left": 10,
+					"width": 424,
+					"height": 209,
+					"sizingY": "grow",
+					"dataSource": "demoText",
+					"class": "demoTextSize",
+					"fill": "#FFFFFF",
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LB_Fields": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.LB_Fields.ents",
+					"top": 559,
+					"left": 250,
+					"width": 178,
+					"height": 298,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"headerHeight": "1em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"currentItemSource": "Form:C1466.LB_Fields.cur",
+					"currentItemPositionSource": "Form:C1466.LB_Fields.pos",
+					"selectedItemsSource": "Form:C1466.LB_Fields.sel",
+					"class": "cssInput16",
+					"events": [
+						"onDragOver",
+						"onBeginDragOver"
+					],
+					"selectionMode": "multiple",
+					"showHeaders": true,
+					"borderStyle": "double",
+					"method": "ObjectMethods/LB_Fields.4dm",
+					"columns": []
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Open",
+					"top": 271,
+					"left": 231,
+					"width": 144,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Form.LB_Table": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.LB_Tables.ents",
+					"top": 559,
+					"left": 10,
+					"width": 229,
+					"height": 298,
+					"visibility": "visible",
+					"sizingX": "move",
+					"sizingY": "fixed",
+					"headerHeight": "1em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"currentItemSource": "Form:C1466.LB_Table.cur",
+					"currentItemPositionSource": "Form:C1466.LB_Table.pos",
+					"selectedItemsSource": "Form:C1466.LB_Table.sel",
+					"class": "cssInput16",
+					"events": [
+						"onLoad",
+						"onClick"
+					],
+					"selectionMode": "single",
+					"showHeaders": true,
+					"method": "ObjectMethods/Form.LB_Table.4dm",
+					"borderStyle": "double",
+					"columns": [
+						{
+							"header": {
+								"name": "Header1",
+								"text": "Table Name"
+							},
+							"name": "Column_tableName",
+							"footer": {
+								"name": "Footer9"
+							},
+							"width": 160,
+							"dataSource": "This:C1470.tableName",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Num"
+							},
+							"name": "Column_tableNum",
+							"footer": {
+								"name": "Footer10"
+							},
+							"width": 55,
+							"maxWidth": 100,
+							"dataSource": "This:C1470.tableNum",
+							"enterable": false
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 56,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

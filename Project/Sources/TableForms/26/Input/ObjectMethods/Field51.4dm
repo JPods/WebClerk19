@@ -1,0 +1,1 @@
+Exch_dRate(->[Invoice:26]currency:62; ->[Invoice:26]exchangeRate:61)

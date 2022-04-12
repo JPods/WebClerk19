@@ -1,0 +1,264 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onSelectionChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Combo Box1": {
+					"type": "combo",
+					"left": 137,
+					"top": 93,
+					"width": 1,
+					"height": 1,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Form.btnFolderToRecs": {
+					"type": "button",
+					"top": 7,
+					"left": 305,
+					"width": 129,
+					"height": 20,
+					"dataSource": "",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "Folder to Recs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Form.btnFolderToRecs.4dm",
+					"events": [
+						"onClick"
+					],
+					"display": true
+				},
+				"imageDoc_p": {
+					"type": "input",
+					"top": 33,
+					"left": 608,
+					"width": 387,
+					"height": 475,
+					"dataSource": "imageDoc_p",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 13,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalTopLeft",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Combo Box2": {
+					"type": "combo",
+					"left": 200,
+					"top": 108,
+					"width": 1,
+					"height": 1,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LB_Document": {
+					"type": "listbox",
+					"left": 9,
+					"top": 33,
+					"width": 591,
+					"height": 540,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDrop"
+					],
+					"listboxType": "collection",
+					"selectionMode": "multiple",
+					"dropping": "custom",
+					"dataSource": "LB_Document.ents",
+					"singleClickEdit": false,
+					"method": "ObjectMethods/LB_Document.4dm",
+					"currentItemSource": "LB_Document_.cur",
+					"currentItemPositionSource": "LB_Document_.pos",
+					"selectedItemsSource": "LB_Document_.sel",
+					"stroke": "automatic",
+					"headerHeight": "17px",
+					"metaSource": "_LB_Document_.meta",
+					"alternateFill": "#FFFADC",
+					"columns": [
+						{
+							"header": {
+								"text": "Path",
+								"name": "Header2"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.path"
+						},
+						{
+							"header": {
+								"name": "Header7",
+								"text": "Description"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer7"
+							},
+							"width": 325,
+							"dataSource": "This:C1470.description"
+						},
+						{
+							"header": {
+								"name": "Header8",
+								"text": "Date"
+							},
+							"name": "Column7",
+							"footer": {
+								"name": "Footer8"
+							},
+							"width": 63,
+							"dataSource": "This:C1470.date",
+							"dataSourceTypeHint": "date"
+						},
+						{
+							"header": {
+								"name": "Header9",
+								"text": "Size"
+							},
+							"name": "Column8",
+							"footer": {
+								"name": "Footer9"
+							},
+							"width": 68,
+							"dataSource": "This:C1470.size",
+							"dataSourceTypeHint": "number"
+						}
+					]
+				},
+				"Form.btnLaunchFolder": {
+					"type": "button",
+					"top": 7,
+					"left": 208,
+					"width": 86,
+					"height": 20,
+					"dataSource": "",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "LaunchFolder",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Form.btnLaunchFolder.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Form.btnLaunchDocs": {
+					"type": "button",
+					"top": 7,
+					"left": 110,
+					"width": 86,
+					"height": 20,
+					"dataSource": "",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "LaunchDocs",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Form.btnLaunchDocs.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Document_t": {
+					"type": "text",
+					"top": 11,
+					"left": 9,
+					"width": 94,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Document"
+				},
+				"Form.btnShowRecs1": {
+					"type": "button",
+					"top": 10,
+					"left": 9,
+					"width": 81,
+					"height": 14,
+					"dataSource": "",
+					"text": "Documents",
+					"display": false,
+					"method": "ObjectMethods/Form.btnShowRecs1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"pathDoc_t": {
+					"type": "input",
+					"top": 521,
+					"left": 608,
+					"width": 387,
+					"height": 52,
+					"dataSource": "pathDoc_t",
+					"dataSourceTypeHint": "text",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 13,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 90,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

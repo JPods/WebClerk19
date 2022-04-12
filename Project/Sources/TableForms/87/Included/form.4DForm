@@ -1,0 +1,423 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 19,
+	"markerBody": 39,
+	"markerBreak": 39,
+	"markerFooter": 39,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1600,
+					"height": 19,
+					"fill": "#CADAF5",
+					"stroke": "transparent"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 1600,
+					"height": 20,
+					"stroke": "#FFFFFF"
+				}
+			}
+		},
+		{
+			"objects": {
+				"DocID1": {
+					"type": "input",
+					"top": 21,
+					"left": 3,
+					"width": 67,
+					"height": 14,
+					"dataSource": "[LoadItem:87]orderNum:2",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Field85": {
+					"type": "input",
+					"top": 21,
+					"left": 76,
+					"width": 67,
+					"height": 14,
+					"dataSource": "[LoadItem:87]invoiceNum:14",
+					"dataSourceTypeHint": "integer",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"ItemNum": {
+					"type": "input",
+					"top": 21,
+					"left": 148,
+					"width": 145,
+					"height": 14,
+					"dataSource": "[LoadItem:87]ItemNum:3",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"ItemDescription": {
+					"type": "input",
+					"top": 21,
+					"left": 299,
+					"width": 273,
+					"height": 14,
+					"dataSource": "[LoadItem:87]ItemDescription:4",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"UnitWeight": {
+					"type": "input",
+					"top": 21,
+					"left": 577,
+					"width": 76,
+					"height": 14,
+					"dataSource": "[LoadItem:87]WeightExtended:11",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"TableNum": {
+					"type": "input",
+					"top": 21,
+					"left": 664,
+					"width": 58,
+					"height": 14,
+					"dataSource": "[LoadItem:87]Quantity:7",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Quantity": {
+					"type": "input",
+					"top": 21,
+					"left": 729,
+					"width": 76,
+					"height": 14,
+					"dataSource": "[LoadItem:87]Value:15",
+					"dataSourceTypeHint": "number",
+					"class": "\cssInput16",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Line5": {
+					"type": "line",
+					"top": 0,
+					"left": 727,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 4,
+					"left": 666,
+					"width": 58,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Quantity"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 4,
+					"left": 4,
+					"width": 67,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "OrderNum"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 4,
+					"left": 151,
+					"width": 145,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "ItemNum"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 4,
+					"left": 302,
+					"width": 273,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "ItemDescription"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 4,
+					"left": 731,
+					"width": 76,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Value"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 4,
+					"left": 582,
+					"width": 76,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "WtExt"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 4,
+					"left": 78,
+					"width": 67,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "InvoiceNum"
+				},
+				"Line9": {
+					"type": "line",
+					"top": 0,
+					"left": 74,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line6": {
+					"type": "line",
+					"top": 0,
+					"left": 146,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 0,
+					"left": 296,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 0,
+					"left": 662,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Line8": {
+					"type": "line",
+					"top": 0,
+					"left": 575,
+					"height": 39,
+					"stroke": "#C0C0C0"
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 4,
+					"left": 2,
+					"width": 68,
+					"height": 13,
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button2": {
+					"type": "button",
+					"top": 4,
+					"left": 76,
+					"width": 68,
+					"height": 13,
+					"dataSource": "oLoSort2",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button3": {
+					"type": "button",
+					"top": 4,
+					"left": 148,
+					"width": 68,
+					"height": 13,
+					"dataSource": "oLoSort3",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button4": {
+					"type": "button",
+					"top": 4,
+					"left": 299,
+					"width": 98,
+					"height": 13,
+					"dataSource": "oLoSort4",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button5": {
+					"type": "button",
+					"top": 4,
+					"left": 579,
+					"width": 77,
+					"height": 13,
+					"dataSource": "oLoSort5",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button6": {
+					"type": "button",
+					"top": 4,
+					"left": 664,
+					"width": 59,
+					"height": 13,
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button7": {
+					"type": "button",
+					"top": 4,
+					"left": 729,
+					"width": 52,
+					"height": 13,
+					"dataSource": "oLoSort1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

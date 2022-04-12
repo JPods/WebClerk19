@@ -1,0 +1,334 @@
+﻿{
+	"destination": "detailScreen",
+	"width": 640,
+	"height": 480,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable2": {
+					"type": "pictureButton",
+					"top": 2,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancelB",
+					"shortcutKey": "\u001B",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "button",
+					"top": 26,
+					"left": 0,
+					"width": 2,
+					"height": 8,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Plugin Area2": {
+					"type": "plugin",
+					"top": 14,
+					"left": 122,
+					"width": 510,
+					"height": 462,
+					"dataSource": "eCashLedger",
+					"pluginAreaKind": "%CUTAreaListPro",
+					"borderStyle": "sunken",
+					"method": "ObjectMethods/Plugin Area2.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onPluginArea",
+						"onDataChange"
+					],
+					"customProperties": "QUxQIAAEAAUAAAACFQAAAAYAAAAoAAAAAAAAAAAAAGcPAAAABgAAAAAAZwBnAGcAZwBnAGcPAAAABgAAAAAAAQACAAkAAwAEAAEPAAAABgAAAAAAAAAAAAAAAAAAAAAPAAAABgAAAAAAAAAAAAAAAAAAAAAVAAAABgAAACIAAAAAAAAADwAAAAYAAAAAAAAAAAAAAAAAAAAAFQAAAAYAAABSAAAAAAAAAA8AAAAGAAAAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAAAAAAAAAAAAABUAAAAGAAAAPgAFQXJpYWwFQXJpYWwFQXJpYWwFQXJpYWwFQXJpYWwFQXJpYWwPAAAABgAAAAAACQAJAAkACQAJAAkPAAAABgAAAAAAAAAAAAAAAAAAAAAVAAAABgAAAFIAB0RlZmF1bHQGRG9tYWluBFBvcnQIVXNlcm5hbWUIUGFzc3dvcmQDVUlEFQAAAAYAAAA+AAVBcmlhbAVBcmlhbAVBcmlhbAVBcmlhbAVBcmlhbAVBcmlhbA8AAAAGAAAAAAAJAAkACQAJAAkACQ8AAAAGAAAAAAABAAEAAQABAAEAARUAAAAGAAAAGAAFQmxhY2sFQmxhY2sFQmxhY2sFQmxhY2sFQmxhY2sFQmxhY2sVAAAABgAAABgABEJsdWUFQmxhY2sFQmxhY2sFQmxhY2sFQmxhY2sFQmxhY2sVAAAABgAAABgABUJsYWNrBUJsYWNrBUJsYWNrBUJsYWNrBUJsYWNrBUJsYWNrFQAAAAYAAAAYAAVXaGl0ZQVXaGl0ZQVXaGl0ZQVXaGl0ZQVXaGl0ZQVXaGl0ZRUAAAAGAAAAGAAER3JheQVXaGl0ZQVXaGl0ZQVXaGl0ZQVXaGl0ZQVXaGl0ZRUAAAAGAAAAGAAFV2hpdGUFV2hpdGUFV2hpdGUFV2hpdGUFV2hpdGUFV2hpdGUVAAAABgAAAFIAAAAAAAAAFQAAAAYAAAA+AAVBcmlhbAVBcmlhbAVBcmlhbAVBcmlhbAVBcmlhbAVBcmlhbA8AAAAGAAAAAAAJAAkACQAJAAkACQ8AAAAGAAAAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAABAAEAAQABAAEAARUAAAAGAAAAIgAAAAAAAAAVAAAABgAAAFIAAAAAAAAADwAAAAYAAAAAAAAAAAAAAAAAAAAADwAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAMBXAAAAAAAAAABAAAAAAAAAAkAAAANAAAAAAAAAAD////+AAAAAAdObyBsaW5lBUJsYWNrB05vIGxpbmUFQmxhY2sAAAAAAAAAAQAAAAEbU2VsZWN0IHRoZSBjb2x1bW5zIHRvIHNvcnQ6AAAAAAAAAAEAAAABAAAAAgAAAAEAAAAAAAAAAQAAAAIAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAS4AAAABAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAABVdoaXRlBVdoaXRlBVdoaXRlBVdoaXRl"
+				},
+				"Field75": {
+					"type": "input",
+					"top": 236,
+					"left": 14,
+					"width": 86,
+					"height": 17,
+					"dataSource": "[Customer:2]company:2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field78": {
+					"type": "input",
+					"top": 256,
+					"left": 14,
+					"width": 86,
+					"height": 17,
+					"dataSource": "[Customer:2]address1:4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field80": {
+					"type": "input",
+					"top": 276,
+					"left": 14,
+					"width": 86,
+					"height": 17,
+					"dataSource": "[Customer:2]city:6",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field81": {
+					"type": "input",
+					"top": 296,
+					"left": 14,
+					"width": 86,
+					"height": 17,
+					"dataSource": "[Customer:2]state:7",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field82": {
+					"type": "input",
+					"top": 313,
+					"left": 14,
+					"width": 86,
+					"height": 17,
+					"dataSource": "[Customer:2]zip:8",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field83": {
+					"type": "input",
+					"top": 313,
+					"left": 14,
+					"width": 86,
+					"height": 17,
+					"dataSource": "[Customer:2]phone:13",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable126": {
+					"type": "input",
+					"top": 76,
+					"left": 14,
+					"width": 93,
+					"height": 17,
+					"dataSource": "srCustomer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable126.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable110": {
+					"type": "input",
+					"top": 111,
+					"left": 14,
+					"width": 97,
+					"height": 17,
+					"dataSource": "srIv",
+					"dataSourceTypeHint": "number",
+					"stroke": "#0000FF",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable110.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable117": {
+					"type": "input",
+					"top": 152,
+					"left": 14,
+					"width": 97,
+					"height": 17,
+					"dataSource": "srSO",
+					"dataSourceTypeHint": "number",
+					"stroke": "#0000FF",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"fontWeight": "bold",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable117.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 137,
+					"left": 14,
+					"width": 73,
+					"height": 12,
+					"class": "cssInputSmall",
+					"text": "Payment"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 96,
+					"left": 14,
+					"width": 73,
+					"height": 12,
+					"class": "cssInputSmall",
+					"text": "Invoice"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 59,
+					"left": 14,
+					"width": 73,
+					"height": 12,
+					"class": "cssInputSmall",
+					"text": "customerID"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

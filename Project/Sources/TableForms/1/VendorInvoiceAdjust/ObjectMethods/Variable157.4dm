@@ -1,0 +1,1 @@
+iLoReal10:=vrVendorInvoiceAmount-iLoReal9

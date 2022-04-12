@@ -1,0 +1,14 @@
+//%attributes = {"publishedWeb":true}
+[ItemXRef:22]itemNumMaster:1:=vPartNum
+[ItemXRef:22]descriptionMaster:8:=vPartDesc
+[ItemXRef:22]itemNumXRef:2:=v2
+[ItemXRef:22]descriptionXRef:3:=v1
+[ItemXRef:22]sourceid:4:=v5
+[ItemXRef:22]sourceName:5:=v4
+[ItemXRef:22]leadTime:6:=vi1
+[ItemXRef:22]cost:7:=vR1
+[ItemXRef:22]typeid:9:=v7
+[ItemXRef:22]comment:10:=vText1
+[ItemXRef:22]siteid:11:=v6
+[ItemXRef:22]quantity:12:=vR2
+[ItemXRef:22]xRefLinked:17:=vR5

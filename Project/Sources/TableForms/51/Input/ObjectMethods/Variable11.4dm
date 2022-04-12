@@ -1,0 +1,1 @@
+// zzzqqq jDateTimeStamp(->[PurchaseJournal:51]Comment:7)

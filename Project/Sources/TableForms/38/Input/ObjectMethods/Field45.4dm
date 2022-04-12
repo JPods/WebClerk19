@@ -1,0 +1,1 @@
+// zzzqqq jCapitalize1st(->[QQQVendor:38]Company:2)

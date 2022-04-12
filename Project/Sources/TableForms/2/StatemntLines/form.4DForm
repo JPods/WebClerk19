@@ -1,0 +1,235 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerBody": 14,
+	"markerBreak": 14,
+	"markerFooter": 14,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange"
+	],
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Line1": {
+					"type": "line",
+					"top": 0,
+					"left": 119,
+					"height": 15
+				},
+				"Line2": {
+					"type": "line",
+					"top": 0,
+					"left": 186,
+					"height": 15
+				},
+				"Line3": {
+					"type": "line",
+					"top": 0,
+					"left": 253,
+					"height": 15
+				},
+				"Line4": {
+					"type": "line",
+					"top": 0,
+					"left": 380,
+					"height": 15
+				},
+				"Line5": {
+					"type": "line",
+					"top": 0,
+					"left": 463,
+					"height": 15
+				},
+				"Line6": {
+					"type": "line",
+					"top": 0,
+					"left": 317,
+					"height": 15
+				},
+				"Line7": {
+					"type": "line",
+					"top": 0,
+					"left": 6,
+					"height": 15
+				},
+				"Line8": {
+					"type": "line",
+					"top": 0,
+					"left": 546,
+					"height": 15
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 1,
+					"left": 8,
+					"width": 110,
+					"height": 14,
+					"dataSource": "prntCustPO",
+					"class": "cssInputLabel",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 1,
+					"left": 121,
+					"width": 64,
+					"height": 14,
+					"dataSource": "prntOrdNum",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 1,
+					"left": 188,
+					"width": 64,
+					"height": 14,
+					"dataSource": "prntInvNum",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 1,
+					"left": 256,
+					"width": 61,
+					"height": 14,
+					"dataSource": "prntDateIn",
+					"dataSourceTypeHint": "date",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable5": {
+					"type": "input",
+					"top": 1,
+					"left": 319,
+					"width": 60,
+					"height": 14,
+					"dataSource": "prntDateOut",
+					"dataSourceTypeHint": "date",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable6": {
+					"type": "input",
+					"top": 1,
+					"left": 382,
+					"width": 80,
+					"height": 14,
+					"dataSource": "prntAmt",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 1,
+					"left": 465,
+					"width": 80,
+					"height": 14,
+					"dataSource": "prntTotal",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"Line1",
+				"Line2",
+				"Line3",
+				"Line4",
+				"Line5",
+				"Line6"
+			]
+		}
+	}
+}

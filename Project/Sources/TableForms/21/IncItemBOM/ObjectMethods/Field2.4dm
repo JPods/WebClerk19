@@ -1,0 +1,1 @@
+[BOM:21]PlanExtCost:9:=[Item:4]costAverage:13*[BOM:21]QtyInAssembly:3

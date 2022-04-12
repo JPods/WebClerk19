@@ -1,0 +1,264 @@
+﻿{
+	"windowMinWidth": 635,
+	"windowMaxWidth": 2000,
+	"windowMinHeight": 445,
+	"windowMaxHeight": 2000,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onOutsideCall",
+		"onMenuSelect",
+		"onCloseBox",
+		"onTimer",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperWidth": "845pt",
+		"paperHeight": "653pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		{
+			"objects": {
+				"SplashBG": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1005,
+					"height": 695,
+					"fill": "#DDDDDD",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 213,
+					"left": 305,
+					"width": 358,
+					"height": 275
+				},
+				"Text3": {
+					"type": "text",
+					"top": 294,
+					"left": 322,
+					"width": 169,
+					"height": 12,
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 12,
+					"text": "Power and Excellence"
+				},
+				"Variable86": {
+					"type": "dropdown",
+					"top": 342,
+					"left": 513,
+					"width": 35,
+					"height": 14,
+					"dataSource": "<>aTableNames",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"method": "ObjectMethods/Variable86.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "dropdown",
+					"top": 473,
+					"left": 515,
+					"width": 148,
+					"height": 15,
+					"dataSource": "<>aTableNames",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "pictureButton",
+					"top": 260,
+					"left": 314,
+					"width": 346,
+					"height": 194,
+					"dataSource": "bSpiralArrow",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/SpiralArrowBox.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Text6": {
+					"type": "text",
+					"top": 426,
+					"left": 437,
+					"width": 169,
+					"height": 12,
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 12,
+					"text": "Power and Excellence"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 444,
+					"left": 354,
+					"width": 303,
+					"height": 33,
+					"fontFamily": "Arial",
+					"fontSize": 10,
+					"text": "People and resources rallied by leadership achieve objectives\nthrough relentless cycles of implement, test, plan, change...."
+				},
+				"Variable2": {
+					"type": "pictureButton",
+					"top": 220,
+					"left": 498,
+					"width": 36,
+					"height": 36,
+					"dataSource": "bGlobe",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/library/Globe.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 228,
+					"left": 322,
+					"width": 155,
+					"height": 21,
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "CommerceExpert"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 228,
+					"left": 551,
+					"width": 103,
+					"height": 21,
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "WebClerk"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 246,
+					"left": 325,
+					"width": 148,
+					"stroke": "#FFB107",
+					"strokeWidth": 2
+				},
+				"Line4": {
+					"type": "line",
+					"top": 246,
+					"left": 553,
+					"width": 80,
+					"stroke": "#FFB107",
+					"strokeWidth": 2
+				},
+				"btTableDropDown": {
+					"type": "button",
+					"top": 13,
+					"left": 812,
+					"width": 5,
+					"height": 15,
+					"dataSource": "btTableDropDown",
+					"shortcutKey": "t",
+					"display": false,
+					"method": "ObjectMethods/btTableDropDown.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable4": {
+					"type": "button",
+					"top": 248,
+					"left": 46,
+					"width": 61,
+					"height": 96,
+					"dataSource": "b2",
+					"shortcutKey": "v",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"display": false,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 189,
+					"left": 303,
+					"width": 93,
+					"height": 21,
+					"stroke": "#AAAAAA",
+					"fontFamily": "Arial Bold Italic",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"fontStyle": "italic",
+					"text": "Sales"
+				},
+				"Variable5": {
+					"type": "button",
+					"top": 223,
+					"left": 680,
+					"width": 137,
+					"height": 275,
+					"dataSource": "b4",
+					"shortcutKey": "v",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"display": false,
+					"method": "ObjectMethods/Variable5.4dm"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 12
+}

@@ -1,0 +1,12 @@
+//%attributes = {"publishedWeb":true}
+v1:=[ItemXRef:22]descriptionXRef:3
+v2:=[ItemXRef:22]itemNumXRef:2
+vText1:=[ItemXRef:22]comment:10
+v4:=[ItemXRef:22]sourceName:5
+v5:=[ItemXRef:22]sourceid:4
+v6:=[ItemXRef:22]siteid:11
+v7:=[ItemXRef:22]typeid:9
+vi1:=[ItemXRef:22]leadTime:6
+vR1:=[ItemXRef:22]cost:7
+vR2:=[ItemXRef:22]quantity:12
+vR3:=vR2-vR4

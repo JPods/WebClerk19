@@ -1,0 +1,5 @@
+QUERY:C277([LoadTag:88]; [LoadTag:88]idNumInvoice:19=[Invoice:26]idNum:2)
+ProcessTableOpen(Table:C252(->[LoadTag:88])*-1)
+//DELAY PROCESS(Current process;10)
+//QUERY([LoadTag];[LoadTag]InvoiceNum=[Invoice]InvoiceNum)
+////  CHOPPED  AL_UpdateFields (eLoadTagsInvoices;2)
