@@ -88,7 +88,7 @@ If ($obOrder#Null:C1517)
 	$obInvoice.consignment:=$obOrder.consignment
 	$obInvoice.producedBy:=$obOrder.actionBy
 	$obInvoice.autoFreight:=$obOrder.autoFreight
-	//ConsoleMessage ("TEST: createOrdInvRay "+String($i))
+	//Console_Log ("TEST: createOrdInvRay "+String($i))
 	
 	$obInvoice.obGeneral:=$obOrder.obGeneral
 	// ### bj ### 20190104_1416

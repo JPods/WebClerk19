@@ -69,7 +69,7 @@ If ($doBOM)
 			
 			QUERY:C277([BOM:21]; [BOM:21]itemNum:1=$partNum)
 			If (Records in selection:C76([BOM:21])>0)
-				$adjID:=DateTime_Enter
+				$adjID:=DateTime_DTTo
 				vsiteID:=[DInventory:36]siteID:20  //### jwm ### 20130404_1022 use existing siteID from dInventory record
 				vR1:=BOM_Consume(-1111; ->[Item:4]itemNum:1; $totalCnt; $adjID; $bAccountForQtyOnHand)
 				//Invt_dRecCreate ("BM";$adjID;0;"BOM";0;"Build by BOM";4;0;$partNum

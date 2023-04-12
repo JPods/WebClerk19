@@ -116,40 +116,40 @@ OB SET ARRAY:C1227($voObject; "ArrayObject"; $aoInput)
 
 If (OB_GetType($voObject; "TextVariableOne")#Is text:K8:3)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: TextVariableOne")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: TextVariableOne")
 End if 
 
 If (OB_GetType($voObject; "ArrayText")#Text array:K8:16)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: ArrayText")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: ArrayText")
 End if 
 
 If (OB_GetType($voObject; "ArrayPointers")#Pointer array:K8:23)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: ArrayPointers")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: ArrayPointers")
 End if 
 
 If (OB_GetType($voObject; "ArrayDate")#Date array:K8:20)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: ArrayDate")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: ArrayDate")
 End if 
 
 If (OB_GetType($voObject; "ArrayBoolean")#Boolean array:K8:21)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: ArrayBoolean")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: ArrayBoolean")
 End if 
 
 If (OB_GetType($voObject; "ArrayInt")#LongInt array:K8:19)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: ArrayInt")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: ArrayInt")
 End if 
 
 If (OB_GetType($voObject; "ArrayReal")#Real array:K8:17)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: ArrayReal")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: ArrayReal")
 End if 
 
 If (OB_GetType($voObject; "ArrayObject")#Object array:K8:28)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_GetType: Error when running method: OB_GetType: ArrayObject")
+	ConsoleLog("Tests_OB_GetType: Error when running method: OB_GetType: ArrayObject")
 End if 

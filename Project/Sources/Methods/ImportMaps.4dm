@@ -24,7 +24,7 @@ CREATE RECORD:C68([TallyResult:73])
 
 $resetbEDIPass:=allowAlerts_boo
 allowAlerts_boo:=False:C215
-$dtItemImport:=DateTime_Enter(Current date:C33; Current time:C178)
+$dtItemImport:=DateTime_DTTo(Current date:C33; Current time:C178)
 $myOK:=UTLoadDoc2Array(""; ->aText1)
 If (Size of array:C274(aText1)>0)
 	XMLArrayManagement(0)

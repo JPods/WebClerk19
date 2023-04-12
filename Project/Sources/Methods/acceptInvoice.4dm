@@ -62,7 +62,7 @@ If (booAccept)
 					//End if 
 				: (Not:C34([Invoice:26]jrnlComplete:48))
 					If (([Invoice:26]dtRevenue:64=0) & (([Invoice:26]consignment:63="") | ([Invoice:26]consignment:63="Completed")))
-						[Invoice:26]dtRevenue:64:=DateTime_Enter
+						[Invoice:26]dtRevenue:64:=DateTime_DTTo
 					End if 
 					If ([Invoice:26]dateDocument:35=!00-00-00!)
 						[Invoice:26]dateDocument:35:=Current date:C33
@@ -71,7 +71,7 @@ If (booAccept)
 					InvoiceLinesCalc
 					If ([Invoice:26]idNumOrder:1>9)  // Modified by: williamjames (110512) Changed from #1
 						
-						If (([Invoice:26]idNumOrder:1#[Order:3]idNum:2) & (ptCurTable#(->[Control:1])))
+						If (([Invoice:26]idNumOrder:1#[Order:3]idNum:2) & (ptCurTable#(->[Base:1])))
 							QUERY:C277([Order:3]; [Order:3]idNum:2=[Invoice:26]idNumOrder:1)
 						End if 
 						
@@ -108,7 +108,7 @@ If (booAccept)
 						[Order:3]salesTax:28:=Round:C94($vrSalesTax; <>tcDecimalTt)
 						[Order:3]repCommission:9:=Round:C94($vrRepCommission; <>tcDecimalTt)
 						[Order:3]salesCommission:11:=Round:C94($vrSalesCommission; <>tcDecimalTt)
-						If ([Order:3]autoFreight:40)
+						If ([Order:3]shipAuto:40)
 							ShippingCost(->[Order:3]shipVia:13; ->[Order:3]zone:14; ->[Order:3]weightEstimate:49; ->[Order:3]shipFreightCost:38; ->[Order:3]shipMiscCosts:25; ->[Order:3]shipAdjustments:26; ->[Order:3]terms:23; ->[Order:3]amount:24; ->[Order:3]labelCount:32)
 						End if 
 						If ([Order:3]amount:24>0)
@@ -167,7 +167,7 @@ If (booAccept)
 				LT_FillArrayLoadTags(-15)
 			End if 
 			//
-			[Invoice:26]autoFreight:32:=False:C215
+			[Invoice:26]shipAuto:32:=False:C215
 			SAVE RECORD:C53([Invoice:26])
 			vrOldValue:=[Invoice:26]amount:14
 			newInv:=False:C215

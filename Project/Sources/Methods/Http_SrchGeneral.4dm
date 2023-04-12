@@ -24,7 +24,7 @@ $jitPageList:=WCapi_GetParameter("jitPageList"; "")
 $recordNum:=WCapi_GetParameter("RecordNum"; "")
 vResponse:=$tableName+" authorized "
 C_TEXT:C284($thePage)
-$thePage:=<>WebFolder
+$thePage:=Storage:C1525.wc.webFolder
 C_LONGINT:C283($tableNum; $tableReturnNum)
 $tableNum:=STR_GetTableNumber($tableName)
 $skipRecordCount:=False:C215
@@ -164,7 +164,7 @@ If ($tableNum>0)
 				vURLQueryScript:=vURLQueryScript+"QUERY([CallReport];&[CallReport]Publish>="+String:C10(viEndUserSecurityLevel)+";*)"+"\r"
 				$testCnt:=1
 				If ($theDate#"")
-					$testCnt:=txtDateFrom($theDate; 1; $testCnt; ->[CallReport:34]dtAction:4)
+					$testCnt:=txtDateFrom($theDate; 1; $testCnt; ->[Call:34]dtAction:4)
 				End if 
 				If ($openAction="Open")
 					//QUERY([CallReport];&[CallReport]Completed=False;*)
@@ -198,7 +198,7 @@ If ($tableNum>0)
 				If ($theDate#"")
 					$testCnt:=txtDateFrom($theDate; 1; 1; ->[LoadTag:88]dtShipOn:10)
 				Else 
-					QUERY:C277([LoadTag:88];  & [LoadTag:88]dtShipOn:10>DateTime_Enter(Current date:C33-60))
+					QUERY:C277([LoadTag:88];  & [LoadTag:88]dtShipOn:10>DateTime_DTTo(Current date:C33-60))
 				End if 
 		End case 
 		Case of 

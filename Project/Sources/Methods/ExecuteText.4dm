@@ -40,7 +40,7 @@ Else
 End if 
 
 If (<>viDebugMode>410)
-	ConsoleMessage($frText)
+	ConsoleLog($frText)
 End if 
 
 If (OK=1)

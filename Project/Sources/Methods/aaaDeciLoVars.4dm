@@ -21,7 +21,6 @@ C_TEXT:C284(iLoText1; iLoText2; iLoText3; iLoText4; iLoText5; iLoText6; iLoText7
 C_TIME:C306(iLoTime1; iLoTime2; iLoTime3; iLoTime4; iLoTime5; iLoTime6; iLoTime7; iLoTime8; iLoTime9; iLoTime10; iLoTime11; iLoTime12; iLoTime13; iLoTime14; iLoTime15)
 C_TEXT:C284(iLoWebDateTime)
 
-C_TEXT:C284(<>iLoText1; <>iLoText2; <>iLoText3; <>iLoText4; <>iLoText5; <>iLoText6; <>iLoText7; <>iLoText8; <>iLoText9; <>iLoText10; <>iLoText11; <>iLoText12; <>iLoText13; <>iLoText14; <>iLoText15)
 
 C_LONGINT:C283(oLoSort1; oLoSort2; oLoSort3; oLoSort4; oLoSort5; oLoSort6; oLoSort7; oLoSort8; oLoSort9; oLoSort10; oLoSort11; oLoSort12; oLoSort13; oLoSort14; oLoSort15)
 

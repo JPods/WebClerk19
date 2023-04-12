@@ -33,10 +33,10 @@ If ($2)
 	[Time:56]activity:10:=vActivity
 	[Time:56]idNumOrder:3:=vWONum
 	If ([Time:56]dtSignIn:13=0)
-		[Time:56]dtSignIn:13:=DateTime_Enter
+		[Time:56]dtSignIn:13:=DateTime_DTTo
 	End if 
 	If ([Time:56]dtSignOut:14=0)
-		[Time:56]dtSignOut:14:=DateTime_Enter
+		[Time:56]dtSignOut:14:=DateTime_DTTo
 	End if 
 End if 
 aTCHourWage{$1}:=$3

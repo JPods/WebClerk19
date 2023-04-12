@@ -11,7 +11,7 @@ If (Count parameters:C259=1)
 	Process_InitLocal
 	var process_o; $1 : Object
 	process_o:=$1
-	//tableName:=process_o.tableName
+	//tableName:=process_o.dataClassName
 	tableName:="Control"
 	//ptCurTable:=STR_GetTablePointer(tableName)
 	ptCurTable:=(->[Control:1])
@@ -28,9 +28,7 @@ Else
 	C_LONGINT:C283($found)
 	$found:=Prs_CheckRunnin("Program Flow")
 	If ($found>0)
-		If (Frontmost process:C327#<>aPrsNum{$found})
-			BRING TO FRONT:C326(<>aPrsNum{$found})
-		End if 
+		BRING TO FRONT:C326($found)
 	Else 
 		var $table_o : Object
 		$tableName:="Control"

@@ -42,7 +42,7 @@ $viProcess:=Current process:C322
 //MENU BAR(splashMenu;$viProcess;*)
 //End if 
 
-SET WINDOW TITLE:C213(Storage:C1525.default.menuTitle)
+SET WINDOW TITLE:C213(Storage:C1525.default.MenuTitle)
 MESSAGES ON:C181
 srVarLoad(0)
 //List_RaySize (0)//May 22, 2000 ignor this

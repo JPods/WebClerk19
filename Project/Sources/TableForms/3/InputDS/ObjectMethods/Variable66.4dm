@@ -1,1 +1,1 @@
-entryEntity.upsBillingOption:=DE_PopUpArray(Self:C308)
+process_o.entry_o.upsBillingOption:=DE_PopUpArray(Self:C308)

@@ -49,7 +49,9 @@ If (WCR_IsResource($vtResourceName))
 	
 	// LOOP SPLIT THE FIELDNAMES AND ORDERS
 	
-	TextToArray($vtFieldNamesAndOrders; ->$atFieldNamesAndOrders; ";")
+	var $c : Collection
+	$c:=Split string:C1554($response; ";")
+	COLLECTION TO ARRAY:C1562($c; $atFieldNamesAndOrders)
 	
 	If (Mod:C98(Size of array:C274($atFieldNamesAndOrders); 2)=1)
 		APPEND TO ARRAY:C911($atFieldNamesAndOrders; "<")

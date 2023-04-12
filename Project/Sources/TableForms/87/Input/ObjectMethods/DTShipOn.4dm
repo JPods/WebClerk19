@@ -1,1 +1,0 @@
-jDateTimeRecov([LoadItem:87]DTShipOn:19; ->vDate1; ->vTime1)

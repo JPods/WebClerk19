@@ -17,8 +17,8 @@ If (OK=1)
 	FIRST RECORD:C50([WorkOrder:66])
 	For ($i; 1; $k)
 		[WorkOrder:66]dateEnd:108:=[WorkOrder:66]dateBegin:106+[WorkOrder:66]durationPlanned:10
-		[WorkOrder:66]dtBeginPlanned:107:=DateTime_Enter([WorkOrder:66]dateBegin:106; [WorkOrder:66]timeBegin:109)
-		[WorkOrder:66]dtEndPlanned:69:=DateTime_Enter([WorkOrder:66]dateEnd:108; [WorkOrder:66]timeEnd:110)
+		[WorkOrder:66]dtBeginPlanned:107:=DateTime_DTTo([WorkOrder:66]dateBegin:106; [WorkOrder:66]timeBegin:109)
+		[WorkOrder:66]dtEndPlanned:69:=DateTime_DTTo([WorkOrder:66]dateEnd:108; [WorkOrder:66]timeEnd:110)
 		SAVE RECORD:C53([WorkOrder:66])
 		NEXT RECORD:C51([WorkOrder:66])
 	End for 

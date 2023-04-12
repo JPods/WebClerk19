@@ -59,11 +59,11 @@ If (Position:C15("@"; vtEmailSender)>1)
 		$finalText:=""
 		
 		If (<>viDebugMode>410)
-			ConsoleMessage("Verify: "+vtEmailReceiver)
+			ConsoleLog("Verify: "+vtEmailReceiver)
 		End if 
 		$command:="nslookup -q=mx "+$receivereMailServer
 		If (<>viDebugMode>410)
-			ConsoleMessage($command)
+			ConsoleLog($command)
 		End if 
 		LAUNCH EXTERNAL PROCESS:C811($command; $input; $output; $errorText)
 		
@@ -78,8 +78,8 @@ If (Position:C15("@"; vtEmailSender)>1)
 		If (viMatch=0)
 			// ### jwm ### 20171207_1331 added missing error message for mail server not found
 			If (<>viDebugMode>410)
-				ConsoleMessage("Output: "+$output)
-				ConsoleMessage("ERROR: No Mail Server Found "+$receivereMailServer)
+				ConsoleLog("Output: "+$output)
+				ConsoleLog("ERROR: No Mail Server Found "+$receivereMailServer)
 			End if 
 			vtEmailMessageLog:=vtEmailMessageLog+"\r"+"ERROR: No Mail Server Found For "+$receivereMailServer+"\r"
 		Else 
@@ -237,7 +237,7 @@ If (Position:C15("@"; vtEmailSender)>1)
 			
 		End if 
 		
-		ConsoleMessage(vtEmailMessageLog)  // ### jwm ### 20171207_1340 moved outside of If statement above
+		ConsoleLog(vtEmailMessageLog)  // ### jwm ### 20171207_1340 moved outside of If statement above
 		
 		If (vbDoEventLog)
 			CREATE RECORD:C68([EventLog:75])

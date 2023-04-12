@@ -1,0 +1,994 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"_LB_Included_": {
+					"type": "listbox",
+					"left": 3,
+					"top": 60,
+					"width": 507,
+					"height": 347,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"alternateFill": "#FFFAE6",
+					"movableRows": false,
+					"listboxType": "collection",
+					"dataSource": "LB_Included.ents",
+					"currentItemSource": "LB_Included.cur",
+					"currentItemPositionSource": "LB_Included.pos",
+					"selectedItemsSource": "LB_Included.sel",
+					"metaSource": "LB_Included.meta",
+					"bottom": 407,
+					"columns": [
+						{
+							"header": {
+								"name": "Header_LB_Invoice_amountAvailable_",
+								"text": "Available"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionBy_"
+							},
+							"name": "Column_LB_Payment_amountAvailable_",
+							"className": "LB_Invoice",
+							"valueName": "actionBy",
+							"align": 1,
+							"format": "",
+							"width": 87,
+							"formula": "This.actionBy",
+							"dataSource": "This:C1470.amountAvailable",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number"
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_amount_",
+								"text": "Amount"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_action_"
+							},
+							"name": "Column_LB_Payment_action_",
+							"className": "LB_Invoice",
+							"valueName": "action",
+							"align": 1,
+							"format": "",
+							"width": 82,
+							"formula": "This.action",
+							"dataSource": "This:C1470.amount",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number"
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_dateDocument_",
+								"text": "Date"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionDate_"
+							},
+							"name": "Column_LB_Invoice_actionDate_",
+							"className": "LB_Invoice",
+							"valueName": "actionDate",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionDate",
+							"dataSource": "This:C1470.actionDate",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "date"
+						},
+						{
+							"header": {
+								"name": "Header_LB_Payment_idNumOrder_",
+								"text": "Order"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_actionTime_"
+							},
+							"name": "Column_LB_Payment_idNumOrder_",
+							"className": "LB_Invoice",
+							"valueName": "actionTime",
+							"align": 3,
+							"format": "\u0001",
+							"width": 70,
+							"formula": "This.actionTime",
+							"dataSource": "This:C1470.idNumOrder",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Payment_idNumInvoice_",
+								"text": "Invoice"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_total_"
+							},
+							"name": "Column_LB_Payment_idNumInvoice_",
+							"className": "LB_Invoice",
+							"valueName": "total",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.total",
+							"dataSource": "This:C1470.idNumInvoice",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Payment_dateLinked_",
+								"text": "Date Linked"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_balanceDue_"
+							},
+							"name": "Column_LB_Invoice_balanceDue_",
+							"className": "LB_Invoice",
+							"valueName": "balanceDue",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.balanceDue",
+							"dataSource": "This:C1470.dateLinked",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Invoice_bill2Company_",
+								"text": "Bill2Company"
+							},
+							"footer": {
+								"name": "Footer_LB_Invoice_bill2Company_"
+							},
+							"name": "Column_LB_Payment_typePayment_",
+							"className": "LB_Invoice",
+							"valueName": "bill2Company",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.bill2Company",
+							"dataSource": "This:C1470.typePayment",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						}
+					]
+				},
+				"Variable4": {
+					"type": "button",
+					"top": 447,
+					"left": 65,
+					"width": 62,
+					"height": 17,
+					"dataSource": "bOrder",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable27": {
+					"type": "button",
+					"top": 427,
+					"left": 65,
+					"width": 62,
+					"height": 17,
+					"dataSource": "bInvoice",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable27.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text21": {
+					"type": "text",
+					"top": 449,
+					"left": 63,
+					"width": 63,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Order"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 429,
+					"left": 63,
+					"width": 63,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Invoice"
+				},
+				"Field24": {
+					"type": "input",
+					"top": 467,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]batchid:27",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field490": {
+					"type": "input",
+					"top": 427,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]bankDeposit:7",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field493": {
+					"type": "input",
+					"top": 447,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]depositAccount:29",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field494": {
+					"type": "input",
+					"top": 467,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]dateOfStatement:30",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 427,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]idNumInvoice:3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 447,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]idNumOrder:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 627,
+					"left": 367,
+					"width": 100,
+					"height": 17,
+					"dataSource": "[Payment:28]dateLinked:18",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "checkbox",
+					"top": 631,
+					"left": 346,
+					"width": 13,
+					"height": 11,
+					"dataSource": "[Payment:28]jrnlComplete:16",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Text29": {
+					"type": "text",
+					"top": 469,
+					"left": 63,
+					"width": 63,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "BatchID"
+				},
+				"Text484": {
+					"type": "text",
+					"top": 429,
+					"left": 292,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Bank"
+				},
+				"Text485": {
+					"type": "text",
+					"top": 449,
+					"left": 292,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Acct"
+				},
+				"Text486": {
+					"type": "text",
+					"top": 469,
+					"left": 292,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Stmt"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 631,
+					"left": 256,
+					"width": 84,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Linked"
+				},
+				"Field14": {
+					"type": "input",
+					"top": 487,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]dateDocument:10",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field29": {
+					"type": "input",
+					"top": 507,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]dateDeposit:49",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 527,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]typePayment:6",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field16": {
+					"type": "input",
+					"top": 547,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]amount:1",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field16.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 567,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]amountAvailable:19",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 489,
+					"left": 41,
+					"width": 88,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Received"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 529,
+					"left": 41,
+					"width": 88,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,75"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 548,
+					"left": 41,
+					"width": 88,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16789,39"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 569,
+					"left": 41,
+					"width": 88,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,80"
+				},
+				"Text24": {
+					"type": "text",
+					"top": 509,
+					"left": 41,
+					"width": 88,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Deposited"
+				},
+				"Field26": {
+					"type": "input",
+					"top": 607,
+					"left": 196,
+					"width": 57,
+					"height": 17,
+					"dataSource": "[Payment:28]change:45",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field952": {
+					"type": "input",
+					"top": 487,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]customerPO:33",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 507,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]nameOnAcct:11",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field28": {
+					"type": "input",
+					"top": 527,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]company:48",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1687": {
+					"type": "input",
+					"top": 547,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]address1:36",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1688": {
+					"type": "input",
+					"top": 567,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]address2:37",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field1689": {
+					"type": "input",
+					"top": 587,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]city:38",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 509,
+					"left": 263,
+					"width": 79,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,83"
+				},
+				"Text877": {
+					"type": "text",
+					"top": 489,
+					"left": 263,
+					"width": 79,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Cust PONum"
+				},
+				"Text1503": {
+					"type": "text",
+					"top": 549,
+					"left": 266,
+					"width": 76,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Addr1"
+				},
+				"Text1504": {
+					"type": "text",
+					"top": 569,
+					"left": 266,
+					"width": 76,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Addr2"
+				},
+				"Text1505": {
+					"type": "text",
+					"top": 589,
+					"left": 266,
+					"width": 76,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "City"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 529,
+					"left": 263,
+					"width": 79,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Company"
+				},
+				"Field23": {
+					"type": "input",
+					"top": 587,
+					"left": 133,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]status:46",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field25": {
+					"type": "input",
+					"top": 607,
+					"left": 133,
+					"width": 60,
+					"height": 17,
+					"dataSource": "[Payment:28]tendered:44",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text16": {
+					"type": "text",
+					"top": 589,
+					"left": 41,
+					"width": 87,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Status"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 608,
+					"left": 41,
+					"width": 87,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Tender/Change"
+				},
+				"Field27": {
+					"type": "input",
+					"top": 607,
+					"left": 347,
+					"width": 120,
+					"height": 17,
+					"dataSource": "[Payment:28]jrnlid:25",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 609,
+					"left": 275,
+					"width": 67,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "JournalID"
+				},
+				"Variable5": {
+					"type": "button",
+					"top": 605,
+					"left": 280,
+					"width": 63,
+					"height": 20,
+					"dataSource": "b21",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 10
+}

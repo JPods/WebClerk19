@@ -14,20 +14,14 @@
 		"onValidate",
 		"onClick",
 		"onOutsideCall",
-		"onActivate",
-		"onDeactivate",
 		"onDoubleClick",
-		"onDrop",
 		"onMenuSelect",
-		"onPluginArea",
 		"onDataChange",
 		"onCloseBox",
 		"onUnload",
-		"onOpenDetail",
-		"onCloseDetail",
 		"onTimer",
-		"onResize",
-		"onLoadRecord"
+		"onLoadRecord",
+		"onPageChange"
 	],
 	"method": "method.4dm",
 	"pageFormat": {
@@ -38,7 +32,7 @@
 	"pages": [
 		{
 			"objects": {
-				"Variable132": {
+				"_VAR_<>pNavPallet_1": {
 					"type": "input",
 					"top": 0,
 					"left": 0,
@@ -57,7 +51,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable133": {
+				"_VAR_aPages_2": {
 					"type": "dropdown",
 					"top": 31,
 					"left": 3,
@@ -73,7 +67,7 @@
 						"onClick"
 					]
 				},
-				"Variable12": {
+				"_VAR_bAccept_3": {
 					"type": "pictureButton",
 					"top": 3,
 					"left": 71,
@@ -92,7 +86,7 @@
 						"onClick"
 					]
 				},
-				"Variable13": {
+				"_VAR_bPrevious_4": {
 					"type": "pictureButton",
 					"top": 3,
 					"left": 35,
@@ -111,7 +105,7 @@
 						"onClick"
 					]
 				},
-				"Variable136": {
+				"_VAR_bNext_5": {
 					"type": "pictureButton",
 					"top": 3,
 					"left": 53,
@@ -130,7 +124,7 @@
 						"onClick"
 					]
 				},
-				"Variable139": {
+				"_VAR_bCancel_6": {
 					"type": "pictureButton",
 					"top": 3,
 					"left": 3,
@@ -147,7 +141,7 @@
 						"onClick"
 					]
 				},
-				"Variable42": {
+				"_VAR_bdEnterKey_7": {
 					"type": "button",
 					"top": 50,
 					"left": 1,
@@ -165,7 +159,7 @@
 		},
 		{
 			"objects": {
-				"Variable14": {
+				"_VAR_bExchange_8": {
 					"type": "button",
 					"top": 497,
 					"left": 147,
@@ -179,7 +173,7 @@
 						"onClick"
 					]
 				},
-				"Text19": {
+				"_Text__16790121_9": {
 					"type": "text",
 					"top": 565,
 					"left": 812,
@@ -190,7 +184,7 @@
 					"textAlign": "right",
 					"text": ":16790,121"
 				},
-				"Rectangle6": {
+				"_Rectangle6_10": {
 					"type": "rectangle",
 					"top": 7,
 					"left": 287,
@@ -199,7 +193,7 @@
 					"fill": "transparent",
 					"stroke": "#0700FF"
 				},
-				"Text22": {
+				"_Text__16790152_11": {
 					"type": "text",
 					"top": 664,
 					"left": 814,
@@ -210,7 +204,7 @@
 					"textAlign": "right",
 					"text": ":16790,152"
 				},
-				"Variable24": {
+				"_VAR_Dial It_12": {
 					"type": "button",
 					"top": 27,
 					"left": 199,
@@ -224,13 +218,13 @@
 						"onClick"
 					]
 				},
-				"Field21": {
+				"_PROP_Proposal_company_13": {
 					"type": "input",
 					"top": 8,
 					"left": 729,
 					"width": 270,
 					"height": 17,
-					"dataSource": "[Proposal:42]company:11",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -241,15 +235,16 @@
 					"method": "ObjectMethods/Field21.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]company:11"
 				},
-				"Field22": {
+				"_PROP_Proposal_phone_14": {
 					"type": "input",
 					"top": 27,
 					"left": 729,
 					"width": 270,
 					"height": 17,
-					"dataSource": "[Proposal:42]phone:24",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -260,15 +255,16 @@
 					"method": "ObjectMethods/Field22.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]phone:24"
 				},
-				"Field23": {
+				"_PROP_Proposal_attention_15": {
 					"type": "input",
 					"top": 46,
 					"left": 729,
 					"width": 270,
 					"height": 17,
-					"dataSource": "[Proposal:42]attention:37",
+					"dataSource": "entry_o.attention",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -279,15 +275,16 @@
 					"method": "ObjectMethods/Field23.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]attention:37"
 				},
-				"Field24": {
+				"_PROP_Proposal_address1_16": {
 					"type": "input",
 					"top": 65,
 					"left": 646,
 					"width": 196,
 					"height": 17,
-					"dataSource": "[Proposal:42]address1:12",
+					"dataSource": "entry_o.address1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -298,15 +295,16 @@
 					"method": "ObjectMethods/Field24.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]address1:12"
 				},
-				"Field25": {
+				"_PROP_Proposal_address2_17": {
 					"type": "input",
 					"top": 65,
 					"left": 844,
 					"width": 155,
 					"height": 17,
-					"dataSource": "[Proposal:42]address2:13",
+					"dataSource": "entry_o.address2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -317,15 +315,16 @@
 					"method": "ObjectMethods/Field25.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]address2:13"
 				},
-				"Field26": {
+				"_PROP_Proposal_city_18": {
 					"type": "input",
 					"top": 84,
 					"left": 646,
 					"width": 196,
 					"height": 17,
-					"dataSource": "[Proposal:42]city:14",
+					"dataSource": "entry_o.city",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -336,15 +335,16 @@
 					"method": "ObjectMethods/Field26.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]city:14"
 				},
-				"Field27": {
+				"_PROP_Proposal_state_19": {
 					"type": "input",
 					"top": 84,
 					"left": 844,
 					"width": 75,
 					"height": 17,
-					"dataSource": "[Proposal:42]state:15",
+					"dataSource": "entry_o.state",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -355,15 +355,16 @@
 					"method": "ObjectMethods/Field27.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]state:15"
 				},
-				"Field49": {
+				"_PROP_Proposal_country_20": {
 					"type": "input",
 					"top": 84,
 					"left": 920,
 					"width": 79,
 					"height": 17,
-					"dataSource": "[Proposal:42]country:17",
+					"dataSource": "entry_o.country",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -374,15 +375,16 @@
 					"method": "ObjectMethods/Field49.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]country:17"
 				},
-				"Field30": {
+				"_PROP_Proposal_zip_21": {
 					"type": "input",
 					"top": 103,
 					"left": 646,
 					"width": 105,
 					"height": 17,
-					"dataSource": "[Proposal:42]zip:16",
+					"dataSource": "entry_o.zip",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -393,9 +395,10 @@
 					"method": "ObjectMethods/Field30.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]zip:16"
 				},
-				"Variable110": {
+				"_VAR_<>aShipVia_22": {
 					"type": "dropdown",
 					"top": 102,
 					"left": 753,
@@ -410,13 +413,13 @@
 						"onClick"
 					]
 				},
-				"Field28": {
+				"_PROP_Proposal_shipVia_23": {
 					"type": "input",
 					"top": 103,
 					"left": 833,
 					"width": 129,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipVia:18",
+					"dataSource": "entry_o.shipVia",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -427,15 +430,16 @@
 					"method": "ObjectMethods/Field28.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipVia:18"
 				},
-				"Field29": {
+				"_PROP_Proposal_zone_24": {
 					"type": "input",
 					"top": 103,
 					"left": 963,
 					"width": 36,
 					"height": 17,
-					"dataSource": "[Proposal:42]zone:19",
+					"dataSource": "entry_o.zone",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -446,9 +450,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]zone:19"
 				},
-				"Variable124": {
+				"_VAR_<>asiteIDs_25": {
 					"type": "dropdown",
 					"top": 123,
 					"left": 861,
@@ -463,13 +468,13 @@
 						"onClick"
 					]
 				},
-				"Field205": {
+				"_PROP_Proposal_siteID_26": {
 					"type": "input",
 					"top": 121,
 					"left": 918,
 					"width": 81,
 					"height": 17,
-					"dataSource": "[Proposal:42]siteID:77",
+					"dataSource": "entry_o.siteID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -479,9 +484,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]siteID:77"
 				},
-				"Variable113": {
+				"_VAR_<>aSector_27": {
 					"type": "dropdown",
 					"top": 140,
 					"left": 861,
@@ -496,13 +502,13 @@
 						"onClick"
 					]
 				},
-				"Field190": {
+				"_PROP_Proposal_sector_28": {
 					"type": "input",
 					"top": 140,
 					"left": 918,
 					"width": 81,
 					"height": 17,
-					"dataSource": "[Proposal:42]sector:88",
+					"dataSource": "entry_o.sector",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -512,9 +518,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]sector:88"
 				},
-				"Variable11": {
+				"_VAR_aContact_29": {
 					"type": "dropdown",
 					"top": 170,
 					"left": 814,
@@ -529,7 +536,7 @@
 						"onClick"
 					]
 				},
-				"Variable10": {
+				"_VAR_aShipTo_30": {
 					"type": "dropdown",
 					"top": 170,
 					"left": 934,
@@ -544,7 +551,7 @@
 						"onClick"
 					]
 				},
-				"Variable107": {
+				"_VAR_srPp_31": {
 					"type": "input",
 					"top": 202,
 					"left": 888,
@@ -568,7 +575,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable43": {
+				"_VAR_<>aProjectList_32": {
 					"type": "dropdown",
 					"top": 219,
 					"left": 848,
@@ -583,13 +590,13 @@
 						"onClick"
 					]
 				},
-				"Field31": {
+				"_PROP_Proposal_idNumProject_33": {
 					"type": "input",
 					"top": 221,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNumProject:22",
+					"dataSource": "entry_o.idNumProject",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -603,15 +610,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNumProject:22"
 				},
-				"Field32": {
+				"_PROP_Proposal_inquiryCode_34": {
 					"type": "input",
 					"top": 240,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]inquiryCode:6",
+					"dataSource": "entry_o.inquiryCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -621,15 +629,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]inquiryCode:6"
 				},
-				"Field6": {
+				"_PROP_Customer_creditLimit_35": {
 					"type": "input",
 					"top": 259,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Customer:2]creditLimit:37",
+					"dataSource": "entry_o.creditLimit",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -643,9 +652,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]creditLimit:37"
 				},
-				"Variable48": {
+				"_VAR_vRunningBal_36": {
 					"type": "input",
 					"top": 278,
 					"left": 888,
@@ -669,7 +679,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable47": {
+				"_VAR_vCreditStat_37": {
 					"type": "input",
 					"top": 297,
 					"left": 888,
@@ -689,7 +699,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable55": {
+				"_VAR_<>aTypeSale_38": {
 					"type": "dropdown",
 					"top": 315,
 					"left": 811,
@@ -703,13 +713,13 @@
 						"onClick"
 					]
 				},
-				"Field33": {
+				"_PROP_Proposal_typeSale_39": {
 					"type": "input",
 					"top": 316,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]typeSale:20",
+					"dataSource": "entry_o.typeSale",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -720,9 +730,10 @@
 					"method": "ObjectMethods/Field33.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]typeSale:20"
 				},
-				"Variable56": {
+				"_VAR_<>aTerms_40": {
 					"type": "dropdown",
 					"top": 334,
 					"left": 811,
@@ -737,13 +748,13 @@
 						"onClick"
 					]
 				},
-				"Field7": {
+				"_PROP_Proposal_terms_41": {
 					"type": "input",
 					"top": 335,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]terms:21",
+					"dataSource": "entry_o.terms",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -756,9 +767,10 @@
 					"method": "ObjectMethods/Field7.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]terms:21"
 				},
-				"Variable57": {
+				"_VAR_<>aTaxJuris_42": {
 					"type": "dropdown",
 					"top": 353,
 					"left": 811,
@@ -773,13 +785,13 @@
 						"onClick"
 					]
 				},
-				"Field34": {
+				"_PROP_Proposal_taxJuris_43": {
 					"type": "input",
 					"top": 354,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]taxJuris:33",
+					"dataSource": "entry_o.taxJuris",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -790,9 +802,10 @@
 					"method": "ObjectMethods/Field34.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]taxJuris:33"
 				},
-				"Variable54": {
+				"_VAR_<>aAdSources_44": {
 					"type": "dropdown",
 					"top": 372,
 					"left": 811,
@@ -807,13 +820,13 @@
 						"onClick"
 					]
 				},
-				"Field35": {
+				"_PROP_Proposal_adSource_45": {
 					"type": "input",
 					"top": 373,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]adSource:47",
+					"dataSource": "entry_o.adSource",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -824,9 +837,10 @@
 					"method": "ObjectMethods/Field35.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]adSource:47"
 				},
-				"Variable58": {
+				"_VAR_<>aReps_46": {
 					"type": "dropdown",
 					"top": 391,
 					"left": 811,
@@ -841,13 +855,13 @@
 						"onClick"
 					]
 				},
-				"Field36": {
+				"_PROP_Proposal_repID_47": {
 					"type": "input",
 					"top": 392,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]repID:7",
+					"dataSource": "entry_o.repID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -858,9 +872,10 @@
 					"method": "ObjectMethods/Field36.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]repID:7"
 				},
-				"Variable59": {
+				"_VAR_<>aComNameID_48": {
 					"type": "dropdown",
 					"top": 411,
 					"left": 811,
@@ -875,13 +890,13 @@
 						"onClick"
 					]
 				},
-				"Field37": {
+				"_PROP_Proposal_salesNameID_49": {
 					"type": "input",
 					"top": 411,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]salesNameID:9",
+					"dataSource": "entry_o.salesNameID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -892,15 +907,16 @@
 					"method": "ObjectMethods/Field37.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]salesNameID:9"
 				},
-				"Field3486": {
+				"_PROP_Proposal_dateDocument_50": {
 					"type": "input",
 					"top": 430,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]dateDocument:3",
+					"dataSource": "entry_o.dateDocument",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -914,15 +930,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]dateDocument:3"
 				},
-				"Field3487": {
+				"_PROP_Proposal_dateNeeded_51": {
 					"type": "input",
 					"top": 449,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]dateNeeded:4",
+					"dataSource": "entry_o.dateNeeded",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -937,15 +954,16 @@
 					"method": "ObjectMethods/Field3487.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]dateNeeded:4"
 				},
-				"Field3488": {
+				"_PROP_Proposal_dateExpected_52": {
 					"type": "input",
 					"top": 468,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]dateExpected:42",
+					"dataSource": "entry_o.dateExpected",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -959,15 +977,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]dateExpected:42"
 				},
-				"Field38": {
+				"_PROP_Proposal_probability_53": {
 					"type": "input",
 					"top": 487,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]probability:43",
+					"dataSource": "entry_o.probability",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -978,15 +997,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]probability:43"
 				},
-				"Field155": {
+				"_PROP_Proposal_shipPartial_54": {
 					"type": "input",
 					"top": 506,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipPartial:82",
+					"dataSource": "entry_o.shipPartial",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -998,9 +1018,10 @@
 					"method": "ObjectMethods/Field155.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipPartial:82"
 				},
-				"Variable81": {
+				"_VAR_aContact_55": {
 					"type": "dropdown",
 					"top": 527,
 					"left": 811,
@@ -1015,13 +1036,13 @@
 						"onClick"
 					]
 				},
-				"Field39": {
+				"_PROP_Proposal_requestedBy_56": {
 					"type": "input",
 					"top": 525,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]requestedBy:62",
+					"dataSource": "entry_o.requestedBy",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1031,9 +1052,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]requestedBy:62"
 				},
-				"Variable62": {
+				"_VAR_<>aNameID_57": {
 					"type": "dropdown",
 					"top": 545,
 					"left": 811,
@@ -1048,13 +1070,13 @@
 						"onClick"
 					]
 				},
-				"Field40": {
+				"_PROP_Proposal_takenBy_58": {
 					"type": "input",
 					"top": 544,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]takenBy:61",
+					"dataSource": "entry_o.takenBy",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1065,9 +1087,10 @@
 					"method": "ObjectMethods/Field40.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]takenBy:61"
 				},
-				"Variable61": {
+				"_VAR_<>aProposalsStatus_59": {
 					"type": "dropdown",
 					"top": 563,
 					"left": 811,
@@ -1082,13 +1105,13 @@
 						"onClick"
 					]
 				},
-				"Field41": {
+				"_PROP_Proposal_status_60": {
 					"type": "input",
 					"top": 563,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]status:2",
+					"dataSource": "entry_o.status",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1099,15 +1122,16 @@
 					"method": "ObjectMethods/Field41.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]status:2"
 				},
-				"Field8": {
+				"_PROP_Proposal_daysLeadTime_61": {
 					"type": "input",
 					"top": 582,
 					"left": 888,
 					"width": 57,
 					"height": 17,
-					"dataSource": "[Proposal:42]daysLeadTime:40",
+					"dataSource": "entry_o.daysLeadTime",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1118,15 +1142,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]daysLeadTime:40"
 				},
-				"Field9": {
+				"_PROP_Proposal_daysValidFor_62": {
 					"type": "input",
 					"top": 582,
 					"left": 945,
 					"width": 54,
 					"height": 17,
-					"dataSource": "[Proposal:42]daysValidFor:39",
+					"dataSource": "entry_o.daysValidFor",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1137,15 +1162,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]daysValidFor:39"
 				},
-				"Field10": {
+				"_PROP_Proposal_idNumOrder_63": {
 					"type": "input",
 					"top": 601,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNumOrder:60",
+					"dataSource": "entry_o.idNumOrder",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1157,15 +1183,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNumOrder:60"
 				},
-				"Field11": {
+				"_PROP_Proposal_dateOrdered_64": {
 					"type": "input",
 					"top": 620,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]dateOrdered:66",
+					"dataSource": "entry_o.dateOrdered",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1177,15 +1204,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]dateOrdered:66"
 				},
-				"Field163": {
+				"_PROP_Proposal_emailVerified_65": {
 					"type": "input",
 					"top": 639,
 					"left": 888,
 					"width": 111,
 					"height": 17,
-					"dataSource": "[Proposal:42]emailVerified:86",
+					"dataSource": "entry_o.emailVerified",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1197,15 +1225,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]emailVerified:86"
 				},
-				"Field12": {
+				"_PROP_Proposal_complete_66": {
 					"type": "checkbox",
 					"top": 662,
 					"left": 888,
 					"width": 16,
 					"height": 16,
-					"dataSource": "[Proposal:42]complete:56",
+					"dataSource": "entry_o.complete",
 					"text": " ",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
@@ -1214,9 +1243,10 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]complete:56"
 				},
-				"Variable60": {
+				"_VAR_bRecByChang_67": {
 					"type": "checkbox",
 					"top": 662,
 					"left": 968,
@@ -1231,7 +1261,7 @@
 						"onClick"
 					]
 				},
-				"Variable90": {
+				"_VAR_pPartNum_68": {
 					"type": "input",
 					"top": 139,
 					"left": 83,
@@ -1270,7 +1300,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable38": {
+				"_VAR_pUse_70": {
 					"type": "checkbox",
 					"top": 139,
 					"left": 292,
@@ -1285,7 +1315,7 @@
 						"onClick"
 					]
 				},
-				"Variable92": {
+				"_VAR_pDescript_71": {
 					"type": "input",
 					"top": 139,
 					"left": 311,
@@ -1318,7 +1348,7 @@
 						"onClick"
 					]
 				},
-				"Variable94": {
+				"_VAR_pUnitPrice_73": {
 					"type": "input",
 					"top": 139,
 					"left": 533,
@@ -1338,7 +1368,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable95": {
+				"_VAR_pDiscnt_74": {
 					"type": "input",
 					"top": 139,
 					"left": 620,
@@ -1360,7 +1390,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable32": {
+				"_VAR_pExtPrice_75": {
 					"type": "input",
 					"top": 139,
 					"left": 667,
@@ -1383,7 +1413,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable46": {
+				"_VAR_<>aItemAction_76": {
 					"type": "dropdown",
 					"top": 276,
 					"left": 3,
@@ -1398,7 +1428,7 @@
 						"onClick"
 					]
 				},
-				"Variable148": {
+				"_VAR_aPriceForecastOptions_77": {
 					"type": "dropdown",
 					"top": 423,
 					"left": 82,
@@ -1414,7 +1444,7 @@
 						"onClick"
 					]
 				},
-				"Variable97": {
+				"_VAR_vrBOMFactor_78": {
 					"type": "input",
 					"top": 425,
 					"left": 220,
@@ -1433,7 +1463,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable149": {
+				"_VAR_vrTooling_79": {
 					"type": "input",
 					"top": 425,
 					"left": 253,
@@ -1453,7 +1483,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable2": {
+				"_VAR_aPSPPProcess_80": {
 					"type": "dropdown",
 					"top": 489,
 					"left": 7,
@@ -1468,7 +1498,7 @@
 						"onClick"
 					]
 				},
-				"Variable78": {
+				"_VAR_curLines_81": {
 					"type": "input",
 					"top": 471,
 					"left": 89,
@@ -1489,7 +1519,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable79": {
+				"_VAR_viBoxCnt_82": {
 					"type": "input",
 					"top": 471,
 					"left": 138,
@@ -1510,7 +1540,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable70": {
+				"_VAR_<>aExchID_83": {
 					"type": "dropdown",
 					"top": 496,
 					"left": 88,
@@ -1525,13 +1555,13 @@
 						"onClick"
 					]
 				},
-				"Field47": {
+				"_PROP_Proposal_currency_84": {
 					"type": "input",
 					"top": 517,
 					"left": 89,
 					"width": 57,
 					"height": 17,
-					"dataSource": "[Proposal:42]currency:55",
+					"dataSource": "entry_o.currency",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1542,9 +1572,10 @@
 					"method": "ObjectMethods/Field47.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]currency:55"
 				},
-				"Variable15": {
+				"_VAR_strCurrency_85": {
 					"type": "input",
 					"top": 517,
 					"left": 148,
@@ -1564,13 +1595,13 @@
 						"onDataChange"
 					]
 				},
-				"Field48": {
+				"_PROP_Proposal_exchangeRate_86": {
 					"type": "input",
 					"top": 517,
 					"left": 200,
 					"width": 87,
 					"height": 17,
-					"dataSource": "[Proposal:42]exchangeRate:54",
+					"dataSource": "entry_o.exchangeRate",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1582,9 +1613,10 @@
 					"method": "ObjectMethods/Field48.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]exchangeRate:54"
 				},
-				"Variable98": {
+				"_VAR_srItem_87": {
 					"type": "input",
 					"top": 568,
 					"left": 81,
@@ -1603,7 +1635,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable99": {
+				"_VAR_srKeyword_88": {
 					"type": "input",
 					"top": 586,
 					"left": 81,
@@ -1623,13 +1655,13 @@
 						"onDataChange"
 					]
 				},
-				"Field153": {
+				"_PROP_Proposal_amountForceValue_89": {
 					"type": "input",
 					"top": 420,
 					"left": 465,
 					"width": 86,
 					"height": 17,
-					"dataSource": "[Proposal:42]amountForceValue:81",
+					"dataSource": "entry_o.amountForceValue",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1645,15 +1677,16 @@
 					"method": "ObjectMethods/Field153.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]amountForceValue:81"
 				},
-				"Field5": {
+				"_PROP_Proposal_shipAdjustments_90": {
 					"type": "input",
 					"top": 439,
 					"left": 465,
 					"width": 86,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipAdjustments:28",
+					"dataSource": "entry_o.shipAdjustments",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1669,15 +1702,16 @@
 					"method": "ObjectMethods/Field5.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipAdjustments:28"
 				},
-				"Field43": {
+				"_PROP_Proposal_shipMiscCosts_91": {
 					"type": "input",
 					"top": 458,
 					"left": 465,
 					"width": 86,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipMiscCosts:29",
+					"dataSource": "entry_o.shipMiscCosts",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1693,15 +1727,16 @@
 					"method": "ObjectMethods/Field43.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipMiscCosts:29"
 				},
-				"Field44": {
+				"_PROP_Proposal_shipFreightCost_92": {
 					"type": "input",
 					"top": 477,
 					"left": 465,
 					"width": 86,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipFreightCost:30",
+					"dataSource": "entry_o.shipFreightCost",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1717,15 +1752,16 @@
 					"method": "ObjectMethods/Field44.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipFreightCost:30"
 				},
-				"Field45": {
+				"_PROP_Proposal_autoFreight_93": {
 					"type": "checkbox",
 					"top": 496,
 					"left": 468,
 					"width": 14,
 					"height": 16,
-					"dataSource": "[Proposal:42]autoFreight:38",
+					"dataSource": "entry_o.autoFreight",
 					"text": " ",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
@@ -1733,15 +1769,16 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]autoFreight:38"
 				},
-				"Field46": {
+				"_PROP_Proposal_weightEstimate_94": {
 					"type": "input",
 					"top": 496,
 					"left": 486,
 					"width": 65,
 					"height": 17,
-					"dataSource": "[Proposal:42]weightEstimate:45",
+					"dataSource": "entry_o.weightEstimate",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1753,15 +1790,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]weightEstimate:45"
 				},
-				"Field1": {
+				"_PROP_Proposal_amount_95": {
 					"type": "input",
 					"top": 420,
 					"left": 643,
 					"width": 128,
 					"height": 17,
-					"dataSource": "[Proposal:42]amount:26",
+					"dataSource": "entry_o.amount",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1778,15 +1816,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]amount:26"
 				},
-				"Field42": {
+				"_PROP_Proposal_taxOnCost_96": {
 					"type": "input",
 					"top": 439,
 					"left": 643,
 					"width": 58,
 					"height": 17,
-					"dataSource": "[Proposal:42]taxOnCost:79",
+					"dataSource": "entry_o.taxOnCost",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1803,15 +1842,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]taxOnCost:79"
 				},
-				"Field2": {
+				"_PROP_Proposal_salesTax_97": {
 					"type": "input",
 					"top": 439,
 					"left": 703,
 					"width": 68,
 					"height": 17,
-					"dataSource": "[Proposal:42]salesTax:27",
+					"dataSource": "entry_o.salesTax",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1828,15 +1868,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]salesTax:27"
 				},
-				"Field3": {
+				"_PROP_Proposal_shipTotal_98": {
 					"type": "input",
 					"top": 458,
 					"left": 643,
 					"width": 128,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipTotal:31",
+					"dataSource": "entry_o.shipTotal",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1853,15 +1894,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipTotal:31"
 				},
-				"Field4": {
+				"_PROP_Proposal_total_99": {
 					"type": "input",
 					"top": 477,
 					"left": 643,
 					"width": 128,
 					"height": 17,
-					"dataSource": "[Proposal:42]total:32",
+					"dataSource": "entry_o.total",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1878,9 +1920,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]total:32"
 				},
-				"Variable83": {
+				"_VAR_srCustomer_100": {
 					"type": "input",
 					"top": 8,
 					"left": 290,
@@ -1899,7 +1942,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable25": {
+				"_VAR_lbCustomer_101": {
 					"type": "input",
 					"top": 10,
 					"left": 193,
@@ -1920,7 +1963,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable51": {
+				"_VAR_bNewRec_102": {
 					"type": "checkbox",
 					"top": 26,
 					"left": 153,
@@ -1938,7 +1981,7 @@
 						"onClick"
 					]
 				},
-				"Variable23": {
+				"_VAR_lbPhone_103": {
 					"type": "input",
 					"top": 29,
 					"left": 193,
@@ -1959,7 +2002,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable84": {
+				"_VAR_srPhone_104": {
 					"type": "input",
 					"top": 27,
 					"left": 290,
@@ -1981,13 +2024,13 @@
 						"onDataChange"
 					]
 				},
-				"Field13": {
+				"_PROP_Customer_fax_105": {
 					"type": "input",
 					"top": 27,
 					"left": 488,
 					"width": 156,
 					"height": 17,
-					"dataSource": "[Customer:2]fax:66",
+					"dataSource": "entry_o.fax",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#E3F7F7",
@@ -1998,15 +2041,16 @@
 					"method": "ObjectMethods/Field13.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]fax:66"
 				},
-				"Field14": {
+				"_PROP_Customer_individual_106": {
 					"type": "checkbox",
 					"top": 47,
 					"left": 296,
 					"width": 32,
 					"height": 16,
-					"dataSource": "[Customer:2]individual:72",
+					"dataSource": "entry_o.individual",
 					"text": "i",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
@@ -2015,15 +2059,16 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]individual:72"
 				},
-				"Field15": {
+				"_PROP_Customer_nameFirst_107": {
 					"type": "input",
 					"top": 46,
 					"left": 331,
 					"width": 155,
 					"height": 17,
-					"dataSource": "[Customer:2]nameFirst:73",
+					"dataSource": "entry_o.nameFirst",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#E3F7F7",
@@ -2034,15 +2079,16 @@
 					"method": "ObjectMethods/Field15.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]nameFirst:73"
 				},
-				"Field16": {
+				"_PROP_Customer_nameLast_108": {
 					"type": "input",
 					"top": 46,
 					"left": 488,
 					"width": 156,
 					"height": 17,
-					"dataSource": "[Customer:2]nameLast:23",
+					"dataSource": "entry_o.nameLast",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#E3F7F7",
@@ -2053,15 +2099,16 @@
 					"method": "ObjectMethods/Field16.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]nameLast:23"
 				},
-				"Field17": {
+				"_PROP_Customer_address1_109": {
 					"type": "input",
 					"top": 65,
 					"left": 290,
 					"width": 196,
 					"height": 17,
-					"dataSource": "[Customer:2]address1:4",
+					"dataSource": "entry_o.address1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#E3F7F7",
@@ -2072,15 +2119,16 @@
 					"method": "ObjectMethods/Field17.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]address1:4"
 				},
-				"Field18": {
+				"_PROP_Customer_address2_110": {
 					"type": "input",
 					"top": 65,
 					"left": 488,
 					"width": 156,
 					"height": 17,
-					"dataSource": "[Customer:2]address2:5",
+					"dataSource": "entry_o.address2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#E3F7F7",
@@ -2091,15 +2139,16 @@
 					"method": "ObjectMethods/Field18.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]address2:5"
 				},
-				"Field19": {
+				"_PROP_Customer_city_111": {
 					"type": "input",
 					"top": 84,
 					"left": 290,
 					"width": 196,
 					"height": 17,
-					"dataSource": "[Customer:2]city:6",
+					"dataSource": "entry_o.city",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#E3F7F7",
@@ -2110,15 +2159,16 @@
 					"method": "ObjectMethods/Field19.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]city:6"
 				},
-				"Field20": {
+				"_PROP_Customer_state_112": {
 					"type": "input",
 					"top": 84,
 					"left": 488,
 					"width": 156,
 					"height": 17,
-					"dataSource": "[Customer:2]state:7",
+					"dataSource": "entry_o.state",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#E3F7F7",
@@ -2129,9 +2179,10 @@
 					"method": "ObjectMethods/Field20.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]state:7"
 				},
-				"Variable52": {
+				"_VAR_lbZip_113": {
 					"type": "input",
 					"top": 105,
 					"left": 184,
@@ -2152,7 +2203,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable53": {
+				"_VAR_lbAcct_114": {
 					"type": "input",
 					"top": 105,
 					"left": 234,
@@ -2173,7 +2224,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable85": {
+				"_VAR_srZip_115": {
 					"type": "input",
 					"top": 103,
 					"left": 290,
@@ -2192,13 +2243,13 @@
 						"onDataChange"
 					]
 				},
-				"Field4504": {
+				"_PROP_Customer_division_116": {
 					"type": "input",
 					"top": 103,
 					"left": 455,
 					"width": 32,
 					"height": 17,
-					"dataSource": "[Customer:2]division:70",
+					"dataSource": "entry_o.division",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2212,9 +2263,10 @@
 					"method": "ObjectMethods/Field4504.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]division:70"
 				},
-				"Variable86": {
+				"_VAR_srAcct_117": {
 					"type": "input",
 					"top": 103,
 					"left": 489,
@@ -2233,7 +2285,7 @@
 						"onDataChange"
 					]
 				},
-				"Text164": {
+				"_Text_siteID__118": {
 					"type": "text",
 					"top": 123,
 					"left": 857,
@@ -2244,7 +2296,7 @@
 					"textAlign": "right",
 					"text": "siteID: "
 				},
-				"Text27": {
+				"_Text_Curr_119": {
 					"type": "text",
 					"top": 501,
 					"left": 97,
@@ -2255,7 +2307,7 @@
 					"textAlign": "center",
 					"text": "Curr"
 				},
-				"Text36": {
+				"_Text__1678912_120": {
 					"type": "text",
 					"top": 29,
 					"left": 662,
@@ -2266,7 +2318,7 @@
 					"textAlign": "right",
 					"text": ":16789,12"
 				},
-				"Text24": {
+				"_Text__16790251_121": {
 					"type": "text",
 					"top": 10,
 					"left": 662,
@@ -2277,7 +2329,7 @@
 					"textAlign": "right",
 					"text": ":16790,251"
 				},
-				"Variable16": {
+				"_VAR_bDropShip_122": {
 					"type": "button",
 					"top": 9,
 					"left": 645,
@@ -2291,7 +2343,7 @@
 						"onClick"
 					]
 				},
-				"Variable50": {
+				"_VAR_bAttn_123": {
 					"type": "button",
 					"top": 45,
 					"left": 645,
@@ -2305,7 +2357,7 @@
 						"onClick"
 					]
 				},
-				"Variable80": {
+				"_VAR_bCalcNow_124": {
 					"type": "button",
 					"top": 420,
 					"left": 576,
@@ -2321,7 +2373,7 @@
 						"onDoubleClick"
 					]
 				},
-				"Text1": {
+				"_Text__16793256_125": {
 					"type": "text",
 					"top": 489,
 					"left": 812,
@@ -2332,7 +2384,7 @@
 					"textAlign": "right",
 					"text": ":16793,256"
 				},
-				"Text2": {
+				"_Text__16791180_126": {
 					"type": "text",
 					"top": 299,
 					"left": 812,
@@ -2344,7 +2396,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,180"
 				},
-				"Text3": {
+				"_Text__167941_127": {
 					"type": "text",
 					"top": 280,
 					"left": 812,
@@ -2356,7 +2408,7 @@
 					"fontStyle": "italic",
 					"text": ":16794,1"
 				},
-				"Text4": {
+				"_Text__16791178_128": {
 					"type": "text",
 					"top": 261,
 					"left": 812,
@@ -2368,7 +2420,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,178"
 				},
-				"Text5": {
+				"_Text__167942_129": {
 					"type": "text",
 					"top": 242,
 					"left": 812,
@@ -2379,7 +2431,7 @@
 					"textAlign": "right",
 					"text": ":16794,2"
 				},
-				"Text6": {
+				"_Text_Proj_130": {
 					"type": "text",
 					"top": 223,
 					"left": 815,
@@ -2390,7 +2442,7 @@
 					"textAlign": "right",
 					"text": "Proj"
 				},
-				"Text7": {
+				"_Text__16791190_131": {
 					"type": "text",
 					"top": 204,
 					"left": 815,
@@ -2401,7 +2453,7 @@
 					"textAlign": "right",
 					"text": ":16791,190"
 				},
-				"Text8": {
+				"_Text__1679174_132": {
 					"type": "text",
 					"top": 318,
 					"left": 812,
@@ -2412,7 +2464,7 @@
 					"textAlign": "right",
 					"text": ":16791,74"
 				},
-				"Text9": {
+				"_Text__16791162_133": {
 					"type": "text",
 					"top": 337,
 					"left": 812,
@@ -2423,7 +2475,7 @@
 					"textAlign": "right",
 					"text": ":16791,162"
 				},
-				"Text10": {
+				"_Text__16791161_134": {
 					"type": "text",
 					"top": 356,
 					"left": 812,
@@ -2434,7 +2486,7 @@
 					"textAlign": "right",
 					"text": ":16791,161"
 				},
-				"Text11": {
+				"_Text__16792230_135": {
 					"type": "text",
 					"top": 375,
 					"left": 812,
@@ -2445,7 +2497,7 @@
 					"textAlign": "right",
 					"text": ":16792,230"
 				},
-				"Text12": {
+				"_Text__1679176_136": {
 					"type": "text",
 					"top": 394,
 					"left": 812,
@@ -2456,7 +2508,7 @@
 					"textAlign": "right",
 					"text": ":16791,76"
 				},
-				"Text13": {
+				"_Text__16789120_137": {
 					"type": "text",
 					"top": 413,
 					"left": 812,
@@ -2467,7 +2519,7 @@
 					"textAlign": "right",
 					"text": ":16789,120"
 				},
-				"Text14": {
+				"_Text__167943_138": {
 					"type": "text",
 					"top": 432,
 					"left": 812,
@@ -2478,7 +2530,7 @@
 					"textAlign": "right",
 					"text": ":16794,3"
 				},
-				"Text15": {
+				"_Text__16790177_139": {
 					"type": "text",
 					"top": 451,
 					"left": 812,
@@ -2489,7 +2541,7 @@
 					"textAlign": "right",
 					"text": ":16790,177"
 				},
-				"Text16": {
+				"_Text__16793249_140": {
 					"type": "text",
 					"top": 470,
 					"left": 812,
@@ -2500,7 +2552,7 @@
 					"textAlign": "right",
 					"text": ":16793,249"
 				},
-				"Text17": {
+				"_Text_RequestedBy_141": {
 					"type": "text",
 					"top": 527,
 					"left": 812,
@@ -2511,7 +2563,7 @@
 					"textAlign": "right",
 					"text": "RequestedBy"
 				},
-				"Text18": {
+				"_Text__16791156_142": {
 					"type": "text",
 					"top": 546,
 					"left": 812,
@@ -2522,7 +2574,7 @@
 					"textAlign": "right",
 					"text": ":16791,156"
 				},
-				"Text20": {
+				"_Text__167945_143": {
 					"type": "text",
 					"top": 584,
 					"left": 812,
@@ -2533,7 +2585,7 @@
 					"textAlign": "right",
 					"text": ":16794,5"
 				},
-				"Text21": {
+				"_Text__167946_144": {
 					"type": "text",
 					"top": 603,
 					"left": 812,
@@ -2544,7 +2596,7 @@
 					"textAlign": "right",
 					"text": ":16794,6"
 				},
-				"Variable4": {
+				"_VAR_vDetails_145": {
 					"type": "pictureButton",
 					"top": 209,
 					"left": 26,
@@ -2565,7 +2617,7 @@
 						"onClick"
 					]
 				},
-				"Variable5": {
+				"_VAR_bSubDel_146": {
 					"type": "pictureButton",
 					"top": 171,
 					"left": 4,
@@ -2587,7 +2639,7 @@
 						"onClick"
 					]
 				},
-				"Variable6": {
+				"_VAR_bSubAdd_147": {
 					"type": "pictureButton",
 					"top": 133,
 					"left": 4,
@@ -2608,7 +2660,7 @@
 						"onClick"
 					]
 				},
-				"Variable35": {
+				"_VAR_bItemShow_148": {
 					"type": "button",
 					"top": 209,
 					"left": 4,
@@ -2630,7 +2682,7 @@
 						"onClick"
 					]
 				},
-				"Variable34": {
+				"_VAR_bItemSpec_149": {
 					"type": "button",
 					"top": 233,
 					"left": 4,
@@ -2653,7 +2705,7 @@
 						"onClick"
 					]
 				},
-				"Variable37": {
+				"_VAR_bTimeWand_150": {
 					"type": "button",
 					"top": 253,
 					"left": 4,
@@ -2676,7 +2728,7 @@
 						"onClick"
 					]
 				},
-				"Variable36": {
+				"_VAR_bItemXRef_151": {
 					"type": "button",
 					"top": 253,
 					"left": 26,
@@ -2700,7 +2752,7 @@
 						"onClick"
 					]
 				},
-				"Variable30": {
+				"_VAR_bInvoice_152": {
 					"type": "button",
 					"top": 299,
 					"left": 4,
@@ -2720,7 +2772,7 @@
 						"onClick"
 					]
 				},
-				"Variable31": {
+				"_VAR_bMargin_153": {
 					"type": "button",
 					"top": 343,
 					"left": 4,
@@ -2740,7 +2792,7 @@
 						"onClick"
 					]
 				},
-				"Variable82": {
+				"_VAR_bRq_154": {
 					"type": "button",
 					"top": 368,
 					"left": 4,
@@ -2761,7 +2813,7 @@
 						"onClick"
 					]
 				},
-				"Variable87994": {
+				"_VAR_bClone_155": {
 					"type": "button",
 					"top": 390,
 					"left": 4,
@@ -2782,7 +2834,7 @@
 						"onClick"
 					]
 				},
-				"Variable1": {
+				"_VAR_bQQPull_156": {
 					"type": "button",
 					"top": 434,
 					"left": 4,
@@ -2803,7 +2855,7 @@
 						"onClick"
 					]
 				},
-				"Variable40": {
+				"_VAR_bAddItem_157": {
 					"type": "button",
 					"top": 547,
 					"left": 110,
@@ -2826,7 +2878,7 @@
 						"onClick"
 					]
 				},
-				"Variable65": {
+				"_VAR_bLastInship_158": {
 					"type": "button",
 					"top": 607,
 					"left": 89,
@@ -2846,7 +2898,7 @@
 						"onClick"
 					]
 				},
-				"Variable66": {
+				"_VAR_bItemFlow_159": {
 					"type": "button",
 					"top": 627,
 					"left": 89,
@@ -2866,7 +2918,7 @@
 						"onClick"
 					]
 				},
-				"Variable68": {
+				"_VAR_bLast5Inv_160": {
 					"type": "button",
 					"top": 647,
 					"left": 89,
@@ -2886,7 +2938,7 @@
 						"onClick"
 					]
 				},
-				"Variable67": {
+				"_VAR_bLastThisIt_161": {
 					"type": "button",
 					"top": 667,
 					"left": 89,
@@ -2906,7 +2958,7 @@
 						"onClick"
 					]
 				},
-				"Variable26": {
+				"_VAR_bNeedDate_162": {
 					"type": "button",
 					"top": 447,
 					"left": 819,
@@ -2920,7 +2972,7 @@
 						"onClick"
 					]
 				},
-				"Variable27": {
+				"_VAR_bAddPop_163": {
 					"type": "pictureButton",
 					"top": 131,
 					"left": 820,
@@ -2939,7 +2991,7 @@
 						"onClick"
 					]
 				},
-				"Variable28": {
+				"_VAR_bModPop_164": {
 					"type": "pictureButton",
 					"top": 131,
 					"left": 836,
@@ -2958,7 +3010,7 @@
 						"onClick"
 					]
 				},
-				"Variable49": {
+				"_VAR_Dial It2_165": {
 					"type": "button",
 					"top": 26,
 					"left": 661,
@@ -2972,7 +3024,7 @@
 						"onClick"
 					]
 				},
-				"Variable64": {
+				"_VAR_bAttn2_166": {
 					"type": "button",
 					"top": 46,
 					"left": 189,
@@ -2986,7 +3038,7 @@
 						"onClick"
 					]
 				},
-				"Variable69": {
+				"_VAR_bItemInfo_167": {
 					"type": "button",
 					"top": 527,
 					"left": 6,
@@ -3001,7 +3053,7 @@
 						"onHeader"
 					]
 				},
-				"Variable71": {
+				"_VAR_bBarCode_168": {
 					"type": "button",
 					"top": 100,
 					"left": 2,
@@ -3016,7 +3068,7 @@
 						"onClick"
 					]
 				},
-				"Variable72": {
+				"_VAR_bUpArrow_169": {
 					"type": "button",
 					"top": 533,
 					"left": 15,
@@ -3031,7 +3083,7 @@
 						"onHeader"
 					]
 				},
-				"Variable73": {
+				"_VAR_bDownArrow_170": {
 					"type": "button",
 					"top": 533,
 					"left": 21,
@@ -3046,7 +3098,7 @@
 						"onHeader"
 					]
 				},
-				"Variable74": {
+				"_VAR_bRightArrow_171": {
 					"type": "button",
 					"top": 533,
 					"left": 26,
@@ -3063,7 +3115,7 @@
 						"onHeader"
 					]
 				},
-				"Variable75": {
+				"_VAR_bAddShift_172": {
 					"type": "button",
 					"top": 78,
 					"left": 2,
@@ -3078,7 +3130,7 @@
 						"onClick"
 					]
 				},
-				"Text28": {
+				"_Text__16791185_173": {
 					"type": "text",
 					"top": 441,
 					"left": 404,
@@ -3089,7 +3141,7 @@
 					"textAlign": "right",
 					"text": ":16791,185"
 				},
-				"Text29": {
+				"_Text__16791186_174": {
 					"type": "text",
 					"top": 460,
 					"left": 404,
@@ -3100,7 +3152,7 @@
 					"textAlign": "right",
 					"text": ":16791,186"
 				},
-				"Text30": {
+				"_Text__16791187_175": {
 					"type": "text",
 					"top": 479,
 					"left": 404,
@@ -3111,7 +3163,7 @@
 					"textAlign": "right",
 					"text": ":16791,187"
 				},
-				"Text31": {
+				"_Text__16791188_176": {
 					"type": "text",
 					"top": 498,
 					"left": 404,
@@ -3136,7 +3188,7 @@
 					"height": 137,
 					"stroke": "#666666"
 				},
-				"Text37": {
+				"_Text__16791184_179": {
 					"type": "text",
 					"top": 48,
 					"left": 662,
@@ -3147,7 +3199,7 @@
 					"textAlign": "right",
 					"text": ":16791,184"
 				},
-				"Text38": {
+				"_Text__16791184_180": {
 					"type": "text",
 					"top": 48,
 					"left": 222,
@@ -3158,7 +3210,7 @@
 					"textAlign": "right",
 					"text": ":16791,184"
 				},
-				"Text39": {
+				"_Text__16789146_181": {
 					"type": "text",
 					"top": 67,
 					"left": 216,
@@ -3178,7 +3230,7 @@
 					"stroke": "#666666",
 					"startPoint": "bottomLeft"
 				},
-				"Text41": {
+				"_Text__16791103_183": {
 					"type": "text",
 					"top": 86,
 					"left": 186,
@@ -3189,7 +3241,7 @@
 					"textAlign": "right",
 					"text": ":16791,103"
 				},
-				"Text42": {
+				"_Text__167948_184": {
 					"type": "text",
 					"top": 622,
 					"left": 812,
@@ -3200,7 +3252,7 @@
 					"textAlign": "right",
 					"text": ":16794,8"
 				},
-				"Text26": {
+				"_Text__16791181_185": {
 					"type": "text",
 					"top": 455,
 					"left": 90,
@@ -3211,7 +3263,7 @@
 					"textAlign": "center",
 					"text": ":16791,181"
 				},
-				"Text32": {
+				"_Text__16790115_186": {
 					"type": "text",
 					"top": 455,
 					"left": 143,
@@ -3222,7 +3274,7 @@
 					"textAlign": "center",
 					"text": ":16790,115"
 				},
-				"Text115": {
+				"_Text_display_187": {
 					"type": "text",
 					"top": 501,
 					"left": 146,
@@ -3233,7 +3285,7 @@
 					"textAlign": "center",
 					"text": "display"
 				},
-				"Text116": {
+				"_Text_exRate_188": {
 					"type": "text",
 					"top": 501,
 					"left": 216,
@@ -3244,7 +3296,7 @@
 					"textAlign": "center",
 					"text": "exRate"
 				},
-				"Text43": {
+				"_Text_Amount_189": {
 					"type": "text",
 					"top": 422,
 					"left": 575,
@@ -3255,7 +3307,7 @@
 					"textAlign": "right",
 					"text": "Amount"
 				},
-				"Text44": {
+				"_Text_Tax_190": {
 					"type": "text",
 					"top": 441,
 					"left": 575,
@@ -3266,7 +3318,7 @@
 					"textAlign": "right",
 					"text": "Tax"
 				},
-				"Text46": {
+				"_Text_Shipping_191": {
 					"type": "text",
 					"top": 460,
 					"left": 575,
@@ -3277,7 +3329,7 @@
 					"textAlign": "right",
 					"text": "Shipping"
 				},
-				"Text47": {
+				"_Text_Total_192": {
 					"type": "text",
 					"top": 479,
 					"left": 575,
@@ -3288,7 +3340,7 @@
 					"textAlign": "right",
 					"text": "Total"
 				},
-				"Text91": {
+				"_Text_OQty_193": {
 					"type": "text",
 					"top": 664,
 					"left": 922,
@@ -3299,7 +3351,7 @@
 					"textAlign": "right",
 					"text": "OQty"
 				},
-				"Text93": {
+				"_Text_PriceMatrix_194": {
 					"type": "text",
 					"top": 409,
 					"left": 82,
@@ -3310,7 +3362,7 @@
 					"textAlign": "left",
 					"text": "Price Matrix"
 				},
-				"Text94": {
+				"_Text_PMx_195": {
 					"type": "text",
 					"top": 409,
 					"left": 220,
@@ -3321,7 +3373,7 @@
 					"textAlign": "left",
 					"text": "PMx"
 				},
-				"Text95": {
+				"_Text_Tooling_196": {
 					"type": "text",
 					"top": 409,
 					"left": 252,
@@ -3332,7 +3384,7 @@
 					"textAlign": "left",
 					"text": "Tooling"
 				},
-				"Text109": {
+				"_Text__div__197": {
 					"type": "text",
 					"top": 105,
 					"left": 197,
@@ -3343,7 +3395,7 @@
 					"textAlign": "center",
 					"text": "/div/"
 				},
-				"Text106": {
+				"_Text_Contacts_198": {
 					"type": "text",
 					"top": 155,
 					"left": 819,
@@ -3354,7 +3406,7 @@
 					"textAlign": "left",
 					"text": "Contacts"
 				},
-				"Text89": {
+				"_Text_ShipPartials_199": {
 					"type": "text",
 					"top": 508,
 					"left": 812,
@@ -3365,7 +3417,7 @@
 					"textAlign": "right",
 					"text": "ShipPartials"
 				},
-				"Variable18": {
+				"_VAR_bCloneLn_200": {
 					"type": "button",
 					"top": 412,
 					"left": 4,
@@ -3386,7 +3438,7 @@
 						"onClick"
 					]
 				},
-				"Text90": {
+				"_Text_eMailVerified_201": {
 					"type": "text",
 					"top": 641,
 					"left": 812,
@@ -3397,7 +3449,7 @@
 					"textAlign": "right",
 					"text": "eMailVerified"
 				},
-				"Variable44": {
+				"_VAR_bShipping_202": {
 					"type": "pictureButton",
 					"top": 470,
 					"left": 558,
@@ -3415,7 +3467,7 @@
 						"onClick"
 					]
 				},
-				"Text123": {
+				"_Text_Force_203": {
 					"type": "text",
 					"top": 422,
 					"left": 404,
@@ -3426,7 +3478,7 @@
 					"textAlign": "right",
 					"text": "Force"
 				},
-				"Variable229": {
+				"_VAR_bAddCmd_204": {
 					"type": "button",
 					"top": 81,
 					"left": 10,
@@ -3441,7 +3493,7 @@
 						"onClick"
 					]
 				},
-				"Text208": {
+				"_Text_Sector__205": {
 					"type": "text",
 					"top": 142,
 					"left": 858,
@@ -3452,7 +3504,7 @@
 					"textAlign": "right",
 					"text": "Sector:"
 				},
-				"Text33": {
+				"_Text_Item_206": {
 					"type": "text",
 					"top": 569,
 					"left": 33,
@@ -3464,7 +3516,7 @@
 					"fontWeight": "bold",
 					"text": "Item"
 				},
-				"Variable29": {
+				"_VAR_bExchange_207": {
 					"type": "button",
 					"top": 567,
 					"left": 13,
@@ -3541,7 +3593,7 @@
 						"onClick"
 					]
 				},
-				"Variable114": {
+				"_VAR_<>aKeyQuery_212": {
 					"type": "dropdown",
 					"top": 586,
 					"left": 19,
@@ -3577,7 +3629,7 @@
 						"onClick"
 					]
 				},
-				"Text215": {
+				"_Text_ContractDetail_214": {
 					"type": "text",
 					"top": 691,
 					"left": 695,
@@ -3589,7 +3641,7 @@
 					"text": "ContractDetail",
 					"fontStyle": "italic"
 				},
-				"Text214": {
+				"_Text_ActionBy_Action_215": {
 					"type": "text",
 					"top": 691,
 					"left": 9,
@@ -3600,7 +3652,7 @@
 					"textAlign": "right",
 					"text": "ActionBy / Action"
 				},
-				"Variable102": {
+				"_VAR_<>aNameID_216": {
 					"type": "dropdown",
 					"top": 690,
 					"left": 17,
@@ -3615,7 +3667,7 @@
 						"onClick"
 					]
 				},
-				"Variable103": {
+				"_VAR_<>aActionsProposals_217": {
 					"type": "dropdown",
 					"top": 690,
 					"left": 82,
@@ -3630,13 +3682,13 @@
 						"onClick"
 					]
 				},
-				"Field267": {
+				"_PROP_Proposal_actionBy_218": {
 					"type": "input",
 					"top": 690,
 					"left": 127,
 					"width": 154,
 					"height": 17,
-					"dataSource": "[Proposal:42]actionBy:94",
+					"dataSource": "entry_o.actionBy",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3647,15 +3699,16 @@
 					"method": "ObjectMethods/Field267.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]actionBy:94"
 				},
-				"Field269": {
+				"_PROP_Proposal_action_219": {
 					"type": "input",
 					"top": 690,
 					"left": 283,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]action:96",
+					"dataSource": "entry_o.action",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3666,9 +3719,10 @@
 					"method": "ObjectMethods/Field269.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]action:96"
 				},
-				"Variable104": {
+				"_VAR_ePopDate4_220": {
 					"type": "plugin",
 					"top": 691,
 					"left": 431,
@@ -3683,13 +3737,13 @@
 						"onPluginArea"
 					]
 				},
-				"Field268": {
+				"_PROP_Proposal_actionDate_221": {
 					"type": "input",
 					"top": 690,
 					"left": 451,
 					"width": 106,
 					"height": 17,
-					"dataSource": "[Proposal:42]actionDate:95",
+					"dataSource": "entry_o.actionDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3701,9 +3755,10 @@
 					"method": "ObjectMethods/Field268.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]actionDate:95"
 				},
-				"Variable105": {
+				"_VAR_ePopTime4_222": {
 					"type": "plugin",
 					"top": 691,
 					"left": 560,
@@ -3718,13 +3773,13 @@
 						"onPluginArea"
 					]
 				},
-				"Field270": {
+				"_PROP_Proposal_actionTime_223": {
 					"type": "input",
 					"top": 690,
 					"left": 580,
 					"width": 104,
 					"height": 17,
-					"dataSource": "[Proposal:42]actionTime:58",
+					"dataSource": "entry_o.actionTime",
 					"dataSourceTypeHint": "time",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3737,9 +3792,10 @@
 					"method": "ObjectMethods/Field270.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]actionTime:58"
 				},
-				"Variable93": {
+				"_VAR_<>aContractDetail_224": {
 					"type": "dropdown",
 					"top": 689,
 					"left": 695,
@@ -3754,13 +3810,13 @@
 						"onClick"
 					]
 				},
-				"Field271": {
+				"_PROP_Proposal_contractDetailTag_225": {
 					"type": "input",
 					"top": 689,
 					"left": 795,
 					"width": 139,
 					"height": 18,
-					"dataSource": "[Proposal:42]contractDetailTag:97",
+					"dataSource": "entry_o.contractDetailTag",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3770,9 +3826,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]contractDetailTag:97"
 				},
-				"Text216": {
+				"_Text_Show_226": {
 					"type": "text",
 					"top": 691,
 					"left": 957,
@@ -3956,7 +4013,7 @@
 		},
 		{
 			"objects": {
-				"Rectangle74": {
+				"_Rectangle74_228": {
 					"type": "rectangle",
 					"top": 259,
 					"left": 795,
@@ -3965,7 +4022,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle75": {
+				"_Rectangle75_229": {
 					"type": "rectangle",
 					"top": 259,
 					"left": 640,
@@ -3974,7 +4031,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle76": {
+				"_Rectangle76_230": {
 					"type": "rectangle",
 					"top": 108,
 					"left": 640,
@@ -3983,7 +4040,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle77": {
+				"_Rectangle77_231": {
 					"type": "rectangle",
 					"top": 90,
 					"left": 726,
@@ -3992,7 +4049,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle80": {
+				"_Rectangle80_232": {
 					"type": "rectangle",
 					"top": 286,
 					"left": 579,
@@ -4001,7 +4058,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle81": {
+				"_Rectangle81_233": {
 					"type": "rectangle",
 					"top": 286,
 					"left": 458,
@@ -4010,7 +4067,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle67": {
+				"_Rectangle67_234": {
 					"type": "rectangle",
 					"top": 6,
 					"left": 226,
@@ -4019,7 +4076,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle73": {
+				"_Rectangle73_235": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 325,
@@ -4028,7 +4085,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle30": {
+				"_Rectangle30_236": {
 					"type": "rectangle",
 					"top": 322,
 					"left": 79,
@@ -4037,7 +4094,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle79": {
+				"_Rectangle79_237": {
 					"type": "rectangle",
 					"top": 82,
 					"left": 79,
@@ -4046,7 +4103,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle66": {
+				"_Rectangle66_238": {
 					"type": "rectangle",
 					"top": 268,
 					"left": 79,
@@ -4055,7 +4112,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle68": {
+				"_Rectangle68_239": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 837,
@@ -4064,7 +4121,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle69": {
+				"_Rectangle69_240": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 837,
@@ -4073,7 +4130,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Variable137": {
+				"_VAR_b61_241": {
 					"type": "button",
 					"top": 17,
 					"left": 766,
@@ -4087,13 +4144,13 @@
 						"onClick"
 					]
 				},
-				"Field192": {
+				"_PROP_Proposal_attention_242": {
 					"type": "input",
 					"top": 91,
 					"left": 729,
 					"width": 238,
 					"height": 17,
-					"dataSource": "[Proposal:42]attention:37",
+					"dataSource": "entry_o.attention",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4104,15 +4161,16 @@
 					"method": "ObjectMethods/Field192.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]attention:37"
 				},
-				"Field193": {
+				"_PROP_Proposal_shipPartial_243": {
 					"type": "input",
 					"top": 91,
 					"left": 969,
 					"width": 29,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipPartial:82",
+					"dataSource": "entry_o.shipPartial",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4124,15 +4182,16 @@
 					"method": "ObjectMethods/Field193.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipPartial:82"
 				},
-				"Field194": {
+				"_PROP_Proposal_company_244": {
 					"type": "input",
 					"top": 109,
 					"left": 643,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]company:11",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4143,15 +4202,16 @@
 					"method": "ObjectMethods/Field194.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]company:11"
 				},
-				"Field195": {
+				"_PROP_Proposal_address1_245": {
 					"type": "input",
 					"top": 128,
 					"left": 643,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]address1:12",
+					"dataSource": "entry_o.address1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4162,15 +4222,16 @@
 					"method": "ObjectMethods/Field195.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]address1:12"
 				},
-				"Field196": {
+				"_PROP_Proposal_address2_246": {
 					"type": "input",
 					"top": 147,
 					"left": 643,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]address2:13",
+					"dataSource": "entry_o.address2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4181,15 +4242,16 @@
 					"method": "ObjectMethods/Field196.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]address2:13"
 				},
-				"Field197": {
+				"_PROP_Proposal_city_247": {
 					"type": "input",
 					"top": 166,
 					"left": 643,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]city:14",
+					"dataSource": "entry_o.city",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4200,15 +4262,16 @@
 					"method": "ObjectMethods/Field197.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]city:14"
 				},
-				"Field198": {
+				"_PROP_Proposal_state_248": {
 					"type": "input",
 					"top": 185,
 					"left": 643,
 					"width": 200,
 					"height": 17,
-					"dataSource": "[Proposal:42]state:15",
+					"dataSource": "entry_o.state",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4219,15 +4282,16 @@
 					"method": "ObjectMethods/Field198.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]state:15"
 				},
-				"Field199": {
+				"_PROP_Proposal_zip_249": {
 					"type": "input",
 					"top": 185,
 					"left": 845,
 					"width": 153,
 					"height": 17,
-					"dataSource": "[Proposal:42]zip:16",
+					"dataSource": "entry_o.zip",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4238,9 +4302,10 @@
 					"method": "ObjectMethods/Field199.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]zip:16"
 				},
-				"Variable138": {
+				"_VAR_<>aFOB_250": {
 					"type": "dropdown",
 					"top": 203,
 					"left": 599,
@@ -4255,13 +4320,13 @@
 						"onClick"
 					]
 				},
-				"Field200": {
+				"_PROP_Proposal_country_251": {
 					"type": "input",
 					"top": 204,
 					"left": 643,
 					"width": 200,
 					"height": 17,
-					"dataSource": "[Proposal:42]country:17",
+					"dataSource": "entry_o.country",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4272,15 +4337,16 @@
 					"method": "ObjectMethods/Field200.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]country:17"
 				},
-				"Field201": {
+				"_PROP_Proposal_fob_252": {
 					"type": "input",
 					"top": 204,
 					"left": 845,
 					"width": 153,
 					"height": 17,
-					"dataSource": "[Proposal:42]fob:34",
+					"dataSource": "entry_o.fob",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4291,15 +4357,16 @@
 					"method": "ObjectMethods/Field201.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]fob:34"
 				},
-				"Field202": {
+				"_PROP_Proposal_shipInstruct_253": {
 					"type": "input",
 					"top": 223,
 					"left": 643,
 					"width": 200,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipInstruct:35",
+					"dataSource": "entry_o.shipInstruct",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4309,15 +4376,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipInstruct:35"
 				},
-				"Field203": {
+				"_PROP_Proposal_phone_254": {
 					"type": "input",
 					"top": 223,
 					"left": 845,
 					"width": 153,
 					"height": 17,
-					"dataSource": "[Proposal:42]phone:24",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4328,9 +4396,10 @@
 					"method": "ObjectMethods/Field203.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]phone:24"
 				},
-				"Variable161": {
+				"_VAR_<>aTaxJuris_255": {
 					"type": "dropdown",
 					"top": 239,
 					"left": 599,
@@ -4345,13 +4414,13 @@
 						"onClick"
 					]
 				},
-				"Field204": {
+				"_PROP_Proposal_shipVia_256": {
 					"type": "input",
 					"top": 242,
 					"left": 643,
 					"width": 164,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipVia:18",
+					"dataSource": "entry_o.shipVia",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4362,15 +4431,16 @@
 					"method": "ObjectMethods/Field204.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipVia:18"
 				},
-				"Field206": {
+				"_PROP_Proposal_zone_257": {
 					"type": "input",
 					"top": 242,
 					"left": 809,
 					"width": 34,
 					"height": 17,
-					"dataSource": "[Proposal:42]zone:19",
+					"dataSource": "entry_o.zone",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4382,15 +4452,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]zone:19"
 				},
-				"Field207": {
+				"_PROP_Proposal_weightEstimate_258": {
 					"type": "input",
 					"top": 242,
 					"left": 845,
 					"width": 79,
 					"height": 17,
-					"dataSource": "[Proposal:42]weightEstimate:45",
+					"dataSource": "entry_o.weightEstimate",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4402,15 +4473,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]weightEstimate:45"
 				},
-				"Field208": {
+				"_PROP_Proposal_taxJuris_259": {
 					"type": "input",
 					"top": 242,
 					"left": 926,
 					"width": 72,
 					"height": 17,
-					"dataSource": "[Proposal:42]taxJuris:33",
+					"dataSource": "entry_o.taxJuris",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4421,15 +4493,16 @@
 					"method": "ObjectMethods/Field208.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]taxJuris:33"
 				},
-				"Field209": {
+				"_PROP_Proposal_shipPartial_260": {
 					"type": "input",
 					"top": 260,
 					"left": 643,
 					"width": 25,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipPartial:82",
+					"dataSource": "entry_o.shipPartial",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4441,15 +4514,16 @@
 					"method": "ObjectMethods/Field209.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipPartial:82"
 				},
-				"Field210": {
+				"_PROP_Proposal_taxExemptid_261": {
 					"type": "input",
 					"top": 260,
 					"left": 798,
 					"width": 200,
 					"height": 17,
-					"dataSource": "[Proposal:42]taxExemptid:83",
+					"dataSource": "entry_o.taxExemptid",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4460,15 +4534,16 @@
 					"method": "ObjectMethods/Field210.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]taxExemptid:83"
 				},
-				"Field211": {
+				"_PROP_Proposal_contactBillTo_262": {
 					"type": "input",
 					"top": 287,
 					"left": 461,
 					"width": 76,
 					"height": 17,
-					"dataSource": "[Proposal:42]contactBillTo:73",
+					"dataSource": "entry_o.contactBillTo",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4481,15 +4556,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]contactBillTo:73"
 				},
-				"Field212": {
+				"_PROP_Proposal_contactShipTo_263": {
 					"type": "input",
 					"top": 287,
 					"left": 582,
 					"width": 76,
 					"height": 17,
-					"dataSource": "[Proposal:42]contactShipTo:63",
+					"dataSource": "entry_o.contactShipTo",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4502,9 +4578,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]contactShipTo:63"
 				},
-				"Variable165": {
+				"_VAR_aContact_264": {
 					"type": "dropdown",
 					"top": 314,
 					"left": 664,
@@ -4519,7 +4596,7 @@
 						"onClick"
 					]
 				},
-				"Variable167": {
+				"_VAR_aShipTo_265": {
 					"type": "dropdown",
 					"top": 314,
 					"left": 771,
@@ -4551,13 +4628,13 @@
 					"selectionMode": "single",
 					"printFrame": "fixed"
 				},
-				"Field213": {
+				"_PROP_Proposal_addressBillTo_267": {
 					"type": "input",
 					"top": 83,
 					"left": 82,
 					"width": 350,
 					"height": 80,
-					"dataSource": "[Proposal:42]addressBillTo:71",
+					"dataSource": "entry_o.addressBillTo",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4568,15 +4645,16 @@
 					"method": "ObjectMethods/Field213.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]addressBillTo:71"
 				},
-				"Field214": {
+				"_PROP_Proposal_addressShipFrom_268": {
 					"type": "input",
 					"top": 165,
 					"left": 82,
 					"width": 350,
 					"height": 96,
-					"dataSource": "[Proposal:42]addressShipFrom:72",
+					"dataSource": "entry_o.addressShipFrom",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4587,15 +4665,16 @@
 					"method": "ObjectMethods/Field214.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]addressShipFrom:72"
 				},
-				"Field215": {
+				"_PROP_Proposal_email_269": {
 					"type": "input",
 					"top": 269,
 					"left": 82,
 					"width": 228,
 					"height": 17,
-					"dataSource": "[Proposal:42]email:68",
+					"dataSource": "entry_o.email",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4606,15 +4685,16 @@
 					"method": "ObjectMethods/Field215.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]email:68"
 				},
-				"Field216": {
+				"_PROP_Proposal_emailVerified_270": {
 					"type": "input",
 					"top": 269,
 					"left": 348,
 					"width": 84,
 					"height": 17,
-					"dataSource": "[Proposal:42]emailVerified:86",
+					"dataSource": "entry_o.emailVerified",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4626,15 +4706,16 @@
 					"method": "ObjectMethods/Field216.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]emailVerified:86"
 				},
-				"Field217": {
+				"_PROP_Proposal_primaryForm_271": {
 					"type": "input",
 					"top": 295,
 					"left": 80,
 					"width": 204,
 					"height": 17,
-					"dataSource": "[Proposal:42]primaryForm:80",
+					"dataSource": "entry_o.primaryForm",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4645,15 +4726,16 @@
 					"method": "ObjectMethods/Field217.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]primaryForm:80"
 				},
-				"Field164": {
+				"_PROP_Proposal_shipInstruct_272": {
 					"type": "input",
 					"top": 323,
 					"left": 82,
 					"width": 326,
 					"height": 285,
-					"dataSource": "[Proposal:42]shipInstruct:35",
+					"dataSource": "entry_o.shipInstruct",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -4664,15 +4746,16 @@
 					"method": "ObjectMethods/Field164.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipInstruct:35"
 				},
-				"Field218": {
+				"_PROP_Proposal_idNumTask_273": {
 					"type": "input",
 					"top": 18,
 					"left": 840,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNumTask:70",
+					"dataSource": "entry_o.idNumTask",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4686,15 +4769,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNumTask:70"
 				},
-				"Field219": {
+				"_PROP_Proposal_idNumProject_274": {
 					"type": "input",
 					"top": 44,
 					"left": 839,
 					"width": 146,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNumProject:22",
+					"dataSource": "entry_o.idNumProject",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4708,9 +4792,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNumProject:22"
 				},
-				"Text134": {
+				"_Text_taskID_275": {
 					"type": "text",
 					"top": 20,
 					"left": 777,
@@ -4721,7 +4806,7 @@
 					"textAlign": "right",
 					"text": "taskID"
 				},
-				"Text135": {
+				"_Text_Job_276": {
 					"type": "text",
 					"top": 46,
 					"left": 777,
@@ -4732,7 +4817,7 @@
 					"textAlign": "right",
 					"text": "Job"
 				},
-				"Rectangle70": {
+				"_Rectangle70_277": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 643,
@@ -4741,7 +4826,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle71": {
+				"_Rectangle71_278": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 643,
@@ -4750,7 +4835,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle72": {
+				"_Rectangle72_279": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 325,
@@ -4759,13 +4844,13 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Field220": {
+				"_PROP_Customer_company_280": {
 					"type": "input",
 					"top": 18,
 					"left": 328,
 					"width": 210,
 					"height": 17,
-					"dataSource": "[Customer:2]company:2",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -4777,15 +4862,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]company:2"
 				},
-				"Field221": {
+				"_PROP_Customer_phone_281": {
 					"type": "input",
 					"top": 44,
 					"left": 328,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]phone:13",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -4803,15 +4889,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]phone:13"
 				},
-				"Field222": {
+				"_PROP_Customer_division_282": {
 					"type": "input",
 					"top": 44,
 					"left": 506,
 					"width": 32,
 					"height": 17,
-					"dataSource": "[Customer:2]division:70",
+					"dataSource": "entry_o.division",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4825,15 +4912,16 @@
 					"method": "ObjectMethods/Field222.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]division:70"
 				},
-				"Field223": {
+				"_PROP_Proposal_idNum_283": {
 					"type": "input",
 					"top": 18,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNum:5",
+					"dataSource": "entry_o.idNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4847,15 +4935,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNum:5"
 				},
-				"Field224": {
+				"_PROP_Proposal_inquiryCode_284": {
 					"type": "input",
 					"top": 44,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]inquiryCode:6",
+					"dataSource": "entry_o.inquiryCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -4870,9 +4959,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]inquiryCode:6"
 				},
-				"Variable170": {
+				"_VAR_Dial It3_285": {
 					"type": "button",
 					"top": 44,
 					"left": 267,
@@ -4886,7 +4976,7 @@
 						"onClick"
 					]
 				},
-				"Text136": {
+				"_Text__1678925_286": {
 					"type": "text",
 					"top": 20,
 					"left": 235,
@@ -4898,7 +4988,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,25"
 				},
-				"Text137": {
+				"_Text__1678912_287": {
 					"type": "text",
 					"top": 46,
 					"left": 235,
@@ -4910,7 +5000,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,12"
 				},
-				"Text138": {
+				"_Text_Proposal#_288": {
 					"type": "text",
 					"top": 20,
 					"left": 546,
@@ -4922,7 +5012,7 @@
 					"fontStyle": "italic",
 					"text": "Proposal#"
 				},
-				"Text139": {
+				"_Text__16791227_289": {
 					"type": "text",
 					"top": 46,
 					"left": 546,
@@ -4934,7 +5024,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,227"
 				},
-				"Text140": {
+				"_Text_PrimeForm_290": {
 					"type": "text",
 					"top": 297,
 					"left": 4,
@@ -4945,7 +5035,7 @@
 					"textAlign": "right",
 					"text": "PrimeForm"
 				},
-				"Variable174": {
+				"_VAR_bShip_291": {
 					"type": "button",
 					"top": 311,
 					"left": 425,
@@ -4966,7 +5056,7 @@
 						"onClick"
 					]
 				},
-				"Variable181": {
+				"_VAR_bShip_292": {
 					"type": "button",
 					"top": 311,
 					"left": 546,
@@ -4987,7 +5077,7 @@
 						"onClick"
 					]
 				},
-				"Variable182": {
+				"_VAR_bShip_293": {
 					"type": "button",
 					"top": 311,
 					"left": 877,
@@ -5008,7 +5098,7 @@
 						"onClick"
 					]
 				},
-				"Text141": {
+				"_Text_Email_ShipTo_294": {
 					"type": "text",
 					"top": 271,
 					"left": 6,
@@ -5019,7 +5109,7 @@
 					"textAlign": "right",
 					"text": "Email_ShipTo"
 				},
-				"Text142": {
+				"_Text_Verify_295": {
 					"type": "text",
 					"top": 272,
 					"left": 312,
@@ -5030,7 +5120,7 @@
 					"textAlign": "right",
 					"text": "Verify"
 				},
-				"Variable183": {
+				"_VAR_bEmailVerified_296": {
 					"type": "button",
 					"top": 269,
 					"left": 311,
@@ -5044,7 +5134,7 @@
 						"onClick"
 					]
 				},
-				"Text143": {
+				"_Text_Country_FOB_297": {
 					"type": "text",
 					"top": 206,
 					"left": 503,
@@ -5055,7 +5145,7 @@
 					"textAlign": "right",
 					"text": "Country/FOB"
 				},
-				"Text144": {
+				"_Text_Via_Zn_Wt_Tax_298": {
 					"type": "text",
 					"top": 244,
 					"left": 503,
@@ -5066,7 +5156,7 @@
 					"textAlign": "right",
 					"text": "Via/Zn/Wt/Tax"
 				},
-				"Text145": {
+				"_Text_Address1_299": {
 					"type": "text",
 					"top": 130,
 					"left": 543,
@@ -5077,7 +5167,7 @@
 					"textAlign": "right",
 					"text": "Address1"
 				},
-				"Text146": {
+				"_Text_ShipTo_Attention_300": {
 					"type": "text",
 					"top": 93,
 					"left": 563,
@@ -5088,7 +5178,7 @@
 					"textAlign": "right",
 					"text": "ShipTo:             Attention"
 				},
-				"Text147": {
+				"_Text__Phone_301": {
 					"type": "text",
 					"top": 225,
 					"left": 576,
@@ -5099,7 +5189,7 @@
 					"textAlign": "right",
 					"text": "/Phone"
 				},
-				"Text148": {
+				"_Text_Address2_302": {
 					"type": "text",
 					"top": 149,
 					"left": 543,
@@ -5110,7 +5200,7 @@
 					"textAlign": "right",
 					"text": "Address2"
 				},
-				"Text149": {
+				"_Text_City_303": {
 					"type": "text",
 					"top": 168,
 					"left": 543,
@@ -5121,7 +5211,7 @@
 					"textAlign": "right",
 					"text": "City"
 				},
-				"Text150": {
+				"_Text_St_Zip_304": {
 					"type": "text",
 					"top": 187,
 					"left": 543,
@@ -5132,7 +5222,7 @@
 					"textAlign": "right",
 					"text": "St/Zip"
 				},
-				"Text151": {
+				"_Text_Company_305": {
 					"type": "text",
 					"top": 111,
 					"left": 543,
@@ -5143,7 +5233,7 @@
 					"textAlign": "right",
 					"text": "Company"
 				},
-				"Variable184": {
+				"_VAR_bAttn2_306": {
 					"type": "button",
 					"top": 91,
 					"left": 653,
@@ -5157,7 +5247,7 @@
 						"onClick"
 					]
 				},
-				"Variable185": {
+				"_VAR_bDropShip_307": {
 					"type": "button",
 					"top": 91,
 					"left": 575,
@@ -5171,7 +5261,7 @@
 						"onClick"
 					]
 				},
-				"Variable186": {
+				"_VAR_bShipInstru_308": {
 					"type": "button",
 					"top": 222,
 					"left": 521,
@@ -5185,7 +5275,7 @@
 						"onClick"
 					]
 				},
-				"Text152": {
+				"_Text_Instruct_309": {
 					"type": "text",
 					"top": 225,
 					"left": 525,
@@ -5196,7 +5286,7 @@
 					"textAlign": "right",
 					"text": "Instruct"
 				},
-				"Text153": {
+				"_Text_ShipPartials_310": {
 					"type": "text",
 					"top": 262,
 					"left": 504,
@@ -5207,7 +5297,7 @@
 					"textAlign": "right",
 					"text": "Ship Partials"
 				},
-				"Text154": {
+				"_Text__16791223_311": {
 					"type": "text",
 					"top": 262,
 					"left": 697,
@@ -5218,7 +5308,7 @@
 					"textAlign": "right",
 					"text": ":16791,223"
 				},
-				"Variable191": {
+				"_VAR_bMap3_312": {
 					"type": "button",
 					"top": 127,
 					"left": 550,
@@ -5232,7 +5322,7 @@
 						"onClick"
 					]
 				},
-				"Text155": {
+				"_Text_BillTo_313": {
 					"type": "text",
 					"top": 85,
 					"left": 6,
@@ -5243,7 +5333,7 @@
 					"textAlign": "right",
 					"text": "BillTo"
 				},
-				"Text156": {
+				"_Text_ShipFrom_314": {
 					"type": "text",
 					"top": 167,
 					"left": 6,
@@ -5254,7 +5344,7 @@
 					"textAlign": "right",
 					"text": "ShipFrom"
 				},
-				"Variable200": {
+				"_VAR_bBillContact_315": {
 					"type": "button",
 					"top": 285,
 					"left": 442,
@@ -5267,7 +5357,7 @@
 						"onClick"
 					]
 				},
-				"Variable201": {
+				"_VAR_bShipContact_316": {
 					"type": "button",
 					"top": 285,
 					"left": 564,
@@ -5280,7 +5370,7 @@
 						"onClick"
 					]
 				},
-				"Variable202": {
+				"_VAR_bAddPop_317": {
 					"type": "pictureButton",
 					"top": 289,
 					"left": 832,
@@ -5299,7 +5389,7 @@
 						"onClick"
 					]
 				},
-				"Variable203": {
+				"_VAR_bModPop_318": {
 					"type": "pictureButton",
 					"top": 289,
 					"left": 848,
@@ -5318,7 +5408,7 @@
 						"onClick"
 					]
 				},
-				"Text157": {
+				"_Text_B_319": {
 					"type": "text",
 					"top": 289,
 					"left": 450,
@@ -5328,7 +5418,7 @@
 					"class": "cssInputLabel",
 					"text": "B"
 				},
-				"Text158": {
+				"_Text_S_320": {
 					"type": "text",
 					"top": 289,
 					"left": 571,
@@ -5338,7 +5428,7 @@
 					"class": "cssInputLabel",
 					"text": "S"
 				},
-				"Text107": {
+				"_Text_ShipInstruct_321": {
 					"type": "text",
 					"top": 325,
 					"left": 6,
@@ -5353,7 +5443,7 @@
 		},
 		{
 			"objects": {
-				"Rectangle4283": {
+				"_Rectangle4283_322": {
 					"type": "rectangle",
 					"top": 489,
 					"left": 254,
@@ -5362,7 +5452,7 @@
 					"fill": "transparent",
 					"stroke": "#405EFF"
 				},
-				"Rectangle4282": {
+				"_Rectangle4282_323": {
 					"type": "rectangle",
 					"top": 451,
 					"left": 115,
@@ -5371,7 +5461,7 @@
 					"fill": "transparent",
 					"stroke": "#405EFF"
 				},
-				"Rectangle32": {
+				"_Rectangle32_324": {
 					"type": "rectangle",
 					"top": 259,
 					"left": 796,
@@ -5380,7 +5470,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle42": {
+				"_Rectangle42_325": {
 					"type": "rectangle",
 					"top": 259,
 					"left": 641,
@@ -5389,7 +5479,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle41": {
+				"_Rectangle41_326": {
 					"type": "rectangle",
 					"top": 108,
 					"left": 641,
@@ -5398,7 +5488,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle4280": {
+				"_Rectangle4280_327": {
 					"type": "rectangle",
 					"top": 90,
 					"left": 727,
@@ -5407,7 +5497,7 @@
 					"fill": "transparent",
 					"stroke": "#999999"
 				},
-				"Rectangle35": {
+				"_Rectangle35_328": {
 					"type": "rectangle",
 					"top": 6,
 					"left": 226,
@@ -5416,7 +5506,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle34": {
+				"_Rectangle34_329": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 325,
@@ -5425,7 +5515,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle36": {
+				"_Rectangle36_330": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 325,
@@ -5434,7 +5524,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle4284": {
+				"_Rectangle4284_331": {
 					"type": "rectangle",
 					"top": 509,
 					"left": 8,
@@ -5443,7 +5533,7 @@
 					"fill": "transparent",
 					"stroke": "#405EFF"
 				},
-				"Rectangle4279": {
+				"_Rectangle4279_332": {
 					"type": "rectangle",
 					"top": 310,
 					"left": 846,
@@ -5452,7 +5542,7 @@
 					"fill": "transparent",
 					"stroke": "#405EFF"
 				},
-				"Rectangle4278": {
+				"_Rectangle4278_333": {
 					"type": "rectangle",
 					"top": 310,
 					"left": 481,
@@ -5461,7 +5551,7 @@
 					"fill": "transparent",
 					"stroke": "#405EFF"
 				},
-				"Rectangle4277": {
+				"_Rectangle4277_334": {
 					"type": "rectangle",
 					"top": 310,
 					"left": 115,
@@ -5470,7 +5560,7 @@
 					"fill": "transparent",
 					"stroke": "#405EFF"
 				},
-				"Text39048": {
+				"_Text_Country_FOB_335": {
 					"type": "text",
 					"top": 206,
 					"left": 503,
@@ -5481,13 +5571,13 @@
 					"textAlign": "right",
 					"text": "Country/FOB"
 				},
-				"Field57": {
+				"_PROP_Proposal_attention_336": {
 					"type": "input",
 					"top": 91,
 					"left": 730,
 					"width": 238,
 					"height": 17,
-					"dataSource": "[Proposal:42]attention:37",
+					"dataSource": "entry_o.attention",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5498,15 +5588,16 @@
 					"method": "ObjectMethods/Field57.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]attention:37"
 				},
-				"Field156": {
+				"_PROP_Proposal_shipPartial_337": {
 					"type": "input",
 					"top": 91,
 					"left": 970,
 					"width": 29,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipPartial:82",
+					"dataSource": "entry_o.shipPartial",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -5518,15 +5609,16 @@
 					"method": "ObjectMethods/Field156.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipPartial:82"
 				},
-				"Field58": {
+				"_PROP_Proposal_company_338": {
 					"type": "input",
 					"top": 109,
 					"left": 644,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]company:11",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5537,15 +5629,16 @@
 					"method": "ObjectMethods/Field58.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]company:11"
 				},
-				"Field59": {
+				"_PROP_Proposal_address1_339": {
 					"type": "input",
 					"top": 128,
 					"left": 644,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]address1:12",
+					"dataSource": "entry_o.address1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5556,15 +5649,16 @@
 					"method": "ObjectMethods/Field59.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]address1:12"
 				},
-				"Field60": {
+				"_PROP_Proposal_address2_340": {
 					"type": "input",
 					"top": 147,
 					"left": 644,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]address2:13",
+					"dataSource": "entry_o.address2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5575,15 +5669,16 @@
 					"method": "ObjectMethods/Field60.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]address2:13"
 				},
-				"Field61": {
+				"_PROP_Proposal_city_341": {
 					"type": "input",
 					"top": 166,
 					"left": 644,
 					"width": 355,
 					"height": 17,
-					"dataSource": "[Proposal:42]city:14",
+					"dataSource": "entry_o.city",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5594,15 +5689,16 @@
 					"method": "ObjectMethods/Field61.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]city:14"
 				},
-				"Field62": {
+				"_PROP_Proposal_state_342": {
 					"type": "input",
 					"top": 185,
 					"left": 644,
 					"width": 202,
 					"height": 17,
-					"dataSource": "[Proposal:42]state:15",
+					"dataSource": "entry_o.state",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5613,15 +5709,16 @@
 					"method": "ObjectMethods/Field62.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]state:15"
 				},
-				"Field63": {
+				"_PROP_Proposal_zip_343": {
 					"type": "input",
 					"top": 185,
 					"left": 848,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Proposal:42]zip:16",
+					"dataSource": "entry_o.zip",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5632,9 +5729,10 @@
 					"method": "ObjectMethods/Field63.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]zip:16"
 				},
-				"Variable151": {
+				"_VAR_<>aFOB_344": {
 					"type": "dropdown",
 					"top": 203,
 					"left": 601,
@@ -5649,13 +5747,13 @@
 						"onClick"
 					]
 				},
-				"Field64": {
+				"_PROP_Proposal_country_345": {
 					"type": "input",
 					"top": 204,
 					"left": 644,
 					"width": 202,
 					"height": 17,
-					"dataSource": "[Proposal:42]country:17",
+					"dataSource": "entry_o.country",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5666,15 +5764,16 @@
 					"method": "ObjectMethods/Field64.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]country:17"
 				},
-				"Field65": {
+				"_PROP_Proposal_fob_346": {
 					"type": "input",
 					"top": 204,
 					"left": 848,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Proposal:42]fob:34",
+					"dataSource": "entry_o.fob",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5685,15 +5784,16 @@
 					"method": "ObjectMethods/Field65.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]fob:34"
 				},
-				"Field66": {
+				"_PROP_Proposal_shipInstruct_347": {
 					"type": "input",
 					"top": 223,
 					"left": 644,
 					"width": 202,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipInstruct:35",
+					"dataSource": "entry_o.shipInstruct",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5703,15 +5803,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipInstruct:35"
 				},
-				"Field67": {
+				"_PROP_Proposal_phone_348": {
 					"type": "input",
 					"top": 223,
 					"left": 848,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Proposal:42]phone:24",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5722,9 +5823,10 @@
 					"method": "ObjectMethods/Field67.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]phone:24"
 				},
-				"Variable135": {
+				"_VAR_<>aShipVia_349": {
 					"type": "dropdown",
 					"top": 239,
 					"left": 521,
@@ -5739,7 +5841,7 @@
 						"onClick"
 					]
 				},
-				"Variable134": {
+				"_VAR_<>aTaxJuris_350": {
 					"type": "dropdown",
 					"top": 239,
 					"left": 600,
@@ -5754,13 +5856,13 @@
 						"onClick"
 					]
 				},
-				"Field68": {
+				"_PROP_Proposal_shipVia_351": {
 					"type": "input",
 					"top": 242,
 					"left": 644,
 					"width": 165,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipVia:18",
+					"dataSource": "entry_o.shipVia",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5771,15 +5873,16 @@
 					"method": "ObjectMethods/Field68.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipVia:18"
 				},
-				"Field69": {
+				"_PROP_Proposal_zone_352": {
 					"type": "input",
 					"top": 242,
 					"left": 811,
 					"width": 35,
 					"height": 17,
-					"dataSource": "[Proposal:42]zone:19",
+					"dataSource": "entry_o.zone",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -5791,15 +5894,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]zone:19"
 				},
-				"Field70": {
+				"_PROP_Proposal_weightEstimate_353": {
 					"type": "input",
 					"top": 242,
 					"left": 848,
 					"width": 78,
 					"height": 17,
-					"dataSource": "[Proposal:42]weightEstimate:45",
+					"dataSource": "entry_o.weightEstimate",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -5811,15 +5915,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]weightEstimate:45"
 				},
-				"Field71": {
+				"_PROP_Proposal_taxJuris_354": {
 					"type": "input",
 					"top": 242,
 					"left": 928,
 					"width": 71,
 					"height": 17,
-					"dataSource": "[Proposal:42]taxJuris:33",
+					"dataSource": "entry_o.taxJuris",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5830,15 +5935,16 @@
 					"method": "ObjectMethods/Field71.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]taxJuris:33"
 				},
-				"Field165": {
+				"_PROP_Proposal_shipPartial_355": {
 					"type": "input",
 					"top": 260,
 					"left": 644,
 					"width": 25,
 					"height": 17,
-					"dataSource": "[Proposal:42]shipPartial:82",
+					"dataSource": "entry_o.shipPartial",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -5850,15 +5956,16 @@
 					"method": "ObjectMethods/Field165.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]shipPartial:82"
 				},
-				"Field154": {
+				"_PROP_Proposal_taxExemptid_356": {
 					"type": "input",
 					"top": 260,
 					"left": 799,
 					"width": 200,
 					"height": 17,
-					"dataSource": "[Proposal:42]taxExemptid:83",
+					"dataSource": "entry_o.taxExemptid",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5869,15 +5976,16 @@
 					"method": "ObjectMethods/Field154.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]taxExemptid:83"
 				},
-				"Field90": {
+				"_PROP_Customer_budget_357": {
 					"type": "input",
 					"top": 311,
 					"left": 118,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]budget:19",
+					"dataSource": "entry_o.budget",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -5891,9 +5999,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]budget:19"
 				},
-				"Variable17": {
+				"_VAR_<>aProspect_358": {
 					"type": "dropdown",
 					"top": 330,
 					"left": 17,
@@ -5908,13 +6017,13 @@
 						"onClick"
 					]
 				},
-				"Field91": {
+				"_PROP_Customer_prospect_359": {
 					"type": "input",
 					"top": 330,
 					"left": 118,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]prospect:17",
+					"dataSource": "entry_o.prospect",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5925,9 +6034,10 @@
 					"method": "ObjectMethods/Field91.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]prospect:17"
 				},
-				"Variable19": {
+				"_VAR_<>aNeed_360": {
 					"type": "dropdown",
 					"top": 349,
 					"left": 17,
@@ -5942,13 +6052,13 @@
 						"onClick"
 					]
 				},
-				"Field92": {
+				"_PROP_Customer_need_361": {
 					"type": "input",
 					"top": 349,
 					"left": 118,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]need:21",
+					"dataSource": "entry_o.need",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5959,9 +6069,10 @@
 					"method": "ObjectMethods/Field92.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]need:21"
 				},
-				"Variable147": {
+				"_VAR_<>aAdSources_362": {
 					"type": "dropdown",
 					"top": 368,
 					"left": 17,
@@ -5976,13 +6087,13 @@
 						"onClick"
 					]
 				},
-				"Field93": {
+				"_PROP_Customer_adSource_363": {
 					"type": "input",
 					"top": 368,
 					"left": 118,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]adSource:62",
+					"dataSource": "entry_o.adSource",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -5993,15 +6104,16 @@
 					"method": "ObjectMethods/Field93.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]adSource:62"
 				},
-				"Field89": {
+				"_PROP_Customer_mfrLocationid_364": {
 					"type": "input",
 					"top": 387,
 					"left": 118,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]mfrLocationid:67",
+					"dataSource": "entry_o.mfrLocationid",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -6014,15 +6126,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]mfrLocationid:67"
 				},
-				"Field94": {
+				"_PROP_Customer_domain_365": {
 					"type": "input",
 					"top": 406,
 					"left": 118,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]domain:90",
+					"dataSource": "entry_o.domain",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6032,9 +6145,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]domain:90"
 				},
-				"Variable150": {
+				"_VAR_<>aProfile1_366": {
 					"type": "dropdown",
 					"top": 311,
 					"left": 367,
@@ -6049,7 +6163,7 @@
 						"onClick"
 					]
 				},
-				"Variable152": {
+				"_VAR_<>aProfile2_367": {
 					"type": "dropdown",
 					"top": 330,
 					"left": 367,
@@ -6064,7 +6178,7 @@
 						"onClick"
 					]
 				},
-				"Variable153": {
+				"_VAR_<>aProfile3_368": {
 					"type": "dropdown",
 					"top": 349,
 					"left": 367,
@@ -6079,7 +6193,7 @@
 						"onClick"
 					]
 				},
-				"Variable154": {
+				"_VAR_<>aProfile4_369": {
 					"type": "dropdown",
 					"top": 368,
 					"left": 367,
@@ -6094,7 +6208,7 @@
 						"onClick"
 					]
 				},
-				"Variable155": {
+				"_VAR_<>aProfile5_370": {
 					"type": "dropdown",
 					"top": 387,
 					"left": 367,
@@ -6109,13 +6223,13 @@
 						"onClick"
 					]
 				},
-				"Field95": {
+				"_PROP_Customer_profile1_371": {
 					"type": "input",
 					"top": 311,
 					"left": 484,
 					"width": 188,
 					"height": 17,
-					"dataSource": "[Customer:2]profile1:26",
+					"dataSource": "entry_o.profile1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6126,15 +6240,16 @@
 					"method": "ObjectMethods/Field95.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]profile1:26"
 				},
-				"Field96": {
+				"_PROP_Customer_profile2_372": {
 					"type": "input",
 					"top": 330,
 					"left": 484,
 					"width": 188,
 					"height": 17,
-					"dataSource": "[Customer:2]profile2:27",
+					"dataSource": "entry_o.profile2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6145,15 +6260,16 @@
 					"method": "ObjectMethods/Field96.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]profile2:27"
 				},
-				"Field97": {
+				"_PROP_Customer_profile3_373": {
 					"type": "input",
 					"top": 349,
 					"left": 484,
 					"width": 188,
 					"height": 17,
-					"dataSource": "[Customer:2]profile3:28",
+					"dataSource": "entry_o.profile3",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6164,15 +6280,16 @@
 					"method": "ObjectMethods/Field97.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]profile3:28"
 				},
-				"Field98": {
+				"_PROP_Customer_profile4_374": {
 					"type": "input",
 					"top": 368,
 					"left": 484,
 					"width": 188,
 					"height": 17,
-					"dataSource": "[Customer:2]profile4:29",
+					"dataSource": "entry_o.profile4",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6183,15 +6300,16 @@
 					"method": "ObjectMethods/Field98.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]profile4:29"
 				},
-				"Field99": {
+				"_PROP_Customer_profile5_375": {
 					"type": "input",
 					"top": 387,
 					"left": 484,
 					"width": 188,
 					"height": 17,
-					"dataSource": "[Customer:2]profile5:30",
+					"dataSource": "entry_o.profile5",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6202,15 +6320,16 @@
 					"method": "ObjectMethods/Field99.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]profile5:30"
 				},
-				"Field100": {
+				"_PROP_Customer_profile6_376": {
 					"type": "checkbox",
 					"top": 420,
 					"left": 358,
 					"width": 10,
 					"height": 11,
-					"dataSource": "[Customer:2]profile6:31",
+					"dataSource": "entry_o.profile6",
 					"text": " ",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
@@ -6219,9 +6338,10 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]profile6:31"
 				},
-				"Variable63": {
+				"_VAR_<>vProfile6_377": {
 					"type": "input",
 					"top": 419,
 					"left": 375,
@@ -6241,13 +6361,13 @@
 						"onClick"
 					]
 				},
-				"Field101": {
+				"_PROP_Customer_profile7_378": {
 					"type": "checkbox",
 					"top": 420,
 					"left": 522,
 					"width": 10,
 					"height": 11,
-					"dataSource": "[Customer:2]profile7:32",
+					"dataSource": "entry_o.profile7",
 					"text": " ",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
@@ -6256,9 +6376,10 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]profile7:32"
 				},
-				"Variable22": {
+				"_VAR_<>vProfile7_379": {
 					"type": "input",
 					"top": 419,
 					"left": 540,
@@ -6278,7 +6399,7 @@
 						"onClick"
 					]
 				},
-				"Variable158": {
+				"_VAR_<>aComNameID_380": {
 					"type": "dropdown",
 					"top": 311,
 					"left": 747,
@@ -6293,7 +6414,7 @@
 						"onClick"
 					]
 				},
-				"Variable159": {
+				"_VAR_<>aReps_381": {
 					"type": "dropdown",
 					"top": 330,
 					"left": 747,
@@ -6308,7 +6429,7 @@
 						"onClick"
 					]
 				},
-				"Variable128": {
+				"_VAR_<>aTypeSale_382": {
 					"type": "dropdown",
 					"top": 349,
 					"left": 747,
@@ -6322,7 +6443,7 @@
 						"onClick"
 					]
 				},
-				"Variable156": {
+				"_VAR_<>aTerms_383": {
 					"type": "dropdown",
 					"top": 368,
 					"left": 747,
@@ -6337,7 +6458,7 @@
 						"onClick"
 					]
 				},
-				"Variable160": {
+				"_VAR_<>aShipVia_384": {
 					"type": "dropdown",
 					"top": 387,
 					"left": 747,
@@ -6352,7 +6473,7 @@
 						"onClick"
 					]
 				},
-				"Variable157": {
+				"_VAR_<>aTaxJuris_385": {
 					"type": "dropdown",
 					"top": 406,
 					"left": 747,
@@ -6367,13 +6488,13 @@
 						"onClick"
 					]
 				},
-				"Field102": {
+				"_PROP_Customer_salesNameID_386": {
 					"type": "input",
 					"top": 311,
 					"left": 849,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]salesNameID:59",
+					"dataSource": "entry_o.salesNameID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6384,15 +6505,16 @@
 					"method": "ObjectMethods/Field102.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]salesNameID:59"
 				},
-				"Field103": {
+				"_PROP_Customer_repID_387": {
 					"type": "input",
 					"top": 330,
 					"left": 849,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]repID:58",
+					"dataSource": "entry_o.repID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6403,15 +6525,16 @@
 					"method": "ObjectMethods/Field103.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]repID:58"
 				},
-				"Field104": {
+				"_PROP_Customer_typeSale_388": {
 					"type": "input",
 					"top": 349,
 					"left": 849,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]typeSale:18",
+					"dataSource": "entry_o.typeSale",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6422,15 +6545,16 @@
 					"method": "ObjectMethods/Field104.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]typeSale:18"
 				},
-				"Field105": {
+				"_PROP_Customer_terms_389": {
 					"type": "input",
 					"top": 368,
 					"left": 849,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]terms:33",
+					"dataSource": "entry_o.terms",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6441,15 +6565,16 @@
 					"method": "ObjectMethods/Field105.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]terms:33"
 				},
-				"Field106": {
+				"_PROP_Customer_shipVia_390": {
 					"type": "input",
 					"top": 387,
 					"left": 849,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]shipVia:12",
+					"dataSource": "entry_o.shipVia",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6460,15 +6585,16 @@
 					"method": "ObjectMethods/Field106.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]shipVia:12"
 				},
-				"Field107": {
+				"_PROP_Customer_taxJuris_391": {
 					"type": "input",
 					"top": 406,
 					"left": 849,
 					"width": 151,
 					"height": 17,
-					"dataSource": "[Customer:2]taxJuris:65",
+					"dataSource": "entry_o.taxJuris",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6478,15 +6604,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]taxJuris:65"
 				},
-				"Field88": {
+				"_PROP_Customer_dateOpened_392": {
 					"type": "input",
 					"top": 452,
 					"left": 118,
 					"width": 88,
 					"height": 17,
-					"dataSource": "[Customer:2]dateOpened:14",
+					"dataSource": "entry_o.dateOpened",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -6503,15 +6630,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]dateOpened:14"
 				},
-				"Field56": {
+				"_PROP_Customer_lastSaleDate_393": {
 					"type": "input",
 					"top": 471,
 					"left": 118,
 					"width": 88,
 					"height": 17,
-					"dataSource": "[Customer:2]lastSaleDate:49",
+					"dataSource": "entry_o.lastSaleDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -6528,9 +6656,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]lastSaleDate:49"
 				},
-				"Variable20": {
+				"_VAR_<>aActions_394": {
 					"type": "dropdown",
 					"top": 470,
 					"left": 254,
@@ -6545,13 +6674,13 @@
 						"onClick"
 					]
 				},
-				"Field5306": {
+				"_PROP_Customer_responseDate_395": {
 					"type": "input",
 					"top": 491,
 					"left": 118,
 					"width": 88,
 					"height": 17,
-					"dataSource": "[Customer:2]responseDate:25",
+					"dataSource": "entry_o.responseDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -6566,15 +6695,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]responseDate:25"
 				},
-				"Field53": {
+				"_PROP_Customer_action_396": {
 					"type": "input",
 					"top": 491,
 					"left": 257,
 					"width": 114,
 					"height": 17,
-					"dataSource": "[Customer:2]action:60",
+					"dataSource": "entry_o.action",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6585,15 +6715,16 @@
 					"method": "ObjectMethods/Field53.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]action:60"
 				},
-				"Field4312": {
+				"_PROP_Customer_actionDate_397": {
 					"type": "input",
 					"top": 491,
 					"left": 390,
 					"width": 85,
 					"height": 17,
-					"dataSource": "[Customer:2]actionDate:61",
+					"dataSource": "entry_o.actionDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -6608,15 +6739,16 @@
 					"method": "ObjectMethods/Field4312.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]actionDate:61"
 				},
-				"Field54": {
+				"_PROP_Customer_actionTime_398": {
 					"type": "input",
 					"top": 491,
 					"left": 494,
 					"width": 78,
 					"height": 17,
-					"dataSource": "[Customer:2]actionTime:71",
+					"dataSource": "entry_o.actionTime",
 					"dataSourceTypeHint": "time",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -6630,9 +6762,10 @@
 					"method": "ObjectMethods/Field54.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]actionTime:71"
 				},
-				"Variable171": {
+				"_VAR_ePopDate2_399": {
 					"type": "plugin",
 					"top": 491,
 					"left": 372,
@@ -6647,7 +6780,7 @@
 						"onPluginArea"
 					]
 				},
-				"Variable172": {
+				"_VAR_ePopTime_400": {
 					"type": "plugin",
 					"top": 491,
 					"left": 476,
@@ -6678,13 +6811,13 @@
 					"doubleClickInEmptyAreaAction": "addSubrecord",
 					"printFrame": "fixed"
 				},
-				"Field55": {
+				"_PROP_Customer_comment_402": {
 					"type": "input",
 					"top": 510,
 					"left": 9,
 					"width": 548,
 					"height": 174,
-					"dataSource": "[Customer:2]comment:15",
+					"dataSource": "entry_o.comment",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6696,9 +6829,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]comment:15"
 				},
-				"Text39055": {
+				"_Text_Via_Zn_Wt_Tax_403": {
 					"type": "text",
 					"top": 244,
 					"left": 504,
@@ -6709,7 +6843,7 @@
 					"textAlign": "right",
 					"text": "Via/Zn/Wt/Tax"
 				},
-				"Text380": {
+				"_Text_Action_404": {
 					"type": "text",
 					"top": 475,
 					"left": 256,
@@ -6719,7 +6853,7 @@
 					"class": "cssInputLabel",
 					"text": "Action"
 				},
-				"Rectangle44": {
+				"_Rectangle44_405": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 876,
@@ -6728,7 +6862,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Variable21913": {
+				"_VAR_bBillContact_406": {
 					"type": "button",
 					"top": 42,
 					"left": 762,
@@ -6741,7 +6875,7 @@
 						"onClick"
 					]
 				},
-				"Rectangle43": {
+				"_Rectangle43_407": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 775,
@@ -6750,7 +6884,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Variable21914": {
+				"_VAR_bShipContact_408": {
 					"type": "button",
 					"top": 42,
 					"left": 864,
@@ -6763,7 +6897,7 @@
 						"onClick"
 					]
 				},
-				"Text39044": {
+				"_Text_Address1_409": {
 					"type": "text",
 					"top": 130,
 					"left": 504,
@@ -6774,7 +6908,7 @@
 					"textAlign": "right",
 					"text": "Address1"
 				},
-				"Rectangle4276": {
+				"_Rectangle4276_410": {
 					"type": "rectangle",
 					"top": 84,
 					"left": 115,
@@ -6783,7 +6917,7 @@
 					"fill": "transparent",
 					"stroke": "#0099FF"
 				},
-				"Rectangle38": {
+				"_Rectangle38_411": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 643,
@@ -6792,7 +6926,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle37": {
+				"_Rectangle37_412": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 643,
@@ -6801,7 +6935,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Text39042": {
+				"_Text_ShipTo_Attention_413": {
 					"type": "text",
 					"top": 93,
 					"left": 564,
@@ -6812,7 +6946,7 @@
 					"textAlign": "right",
 					"text": "ShipTo:             Attention"
 				},
-				"Text372": {
+				"_Text_BillAttn_414": {
 					"type": "text",
 					"top": 87,
 					"left": 9,
@@ -6823,7 +6957,7 @@
 					"textAlign": "right",
 					"text": "Bill Attn"
 				},
-				"Text374": {
+				"_Text_Address1_415": {
 					"type": "text",
 					"top": 144,
 					"left": 9,
@@ -6834,7 +6968,7 @@
 					"textAlign": "right",
 					"text": "Address1"
 				},
-				"Text375": {
+				"_Text_Address2_416": {
 					"type": "text",
 					"top": 163,
 					"left": 9,
@@ -6845,7 +6979,7 @@
 					"textAlign": "right",
 					"text": "Address2"
 				},
-				"Text376": {
+				"_Text_City_417": {
 					"type": "text",
 					"top": 182,
 					"left": 9,
@@ -6856,7 +6990,7 @@
 					"textAlign": "right",
 					"text": "City"
 				},
-				"Text377": {
+				"_Text_St_Zp_Zn_418": {
 					"type": "text",
 					"top": 201,
 					"left": 9,
@@ -6867,7 +7001,7 @@
 					"textAlign": "right",
 					"text": "St/Zp/Zn"
 				},
-				"Text378": {
+				"_Text_Phone_Fax_419": {
 					"type": "text",
 					"top": 220,
 					"left": 9,
@@ -6878,7 +7012,7 @@
 					"textAlign": "right",
 					"text": "Phone/Fax"
 				},
-				"Text373": {
+				"_Text_Title_420": {
 					"type": "text",
 					"top": 125,
 					"left": 9,
@@ -6889,7 +7023,7 @@
 					"textAlign": "right",
 					"text": "Title"
 				},
-				"Text39020": {
+				"_Text_Company_421": {
 					"type": "text",
 					"top": 106,
 					"left": 9,
@@ -6900,7 +7034,7 @@
 					"textAlign": "right",
 					"text": "Company"
 				},
-				"Text45": {
+				"_Text_Ctry_Zn_eM_422": {
 					"type": "text",
 					"top": 239,
 					"left": 18,
@@ -6911,7 +7045,7 @@
 					"textAlign": "right",
 					"text": "Ctry/Zn/eM"
 				},
-				"Text39043": {
+				"_Text__Phone_423": {
 					"type": "text",
 					"top": 225,
 					"left": 577,
@@ -6922,7 +7056,7 @@
 					"textAlign": "right",
 					"text": "/Phone"
 				},
-				"Text39045": {
+				"_Text_Address2_424": {
 					"type": "text",
 					"top": 149,
 					"left": 504,
@@ -6933,7 +7067,7 @@
 					"textAlign": "right",
 					"text": "Address2"
 				},
-				"Text39046": {
+				"_Text_City_425": {
 					"type": "text",
 					"top": 168,
 					"left": 504,
@@ -6944,7 +7078,7 @@
 					"textAlign": "right",
 					"text": "City"
 				},
-				"Text39047": {
+				"_Text_St_Zip_426": {
 					"type": "text",
 					"top": 187,
 					"left": 504,
@@ -6955,7 +7089,7 @@
 					"textAlign": "right",
 					"text": "St/Zip"
 				},
-				"Text39050": {
+				"_Text_Company_427": {
 					"type": "text",
 					"top": 111,
 					"left": 504,
@@ -6966,13 +7100,13 @@
 					"textAlign": "right",
 					"text": "Company"
 				},
-				"Field72": {
+				"_PROP_Customer_individual_428": {
 					"type": "checkbox",
 					"top": 86,
 					"left": 123,
 					"width": 22,
 					"height": 14,
-					"dataSource": "[Customer:2]individual:72",
+					"dataSource": "entry_o.individual",
 					"text": "i",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
@@ -6980,15 +7114,16 @@
 					"method": "ObjectMethods/Field72.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]individual:72"
 				},
-				"Field73": {
+				"_PROP_Customer_nameFirst_429": {
 					"type": "input",
 					"top": 85,
 					"left": 152,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]nameFirst:73",
+					"dataSource": "entry_o.nameFirst",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -6999,15 +7134,16 @@
 					"method": "ObjectMethods/Field73.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]nameFirst:73"
 				},
-				"Field74": {
+				"_PROP_Customer_nameLast_430": {
 					"type": "input",
 					"top": 85,
 					"left": 330,
 					"width": 142,
 					"height": 17,
-					"dataSource": "[Customer:2]nameLast:23",
+					"dataSource": "entry_o.nameLast",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7018,15 +7154,16 @@
 					"method": "ObjectMethods/Field74.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]nameLast:23"
 				},
-				"Field75": {
+				"_PROP_Customer_company_431": {
 					"type": "input",
 					"top": 104,
 					"left": 118,
 					"width": 354,
 					"height": 17,
-					"dataSource": "[Customer:2]company:2",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7037,15 +7174,16 @@
 					"method": "ObjectMethods/Field75.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]company:2"
 				},
-				"Field76": {
+				"_PROP_Customer_title_432": {
 					"type": "input",
 					"top": 123,
 					"left": 118,
 					"width": 315,
 					"height": 17,
-					"dataSource": "[Customer:2]title:3",
+					"dataSource": "entry_o.title",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7056,15 +7194,16 @@
 					"method": "ObjectMethods/Field76.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]title:3"
 				},
-				"Field77": {
+				"_PROP_Customer_shippingDays_433": {
 					"type": "input",
 					"top": 123,
 					"left": 435,
 					"width": 37,
 					"height": 17,
-					"dataSource": "[Customer:2]shippingDays:22",
+					"dataSource": "entry_o.shippingDays",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -7077,15 +7216,16 @@
 					"method": "ObjectMethods/Field77.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]shippingDays:22"
 				},
-				"Field78": {
+				"_PROP_Customer_address1_434": {
 					"type": "input",
 					"top": 142,
 					"left": 118,
 					"width": 354,
 					"height": 17,
-					"dataSource": "[Customer:2]address1:4",
+					"dataSource": "entry_o.address1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7096,15 +7236,16 @@
 					"method": "ObjectMethods/Field78.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]address1:4"
 				},
-				"Field79": {
+				"_PROP_Customer_address2_435": {
 					"type": "input",
 					"top": 161,
 					"left": 118,
 					"width": 354,
 					"height": 17,
-					"dataSource": "[Customer:2]address2:5",
+					"dataSource": "entry_o.address2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7115,15 +7256,16 @@
 					"method": "ObjectMethods/Field79.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]address2:5"
 				},
-				"Field80": {
+				"_PROP_Customer_city_436": {
 					"type": "input",
 					"top": 180,
 					"left": 118,
 					"width": 354,
 					"height": 17,
-					"dataSource": "[Customer:2]city:6",
+					"dataSource": "entry_o.city",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7134,15 +7276,16 @@
 					"method": "ObjectMethods/Field80.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]city:6"
 				},
-				"Field81": {
+				"_PROP_Customer_state_437": {
 					"type": "input",
 					"top": 199,
 					"left": 118,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]state:7",
+					"dataSource": "entry_o.state",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7153,15 +7296,16 @@
 					"method": "ObjectMethods/Field81.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]state:7"
 				},
-				"Field82": {
+				"_PROP_Customer_zip_438": {
 					"type": "input",
 					"top": 199,
 					"left": 296,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]zip:8",
+					"dataSource": "entry_o.zip",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7172,15 +7316,16 @@
 					"method": "ObjectMethods/Field82.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]zip:8"
 				},
-				"Field83": {
+				"_PROP_Customer_phone_439": {
 					"type": "input",
 					"top": 218,
 					"left": 118,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]phone:13",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7191,15 +7336,16 @@
 					"method": "ObjectMethods/Field83.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]phone:13"
 				},
-				"Field84": {
+				"_PROP_Customer_fax_440": {
 					"type": "input",
 					"top": 218,
 					"left": 296,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]fax:66",
+					"dataSource": "entry_o.fax",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7210,15 +7356,16 @@
 					"method": "ObjectMethods/Field84.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]fax:66"
 				},
-				"Field85": {
+				"_PROP_Customer_country_441": {
 					"type": "input",
 					"top": 237,
 					"left": 118,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]country:9",
+					"dataSource": "entry_o.country",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -7229,15 +7376,16 @@
 					"method": "ObjectMethods/Field85.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]country:9"
 				},
-				"Field86": {
+				"_PROP_Customer_zone_442": {
 					"type": "input",
 					"top": 237,
 					"left": 296,
 					"width": 37,
 					"height": 17,
-					"dataSource": "[Customer:2]zone:57",
+					"dataSource": "entry_o.zone",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -7249,9 +7397,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]zone:57"
 				},
-				"Variable74130": {
+				"_VAR_srDisplayEmail_443": {
 					"type": "input",
 					"top": 237,
 					"left": 335,
@@ -7270,13 +7419,13 @@
 						"onDataChange"
 					]
 				},
-				"Field160": {
+				"_PROP_Customer_company_444": {
 					"type": "input",
 					"top": 18,
 					"left": 328,
 					"width": 210,
 					"height": 17,
-					"dataSource": "[Customer:2]company:2",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -7288,15 +7437,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]company:2"
 				},
-				"Field157": {
+				"_PROP_Customer_phone_445": {
 					"type": "input",
 					"top": 44,
 					"left": 328,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]phone:13",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -7314,15 +7464,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]phone:13"
 				},
-				"Field161": {
+				"_PROP_Customer_division_446": {
 					"type": "input",
 					"top": 44,
 					"left": 506,
 					"width": 32,
 					"height": 17,
-					"dataSource": "[Customer:2]division:70",
+					"dataSource": "entry_o.division",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -7336,15 +7487,16 @@
 					"method": "ObjectMethods/Field161.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]division:70"
 				},
-				"Field158": {
+				"_PROP_Proposal_idNum_447": {
 					"type": "input",
 					"top": 18,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNum:5",
+					"dataSource": "entry_o.idNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -7358,15 +7510,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNum:5"
 				},
-				"Field159": {
+				"_PROP_Proposal_inquiryCode_448": {
 					"type": "input",
 					"top": 44,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]inquiryCode:6",
+					"dataSource": "entry_o.inquiryCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -7381,9 +7534,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]inquiryCode:6"
 				},
-				"Variable141": {
+				"_VAR_bAddPop_449": {
 					"type": "pictureButton",
 					"top": 13,
 					"left": 961,
@@ -7402,7 +7556,7 @@
 						"onClick"
 					]
 				},
-				"Variable142": {
+				"_VAR_bModPop_450": {
 					"type": "pictureButton",
 					"top": 13,
 					"left": 977,
@@ -7421,7 +7575,7 @@
 						"onClick"
 					]
 				},
-				"Variable163": {
+				"_VAR_aContact_451": {
 					"type": "dropdown",
 					"top": 16,
 					"left": 759,
@@ -7436,13 +7590,13 @@
 						"onClick"
 					]
 				},
-				"Field29522": {
+				"_PROP_Proposal_contactBillTo_452": {
 					"type": "input",
 					"top": 44,
 					"left": 778,
 					"width": 76,
 					"height": 17,
-					"dataSource": "[Proposal:42]contactBillTo:73",
+					"dataSource": "entry_o.contactBillTo",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -7455,9 +7609,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]contactBillTo:73"
 				},
-				"Variable164": {
+				"_VAR_aShipTo_453": {
 					"type": "dropdown",
 					"top": 16,
 					"left": 862,
@@ -7472,7 +7627,7 @@
 						"onClick"
 					]
 				},
-				"Text20463": {
+				"_Text_B_454": {
 					"type": "text",
 					"top": 46,
 					"left": 767,
@@ -7482,13 +7637,13 @@
 					"class": "cssInputLabel",
 					"text": "B"
 				},
-				"Field29523": {
+				"_PROP_Proposal_contactShipTo_455": {
 					"type": "input",
 					"top": 44,
 					"left": 879,
 					"width": 76,
 					"height": 17,
-					"dataSource": "[Proposal:42]contactShipTo:63",
+					"dataSource": "entry_o.contactShipTo",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -7501,9 +7656,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]contactShipTo:63"
 				},
-				"Text20464": {
+				"_Text_S_456": {
 					"type": "text",
 					"top": 46,
 					"left": 868,
@@ -7513,7 +7669,7 @@
 					"class": "cssInputLabel",
 					"text": "S"
 				},
-				"Variable126": {
+				"_VAR_bAttn_457": {
 					"type": "button",
 					"top": 86,
 					"left": 29,
@@ -7527,7 +7683,7 @@
 						"onClick"
 					]
 				},
-				"Variable119": {
+				"_VAR_bAttn2_458": {
 					"type": "button",
 					"top": 91,
 					"left": 653,
@@ -7541,7 +7697,7 @@
 						"onClick"
 					]
 				},
-				"Variable109": {
+				"_VAR_bDropShip_459": {
 					"type": "button",
 					"top": 91,
 					"left": 580,
@@ -7555,7 +7711,7 @@
 						"onClick"
 					]
 				},
-				"Variable108": {
+				"_VAR_bShipInstru_460": {
 					"type": "button",
 					"top": 222,
 					"left": 523,
@@ -7569,7 +7725,7 @@
 						"onClick"
 					]
 				},
-				"Text35": {
+				"_Text_Instruct_461": {
 					"type": "text",
 					"top": 225,
 					"left": 527,
@@ -7580,7 +7736,7 @@
 					"textAlign": "right",
 					"text": "Instruct"
 				},
-				"Text128": {
+				"_Text_ShipPartials_462": {
 					"type": "text",
 					"top": 262,
 					"left": 505,
@@ -7591,7 +7747,7 @@
 					"textAlign": "right",
 					"text": "Ship Partials"
 				},
-				"Variable190": {
+				"_VAR_Dial It3_463": {
 					"type": "button",
 					"top": 43,
 					"left": 269,
@@ -7605,7 +7761,7 @@
 						"onClick"
 					]
 				},
-				"Text97": {
+				"_Text__1678925_464": {
 					"type": "text",
 					"top": 20,
 					"left": 235,
@@ -7617,7 +7773,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,25"
 				},
-				"Text98": {
+				"_Text__1678912_465": {
 					"type": "text",
 					"top": 46,
 					"left": 235,
@@ -7629,7 +7785,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,12"
 				},
-				"Text96": {
+				"_Text__16791227_466": {
 					"type": "text",
 					"top": 46,
 					"left": 546,
@@ -7641,7 +7797,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,227"
 				},
-				"Text39041": {
+				"_Text_Rep_467": {
 					"type": "text",
 					"top": 332,
 					"left": 739,
@@ -7652,7 +7808,7 @@
 					"textAlign": "right",
 					"text": "Rep"
 				},
-				"Text100": {
+				"_Text__16789229_468": {
 					"type": "text",
 					"top": 389,
 					"left": 363,
@@ -7663,7 +7819,7 @@
 					"textAlign": "right",
 					"text": ":16789,229"
 				},
-				"Text101": {
+				"_Text__16789230_469": {
 					"type": "text",
 					"top": 370,
 					"left": 363,
@@ -7674,7 +7830,7 @@
 					"textAlign": "right",
 					"text": ":16789,230"
 				},
-				"Text102": {
+				"_Text__16789231_470": {
 					"type": "text",
 					"top": 351,
 					"left": 363,
@@ -7685,7 +7841,7 @@
 					"textAlign": "right",
 					"text": ":16789,231"
 				},
-				"Text103": {
+				"_Text__16789232_471": {
 					"type": "text",
 					"top": 332,
 					"left": 363,
@@ -7696,7 +7852,7 @@
 					"textAlign": "right",
 					"text": ":16789,232"
 				},
-				"Text104": {
+				"_Text__16789233_472": {
 					"type": "text",
 					"top": 313,
 					"left": 363,
@@ -7707,7 +7863,7 @@
 					"textAlign": "right",
 					"text": ":16789,233"
 				},
-				"Text39033": {
+				"_Text_Sales_473": {
 					"type": "text",
 					"top": 313,
 					"left": 739,
@@ -7718,7 +7874,7 @@
 					"textAlign": "right",
 					"text": "Sales"
 				},
-				"Text39035": {
+				"_Text_Terms_474": {
 					"type": "text",
 					"top": 370,
 					"left": 739,
@@ -7729,7 +7885,7 @@
 					"textAlign": "right",
 					"text": "Terms"
 				},
-				"Text39036": {
+				"_Text_ShipVia_475": {
 					"type": "text",
 					"top": 389,
 					"left": 739,
@@ -7740,7 +7896,7 @@
 					"textAlign": "right",
 					"text": "ShipVia"
 				},
-				"Text39037": {
+				"_Text_TaxJur_476": {
 					"type": "text",
 					"top": 408,
 					"left": 739,
@@ -7751,7 +7907,7 @@
 					"textAlign": "right",
 					"text": "TaxJur"
 				},
-				"Text39040": {
+				"_Text_TypeSale_477": {
 					"type": "text",
 					"top": 351,
 					"left": 739,
@@ -7762,7 +7918,7 @@
 					"textAlign": "right",
 					"text": "TypeSale"
 				},
-				"Text39026": {
+				"_Text_Need_478": {
 					"type": "text",
 					"top": 351,
 					"left": 10,
@@ -7773,7 +7929,7 @@
 					"textAlign": "right",
 					"text": "Need"
 				},
-				"Text39027": {
+				"_Text_AdSource_479": {
 					"type": "text",
 					"top": 370,
 					"left": 10,
@@ -7784,7 +7940,7 @@
 					"textAlign": "right",
 					"text": "AdSource"
 				},
-				"Text39028": {
+				"_Text_MfgLocID_480": {
 					"type": "text",
 					"top": 389,
 					"left": 12,
@@ -7795,7 +7951,7 @@
 					"textAlign": "right",
 					"text": "MfgLocID"
 				},
-				"Text39029": {
+				"_Text_Domain_481": {
 					"type": "text",
 					"top": 408,
 					"left": 10,
@@ -7806,7 +7962,7 @@
 					"textAlign": "right",
 					"text": "Domain"
 				},
-				"Text39031": {
+				"_Text_Prospect_482": {
 					"type": "text",
 					"top": 332,
 					"left": 10,
@@ -7817,7 +7973,7 @@
 					"textAlign": "right",
 					"text": "Prospect"
 				},
-				"Text39032": {
+				"_Text_Budget_483": {
 					"type": "text",
 					"top": 313,
 					"left": 10,
@@ -7828,7 +7984,7 @@
 					"textAlign": "right",
 					"text": "Budget"
 				},
-				"Text105": {
+				"_Text__16791193_484": {
 					"type": "text",
 					"top": 493,
 					"left": 9,
@@ -7839,7 +7995,7 @@
 					"textAlign": "right",
 					"text": ":16791,193"
 				},
-				"Variable173": {
+				"_VAR_bDomain_485": {
 					"type": "button",
 					"top": 406,
 					"left": 25,
@@ -7853,7 +8009,7 @@
 						"onClick"
 					]
 				},
-				"Variable140": {
+				"_VAR_bMfg_486": {
 					"type": "button",
 					"top": 387,
 					"left": 29,
@@ -7867,7 +8023,7 @@
 						"onClick"
 					]
 				},
-				"Variable122": {
+				"_VAR_bDateTime_487": {
 					"type": "pictureButton",
 					"top": 471,
 					"left": 209,
@@ -7884,7 +8040,7 @@
 						"onClick"
 					]
 				},
-				"Text39025": {
+				"_Text_LastSale_488": {
 					"type": "text",
 					"top": 473,
 					"left": 13,
@@ -7895,7 +8051,7 @@
 					"textAlign": "right",
 					"text": "Last Sale"
 				},
-				"Text39030": {
+				"_Text_DateOpened_489": {
 					"type": "text",
 					"top": 454,
 					"left": 10,
@@ -7906,7 +8062,7 @@
 					"textAlign": "right",
 					"text": "DateOpened"
 				},
-				"Text92": {
+				"_Text__16791223_490": {
 					"type": "text",
 					"top": 262,
 					"left": 698,
@@ -7917,7 +8073,7 @@
 					"textAlign": "right",
 					"text": ":16791,223"
 				},
-				"Variable45": {
+				"_VAR_bCopyAddress_491": {
 					"type": "pictureButton",
 					"top": 187,
 					"left": 476,
@@ -7934,7 +8090,7 @@
 						"onClick"
 					]
 				},
-				"Variable115": {
+				"_VAR_bMap2_492": {
 					"type": "button",
 					"top": 141,
 					"left": 25,
@@ -7948,7 +8104,7 @@
 						"onClick"
 					]
 				},
-				"Variable118": {
+				"_VAR_bMap3_493": {
 					"type": "button",
 					"top": 127,
 					"left": 551,
@@ -7962,7 +8118,7 @@
 						"onClick"
 					]
 				},
-				"Text99": {
+				"_Text_Proposal#_494": {
 					"type": "text",
 					"top": 20,
 					"left": 546,
@@ -7978,7 +8134,7 @@
 		},
 		{
 			"objects": {
-				"Rectangle15": {
+				"_Rectangle15_495": {
 					"type": "rectangle",
 					"top": 508,
 					"left": 125,
@@ -7987,7 +8143,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle22": {
+				"_Rectangle22_496": {
 					"type": "rectangle",
 					"top": 6,
 					"left": 226,
@@ -7996,7 +8152,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle20": {
+				"_Rectangle20_497": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 643,
@@ -8005,7 +8161,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle23": {
+				"_Rectangle23_498": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 325,
@@ -8014,7 +8170,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Text80": {
+				"_Text__1679334_499": {
 					"type": "text",
 					"top": 432,
 					"left": 19,
@@ -8025,7 +8181,7 @@
 					"textAlign": "right",
 					"text": ":16793,34"
 				},
-				"Text79": {
+				"_Text__1678977_500": {
 					"type": "text",
 					"top": 413,
 					"left": 19,
@@ -8036,7 +8192,7 @@
 					"textAlign": "right",
 					"text": ":16789,77"
 				},
-				"Rectangle16": {
+				"_Rectangle16_501": {
 					"type": "rectangle",
 					"top": 410,
 					"left": 125,
@@ -8045,7 +8201,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Text14246": {
+				"_Text_<<>vOrdersProfile3>_502": {
 					"type": "text",
 					"top": 549,
 					"left": 10,
@@ -8056,7 +8212,7 @@
 					"textAlign": "right",
 					"text": "<<>vOrdersProfile3>"
 				},
-				"Text14244": {
+				"_Text_<<>vOrdersProfile2>_503": {
 					"type": "text",
 					"top": 530,
 					"left": 7,
@@ -8067,7 +8223,7 @@
 					"textAlign": "right",
 					"text": "<<>vOrdersProfile2>"
 				},
-				"Text110": {
+				"_Text_<<>vOrdersProfile1>_504": {
 					"type": "text",
 					"top": 511,
 					"left": 10,
@@ -8078,7 +8234,7 @@
 					"textAlign": "right",
 					"text": "<<>vOrdersProfile1>"
 				},
-				"Variable192": {
+				"_VAR_vOrdComment_505": {
 					"type": "input",
 					"top": 122,
 					"left": 127,
@@ -8102,7 +8258,7 @@
 						"onDataChange"
 					]
 				},
-				"Variable189": {
+				"_VAR_<>aStdOrdCom_506": {
 					"type": "dropdown",
 					"top": 175,
 					"left": 9,
@@ -8117,7 +8273,7 @@
 						"onClick"
 					]
 				},
-				"Variable176": {
+				"_VAR_<>aComNameID_507": {
 					"type": "dropdown",
 					"top": 411,
 					"left": 33,
@@ -8132,7 +8288,7 @@
 						"onClick"
 					]
 				},
-				"Variable175": {
+				"_VAR_<>aReps_508": {
 					"type": "dropdown",
 					"top": 430,
 					"left": 33,
@@ -8147,7 +8303,7 @@
 						"onClick"
 					]
 				},
-				"Variable178": {
+				"_VAR_<>aOrdersProfile1_509": {
 					"type": "dropdown",
 					"top": 509,
 					"left": 33,
@@ -8162,7 +8318,7 @@
 						"onClick"
 					]
 				},
-				"Variable179": {
+				"_VAR_<>aOrdersProfile2_510": {
 					"type": "dropdown",
 					"top": 528,
 					"left": 33,
@@ -8177,7 +8333,7 @@
 						"onClick"
 					]
 				},
-				"Variable180": {
+				"_VAR_<>aOrdersProfile3_511": {
 					"type": "dropdown",
 					"top": 547,
 					"left": 33,
@@ -8192,13 +8348,13 @@
 						"onClick"
 					]
 				},
-				"Field135": {
+				"_PROP_Proposal_salesNameID_512": {
 					"type": "input",
 					"top": 411,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]salesNameID:9",
+					"dataSource": "entry_o.salesNameID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8209,15 +8365,16 @@
 					"method": "ObjectMethods/Field135.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]salesNameID:9"
 				},
-				"Field136": {
+				"_PROP_Proposal_repID_513": {
 					"type": "input",
 					"top": 430,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]repID:7",
+					"dataSource": "entry_o.repID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8228,9 +8385,10 @@
 					"method": "ObjectMethods/Field136.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]repID:7"
 				},
-				"Variable193": {
+				"_VAR_vComSales_514": {
 					"type": "input",
 					"top": 449,
 					"left": 128,
@@ -8251,7 +8409,7 @@
 						"onClick"
 					]
 				},
-				"Variable194": {
+				"_VAR_vComRep_515": {
 					"type": "input",
 					"top": 449,
 					"left": 249,
@@ -8272,13 +8430,13 @@
 						"onClick"
 					]
 				},
-				"Field112": {
+				"_PROP_Proposal_salesCommission_516": {
 					"type": "input",
 					"top": 468,
 					"left": 128,
 					"width": 119,
 					"height": 17,
-					"dataSource": "[Proposal:42]salesCommission:10",
+					"dataSource": "entry_o.salesCommission",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -8292,15 +8450,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]salesCommission:10"
 				},
-				"Field113": {
+				"_PROP_Proposal_repCommission_517": {
 					"type": "input",
 					"top": 468,
 					"left": 249,
 					"width": 118,
 					"height": 17,
-					"dataSource": "[Proposal:42]repCommission:8",
+					"dataSource": "entry_o.repCommission",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -8314,15 +8473,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]repCommission:8"
 				},
-				"Field137": {
+				"_PROP_Proposal_profile1_518": {
 					"type": "input",
 					"top": 509,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]profile1:51",
+					"dataSource": "entry_o.profile1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8333,15 +8493,16 @@
 					"method": "ObjectMethods/Field137.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]profile1:51"
 				},
-				"Field138": {
+				"_PROP_Proposal_profile2_519": {
 					"type": "input",
 					"top": 528,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]profile2:52",
+					"dataSource": "entry_o.profile2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8352,15 +8513,16 @@
 					"method": "ObjectMethods/Field138.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]profile2:52"
 				},
-				"Field139": {
+				"_PROP_Proposal_profile3_520": {
 					"type": "input",
 					"top": 547,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]profile3:53",
+					"dataSource": "entry_o.profile3",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8371,15 +8533,16 @@
 					"method": "ObjectMethods/Field139.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]profile3:53"
 				},
-				"Field29906": {
+				"_PROP_Proposal_profile4_521": {
 					"type": "input",
 					"top": 566,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]profile4:74",
+					"dataSource": "entry_o.profile4",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8390,15 +8553,16 @@
 					"method": "ObjectMethods/Field29906.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]profile4:74"
 				},
-				"Field29907": {
+				"_PROP_Proposal_profile5_522": {
 					"type": "input",
 					"top": 585,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]profile5:75",
+					"dataSource": "entry_o.profile5",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8409,15 +8573,16 @@
 					"method": "ObjectMethods/Field29907.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]profile5:75"
 				},
-				"Field29908": {
+				"_PROP_Proposal_profile6_523": {
 					"type": "input",
 					"top": 604,
 					"left": 128,
 					"width": 239,
 					"height": 17,
-					"dataSource": "[Proposal:42]profile6:76",
+					"dataSource": "entry_o.profile6",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -8428,9 +8593,10 @@
 					"method": "ObjectMethods/Field29908.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]profile6:76"
 				},
-				"Variable177": {
+				"_VAR_bdEnterKey_524": {
 					"type": "button",
 					"top": 42,
 					"left": 0,
@@ -8445,7 +8611,7 @@
 						"onHeader"
 					]
 				},
-				"Variable187": {
+				"_VAR_bDateTime2_525": {
 					"type": "pictureButton",
 					"top": 208,
 					"left": 42,
@@ -8462,7 +8628,7 @@
 						"onClick"
 					]
 				},
-				"Variable188": {
+				"_VAR_inModify_526": {
 					"type": "button",
 					"top": 251,
 					"left": 9,
@@ -8484,7 +8650,7 @@
 						"onHeader"
 					]
 				},
-				"Text78": {
+				"_Text_CommRate_527": {
 					"type": "text",
 					"top": 451,
 					"left": 29,
@@ -8495,7 +8661,7 @@
 					"textAlign": "right",
 					"text": "Comm Rate"
 				},
-				"Variable213": {
+				"_VAR_aLoOrdComme_528": {
 					"type": "tab",
 					"top": 96,
 					"left": 125,
@@ -8512,7 +8678,7 @@
 						"onClick"
 					]
 				},
-				"Text111": {
+				"_Text_Path2Clip_529": {
 					"type": "text",
 					"top": 282,
 					"left": 9,
@@ -8523,7 +8689,7 @@
 					"textAlign": "center",
 					"text": "Path2Clip"
 				},
-				"Text72358": {
+				"_Text_Profile4_530": {
 					"type": "text",
 					"top": 568,
 					"left": 42,
@@ -8534,7 +8700,7 @@
 					"textAlign": "right",
 					"text": "Profile4"
 				},
-				"Text72360": {
+				"_Text_Profile5_531": {
 					"type": "text",
 					"top": 587,
 					"left": 42,
@@ -8545,7 +8711,7 @@
 					"textAlign": "right",
 					"text": "Profile5"
 				},
-				"Text72361": {
+				"_Text_Profile6_532": {
 					"type": "text",
 					"top": 606,
 					"left": 42,
@@ -8556,7 +8722,7 @@
 					"textAlign": "right",
 					"text": "Profile6"
 				},
-				"Rectangle14": {
+				"_Rectangle14_533": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 642,
@@ -8565,7 +8731,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle21": {
+				"_Rectangle21_534": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 325,
@@ -8574,13 +8740,13 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Field111": {
+				"_PROP_Customer_company_535": {
 					"type": "input",
 					"top": 18,
 					"left": 328,
 					"width": 210,
 					"height": 17,
-					"dataSource": "[Customer:2]company:2",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -8592,15 +8758,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]company:2"
 				},
-				"Field108": {
+				"_PROP_Customer_phone_536": {
 					"type": "input",
 					"top": 44,
 					"left": 328,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]phone:13",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -8618,15 +8785,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]phone:13"
 				},
-				"Field162": {
+				"_PROP_Customer_division_537": {
 					"type": "input",
 					"top": 44,
 					"left": 506,
 					"width": 32,
 					"height": 17,
-					"dataSource": "[Customer:2]division:70",
+					"dataSource": "entry_o.division",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -8640,15 +8808,16 @@
 					"method": "ObjectMethods/Field162.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]division:70"
 				},
-				"Field109": {
+				"_PROP_Proposal_idNum_538": {
 					"type": "input",
 					"top": 18,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNum:5",
+					"dataSource": "entry_o.idNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -8662,15 +8831,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNum:5"
 				},
-				"Field110": {
+				"_PROP_Proposal_inquiryCode_539": {
 					"type": "input",
 					"top": 44,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]inquiryCode:6",
+					"dataSource": "entry_o.inquiryCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -8685,9 +8855,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]inquiryCode:6"
 				},
-				"Variable21": {
+				"_VAR_Dial It3_540": {
 					"type": "button",
 					"top": 45,
 					"left": 269,
@@ -8701,7 +8872,7 @@
 						"onClick"
 					]
 				},
-				"Text40": {
+				"_Text__1678925_541": {
 					"type": "text",
 					"top": 20,
 					"left": 235,
@@ -8713,7 +8884,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,25"
 				},
-				"Text68": {
+				"_Text__1678912_542": {
 					"type": "text",
 					"top": 46,
 					"left": 235,
@@ -8725,7 +8896,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,12"
 				},
-				"Text76": {
+				"_Text__16791227_543": {
 					"type": "text",
 					"top": 46,
 					"left": 546,
@@ -8737,7 +8908,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,227"
 				},
-				"Text86": {
+				"_Text_Commission_544": {
 					"type": "text",
 					"top": 470,
 					"left": 29,
@@ -8748,7 +8919,7 @@
 					"textAlign": "right",
 					"text": "Commission"
 				},
-				"Variable7": {
+				"_VAR_bClipboard_545": {
 					"type": "pictureButton",
 					"top": 303,
 					"left": 57,
@@ -8768,7 +8939,7 @@
 						"onClick"
 					]
 				},
-				"Text75": {
+				"_Text_Proposal#_546": {
 					"type": "text",
 					"top": 20,
 					"left": 546,
@@ -8784,7 +8955,7 @@
 		},
 		{
 			"objects": {
-				"Rectangle26": {
+				"_Rectangle26_547": {
 					"type": "rectangle",
 					"top": 6,
 					"left": 226,
@@ -8793,7 +8964,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle25": {
+				"_Rectangle25_548": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 325,
@@ -8802,7 +8973,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle27": {
+				"_Rectangle27_549": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 325,
@@ -8811,7 +8982,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle46": {
+				"_Rectangle46_550": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 837,
@@ -8820,7 +8991,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle45": {
+				"_Rectangle45_551": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 837,
@@ -8829,13 +9000,13 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Field26806": {
+				"_PROP_Proposal_idNumTask_552": {
 					"type": "input",
 					"top": 18,
 					"left": 840,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNumTask:70",
+					"dataSource": "entry_o.idNumTask",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -8849,15 +9020,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNumTask:70"
 				},
-				"Field36662": {
+				"_PROP_Proposal_idNumProject_553": {
 					"type": "input",
 					"top": 44,
 					"left": 840,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNumProject:22",
+					"dataSource": "entry_o.idNumProject",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -8871,15 +9043,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNumProject:22"
 				},
-				"Field87": {
+				"_PROP_Customer_company_554": {
 					"type": "input",
 					"top": 18,
 					"left": 328,
 					"width": 210,
 					"height": 17,
-					"dataSource": "[Customer:2]company:2",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -8891,15 +9064,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]company:2"
 				},
-				"Field50": {
+				"_PROP_Customer_phone_555": {
 					"type": "input",
 					"top": 44,
 					"left": 328,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]phone:13",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -8917,15 +9091,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]phone:13"
 				},
-				"Field130": {
+				"_PROP_Customer_division_556": {
 					"type": "input",
 					"top": 44,
 					"left": 506,
 					"width": 32,
 					"height": 17,
-					"dataSource": "[Customer:2]division:70",
+					"dataSource": "entry_o.division",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -8939,9 +9114,10 @@
 					"method": "ObjectMethods/Field130.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]division:70"
 				},
-				"Variable33": {
+				"_VAR_b61_557": {
 					"type": "button",
 					"top": 17,
 					"left": 767,
@@ -8956,7 +9132,7 @@
 						"onHeader"
 					]
 				},
-				"Text74": {
+				"_Text_taskID_558": {
 					"type": "text",
 					"top": 20,
 					"left": 777,
@@ -8967,7 +9143,7 @@
 					"textAlign": "right",
 					"text": "taskID"
 				},
-				"Text82": {
+				"_Text_Job_559": {
 					"type": "text",
 					"top": 46,
 					"left": 777,
@@ -8978,7 +9154,7 @@
 					"textAlign": "right",
 					"text": "Job"
 				},
-				"Rectangle4": {
+				"_Rectangle4_560": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 643,
@@ -8987,7 +9163,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle24": {
+				"_Rectangle24_561": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 643,
@@ -8996,13 +9172,13 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Field51": {
+				"_PROP_Proposal_idNum_562": {
 					"type": "input",
 					"top": 18,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNum:5",
+					"dataSource": "entry_o.idNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -9016,15 +9192,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNum:5"
 				},
-				"Field52": {
+				"_PROP_Proposal_inquiryCode_563": {
 					"type": "input",
 					"top": 44,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]inquiryCode:6",
+					"dataSource": "entry_o.inquiryCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -9039,9 +9216,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]inquiryCode:6"
 				},
-				"Variable8": {
+				"_VAR_Dial It3_564": {
 					"type": "button",
 					"top": 43,
 					"left": 269,
@@ -9056,7 +9234,7 @@
 						"onHeader"
 					]
 				},
-				"Text69": {
+				"_Text__1678925_565": {
 					"type": "text",
 					"top": 20,
 					"left": 235,
@@ -9068,7 +9246,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,25"
 				},
-				"Text70": {
+				"_Text__1678912_566": {
 					"type": "text",
 					"top": 46,
 					"left": 235,
@@ -9080,7 +9258,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,12"
 				},
-				"Text72": {
+				"_Text__16791227_567": {
 					"type": "text",
 					"top": 46,
 					"left": 546,
@@ -9092,7 +9270,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,227"
 				},
-				"Text23": {
+				"_Text_OptKeytocompoundanswers.\r\rDouble-clickintheanswerareatowriteananswer._568": {
 					"type": "text",
 					"top": 658,
 					"left": 68,
@@ -9102,7 +9280,7 @@
 					"class": "cssInputLabel",
 					"text": "OptKey to compound answers.\r\rDouble-click in the answer area to write an answer."
 				},
-				"Text71": {
+				"_Text_Proposal#_569": {
 					"type": "text",
 					"top": 20,
 					"left": 546,
@@ -9114,13 +9292,13 @@
 					"fontStyle": "italic",
 					"text": "Proposal#"
 				},
-				"Field173": {
+				"_PROP_Proposal_contractDetail_570": {
 					"type": "input",
 					"top": 659,
 					"left": 369,
 					"width": 617,
 					"height": 49,
-					"dataSource": "[Proposal:42]contractDetail:92",
+					"dataSource": "entry_o.contractDetail",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -9133,9 +9311,10 @@
 					],
 					"enterable": false,
 					"sizingY": "grow",
-					"sizingX": "grow"
+					"sizingX": "grow",
+					"zzzdataSource": "[Proposal:42]contractDetail:92"
 				},
-				"Text221": {
+				"_Text_ContractDetail_571": {
 					"type": "text",
 					"top": 659,
 					"left": 300,
@@ -9175,7 +9354,7 @@
 		},
 		{
 			"objects": {
-				"Rectangle63": {
+				"_Rectangle63_574": {
 					"type": "rectangle",
 					"top": 6,
 					"left": 226,
@@ -9184,7 +9363,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle31": {
+				"_Rectangle31_575": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 643,
@@ -9193,7 +9372,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle47": {
+				"_Rectangle47_576": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 325,
@@ -9202,7 +9381,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle33": {
+				"_Rectangle33_577": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 643,
@@ -9211,7 +9390,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle48": {
+				"_Rectangle48_578": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 325,
@@ -9220,13 +9399,13 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Field134": {
+				"_PROP_Proposal_docReference_579": {
 					"type": "input",
 					"top": 549,
 					"left": 99,
 					"width": 243,
 					"height": 17,
-					"dataSource": "[Proposal:42]docReference:50",
+					"dataSource": "entry_o.docReference",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -9236,15 +9415,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]docReference:50"
 				},
-				"Field133": {
+				"_PROP_Proposal_docType_580": {
 					"type": "input",
 					"top": 549,
 					"left": 344,
 					"width": 64,
 					"height": 17,
-					"dataSource": "[Proposal:42]docType:49",
+					"dataSource": "entry_o.docType",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -9254,9 +9434,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]docType:49"
 				},
-				"Variable89": {
+				"_VAR_<>aWoTypes_581": {
 					"type": "dropdown",
 					"top": 547,
 					"left": 714,
@@ -9271,13 +9452,13 @@
 						"onClick"
 					]
 				},
-				"Field152": {
+				"_PROP_Proposal_primaryForm_582": {
 					"type": "input",
 					"top": 550,
 					"left": 837,
 					"width": 160,
 					"height": 17,
-					"dataSource": "[Proposal:42]primaryForm:80",
+					"dataSource": "entry_o.primaryForm",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -9288,9 +9469,10 @@
 					"method": "ObjectMethods/Field152.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]primaryForm:80"
 				},
-				"Variable268": {
+				"_VAR_ePPWos_583": {
 					"type": "plugin",
 					"top": 576,
 					"left": 99,
@@ -9308,7 +9490,7 @@
 					],
 					"customProperties": "QUxQIAADAAAAAAABFQAAAAEAAAAoAAAAAAABDwAAAAEAAAAAAAEPAAAAAQAAAAAAAQ8AAAABAAAAAAAAFQAAAAEAAABSAAAPAAAAAQAAAAAAAA8AAAABAAAAAAAADwAAAAEAAAAAAAAPAAAAAQAAAAAAABUAAAABAAAAPgAGR2VuZXZhDwAAAAEAAAAAAAkPAAAAAQAAAAAAABUAAAABAAAAUgAHRGVmYXVsdBUAAAABAAAAPgAGR2VuZXZhDwAAAAEAAAAAAAkPAAAAAQAAAAAAARUAAAABAAAAGAAFQmxhY2sVAAAAAQAAABgABUJsYWNrFQAAAAEAAAAYAAVCbGFjaxUAAAABAAAAGAAFV2hpdGUVAAAAAQAAABgABVdoaXRlFQAAAAEAAAAYAAVXaGl0ZRUAAAABAAAAUgAAFQAAAAEAAAA+AAZHZW5ldmEPAAAAAQAAAAAACQ8AAAABAAAAAAAADwAAAAEAAAAAAAEVAAAAAQAAACIAABUAAAABAAAAUgAADwAAAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAQAAAAAAAAAJAAAADQAAAAAAAAAAAAAAAAAAAAAHTm8gbGluZQVCbGFjawdObyBsaW5lBUJsYWNrAAAAAAAAAAEAAAAAG1NlbGVjdCB0aGUgY29sdW1ucyB0byBzb3J0OgAAAAAAAAABAAAAAQAAAAIAAAABAAAAAAAAAAEAAAACAAAAAAABAAAAAAAAAAAAAAABAAAAAAFcAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAVXaGl0ZQVXaGl0ZQVXaGl0ZQVXaGl0ZQ=="
 				},
-				"Variable3": {
+				"_VAR_b51_584": {
 					"type": "button",
 					"top": 544,
 					"left": 480,
@@ -9329,7 +9511,7 @@
 						"onClick"
 					]
 				},
-				"Variable88": {
+				"_VAR_b52_585": {
 					"type": "button",
 					"top": 544,
 					"left": 535,
@@ -9350,7 +9532,7 @@
 						"onClick"
 					]
 				},
-				"Variable277": {
+				"_VAR_b53_586": {
 					"type": "button",
 					"top": 547,
 					"left": 604,
@@ -9371,7 +9553,7 @@
 						"onClick"
 					]
 				},
-				"Text108": {
+				"_Text__16790149_587": {
 					"type": "text",
 					"top": 552,
 					"left": 429,
@@ -9381,7 +9563,7 @@
 					"class": "cssInputLabel",
 					"text": ":16790,149"
 				},
-				"Rectangle28": {
+				"_Rectangle28_588": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 837,
@@ -9390,7 +9572,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle29": {
+				"_Rectangle29_589": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 837,
@@ -9399,7 +9581,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Variable76": {
+				"_VAR_b61_590": {
 					"type": "button",
 					"top": 16,
 					"left": 766,
@@ -9413,13 +9595,13 @@
 						"onClick"
 					]
 				},
-				"Field131": {
+				"_PROP_Proposal_idNumTask_591": {
 					"type": "input",
 					"top": 18,
 					"left": 840,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]idNumTask:70",
+					"dataSource": "entry_o.idNumTask",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -9433,15 +9615,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]idNumTask:70"
 				},
-				"Field132": {
+				"_PROP_Proposal_projectNum_592": {
 					"type": "input",
 					"top": 44,
 					"left": 840,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]projectNum:22",
+					"dataSource": "entry_o.projectNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -9455,15 +9638,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]projectNum:22"
 				},
-				"Field150": {
+				"_PROP_Customer_company_593": {
 					"type": "input",
 					"top": 18,
 					"left": 328,
 					"width": 210,
 					"height": 17,
-					"dataSource": "[Customer:2]company:2",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -9475,15 +9659,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]company:2"
 				},
-				"Field147": {
+				"_PROP_Customer_phone_594": {
 					"type": "input",
 					"top": 44,
 					"left": 328,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[Customer:2]phone:13",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -9501,15 +9686,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]phone:13"
 				},
-				"Field151": {
+				"_PROP_Customer_divisionAccounting_595": {
 					"type": "input",
 					"top": 44,
 					"left": 506,
 					"width": 32,
 					"height": 17,
-					"dataSource": "[Customer:2]divisionAccounting:70",
+					"dataSource": "entry_o.divisionAccounting",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -9523,9 +9709,10 @@
 					"method": "ObjectMethods/Field151.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Customer:2]divisionAccounting:70"
 				},
-				"Text73": {
+				"_Text_taskID_596": {
 					"type": "text",
 					"top": 19,
 					"left": 777,
@@ -9536,7 +9723,7 @@
 					"textAlign": "right",
 					"text": "taskID"
 				},
-				"Text77": {
+				"_Text_Job_597": {
 					"type": "text",
 					"top": 45,
 					"left": 777,
@@ -9547,13 +9734,13 @@
 					"textAlign": "right",
 					"text": "Job"
 				},
-				"Field148": {
+				"_PROP_Proposal_proposalNum_598": {
 					"type": "input",
 					"top": 18,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]proposalNum:5",
+					"dataSource": "entry_o.proposalNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -9567,15 +9754,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]proposalNum:5"
 				},
-				"Field149": {
+				"_PROP_Proposal_inquiryCode_599": {
 					"type": "input",
 					"top": 44,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]inquiryCode:6",
+					"dataSource": "entry_o.inquiryCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -9590,9 +9778,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]inquiryCode:6"
 				},
-				"Variable87": {
+				"_VAR_Dial It3_600": {
 					"type": "button",
 					"top": 43,
 					"left": 269,
@@ -9606,7 +9795,7 @@
 						"onClick"
 					]
 				},
-				"Text84": {
+				"_Text__1678925_601": {
 					"type": "text",
 					"top": 19,
 					"left": 235,
@@ -9618,7 +9807,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,25"
 				},
-				"Text85": {
+				"_Text__1678912_602": {
 					"type": "text",
 					"top": 45,
 					"left": 235,
@@ -9630,7 +9819,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,12"
 				},
-				"Text88": {
+				"_Text__16791227_603": {
 					"type": "text",
 					"top": 45,
 					"left": 546,
@@ -9642,7 +9831,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,227"
 				},
-				"Variable77": {
+				"_VAR_bRiteSpecs_604": {
 					"type": "pictureButton",
 					"top": 542,
 					"left": 27,
@@ -9659,7 +9848,7 @@
 						"onClick"
 					]
 				},
-				"Text87": {
+				"_Text_Proposal#_605": {
 					"type": "text",
 					"top": 20,
 					"left": 546,
@@ -9757,7 +9946,7 @@
 						"onClick"
 					]
 				},
-				"Variable9": {
+				"_VAR_vItemPict_611": {
 					"type": "input",
 					"top": 118,
 					"left": 612,
@@ -9860,13 +10049,13 @@
 		},
 		{
 			"objects": {
-				"Field258": {
+				"_PROP_Proposal_obGeneral_613": {
 					"type": "input",
 					"top": 111,
 					"left": 8,
 					"width": 992,
 					"height": 569,
-					"dataSource": "[Proposal:42]obGeneral:93",
+					"dataSource": "entry_o.obGeneral",
 					"dataSourceTypeHint": "object",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -9877,7 +10066,8 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]obGeneral:93"
 				},
 				"Objectives": {
 					"type": "input",
@@ -9894,7 +10084,7 @@
 						"onDataChange"
 					]
 				},
-				"Text25": {
+				"_Text_ObGeneral_615": {
 					"type": "text",
 					"top": 90,
 					"left": 11,
@@ -9905,7 +10095,7 @@
 					"textAlign": "left",
 					"text": "ObGeneral"
 				},
-				"Text34": {
+				"_Text_Objective_616": {
 					"type": "text",
 					"top": 90,
 					"left": 133,
@@ -9916,7 +10106,7 @@
 					"textAlign": "left",
 					"text": "Objective"
 				},
-				"Rectangle39": {
+				"_Rectangle39_617": {
 					"type": "rectangle",
 					"top": 6,
 					"left": 226,
@@ -9925,7 +10115,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle52": {
+				"_Rectangle52_618": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 643,
@@ -9934,7 +10124,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle53": {
+				"_Rectangle53_619": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 325,
@@ -9943,7 +10133,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle54": {
+				"_Rectangle54_620": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 643,
@@ -9952,7 +10142,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle55": {
+				"_Rectangle55_621": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 325,
@@ -9961,7 +10151,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle56": {
+				"_Rectangle56_622": {
 					"type": "rectangle",
 					"top": 43,
 					"left": 837,
@@ -9970,7 +10160,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Rectangle57": {
+				"_Rectangle57_623": {
 					"type": "rectangle",
 					"top": 17,
 					"left": 837,
@@ -9979,7 +10169,7 @@
 					"fill": "transparent",
 					"stroke": "#666666"
 				},
-				"Variable41": {
+				"_VAR_b61_624": {
 					"type": "button",
 					"top": 16,
 					"left": 766,
@@ -9993,13 +10183,13 @@
 						"onClick"
 					]
 				},
-				"Field166": {
+				"_PROP_Proposal_taskid_625": {
 					"type": "input",
 					"top": 18,
 					"left": 840,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]taskid:70",
+					"dataSource": "entry_o.taskid",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -10013,15 +10203,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]taskid:70"
 				},
-				"Field167": {
+				"_PROP_Proposal_projectNum_626": {
 					"type": "input",
 					"top": 44,
 					"left": 840,
 					"width": 145,
 					"height": 17,
-					"dataSource": "[Proposal:42]projectNum:22",
+					"dataSource": "entry_o.projectNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -10035,15 +10226,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]projectNum:22"
 				},
-				"Field168": {
+				"_PROP_QQQCustomer_company_627": {
 					"type": "input",
 					"top": 18,
 					"left": 328,
 					"width": 210,
 					"height": 17,
-					"dataSource": "[QQQCustomer:2]company:2",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -10055,15 +10247,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[QQQCustomer:2]company:2"
 				},
-				"Field169": {
+				"_PROP_QQQCustomer_phone_628": {
 					"type": "input",
 					"top": 44,
 					"left": 328,
 					"width": 176,
 					"height": 17,
-					"dataSource": "[QQQCustomer:2]phone:13",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -10081,15 +10274,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[QQQCustomer:2]phone:13"
 				},
-				"Field170": {
+				"_PROP_QQQCustomer_divisionAccounting_629": {
 					"type": "input",
 					"top": 44,
 					"left": 506,
 					"width": 32,
 					"height": 17,
-					"dataSource": "[QQQCustomer:2]divisionAccounting:70",
+					"dataSource": "entry_o.divisionAccounting",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -10103,9 +10297,10 @@
 					"method": "ObjectMethods/Field170.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[QQQCustomer:2]divisionAccounting:70"
 				},
-				"Text112": {
+				"_Text_taskID_630": {
 					"type": "text",
 					"top": 19,
 					"left": 777,
@@ -10116,7 +10311,7 @@
 					"textAlign": "right",
 					"text": "taskID"
 				},
-				"Text113": {
+				"_Text_Job_631": {
 					"type": "text",
 					"top": 45,
 					"left": 777,
@@ -10127,13 +10322,13 @@
 					"textAlign": "right",
 					"text": "Job"
 				},
-				"Field171": {
+				"_PROP_Proposal_proposalNum_632": {
 					"type": "input",
 					"top": 18,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]proposalNum:5",
+					"dataSource": "entry_o.proposalNum",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -10147,15 +10342,16 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]proposalNum:5"
 				},
-				"Field172": {
+				"_PROP_Proposal_inquiryCode_633": {
 					"type": "input",
 					"top": 44,
 					"left": 646,
 					"width": 100,
 					"height": 17,
-					"dataSource": "[Proposal:42]inquiryCode:6",
+					"dataSource": "entry_o.inquiryCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -10170,9 +10366,10 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"zzzdataSource": "[Proposal:42]inquiryCode:6"
 				},
-				"Variable101": {
+				"_VAR_Dial It3_634": {
 					"type": "button",
 					"top": 43,
 					"left": 269,
@@ -10186,7 +10383,7 @@
 						"onClick"
 					]
 				},
-				"Text114": {
+				"_Text__1678925_635": {
 					"type": "text",
 					"top": 19,
 					"left": 235,
@@ -10198,7 +10395,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,25"
 				},
-				"Text117": {
+				"_Text__1678912_636": {
 					"type": "text",
 					"top": 45,
 					"left": 235,
@@ -10210,7 +10407,7 @@
 					"fontStyle": "italic",
 					"text": ":16789,12"
 				},
-				"Text119": {
+				"_Text__16791227_637": {
 					"type": "text",
 					"top": 45,
 					"left": 546,
@@ -10222,7 +10419,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,227"
 				},
-				"Text118": {
+				"_Text_Proposal#_638": {
 					"type": "text",
 					"top": 20,
 					"left": 546,

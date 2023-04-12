@@ -1,0 +1,85 @@
+﻿{"destination":"detailScreen","rightMargin":19,"bottomMargin":20,"menuBar":"Menu Bar #1","markerBody":220,"markerBreak":220,"markerFooter":230,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onDragOver","onPrintingDetail","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onLoadRecord","onAfterEdit","onBeginDragOver","onBoundVariableChange","onPageChange"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"Text7":{"type":"text","top":80,"left":28,"width":52,"height":14,"sizingX":"grow","stroke":"#000000","class":"cssInputLabel","fontWeight":"bold","text":"Counters"},"Text9":{"type":"text","top":121,"left":15,"width":85,"height":14,"class":"cssInputLabel","textAlign":"right","text":"Counter : "},"Text10":{"type":"text","top":147,"left":15,"width":85,"height":14,"class":"cssInputLabel","textAlign":"right","text":"dtLastSync : "},"Text11":{"type":"text","top":173,"left":15,"width":85,"height":14,"class":"cssInputLabel","textAlign":"right","text":"TableName : "},"Text12":{"type":"text","top":199,"left":15,"width":85,"height":14,"class":"cssInputLabel","textAlign":"right","text":"TableNum : "},"Counter":{"type":"input","top":119,"left":106,"width":128,"height":17,"dataSource":"[QQQCounter:41]Counter:1","dataSourceTypeHint":"integer","class":"cssInput","textAlign":"left","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"dtLastSync":{"type":"input","top":145,"left":106,"width":128,"height":17,"dataSource":"[QQQCounter:41]Status:5","class":"cssInput","textAlign":"left","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"TableName":{"type":"input","top":171,"left":106,"width":289,"height":17,"dataSource":"[QQQCounter:41]TableName:2","class":"cssInput","textAlign":"left","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"TableNum":{"type":"input","top":197,"left":106,"width":128,"height":17,"dataSource":"[QQQCounter:41]TableNum:4","dataSourceTypeHint":"integer","class":"cssInput","textAlign":"left","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Text1":{"type":"text","top":226,"left":15,"width":85,"height":14,"class":"cssInputLabel","textAlign":"right","text":"UniqueID : "},"TableNum1":{"type":"input","top":224,"left":106,"width":128,"height":17,"dataSource":"[QQQCounter:41]idUnique:6","dataSourceTypeHint":"integer","class":"cssInput","textAlign":"left","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Field5":{"type":"input","top":226,"left":262,"width":125,"height":16,"dataSource":"iLoLongInt1","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput16","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Field6":{"type":"input","top":226,"left":397,"width":125,"height":16,"dataSource":"iLoLongInt2","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput16","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Field7":{"type":"input","top":226,"left":535,"width":80,"height":16,"dataSource":"iLoLongInt3","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput16","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Text6":{"type":"text","top":209,"left":262,"width":125,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"center","text":"PendingMin"},"Text2":{"type":"text","top":209,"left":397,"width":125,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"center","text":"PendingMax"},"Text8":{"type":"text","top":209,"left":535,"width":65,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"center","text":"Records"},"bRebuildPending":{"type":"button","top":143,"left":262,"width":140,"height":22,"dataSource":"b12","tooltip":{"$ref":"/SOURCES/tips.json#/Report123456789"},"class":"cssInput16","focusable":false,"text":"Rebuild Pending","style":"bevel"},"iLoText1":{"type":"input","top":256,"left":27,"width":937,"height":421,"sizingX":"grow","sizingY":"grow","dataSource":"iLoText1","stroke":"#000000","class":"cssInput16","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","scrollbarVertical":"visible","dragging":"none","dropping":"none"},"Text":{"type":"text","top":68,"left":455,"width":150,"height":134,"class":"cssInputLabel","text":"Setable Counters\r[Customer]\r[Invoice]\r[Item]\r[Order]\r[PO]\r[Proposal]\r[Rep]\r[Vendor]\r[WorkOrder]"},"bShowPending":{"type":"button","top":116,"left":262,"width":140,"height":22,"dataSource":"b11","tooltip":{"$ref":"/SOURCES/tips.json#/Report123456789"},"class":"cssInput16","focusable":false,"text":"Show Pending","style":"bevel"},"Text3":{"type":"text","top":68,"left":688,"width":135,"height":50,"class":"cssInputLabel","text":"Automatic Counters\rAll with UniqueID named field and EventLogs\r"},"Text4":{"type":"text","top":8,"left":122,"width":333,"height":62,"class":"cssInputLabel","text":"Scripts:\r$protectedFieldNum:=STR_GetUniqueFieldNum{$tableNum})\r$protectedFieldSigned:=<>aUniqueFieldUnSorted{$tableNum}"},"bSListSequences":{"type":"button","top":110,"left":688,"width":140,"height":22,"dataSource":"b21","tooltip":{"$ref":"/SOURCES/tips.json#/Report123456789"},"class":"cssInput16","focusable":false,"text":"List Sequences","style":"bevel"},"bSetSequenceNum":{"type":"button","top":184,"left":688,"width":140,"height":22,"dataSource":"b22","tooltip":{"$ref":"/SOURCES/tips.json#/Report123456789"},"class":"cssInput16","focusable":false,"text":"Set Sequence Num","style":"bevel"},"Field1":{"type":"input","top":113,"left":852,"width":80,"height":16,"dataSource":"iLoLongInt4","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput16","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Text5":{"type":"text","top":91,"left":852,"width":109,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"left","text":"Sequence Current"},"Field2":{"type":"input","top":187,"left":852,"width":80,"height":16,"dataSource":"iLoLongInt5","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput16","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Text13":{"type":"text","top":169,"left":852,"width":109,"height":14,"stroke":"#000000","class":"cssInputLabel","textAlign":"left","text":"Sequence Desired"},"bAllRecords":{"type":"button","top":16,"left":547,"width":140,"height":22,"dataSource":"b23","tooltip":{"$ref":"/SOURCES/tips.json#/Report123456789"},"class":"cssInput16","focusable":false,"text":"All Records","style":"bevel"},"bNewRecord":{"type":"button","top":16,"left":769,"width":140,"height":22,"dataSource":"b24","tooltip":{"$ref":"/SOURCES/tips.json#/Report123456789"},"class":"cssInput16","focusable":false,"text":"New Record","style":"bevel"},"Line":{"type":"line","top":89,"left":649,"width":1,"height":155,"stroke":"#808080","startPoint":"bottomLeft"},"Text14":{"type":"text","top":69,"left":168,"width":85,"height":14,"class":"cssInputLabel","textAlign":"right","text":"Status : "},"Counter1":{"type":"input","top":67,"left":259,"width":136,"height":18,"dataSource":"[QQQCounter:41]Status:5","class":"cssInput","textAlign":"left","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{"objects":["Text7"]},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}}}

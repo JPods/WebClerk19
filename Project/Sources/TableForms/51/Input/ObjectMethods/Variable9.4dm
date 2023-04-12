@@ -1,1 +1,0 @@
-QUERY:C277([InventoryStack:29]; [InventoryStack:29]jrnlid:25=[PurchaseJournal:51]linkid:9)

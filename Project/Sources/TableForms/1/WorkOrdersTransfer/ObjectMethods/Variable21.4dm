@@ -31,12 +31,12 @@ Else
 		$k:=Size of array:C274($aUniqIds)
 		C_LONGINT:C283($i; $k)
 		C_LONGINT:C283($dtcurrent)
-		$dtcurrent:=DateTime_Enter
+		$dtcurrent:=DateTime_DTTo
 		//READ WRITE([WorkOrder])
 		//CREATE SET([WorkOrder];"Current")
 		
 		For ($i; 1; $k)
-			QUERY:C277([WorkOrder:66]; [WorkOrder:66]woNum:29=$aUniqIds{$i})
+			QUERY:C277([WorkOrder:66]; [WorkOrder:66]idNum:29=$aUniqIds{$i})
 			C_LONGINT:C283($workOrderNum)
 			//CONFIRM("Query and receive "+String([WorkOrder]WONum))
 			
@@ -44,7 +44,7 @@ Else
 				[WorkOrder:66]action:33:="ClosedTransfer"
 				//### jwm ### 20130128_1541
 				//[WorkOrder]DateCompleted:=$dtcurrent
-				jDateTimeRecov($dtcurrent; ->[WorkOrder:66]dateComplete:64)
+				DateTime_DTFrom($dtcurrent; ->[WorkOrder:66]dateComplete:64)
 				SAVE RECORD:C53([WorkOrder:66])
 			End if 
 			

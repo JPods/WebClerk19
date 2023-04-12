@@ -1,5 +1,5 @@
 //%attributes = {"publishedWeb":true}
-//SEARCH([TallyMaster];[TallyMaster]DTNextStart<DateTime_Enter)
+//SEARCH([TallyMaster];[TallyMaster]DTNextStart<DateTime_DTTo)
 //$k:=Records in selection([TallyMaster])
 //C_LONGINT($k;$i)
 //FIRST RECORD([TallyMaster])

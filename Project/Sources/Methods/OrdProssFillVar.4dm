@@ -24,8 +24,8 @@ vDate1:=[Order:3]dateNeeded:5
 vTime1:=[Order:3]actionTime:37
 vDate2:=[Order:3]dateDocument:4
 vTime2:=[Order:3]timeOrdered:58
-jDateTimeRecov([Order:3]dtProdRelease:56; ->vDate3; ->vTime3)
-jDateTimeRecov([Order:3]dtProdCompl:57; ->vDate4; ->vTime4)
+DateTime_DTFrom([Order:3]dtProdRelease:56; ->vDate3; ->vTime3)
+DateTime_DTFrom([Order:3]dtProdCompl:57; ->vDate4; ->vTime4)
 vDate5:=[Order:3]dateInvoiceComp:6
 //  Put  the formating in the form  jFormatPhone(->v4; ->v5)
 //

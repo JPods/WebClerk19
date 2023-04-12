@@ -79,7 +79,7 @@ If (Application type:C494#4D Server:K5:6)
 	var $tableParent : Text
 	var $oParent : Object
 	If (process_o.cur#Null:C1517)
-		$tableParent:=process_o.tableName
+		$tableParent:=process_o.dataClassName
 		$oParent:=process_o.cur
 	Else 
 		$oParent:=Null:C1517

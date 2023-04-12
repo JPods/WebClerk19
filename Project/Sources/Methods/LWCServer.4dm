@@ -65,6 +65,9 @@ If ($findInArray>0)
 					$itemNum:=WCapi_GetParameter("ItemNum"; "")
 					//Not required, this will be set to [Item]LIComment
 					$LIComment:=WCapi_GetParameter("LIComment"; "")
+					If ($LIComment="")
+						$LIComment:=WCapi_GetParameter("DescriptionDetail"; "")
+					End if 
 					$Description:=WCapi_GetParameter("Description"; "")
 					
 					C_TEXT:C284(<>vtMore; <>vtDescription)

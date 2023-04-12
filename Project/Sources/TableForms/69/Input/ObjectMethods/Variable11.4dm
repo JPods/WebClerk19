@@ -1,1 +1,0 @@
-entryEntity.BillingType:=DE_PopUpArray(Self:C308)

@@ -75,7 +75,7 @@ $default_o.financeCharge:=$rec_o.financeChargePC
 
 // Modified by: Bill James (2015-07-19T00:00:00 Setting help sources, renamed the field
 // changed aPages in iLo and help in oLo
-If ($rec_o.helpSource<1)  // popup in layout sets 1 to WebClerk.com, 2 to <>vLocalHost, 3 to both
+If ($rec_o.helpSource<1)  // popup in layout sets 1 to WebClerk.com, 2 to Storage.wc.localHost, 3 to both
 	$rec_o.helpSource:=1
 End if 
 <>viHelpSet:=$rec_o.helpSource  // used in page popup help HelpPopUp 
@@ -212,9 +212,9 @@ $default_o.invoiceComment:=$rec_o.invoiceComment
 $default_o.company:=$rec_o.company  //17
 
 
-//ConsoleMessage ("TEST: menuTitle")
+//Console_Log ("TEST: MenuTitle")
 
-$default_o.menuTitle:=Storage:C1525.version.title+":  "+$default_o.company
+$default_o.MenuTitle:=Storage:C1525.version.title+":  "+$default_o.company
 
 $default_o.division:=$rec_o.division
 $default_o.address1:=$rec_o.address1  //20 removed a line space above and below
@@ -334,7 +334,7 @@ C_LONGINT:C283(<>tciItQtyPre)
 ARRAY LONGINT:C221(<>yZonRow; 0)  //test values
 ARRAY LONGINT:C221(<>yZonColMdl; 0)
 //End if 
-//ConsoleMessage ("TEST: RECORD($rec_o.")
+//Console_Log ("TEST: RECORD($rec_o.")
 
 If ($rec_o.prcssMemory<16000)
 	$rec_o.prcssMemory:=64000
@@ -446,7 +446,7 @@ Else
 		Else 
 			// gkgkgk
 			// ### jwm ### 20180830_0958
-			DefaultSetupsCreate("<>tcBrand"; $default_o.company; "Is text"; "WebClerk"; "[WebClerk]Input"; "Collapsable menu brand name")
+			
 	End case 
 End if 
 REDUCE SELECTION:C351([DefaultSetup:86]; 0)

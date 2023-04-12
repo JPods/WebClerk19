@@ -23,7 +23,7 @@ C_REAL:C285($0; $backlog)
 //
 READ WRITE:C146([OrderLine:49])
 REDUCE SELECTION:C351([OrderLine:49]; 0)
-QUERY:C277([OrderLine:49]; [OrderLine:49]orderNum:1=[Order:3]orderNum:2)
+QUERY:C277([OrderLine:49]; [OrderLine:49]idNumOrder:1=[Order:3]idNum:2)
 C_LONGINT:C283($incBL; $cntBL)
 $cntBL:=Records in selection:C76([OrderLine:49])
 C_REAL:C285($backlog)
@@ -34,13 +34,13 @@ FIRST RECORD:C50([OrderLine:49])
 For ($incBL; 1; $cntBL)
 	$backlog:=$backlog+[OrderLine:49]backOrdAmount:26
 	[OrderLine:49]commentProcess:60:=String:C10(Current date:C33)+"; QtyBLQ; "+String:C10([OrderLine:49]qtyBackLogged:8)+"; AmountBL; "+String:C10([OrderLine:49]backOrdAmount:26)+"; Converted to Bulk Commission"
-	viOrdLnCnt:=MaxValueReturn(viOrdLnCnt; [OrderLine:49]sequence:30)
-	[OrderLine:49]profileReal2:63:=[OrderLine:49]qtyBackLogged:8
+	viOrdLnCnt:=MaxValueReturn(viOrdLnCnt; [OrderLine:49]seq:30)
+	//[OrderLine]obHistory:=[OrderLine]qtyBackLogged
 	[OrderLine:49]dateShipOn:38:=Current date:C33
 	[OrderLine:49]unitofMeasure:19:="BulkCommConvert"
 	[OrderLine:49]backOrdAmount:26:=0
 	[OrderLine:49]qtyBackLogged:8:=0
-	[OrderLine:49]qtyShipped:7:=[OrderLine:49]qtyOrdered:6
+	[OrderLine:49]qtyShipped:7:=[OrderLine:49]qty:6
 	[OrderLine:49]complete:48:=True:C214
 	SAVE RECORD:C53([OrderLine:49])
 	NEXT RECORD:C51([OrderLine:49])

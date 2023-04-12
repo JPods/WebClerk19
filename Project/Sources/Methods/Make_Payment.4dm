@@ -346,7 +346,7 @@ If ($payAmount1>0)
 		[Payment:28]checkNum:12:=[Customer:2]zip:8
 		[Payment:28]bankFrom:9:=[Customer:2]address1:4
 		[Payment:28]dateDocument:10:=Current date:C33
-		[Payment:28]dtCC:58:=DateTime_Enter
+		[Payment:28]dtCC:58:=DateTime_DTTo
 		[Payment:28]creditCardEncode:50:=CC_EncodeDecode(1; $creditCard; ->[Payment:28]creditCardBlob:53)  //pCreditCard zzzBJ 06/12/10 This is ##xxxxx## cc number
 		[Payment:28]creditCardNum:13:=CC_ReturnXedOutCardNum($creditCard)
 		[Payment:28]nameOnAcct:11:=$cardName

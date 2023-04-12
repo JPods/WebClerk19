@@ -46,7 +46,7 @@ Case of
 		ARRAY DATE:C224(aWoTaskDateComplete; $k)
 		ARRAY LONGINT:C221(aWoTaskTimeComplete; $k)
 		For ($i; 1; $k)
-			jDateTimeRecov(aWoTaskDTComplete{$i}; ->iLoDate13; ->iLoTime13)
+			DateTime_DTFrom(aWoTaskDTComplete{$i}; ->iLoDate13; ->iLoTime13)
 			aWoTaskDateComplete{$i}:=iLoDate13
 			aWoTaskTimeComplete{$i}:=iLoTime13*1
 		End for 
@@ -96,7 +96,7 @@ Case of
 		[WorkOrderTask:67]action:3:=aWOTaskAction{$2}
 		[WorkOrderTask:67]actionBy:7:=aWOTaskActionBy{$2}
 		[WorkOrderTask:67]comment:8:=aWoTaskComment{$2}
-		aWoTaskDTComplete{$2}:=DateTime_Enter(aWoTaskDateComplete{$2}; aWoTaskTimeComplete{$2})
+		aWoTaskDTComplete{$2}:=DateTime_DTTo(aWoTaskDateComplete{$2}; aWoTaskTimeComplete{$2})
 		[WorkOrderTask:67]dtComplete:6:=aWoTaskDTComplete{$2}
 		[WorkOrderTask:67]itemNum:1:=aWoTaskItemNum{$2}
 		[WorkOrderTask:67]safety:5:=aWoTaskSafety{$2}

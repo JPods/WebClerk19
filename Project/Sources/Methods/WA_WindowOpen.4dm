@@ -25,15 +25,15 @@ Else
 	Process_InitLocal
 	
 	C_LONGINT:C283($fia)
-	$fia:=Find in array:C230(<>aPrsNum; Current process:C322)
-	If ($fia>0)
-		<>aPrsName{$fia}:="WebClerk Store"
-	End if 
-	POST OUTSIDE CALL:C329(<>theProcessList)
-	//jCenter4DWindow (850;500;8;"Record Passing";"CancelCommand")
-	$winid:=Open form window:C675([Control:1]; "WebClerkStore"; Plain form window:K39:10; Horizontally centered:K39:1; Vertically centered:K39:4)
-	DIALOG:C40([Control:1]; "WebClerkStore")
-	CLOSE WINDOW:C154($winid)
-	POST OUTSIDE CALL:C329(<>theProcessList)
+	POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
+	$obWindows:=WindowCountToShow
+	$form_t:="WebArea"
+	var $new_o : Object
+	$new_o:=New object:C1471
+	$new_o.window:=Open form window:C675($form_t; Plain form window:K39:10; $obWindows.leftOffset; 53+$obWindows.topOffset; *)
+	$new_o.parentProcess:=Current process:C322
+	
+	DIALOG:C40($form_t; $new_o)
+	POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 	
 End if 

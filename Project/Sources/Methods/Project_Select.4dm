@@ -127,13 +127,8 @@ Case of
 			REDUCE SELECTION:C351([Service:6]; 0)
 		End if 
 	: (ptCurTable=(->[CallReport:34]))
+		$masterFile:=(->[Customer:2])
 		
-		If ([CallReport:34]tableNum:2=Table:C252(->[Lead:48]))
-			C_POINTER:C301($masterFile)
-			$masterFile:=(->[Lead:48])
-		Else 
-			$masterFile:=(->[Customer:2])
-		End if 
 		$fillerCnt:=Records in selection:C76($masterFile->)-1
 		CONFIRM:C162("Clone this Call record for the current selection of "+String:C10($fillerCnt; "###,###")+".")
 		If (OK=1)
@@ -151,25 +146,17 @@ Case of
 					ADD TO SET:C119([CallReport:34]; "<>curSelSet")
 				End if 
 				DUPLICATE RECORD:C225([CallReport:34])
-				If ([CallReport:34]tableNum:2=Table:C252(->[Lead:48]))
-					[CallReport:34]actionBy:3:=[Lead:48]salesNameID:13
-					[CallReport:34]customerID:1:=String:C10([Lead:48]idNum:32)
-					[CallReport:34]attention:18:=[Lead:48]nameFirst:1+" "+[Lead:48]nameLast:2
-					[CallReport:34]company:42:=[Lead:48]company:5
-					[CallReport:34]phone:36:=[Lead:48]phone:4
-					[CallReport:34]email:38:=[Lead:48]email:33
-					NEXT RECORD:C51([Lead:48])
-				Else 
-					[CallReport:34]actionBy:3:=[Customer:2]salesNameID:59
-					[CallReport:34]customerID:1:=[Customer:2]customerID:1
-					[CallReport:34]company:42:=[Customer:2]company:2
-					[CallReport:34]attention:18:=[Customer:2]nameFirst:73+" "+[Customer:2]nameLast:23
-					
-					[CallReport:34]phone:36:=[Customer:2]phone:13
-					[CallReport:34]email:38:=[Customer:2]email:81
-					[CallReport:34]emailStatus:45:=[Customer:2]emailStatus:138
-					NEXT RECORD:C51([Customer:2])
-				End if 
+				
+				[CallReport:34]actionBy:3:=[Customer:2]salesNameID:59
+				[CallReport:34]customerID:1:=[Customer:2]customerID:1
+				[CallReport:34]company:42:=[Customer:2]company:2
+				[CallReport:34]attention:18:=[Customer:2]nameFirst:73+" "+[Customer:2]nameLast:23
+				
+				[CallReport:34]phone:36:=[Customer:2]phone:13
+				[CallReport:34]email:38:=[Customer:2]email:81
+				[CallReport:34]emailStatus:45:=[Customer:2]emailStatus:138
+				NEXT RECORD:C51([Customer:2])
+				
 			End for 
 			booSorted:=False:C215
 			SAVE RECORD:C53([CallReport:34])

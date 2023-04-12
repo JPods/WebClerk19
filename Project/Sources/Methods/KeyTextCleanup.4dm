@@ -12,7 +12,7 @@
 // ----------------------------------------------------
 
 C_POINTER:C301($vpKeyText)
-$vpKeyText:=OBJECT Get pointer:C1124(Object current:K67:2)
+$vpKeyText:=OBJECT Get pointer:C1124("SF_Draft")
 
 $myKeyWords:=$vpKeyText->  // ### jwm ### 20160719_1643 clear keywords built below
 $myKeyWords:=Replace string:C233($myKeyWords; "\r"; " ")

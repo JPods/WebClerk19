@@ -1,1 +1,0 @@
-entryEntity.salesNameID:=DE_PopUpArray(-><>aComNameID)

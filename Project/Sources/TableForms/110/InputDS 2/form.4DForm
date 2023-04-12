@@ -1,0 +1,1206 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 568,
+	"markerBreak": 568,
+	"markerFooter": 585,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "612pt",
+		"orientation": "landscape"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Rectangle5_1": {
+					"type": "rectangle",
+					"top": 456,
+					"left": 51,
+					"width": 855,
+					"height": 194,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_VAR_b2_2": {
+					"type": "button",
+					"top": 81,
+					"left": 135,
+					"width": 129,
+					"height": 17,
+					"dataSource": "b2",
+					"display": false,
+					"method": "ObjectMethods/Variable67.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_Manufacturer_3": {
+					"type": "text",
+					"top": 24,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Manufacturer"
+				},
+				"_Text_Acct@mfr_mfrID_4": {
+					"type": "text",
+					"top": 81,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Acct@mfr/mfrID"
+				},
+				"_Text_null_5": {
+					"type": "text",
+					"top": 103,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right"
+				},
+				"_Text_LastUpdate_UniqID_6": {
+					"type": "text",
+					"top": 48,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "LastUpdate/UniqID"
+				},
+				"_VAR_b1_7": {
+					"type": "button",
+					"top": 103,
+					"left": 138,
+					"width": 124,
+					"height": 18,
+					"dataSource": "b1",
+					"display": false,
+					"method": "ObjectMethods/Variable46.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"TableNum1": {
+					"type": "input",
+					"top": 22,
+					"left": 288,
+					"width": 413,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]manufacturerName:5",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTLastUpdate": {
+					"type": "input",
+					"top": 46,
+					"left": 288,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]dateLastUpdate:7",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID": {
+					"type": "input",
+					"top": 46,
+					"left": 410,
+					"width": 119,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]idNum:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNumMaster": {
+					"type": "input",
+					"top": 79,
+					"left": 288,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]mfrID:3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNumMaster1": {
+					"type": "input",
+					"top": 79,
+					"left": 410,
+					"width": 119,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]mfrID:3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"custVendID": {
+					"type": "input",
+					"top": 103,
+					"left": 288,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]customerID:2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ValueID": {
+					"type": "input",
+					"top": 103,
+					"left": 410,
+					"width": 492,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]customerName:6",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"custVendID1": {
+					"type": "input",
+					"top": 127,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "[MfrCustomerXRef:110]zipCustomer:8",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_MfrCustomerXRef_PublishStatus_16": {
+					"type": "input",
+					"top": 161,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.PublishStatus",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]PublishStatus:11"
+				},
+				"_PROP_MfrCustomerXRef_StatusRelationship_17": {
+					"type": "input",
+					"top": 185,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.StatusRelationship",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]StatusRelationship:12"
+				},
+				"_PROP_MfrCustomerXRef_StatusFinancial_18": {
+					"type": "input",
+					"top": 209,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.StatusFinancial",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]StatusFinancial:13"
+				},
+				"_PROP_MfrCustomerXRef_DateLastOrder_19": {
+					"type": "input",
+					"top": 233,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.DateLastOrder",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]DateLastOrder:14"
+				},
+				"_PROP_MfrCustomerXRef_SalesLastAmount_20": {
+					"type": "input",
+					"top": 257,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.SalesLastAmount",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]SalesLastAmount:30"
+				},
+				"_PROP_MfrCustomerXRef_SalesYTD_21": {
+					"type": "input",
+					"top": 293,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.SalesYTD",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]SalesYTD:15"
+				},
+				"_PROP_MfrCustomerXRef_SalesPlanned_22": {
+					"type": "input",
+					"top": 317,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.SalesPlanned",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]SalesPlanned:16"
+				},
+				"_PROP_MfrCustomerXRef_BookingsYTD_23": {
+					"type": "input",
+					"top": 341,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.BookingsYTD",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]BookingsYTD:20"
+				},
+				"_PROP_MfrCustomerXRef_ShipPreference_24": {
+					"type": "input",
+					"top": 365,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.ShipPreference",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]ShipPreference:35"
+				},
+				"_PROP_MfrCustomerXRef_Division_25": {
+					"type": "input",
+					"top": 389,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.Division",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Division:36"
+				},
+				"_PROP_MfrCustomerXRef_Terms_26": {
+					"type": "input",
+					"top": 413,
+					"left": 288,
+					"width": 241,
+					"height": 17,
+					"dataSource": "entry_o.Terms",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Terms:32"
+				},
+				"_PROP_MfrCustomerXRef_RepID_27": {
+					"type": "input",
+					"top": 22,
+					"left": 786,
+					"width": 117,
+					"height": 17,
+					"dataSource": "entry_o.RepID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]RepID:33"
+				},
+				"_PROP_MfrCustomerXRef_SalesID_28": {
+					"type": "input",
+					"top": 46,
+					"left": 786,
+					"width": 117,
+					"height": 17,
+					"dataSource": "entry_o.SalesID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]SalesID:34"
+				},
+				"_PROP_MfrCustomerXRef_Profile1_29": {
+					"type": "input",
+					"top": 138,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile1:17"
+				},
+				"_PROP_MfrCustomerXRef_Profile2_30": {
+					"type": "input",
+					"top": 162,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile2:18"
+				},
+				"_PROP_MfrCustomerXRef_Profile3_31": {
+					"type": "input",
+					"top": 186,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile3:19"
+				},
+				"_PROP_MfrCustomerXRef_Profile4_32": {
+					"type": "input",
+					"top": 210,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile4:21"
+				},
+				"_PROP_MfrCustomerXRef_Profile5_33": {
+					"type": "input",
+					"top": 234,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile5",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile5:22"
+				},
+				"_PROP_MfrCustomerXRef_Profile6_34": {
+					"type": "input",
+					"top": 258,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile6",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile6:23"
+				},
+				"_PROP_MfrCustomerXRef_Profile7_35": {
+					"type": "input",
+					"top": 282,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile7",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile7:24"
+				},
+				"_PROP_MfrCustomerXRef_Profile8_36": {
+					"type": "input",
+					"top": 307,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile8",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile8:25"
+				},
+				"_PROP_MfrCustomerXRef_Profile9_37": {
+					"type": "input",
+					"top": 331,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile9",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile9:26"
+				},
+				"_PROP_MfrCustomerXRef_Profile10_38": {
+					"type": "input",
+					"top": 355,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile10",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile10:27"
+				},
+				"_PROP_MfrCustomerXRef_Profile11_39": {
+					"type": "input",
+					"top": 379,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile11",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile11:28"
+				},
+				"_PROP_MfrCustomerXRef_Profile12_40": {
+					"type": "input",
+					"top": 403,
+					"left": 710,
+					"width": 193,
+					"height": 17,
+					"dataSource": "entry_o.Profile12",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Profile12:29"
+				},
+				"_PROP_MfrCustomerXRef_Comment_41": {
+					"type": "input",
+					"top": 457,
+					"left": 54,
+					"width": 836,
+					"height": 192,
+					"dataSource": "entry_o.Comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[MfrCustomerXRef:110]Comment:10"
+				},
+				"_Text_customerID_Name_42": {
+					"type": "text",
+					"top": 105,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "customerID/Name"
+				},
+				"_Text_StatusPublish_43": {
+					"type": "text",
+					"top": 163,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "StatusPublish"
+				},
+				"_Text_null_44": {
+					"type": "text",
+					"top": 123,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right"
+				},
+				"_Text_Zip_45": {
+					"type": "text",
+					"top": 129,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Zip"
+				},
+				"_Text_StatusRelationship_46": {
+					"type": "text",
+					"top": 187,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "StatusRelationship"
+				},
+				"_Text_StatusFinancial_47": {
+					"type": "text",
+					"top": 209,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "StatusFinancial"
+				},
+				"_Text_DateLastOrder_48": {
+					"type": "text",
+					"top": 235,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DateLast Order"
+				},
+				"_Text_SalesActual_49": {
+					"type": "text",
+					"top": 295,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "SalesActual"
+				},
+				"_Text_SalesPlanned_50": {
+					"type": "text",
+					"top": 319,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sales Planned"
+				},
+				"_Text_Profile1_51": {
+					"type": "text",
+					"top": 140,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile1"
+				},
+				"_Text_Profile2_52": {
+					"type": "text",
+					"top": 164,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile2"
+				},
+				"_Text_Profile3_53": {
+					"type": "text",
+					"top": 188,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile3"
+				},
+				"_Text_Bookings_54": {
+					"type": "text",
+					"top": 343,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Bookings"
+				},
+				"_Text_Profile4_55": {
+					"type": "text",
+					"top": 212,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile4"
+				},
+				"_Text_Profile5_56": {
+					"type": "text",
+					"top": 236,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile5"
+				},
+				"_Text_Profile6_57": {
+					"type": "text",
+					"top": 260,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile6"
+				},
+				"_Text_Profile7_58": {
+					"type": "text",
+					"top": 284,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile7"
+				},
+				"_Text_Profile8_59": {
+					"type": "text",
+					"top": 309,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile8"
+				},
+				"_Text_Profile9_60": {
+					"type": "text",
+					"top": 333,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile9"
+				},
+				"_Text_Profile10_61": {
+					"type": "text",
+					"top": 357,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile10"
+				},
+				"_Text_Profile11_62": {
+					"type": "text",
+					"top": 381,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile11"
+				},
+				"_Text_Profile12_63": {
+					"type": "text",
+					"top": 405,
+					"left": 574,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile12"
+				},
+				"_Text_Comment_64": {
+					"type": "text",
+					"top": 440,
+					"left": 52,
+					"width": 188,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Comment"
+				},
+				"_Text_SalesLastAmount_65": {
+					"type": "text",
+					"top": 259,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "SalesLastAmount"
+				},
+				"_Text_RepID_66": {
+					"type": "text",
+					"top": 24,
+					"left": 651,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "RepID"
+				},
+				"_Text_salesNameID_67": {
+					"type": "text",
+					"top": 48,
+					"left": 651,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "salesNameID"
+				},
+				"_Text_ShipPreference_68": {
+					"type": "text",
+					"top": 367,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ShipPreference"
+				},
+				"_Text_Division_69": {
+					"type": "text",
+					"top": 392,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Division"
+				},
+				"_Text_Terms_70": {
+					"type": "text",
+					"top": 415,
+					"left": 152,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Terms"
+				},
+				"_VAR_<>pNavPallet_71": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_72": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_73": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_74": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_75": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_76": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 2
+}

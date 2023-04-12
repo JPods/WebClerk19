@@ -17,11 +17,11 @@
 //If (Records in selection([Order])=1)  //  & ([RemoteUser]customerID=[Order]mfrID))
 If ((Record number:C243([Order:3])>-1) & (Not:C34(Locked:C147([Order:3]))))
 	//
-	READ ONLY:C145([ManufacturerTerm:111])
-	QUERY:C277([ManufacturerTerm:111]; [ManufacturerTerm:111]customerID:1=[Order:3]mfrID:52)
+	READ ONLY:C145([zzzManufacturerTerm:111])
+	QUERY:C277([zzzManufacturerTerm:111]; [zzzManufacturerTerm:111]customerID:1=[Order:3]mfrID:52)
 	//
 	C_LONGINT:C283($cntMfrTerms)
-	$cntMfrTerms:=Records in selection:C76([ManufacturerTerm:111])
+	$cntMfrTerms:=Records in selection:C76([zzzManufacturerTerm:111])
 	If ($cntMfrTerms#1)
 		If (allowAlerts_boo)
 			ALERT:C41("[Order]mfrID of "+[Order:3]mfrID:52+" has "+String:C10($cntMfrTerms)+" ManufactureTerms Records")
@@ -61,11 +61,12 @@ If ((Record number:C243([Order:3])>-1) & (Not:C34(Locked:C147([Order:3]))))
 			//  //$backlog:=OrdersFlowToCommission (4)//Item record must already be the selection
 			$backlog:=OrdersFlowToCommission(4)  //Item record must already be the selection
 			//  //[Order]Flow:=4
-			CMANewCommOrderLine(-1; $backlog; $backlog; Current date:C33; "CommWindow"; "exact"; 0; vR2; vR4)
-			CMAComOrderOneLine(4)
 			
-			//  CMANewCommOrderLine (-1;uReal1;$backlog;Current date;"CommWindow";"exact";uInteger1;vR2;vR4)
-			//  CMAComOrderOneLine (4;uInteger1+1;0)
+			
+			// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+			//CMANewCommOrderLine(-1; $backlog; $backlog; Current date; "CommWindow"; "exact"; 0; vR2; vR4)
+			//CMAComOrderOneLine(4)
+			
 			
 			// Modified by: Bill James (2015-12-16T00:00:00 Convert_2_v14)
 			//[Order]Flow:=4
@@ -76,7 +77,7 @@ If ((Record number:C243([Order:3])>-1) & (Not:C34(Locked:C147([Order:3]))))
 			[Order:3]salesCommission:11:=Round:C94([Order:3]amount:24*[OrderLine:49]commRateSales:29*0.01; 2)
 			[Order:3]total:27:=[OrderLine:49]extendedPrice:11
 			[Order:3]amountBackLog:54:=[OrderLine:49]backOrdAmount:26
-			[Order:3]lng:34:=DateTime_Enter
+			[Order:3]lng:34:=DateTime_DTTo
 			SAVE RECORD:C53([Order:3])
 		End if 
 		// CMAComInvoiceOneLine (1)  
@@ -98,7 +99,7 @@ If ((Record number:C243([Order:3])>-1) & (Not:C34(Locked:C147([Order:3]))))
 			End if 
 		End if 
 		SAVE RECORD:C53([Invoice:26])
-		READ WRITE:C146([ManufacturerTerm:111])
+		READ WRITE:C146([zzzManufacturerTerm:111])
 	End if 
 End if 
 //  //End if 

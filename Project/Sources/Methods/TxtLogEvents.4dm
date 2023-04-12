@@ -9,7 +9,7 @@ End if
 C_TEXT:C284($reportFolder; $1; $strTime; $strDate; $2; $3; $4; $5)
 C_LONGINT:C283($paraCount)
 $paraCount:=Count parameters:C259
-$docName:=String:C10(DateTime_Enter)+".txt"
+$docName:=String:C10(DateTime_DTTo)+".txt"
 $strDate:=String:C10(Current date:C33)
 $strTime:=String:C10(Current time:C178)
 $reportFolder:=Storage:C1525.folder.jitF+$1+Folder separator:K24:12

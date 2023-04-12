@@ -32,9 +32,9 @@ If (OK=1)
 			//$vResultPlan:=Get last query plan(Description in text format)
 			//$vResultPath:=Get last query path(Description in text format)
 			
-			//ConsoleMessage ($vResultPlan)
-			//ConsoleMessage ($vResultPath)
-			//ConsoleMessage ("\r")
+			//Console_Log ($vResultPlan)
+			//Console_Log ($vResultPath)
+			//Console_Log ("\r")
 			
 			//DESCRIBE QUERY EXECUTION(False)  //End of analysis mode
 			
@@ -56,11 +56,11 @@ If (OK=1)
 				
 				ProgressUpdate($viProgressID; $vi1; $vi2; "Calculating Inventory...")
 				
-				$viDateItem:=DateTime_Enter($vdDate; ?23:59:00?)
+				$viDateItem:=DateTime_DTTo($vdDate; ?23:59:00?)
 				
 				$vdDateStart:=Add to date:C393($vdDate; -1; 0; 0)
 				
-				$viDateStart:=DateTime_Enter($vdDateStart; ?23:59:00?)
+				$viDateStart:=DateTime_DTTo($vdDateStart; ?23:59:00?)
 				
 				$vtItemNum:=[Item:4]itemNum:1
 				

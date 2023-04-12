@@ -60,7 +60,7 @@ Else
 				Data_vCardIn($folderPath+$aDocList{$incDocs}; $script; "current"; "duplicate"; $groupName)
 			End if 
 			If (Test path name:C476($processedPath+$aDocList{$incDocs})=1)  // already exists
-				$newName:=String:C10(DateTime_Enter)+"_"+$aDocList{$incDocs}
+				$newName:=String:C10(DateTime_DTTo)+"_"+$aDocList{$incDocs}
 				MOVE DOCUMENT:C540($folderPath+$aDocList{$incDocs}; $folderPath+$newName)
 				MOVE DOCUMENT:C540($folderPath+$newName; $processedPath+$newName)
 			Else 

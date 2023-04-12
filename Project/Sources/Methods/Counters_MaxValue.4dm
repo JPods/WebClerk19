@@ -60,9 +60,9 @@ If (False:C215)  // transfer the existing counters, then let the walkover featur
 				READ WRITE:C146([Counter:41])
 				QUERY:C277([Counter:41]; [Counter:41]tableNum:4=$tableNum)
 				If (Locked:C147([Counter:41]))
-					ConsoleMessage($tableName+": LOCKED: Setting Counter to Max")
+					ConsoleLog($tableName+": LOCKED: Setting Counter to Max")
 				Else 
-					ConsoleMessage($tableName+": Setting Counter to Max")
+					ConsoleLog($tableName+": Setting Counter to Max")
 					$protectedFieldNum:=STR_GetUniqueFieldNum($tableName)
 					$ptField:=Field:C253($tableNum; $protectedFieldNum)
 					$theType:=Type:C295($ptField->)

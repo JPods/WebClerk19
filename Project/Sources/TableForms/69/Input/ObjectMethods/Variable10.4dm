@@ -1,1 +1,0 @@
-entryEntity.ActionBy:=DE_PopUpArray(Self:C308)

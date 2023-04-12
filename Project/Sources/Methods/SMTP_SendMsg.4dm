@@ -76,36 +76,36 @@ End case
 vtEmailMessageLog:=""
 vtEmailMessageLog:=vtEmailMessageLog+" vtEmailReceiver: "+vtEmailReceiver
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("SMTP_SendMsg"+"\r"+"vtEmailReceiver: "+vtEmailReceiver)
+	ConsoleLog("SMTP_SendMsg"+"\r"+"vtEmailReceiver: "+vtEmailReceiver)
 End if 
 vtEmailMessageLog:=vtEmailMessageLog+" vtEmailSender: "+vtEmailSender+"\r"
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("vtEmailSender: "+vtEmailSender)
+	ConsoleLog("vtEmailSender: "+vtEmailSender)
 End if 
 vtEmailMessageLog:=vtEmailMessageLog+" vtEmailSubject: "+vtEmailSubject+"\r"
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("vtEmailSubject: "+vtEmailSubject)
+	ConsoleLog("vtEmailSubject: "+vtEmailSubject)
 End if 
 vtEmailMessageLog:=vtEmailMessageLog+" vtEmailServer: "+vtEmailServer+"\r"
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("vtEmailServer: "+vtEmailServer)
+	ConsoleLog("vtEmailServer: "+vtEmailServer)
 End if 
 vtEmailMessageLog:=vtEmailMessageLog+" viEmailport: "+String:C10(viEmailport)+"\r"
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("viEmailport: "+String:C10(viEmailport))
+	ConsoleLog("viEmailport: "+String:C10(viEmailport))
 End if 
 vtEmailMessageLog:=vtEmailMessageLog+" vtEmailUserName: "+vtEmailUserName+"\r"
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("vtEmailUserName: "+vtEmailUserName)
+	ConsoleLog("vtEmailUserName: "+vtEmailUserName)
 End if 
 vtEmailMessageLog:=vtEmailMessageLog+" vtEmailPassword: "+vtEmailPassword+"\r"
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("vtEmailPassword: "+Substring:C12(vtEmailPassword; 1; 3))
+	ConsoleLog("vtEmailPassword: "+Substring:C12(vtEmailPassword; 1; 3))
 End if 
 
 vtEmailMessageLog:=vtEmailMessageLog+" vtEmailPath: "+vtEmailPath+"\r"
 If (False:C215)  //  <>viDeBugMode>0
-	ConsoleMessage("vtEmailPath: "+vtEmailPath)
+	ConsoleLog("vtEmailPath: "+vtEmailPath)
 End if 
 vtEmailReceiver:=vtEmailReceiver
 vtEmailStatusMessage:="no receiver/server/sender"

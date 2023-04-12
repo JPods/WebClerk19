@@ -27,7 +27,7 @@ $jitPageOne:=WCapi_GetParameter("jitPageOne"; "")
 C_POINTER:C301(ptCurTable; $ptTable)
 C_LONGINT:C283($tableNum)
 C_TEXT:C284($tableName; $fieldName; $value)
-ptCurTable:=(->[Control:1])
+ptCurTable:=(->[Base:1])
 //TRACE
 
 $tableName:=WCapi_GetParameter("TableName"; "")
@@ -124,7 +124,7 @@ Case of
 				Case of 
 					: (($tableNum=73) & ([TallyResult:73]purpose:2="events"))
 						pvEvent:=[TallyResult:73]name:1
-						jDateTimeRecov([TallyResult:73]dtReport:12; ->vDate1; ->vTime1)
+						DateTime_DTFrom([TallyResult:73]dtReport:12; ->vDate1; ->vTime1)
 						pvEventDate:=String:C10(vDate1; 1)
 					: ($tableNum=Table:C252(->[Document:100]))
 						C_TEXT:C284(pvImagePath)
@@ -185,8 +185,8 @@ Case of
 							QUERY:C277($ptTable->;  & $ptField-><=Num:C11($strEndValue))
 						: ($theType=9)  //real, integer, longint
 							If ($fieldName="DT@")
-								QUERY:C277($ptTable->; $ptField->>=DateTime_Enter(Date:C102($strBeginValue)); *)
-								QUERY:C277($ptTable->;  & $ptField-><=DateTime_Enter(Date:C102($strEndValue); ?23:59:59?))
+								QUERY:C277($ptTable->; $ptField->>=DateTime_DTTo(Date:C102($strBeginValue)); *)
+								QUERY:C277($ptTable->;  & $ptField-><=DateTime_DTTo(Date:C102($strEndValue); ?23:59:59?))
 							Else 
 								QUERY:C277($ptTable->; $ptField->>=Num:C11($strBeginValue); *)
 								QUERY:C277($ptTable->;  & $ptField-><=Num:C11($strEndValue))

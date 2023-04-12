@@ -1,7 +1,7 @@
 //%attributes = {"publishedWeb":true}
 //Method: ReservationTimeEnd
 C_LONGINT:C283($endCycle; $endCart; $k; $endTime)
-$endTime:=DateTime_Enter
+$endTime:=DateTime_DTTo
 $endCycle:=$endTime-(<>vlCycleTime*60)
 $endCart:=$endTime-(<>vlCartTime*60)
 TRACE:C157

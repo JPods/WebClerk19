@@ -48,7 +48,7 @@ If (Is new record:C668([Proposal:42]))
 		[Proposal:42]idNum:5:=CounterNew(->[Proposal:42])
 	End if 
 	newProp:=True:C214
-	[Proposal:42]autoFreight:38:=(<>tcAutoFrght=1)
+	[Proposal:42]shipAuto:38:=(<>tcAutoFrght=1)
 	Case of 
 		: (<>LoadCustomerRecord>-1)
 			If (<>LoadCustomerRecord#Record number:C243([Customer:2]))
@@ -106,8 +106,8 @@ If ((myCycle=22) & (Is new record:C668([Service:6])))
 	//Item_Add2Doc
 	[Proposal:42]idNumTask:70:=[Service:6]idNumTask:51
 End if 
-OBJECT SET ENTERABLE:C238([Proposal:42]shipMiscCosts:29; Not:C34([Proposal:42]autoFreight:38))
-OBJECT SET ENTERABLE:C238([Proposal:42]shipFreightCost:30; Not:C34([Proposal:42]autoFreight:38))
+OBJECT SET ENTERABLE:C238([Proposal:42]shipMiscCosts:29; Not:C34([Proposal:42]shipAuto:38))
+OBJECT SET ENTERABLE:C238([Proposal:42]shipFreightCost:30; Not:C34([Proposal:42]shipAuto:38))
 curRecNum:=Selected record number:C246([Proposal:42])
 booPreNext:=False:C215
 If ((<>tcbManyType) & ([Customer:2]customerID:1#""))
@@ -133,10 +133,10 @@ If (allowAlerts_boo)  //all these edi blocks could be consolidated.  No time
 	If (Not:C34($doChange))
 		C_LONGINT:C283($theColor)
 		$theColor:=14
-		_O_OBJECT SET COLOR:C271([Proposal:42]repCommission:8; -$theColor+(256*$theColor))
-		_O_OBJECT SET COLOR:C271([Proposal:42]salesCommission:10; -$theColor+(256*$theColor))
-		_O_OBJECT SET COLOR:C271(vComSales; -$theColor+(256*$theColor))
-		_O_OBJECT SET COLOR:C271(vComRep; -$theColor+(256*$theColor))
+		OBJECT SET RGB COLORS(*; "[Proposal:42]repCommission:8"; $theColor; 256*$theColor)
+		OBJECT SET RGB COLORS(*; "[Proposal:42]salesCommission:10"; $theColor; 256*$theColor)
+		OBJECT SET RGB COLORS(*; "vComSales"; $theColor; 256*$theColor)
+		OBJECT SET RGB COLORS(*; "vComRep"; $theColor; 256*$theColor)
 	End if 
 	$doChange:=(UserInPassWordGroup("ChangesalesNameID"))
 	

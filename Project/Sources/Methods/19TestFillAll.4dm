@@ -13,6 +13,6 @@ If (aSalesTables>0)
 	//$ents:=ds[$tableName].all()
 	//End if 
 	If (LB_Included.ents.length=0)
-		LB_Included.ents:=ds:C1482[process_o.tableName].all()
+		LB_Included.ents:=ds:C1482[process_o.dataClassName].all()
 	End if 
 End if 

@@ -7,66 +7,255 @@
 		"administrator": {
 			"alias": "Admin"
 		},
-		"Stock Room": {
-			"password": "gQbJF9Q5dINdbQJC0h7xxA=="
-		},
-		"RTI_Plant2": {
-			"password": "dobMIHxbKYt/GF2W+8C1HQ=="
-		},
-		"VeryLimited": {
-			"password": "UyZaxUYiIX2L1ulRGsLQvw=="
+		"ESites": {
+			"password": "gfHZroj72qzo5CJsqusgyw=="
 		},
 		"Parts_Prep": {
 			"password": "wCakQnALIaS8wHWDaW21iQ=="
 		},
-		"ESites": {
-			"password": "gfHZroj72qzo5CJsqusgyw=="
+		"VeryLimited": {
+			"password": "UyZaxUYiIX2L1ulRGsLQvw=="
 		},
-		"Email": {
-			"password": "OFcFfKJ5EYGFkHE/SsTQHA=="
+		"RTI_Plant2": {
+			"password": "dobMIHxbKYt/GF2W+8C1HQ=="
+		},
+		"Stock Room": {
+			"password": "gQbJF9Q5dINdbQJC0h7xxA=="
 		},
 		"EDI": {
 			"password": "oJhTnRwGy7YCfMdW1o3y5A=="
+		},
+		"Email": {
+			"password": "OFcFfKJ5EYGFkHE/SsTQHA=="
 		},
 		"WebClerk": {
 			"password": "sbFlwpN4OehK44qpPzoHWw=="
 		}
 	},
 	"groups": {
-		"Apply2Selection": {
+		"OnlyTally": {
+			"users": [
+				"Admin",
+				"EDI",
+				"Email"
+			]
+		},
+		"AdjustByItem": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"EditItem": {
+			"users": [
+				"Admin"
+			]
+		},
+		"Sales": {
+			"users": [
+				"ESites",
+				"WebClerk"
+			],
+			"groups": [
+				"ViewCommission",
+				"Costing",
+				"Time",
+				"Term",
+				"EditReportScript",
+				"ProductInvoice",
+				"EditOrder",
+				"EditInvoice",
+				"Credit",
+				"Discount",
+				"ChangeSalesID",
+				"CommissionInvoice"
+			]
+		},
+		"ViewCommission": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"Costing": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Parts_Prep",
+				"RTI_Plant2",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"Time": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"RemoteUserPassword": {
+			"users": [
+				"Admin"
+			]
+		},
+		"Designer": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"ItemClone": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"VeryLimited": {
+			"users": [
+				"Parts_Prep",
+				"VeryLimited",
+				"Email"
+			]
+		},
+		"CreditCardView": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"Term": {
+			"users": [
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"Sync": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"RemoteUser": {
+			"users": [
+				"Admin"
+			]
+		},
+		"PackingManual": {
 			"users": [
 				"jitCorp",
 				"Admin",
 				"EDI"
 			]
 		},
-		"Accounting": {
+		"EditReportScript": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"RTI_Plant2",
+				"Stock Room",
+				"EDI",
+				"WebClerk"
+			]
+		},
+		"ProductInvoice": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"EditBOM": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"Test": {
+			"users": [
+				"Admin"
+			]
+		},
+		"EditOrder": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"Stock Room",
+				"EDI"
+			]
+		},
+		"EditInvoice": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"ESites",
+				"EDI"
+			]
+		},
+		"Default": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"MakePayment": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"UnlockRecord": {
 			"users": [
 				"jitCorp",
 				"Admin"
 			]
 		},
-		"CommissionInvoice": {
+		"AdjustByBOM": {
+			"users": [
+				"Admin",
+				"Parts_Prep",
+				"RTI_Plant2"
+			]
+		},
+		"Inventory": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"Import": {
 			"users": [
 				"jitCorp",
 				"Admin",
 				"EDI"
 			]
 		},
-		"EditInvoiceLine": {
+		"4D_Write": {},
+		"Shipping": {
 			"users": [
-				"Admin",
-				"EDI"
+				"Admin"
+			],
+			"groups": [
+				"Costing",
+				"PackingManual",
+				"EditOrder",
+				"EditInvoice",
+				"AdjustByBOM"
 			]
 		},
-		"Control": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"EDI"
-			]
-		},
-		"ChangeSalesID": {
+		"Credit": {
 			"users": [
 				"jitCorp",
 				"Admin",
@@ -74,36 +263,15 @@
 				"EDI"
 			]
 		},
-		"Discount": {
+		"EditPO": {
 			"users": [
 				"jitCorp",
 				"Admin",
-				"ESites",
+				"Stock Room",
 				"EDI"
 			]
 		},
-		"Delete": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"EDI"
-			]
-		},
-		"Employee": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"EDI"
-			]
-		},
-		"Archive": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"EDI"
-			]
-		},
-		"EditQuickQuote": {
+		"AdminControl": {
 			"users": [
 				"jitCorp",
 				"Admin",
@@ -117,83 +285,35 @@
 				"EDI"
 			]
 		},
-		"AdminControl": {
+		"EditQuickQuote": {
 			"users": [
 				"jitCorp",
 				"Admin",
 				"EDI"
 			]
 		},
-		"EditPO": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"Stock Room",
-				"EDI"
-			]
-		},
-		"Credit": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"ESites",
-				"EDI"
-			]
-		},
-		"Shipping": {
-			"users": [
-				"Admin"
-			],
-			"groups": [
-				"AdjustByBOM",
-				"EditInvoice",
-				"EditOrder",
-				"PackingManual",
-				"Costing"
-			]
-		},
-		"4D_Write": {},
-		"Import": {
+		"Archive": {
 			"users": [
 				"jitCorp",
 				"Admin",
 				"EDI"
 			]
 		},
-		"Inventory": {
-			"users": [
-				"Admin",
-				"EDI"
-			]
-		},
-		"AdjustByBOM": {
-			"users": [
-				"Admin",
-				"RTI_Plant2",
-				"Parts_Prep"
-			]
-		},
-		"UnlockRecord": {
-			"users": [
-				"jitCorp",
-				"Admin"
-			]
-		},
-		"MakePayment": {
+		"Employee": {
 			"users": [
 				"jitCorp",
 				"Admin",
 				"EDI"
 			]
 		},
-		"Default": {
+		"Delete": {
 			"users": [
 				"jitCorp",
 				"Admin",
 				"EDI"
 			]
 		},
-		"EditInvoice": {
+		"Discount": {
 			"users": [
 				"jitCorp",
 				"Admin",
@@ -201,164 +321,44 @@
 				"EDI"
 			]
 		},
-		"EditOrder": {
+		"ChangeSalesID": {
 			"users": [
 				"jitCorp",
 				"Admin",
-				"Stock Room",
 				"ESites",
 				"EDI"
 			]
 		},
-		"Test": {
+		"Control": {
 			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"EditInvoiceLine": {
+			"users": [
+				"Admin",
+				"EDI"
+			]
+		},
+		"CommissionInvoice": {
+			"users": [
+				"jitCorp",
+				"Admin",
+				"EDI"
+			]
+		},
+		"Accounting": {
+			"users": [
+				"jitCorp",
 				"Admin"
 			]
 		},
-		"EditBOM": {
-			"users": [
-				"Admin",
-				"EDI"
-			]
-		},
-		"ProductInvoice": {
+		"Apply2Selection": {
 			"users": [
 				"jitCorp",
 				"Admin",
-				"Stock Room",
-				"ESites",
-				"EDI"
-			]
-		},
-		"EditReportScript": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"Stock Room",
-				"RTI_Plant2",
-				"ESites",
-				"EDI",
-				"WebClerk"
-			]
-		},
-		"PackingManual": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"EDI"
-			]
-		},
-		"RemoteUser": {
-			"users": [
-				"Admin"
-			]
-		},
-		"Sync": {
-			"users": [
-				"Admin",
-				"EDI"
-			]
-		},
-		"Term": {
-			"users": [
-				"Admin",
-				"ESites",
-				"EDI"
-			]
-		},
-		"CreditCardView": {
-			"users": [
-				"Admin",
-				"EDI"
-			]
-		},
-		"VeryLimited": {
-			"users": [
-				"VeryLimited",
-				"Parts_Prep",
-				"Email"
-			]
-		},
-		"ItemClone": {
-			"users": [
-				"Admin",
-				"EDI"
-			]
-		},
-		"Designer": {
-			"users": [
-				"Admin",
-				"EDI"
-			]
-		},
-		"RemoteUserPassword": {
-			"users": [
-				"Admin"
-			]
-		},
-		"Time": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"Stock Room",
-				"ESites",
-				"EDI"
-			]
-		},
-		"Costing": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"Stock Room",
-				"RTI_Plant2",
-				"Parts_Prep",
-				"ESites",
-				"EDI"
-			]
-		},
-		"ViewCommission": {
-			"users": [
-				"jitCorp",
-				"Admin",
-				"ESites",
-				"EDI"
-			]
-		},
-		"Sales": {
-			"users": [
-				"ESites",
-				"WebClerk"
-			],
-			"groups": [
-				"CommissionInvoice",
-				"ChangeSalesID",
-				"Discount",
-				"Credit",
-				"EditInvoice",
-				"EditOrder",
-				"ProductInvoice",
-				"EditReportScript",
-				"Term",
-				"Time",
-				"Costing",
-				"ViewCommission"
-			]
-		},
-		"EditItem": {
-			"users": [
-				"Admin"
-			]
-		},
-		"AdjustByItem": {
-			"users": [
-				"Admin",
-				"EDI"
-			]
-		},
-		"OnlyTally": {
-			"users": [
-				"Admin",
-				"Email",
 				"EDI"
 			]
 		}

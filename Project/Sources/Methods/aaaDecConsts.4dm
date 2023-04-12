@@ -136,7 +136,7 @@ TIO_DecConst
 //
 C_POINTER:C301(<>cptNilPoint)  //Uninitialized Pointers are Nil Pointers
 //
-EDI_DecConst
+//EDI_DecConst
 //
 //Profile Copy values
 C_LONGINT:C283(<>ciPrCpyYes)  //Always Copy

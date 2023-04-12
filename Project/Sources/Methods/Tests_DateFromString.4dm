@@ -23,7 +23,7 @@ $vdActualOutput:=DateFromString("2010-06-01")
 
 If ($vdActualOutput#$vdExpectedOutput)
 	$0:=False:C215
-	ConsoleMessage("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"2010-06-01\")")
+	ConsoleLog("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"2010-06-01\")")
 End if 
 
 // TEST 2
@@ -33,7 +33,7 @@ $vdActualOutput:=DateFromString("06/01/2010")
 
 If ($vdActualOutput#$vdExpectedOutput)
 	$0:=False:C215
-	ConsoleMessage("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"2010-06-01\")")
+	ConsoleLog("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"2010-06-01\")")
 End if 
 
 // TEST 3
@@ -43,7 +43,7 @@ $vdActualOutput:=DateFromString("2010-06-01T00:00:00")
 
 If ($vdActualOutput#$vdExpectedOutput)
 	$0:=False:C215
-	ConsoleMessage("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"2010-06-01\";!01/01/2000!)")
+	ConsoleLog("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"2010-06-01\";!01/01/2000!)")
 End if 
 
 
@@ -54,7 +54,7 @@ $vdActualOutput:=DateFromString("Non Date Text")
 
 If ($vdActualOutput#$vdExpectedOutput)
 	$0:=False:C215
-	ConsoleMessage("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"200-06-01\")")
+	ConsoleLog("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"200-06-01\")")
 End if 
 
 // TEST 5
@@ -64,5 +64,5 @@ $vdActualOutput:=DateFromString("Non Date Text"; !2000-01-01!)
 
 If ($vdActualOutput#$vdExpectedOutput)
 	$0:=False:C215
-	ConsoleMessage("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"200-06-01\";!01/01/2000!)")
+	ConsoleLog("Tests_Date_Unstringify: Error when running method: Date_Unstringify (\"200-06-01\";!01/01/2000!)")
 End if 

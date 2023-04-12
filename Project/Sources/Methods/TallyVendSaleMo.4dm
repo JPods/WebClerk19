@@ -59,7 +59,7 @@ If (OK=1)
 			$viProgressID:=Progress New
 			
 		End if 
-		$dtOfRpt:=DateTime_Enter(vDate2; ?23:59:59?)
+		$dtOfRpt:=DateTime_DTTo(vDate2; ?23:59:59?)
 		$nameRpt:=Substring:C12(String:C10(Year of:C25(vDate1)); 3; 4)+String:C10(Month of:C24(vDate1); "00")
 		Repeat 
 			$curRep:=[OrderLine:49]repID:36
@@ -80,7 +80,9 @@ If (OK=1)
 				[TallyResult:73]dtReport:12:=$dtOfRpt
 			Else 
 				[TallyResult:73]longint1:7:=0
-				[TallyResult:73]longInt2:8:=0
+				// Modified by: Bill James (2022-12-09T06:00:00Z)
+				// mush fix and adjust to data type and object
+				//[TallyResult]report:=0
 				[TallyResult:73]real1:13:=0
 				[TallyResult:73]real2:14:=0
 				[TallyResult:73]real3:15:=0
@@ -89,7 +91,7 @@ If (OK=1)
 				[TallyResult:73]real6:42:=0
 				[TallyResult:73]real7:43:=0
 			End if 
-			[TallyResult:73]dtCreated:11:=DateTime_Enter
+			[TallyResult:73]dtCreated:11:=DateTime_DTTo
 			[TallyResult:73]nameReal1:20:="Sales"
 			[TallyResult:73]nameReal2:21:="Margins"
 			[TallyResult:73]nameReal3:22:="% Margin"

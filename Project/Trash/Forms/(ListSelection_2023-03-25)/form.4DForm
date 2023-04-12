@@ -1,0 +1,387 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onOutsideCall"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"changeDefaults_o": {
+					"type": "button",
+					"text": "Change Defaults",
+					"top": 166,
+					"left": 544,
+					"width": 90,
+					"height": 16,
+					"events": [],
+					"sizingY": "move",
+					"focusable": false,
+					"visibility": "hidden"
+				},
+				"OpenDefault": {
+					"type": "button",
+					"text": "OpenDefault",
+					"top": 189,
+					"left": 544,
+					"width": 90,
+					"height": 16,
+					"events": [],
+					"sizingY": "move",
+					"focusable": false,
+					"visibility": "hidden"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Define",
+					"top": 208,
+					"left": 544,
+					"width": 90,
+					"height": 16,
+					"events": [],
+					"focusable": false,
+					"visibility": "hidden"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 9,
+					"left": 5,
+					"width": 53,
+					"height": 12,
+					"stroke": "#0000cd",
+					"class": "cssInputLabel",
+					"text": "Keywords",
+					"textAlign": "right"
+				},
+				"inSelection_o": {
+					"type": "checkbox",
+					"text": "In Selection",
+					"top": 29,
+					"left": 153,
+					"width": 86,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "inSelection",
+					"fontFamily": "Lucida Sans Regular",
+					"fontSize": 10
+				},
+				"Variable24": {
+					"type": "input",
+					"top": 6,
+					"left": 65,
+					"width": 160,
+					"height": 18,
+					"dataSource": "srKeyword",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 14
+				},
+				"aActions": {
+					"type": "dropdown",
+					"top": 51,
+					"left": 177,
+					"width": 100,
+					"height": 18,
+					"dataSource": "aActions",
+					"display": true,
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/aActions.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"nameID": {
+					"type": "dropdown",
+					"top": 73,
+					"left": 177,
+					"width": 100,
+					"height": 18,
+					"dataSource": "choices_o.names",
+					"display": true,
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/nameID.4dm",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "object"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 54,
+					"left": 139,
+					"width": 36,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Action",
+					"textAlign": "right"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 76,
+					"left": 139,
+					"width": 36,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Name\t",
+					"textAlign": "right"
+				},
+				"PopupDateBeg": {
+					"type": "subform",
+					"top": 52,
+					"left": 15,
+					"width": 17,
+					"height": 17,
+					"dataSource": "dateBegin_d",
+					"dataSourceTypeHint": "date",
+					"detailForm": "DateButton",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/PopupDateBeg.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"PopupDateEnd": {
+					"type": "subform",
+					"top": 74,
+					"left": 15,
+					"width": 17,
+					"height": 17,
+					"dataSource": "dateEnd_d",
+					"dataSourceTypeHint": "date",
+					"detailForm": "DateButton",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/PopupDateEnd.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"dateBegin_o": {
+					"type": "input",
+					"left": 42,
+					"top": 52,
+					"width": 84,
+					"height": 17,
+					"dataSource": "dateBegin_d",
+					"method": "ObjectMethods/dateBegin_o.4dm",
+					"dataSourceTypeHint": "date",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"dateEnd_o": {
+					"type": "input",
+					"left": 42,
+					"top": 74,
+					"width": 84,
+					"height": 17,
+					"dataSource": "dateEnd_d",
+					"dataSourceTypeHint": "date",
+					"method": "ObjectMethods/dateEnd_o.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"qDateRange_o1": {
+					"type": "checkbox",
+					"text": "Use DateRange",
+					"top": 29,
+					"left": 15,
+					"width": 96,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "",
+					"fontFamily": "Lucida Sans Regular",
+					"fontSize": 10
+				},
+				"aQueries": {
+					"type": "dropdown",
+					"top": 6,
+					"left": 277,
+					"width": 100,
+					"height": 18,
+					"dataSource": "aQueries",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"textAlign": "center",
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/aQueries.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"aStatus": {
+					"type": "dropdown",
+					"top": 51,
+					"left": 397,
+					"width": 100,
+					"height": 18,
+					"dataSource": "",
+					"display": true,
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/aStatus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 54,
+					"left": 354,
+					"width": 36,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "List",
+					"textAlign": "right"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 9,
+					"left": 235,
+					"width": 36,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Query",
+					"textAlign": "right"
+				},
+				"aOrderBy": {
+					"type": "dropdown",
+					"top": 29,
+					"left": 277,
+					"width": 100,
+					"height": 18,
+					"dataSource": "aOrderBy",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"textAlign": "center",
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/aOrderBy.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 32,
+					"left": 235,
+					"width": 36,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Sort",
+					"textAlign": "right"
+				},
+				"bGetListBox": {
+					"type": "button",
+					"text": "Harvest ListBox",
+					"top": 6,
+					"left": 397,
+					"width": 100,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bGetListBox.4dm",
+					"sizingX": "move"
+				},
+				"fieldlist": {
+					"type": "dropdown",
+					"left": 397,
+					"top": 29,
+					"width": 100,
+					"height": 18,
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/fieldlist.4dm"
+				},
+				"LB_DataBrowser": {
+					"type": "listbox",
+					"left": 5,
+					"top": 97,
+					"width": 533,
+					"height": 623,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"listboxType": "collection",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"method": "ObjectMethods/LB_DataBrowser.4dm",
+					"bottom": 720,
+					"alternateFill": "#FFFCCC",
+					"dataSource": "Form:C1466.ents",
+					"currentItemSource": "Form:C1466.cur",
+					"currentItemPositionSource": "Form:C1466.pos",
+					"selectedItemsSource": "Form:C1466.sel",
+					"columns": []
+				}
+			}
+		}
+	],
+	"geometryStamp": 278,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

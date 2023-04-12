@@ -52,7 +52,7 @@ If ((Size of array:C274(aImpFields)>0) & (Size of array:C274(aImpFields)=Size of
 			$Continue:=0
 		End if 
 	End while 
-	ConsoleMessage("Records "+String:C10($cntActual))
+	ConsoleLog("Records "+String:C10($cntActual))
 	//Thermo_Close 
 	Progress QUIT($viProgressID)
 	

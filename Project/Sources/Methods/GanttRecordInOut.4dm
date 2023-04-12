@@ -29,7 +29,7 @@ End if
 Case of 
 	: ($tableName="WorkOrder")
 		If ($direction="send")
-			OB SET:C1220($ptObj->; "id"; "WO-"+String:C10([WorkOrder:66]woNum:29))
+			OB SET:C1220($ptObj->; "id"; "WO-"+String:C10([WorkOrder:66]idNum:29))
 			OB SET:C1220($ptObj->; "name"; [WorkOrder:66]name:76)
 			OB SET:C1220($ptObj->; "progress"; [WorkOrder:66]flowProgress:87)
 			OB SET:C1220($ptObj->; "progressByWorklog"; [WorkOrder:66]flowProgressByWorklog:97)
@@ -43,9 +43,9 @@ Case of
 			OB SET:C1220($ptObj->; "depends"; [WorkOrder:66]flowDepends:89)
 			// ### bj ### 20190428_0843
 			//  [WorkOrder]DateBegin  should be driving [WorkOrder]DTBeginPlanned
-			[WorkOrder:66]dtBeginPlanned:107:=DateTime_Enter([WorkOrder:66]dateBegin:106; [WorkOrder:66]timeBegin:109)
+			[WorkOrder:66]dtBeginPlanned:107:=DateTime_DTTo([WorkOrder:66]dateBegin:106; [WorkOrder:66]timeBegin:109)
 			DateTimeDTEpoch("ToEpoch"; ->[WorkOrder:66]dtBeginPlanned:107; ->dtEpochBeginPlan)
-			[WorkOrder:66]dtEndPlanned:69:=DateTime_Enter([WorkOrder:66]dateEnd:108; [WorkOrder:66]timeEnd:110)
+			[WorkOrder:66]dtEndPlanned:69:=DateTime_DTTo([WorkOrder:66]dateEnd:108; [WorkOrder:66]timeEnd:110)
 			DateTimeDTEpoch("ToEpoch"; ->[WorkOrder:66]dtEndPlanned:69; ->dtEpochEndPlan)
 			OB SET:C1220($ptObj->; "start"; Num:C11(dtEpochBeginPlan))
 			OB SET:C1220($ptObj->; "duration"; [WorkOrder:66]durationPlanned:10)  // longint days
@@ -74,8 +74,8 @@ Case of
 			If (Records in selection:C76([WorkOrder:66])=0)
 				CREATE RECORD:C68([WorkOrder:66])
 				
-				[WorkOrder:66]woNum:29:=CounterNew(->[WorkOrder:66])
-				[WorkOrder:66]dtCreated:44:=DateTime_Enter
+				[WorkOrder:66]idNum:29:=CounterNew(->[WorkOrder:66])
+				[WorkOrder:66]dtCreated:44:=DateTime_DTTo
 				[WorkOrder:66]actionBy:8:=Current user:C182
 				[WorkOrder:66]actionByInitiated:9:=Current user:C182
 				[WorkOrder:66]itemNum:12:="FromjQuery"
@@ -112,12 +112,12 @@ Case of
 			// dtEpochPlanned:=String(OB Get($voTemp;"start"))
 			dtEpochPlanned:=String:C10($epochStart)
 			DateTimeDTEpoch("FromEpoch"; ->[WorkOrder:66]dtBeginPlanned:107; ->dtEpochPlanned)
-			jDateTimeRecov([WorkOrder:66]dtBeginPlanned:107; ->[WorkOrder:66]dateBegin:106; ->[WorkOrder:66]timeBegin:109)
+			DateTime_DTFrom([WorkOrder:66]dtBeginPlanned:107; ->[WorkOrder:66]dateBegin:106; ->[WorkOrder:66]timeBegin:109)
 			
 			// dtEpochEndPlan:=String(OB Get($voTemp;"end"))
 			dtEpochEndPlan:=String:C10($epochEnd)
 			DateTimeDTEpoch("FromEpoch"; ->[WorkOrder:66]dtEndPlanned:69; ->dtEpochEndPlan)
-			jDateTimeRecov([WorkOrder:66]dtEndPlanned:69; ->[WorkOrder:66]dateEnd:108; ->[WorkOrder:66]timeEnd:110)
+			DateTime_DTFrom([WorkOrder:66]dtEndPlanned:69; ->[WorkOrder:66]dateEnd:108; ->[WorkOrder:66]timeEnd:110)
 			
 			
 			[WorkOrder:66]durationPlanned:10:=OB Get:C1224($voTemp; "duration")
@@ -147,7 +147,7 @@ Case of
 			OB SET:C1220($ptObj->; "status"; "STATUS_ACTIVE")
 			OB SET:C1220($ptObj->; "depends"; "")
 			C_LONGINT:C283($dtStart)
-			$dtStart:=DateTime_Enter([Order:3]dateNeeded:5; ?11:11:11?)
+			$dtStart:=DateTime_DTTo([Order:3]dateNeeded:5; ?11:11:11?)
 			DateTimeDTEpoch("ToEpoch"; ->$dtStart; ->dtEpochBeginPlan)
 			dtEpochEndPlan:=String:C10($dtStart+3600000)  // hour
 			OB SET:C1220($ptObj->; "start"; $epochStart)
@@ -186,7 +186,7 @@ Case of
 			OB SET:C1220($ptObj->; "status"; "STATUS_ACTIVE")
 			OB SET:C1220($ptObj->; "depends"; "")
 			C_LONGINT:C283($dtStart)
-			$dtStart:=DateTime_Enter([PO:39]dateNeeded:3; ?11:11:11?)
+			$dtStart:=DateTime_DTTo([PO:39]dateNeeded:3; ?11:11:11?)
 			DateTimeDTEpoch("ToEpoch"; ->$dtStart; ->dtEpochBeginPlan)
 			dtEpochEndPlan:=String:C10($dtStart+3600000)  // hour
 			OB SET:C1220($ptObj->; "start"; $epochStart)

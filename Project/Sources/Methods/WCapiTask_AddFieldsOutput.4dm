@@ -16,9 +16,9 @@ C_COLLECTION:C1488($vcWords; $vcDistinct; $vcOutput)
 $tableName:=$1
 $vtRole:=$2
 $vcWords:=New collection:C1472
-$vcWords:=Split string:C1554($3; ",")
+$vcWords:=Split string:C1554($3; ";")
 $vcDistinct:=$vcWords.distinct()
-$vcOutput:=Split string:C1554(voFieldsByRole[$vtRole].list[$tableName]; ",")
+$vcOutput:=Split string:C1554(voFieldsByRole[$vtRole].list[$tableName]; ";")
 $vtNewWords:=$3
 $vtFieldList:=voFieldsByRole[$vtRole].list[$tableName]
 $vtFieldList:=$vtFieldList+","+$vtNewWords

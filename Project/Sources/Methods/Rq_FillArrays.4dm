@@ -37,7 +37,7 @@ Case of
 		SELECTION TO ARRAY:C260([Requisition:83]poLineID:35; aRqPoLn; [Requisition:83]orderLineID:36; aRqOrdLn; [Requisition:83]itemNum:38; aRqItem; [Requisition:83]description:39; aRqItemDesc; [Requisition:83]itemParent:40; aRqItemPar; [Requisition:83]descriptionPar:41; aRqItemDPar; [Requisition:83]; aRqRecNum; [Requisition:83]idNum:1; aRqUniqueID; [Requisition:83]groupid:46; aRqGroupID)
 		ARRAY DATE:C224(aRqNeed; $1)
 		For ($i; 1; $1)
-			jDateTimeRecov(aTmpLong1{$i}; ->aRqNeed{$i}; ->vTime1)
+			DateTime_DTFrom(aTmpLong1{$i}; ->aRqNeed{$i}; ->vTime1)
 		End for 
 		ARRAY LONGINT:C221(aTmpLong1; 0)
 		ARRAY LONGINT:C221(aRqRecLn; 0)
@@ -137,7 +137,7 @@ Case of
 		[Requisition:83]action:10:=aRqAction{$2}
 		[Requisition:83]actionDate:7:=aRqActDate{$2}
 		[Requisition:83]nameID:9:=aRqNameID{$2}
-		[Requisition:83]dtNeeded:6:=DateTime_Enter(aRqNeed{$2})  ////    
+		[Requisition:83]dtNeeded:6:=DateTime_DTTo(aRqNeed{$2})  ////    
 		//
 		SAVE RECORD:C53([Requisition:83])
 		aRqRecNum{$2}:=Record number:C243([Requisition:83])
@@ -150,7 +150,7 @@ Case of
 		aRqPpNum{$2}:=[Requisition:83]idNumProposal:3
 		aRqOrdNum{$2}:=[Requisition:83]idNumOrder:4
 		aRqActDate{$2}:=[Requisition:83]actionDate:7
-		jDateTimeRecov([Requisition:83]dtNeeded:6; ->aRqNeed{$2}; ->vTime1)
+		DateTime_DTFrom([Requisition:83]dtNeeded:6; ->aRqNeed{$2}; ->vTime1)
 		aRqCost{$2}:=[Requisition:83]curCost:22
 		aRqQty{$2}:=[Requisition:83]curQty:23
 		aRqLeadTime{$2}:=[Requisition:83]leadDays:25

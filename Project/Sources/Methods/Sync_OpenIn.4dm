@@ -52,6 +52,6 @@ If (OK=1)
 	aSyncCnt:=0
 	vdDateBeg:=Current date:C33
 	vTimeBeg:=Current time:C178
-	dtSession:=DateTime_Enter(vdDateBeg; vTimeBeg)
+	dtSession:=DateTime_DTTo(vdDateBeg; vTimeBeg)
 	doSearch:=12
 End if 

@@ -1,0 +1,393 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #11",
+	"markerHeader": 24,
+	"markerBody": 331,
+	"markerBreak": 364,
+	"markerFooter": 397,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 68,
+					"left": 345,
+					"width": 292,
+					"height": 96,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field1": {
+					"type": "checkbox",
+					"top": 44,
+					"left": 345,
+					"width": 306,
+					"height": 15,
+					"dataSource": "[DialingInfo:81]StripAreaCode:2",
+					"text": "Do Not Dial Area Code",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 69,
+					"left": 348,
+					"width": 288,
+					"height": 17,
+					"dataSource": "[DialingInfo:81]AreaPrefix:1",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 88,
+					"left": 348,
+					"width": 288,
+					"height": 17,
+					"dataSource": "[DialingInfo:81]TotalLength:4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 107,
+					"left": 348,
+					"width": 288,
+					"height": 17,
+					"dataSource": "[DialingInfo:81]ProceedWith:3",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 126,
+					"left": 348,
+					"width": 288,
+					"height": 17,
+					"dataSource": "[DialingInfo:81]FollowWith:6",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 145,
+					"left": 348,
+					"width": 288,
+					"height": 17,
+					"dataSource": "[DialingInfo:81]FormatString:5",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 71,
+					"left": 239,
+					"width": 101,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": ":16795,153"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 109,
+					"left": 91,
+					"width": 249,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,154"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 90,
+					"left": 24,
+					"width": 316,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,155"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 128,
+					"left": 24,
+					"width": 316,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,156"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 147,
+					"left": 24,
+					"width": 316,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,157"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 109,
+					"left": 641,
+					"width": 298,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16795,158"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 90,
+					"left": 641,
+					"width": 249,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16795,159"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 71,
+					"left": 641,
+					"width": 249,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16795,160"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 147,
+					"left": 641,
+					"width": 249,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16795,161"
+				},
+				"Variable63": {
+					"type": "button",
+					"top": 69,
+					"left": 1,
+					"width": 4,
+					"height": 6,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -36,10 +36,10 @@ Else
 End if 
 
 Case of 
-	: (process_o.tableName="TechNote")
-		$vtPathFolder:=$vtPathFolder+process_o.tableName+Folder separator:K24:12+String:C10(LB_Document.cur.idNum)+Folder separator:K24:12
-	: (process_o.tableName="Project")
-		$vtPathFolder:=$vtPathFolder+process_o.tableName+Folder separator:K24:12+String:C10(LB_Document.cur.idNum)+Folder separator:K24:12
+	: (process_o.dataClassName="TechNote")
+		$vtPathFolder:=$vtPathFolder+process_o.dataClassName+Folder separator:K24:12+String:C10(LB_Document.cur.idNum)+Folder separator:K24:12
+	: (process_o.dataClassName="Project")
+		$vtPathFolder:=$vtPathFolder+process_o.dataClassName+Folder separator:K24:12+String:C10(LB_Document.cur.idNum)+Folder separator:K24:12
 	: (LB_Document.cur.customerID#Null:C1517)
 		$vtPathFolder:=$vtPathFolder+"Customer"+Folder separator:K24:12+LB_Document.cur.customerID+Folder separator:K24:12
 	: (LB_Document.cur.vendorID#Null:C1517)
@@ -47,7 +47,7 @@ Case of
 	: (LB_Document.cur.itemNum#Null:C1517)
 		$vtPathFolder:=$vtPathFolder+"Item"+Folder separator:K24:12+LB_Document.cur.itemNum+Folder separator:K24:12
 	Else 
-		$vtPathFolder:=$vtPathFolder+process_o.tableName+Folder separator:K24:12+String:C10(LB_Document.cur.id)+Folder separator:K24:12
+		$vtPathFolder:=$vtPathFolder+process_o.dataClassName+Folder separator:K24:12+String:C10(LB_Document.cur.id)+Folder separator:K24:12
 End case 
 If (LB_Document.cur.idNumTask#Null:C1517)
 	$vtPathFolder:=$vtPathFolder+"task_"+String:C10(LB_Document.cur.idNumTask)+Folder separator:K24:12
@@ -78,7 +78,7 @@ For ($inc; 1; $cnt)
 	$obRec.path:=Convert path system to POSIX:C1106($vtPathCopyTo)  // save path in POSIX
 	
 	$obRec.dateEntered:=Current date:C33
-	$obRec.dtEvent:=DateTime_Enter
+	$obRec.dtEvent:=DateTime_DTTo
 	
 	// expand to cases of items, projects, vendors, etc....
 	If (LB_Document.cur.idNumTask#Null:C1517)
@@ -106,7 +106,7 @@ For ($inc; 1; $cnt)
 End for 
 
 Case of 
-	: (process_o.tableName="Customer")
+	: (process_o.dataClassName="Customer")
 		$tableNum_i:=ds:C1482["Customer"].getInfo().tableNumber
 		LB_Document.ents:=ds:C1482.Document.query("customerID = :1 & tableNum= :2"; LB_Document.cur.customerID; $tableNum_i)
 		
@@ -117,5 +117,5 @@ Case of
 End case 
 $0:="Documents added: "+String:C10($cnt)
 If (<>viDebugMode>410)
-	ConsoleMessage($tableName+": SFEX_DropDocument count: "+String:C10($cnt))
+	ConsoleLog($tableName+": SFEX_DropDocument count: "+String:C10($cnt))
 End if 

@@ -22,7 +22,7 @@ C_LONGINT:C283($relatedInc; $cnt; $dtCreate; $1)
 If (Count parameters:C259=1)
 	$dtCreate:=$1
 Else 
-	$dtCreate:=DateTime_Enter
+	$dtCreate:=DateTime_DTTo
 End if 
 REDUCE SELECTION:C351([DInventory:36]; 0)
 READ WRITE:C146([DInventory:36])
@@ -38,10 +38,10 @@ For ($relatedInc; 1; $cnt)
 	[DInventory:36]qtyOnWO:5:=dQtyOnWO{$relatedInc}
 	[DInventory:36]qtyOnAdj:6:=dQtyOnAdj{$relatedInc}
 	[DInventory:36]unitCost:7:=dUnitCost{$relatedInc}
-	[DInventory:36]projectNum:8:=dJobID{$relatedInc}
-	[DInventory:36]docid:9:=dDocID{$relatedInc}
+	[DInventory:36]idNumProject:8:=dJobID{$relatedInc}
+	[DInventory:36]idNumDoc:9:=dDocID{$relatedInc}
 	[DInventory:36]idNumLine:10:=dLineNum{$relatedInc}
-	[DInventory:36]receiptid:11:=dReceiptID{$relatedInc}
+	[DInventory:36]idReceipt:11:=dReceiptID{$relatedInc}
 	[DInventory:36]customerID:12:=dSource{$relatedInc}
 	[DInventory:36]reason:13:=dReason{$relatedInc}
 	[DInventory:36]typeID:14:=dType{$relatedInc}

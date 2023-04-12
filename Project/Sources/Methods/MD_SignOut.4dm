@@ -22,19 +22,18 @@ $found:=Prs_CheckRunnin("Material Draw")
 C_LONGINT:C283(<>prcCntrlNum)
 Case of 
 	: (ptCurTable=(->[Order:3]))
-		<>prcCntrlNum:=[Order:3]orderNum:2
+		<>prcCntrlNum:=[Order:3]idNum:2
 	: (ptCurTable=(->[Service:6]))
-		<>prcCntrlNum:=[Service:6]orderNum:22
-	: ((ptCurTable=(->[Invoice:26])) & ([Invoice:26]orderNum:1#1))
-		<>prcCntrlNum:=[Invoice:26]orderNum:1
+		<>prcCntrlNum:=[Service:6]idNumOrder:22
+	: ((ptCurTable=(->[Invoice:26])) & ([Invoice:26]idNumOrder:1#1))
+		<>prcCntrlNum:=[Invoice:26]idNumOrder:1
 	Else 
 		<>prcCntrlNum:=0
 End case 
 //
 If ($found>0)
-	If (Frontmost process:C327#<>aPrsNum{$found})
-		BRING TO FRONT:C326(<>aPrsNum{$found})
-	End if 
+	BRING TO FRONT:C326($found)
+	
 Else 
 	<>processAlt:=New process:C317("MD_LaunchWindow"; <>tcPrsMemory; "Material Draw")
 End if 

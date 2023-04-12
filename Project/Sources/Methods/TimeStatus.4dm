@@ -16,7 +16,7 @@ KeyModifierCurrent
 If ((OptKey=1) | (vlStatTime=0))
 	TM_RiteStatus
 Else 
-	$curCnt:=DateTime_Enter
+	$curCnt:=DateTime_DTTo
 	If ((($curCnt-vlStatTime)\60)>=<>tcStatDeLay)
 		TM_RiteStatus
 	End if 

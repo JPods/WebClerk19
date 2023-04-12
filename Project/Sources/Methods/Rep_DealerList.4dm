@@ -7,7 +7,7 @@
 // ----------------------------------------------------
 
 
-vi10:=DateTime_Enter
+vi10:=DateTime_DTTo
 READ WRITE:C146([TallyResult:73])
 QUERY:C277([Rep:8]; [Rep:8]active:21=True:C214)
 vi2:=Records in selection:C76([Rep:8])
@@ -15,7 +15,7 @@ FIRST RECORD:C50([Rep:8])
 For (vi1; 1; vi2)
 	MESSAGE:C88(String:C10(vi1))
 	QUERY:C277([TallyResult:73]; [TallyResult:73]purpose:2="DealerLocator"; *)
-	QUERY:C277([TallyResult:73];  & [TallyResult:73]customerID:30=[Rep:8]RepID:1)
+	QUERY:C277([TallyResult:73];  & [TallyResult:73]customerID:30=[Rep:8]repID:1)
 	If (Records in selection:C76([TallyResult:73])=0)
 		CREATE RECORD:C68([TallyResult:73])
 		
@@ -24,7 +24,7 @@ For (vi1; 1; vi2)
 		[TallyResult:73]nameProfile3:28:="Phone"
 		//
 		[TallyResult:73]purpose:2:="DealerLocator"
-		[TallyResult:73]customerID:30:=[Rep:8]RepID:1
+		[TallyResult:73]customerID:30:=[Rep:8]repID:1
 		[TallyResult:73]name:1:=[Rep:8]comment:19
 	End if 
 	[TallyResult:73]dtReport:12:=vi10

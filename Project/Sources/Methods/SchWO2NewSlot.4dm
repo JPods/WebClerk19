@@ -35,7 +35,7 @@ Else
 		If ($woRecNum>0)
 			GOTO RECORD:C242([WorkOrder:66]; $woRecNum)
 			[WorkOrder:66]actionBy:8:=$1
-			[WorkOrder:66]dtAction:5:=DateTime_Enter($7; $8)
+			[WorkOrder:66]dtAction:5:=DateTime_DTTo($7; $8)
 			SAVE RECORD:C53([WorkOrder:66])
 		End if 
 		Sched_Reset($2)

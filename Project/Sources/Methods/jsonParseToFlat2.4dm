@@ -41,10 +41,10 @@ C_TEXT:C284($vtValue)
 
 OB GET PROPERTY NAMES:C1232($voBatch; $atNames; $aiTypes)
 
-// ConsoleMessage ($atNames{1})
+// Console_Log ($atNames{1})
 
 For ($vi1; 1; Size of array:C274($atNames))
-	// ConsoleMessage ($atNames{$vi1})
+	// Console_Log ($atNames{$vi1})
 	$viType:=OB Get type:C1230($voBatch; $atNames{$vi1})
 	If ($viType=Object array:K8:28)  //  39) 
 		APPEND TO ARRAY:C911(avValue; "")  //  Put name but no values in at the level 
@@ -103,7 +103,7 @@ For ($vi1; 1; Size of array:C274($atNames))
 			ARRAY TEXT:C222(avValue; 0)
 			ARRAY LONGINT:C221(alLevel; 0)
 			allowAlerts_boo:=False:C215
-			ConsoleMessage($vtDump)
+			ConsoleLog($vtDump)
 			If (allowAlerts_boo)
 				ALERT:C41("json parsed to Console")
 			End if 

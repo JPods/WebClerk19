@@ -32,7 +32,7 @@ QA_AddQuestions($myTable; $acct; $docID; $myTask)
 
 C_LONGINT:C283($i; $k; $dtCreated; $vlGroupID)
 $k:=Size of array:C274(aQaAnswrRec)
-$dtCreated:=DateTime_Enter
+$dtCreated:=DateTime_DTTo
 If (Size of array:C274(aQaAcctKey)>0)
 	$max_i:=ds:C1482.QA.query("customerID = :1"; aQaAcctKey{1}).max("idGroup")+1
 End if 

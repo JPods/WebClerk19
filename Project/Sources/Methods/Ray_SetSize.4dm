@@ -1,4 +1,12 @@
 //%attributes = {"publishedWeb":true}
+
+// Modified by: Bill James (2023-01-03T06:00:00Z)
+// Method: Ray_SetSize
+// Description 
+// Parameters
+// ----------------------------------------------------
+
+
 C_LONGINT:C283($1; $i; $k; $cntDiff; $w)
 C_POINTER:C301($2; $3; $4; $5; $6; $7; $8; $9; $10; $11; $12; $13; $14; $15; $16; $17; $18; $19; $20; $21; $22; $23; $24; $25; $26; $27; $28; $29; $30; $31; $32; $33)
 $k:=Count parameters:C259

@@ -179,7 +179,7 @@ If (BLOB size:C605(HTTP_IncomingBlob)>0)
 		$mfgID:="UKNPub"
 	End if 
 	//  TRACE
-	$theFullPath:=<>WebFolder+"jitArticles"+Folder separator:K24:12+$mfgID+Folder separator:K24:12
+	$theFullPath:=Storage:C1525.wc.webFolder+"jitArticles"+Folder separator:K24:12+$mfgID+Folder separator:K24:12
 	If (HFS_Exists($theFullPath)=0)
 		$error:=New_Folder($theFullPath)
 	End if 
@@ -192,7 +192,7 @@ If (BLOB size:C605(HTTP_IncomingBlob)>0)
 	C_TEXT:C284($theArt)
 	If (HFS_Exists($theFullPathDoc)=0)
 		$theArt:=vText1
-		Txt_4D2Doc(<>WebFolder+"jitArticles"+Folder separator:K24:12+"NC_Template.html"; ""; False:C215)
+		Txt_4D2Doc(Storage:C1525.wc.webFolder+"jitArticles"+Folder separator:K24:12+"NC_Template.html"; ""; False:C215)
 		$theDocName:=HFS_ShortName(document)
 		$err:=HFS_Move(document; $theFullPath)
 		$theFullPath:=$theFullPath+$theDocName

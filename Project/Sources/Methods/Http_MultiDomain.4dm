@@ -13,7 +13,7 @@
 //jit_MultiDomain.txt in the jitWeb folder defines multiple domains
 C_TEXT:C284($0; $url; tcDomain)
 C_LONGINT:C283($w; $k)
-$0:=<>WebFolder
+$0:=Storage:C1525.wc.webFolder
 $w:=Position:C15("Host: "; vText11)
 If ($w>0)
 	$url:=Substring:C12(vText11; $w+6)

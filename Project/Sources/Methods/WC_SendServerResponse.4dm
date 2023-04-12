@@ -50,7 +50,7 @@ If (Count parameters:C259>1)
 	$vtContentType:=$2
 End if 
 If (<>viDebugMode>910)
-	ConsoleMessage("body: "+"\r"+$vtBody)
+	ConsoleLog("body: "+"\r"+$vtBody)
 End if 
 If ($vtBody#"AlreadySent@")
 	TEXT TO BLOB:C554($vtBody; $vblBody; UTF8 text without length:K22:17; *)
@@ -125,7 +125,7 @@ If ($vtBody#"AlreadySent@")
 	$0:=$viBytesSent
 	
 	If (<>viDebugMode>410)
-		ConsoleMessage("BytesSent: "+String:C10($0))
+		ConsoleLog("BytesSent: "+String:C10($0))
 	End if 
 	
 	//*************************************************************************************//

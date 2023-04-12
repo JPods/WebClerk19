@@ -52,7 +52,7 @@ Case of
 	: (ptCurTable=(->[Employee:19]))
 		$0:=$0+[Employee:19]nameID:1+Folder separator:K24:12
 	: (ptCurTable=(->[Rep:8]))
-		$0:=$0+[Rep:8]RepID:1+Folder separator:K24:12
+		$0:=$0+[Rep:8]repID:1+Folder separator:K24:12
 	: (ptCurTable=(->[Invoice:26]))
 		TaskIDReturn(->[Invoice:26]idNumTask:78)
 		$0:=$0+String:C10([Invoice:26]idNumTask:78)+Folder separator:K24:12
@@ -75,7 +75,7 @@ If ($createPath)
 End if 
 
 If ($baseFileName#"")
-	$0:=$0+$baseFileName+"-"+String:C10(DateTime_Enter)
+	$0:=$0+$baseFileName+"-"+String:C10(DateTime_DTTo)
 	If ($suff#"")
 		$0:=$0+"."+$suff
 	End if 

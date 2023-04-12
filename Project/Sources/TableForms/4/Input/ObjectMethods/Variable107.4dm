@@ -1,1 +1,0 @@
-QQ_Push(->aRptPartNum; ->aBomSelect)

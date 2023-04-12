@@ -46,7 +46,7 @@ If (Application type:C494#4D Server:K5:6)
 		
 		WindowOpenTaskOffSets
 		
-		POST OUTSIDE CALL:C329(<>theProcessList)
+		POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 		//Open window(4;40;635;475;8)
 		$ptOrgFile:=ptCurTable
 		If (<>vbSortOnDisplay)
@@ -56,23 +56,23 @@ If (Application type:C494#4D Server:K5:6)
 			If (False:C215)
 				Case of 
 					: (ptCurTable=(->[Order:3]))
-						ORDER BY:C49([Order:3]; [Order:3]dateOrdered:4; <)
+						ORDER BY:C49([Order:3]; [Order:3]dateDocument:4; <)
 						booSorted:=True:C214
 					: (ptCurTable=(->[Invoice:26]))
-						ORDER BY:C49([Invoice:26]; [Invoice:26]dateInvoiced:35; <)
+						ORDER BY:C49([Invoice:26]; [Invoice:26]dateDocument:35; <)
 						booSorted:=True:C214
 					: (ptCurTable=(->[Proposal:42]))
-						ORDER BY:C49([Proposal:42]; [Proposal:42]dateProposed:3; <)
+						ORDER BY:C49([Proposal:42]; [Proposal:42]dateDocument:3; <)
 						booSorted:=True:C214
 					: (ptCurTable=(->[Payment:28]))
-						ORDER BY:C49([Payment:28]; [Payment:28]dateReceived:10; <)
+						ORDER BY:C49([Payment:28]; [Payment:28]dateDocument:10; <)
 						booSorted:=True:C214
 				End case 
 			End if 
 		End if 
 		
 		Case of 
-			: ((ptCurTable=(->[Default:15])) | (ptCurTable=(->[WebClerk:78])) | (ptCurTable=(->[Control:1])))
+			: ((ptCurTable=(->[Default:15])) | (ptCurTable=(->[WebClerk:78])) | (ptCurTable=(->[Admin:1])))
 				MenuReset(iLoMenu)
 			: ((Records in selection:C76(ptCurTable->)=1) & (<>vDisplaySingle))
 				MenuReset(iLoMenu)
@@ -90,6 +90,6 @@ If (Application type:C494#4D Server:K5:6)
 		End while 
 		CLEAR VARIABLE:C89(vItemPict)
 		
-		POST OUTSIDE CALL:C329(<>theProcessList)
+		POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 	End if 
 End if 

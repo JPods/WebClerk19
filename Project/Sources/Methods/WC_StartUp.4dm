@@ -21,29 +21,8 @@ If (Find in array:C230(<>aPrsNameWeb; "WC_@")>0)
 	// ELSE, START THE SERVER
 Else 
 	
-	C_OBJECT:C1216(<>voWebServerPrefs)
-	<>voWebServerPrefs:=New object:C1471
-	
-	<>voWebServerPrefs.templateFileNames:=New object:C1471
-	<>voWebServerPrefs.templateFileNames.error401:="SignIn.html"
-	//<>voWebServerPrefs.templateFileNames.error401:="error-pages/401-not-authenticated.html"
-	<>voWebServerPrefs.templateFileNames.error403:="error-pages/403-not-authorized.html"
-	<>voWebServerPrefs.templateFileNames.error404:="error-pages/404-not-found.html"
-	<>voWebServerPrefs.templateFileNames.error500:="error-pages/500-internal-server.html"
-	
-	C_BLOB:C604(<>vblUTF8BOM)
-	SET BLOB SIZE:C606(<>vblUTF8BOM; 3)
-	<>vblUTF8BOM{0}:=239  // EF (UTF-8)
-	<>vblUTF8BOM{1}:=187  // BB (UTF-8)
-	<>vblUTF8BOM{2}:=191  // BF (UTF-8)
-	
-	// ATTEMPT TO LOAD THE CORRECT WEBCLERK PREFERENCES RECORD
-	
 	$vbLaunch:=WC_LoadPrefsRecord
 	
-	// PROCEED IF SUCCESSFUL
-	
-	//The docStub will have the CommerceExpert
 	
 	If ($vbLaunch=True:C214)
 		
@@ -59,7 +38,7 @@ Else
 		
 		If ($vbLaunch=True:C214)
 			
-			ConsoleMessage("Starting WebClerk Server: "+String:C10(Current date:C33)+": "+String:C10(Current time:C178))  // ### JWM ### 20171016_1823
+			ConsoleLog("Starting WebClerk Server: "+String:C10(Current date:C33)+": "+String:C10(Current time:C178))  // ### JWM ### 20171016_1823
 			
 			WC_LoadObjects  // queries [WebClerk]
 			WC_MultiDomainSet
@@ -67,7 +46,7 @@ Else
 			WC_ErrorPageMaster
 			WC_VariablesDeclare
 			
-			<>dtStartWebClerk:=DateTime_Enter
+			<>dtStartWebClerk:=DateTime_DTTo
 			ARRAY TEXT:C222(<>aWebPagePaths; 0)
 			ARRAY TEXT:C222(<>aWebPages; 0)
 			ARRAY LONGINT:C221(<>aWebPageSecurityLevel; 0)
@@ -94,15 +73,15 @@ Else
 			// ### bj ### 20210202_2313
 			If (False:C215)  // replace with Vue side behavior
 				// ### bj ### 20200606_1118
-				$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"ImagePathEmpty.jpg"
+				$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"ImagePathEmpty.jpg"
 				If (Test path name:C476($vtPath)#1)
 					ALERT:C41("Critical image missing: "+$vtPath)
-					ConsoleMessage("Critical image missing: "+$vtPath)
+					ConsoleLog("Critical image missing: "+$vtPath)
 				End if 
-				$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"ImagePathInvalid.jpg"
+				$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"ImagePathInvalid.jpg"
 				If (Test path name:C476($vtPath)#1)
 					ALERT:C41("Critical image missing: "+$vtPath)
-					ConsoleMessage("Critical image missing: "+$vtPath)
+					ConsoleLog("Critical image missing: "+$vtPath)
 				End if 
 			End if 
 			<>prcControl:=0
@@ -111,12 +90,12 @@ Else
 			If ($w>0)
 				OBJECT SET ENABLED:C1123(b8; True:C214)
 				OBJECT SET ENABLED:C1123(b7; False:C215)
-				_O_OBJECT SET COLOR:C271(iloText1; -(Black:K11:16+(256*Yellow:K11:2)))
+				OBJECT SET RGB COLORS:C628(*; "iloText1"; Black:K11:16; Yellow:K11:2)
 				
 			Else 
 				OBJECT SET ENABLED:C1123(b8; False:C215)
 				OBJECT SET ENABLED:C1123(b7; True:C214)
-				_O_OBJECT SET COLOR:C271(iloText1; -(Black:K11:16+(256*White:K11:1)))
+				OBJECT SET RGB COLORS:C628(*; "iloText1"; Black:K11:16; White:K11:1)
 			End if 
 			
 		End if 

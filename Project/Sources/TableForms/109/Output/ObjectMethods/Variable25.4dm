@@ -30,8 +30,8 @@ If (OK=1)
 					ADD TO SET:C119([SyncRecord:109]; "locked")
 				Else 
 					[SyncRecord:109]actionReceive:47:="ForceClosed"
-					[SyncRecord:109]dtComplete:8:=DateTime_Enter
-					[SyncRecord:109]dtAction:2:=DateTime_Enter
+					[SyncRecord:109]dtComplete:8:=DateTime_DTTo
+					[SyncRecord:109]dtAction:2:=DateTime_DTTo
 					[SyncRecord:109]resolvedBy:33:=Current user:C182
 					// zzzqqq jDateTimeStamp(->[SyncRecord:109]comment:25; "Forced Closed")
 					SAVE RECORD:C53([SyncRecord:109])

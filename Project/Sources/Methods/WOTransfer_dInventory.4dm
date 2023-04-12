@@ -16,17 +16,17 @@ If ($1="Receive")
 	[DInventory:36]itemNum:1:=[WorkOrder:66]itemNum:12
 	[DInventory:36]qtyOnWO:5:=[WorkOrder:66]qtyOrdered:13
 	[DInventory:36]unitCost:7:=[WorkOrder:66]costPlanned:15
-	[DInventory:36]docid:9:=[WorkOrder:66]woNum:29
+	[DInventory:36]idNumDoc:9:=[WorkOrder:66]idNum:29
 	[DInventory:36]customerID:12:=[WorkOrder:66]siteIDTo:61
 	[DInventory:36]reason:13:="WO Receive"
 	[DInventory:36]typeID:14:="WT"
 	[DInventory:36]dateCreated:39:=Current date:C33
 	[DInventory:36]timeCreated:40:=Current time:C178
-	[DInventory:36]dtCreated:15:=DateTime_Enter
+	[DInventory:36]dtCreated:15:=DateTime_DTTo
 	[DInventory:36]note:18:="From: "+[WorkOrder:66]siteIDFrom:62+"\r"+"To: "+[WorkOrder:66]siteIDTo:61+"\r"
 	[DInventory:36]siteID:20:=[WorkOrder:66]siteIDTo:61
 	[DInventory:36]changedBy:22:=Current user:C182
-	[DInventory:36]tableNum:30:=Table:C252(->[DInventory:36])
+	[DInventory:36]tableName:30:=Table name:C256(->[DInventory:36])
 	
 	
 	
@@ -48,17 +48,17 @@ Else   //ship
 	[DInventory:36]itemNum:1:=[WorkOrder:66]itemNum:12
 	[DInventory:36]qtyOnWO:5:=-[WorkOrder:66]qtyOrdered:13
 	[DInventory:36]unitCost:7:=[WorkOrder:66]costPlanned:15
-	[DInventory:36]docid:9:=[WorkOrder:66]woNum:29
+	[DInventory:36]idNumDoc:9:=[WorkOrder:66]idNum:29
 	[DInventory:36]customerID:12:=[WorkOrder:66]siteIDFrom:62
 	[DInventory:36]reason:13:="WO Ship"
 	[DInventory:36]typeID:14:="WT"
 	[DInventory:36]dateCreated:39:=Current date:C33
 	[DInventory:36]timeCreated:40:=Current time:C178
-	[DInventory:36]dtCreated:15:=DateTime_Enter
+	[DInventory:36]dtCreated:15:=DateTime_DTTo
 	[DInventory:36]note:18:="From: "+[WorkOrder:66]siteIDFrom:62+"\r"+"To: "+[WorkOrder:66]siteIDTo:61
 	[DInventory:36]siteID:20:=[WorkOrder:66]siteIDFrom:62
 	[DInventory:36]changedBy:22:=Current user:C182
-	[DInventory:36]tableNum:30:=Table:C252(->[DInventory:36])
+	[DInventory:36]tableName:30:=Table name:C256(->[DInventory:36])
 	
 	
 	

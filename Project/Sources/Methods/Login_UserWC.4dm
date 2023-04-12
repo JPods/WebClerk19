@@ -39,7 +39,7 @@ Else
 	End if 
 	If (ds:C1482[obRemoteUser.tableName]=Null:C1517)
 		vResponse:="Error: status=402, RemoteUser with no Primary table"
-		ConsoleMessage("Error: Orphaned RemoteUser Record userName: "+$vtUserName+", password: "+$vtPassword)
+		ConsoleLog("Error: Orphaned RemoteUser Record userName: "+$vtUserName+", password: "+$vtPassword)
 		obRemoteUser.status:="Orphaned"
 		obRemoteUser.save()
 		voState.statusMessage:=vResponse
@@ -48,7 +48,7 @@ Else
 		Case of 
 			: ($obPrimaryRec=Null:C1517)
 				vResponse:="Error: status=401, Orphaned RemoteUser Record"
-				ConsoleMessage("Error: Orphaned RemoteUser Record userName: "+$vtUserName+", password: "+$vtPassword)
+				ConsoleLog("Error: Orphaned RemoteUser Record userName: "+$vtUserName+", password: "+$vtPassword)
 				obRemoteUser.status:="Orphaned"
 				obRemoteUser.save()
 				voState.statusMessage:=vResponse
@@ -65,7 +65,7 @@ Else
 				End if 
 				
 				voState.statusMessage:="Successful login"
-				obRemoteUser.dtLastVisit:=DateTime_Enter
+				obRemoteUser.dtLastVisit:=DateTime_DTTo
 				obRemoteUser.role:=$obPrimaryRec.role
 				obRemoteUser.route:=$obPrimaryRec.route
 				obRemoteUser.email:=$obPrimaryRec.email
@@ -79,7 +79,7 @@ Else
 				vResponse:=LogIn_ReplyEmployee
 				
 				If (<>viDebugMode>410)
-					ConsoleMessage("Successful login vResponse: "+vResponse)
+					ConsoleLog("Successful login vResponse: "+vResponse)
 				End if 
 				//:(obRemoteUser.tableName="Vendor")
 				
@@ -97,7 +97,7 @@ Else
 					$result_o:=obEventLog.save()
 				End if 
 				voState.statusMessage:="Successful login"
-				obRemoteUser.dtLastVisit:=DateTime_Enter
+				obRemoteUser.dtLastVisit:=DateTime_DTTo
 				obRemoteUser.role:=$obPrimaryRec.role
 				obRemoteUser.route:=$obPrimaryRec.route
 				obRemoteUser.email:=$obPrimaryRec.email
@@ -117,7 +117,7 @@ Else
 				// this is none functional, make it work for customers
 				
 				If (<>viDebugMode>410)
-					ConsoleMessage("Successful login "+obRemoteUser.tableName)
+					ConsoleLog("Successful login "+obRemoteUser.tableName)
 				End if 
 		End case 
 	End if 
@@ -125,13 +125,13 @@ End if
 obRemoteUser.idEventLog:=obEventLog.id
 $result_o:=obRemoteUser.save()
 If (<>viDebugMode>410)
-	ConsoleMessage("Login save RemoteUser: "+JSON Stringify:C1217($result_o))
+	ConsoleLog("Login save RemoteUser: "+JSON Stringify:C1217($result_o))
 End if 
 
 obEventLog.idRemoteUser:=obRemoteUser.id
 $result_o:=obEventLog.save()
 If (<>viDebugMode>410)
-	ConsoleMessage("Login save EventLog: "+JSON Stringify:C1217($result_o))
+	ConsoleLog("Login save EventLog: "+JSON Stringify:C1217($result_o))
 End if 
 WC_SendServerResponse(vResponse; "application/json")
 vResponse:="AlreadySent"

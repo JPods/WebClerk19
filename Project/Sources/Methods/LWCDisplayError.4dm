@@ -1,5 +1,5 @@
 //%attributes = {"publishedWeb":true}
-ConsoleMessage("TEST: start")
+ConsoleLog("TEST: start")
 If (False:C215)
 	//Method: LWCDisplayInBrowser
 	//Date: 03/11/03
@@ -40,9 +40,9 @@ Else
 			C_LONGINT:C283($theRecNum)
 			$theRecNum:=Record number:C243(ptCurTable->)
 	End case 
-	ConsoleMessage("TEST: process ready")
+	ConsoleLog("TEST: process ready")
 	If ($doKeepGoing)
 		<>processAlt:=New process:C317("LWCStartProcess"; <>tcPrsMemory; String:C10(Count user processes:C343)+"- 2 Browser"; $thePage; $theRecNum; $theScript)
 	End if 
 End if 
-ConsoleMessage("TEST: process launched")
+ConsoleLog("TEST: process launched")

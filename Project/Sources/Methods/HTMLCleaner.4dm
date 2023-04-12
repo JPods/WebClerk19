@@ -39,7 +39,7 @@ Case of
 			End if 
 		End if 
 	: (Count parameters:C259=1)
-		$tempFold:=<>WebFolder
+		$tempFold:=Storage:C1525.wc.webFolder
 		$doThis:=True:C214
 		$err:=HFS_CatToArray($tempFold; "aText1")
 End case 

@@ -22,7 +22,7 @@ Case of
 	: (Count parameters:C259=0)
 		
 	: (Count parameters:C259=1)
-		ConsoleMessage("driveLaunch: "+$driveLaunch)
+		ConsoleLog("driveLaunch: "+$driveLaunch)
 		$driveLaunch:=$1
 		$vtProcess:="new"
 		$i:=New process:C317(Current method name:C684; 0; "LaunchServer: "+$driveLaunch; $driveLaunch; $vtProcess)
@@ -33,19 +33,33 @@ Case of
 		//Else 
 		//$driveLaunch:="\\\\192.168.1.16\\ShareBillPC"
 		//End if 
+		
+		// Modified by: Bill James (2022-07-15T05:00:00Z)
+		
+		var $useSystemWorker : Boolean
+		$useSystemWorker:=True:C214
 		C_LONGINT:C283($viCnt)  // look at adding more attempts
 		Repeat 
 			$viCnt:=$viCnt+1
 			If (Is macOS:C1572)
 				// mount volume smb://[domain];[username]:[password]@[server]/[share]
 				$externalPath:="osascript -e 'tell application \"Finder\""+"\r"+" mount volume \"smb:"+$driveLaunch+"\""+"\r"+" end tell'"
-				LAUNCH EXTERNAL PROCESS:C811($externalPath)
+				If ($useSystemWorker)
+					$sw:=4D:C1709.SystemWorker.new($externalPath)
+				Else 
+					LAUNCH EXTERNAL PROCESS:C811($externalPath)
+				End if 
 				DELAY PROCESS:C323(Current process:C322; 10)
 			Else 
 				// ### bj ### 20210612_0834  NOT TESTED
 				//  net use \\Server\ShareName\Directory
 				$externalPath:="cmd.exe net use "+$driveLaunch
-				LAUNCH EXTERNAL PROCESS:C811($externalPath)
+				If ($useSystemWorker)
+					$sw:=4D:C1709.SystemWorker.new($externalPath; \
+						New object:C1471("hideWindow"; False:C215))
+				Else 
+					LAUNCH EXTERNAL PROCESS:C811($externalPath)
+				End if 
 				DELAY PROCESS:C323(Current process:C322; 10)
 			End if 
 			
@@ -54,7 +68,7 @@ Case of
 			Else 
 				$pathResult_t:="offLine"
 			End if 
-			ConsoleMessage("driveLaunch: "+$driveLaunch+"\r serverComEx results: "+$pathResult_t)
+			ConsoleLog("driveLaunch: "+$driveLaunch+"\r serverComEx results: "+$pathResult_t)
 			
 		Until ((Test path name:C476($driveLaunch)=0) | ($viCnt>0))
 		

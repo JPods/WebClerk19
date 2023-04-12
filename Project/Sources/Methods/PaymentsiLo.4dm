@@ -113,9 +113,9 @@ Else
 		If ($doMore)  //action for the form regardless of new or existing record
 			
 			If ([Payment:28]status:46="Hold@")
-				_O_OBJECT SET COLOR:C271([Payment:28]status:46; -(Black:K11:16+(256*Yellow:K11:2)))  //SET COLOR (bInfo;  (vForeground + (256 * vBackground)))
+				OBJECT SET RGB COLORS:C628(*; "[Payment:28]status:46"; Black:K11:16; Yellow:K11:2)  //SET COLOR (bInfo;  (vForeground + (256 * vBackground)))
 			Else 
-				_O_OBJECT SET COLOR:C271([Payment:28]status:46; -(Black:K11:16+(256*White:K11:1)))
+				OBJECT SET RGB COLORS:C628(*; "[Payment:28]status:46"; Black:K11:16; White:K11:1)
 			End if 
 			// confirm 20170419  changing from all devices
 			// all choices should be values in a single array if such is necessary

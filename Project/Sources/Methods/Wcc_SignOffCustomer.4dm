@@ -32,7 +32,7 @@ vResponse:=JSON Stringify:C1217($voTableData)
 [EventLog:75]customerID:38:=""
 [EventLog:75]zip:21:=""
 REDUCE SELECTION:C351([Customer:2]; 0)
-REDUCE SELECTION:C351([Lead:48]; 0)
+
 REDUCE SELECTION:C351([Contact:13]; 0)
 CustAddress:=""
 viEndUserSecurityLevel:=1

@@ -11,7 +11,7 @@ If (OK=1)
 		QUERY:C277([ItemDiscount:45]; [ItemDiscount:45]specialDiscountsid:1=[SpecialDiscount:44]idNum:4)
 		Disc_ArraysDo(Records in selection:C76([ItemDiscount:45]))
 		//
-		//[SpecialDiscount]obSync:=DateTime_Enter
+		//[SpecialDiscount]obSync:=DateTime_DTTo
 		//
 		Disc_AddItems
 		//

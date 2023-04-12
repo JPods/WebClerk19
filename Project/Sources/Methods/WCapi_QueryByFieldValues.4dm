@@ -17,7 +17,7 @@ vResponse:="Error: Invalid requrest: "+voState.request.URL.href
 C_POINTER:C301(ptCurTable; $ptTable)
 C_LONGINT:C283($viTableNum; $viFieldNum)
 C_TEXT:C284($tableName; $vtTableNameLC; $vtFieldName; $value)
-ptCurTable:=(->[Control:1])
+ptCurTable:=(->[Base:1])
 //TRACE
 C_OBJECT:C1216($obSel; $obRec)
 $tableName:=WCapi_GetParameter("tableName"; "")
@@ -105,8 +105,8 @@ Else
 							QUERY:C277($ptTable->;  & $ptField-><=Num:C11($strEndValue))
 						: ($theType=9)  //real, integer, longint
 							If ($vtFieldName="DT@")
-								QUERY:C277($ptTable->; $ptField->>=DateTime_Enter(Date:C102($strBeginValue)); *)
-								QUERY:C277($ptTable->;  & $ptField-><=DateTime_Enter(Date:C102($strEndValue); ?23:59:59?))
+								QUERY:C277($ptTable->; $ptField->>=DateTime_DTTo(Date:C102($strBeginValue)); *)
+								QUERY:C277($ptTable->;  & $ptField-><=DateTime_DTTo(Date:C102($strEndValue); ?23:59:59?))
 							Else 
 								QUERY:C277($ptTable->; $ptField->>=Num:C11($strBeginValue); *)
 								QUERY:C277($ptTable->;  & $ptField-><=Num:C11($strEndValue))

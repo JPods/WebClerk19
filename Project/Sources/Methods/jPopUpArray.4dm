@@ -7,10 +7,10 @@ C_LONGINT:C283($i; viTableNum; viFieldNum)
 $ptPopup:=$1
 $ptField:=$2
 If ($ptPopup->>1)
-	If (entryEntity#Null:C1517)
+	If (entry_o#Null:C1517)
 		var $fieldName : Text
 		$fieldName:=Field name:C257($ptField)
-		entryEntity[$fieldName]:=$ptPopup->{$ptPopup->}
+		entry_o[$fieldName]:=$ptPopup->{$ptPopup->}
 	Else 
 		$vtValue:=$ptPopup->{$ptPopup->}
 		RESOLVE POINTER:C394($ptPopup; $vtArrayName; viTableNum; viFieldNum)

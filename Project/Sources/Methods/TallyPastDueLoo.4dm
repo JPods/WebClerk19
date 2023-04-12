@@ -11,11 +11,14 @@ var $oRec; $oSel; $oTR : Object
 $oSel:=ds:C1482.Customer.all()
 $k:=$oSel.length
 $oTR:=ds:C1482.TallyResult.new()
-$oTR.dtReport:=DateTime_Enter
+$oTR.dtReport:=DateTime_DTTo
 $oTR.dtCreated:=$oTR.dtReport
 $oTR.dateCreated:=Current date:C33
 $oTR.name:="Tally Receivables"
-$oTR.obGeneral:=New object:C1471("keyTags"; ""; "keyText"; ""; "report"; "Tally Receivables"; "count"; $oSel.length; "locked"; New collection:C1472)
+$oTR.obGeneral:=Init_obGeneral
+$oTR.obGeneral.report:="Tally Receivables"
+$oTR.obGeneral.count:=$oSel.length
+$oTR.obGeneral.locked:=New collection:C1472
 $oTR.save()
 For each ($oRec; $oSel)
 	$viProgressID:=Progress New

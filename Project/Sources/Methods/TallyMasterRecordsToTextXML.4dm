@@ -14,7 +14,7 @@
 
 // ----------------------------------------------------
 
-ConsoleMessage("Launch")
+ConsoleLog("Launch")
 C_TEXT:C284($1; $sendDirection)
 C_TEXT:C284($2; $directionTable)
 
@@ -73,7 +73,7 @@ Case of
 			FIRST RECORD:C50([TallyMaster:60])
 			vtext2:=vText9
 			For (vi1; 1; vi2)
-				ConsoleMessage("Sending TM: "+String:C10([TallyMaster:60]idNum:4))
+				ConsoleLog("Sending TM: "+String:C10([TallyMaster:60]idNum:4))
 				vtext1:=""
 				[TallyMaster:60]script:9:=Tx_ConvertScripts([TallyMaster:60]script:9)
 				[TallyMaster:60]build:6:=Tx_ConvertScripts([TallyMaster:60]build:6)
@@ -145,7 +145,7 @@ Case of
 									[TallyMaster:60]dateRevision:32:=Current date:C33
 									SAVE RECORD:C53([TallyMaster:60])
 									UNLOAD RECORD:C212([TallyMaster:60])
-									ConsoleMessage("Updates TM: "+$stringRec)
+									ConsoleLog("Updates TM: "+$stringRec)
 								End if 
 							End if 
 						End if 
@@ -153,7 +153,7 @@ Case of
 					
 				End while 
 			End if 
-			ConsoleMessage("Import Complete")
+			ConsoleLog("Import Complete")
 			ALERT:C41("Import Complete")
 		End if 
 	: ($directionTable="UserReports")
@@ -168,7 +168,7 @@ Case of
 			FIRST RECORD:C50([UserReport:46])
 			vtext2:=vText9
 			For (vi1; 1; vi2)
-				ConsoleMessage("Sending UserReport: "+String:C10([UserReport:46]idNum:17))
+				ConsoleLog("Sending UserReport: "+String:C10([UserReport:46]idNum:17))
 				vtext1:=""
 				[UserReport:46]scriptBegin:5:=Tx_ConvertScripts([UserReport:46]scriptBegin:5)
 				[UserReport:46]scriptEnd:38:=Tx_ConvertScripts([UserReport:46]scriptEnd:38)
@@ -221,16 +221,16 @@ Case of
 									[UserReport:46]scriptBegin:5:=$script
 									[UserReport:46]scriptEnd:38:=$build
 									[UserReport:46]scriptLoop:34:=$header
-									[UserReport:46]dtLastSync:39:=DateTime_Enter
+									[UserReport:46]dtLastSync:39:=DateTime_DTTo
 									SAVE RECORD:C53([UserReport:46])
 									UNLOAD RECORD:C212([UserReport:46])
-									ConsoleMessage("Updates UserReport: "+$stringRec)
+									ConsoleLog("Updates UserReport: "+$stringRec)
 								End if 
 							End if 
 						End if 
 					End if 
 				End while 
-				ConsoleMessage("Import Complete")
+				ConsoleLog("Import Complete")
 				ALERT:C41("Import Complete")
 			End if 
 		End if 
@@ -240,7 +240,7 @@ Case of
 			FIRST RECORD:C50([CronJob:82])
 			vtext2:=vText9
 			For (vi1; 1; vi2)
-				ConsoleMessage("Sending TM: "+String:C10([CronJob:82]idNum:1))
+				ConsoleLog("Sending TM: "+String:C10([CronJob:82]idNum:1))
 				vtext1:=""
 				[CronJob:82]script:11:=Tx_ConvertScripts([CronJob:82]script:11)
 				[CronJob:82]scriptAfter:25:=Tx_ConvertScripts([CronJob:82]scriptAfter:25)
@@ -293,13 +293,13 @@ Case of
 									//[CronJob]DateRevision:=Current date
 									SAVE RECORD:C53([CronJob:82])
 									UNLOAD RECORD:C212([CronJob:82])
-									ConsoleMessage("Updates CronJobs: "+$stringRec)
+									ConsoleLog("Updates CronJobs: "+$stringRec)
 								End if 
 							End if 
 						End if 
 					End if 
 				End while 
-				ConsoleMessage("Import Complete")
+				ConsoleLog("Import Complete")
 				ALERT:C41("Import Complete")
 			End if 
 		End if 

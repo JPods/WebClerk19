@@ -15,6 +15,8 @@ vHere:=1
 doOLO:=False:C215
 LoadCustomFields  // load custom user fields
 MenuTitle
+oLoMenu:=2
+iLoMenu:=3
 SET MENU BAR:C67(oLoMenu)
 If (ptCurTable#(->[TallyMaster:60]))
 	Execute_TallyMaster(Table name:C256(ptCurTable); "oloOpen")

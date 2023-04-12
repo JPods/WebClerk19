@@ -20,10 +20,10 @@ If ($doChange)
 				QUERY:C277([TallyMaster:60]; [TallyMaster:60]purpose:3="ScriptDrafts"; *)
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25>0; *)
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25<=Storage:C1525.user.securityLevel; *)
-				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]tableNum:1=Table:C252(->[Control:1]))
+				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]tableNum:1=Table:C252(->[Base:1]))
 				DB_ShowCurrentSelection(->[TallyMaster:60])
 			: (myOK=2)
-				$myDocName:=Storage:C1525.folder.jitF+"mydoc"+String:C10(DateTime_Enter)+".scpt"
+				$myDocName:=Storage:C1525.folder.jitF+"mydoc"+String:C10(DateTime_DTTo)+".scpt"
 				myDoc:=Create document:C266($myDocName)
 				If (OK=1)
 					SEND PACKET:C103(myDoc; vEntryText)

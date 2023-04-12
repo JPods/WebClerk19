@@ -3,11 +3,11 @@ C_TEXT:C284($theDoc; $myDocName)
 KeyModifierCurrent
 Case of 
 	: (OptKey=1)
-		Path_Set(<>WebFolder+"jitimages"+<>foldSep+"movies"+<>foldSep)
+		Path_Set(Storage:C1525.wc.webFolder+"jitimages"+<>foldSep+"movies"+<>foldSep)
 	: (OptKey=1)
-		Path_Set(<>WebFolder+"jitimages"+<>foldSep)
+		Path_Set(Storage:C1525.wc.webFolder+"jitimages"+<>foldSep)
 	Else 
-		Path_Set(<>WebFolder)
+		Path_Set(Storage:C1525.wc.webFolder)
 End case 
 $myDocName:=Get_FileName("Locate document"; "")
 If ($myDocName#"")

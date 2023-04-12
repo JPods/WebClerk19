@@ -1,5 +1,6 @@
 //%attributes = {"publishedWeb":true}
 //Method: Pay_Main
+//adding text
 C_LONGINT:C283($1)
 C_REAL:C285($2; $3; $4; $limitAmt)
 //TRACE
@@ -18,10 +19,10 @@ Else
 End if 
 [Payment:28]amount:1:=Round:C94($myAmount; <>tcDecimalTt)
 If (vOrdNum#1)
-	[Payment:28]orderNum:2:=vOrdNum
+	[Payment:28]idNumOrder:2:=vOrdNum
 End if 
 //pvCardAction
-[Payment:28]invoiceNum:3:=vInvNum
+[Payment:28]idNumInvoice:3:=vInvNum
 [Payment:28]customerID:4:=prntAcct
 [Payment:28]salesTax:32:=vrSalesTax
 [Payment:28]customerPO:33:=vsCustPONum
@@ -30,7 +31,7 @@ End if
 //))
 //[Payment]DateReceived:=!01/01/01!
 //Else 
-[Payment:28]dateReceived:10:=pDateRcd
+[Payment:28]dateDocument:10:=pDateRcd
 [Payment:28]timeReceived:52:=Current time:C178
 C_DATE:C307(pDateDeposited)
 [Payment:28]dateDeposit:49:=pDateDeposited
@@ -77,7 +78,7 @@ End if
 [Payment:28]takenBy:47:=Current user:C182
 //
 If ($1=1)
-	[Payment:28]history:23:=[Payment:28]history:23+("\r"*Num:C11([Payment:28]history:23#""))+"Invoice "+String:C10([Invoice:26]invoiceNum:2; "0000-0000")+"  ---  "+String:C10(-[Payment:28]amount:1; "000,000,000.00")
+	[Payment:28]history:23:=[Payment:28]history:23+("\r"*Num:C11([Payment:28]history:23#""))+"Invoice "+String:C10([Invoice:26]idNum:2; "0000-0000")+"  ---  "+String:C10(-[Payment:28]amount:1; "000,000,000.00")
 Else 
 	[Payment:28]history:23:=[Payment:28]history:23+"\r"+"Payment entered in Order."
 End if 
@@ -92,6 +93,6 @@ If ($2=1)  //from Apply Pay Window
 End if 
 [Customer:2]balanceCurrent:41:=Round:C94([Customer:2]balanceCurrent:41-[Payment:28]amount:1; <>tcDecimalTt)
 If ([Payment:28]amount:1>0)
-	[Customer:2]lastPayDate:51:=[Payment:28]dateReceived:10
+	[Customer:2]lastPayDate:51:=[Payment:28]dateDocument:10
 	[Customer:2]lastPayAmount:52:=[Payment:28]amount:1
 End if 

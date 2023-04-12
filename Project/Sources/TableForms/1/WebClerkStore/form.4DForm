@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"width": 996,
 	"height": 574,
@@ -44,10 +44,10 @@
 			"objects": {
 				"WebTech": {
 					"type": "webArea",
-					"top": 35,
-					"left": 4,
-					"width": 992,
-					"height": 539,
+					"top": 4,
+					"left": 0,
+					"width": 1140,
+					"height": 797,
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "WebTech",
@@ -60,35 +60,11 @@
 					"method": "ObjectMethods/WebTech.4dm",
 					"events": [
 						"onLoad",
-						"onLosingFocus",
-						"onGettingFocus",
-						"onUnload",
-						"onBeginURLLoading",
 						"onURLResourceLoading",
 						"onEndURLLoading",
 						"onURLLoadingError",
-						"onURLFiltering",
 						"onOpenExternalLink",
 						"onWindowOpeningDenied"
-					]
-				},
-				"Variable5": {
-					"type": "pictureButton",
-					"top": 2,
-					"left": 2,
-					"width": 29,
-					"height": 23,
-					"dataSource": "bCancelB",
-					"action": "accept",
-					"shortcutKey": "\u001B",
-					"rowCount": 4,
-					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"method": "ObjectMethods/Variable5.4dm",
-					"events": [
-						"onClick"
 					]
 				}
 			}
@@ -108,5 +84,11 @@
 			"View 8": {},
 			"View 9": {}
 		}
+	},
+	"geometryStamp": 16,
+	"menuBar": "Menu Bar #1",
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }

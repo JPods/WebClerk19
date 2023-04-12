@@ -30,11 +30,11 @@ For ($i; 1; $k)
 End for 
 READ WRITE:C146([Proposal:42])
 REDUCE SELECTION:C351([Proposal:42]; 0)
-ConsoleMessage("Cloneable Proposals: "+String:C10($k)+", categories: "+String:C10(Size of array:C274($atCategory)))
+ConsoleLog("Cloneable Proposals: "+String:C10($k)+", categories: "+String:C10(Size of array:C274($atCategory)))
 
 $k:=Size of array:C274($atCategory)
 For ($i; 1; $k)
-	ConsoleMessage($atCategory{$i}+": "+String:C10($aiCount{$i}))
+	ConsoleLog($atCategory{$i}+": "+String:C10($aiCount{$i}))
 End for 
 
 
@@ -62,11 +62,11 @@ For ($i; 1; $k)
 End for 
 READ WRITE:C146([Proposal:42])
 REDUCE SELECTION:C351([Proposal:42]; 0)
-ConsoleMessage("Cloneable Proposals: "+String:C10($k)+", JobClass: "+String:C10(Size of array:C274($atCategory)))
+ConsoleLog("Cloneable Proposals: "+String:C10($k)+", JobClass: "+String:C10(Size of array:C274($atCategory)))
 
 $k:=Size of array:C274($atCategory)
 For ($i; 1; $k)
-	ConsoleMessage($atCategory{$i}+": "+String:C10($aiCount{$i}))
+	ConsoleLog($atCategory{$i}+": "+String:C10($aiCount{$i}))
 End for 
 
 If (False:C215)
@@ -90,11 +90,11 @@ If (False:C215)
 	End for 
 	READ WRITE:C146([Proposal:42])
 	REDUCE SELECTION:C351([Proposal:42]; 0)
-	ConsoleMessage("Cloneable Proposals: "+String:C10(vi2)+", JobClass: "+String:C10(Size of array:C274(atCategory)))
+	ConsoleLog("Cloneable Proposals: "+String:C10(vi2)+", JobClass: "+String:C10(Size of array:C274(atCategory)))
 	
 	
 	vi2:=Size of array:C274(atCategory)
 	For (vi1; 1; vi2)
-		ConsoleMessage(atCategory{vi1}+": "+String:C10(aiCount{vi1}))
+		ConsoleLog(atCategory{vi1}+": "+String:C10(aiCount{vi1}))
 	End for 
 End if 

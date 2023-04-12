@@ -10,8 +10,15 @@
 	"markerFooter": 845,
 	"events": [
 		"onLoad",
-		"onClick",
-		"onDoubleClick"
+		"onValidate",
+		"onOutsideCall",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
 	],
 	"method": "method.4dm",
 	"pageFormat": {
@@ -21,10 +28,30 @@
 	"pages": [
 		{
 			"objects": {
-				"ddAttention": {
+				"_Rectangle1_1": {
+					"type": "rectangle",
+					"top": 7,
+					"left": 201,
+					"width": 142,
+					"height": 25,
+					"fill": "#ffd700",
+					"stroke": "#ffd700",
+					"bottom": 32
+				},
+				"_Rectangle_2": {
+					"type": "rectangle",
+					"top": 7,
+					"left": 394,
+					"width": 392,
+					"height": 25,
+					"fill": "#ffd700",
+					"stroke": "#ffd700",
+					"bottom": 32
+				},
+				"_CHK_ddAttention_3": {
 					"type": "dropdown",
-					"top": 29,
-					"left": 115,
+					"top": 55,
+					"left": 113,
 					"width": 84,
 					"height": 19,
 					"dataSource": "atAttention",
@@ -34,15 +61,14 @@
 					"fontSize": 10,
 					"method": "ObjectMethods/ddAttention.4dm",
 					"events": [
-						"onLoad",
 						"onClick",
 						"onDataChange"
 					]
 				},
-				"Text372": {
+				"_Text_Attention_4": {
 					"type": "text",
-					"top": 33,
-					"left": 137,
+					"top": 59,
+					"left": 135,
 					"width": 61,
 					"height": 13,
 					"stroke": "#0000FF",
@@ -50,7 +76,7 @@
 					"textAlign": "right",
 					"text": "Attention"
 				},
-				"Variable132": {
+				"_VAR_<>pNavPallet_5": {
 					"type": "input",
 					"top": 0,
 					"left": 0,
@@ -69,9 +95,9 @@
 						"onClick"
 					]
 				},
-				"Variable133": {
+				"_VAR_aPages_6": {
 					"type": "dropdown",
-					"top": 31,
+					"top": 7,
 					"left": 3,
 					"width": 99,
 					"height": 17,
@@ -85,63 +111,7 @@
 						"onClick"
 					]
 				},
-				"Variable134": {
-					"type": "pictureButton",
-					"top": 3,
-					"left": 3,
-					"width": 29,
-					"height": 23,
-					"dataSource": "bAccept",
-					"shortcutKey": "[Enter]",
-					"shortcutAccel": true,
-					"rowCount": 4,
-					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"method": "ObjectMethods/Variable134.4dm",
-					"events": [
-						"onClick"
-					]
-				},
-				"Variable135": {
-					"type": "pictureButton",
-					"top": 3,
-					"left": 35,
-					"width": 15,
-					"height": 23,
-					"dataSource": "bPrevious",
-					"shortcutKey": "[left arrow]",
-					"shortcutAccel": true,
-					"rowCount": 4,
-					"picture": "/RESOURCES/Images/library/NavLeft.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"method": "ObjectMethods/Variable135.4dm",
-					"events": [
-						"onClick"
-					]
-				},
-				"Variable136": {
-					"type": "pictureButton",
-					"top": 3,
-					"left": 53,
-					"width": 15,
-					"height": 23,
-					"dataSource": "bNext",
-					"shortcutKey": "[right arrow]",
-					"shortcutAccel": true,
-					"rowCount": 4,
-					"picture": "/RESOURCES/Images/library/NavRight.png",
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"method": "ObjectMethods/Variable136.4dm",
-					"events": [
-						"onClick"
-					]
-				},
-				"Variable111": {
+				"_VAR_bdEnterKey_7": {
 					"type": "button",
 					"top": 50,
 					"left": 1,
@@ -155,13 +125,13 @@
 						"onClick"
 					]
 				},
-				"Field113": {
+				"_PROP_Customer_fax_8": {
 					"type": "input",
-					"top": 11,
+					"top": 74,
 					"left": 886,
 					"width": 114,
 					"height": 17,
-					"dataSource": "entryEntity.fax",
+					"dataSource": "entry_o.fax",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -171,13 +141,13 @@
 					"dropping": "none",
 					"right": 1000
 				},
-				"Field114": {
+				"_PROP_Customer_phoneCell_9": {
 					"type": "input",
-					"top": 49,
+					"top": 75,
 					"left": 367,
 					"width": 161,
 					"height": 16,
-					"dataSource": "entryEntity.phoneCell",
+					"dataSource": "entry_o.phoneCell",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -186,13 +156,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field115": {
+				"_PROP_Customer_emailVerified_10": {
 					"type": "input",
-					"top": 30,
+					"top": 56,
 					"left": 613,
 					"width": 74,
 					"height": 16,
-					"dataSource": "entryEntity.emailVerified",
+					"dataSource": "entry_o.emailVerified",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -202,13 +172,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field116": {
+				"_PROP_Customer_optOut_11": {
 					"type": "input",
-					"top": 49,
+					"top": 75,
 					"left": 791,
 					"width": 30,
 					"height": 16,
-					"dataSource": "entryEntity.optOut",
+					"dataSource": "entry_o.optOut",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "center",
@@ -218,13 +188,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field117": {
+				"_PROP_Customer_webPage_12": {
 					"type": "input",
-					"top": 49,
+					"top": 75,
 					"left": 613,
 					"width": 64,
 					"height": 16,
-					"dataSource": "entryEntity.webPage",
+					"dataSource": "entry_o.webPage",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -233,13 +203,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field118": {
+				"_PROP_Customer_publish_13": {
 					"type": "input",
-					"top": 49,
+					"top": 75,
 					"left": 679,
 					"width": 63,
 					"height": 16,
-					"dataSource": "entryEntity.publish",
+					"dataSource": "entry_o.publish",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -249,13 +219,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field119": {
+				"_PROP_Customer_nameFirst_14": {
 					"type": "input",
-					"top": 30,
+					"top": 56,
 					"left": 204,
 					"width": 161,
 					"height": 16,
-					"dataSource": "entryEntity.nameFirst",
+					"dataSource": "entry_o.nameFirst",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -264,13 +234,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field120": {
+				"_PROP_Customer_nameLast_15": {
 					"type": "input",
-					"top": 30,
+					"top": 56,
 					"left": 367,
 					"width": 161,
 					"height": 16,
-					"dataSource": "entryEntity.nameLast",
+					"dataSource": "entry_o.nameLast",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -279,20 +249,20 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field121": {
+				"_PROP_Customer_individual_16": {
 					"type": "checkbox",
-					"top": 11,
+					"top": 37,
 					"left": 470,
 					"width": 74,
 					"height": 16,
-					"dataSource": "entryEntity.individual",
+					"dataSource": "entry_o.individual",
 					"text": "Individual",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable"
 				},
-				"ddClipboard1": {
+				"_CHK_ddClipboard1_17": {
 					"type": "dropdown",
-					"top": 47,
+					"top": 19,
 					"left": 972,
 					"width": 28,
 					"height": 32,
@@ -305,9 +275,9 @@
 					"fontSize": 10,
 					"method": "ObjectMethods/ddClipboard1.4dm"
 				},
-				"Variable12": {
+				"_VAR_Dial It FAX_18": {
 					"type": "button",
-					"top": 12,
+					"top": 75,
 					"left": 829,
 					"width": 52,
 					"height": 16,
@@ -315,9 +285,9 @@
 					"text": ":16789,13",
 					"display": false
 				},
-				"Text16": {
+				"_Text__16789227_19": {
 					"type": "text",
-					"top": 13,
+					"top": 76,
 					"left": 831,
 					"width": 49,
 					"height": 13,
@@ -326,9 +296,9 @@
 					"textAlign": "right",
 					"text": ":16789,227"
 				},
-				"Text17": {
+				"_Text_wPage_Pub_20": {
 					"type": "text",
-					"top": 51,
+					"top": 77,
 					"left": 542,
 					"width": 66,
 					"height": 12,
@@ -337,9 +307,9 @@
 					"textAlign": "right",
 					"text": "wPage/Pub"
 				},
-				"Text63": {
+				"_Text_OptOut_21": {
 					"type": "text",
-					"top": 51,
+					"top": 77,
 					"left": 748,
 					"width": 42,
 					"height": 13,
@@ -348,10 +318,10 @@
 					"textAlign": "center",
 					"text": "OptOut"
 				},
-				"Text64": {
+				"_Text_Phone_Cell_22": {
 					"type": "text",
-					"top": 52,
-					"left": 129,
+					"top": 78,
+					"left": 127,
 					"width": 69,
 					"height": 13,
 					"stroke": "#000000",
@@ -359,9 +329,9 @@
 					"textAlign": "right",
 					"text": "Phone / Cell"
 				},
-				"Variable1": {
+				"_VAR_bClipboard_23": {
 					"type": "pictureButton",
-					"top": 53,
+					"top": 25,
 					"left": 977,
 					"width": 18,
 					"height": 22,
@@ -375,13 +345,13 @@
 					"switchBackWhenReleased": true,
 					"useLastFrameAsDisabled": true
 				},
-				"Field122": {
+				"_PROP_Customer_emailStatus_24": {
 					"type": "input",
-					"top": 30,
+					"top": 56,
 					"left": 691,
 					"width": 130,
 					"height": 16,
-					"dataSource": "entryEntity.emailStatus",
+					"dataSource": "entry_o.emailStatus",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -390,13 +360,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field123": {
+				"_PROP_Customer_company_25": {
 					"type": "input",
-					"top": 11,
+					"top": 37,
 					"left": 204,
 					"width": 259,
 					"height": 16,
-					"dataSource": "entryEntity.company",
+					"dataSource": "entry_o.company",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -405,13 +375,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field124": {
+				"_PROP_Customer_phone_26": {
 					"type": "input",
-					"top": 49,
+					"top": 75,
 					"left": 204,
 					"width": 160,
 					"height": 16,
-					"dataSource": "entryEntity.phone",
+					"dataSource": "entry_o.phone",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -420,13 +390,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field125": {
+				"_PROP_Customer_email_27": {
 					"type": "input",
-					"top": 11,
+					"top": 37,
 					"left": 613,
 					"width": 208,
 					"height": 16,
-					"dataSource": "entryEntity.email",
+					"dataSource": "entry_o.email",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -436,10 +406,10 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Text66": {
+				"_Text_Company_28": {
 					"type": "text",
-					"top": 14,
-					"left": 137,
+					"top": 40,
+					"left": 135,
 					"width": 61,
 					"height": 13,
 					"stroke": "#000000",
@@ -447,33 +417,33 @@
 					"textAlign": "right",
 					"text": "Company"
 				},
-				"Variable9": {
+				"_VAR_Dial It_29": {
 					"type": "button",
-					"top": 50,
-					"left": 126,
+					"top": 76,
+					"left": 124,
 					"width": 40,
 					"height": 16,
 					"dataSource": "Dial It",
 					"text": ":16789,13",
 					"display": false
 				},
-				"Variable11": {
+				"_VAR_Dial It_30": {
 					"type": "button",
-					"top": 50,
-					"left": 169,
+					"top": 76,
+					"left": 167,
 					"width": 30,
 					"height": 16,
 					"dataSource": "Dial It",
 					"text": ":16789,13",
 					"display": false
 				},
-				"Field75": {
+				"_PROP_Customer_actionBy_31": {
 					"type": "input",
-					"top": 74,
+					"top": 12,
 					"left": 204,
 					"width": 135,
 					"height": 16,
-					"dataSource": "entryEntity.actionBy",
+					"dataSource": "entry_o.actionBy",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -482,13 +452,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field36": {
+				"_PROP_Customer_action_32": {
 					"type": "input",
-					"top": 74,
-					"left": 342,
+					"top": 12,
+					"left": 397,
 					"width": 158,
 					"height": 16,
-					"dataSource": "entryEntity.action",
+					"dataSource": "entry_o.action",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -497,13 +467,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field4312": {
+				"_PROP_Customer_actionDate_33": {
 					"type": "input",
-					"top": 74,
-					"left": 527,
+					"top": 12,
+					"left": 582,
 					"width": 85,
 					"height": 16,
-					"dataSource": "entryEntity.actionDate",
+					"dataSource": "entry_o.actionDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -516,9 +486,9 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Variable15": {
+				"_VAR_aiSCusProcess_34": {
 					"type": "dropdown",
-					"top": 68,
+					"top": 40,
 					"left": 829,
 					"width": 138,
 					"height": 22,
@@ -528,9 +498,9 @@
 					"textAlign": "center",
 					"fontSize": 13
 				},
-				"Text25": {
+				"_Text_eVerified_35": {
 					"type": "text",
-					"top": 33,
+					"top": 59,
 					"left": 541,
 					"width": 66,
 					"height": 13,
@@ -539,9 +509,9 @@
 					"textAlign": "right",
 					"text": "eVerified"
 				},
-				"Variable142": {
+				"_VAR_bEmailVerified_36": {
 					"type": "button",
-					"top": 31,
+					"top": 57,
 					"left": 543,
 					"width": 65,
 					"height": 17,
@@ -553,9 +523,9 @@
 						"onClick"
 					]
 				},
-				"Text11": {
+				"_Text__16789220_37": {
 					"type": "text",
-					"top": 14,
+					"top": 40,
 					"left": 557,
 					"width": 50,
 					"height": 13,
@@ -564,9 +534,9 @@
 					"textAlign": "right",
 					"text": ":16789,220"
 				},
-				"Variable138": {
+				"_VAR_bSendEmail_38": {
 					"type": "button",
-					"top": 11,
+					"top": 37,
 					"left": 544,
 					"width": 64,
 					"height": 18,
@@ -578,22 +548,22 @@
 						"onClick"
 					]
 				},
-				"Text382": {
+				"_Text_ActionBy_39": {
 					"type": "text",
-					"top": 75,
-					"left": 97,
-					"width": 102,
+					"top": 13,
+					"left": 135,
+					"width": 62,
 					"height": 14,
 					"stroke": "#000099",
 					"class": "cssInputLabel",
 					"textAlign": "right",
-					"text": "Action By / Action",
-					"right": 199
+					"text": "Action By",
+					"right": 197
 				},
-				"Variable42": {
+				"_VAR_<>aActions_40": {
 					"type": "dropdown",
-					"top": 74,
-					"left": 162,
+					"top": 12,
+					"left": 355,
 					"width": 37,
 					"height": 17,
 					"dataSource": "<>aActions",
@@ -605,10 +575,10 @@
 						"onClick"
 					]
 				},
-				"Variable159": {
+				"_VAR_<>aNameID_41": {
 					"type": "dropdown",
-					"top": 74,
-					"left": 97,
+					"top": 12,
+					"left": 136,
 					"width": 60,
 					"height": 17,
 					"dataSource": "<>aNameID",
@@ -620,30 +590,10 @@
 						"onClick"
 					]
 				},
-				"PopupDate": {
+				"_TimePickerSingleAM_vActionTime_42": {
 					"type": "subform",
-					"top": 74,
-					"left": 505,
-					"width": 17,
-					"height": 17,
-					"dataSource": "vActionDate",
-					"dataSourceTypeHint": "date",
-					"detailForm": "DateButton",
-					"deletableInList": false,
-					"doubleClickInRowAction": "editSubrecord",
-					"doubleClickInEmptyAreaAction": "addSubrecord",
-					"selectionMode": "multiple",
-					"printFrame": "variable",
-					"method": "ObjectMethods/PopupDate.4dm",
-					"events": [
-						"onLoad",
-						"onDataChange"
-					]
-				},
-				"TimePickerSingleAM": {
-					"type": "subform",
-					"top": 71,
-					"left": 621,
+					"top": 9,
+					"left": 676,
 					"width": 109,
 					"height": 22,
 					"dataSource": "vActionTime",
@@ -659,9 +609,9 @@
 					"method": "ObjectMethods/TimePickerSingleAM.4dm",
 					"events": []
 				},
-				"Variable151": {
+				"_VAR_<>aCustAddRel_43": {
 					"type": "dropdown",
-					"top": 41,
+					"top": 13,
 					"left": 829,
 					"width": 140,
 					"height": 22,
@@ -677,12 +627,71 @@
 						"onClick"
 					],
 					"fontSize": 13
+				},
+				"_PopupDate_vActionDate_44": {
+					"type": "subform",
+					"top": 13,
+					"left": 559,
+					"width": 19,
+					"height": 16,
+					"dataSource": "vActionDate",
+					"dataSourceTypeHint": "date",
+					"detailForm": "DateButton",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/PopupDate.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"focusable": true
+				},
+				"_VAR_aEntryScripts_45": {
+					"type": "dropdown",
+					"top": 29,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aEntryScripts",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_Action_46": {
+					"type": "text",
+					"top": 13,
+					"left": 348,
+					"width": 42,
+					"height": 14,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Action",
+					"right": 390
 				}
 			}
 		},
 		{
 			"objects": {
-				"Text378": {
+				"_Text_ShipVia_148": {
+					"type": "text",
+					"top": 197,
+					"left": 534,
+					"width": 87,
+					"height": 13,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ShipVia"
+				},
+				"_Text__Div_47": {
 					"type": "text",
 					"top": 195,
 					"left": 72,
@@ -693,7 +702,7 @@
 					"textAlign": "right",
 					"text": " /Div"
 				},
-				"Text46": {
+				"_Text_Country_48": {
 					"type": "text",
 					"top": 195,
 					"left": 53,
@@ -704,7 +713,7 @@
 					"textAlign": "right",
 					"text": "Country"
 				},
-				"Variable27961": {
+				"_VAR_<>aStateList_49": {
 					"type": "dropdown",
 					"top": 175,
 					"left": 55,
@@ -719,7 +728,7 @@
 						"onClick"
 					]
 				},
-				"Variable27962": {
+				"_VAR_<>aCountryList_50": {
 					"type": "dropdown",
 					"top": 193,
 					"left": 48,
@@ -740,7 +749,7 @@
 					"left": 117,
 					"width": 869,
 					"height": 136,
-					"dataSource": "entryEntity.comment",
+					"dataSource": "entry_o.comment",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -755,7 +764,7 @@
 					],
 					"zzzdataSource": "[Customer:2]comment:15"
 				},
-				"Text362": {
+				"_Text_Domain_52": {
 					"type": "text",
 					"top": 214,
 					"left": 15,
@@ -766,7 +775,7 @@
 					"textAlign": "right",
 					"text": "Domain"
 				},
-				"Variable61": {
+				"_VAR_bDomain_53": {
 					"type": "button",
 					"top": 212,
 					"left": 52,
@@ -780,7 +789,7 @@
 						"onClick"
 					]
 				},
-				"Variable30": {
+				"_VAR_bLead_54": {
 					"type": "button",
 					"top": 70,
 					"left": 12,
@@ -793,7 +802,7 @@
 						"onClick"
 					]
 				},
-				"Text373": {
+				"_Text_Title_55": {
 					"type": "text",
 					"top": 100,
 					"left": 12,
@@ -804,7 +813,7 @@
 					"textAlign": "right",
 					"text": "Title"
 				},
-				"Text374": {
+				"_Text_Address1_56": {
 					"type": "text",
 					"top": 119,
 					"left": 12,
@@ -815,7 +824,7 @@
 					"textAlign": "right",
 					"text": "Address1"
 				},
-				"Text375": {
+				"_Text_Address2_57": {
 					"type": "text",
 					"top": 138,
 					"left": 12,
@@ -826,7 +835,7 @@
 					"textAlign": "right",
 					"text": "Address2"
 				},
-				"Text376": {
+				"_Text_City_58": {
 					"type": "text",
 					"top": 157,
 					"left": 12,
@@ -837,7 +846,7 @@
 					"textAlign": "right",
 					"text": "City"
 				},
-				"Text39": {
+				"_Text_RetireDate_59": {
 					"type": "text",
 					"top": 257,
 					"left": 122,
@@ -848,7 +857,7 @@
 					"textAlign": "right",
 					"text": " Retire Date"
 				},
-				"bDateRetired": {
+				"_VAR_bDateRetired_60": {
 					"type": "button",
 					"top": 255,
 					"left": 125,
@@ -862,7 +871,7 @@
 						"onClick"
 					]
 				},
-				"Variable5": {
+				"_VAR_bMap1_61": {
 					"type": "button",
 					"top": 116,
 					"left": 47,
@@ -876,7 +885,7 @@
 						"onClick"
 					]
 				},
-				"Text44": {
+				"_Text_Zp_Zn_62": {
 					"type": "text",
 					"top": 176,
 					"left": 12,
@@ -887,7 +896,7 @@
 					"textAlign": "right",
 					"text": " Zp/Zn"
 				},
-				"Text45": {
+				"_Text_St__63": {
 					"type": "text",
 					"top": 176,
 					"left": 40,
@@ -898,7 +907,7 @@
 					"textAlign": "right",
 					"text": "St/ "
 				},
-				"Text56": {
+				"_Text_VerifiedDate_64": {
 					"type": "text",
 					"top": 238,
 					"left": 122,
@@ -909,7 +918,7 @@
 					"textAlign": "right",
 					"text": "Verified Date"
 				},
-				"bDateLastUpdated": {
+				"_VAR_bDateLastUpdated_65": {
 					"type": "button",
 					"top": 236,
 					"left": 125,
@@ -923,10 +932,10 @@
 						"onClick"
 					]
 				},
-				"Variable3": {
+				"_VAR_bDateTime2_66": {
 					"type": "pictureButton",
-					"top": 256,
-					"left": 15,
+					"top": 288,
+					"left": 64,
 					"width": 42,
 					"height": 33,
 					"dataSource": "bDateTime2",
@@ -940,22 +949,22 @@
 						"onClick"
 					]
 				},
-				"Text381": {
+				"_Text_Comment_67": {
 					"type": "text",
-					"top": 294,
-					"left": 8,
+					"top": 285,
+					"left": 117,
 					"width": 54,
 					"height": 13,
 					"stroke": "#000000",
 					"class": "cssInputLabel",
-					"textAlign": "right",
+					"textAlign": "left",
 					"text": "Comment"
 				},
-				"Variable56": {
+				"_VAR_bInvoice_68": {
 					"type": "button",
-					"top": 353,
+					"top": 361,
 					"left": 22,
-					"width": 91,
+					"width": 86,
 					"height": 22,
 					"dataSource": "bInvoice",
 					"tooltip": {
@@ -970,11 +979,11 @@
 						"onClick"
 					]
 				},
-				"Variable31": {
+				"_VAR_bOrder_69": {
 					"type": "button",
-					"top": 381,
+					"top": 389,
 					"left": 22,
-					"width": 91,
+					"width": 86,
 					"height": 22,
 					"dataSource": "bOrder",
 					"tooltip": {
@@ -989,11 +998,11 @@
 						"onClick"
 					]
 				},
-				"Variable55": {
+				"_VAR_bInvoice_70": {
 					"type": "button",
-					"top": 409,
+					"top": 417,
 					"left": 22,
-					"width": 91,
+					"width": 86,
 					"height": 22,
 					"dataSource": "bInvoice",
 					"tooltip": {
@@ -1008,11 +1017,11 @@
 						"onClick"
 					]
 				},
-				"bLetter": {
+				"_VAR_bLetter_71": {
 					"type": "button",
-					"top": 324,
+					"top": 332,
 					"left": 22,
-					"width": 91,
+					"width": 86,
 					"height": 22,
 					"dataSource": "bLetter",
 					"tooltip": {
@@ -1047,7 +1056,7 @@
 					"dataSource": "",
 					"bottom": 720
 				},
-				"aSalesTables_o": {
+				"_CHK_aSalesTables_o_74": {
 					"type": "tab",
 					"top": 450,
 					"left": 9,
@@ -1063,13 +1072,13 @@
 					],
 					"fontSize": 10
 				},
-				"Field26": {
+				"_PROP_Customer_prospect_75": {
 					"type": "input",
 					"top": 100,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.prospect",
+					"dataSource": "entry_o.prospect",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1079,13 +1088,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field27": {
+				"_PROP_Customer_need_76": {
 					"type": "input",
 					"top": 119,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.need",
+					"dataSource": "entry_o.need",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1095,13 +1104,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Rank1": {
+				"_CHK_Rank1_77": {
 					"type": "input",
 					"top": 138,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.rank",
+					"dataSource": "entry_o.rank",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1111,13 +1120,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field29": {
+				"_PROP_Customer_profile1_78": {
 					"type": "input",
 					"top": 156,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.profile1",
+					"dataSource": "entry_o.profile1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1127,13 +1136,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field30": {
+				"_PROP_Customer_profile2_79": {
 					"type": "input",
 					"top": 175,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.profile2",
+					"dataSource": "entry_o.profile2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1143,13 +1152,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field31": {
+				"_PROP_Customer_profile3_80": {
 					"type": "input",
 					"top": 194,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.profile3",
+					"dataSource": "entry_o.profile3",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1159,13 +1168,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field32": {
+				"_PROP_Customer_profile4_81": {
 					"type": "input",
 					"top": 213,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.profile4",
+					"dataSource": "entry_o.profile4",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1175,13 +1184,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field33": {
+				"_PROP_Customer_profile5_82": {
 					"type": "input",
 					"top": 232,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.profile5",
+					"dataSource": "entry_o.profile5",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1191,13 +1200,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field16": {
+				"_PROP_Customer_sICCode_83": {
 					"type": "input",
 					"top": 251,
 					"left": 872,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.sICCode",
+					"dataSource": "entry_o.sICCode",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1207,19 +1216,19 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field34": {
+				"_PROP_Customer_profile6_84": {
 					"type": "checkbox",
 					"top": 272,
 					"left": 874,
 					"width": 16,
 					"height": 16,
-					"dataSource": "entryEntity.profile6",
+					"dataSource": "entry_o.profile6",
 					"text": " ",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
 					"textAlign": "center"
 				},
-				"Variable152": {
+				"_VAR_<>vProfile6_85": {
 					"type": "input",
 					"top": 274,
 					"left": 895,
@@ -1237,7 +1246,7 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Text360": {
+				"_Text_Prospect_86": {
 					"type": "text",
 					"top": 102,
 					"left": 767,
@@ -1248,7 +1257,7 @@
 					"textAlign": "right",
 					"text": "Prospect"
 				},
-				"Variable39": {
+				"_VAR_<>aProspect_87": {
 					"type": "dropdown",
 					"top": 100,
 					"left": 767,
@@ -1263,7 +1272,7 @@
 						"onClick"
 					]
 				},
-				"Variable40": {
+				"_VAR_<>aNeed_88": {
 					"type": "dropdown",
 					"top": 119,
 					"left": 767,
@@ -1278,7 +1287,7 @@
 						"onClick"
 					]
 				},
-				"Variable158": {
+				"_VAR_<>aRank_89": {
 					"type": "dropdown",
 					"top": 137,
 					"left": 767,
@@ -1293,7 +1302,7 @@
 						"onClick"
 					]
 				},
-				"Variable145": {
+				"_VAR_<>aSector_90": {
 					"type": "dropdown",
 					"top": 271,
 					"left": 521,
@@ -1308,7 +1317,7 @@
 						"onClick"
 					]
 				},
-				"Variable41": {
+				"_VAR_<>aProfile1_91": {
 					"type": "dropdown",
 					"top": 154,
 					"left": 767,
@@ -1323,7 +1332,7 @@
 						"onClick"
 					]
 				},
-				"Variable43": {
+				"_VAR_<>aProfile2_92": {
 					"type": "dropdown",
 					"top": 173,
 					"left": 767,
@@ -1338,7 +1347,7 @@
 						"onClick"
 					]
 				},
-				"Variable44": {
+				"_VAR_<>aProfile3_93": {
 					"type": "dropdown",
 					"top": 192,
 					"left": 767,
@@ -1353,7 +1362,7 @@
 						"onClick"
 					]
 				},
-				"Variable45": {
+				"_VAR_<>aProfile4_94": {
 					"type": "dropdown",
 					"top": 211,
 					"left": 767,
@@ -1368,7 +1377,7 @@
 						"onClick"
 					]
 				},
-				"Variable46": {
+				"_VAR_<>aProfile5_95": {
 					"type": "dropdown",
 					"top": 230,
 					"left": 767,
@@ -1383,7 +1392,7 @@
 						"onClick"
 					]
 				},
-				"Text361": {
+				"_Text_Need_96": {
 					"type": "text",
 					"top": 121,
 					"left": 767,
@@ -1394,7 +1403,7 @@
 					"textAlign": "right",
 					"text": "Need"
 				},
-				"Text1": {
+				"_Text__16789229_97": {
 					"type": "text",
 					"top": 232,
 					"left": 767,
@@ -1405,7 +1414,7 @@
 					"textAlign": "right",
 					"text": ":16789,229"
 				},
-				"Text2": {
+				"_Text__16789230_98": {
 					"type": "text",
 					"top": 212,
 					"left": 767,
@@ -1416,7 +1425,7 @@
 					"textAlign": "right",
 					"text": ":16789,230"
 				},
-				"Text3": {
+				"_Text__16789231_99": {
 					"type": "text",
 					"top": 193,
 					"left": 767,
@@ -1427,7 +1436,7 @@
 					"textAlign": "right",
 					"text": ":16789,231"
 				},
-				"Text4": {
+				"_Text__16789232_100": {
 					"type": "text",
 					"top": 174,
 					"left": 767,
@@ -1438,7 +1447,7 @@
 					"textAlign": "right",
 					"text": ":16789,232"
 				},
-				"Text5": {
+				"_Text__16789233_101": {
 					"type": "text",
 					"top": 155,
 					"left": 767,
@@ -1449,7 +1458,7 @@
 					"textAlign": "right",
 					"text": ":16789,233"
 				},
-				"Text13": {
+				"_Text__16789216_102": {
 					"type": "text",
 					"top": 272,
 					"left": 767,
@@ -1460,7 +1469,7 @@
 					"textAlign": "right",
 					"text": ":16789,216"
 				},
-				"Text60": {
+				"_Text_Rank_103": {
 					"type": "text",
 					"top": 138,
 					"left": 767,
@@ -1471,13 +1480,13 @@
 					"textAlign": "right",
 					"text": "Rank"
 				},
-				"Field19": {
+				"_PROP_Customer_adSource_104": {
 					"type": "input",
 					"top": 100,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.adSource",
+					"dataSource": "entry_o.adSource",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1486,13 +1495,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field20": {
+				"_PROP_Customer_salesNameID_105": {
 					"type": "input",
 					"top": 119,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.salesNameID",
+					"dataSource": "entry_o.salesNameID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1501,13 +1510,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field21": {
+				"_PROP_Customer_repID_106": {
 					"type": "input",
 					"top": 138,
 					"left": 626,
 					"width": 72,
 					"height": 16,
-					"dataSource": "entryEntity.repID",
+					"dataSource": "entry_o.repID",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1516,13 +1525,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field87": {
+				"_PROP_Customer_territoryid_107": {
 					"type": "input",
 					"top": 138,
 					"left": 700,
 					"width": 54,
 					"height": 16,
-					"dataSource": "entryEntity.territoryid",
+					"dataSource": "entry_o.territoryid",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1531,13 +1540,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field22": {
+				"_PROP_Customer_typeSale_108": {
 					"type": "input",
 					"top": 157,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.typeSale",
+					"dataSource": "entry_o.typeSale",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1546,13 +1555,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field1": {
+				"_PROP_Customer_terms_109": {
 					"type": "input",
 					"top": 176,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.terms",
+					"dataSource": "entry_o.terms",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -1563,13 +1572,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field23": {
+				"_PROP_Customer_shipVia_110": {
 					"type": "input",
 					"top": 195,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.shipVia",
+					"dataSource": "entry_o.shipVia",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1578,13 +1587,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field24": {
+				"_PROP_Customer_taxJuris_111": {
 					"type": "input",
 					"top": 214,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.taxJuris",
+					"dataSource": "entry_o.taxJuris",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1593,13 +1602,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"DateLastUpdated1": {
+				"_CHK_DateLastUpdated1_112": {
 					"type": "input",
 					"top": 236,
 					"left": 199,
 					"width": 148,
 					"height": 16,
-					"dataSource": "entryEntity.dateLastUpdated",
+					"dataSource": "entry_o.dateLastUpdated",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1610,13 +1619,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field82": {
+				"_PROP_Customer_dateRetired_113": {
 					"type": "input",
 					"top": 255,
 					"left": 199,
 					"width": 148,
 					"height": 16,
-					"dataSource": "entryEntity.dateRetired",
+					"dataSource": "entry_o.dateRetired",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1630,7 +1639,7 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Variable23": {
+				"_VAR_bRetired_114": {
 					"type": "checkbox",
 					"top": 237,
 					"left": 367,
@@ -1646,13 +1655,13 @@
 					"stroke": "#000000",
 					"method": "ObjectMethods/Variable23.4dm"
 				},
-				"Field4313": {
+				"_PROP_Customer_dateResponse_115": {
 					"type": "input",
 					"top": 233,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.dateResponse",
+					"dataSource": "entry_o.dateResponse",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1666,13 +1675,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field25": {
+				"_PROP_Customer_budget_116": {
 					"type": "input",
 					"top": 252,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.budget",
+					"dataSource": "entry_o.budget",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1685,13 +1694,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field94": {
+				"_PROP_Customer_sector_117": {
 					"type": "input",
 					"top": 271,
 					"left": 626,
 					"width": 128,
 					"height": 16,
-					"dataSource": "entryEntity.sector",
+					"dataSource": "entry_o.sector",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1701,13 +1710,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field8": {
+				"_PROP_Customer_title_118": {
 					"type": "input",
 					"top": 100,
 					"left": 122,
 					"width": 401,
 					"height": 16,
-					"dataSource": "entryEntity.title",
+					"dataSource": "entry_o.title",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1716,13 +1725,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field9": {
+				"_PROP_Customer_address1_119": {
 					"type": "input",
 					"top": 119,
 					"left": 122,
 					"width": 401,
 					"height": 16,
-					"dataSource": "entryEntity.address1",
+					"dataSource": "entry_o.address1",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1731,28 +1740,29 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field10": {
+				"_PROP_Customer_address2_120": {
 					"type": "input",
 					"top": 138,
 					"left": 122,
 					"width": 401,
 					"height": 16,
-					"dataSource": "entryEntity.address2",
+					"dataSource": "entry_o.address2",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
-					"dropping": "none"
+					"dropping": "none",
+					"events": []
 				},
-				"Field11": {
+				"_PROP_Customer_city_121": {
 					"type": "input",
 					"top": 157,
 					"left": 122,
 					"width": 401,
 					"height": 16,
-					"dataSource": "entryEntity.city",
+					"dataSource": "entry_o.city",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1761,13 +1771,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field12": {
+				"_PROP_Customer_state_122": {
 					"type": "input",
 					"top": 176,
 					"left": 122,
 					"width": 185,
 					"height": 16,
-					"dataSource": "entryEntity.state",
+					"dataSource": "entry_o.state",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1776,13 +1786,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field13": {
+				"_PROP_Customer_zip_123": {
 					"type": "input",
 					"top": 176,
 					"left": 309,
 					"width": 172,
 					"height": 16,
-					"dataSource": "entryEntity.zip",
+					"dataSource": "entry_o.zip",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1791,13 +1801,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field14": {
+				"_PROP_Customer_zone_124": {
 					"type": "input",
 					"top": 176,
 					"left": 483,
 					"width": 40,
 					"height": 16,
-					"dataSource": "entryEntity.zone",
+					"dataSource": "entry_o.zone",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1808,13 +1818,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field15": {
+				"_PROP_Customer_country_125": {
 					"type": "input",
 					"top": 195,
 					"left": 122,
 					"width": 232,
 					"height": 16,
-					"dataSource": "entryEntity.country",
+					"dataSource": "entry_o.country",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1823,13 +1833,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field93": {
+				"_PROP_Customer_salesDivision_126": {
 					"type": "input",
 					"top": 195,
 					"left": 356,
 					"width": 124,
 					"height": 16,
-					"dataSource": "entryEntity.salesDivision",
+					"dataSource": "entry_o.salesDivision",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -1839,13 +1849,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field2": {
+				"_PROP_Customer_division_127": {
 					"type": "input",
 					"top": 195,
 					"left": 483,
 					"width": 40,
 					"height": 16,
-					"dataSource": "entryEntity.division",
+					"dataSource": "entry_o.division",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -1858,13 +1868,13 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field28": {
+				"_PROP_Customer_domain_128": {
 					"type": "input",
 					"top": 214,
 					"left": 122,
 					"width": 295,
 					"height": 16,
-					"dataSource": "entryEntity.domain",
+					"dataSource": "entry_o.domain",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -1873,19 +1883,19 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Field40": {
+				"_PROP_Customer_remoteUser_129": {
 					"type": "checkbox",
 					"top": 255,
 					"left": 367,
 					"width": 19,
 					"height": 16,
-					"dataSource": "entryEntity.remoteUser",
+					"dataSource": "entry_o.remoteUser",
 					"text": " ",
 					"stroke": "#000000",
 					"class": "cssCheckboxLable",
 					"textAlign": "center"
 				},
-				"Text72": {
+				"_Text_Sector_130": {
 					"type": "text",
 					"top": 273,
 					"left": 521,
@@ -1896,7 +1906,7 @@
 					"textAlign": "right",
 					"text": "Sector"
 				},
-				"Text91": {
+				"_Text_RemoteUsers_131": {
 					"type": "text",
 					"top": 257,
 					"left": 392,
@@ -1907,7 +1917,7 @@
 					"textAlign": "left",
 					"text": "RemoteUsers"
 				},
-				"Text92": {
+				"_Text_Response_132": {
 					"type": "text",
 					"top": 236,
 					"left": 521,
@@ -1918,7 +1928,7 @@
 					"textAlign": "right",
 					"text": "Response"
 				},
-				"Text93": {
+				"_Text_Budget_133": {
 					"type": "text",
 					"top": 255,
 					"left": 521,
@@ -1929,7 +1939,7 @@
 					"textAlign": "right",
 					"text": "Budget"
 				},
-				"Variable154": {
+				"_VAR_bRemoteUser_134": {
 					"type": "button",
 					"top": 256,
 					"left": 389,
@@ -1949,7 +1959,7 @@
 					"width": 1,
 					"height": 1
 				},
-				"Text365": {
+				"_Text_salesNameID_136": {
 					"type": "text",
 					"top": 121,
 					"left": 534,
@@ -1960,7 +1970,7 @@
 					"textAlign": "right",
 					"text": "salesNameID"
 				},
-				"Variable38": {
+				"_VAR_<>aAdSources_137": {
 					"type": "dropdown",
 					"top": 101,
 					"left": 529,
@@ -1975,7 +1985,7 @@
 						"onClick"
 					]
 				},
-				"Variable35": {
+				"_VAR_<>aComNameID_138": {
 					"type": "dropdown",
 					"top": 120,
 					"left": 529,
@@ -1990,7 +2000,7 @@
 						"onClick"
 					]
 				},
-				"Variable36": {
+				"_VAR_<>aReps_139": {
 					"type": "dropdown",
 					"top": 138,
 					"left": 529,
@@ -2005,7 +2015,7 @@
 						"onClick"
 					]
 				},
-				"Variable32": {
+				"_VAR_<>aTypeSale_140": {
 					"type": "dropdown",
 					"top": 158,
 					"left": 529,
@@ -2020,7 +2030,7 @@
 						"onClick"
 					]
 				},
-				"Variable33": {
+				"_VAR_<>aTerms_141": {
 					"type": "dropdown",
 					"top": 177,
 					"left": 529,
@@ -2035,7 +2045,7 @@
 						"onClick"
 					]
 				},
-				"Variable37": {
+				"_VAR_<>aShipVia_142": {
 					"type": "dropdown",
 					"top": 197,
 					"left": 529,
@@ -2050,7 +2060,7 @@
 						"onClick"
 					]
 				},
-				"Variable34": {
+				"_VAR_<>aTaxJuris_143": {
 					"type": "dropdown",
 					"top": 216,
 					"left": 529,
@@ -2065,7 +2075,7 @@
 						"onClick"
 					]
 				},
-				"Text367": {
+				"_Text_TypeSale_144": {
 					"type": "text",
 					"top": 159,
 					"left": 534,
@@ -2076,7 +2086,7 @@
 					"textAlign": "right",
 					"text": "TypeSale"
 				},
-				"Text364": {
+				"_Text_AdSource_145": {
 					"type": "text",
 					"top": 102,
 					"left": 534,
@@ -2087,7 +2097,7 @@
 					"textAlign": "right",
 					"text": "AdSource"
 				},
-				"Text366": {
+				"_Text_RepID_Terr_146": {
 					"type": "text",
 					"top": 140,
 					"left": 534,
@@ -2098,7 +2108,7 @@
 					"textAlign": "right",
 					"text": "RepID/Terr"
 				},
-				"Text368": {
+				"_Text_Terms_147": {
 					"type": "text",
 					"top": 178,
 					"left": 534,
@@ -2109,18 +2119,7 @@
 					"textAlign": "right",
 					"text": "Terms"
 				},
-				"Text369": {
-					"type": "text",
-					"top": 197,
-					"left": 534,
-					"width": 87,
-					"height": 13,
-					"stroke": "#000099",
-					"class": "cssInputLabel",
-					"textAlign": "right",
-					"text": "ShipVia"
-				},
-				"Text370": {
+				"_Text_TaxJuris_149": {
 					"type": "text",
 					"top": 216,
 					"left": 534,
@@ -2130,6 +2129,18 @@
 					"class": "cssInputLabel",
 					"textAlign": "right",
 					"text": "TaxJuris"
+				},
+				"Button5": {
+					"type": "button",
+					"text": "Button",
+					"top": 242,
+					"left": 30,
+					"width": 63,
+					"height": 25,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button5.4dm"
 				}
 			},
 			"entryOrder": [
@@ -2199,12 +2210,13 @@
 				"Variable32",
 				"Variable33",
 				"Variable37",
-				"Variable34"
+				"Variable34",
+				"Button5"
 			]
 		},
 		{
 			"objects": {
-				"Text35": {
+				"_Text_dCash_151": {
 					"type": "text",
 					"top": 327,
 					"left": 11,
@@ -2215,7 +2227,7 @@
 					"textAlign": "right",
 					"text": "dCash"
 				},
-				"Text36": {
+				"_Text_Pay_152": {
 					"type": "text",
 					"top": 295,
 					"left": 11,
@@ -2226,7 +2238,7 @@
 					"textAlign": "right",
 					"text": "Pay"
 				},
-				"Text22": {
+				"_Text_Inv_153": {
 					"type": "text",
 					"top": 263,
 					"left": 11,
@@ -2237,7 +2249,7 @@
 					"textAlign": "right",
 					"text": "Inv"
 				},
-				"Variable113": {
+				"_VAR_bRelate3_154": {
 					"type": "button",
 					"top": 261,
 					"left": 11,
@@ -2251,7 +2263,7 @@
 						"onClick"
 					]
 				},
-				"Variable116": {
+				"_VAR_bContacts_155": {
 					"type": "button",
 					"top": 293,
 					"left": 12,
@@ -2265,7 +2277,7 @@
 						"onClick"
 					]
 				},
-				"Variable156": {
+				"_VAR_bdCash2_156": {
 					"type": "button",
 					"top": 325,
 					"left": 11,
@@ -2281,7 +2293,7 @@
 						"onClick"
 					]
 				},
-				"Text14606": {
+				"_Text_MTDSales_Costs_157": {
 					"type": "text",
 					"top": 126,
 					"left": 415,
@@ -2293,7 +2305,7 @@
 					"fontStyle": "italic",
 					"text": "MTD Sales/Costs"
 				},
-				"Text14607": {
+				"_Text_YTDSales_Costs_158": {
 					"type": "text",
 					"top": 145,
 					"left": 415,
@@ -2305,7 +2317,7 @@
 					"fontStyle": "italic",
 					"text": "YTD Sales/Costs"
 				},
-				"Text14608": {
+				"_Text_InvCnt_HighCredit_159": {
 					"type": "text",
 					"top": 183,
 					"left": 415,
@@ -2317,7 +2329,7 @@
 					"fontStyle": "italic",
 					"text": "InvCnt/HighCredit"
 				},
-				"Text14609": {
+				"_Text_CreditLimit_Discount_160": {
 					"type": "text",
 					"top": 221,
 					"left": 392,
@@ -2329,7 +2341,7 @@
 					"fontStyle": "italic",
 					"text": "CreditLimit/Discount"
 				},
-				"Text14610": {
+				"_Text_OpenOrders$_161": {
 					"type": "text",
 					"top": 202,
 					"left": 415,
@@ -2341,7 +2353,7 @@
 					"fontStyle": "italic",
 					"text": "OpenOrders $"
 				},
-				"Text14611": {
+				"_Text_CreditApproval_162": {
 					"type": "text",
 					"top": 240,
 					"left": 440,
@@ -2353,7 +2365,7 @@
 					"fontStyle": "italic",
 					"text": "CreditApproval"
 				},
-				"Text14612": {
+				"_Text_TaxExemptID_163": {
 					"type": "text",
 					"top": 259,
 					"left": 440,
@@ -2364,7 +2376,7 @@
 					"textAlign": "right",
 					"text": "TaxExemptID"
 				},
-				"Text14613": {
+				"_Text_MfrLocationID_164": {
 					"type": "text",
 					"top": 278,
 					"left": 457,
@@ -2375,7 +2387,7 @@
 					"textAlign": "right",
 					"text": "MfrLocationID"
 				},
-				"Text14615": {
+				"_Text_DateLastSale_Pay_165": {
 					"type": "text",
 					"top": 164,
 					"left": 415,
@@ -2387,7 +2399,7 @@
 					"fontStyle": "italic",
 					"text": "DateLastSale/Pay"
 				},
-				"Text14616": {
+				"_Text_SalesLstYr_SrvHr_166": {
 					"type": "text",
 					"top": 107,
 					"left": 415,
@@ -2399,7 +2411,7 @@
 					"fontStyle": "italic",
 					"text": "SalesLstYr/SrvHr"
 				},
-				"Text14617": {
+				"_Text_Duns#_Div_Cur_167": {
 					"type": "text",
 					"top": 297,
 					"left": 415,
@@ -2410,7 +2422,7 @@
 					"textAlign": "right",
 					"text": "Duns#/Div/Cur"
 				},
-				"Text61": {
+				"_Text__16791124_168": {
 					"type": "text",
 					"top": 144,
 					"left": 35,
@@ -2422,7 +2434,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,124"
 				},
-				"Text21": {
+				"_Text__1679196_169": {
 					"type": "text",
 					"top": 218,
 					"left": 8,
@@ -2433,7 +2445,7 @@
 					"textAlign": "center",
 					"text": ":16791,96"
 				},
-				"Text65": {
+				"_Text__16791203_170": {
 					"type": "text",
 					"top": 163,
 					"left": 35,
@@ -2445,7 +2457,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,203"
 				},
-				"Text77": {
+				"_Text__16791212_171": {
 					"type": "text",
 					"top": 201,
 					"left": 35,
@@ -2457,7 +2469,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,212"
 				},
-				"Text78": {
+				"_Text__16791213_172": {
 					"type": "text",
 					"top": 239,
 					"left": 35,
@@ -2469,7 +2481,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,213"
 				},
-				"Text79": {
+				"_Text__16791214_173": {
 					"type": "text",
 					"top": 220,
 					"left": 35,
@@ -2481,7 +2493,7 @@
 					"fontStyle": "italic",
 					"text": ":16791,214"
 				},
-				"Text80": {
+				"_Text_DaysAvg_Pay_174": {
 					"type": "text",
 					"top": 258,
 					"left": 35,
@@ -2493,7 +2505,7 @@
 					"fontStyle": "italic",
 					"text": "DaysAvg/Pay"
 				},
-				"Text14603": {
+				"_Text_CredCard_175": {
 					"type": "text",
 					"top": 121,
 					"left": 752,
@@ -2504,7 +2516,7 @@
 					"textAlign": "right",
 					"text": "CredCard"
 				},
-				"Text14604": {
+				"_Text_Exp_AltGL_176": {
 					"type": "text",
 					"top": 142,
 					"left": 745,
@@ -2521,7 +2533,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.balanceTotalExposure",
+					"dataSource": "entry_o.balanceTotalExposure",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2547,7 +2559,7 @@
 					"left": 552,
 					"width": 169,
 					"height": 18,
-					"dataSource": "entryEntity.balanceOpenOrders",
+					"dataSource": "entry_o.balanceOpenOrders",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2571,7 +2583,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.balanceDue",
+					"dataSource": "entry_o.balanceDue",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2597,7 +2609,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.balanceCurrent",
+					"dataSource": "entry_o.balanceCurrent",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2623,7 +2635,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.futureDue",
+					"dataSource": "entry_o.futureDue",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2649,7 +2661,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.balPastPeriod1",
+					"dataSource": "entry_o.balPastPeriod1",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2675,7 +2687,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.balPastPeriod2",
+					"dataSource": "entry_o.balPastPeriod2",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2701,7 +2713,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.balPastPeriod3",
+					"dataSource": "entry_o.balPastPeriod3",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2727,7 +2739,7 @@
 					"left": 177,
 					"width": 72,
 					"height": 18,
-					"dataSource": "entryEntity.daysAvgPaid",
+					"dataSource": "entry_o.daysAvgPaid",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2750,7 +2762,7 @@
 					"left": 251,
 					"width": 71,
 					"height": 18,
-					"dataSource": "entryEntity.daysPay",
+					"dataSource": "entry_o.daysPay",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2774,7 +2786,7 @@
 					"left": 181,
 					"width": 18,
 					"height": 18,
-					"dataSource": "entryEntity.badCheck",
+					"dataSource": "entry_o.badCheck",
 					"text": " ",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2790,7 +2802,7 @@
 					"left": 204,
 					"width": 117,
 					"height": 18,
-					"dataSource": "entryEntity.badCheckDate",
+					"dataSource": "entry_o.badCheckDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2816,7 +2828,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.minimumOpening",
+					"dataSource": "entry_o.minimumOpening",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2836,7 +2848,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.minimumReorder",
+					"dataSource": "entry_o.minimumReorder",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2859,7 +2871,7 @@
 					"left": 552,
 					"width": 84,
 					"height": 18,
-					"dataSource": "entryEntity.salesLastYr",
+					"dataSource": "entry_o.salesLastYr",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2885,7 +2897,7 @@
 					"left": 638,
 					"width": 83,
 					"height": 18,
-					"dataSource": "entryEntity.serviceHrAvail",
+					"dataSource": "entry_o.serviceHrAvail",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2909,7 +2921,7 @@
 					"left": 552,
 					"width": 84,
 					"height": 18,
-					"dataSource": "entryEntity.salesMTD",
+					"dataSource": "entry_o.salesMTD",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2935,7 +2947,7 @@
 					"left": 638,
 					"width": 83,
 					"height": 18,
-					"dataSource": "entryEntity.costsMTD",
+					"dataSource": "entry_o.costsMTD",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2961,7 +2973,7 @@
 					"left": 552,
 					"width": 84,
 					"height": 18,
-					"dataSource": "entryEntity.salesYTD",
+					"dataSource": "entry_o.salesYTD",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -2987,7 +2999,7 @@
 					"left": 638,
 					"width": 83,
 					"height": 18,
-					"dataSource": "entryEntity.costsYTD",
+					"dataSource": "entry_o.costsYTD",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3013,7 +3025,7 @@
 					"left": 552,
 					"width": 84,
 					"height": 18,
-					"dataSource": "entryEntity.lastSaleDate",
+					"dataSource": "entry_o.lastSaleDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3037,7 +3049,7 @@
 					"left": 638,
 					"width": 83,
 					"height": 18,
-					"dataSource": "entryEntity.lastPayDate",
+					"dataSource": "entry_o.lastPayDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3061,7 +3073,7 @@
 					"left": 552,
 					"width": 42,
 					"height": 18,
-					"dataSource": "entryEntity.invoiceCount",
+					"dataSource": "entry_o.invoiceCount",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3084,7 +3096,7 @@
 					"left": 596,
 					"width": 125,
 					"height": 18,
-					"dataSource": "entryEntity.highCredit",
+					"dataSource": "entry_o.highCredit",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3110,7 +3122,7 @@
 					"left": 552,
 					"width": 118,
 					"height": 18,
-					"dataSource": "entryEntity.creditLimit",
+					"dataSource": "entry_o.creditLimit",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3137,7 +3149,7 @@
 					"left": 672,
 					"width": 49,
 					"height": 18,
-					"dataSource": "entryEntity.discount",
+					"dataSource": "entry_o.discount",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3162,7 +3174,7 @@
 					"left": 552,
 					"width": 169,
 					"height": 18,
-					"dataSource": "entryEntity.creditApproval",
+					"dataSource": "entry_o.creditApproval",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "right",
@@ -3184,7 +3196,7 @@
 					"left": 552,
 					"width": 169,
 					"height": 18,
-					"dataSource": "entryEntity.taxExemptid",
+					"dataSource": "entry_o.taxExemptid",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "right",
@@ -3204,7 +3216,7 @@
 					"left": 552,
 					"width": 169,
 					"height": 18,
-					"dataSource": "entryEntity.mfrLocationid",
+					"dataSource": "entry_o.mfrLocationid",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3222,7 +3234,7 @@
 					],
 					"zzzdataSource": "[Customer:2]mfrLocationid:67"
 				},
-				"Variable96": {
+				"_VAR_<>aExchID_206": {
 					"type": "dropdown",
 					"top": 295,
 					"left": 519,
@@ -3243,7 +3255,7 @@
 					"left": 552,
 					"width": 111,
 					"height": 18,
-					"dataSource": "entryEntity.dunsNumber",
+					"dataSource": "entry_o.dunsNumber",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3262,7 +3274,7 @@
 					"left": 177,
 					"width": 28,
 					"height": 18,
-					"dataSource": "entryEntity.currency",
+					"dataSource": "entry_o.currency",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3282,7 +3294,7 @@
 					"left": 552,
 					"width": 169,
 					"height": 18,
-					"dataSource": "entryEntity.dateLastUpdated",
+					"dataSource": "entry_o.dateLastUpdated",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3304,7 +3316,7 @@
 					"left": 853,
 					"width": 147,
 					"height": 18,
-					"dataSource": "entryEntity.dbScore",
+					"dataSource": "entry_o.dbScore",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3323,7 +3335,7 @@
 					"left": 853,
 					"width": 147,
 					"height": 18,
-					"dataSource": "entryEntity.dbScoreDate",
+					"dataSource": "entry_o.dbScoreDate",
 					"dataSourceTypeHint": "date",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3346,7 +3358,7 @@
 					"left": 839,
 					"width": 161,
 					"height": 17,
-					"dataSource": "entryEntity.creditCardNum",
+					"dataSource": "entry_o.creditCardNum",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3366,7 +3378,7 @@
 					"left": 839,
 					"width": 35,
 					"height": 17,
-					"dataSource": "entryEntity.creditCardCVV",
+					"dataSource": "entry_o.creditCardCVV",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3379,7 +3391,7 @@
 					],
 					"zzzdataSource": "[Customer:2]creditCardCVV:114"
 				},
-				"Variable103": {
+				"_VAR_pCCDateStr_214": {
 					"type": "input",
 					"top": 138,
 					"left": 876,
@@ -3406,7 +3418,7 @@
 					"left": 839,
 					"width": 161,
 					"height": 18,
-					"dataSource": "entryEntity.salesGL",
+					"dataSource": "entry_o.salesGL",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -3421,7 +3433,7 @@
 					"zzzdataSource": "[Customer:2]salesGL:80",
 					"right": 1000
 				},
-				"Variable7563": {
+				"_VAR_b27_216": {
 					"type": "button",
 					"top": 183,
 					"left": 12,
@@ -3439,7 +3451,7 @@
 						"onClick"
 					]
 				},
-				"Variable76": {
+				"_VAR_bMfg_217": {
 					"type": "button",
 					"top": 276,
 					"left": 459,
@@ -3453,7 +3465,7 @@
 						"onClick"
 					]
 				},
-				"Variable74": {
+				"_VAR_bCredit_218": {
 					"type": "button",
 					"top": 219,
 					"left": 399,
@@ -3467,7 +3479,7 @@
 						"onClick"
 					]
 				},
-				"Variable75": {
+				"_VAR_bDiscount_219": {
 					"type": "button",
 					"top": 219,
 					"left": 484,
@@ -3481,7 +3493,7 @@
 						"onClick"
 					]
 				},
-				"Text68": {
+				"_Text_DBScore_220": {
 					"type": "text",
 					"top": 196,
 					"left": 748,
@@ -3492,7 +3504,7 @@
 					"textAlign": "right",
 					"text": "DB Score"
 				},
-				"Text14595": {
+				"_Text_FutureDue_221": {
 					"type": "text",
 					"top": 182,
 					"left": 35,
@@ -3504,7 +3516,7 @@
 					"fontStyle": "italic",
 					"text": "Future Due"
 				},
-				"Variable82": {
+				"_VAR_bBalDue_222": {
 					"type": "button",
 					"top": 142,
 					"left": 54,
@@ -3518,7 +3530,7 @@
 						"onClick"
 					]
 				},
-				"Text14605": {
+				"_Text_BadCheck_Date_223": {
 					"type": "text",
 					"top": 277,
 					"left": 35,
@@ -3530,7 +3542,7 @@
 					"fontStyle": "italic",
 					"text": "Bad Check/Date"
 				},
-				"Text21125": {
+				"_Text_BalanceTotal_224": {
 					"type": "text",
 					"top": 106,
 					"left": 35,
@@ -3542,7 +3554,7 @@
 					"fontStyle": "italic",
 					"text": "Balance Total"
 				},
-				"Text21126": {
+				"_Text_BalanceOrders_225": {
 					"type": "text",
 					"top": 125,
 					"left": 35,
@@ -3554,7 +3566,7 @@
 					"fontStyle": "italic",
 					"text": "Balance Orders"
 				},
-				"Text54": {
+				"_Text_LastUpdated_226": {
 					"type": "text",
 					"top": 316,
 					"left": 455,
@@ -3565,7 +3577,7 @@
 					"textAlign": "right",
 					"text": "LastUpdated"
 				},
-				"Variable26": {
+				"_VAR_aiLoPopCustMfr_227": {
 					"type": "dropdown",
 					"top": 277,
 					"left": 371,
@@ -3581,7 +3593,7 @@
 						"onClick"
 					]
 				},
-				"Variable119": {
+				"_VAR_bContacts_228": {
 					"type": "button",
 					"top": 215,
 					"left": 6,
@@ -3595,7 +3607,7 @@
 						"onClick"
 					]
 				},
-				"Variable157": {
+				"_VAR_bCreditCard_229": {
 					"type": "button",
 					"top": 119,
 					"left": 771,
@@ -3609,7 +3621,7 @@
 						"onClick"
 					]
 				},
-				"Text34": {
+				"_Text_DBDate_230": {
 					"type": "text",
 					"top": 215,
 					"left": 748,
@@ -3620,7 +3632,7 @@
 					"textAlign": "right",
 					"text": "DB Date"
 				},
-				"Text40": {
+				"_Text_MinimumOrder_231": {
 					"type": "text",
 					"top": 296,
 					"left": 41,
@@ -3631,7 +3643,7 @@
 					"textAlign": "right",
 					"text": "Minimum Order"
 				},
-				"Text41": {
+				"_Text_MinimumReorder_232": {
 					"type": "text",
 					"top": 315,
 					"left": 41,
@@ -3648,7 +3660,7 @@
 					"left": 177,
 					"width": 145,
 					"height": 18,
-					"dataSource": "entryEntity.balanceOpenOrders",
+					"dataSource": "entry_o.balanceOpenOrders",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3668,7 +3680,7 @@
 					],
 					"zzzdataSource": "[Customer:2]balanceTotalExposure:104"
 				},
-				"aCollectionTables": {
+				"_VAR_aCollectionTables_234": {
 					"type": "tab",
 					"top": 342,
 					"left": 73,
@@ -3697,7 +3709,7 @@
 		},
 		{
 			"objects": {
-				"Variable164": {
+				"_VAR_vAddressBillTo_236": {
 					"type": "input",
 					"top": 112,
 					"left": 112,
@@ -3722,7 +3734,7 @@
 					"left": 22,
 					"width": 81,
 					"height": 17,
-					"dataSource": "entryEntity.contactBillTo",
+					"dataSource": "entry_o.contactBillTo",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
@@ -3737,7 +3749,7 @@
 					],
 					"zzzdataSource": "[Customer:2]contactBillTo:92"
 				},
-				"Variable165": {
+				"_VAR_vAddressShipTo_238": {
 					"type": "input",
 					"top": 213,
 					"left": 112,
@@ -3762,7 +3774,7 @@
 					"left": 22,
 					"width": 81,
 					"height": 17,
-					"dataSource": "entryEntity.contactShipTo",
+					"dataSource": "entry_o.contactShipTo",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
@@ -3783,7 +3795,7 @@
 					"left": 502,
 					"width": 289,
 					"height": 96,
-					"dataSource": "entryEntity.addrAltBillTo",
+					"dataSource": "entry_o.addrAltBillTo",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
 					"fontSize": 14,
@@ -3804,7 +3816,7 @@
 					"left": 502,
 					"width": 289,
 					"height": 100,
-					"dataSource": "entryEntity.alertMessage",
+					"dataSource": "entry_o.alertMessage",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
 					"fontSize": 14,
@@ -3819,7 +3831,7 @@
 					],
 					"zzzdataSource": "[Customer:2]alertMessage:79"
 				},
-				"Variable163": {
+				"_VAR_<>asiteIDs_242": {
 					"type": "dropdown",
 					"top": 171,
 					"left": 817,
@@ -3834,7 +3846,7 @@
 						"onClick"
 					]
 				},
-				"Text165": {
+				"_Text_siteID__243": {
 					"type": "text",
 					"top": 174,
 					"left": 815,
@@ -3850,7 +3862,7 @@
 					"left": 898,
 					"width": 103,
 					"height": 18,
-					"dataSource": "entryEntity.siteID",
+					"dataSource": "entry_o.siteID",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
 					"fontSize": 14,
@@ -3864,7 +3876,7 @@
 					],
 					"zzzdataSource": "[Customer:2]siteID:106"
 				},
-				"Variable71": {
+				"_VAR_<>aShipVia_245": {
 					"type": "dropdown",
 					"top": 194,
 					"left": 817,
@@ -3880,7 +3892,7 @@
 						"onDataChange"
 					]
 				},
-				"Text48": {
+				"_Text__1679198_246": {
 					"type": "text",
 					"top": 197,
 					"left": 815,
@@ -3897,7 +3909,7 @@
 					"left": 901,
 					"width": 102,
 					"height": 17,
-					"dataSource": "entryEntity.shipVia",
+					"dataSource": "entry_o.shipVia",
 					"stroke": "#000000",
 					"textAlign": "left",
 					"fontFamily": "Lucida Sans Regular",
@@ -3920,7 +3932,7 @@
 					"left": 901,
 					"width": 102,
 					"height": 17,
-					"dataSource": "entryEntity.shippingDays",
+					"dataSource": "entry_o.shippingDays",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"textAlign": "left",
@@ -3943,7 +3955,7 @@
 					"left": 901,
 					"width": 102,
 					"height": 17,
-					"dataSource": "entryEntity.zone",
+					"dataSource": "entry_o.zone",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"textAlign": "left",
@@ -3966,7 +3978,7 @@
 					"left": 901,
 					"width": 17,
 					"height": 17,
-					"dataSource": "entryEntity.shipPartial",
+					"dataSource": "entry_o.shipPartial",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -3987,7 +3999,7 @@
 					"left": 901,
 					"width": 102,
 					"height": 17,
-					"dataSource": "entryEntity.upsReceiverAcct",
+					"dataSource": "entry_o.upsReceiverAcct",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
 					"fontSize": 14,
@@ -4002,7 +4014,7 @@
 					],
 					"zzzdataSource": "[Customer:2]upsReceiverAcct:97"
 				},
-				"Variable169": {
+				"_VAR_<>aBillInstructions_252": {
 					"type": "dropdown",
 					"top": 293,
 					"left": 817,
@@ -4018,7 +4030,7 @@
 						"onDataChange"
 					]
 				},
-				"Text47": {
+				"_Text_ShipBillOption_253": {
 					"type": "text",
 					"top": 296,
 					"left": 815,
@@ -4035,7 +4047,7 @@
 					"left": 901,
 					"width": 102,
 					"height": 17,
-					"dataSource": "entryEntity.upsBillingOption",
+					"dataSource": "entry_o.upsBillingOption",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
 					"fontSize": 14,
@@ -4050,7 +4062,7 @@
 					],
 					"zzzdataSource": "[Customer:2]upsBillingOption:96"
 				},
-				"ddShipPartial": {
+				"_CHK_ddShipPartial_255": {
 					"type": "dropdown",
 					"top": 314,
 					"left": 817,
@@ -4074,7 +4086,7 @@
 					"left": 804,
 					"width": 91,
 					"height": 16,
-					"dataSource": "entryEntity.upsResidential",
+					"dataSource": "entry_o.upsResidential",
 					"text": "Residential",
 					"stroke": "#000000",
 					"class": "cssInputSmall",
@@ -4089,7 +4101,7 @@
 					"left": 884,
 					"width": 116,
 					"height": 16,
-					"dataSource": "entryEntity.upsInsureShipping",
+					"dataSource": "entry_o.upsInsureShipping",
 					"text": "Insure Shipping",
 					"stroke": "#000000",
 					"class": "cssInputSmall",
@@ -4101,10 +4113,10 @@
 				"_PROP_Customer_shipInstruct_": {
 					"type": "input",
 					"top": 317,
-					"left": 112,
-					"width": 664,
+					"left": 11,
+					"width": 765,
 					"height": 375,
-					"dataSource": "entryEntity.shipInstruct",
+					"dataSource": "entry_o.shipInstruct",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
 					"fontSize": 14,
@@ -4120,7 +4132,7 @@
 					"zzzdataSource": "[Customer:2]shipInstruct:24",
 					"scrollbarVertical": "visible"
 				},
-				"Rectangle39": {
+				"_Rectangle39_259": {
 					"type": "rectangle",
 					"top": 111,
 					"left": 109,
@@ -4129,7 +4141,7 @@
 					"fill": "transparent",
 					"stroke": "#0000FF"
 				},
-				"Text23": {
+				"_Text__1678953_260": {
 					"type": "text",
 					"top": 217,
 					"left": 459,
@@ -4140,18 +4152,18 @@
 					"textAlign": "right",
 					"text": ":16789,53"
 				},
-				"Text24": {
+				"_Text_ShipInstr_261": {
 					"type": "text",
-					"top": 320,
-					"left": 5,
-					"width": 100,
+					"top": 298,
+					"left": 11,
+					"width": 60,
 					"height": 13,
 					"stroke": "#000000",
 					"class": "cssInputLabel",
-					"textAlign": "right",
+					"textAlign": "left",
 					"text": "Ship Instr"
 				},
-				"Text30": {
+				"_Text_AltBill_262": {
 					"type": "text",
 					"top": 115,
 					"left": 454,
@@ -4162,7 +4174,7 @@
 					"textAlign": "right",
 					"text": "Alt Bill"
 				},
-				"Text31": {
+				"_Text_BillTo_263": {
 					"type": "text",
 					"top": 113,
 					"left": 61,
@@ -4173,7 +4185,7 @@
 					"textAlign": "right",
 					"text": "BillTo"
 				},
-				"Text32": {
+				"_Text_ShipTo_264": {
 					"type": "text",
 					"top": 215,
 					"left": 50,
@@ -4184,7 +4196,7 @@
 					"textAlign": "right",
 					"text": "ShipTo"
 				},
-				"Variable167": {
+				"_VAR_bBillContact_265": {
 					"type": "button",
 					"top": 112,
 					"left": 62,
@@ -4197,7 +4209,7 @@
 						"onClick"
 					]
 				},
-				"Variable168": {
+				"_VAR_bShipContact_266": {
 					"type": "button",
 					"top": 213,
 					"left": 57,
@@ -4210,7 +4222,7 @@
 						"onClick"
 					]
 				},
-				"Text49": {
+				"_Text_ReceiverAcct_267": {
 					"type": "text",
 					"top": 272,
 					"left": 815,
@@ -4221,7 +4233,7 @@
 					"textAlign": "right",
 					"text": "Receiver Acct"
 				},
-				"Text50": {
+				"_Text_ShippingDays_268": {
 					"type": "text",
 					"top": 217,
 					"left": 815,
@@ -4232,7 +4244,7 @@
 					"textAlign": "right",
 					"text": "Shipping Days"
 				},
-				"Text51": {
+				"_Text_Zone_269": {
 					"type": "text",
 					"top": 235,
 					"left": 815,
@@ -4243,7 +4255,7 @@
 					"textAlign": "right",
 					"text": "Zone"
 				},
-				"Text52": {
+				"_Text_ShipPartials_270": {
 					"type": "text",
 					"top": 255,
 					"left": 815,
@@ -4260,7 +4272,7 @@
 					"left": 896,
 					"width": 103,
 					"height": 16,
-					"dataSource": "entryEntity.lat",
+					"dataSource": "entry_o.lat",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
@@ -4282,7 +4294,7 @@
 					"left": 897,
 					"width": 103,
 					"height": 16,
-					"dataSource": "entryEntity.lng",
+					"dataSource": "entry_o.lng",
 					"dataSourceTypeHint": "number",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
@@ -4298,7 +4310,7 @@
 					],
 					"zzzdataSource": "[Customer:2]lng:108"
 				},
-				"Text38": {
+				"_Text_latlng_273": {
 					"type": "text",
 					"top": 120,
 					"left": 823,
@@ -4309,7 +4321,7 @@
 					"textAlign": "right",
 					"text": "latlng"
 				},
-				"Variable91": {
+				"_VAR_bMap1_274": {
 					"type": "button",
 					"top": 117,
 					"left": 836,
@@ -4323,7 +4335,7 @@
 						"onClick"
 					]
 				},
-				"Text33": {
+				"_Text_ShipPartials_275": {
 					"type": "text",
 					"top": 317,
 					"left": 815,
@@ -4340,7 +4352,7 @@
 					"left": 901,
 					"width": 102,
 					"height": 17,
-					"dataSource": "entryEntity.shipPartial",
+					"dataSource": "entry_o.shipPartial",
 					"stroke": "#000000",
 					"fontFamily": "Lucida Sans Regular",
 					"fontSize": 14,
@@ -4360,7 +4372,7 @@
 		},
 		{
 			"objects": {
-				"aDetails": {
+				"_CHK_aDetails_277": {
 					"type": "tab",
 					"top": 99,
 					"left": 9,
@@ -4448,7 +4460,7 @@
 					"action": "",
 					"method": "ObjectMethods/Button1.4dm"
 				},
-				"dropDocument_t": {
+				"_VAR_dropDocument_t_283": {
 					"type": "input",
 					"left": 727,
 					"top": 75,
@@ -4511,13 +4523,13 @@
 		},
 		{
 			"objects": {
-				"KeyText1": {
+				"_CHK_KeyText1_287": {
 					"type": "input",
 					"top": 128,
 					"left": 189,
 					"width": 811,
 					"height": 17,
-					"dataSource": "entryEntity.objective",
+					"dataSource": "entry_o.objective",
 					"borderStyle": "solid",
 					"dragging": "none",
 					"dropping": "custom",
@@ -4526,7 +4538,7 @@
 						"onDataChange"
 					]
 				},
-				"Text55": {
+				"_Text_ObGeneral_288": {
 					"type": "text",
 					"top": 130,
 					"left": 11,
@@ -4537,7 +4549,7 @@
 					"textAlign": "left",
 					"text": "ObGeneral"
 				},
-				"Text57": {
+				"_Text_Objective_289": {
 					"type": "text",
 					"top": 130,
 					"left": 133,
@@ -4554,7 +4566,7 @@
 					"left": 8,
 					"width": 558,
 					"height": 559,
-					"dataSource": "entryEntity.obGeneral",
+					"dataSource": "entry_o.obGeneral",
 					"dataSourceTypeHint": "object",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4576,7 +4588,7 @@
 					"left": 586,
 					"width": 398,
 					"height": 441,
-					"dataSource": "entryEntity.obExchange",
+					"dataSource": "entry_o.obExchange",
 					"dataSourceTypeHint": "object",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -4591,7 +4603,7 @@
 					],
 					"zzzdataSource": "[Customer:2]obExchange:137"
 				},
-				"Variable6": {
+				"_VAR_bSave_292": {
 					"type": "button",
 					"top": 99,
 					"left": 863,
@@ -4618,7 +4630,7 @@
 					"left": 586,
 					"width": 414,
 					"height": 102,
-					"dataSource": "entryEntity.keyTags",
+					"dataSource": "entry_o.keyTags",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"textAlign": "left",
@@ -4633,7 +4645,7 @@
 					"zzzdataSource": "[Customer:2]deleteText:126",
 					"bottom": 710
 				},
-				"Text59": {
+				"_Text_KeyTags_294": {
 					"type": "text",
 					"top": 594,
 					"left": 589,
@@ -4648,12 +4660,6 @@
 		}
 	],
 	"editor": {
-		"groups": {
-			"Group122": [
-				"Text378",
-				"Text46"
-			]
-		},
 		"activeView": "View 1",
 		"defaultView": "View 1",
 		"views": {
@@ -4668,7 +4674,7 @@
 			"View 9": {}
 		}
 	},
-	"geometryStamp": 1545,
+	"geometryStamp": 1844,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

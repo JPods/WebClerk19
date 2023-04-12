@@ -69,7 +69,7 @@ Else
 	// 3. Documents
 	
 	If (<>viDebugMode>410)
-		ConsoleMessage("Number of Items = "+String:C10($cntRay))
+		ConsoleLog("Number of Items = "+String:C10($cntRay))
 	End if 
 	
 	C_BOOLEAN:C305($vbSelfTesting)
@@ -138,7 +138,7 @@ Else
 		
 		If (vResponse="")
 			// zzzqqq jDateTimeStamp(->[SyncRecord:109]packingNotes:14; Current user:C182+" unpacked")
-			[SyncRecord:109]dtComplete:8:=DateTime_Enter
+			[SyncRecord:109]dtComplete:8:=DateTime_DTTo
 			[SyncRecord:109]statusReceive:19:="Unpacked"
 			SAVE RECORD:C53([SyncRecord:109])
 			VALIDATE TRANSACTION:C240

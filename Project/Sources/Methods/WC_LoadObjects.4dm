@@ -23,7 +23,7 @@ ARRAY TEXT:C222(<>aWebObjectValue; 0)
 // ### bj ### 20210822_1434  QQQZZZ Harvest then delete
 If (False:C215)
 	
-	$myObjectFolder:=<>WebFolder+"jitObjects"+Folder separator:K24:12
+	$myObjectFolder:=Storage:C1525.wc.webFolder+"jitObjects"+Folder separator:K24:12
 	vResponse:="No jitObjects found"
 	QUERY:C277([WebClerkDevice:150]; [WebClerkDevice:150]active:7=True:C214; *)
 	QUERY:C277([WebClerkDevice:150];  & [WebClerkDevice:150]purpose:2="Object")
@@ -35,7 +35,7 @@ If (False:C215)
 	//TRACE
 	C_TEXT:C284($myObjectFolder; $myText)
 	C_LONGINT:C283($error; $i; $k; $w; $fia)
-	$myObjectFolder:=<>WebFolder+"jitObjects"+Folder separator:K24:12
+	$myObjectFolder:=Storage:C1525.wc.webFolder+"jitObjects"+Folder separator:K24:12
 	vResponse:="No jitObjects found"
 	If (HFS_Exists($myObjectFolder)=1)
 		ARRAY TEXT:C222(aText1; 0)
@@ -65,8 +65,8 @@ If (False:C215)
 								APPEND TO ARRAY:C911(<>aWebObjectValue; $myText)
 								APPEND TO ARRAY:C911(<>aWebObjectName; aText1{$i})
 								If (<>viDebugMode>410)
-									ConsoleMessage("ObjectName:\t"+aText1{$i})
-									ConsoleMessage("ObjectVAlue:\t"+$myText)
+									ConsoleLog("ObjectName:\t"+aText1{$i})
+									ConsoleLog("ObjectVAlue:\t"+$myText)
 								End if 
 							End if 
 						End if 

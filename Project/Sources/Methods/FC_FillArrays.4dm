@@ -80,15 +80,15 @@ For ($i; 1; $k)
 		$i:=$k
 	End if 
 	If ([ProposalLine:43]calculateLine:20)
-		If ([Proposal:42]proposalNum:5#[ProposalLine:43]proposalNum:1)
-			QUERY:C277([Proposal:42]; [Proposal:42]proposalNum:5=[ProposalLine:43]proposalNum:1)
+		If ([Proposal:42]idNum:5#[ProposalLine:43]idNumProposal:1)
+			QUERY:C277([Proposal:42]; [Proposal:42]idNum:5=[ProposalLine:43]idNumProposal:1)
 		End if 
 		$itemCnt:=Round:C94([ProposalLine:43]qty:3*[ProposalLine:43]probability:9*0.01; 0)
 		If ($itemCnt#0)
 			$w:=Size of array:C274(aORecNum)+1
 			Ray_InsertElems($w; 1; ->aSOs; ->a35Str4; ->aQtyBackOrd; ->aNeedDates; ->aORecNum; ->a3Str1; ->aText1)
 			a3Str1{$w}:="Pp"
-			aSOs{$w}:=[ProposalLine:43]proposalNum:1
+			aSOs{$w}:=[ProposalLine:43]idNumProposal:1
 			a35Str4{$w}:=[ProposalLine:43]itemNum:2
 			aQtyBackOrd{$w}:=$itemCnt
 			aNeedDates{$w}:=[Proposal:42]dateNeeded:4
@@ -131,7 +131,7 @@ For ($i; 1; $k)
 	$w:=Size of array:C274(aORecNum)+1
 	Ray_InsertElems($w; 1; ->aSOs; ->a35Str4; ->aQtyBackOrd; ->aNeedDates; ->aORecNum; ->a3Str1; ->aText1)
 	a3Str1{$w}:="SO"
-	aSOs{$w}:=[OrderLine:49]orderNum:1
+	aSOs{$w}:=[OrderLine:49]idNumOrder:1
 	a35Str4{$w}:=[OrderLine:49]itemNum:4
 	aQtyBackOrd{$w}:=[OrderLine:49]qtyBackLogged:8
 	aNeedDates{$w}:=[OrderLine:49]dateRequired:23
@@ -149,8 +149,8 @@ For ($i; 1; $k)
 		End if 
 	End if 
 	
-	If ([OrderLine:49]orderNum:1#[Order:3]orderNum:2)
-		QUERY:C277([Order:3]; [Order:3]orderNum:2=[OrderLine:49]orderNum:1)
+	If ([OrderLine:49]idNumOrder:1#[Order:3]idNum:2)
+		QUERY:C277([Order:3]; [Order:3]idNum:2=[OrderLine:49]idNumOrder:1)
 	End if 
 	If ([Order:3]dateNeeded:5=!00-00-00!)
 		aNeedDates{$w}:=[Order:3]dateNeeded:5
@@ -171,7 +171,7 @@ If ($doBOM=1)  //expand the BOM items
 	C_BOOLEAN:C305($bAdjustTopQty)
 	$bAdjustTopQty:=True:C214
 	
-	ConsoleMessage("BOM_BuildExtend")
+	ConsoleLog("BOM_BuildExtend")
 	While ($i<=$k)
 		$myPart:=a35Str4{$i}
 		ARRAY TEXT:C222(aRptPartNum; 0)
@@ -186,7 +186,7 @@ If ($doBOM=1)  //expand the BOM items
 		End if 
 		
 		vrBOMBuildParentQty:=aQtyBackOrd{$i}
-		ConsoleMessage(String:C10($i)+"\t"+a35Str4{$i})
+		ConsoleLog(String:C10($i)+"\t"+a35Str4{$i})
 		
 		If (a35Str4{$i}#"")  // ### jwm ### 20180417_2351  verify this
 			BOM_BuildExtend(a35Str4{$i}; $bAdjustForQtyOnHand; ->vrBOMBuildParentQty; $bAdjustTopQty; $aBOMQtyLookupItemNum; $aBOMQtyLookupQtyOnHand)
@@ -254,15 +254,15 @@ If ($doBOM=1)  //expand the BOM items
 End if 
 //  
 If ($1=1)
-	ORDER BY:C49([POLine:40]; [POLine:40]poNum:1)
+	ORDER BY:C49([POLine:40]; [POLine:40]idNumPO:1)
 	$i:=0
 	$k:=Records in selection:C76([POLine:40])
 	//ThermoInitExit ("Processing PO Lines.";$k;True)
 	FIRST RECORD:C50([POLine:40])
 	While ($k>$i)
 		
-		If ([POLine:40]poNum:1#[PO:39]poNum:5)
-			QUERY:C277([PO:39]; [PO:39]poNum:5=[POLine:40]poNum:1)
+		If ([POLine:40]idNumPO:1#[PO:39]idNum:5)
+			QUERY:C277([PO:39]; [PO:39]idNum:5=[POLine:40]idNumPO:1)
 		End if 
 		// ### jwm ### 20180719_1325
 		ProgressUpdate($viProgressID; $i; $k; "Processing Proposal Lines:")
@@ -271,7 +271,7 @@ If ($1=1)
 			$i:=$k
 		End if 
 		$i:=$i+1
-		BOM_NeedExpand([POLine:40]itemNum:2; [POLine:40]qtyBackLogged:5; [POLine:40]dateExpected:15; "Purchase"; [POLine:40]itemNum:2; "PO"; [POLine:40]poNum:1; Record number:C243([POLine:40]); ->[PO:39]vendorCompany:39)
+		BOM_NeedExpand([POLine:40]itemNum:2; [POLine:40]qtyBackLogged:5; [POLine:40]dateExpected:15; "Purchase"; [POLine:40]itemNum:2; "PO"; [POLine:40]idNumPO:1; Record number:C243([POLine:40]); ->[PO:39]vendorCompany:39)
 		NEXT RECORD:C51([POLine:40])
 	End while 
 	UNLOAD RECORD:C212([POLine:40])
@@ -292,8 +292,8 @@ If ($1=1)
 			// ### jwm ### 20180719_1325
 			ProgressUpdate($viProgressID; $i; $k; "Processing Proposal Lines:")
 			
-			jDateTimeRecov([WorkOrder:66]dtAction:5; ->vDate1; ->vTime1)
-			BOM_NeedExpand([WorkOrder:66]itemNum:12; [WorkOrder:66]qtyOrdered:13-[WorkOrder:66]qtyActual:14; vDate1; "Work"; [WorkOrder:66]itemNum:12; "WO"; [WorkOrder:66]woNum:29; Record number:C243([WorkOrder:66]); ->[WorkOrder:66]customerID:28)
+			DateTime_DTFrom([WorkOrder:66]dtAction:5; ->vDate1; ->vTime1)
+			BOM_NeedExpand([WorkOrder:66]itemNum:12; [WorkOrder:66]qtyOrdered:13-[WorkOrder:66]qty:14; vDate1; "Work"; [WorkOrder:66]itemNum:12; "WO"; [WorkOrder:66]idNum:29; Record number:C243([WorkOrder:66]); ->[WorkOrder:66]customerID:28)
 			NEXT RECORD:C51([WorkOrder:66])
 		End while 
 		UNLOAD RECORD:C212([WorkOrder:66])

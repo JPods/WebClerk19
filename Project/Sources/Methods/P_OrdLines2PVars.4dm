@@ -14,7 +14,7 @@ C_LONGINT:C283(curLines)
 $qtyFormat:="###,###,###,##0.###,###,###"
 pvSeq:=String:C10([OrderLine:49]seq:30)
 pvItemNum:=[OrderLine:49]itemNum:4
-pvAltItem:=[OrderLine:49]altItem:31
+pvAltItem:=[OrderLine:49]itemNumAlt:31
 pvDescription:=[OrderLine:49]description:5
 pvQtyOrd:=String:C10([OrderLine:49]qty:6; $qtyFormat)
 pvQtyShip:=String:C10([OrderLine:49]qtyShipped:7; $qtyFormat)
@@ -44,7 +44,7 @@ pvExtWt:=String:C10([OrderLine:49]extendedWt:21; <>tcFormatTt)
 
 pvLeadTime:=""
 
-pvSerial:=[OrderLine:49]serialNum:40
+pvSerial:=JSON Stringify:C1217([OrderLine:49]obSerial:40)
 pvCommRep:=String:C10([OrderLine:49]commRep:16; <>tcFormatTt)
 pvCommSales:=String:C10([OrderLine:49]commSales:17; <>tcFormatTt)
 pvRateRep:=String:C10(Abs:C99([OrderLine:49]commRateRep:18); <>tcFormatTt)
@@ -60,9 +60,9 @@ End case
 pvReference:=""  //String([OrderLine]PO;<>tcFormatTt)
 pvLnProfile1:=[OrderLine:49]lineProfile1:45
 pvLnProfile2:=[OrderLine:49]lineProfile2:46
-pvLnProfile3:=[OrderLine:49]lineProfile3:47
+pvLnProfile3:=JSON Stringify:C1217([OrderLine:49]obItem:47)
 pvProfileReal1:=String:C10([OrderLine:49]profileReal1:62; $qtyFormat)  //### jwm ### 20120524_0020
-pvProfileReal2:=String:C10([OrderLine:49]profileReal2:63; $qtyFormat)  //### jwm ### 20120524_002
+pvProfileReal2:=String:C10([OrderLine:49]obHistory:63; $qtyFormat)  //### jwm ### 20120524_002
 pvLnComment:=[OrderLine:49]comment:44
 pvDateProm:=String:C10([OrderLine:49]dateShipOn:38; 1)
 pvDateReq:=String:C10([OrderLine:49]dateRequired:23; 1)
@@ -83,6 +83,6 @@ End if
 
 pvQtyCancelled:=String:C10([OrderLine:49]qtyCancelled:51; $qtyFormat)
 pvProfileReal1:=String:C10([OrderLine:49]profileReal1:62; $qtyFormat)
-pvProfileReal2:=String:C10([OrderLine:49]profileReal2:63; $qtyFormat)
+pvProfileReal2:=String:C10([OrderLine:49]obHistory:63; $qtyFormat)
 
 

@@ -14,8 +14,6 @@
 If (False:C215)  //working
 	FixImagePath
 	WC_ajaxServer
-	HO_CatalogCCS
-	HO_CatalogDuravent
 	jsonToRecord
 	jsonValueExtract
 	jsonSelectionToObject
@@ -58,7 +56,7 @@ End if
 //  gkgkgk autoincrement UniqueID in Maps
 
 // made changes in v15fw but did not move them into this. Review again
-// Matched ConsoleMessage procedure
+// Matched Console_Log procedure
 // Counter systems not changed. Review at some point  QQQQ
 // CounterNew, CounterRecover, CounterResetPending, Counters_MaxValue
 // create a TinyMCE means of doing letters
@@ -112,8 +110,8 @@ End if
 
 // Modified by: William James (2013-11-08T00:00:00)
 // Method: Email_Governor
-If ([UserReport:46]scriptExecute:4)  //| ([UserReport]ScriptBegin#""))  // once per session
-	ExecuteText(0; [UserReport:46]scriptBegin:5)
+If ([Report:46]scriptExecute:4)  //| ([UserReport]ScriptBegin#""))  // once per session
+	ExecuteText(0; [Report:46]scriptBegin:5)
 End if 
 
 //  <>useTransactions sets a boolean to use or not use transactions

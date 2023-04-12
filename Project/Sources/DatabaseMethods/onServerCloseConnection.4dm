@@ -10,7 +10,7 @@ If (False:C215)
 	// Save the Exit date and time
 	[ServerLog:128]dateSignOff:1:=Current date:C33
 	[ServerLog:128]timeSignOff:9:=Current time:C178
-	[ServerLog:128]dtSignOff:11:=DateTime_Enter
+	[ServerLog:128]dtSignOff:11:=DateTime_DTTo
 	
 	// Save the process information
 	[ServerLog:128]processid:17:=Current process:C322

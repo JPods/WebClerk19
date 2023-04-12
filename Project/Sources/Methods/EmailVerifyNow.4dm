@@ -15,7 +15,7 @@ C_POINTER:C301($3)
 <>viDeBugMode:=1
 
 If (<>consoleprocess=0)
-	ConsoleMessage("Launch")
+	ConsoleLog("Launch")
 End if 
 
 returnEmailAction:=1

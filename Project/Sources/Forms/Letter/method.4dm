@@ -9,7 +9,7 @@ Case of
 		var process_o : Object
 		process_o:=$1  // when passing in all records must be in the process_o.ent
 		P_FillVars(process_o)
-		Ltr_ListVars(process_o.tableName)
+		Ltr_ListVars(process_o.dataClassName)
 		$w:=Size of array:C274(SRVarNames)+1
 		INSERT IN ARRAY:C227(SRVarNames; $w)
 		SRVarNames{$w}:="P_FillVars"
@@ -18,7 +18,7 @@ Case of
 		OBJECT SET ENABLED:C1123(bOK; (bConvert=0))
 		
 		C_COLLECTION:C1488($cTemp)
-		$cTemp:=Ltr_GetCollection(process_o.tableName)
+		$cTemp:=Ltr_GetCollection(process_o.dataClassName)
 		Form:C1466.cLetter:=$cTemp.orderBy("name asc")
 		bConvert:=1
 		

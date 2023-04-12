@@ -4,9 +4,9 @@ Else
 	$tableName:=Form:C1466.userRec_ob.tableName
 	$viRow:=$obEvent.row
 	If (<>viDebugMode>410)
-		ConsoleMessage("In ListBox On Double Clicked")
-		ConsoleMessage("$obEvent.code: On Double Clicked, Form.userRec_ob: "+$tableName+", and id: "+Form:C1466.userRec_ob.id)
-		ConsoleMessage("Form.userRec_ob: "+$tableName+", and id: "+Form:C1466.userRec_ob.id)
+		ConsoleLog("In ListBox On Double Clicked")
+		ConsoleLog("$obEvent.code: On Double Clicked, Form.userRec_ob: "+$tableName+", and id: "+Form:C1466.userRec_ob.id)
+		ConsoleLog("Form.userRec_ob: "+$tableName+", and id: "+Form:C1466.userRec_ob.id)
 	End if 
 	
 	Case of 
@@ -24,11 +24,6 @@ Else
 			$tableNum:=Table:C252(->[Customer:2])
 			$script:="Query([Customer];[Customer]id=\""+Form:C1466.userRec_ob.id+"\")"
 			ProcessTableOpen($tableNum; $script; "Customer: ")
-			
-		: ($tableName="Lead")
-			$tableNum:=Table:C252(->[Lead:48])
-			$script:="Query([Lead];[Lead]id=\""+Form:C1466.userRec_ob.id+"\")"
-			ProcessTableOpen($tableNum; $script; "Lead: ")
 			
 		: ($tableName="Contact")
 			$tableNum:=Table:C252(->[Contact:13])

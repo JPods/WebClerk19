@@ -15,7 +15,7 @@ CREATE EMPTY SET:C140([DCash:62]; "Current")
 $tableNum:=Table:C252(ptCurTable)
 ARRAY LONGINT:C221($docArray; 0)
 If ($tableNum=26)
-	SELECTION TO ARRAY:C260([Invoice:26]invoiceNum:2; $docArray)
+	SELECTION TO ARRAY:C260([Invoice:26]idNum:2; $docArray)
 Else 
 	SELECTION TO ARRAY:C260([Payment:28]idNum:8; $docArray)
 End if 
@@ -28,7 +28,7 @@ For ($i; 1; $k)
 		UNION:C120("Current"; "Temp"; "Current")
 		CLEAR SET:C117("Temp")
 	End if 
-	QUERY:C277([DCash:62]; [DCash:62]docReceive:4=$docArray{$i}; *)
+	QUERY:C277([DCash:62]; [DCash:62]dtDocument:4=$docArray{$i}; *)
 	QUERY:C277([DCash:62];  & [DCash:62]tableReceive:8=$tableNum)
 	If (Records in selection:C76([DCash:62])>0)
 		CREATE SET:C116([DCash:62]; "Temp")
@@ -52,4 +52,4 @@ Else
 		MODIFY SELECTION:C204(ptCurTable->)
 	End while 
 End if 
-Prs_ListActive
+Process_ListActive

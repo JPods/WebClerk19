@@ -13,8 +13,8 @@ READ ONLY:C145([DefaultAccount:32])
 TRACE:C157
 jBetweenDates("Material Changes")
 If (OK=1)
-	$dtBegin:=DateTime_Enter(vdDateBeg; ?00:00:00?)
-	$dtEnd:=DateTime_Enter(vdDateEnd; ?23:59:59?)
+	$dtBegin:=DateTime_DTTo(vdDateBeg; ?00:00:00?)
+	$dtEnd:=DateTime_DTTo(vdDateEnd; ?23:59:59?)
 	QUERY:C277([DInventory:36]; [DInventory:36]typeID:14="AJ"; *)
 	QUERY:C277([DInventory:36];  | [DInventory:36]typeID:14="MD"; *)
 	QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=$dtBegin; *)
@@ -76,10 +76,10 @@ If (OK=1)
 					$strValue2:=String:C10(Abs:C99($theValue); <>tcFormatTt)
 					$strValue1:="0.00"
 				End if 
-				jDateTimeRecov([DInventory:36]dtCreated:15; ->vDate1; ->vTime1)
+				DateTime_DTFrom([DInventory:36]dtCreated:15; ->vDate1; ->vTime1)
 				GL_JrnlSummary($dInvGL; ""; vDate1; Num:C11($strValue1); Num:C11($strValue2); "")
 				GL_JrnlSummary($refGL; ""; vDate1; Num:C11($strValue2); Num:C11($strValue1); "")
-				SEND PACKET:C103(sumDoc; [DInventory:36]itemNum:1+"\t"+[DInventory:36]typeID:14+"\t"+[DInventory:36]reason:13+"\t"+String:C10(vDate1)+"\t"+String:C10(Record number:C243([DInventory:36]))+"\t"+$dInvGL+"\t"+$strValue1+"\t"+$strValue2+"\t"+String:C10([DInventory:36]qtyOnHand:2)+"\t"+String:C10([DInventory:36]unitCost:7)+"\t"+String:C10([DInventory:36]docid:9)+"\r")
+				SEND PACKET:C103(sumDoc; [DInventory:36]itemNum:1+"\t"+[DInventory:36]typeID:14+"\t"+[DInventory:36]reason:13+"\t"+String:C10(vDate1)+"\t"+String:C10(Record number:C243([DInventory:36]))+"\t"+$dInvGL+"\t"+$strValue1+"\t"+$strValue2+"\t"+String:C10([DInventory:36]qtyOnHand:2)+"\t"+String:C10([DInventory:36]unitCost:7)+"\t"+String:C10([DInventory:36]idNumDoc:9)+"\r")
 				SEND PACKET:C103(sumDoc; [DInventory:36]itemNum:1+"\t"+[DInventory:36]typeID:14+"\t"+[DInventory:36]reason:13+"\t"+String:C10(vDate1)+"\t"+String:C10(Record number:C243([DInventory:36]))+"\t"+$refGL+"\t"+$strValue2+"\t"+$strValue1+"\r")
 			End if 
 			NEXT RECORD:C51([DInventory:36])
@@ -113,7 +113,7 @@ If (OK=1)
 		
 		[TallyResult:73]name:1:=$BMName
 		[TallyResult:73]purpose:2:="MaterialAdjust"
-		[TallyResult:73]dtCreated:11:=DateTime_Enter
+		[TallyResult:73]dtCreated:11:=DateTime_DTTo
 		[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
 		[TallyResult:73]textBlk1:5:=document
 		[TallyResult:73]nameProfile1:26:="Document Type"

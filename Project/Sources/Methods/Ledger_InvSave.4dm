@@ -11,7 +11,7 @@ C_BOOLEAN:C305(<>keepAllLedgers)  //??? work out something different, I do not t
 C_BOOLEAN:C305($doDelete)
 
 $selLedger:=ds:C1482.Ledger.query("idInvoice = :1"; ent.id)
-Data_GarbageMake($selLedger.drop())
+//Data_GarbageMake($selLedger.drop())
 
 Case of 
 	: ((ent.balanceDue=0) & (ent.datePaid+120<Current date:C33) & (<>keepAllLedgers))  //clear old

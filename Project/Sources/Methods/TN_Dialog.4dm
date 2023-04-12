@@ -20,9 +20,7 @@ If ($found>0)
 End if 
 If (($found>0) & (OK=0))
 	POST OUTSIDE CALL:C329(<>aPrsNum{$found})
-	If (Frontmost process:C327#<>aPrsNum{$found})
-		BRING TO FRONT:C326(<>aPrsNum{$found})
-	End if 
+	BRING TO FRONT:C326($found)
 Else 
 	<>ptCurTable:=(->[TechNote:58])
 	<>prcControl:=1

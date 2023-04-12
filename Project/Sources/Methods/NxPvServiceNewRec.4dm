@@ -26,7 +26,7 @@ ARRAY TEXT:C222(aElectroZip; 0)
 aContact{0}:=""
 srVarLoad(0)
 // DISABLE ITEM(2;1)//no cloning new records 
-[Service:6]dtDocument:16:=DateTime_Enter
+[Service:6]dtDocument:16:=DateTime_DTTo
 [Service:6]dtBegin:15:=[Service:6]dtDocument:16  //ignor if not important
 vt06Enter:=Current time:C178
 vt06Begin:=vt06Enter
@@ -38,12 +38,12 @@ If (clickDate=!00-00-00!)
 Else 
 	d06Action:=clickDate
 	vt06Action:=?12:00:00?
-	[Service:6]dtAction:35:=DateTime_Enter(clickDate; vt06Action)
+	[Service:6]dtAction:35:=DateTime_DTTo(clickDate; vt06Action)
 	clickDate:=!00-00-00!
 End if 
 If (myCycle=4)
 	If ([Item:4]dtItemDate:33=0)
-		[Item:4]dtItemDate:33:=DateTime_Enter(Date:C102([Item:4]profile2:36); ?00:00:00?)
+		[Item:4]dtItemDate:33:=DateTime_DTTo(Date:C102([Item:4]profile2:36); ?00:00:00?)
 		SAVE RECORD:C53([Item:4])
 	End if 
 	[Service:6]dtBegin:15:=[Item:4]dtItemDate:33  //ignor if not important  
@@ -117,7 +117,7 @@ Case of
 				[Service:6]repID:2:=[Order:3]repID:8
 				[Service:6]idNumProject:28:=[Order:3]projectNum:50
 			: ($1=Table:C252(->[Rep:8]))
-				[Service:6]repID:2:=[Rep:8]RepID:1
+				[Service:6]repID:2:=[Rep:8]repID:1
 			: ($1=Table:C252(->[Invoice:26]))
 				srVarLoad(2)
 				[Service:6]idNumInvoice:23:=[Invoice:26]idNum:2

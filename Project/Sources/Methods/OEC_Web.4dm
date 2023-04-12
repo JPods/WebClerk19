@@ -21,8 +21,7 @@ If (voState.errors=Null:C1517)
 	voState.errors:=New collection:C1472
 End if 
 If (<>OECWebReport=0)
-	//DefaultSetupsCreate("<>OECWebReport";"1";"Is Integer";"all";"email message";"Set to zero to suppress TallyResult reports of web errors.")
-	//$error:=DefaultSetupReturn("<>OECWebReport")
+	
 	var $route_t : Text
 	If (voState.urlOriginal#Null:C1517)
 		$route_t:=JSON Stringify:C1217(voState.request.parameters)
@@ -30,10 +29,10 @@ If (<>OECWebReport=0)
 	End if 
 	$message_t:="Error Code: "+String:C10(Error)+"-- Method: "+Error Method+"-- Line: "+String:C10(Error Line)+"-- route: "+$route_t
 	voState.errors.push($message_t)
-	ConsoleMessage($message_t)
+	ConsoleLog($message_t)
 End if 
 If (<>OECWebReport=1)
-	//ConsoleMessage("\rOEC_Web: "+String(error)+" "+voState.request.URL.pathName+" "+vWebTagTable+" "+vWebTagField+" "+vWebTagFormat)
+	//ConsoleLog("\rOEC_Web: "+String(error)+" "+voState.request.URL.pathName+" "+vWebTagTable+" "+vWebTagField+" "+vWebTagFormat)
 	
 	
 	// ### jwm ### 20171017_1646
@@ -47,11 +46,11 @@ If (<>OECWebReport=1)
 	For ($viIndex; 1; Size of array:C274(aiCodes))
 		$message_t:="Error Code: "+String:C10(aiCodes{$viIndex})+"-- "+atErrors{$viIndex}+"-- "+atComponents{$viIndex}
 		voState.errors.push($message_t)
-		ConsoleMessage($message_t)
+		ConsoleLog($message_t)
 	End for 
 	$message_t:="Error Code: "+String:C10(Error)+"-- Method: "+Error Method+"-- Line: "+String:C10(Error Line)
 	voState.errors.push($message_t)
-	ConsoleMessage($message_t)
+	ConsoleLog($message_t)
 	
 	BEEP:C151
 	BEEP:C151

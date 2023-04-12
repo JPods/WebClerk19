@@ -54,7 +54,7 @@ If ($k2>0)
 					LOAD RECORD:C52([DInventory:36])
 					If (Not:C34(Locked:C147([DInventory:36])))
 						[DInventory:36]note:18:="No Item"
-						[DInventory:36]dtItemCard:16:=DateTime_Enter
+						[DInventory:36]dtItemCard:16:=DateTime_DTTo
 						SAVE RECORD:C53([DInventory:36])
 					End if 
 				: (Not:C34(Locked:C147([Item:4])))
@@ -62,7 +62,7 @@ If ($k2>0)
 					If ((Not:C34(Locked:C147([DInventory:36]))) & ([DInventory:36]dtItemCard:16=0))
 						$dInvtLocked:=False:C215
 						If ([Item:4]notTracked:56)
-							[DInventory:36]dtItemCard:16:=DateTime_Enter
+							[DInventory:36]dtItemCard:16:=DateTime_DTTo
 							If (([DInventory:36]qtyOnHand:2>0) | (([DInventory:36]typeID:14="PO") & ([DInventory:36]qtyOnHand:2#0)))
 								createInShip  //(->[dInventory]ItemNum;[dInventory]QtyOnHand;->[dInventory]Reason;[dInventory]JobID;[dInventory]DocID;->[dInventory]custVendID;[dInventory]UnitCost;[dInventory]LineNum;[dInventory]ReceiptID;[dInventory]typeID;[dInventory]NonProdCost;[dInventory]Duties;[dInventory]VaTax)//;$nonProd;$vaTax)
 							End if 
@@ -147,7 +147,7 @@ If ($k2>0)
 													GL_JrnlSummary([Item:4]inventoryGlAccount:23; $Source; Current date:C33; $vr2; $vr3; [DInventory:36]division:29)
 													GL_JrnlSummary([Item:4]costGLAccount:22; $Source; Current date:C33; $vr3; $vr2; [DInventory:36]division:29)
 												End if 
-												vText1:=vText1+$partNum+"\t"+String:C10($vr2; <>tcFormatTt)+"\t"+String:C10([DInventory:36]docid:9)+"\t"+[DInventory:36]typeID:14+"\r"
+												vText1:=vText1+$partNum+"\t"+String:C10($vr2; <>tcFormatTt)+"\t"+String:C10([DInventory:36]idNumDoc:9)+"\t"+[DInventory:36]typeID:14+"\r"
 												$dQty:=[DInventory:36]qtyOnHand:2+Num:C11([DInventory:36]qtyOnHand:2=0)  //dangerous, not a real quantity
 												[Item:4]costAverage:13:=Round:C94((([DInventory:36]unitCost:7*[DInventory:36]qtyOnHand:2)+[DInventory:36]nonProdCost:25+[DInventory:36]duties:26)/$dQty; <>tcDecimalUC)
 											End if 
@@ -173,7 +173,7 @@ If ($k2>0)
 										GL_JrnlSummary([Item:4]costGLAccount:22; $Source; Current date:C33; $vr2; $vr3; [DInventory:36]division:29)
 										GL_JrnlSummary([Item:4]inventoryGlAccount:23; $Source; Current date:C33; $vr3; $vr2; [DInventory:36]division:29)
 									End if 
-									vText1:=vText1+$partNum+"\t"+String:C10($vr2; <>tcFormatTt)+"\t"+String:C10([DInventory:36]docid:9)+"\t"+[DInventory:36]typeID:14+"\r"
+									vText1:=vText1+$partNum+"\t"+String:C10($vr2; <>tcFormatTt)+"\t"+String:C10([DInventory:36]idNumDoc:9)+"\t"+[DInventory:36]typeID:14+"\r"
 							End case 
 							[Item:4]qtyOnHand:14:=Round:C94($NewQty; <>tciItQtyPre)  //Voided Invoice=1
 							If ([DInventory:36]takeAction:19#4)  //no order, invoiced directly
@@ -187,7 +187,7 @@ If ($k2>0)
 								[Item:4]costofSales:50:=[Item:4]costofSales:50-Round:C94([DInventory:36]qtyOnHand:2*[DInventory:36]unitCost:7; <>tcDecimalTt)
 							End if 
 							//
-							[DInventory:36]dtItemCard:16:=DateTime_Enter
+							[DInventory:36]dtItemCard:16:=DateTime_DTTo
 							$costOfTax:=0  //to be used with incoming taxes.
 							If (([DInventory:36]qtyOnHand:2>0) | (([DInventory:36]typeID:14="PO") & ([DInventory:36]qtyOnHand:2#0)))
 								//TRACE

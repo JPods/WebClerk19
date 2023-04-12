@@ -63,7 +63,7 @@ If ($doMore)  //action for the form regardless of new or existing record
 	// ### bj ### 20210912_1208  should be by obEventLog.id
 	QUERY:C277([WebTempRec:101]; [WebTempRec:101]idEventLog:1=[EventLog:75]id:54)
 	
-	jDateTimeRecov([EventLog:75]dtEvent:1; ->vdDate; ->vtTime)
+	DateTime_DTFrom([EventLog:75]dtEvent:1; ->vdDate; ->vtTime)
 	$doClear:=False:C215
 	If (([EventLog:75]remoteUserRec:10>0) & (Record number:C243([EventLog:75])>-3))
 		// ### bj ### 20181227_1733 creates a zero record problem 
@@ -75,11 +75,7 @@ If ($doMore)  //action for the form regardless of new or existing record
 				QUERY:C277([Customer:2]; [Customer:2]customerID:1=[RemoteUser:57]customerID:10)
 				//SerFillCustDtl 
 				READ WRITE:C146([Customer:2])
-			: ([RemoteUser:57]tableNum:9=48)
-				READ ONLY:C145([Lead:48])
-				QUERY:C277([Lead:48]; [Lead:48]idNum:32=Num:C11([RemoteUser:57]customerID:10))
-				//SerFillLeadDtl 
-				READ WRITE:C146([Lead:48])
+				
 			Else 
 				$doClear:=True:C214
 		End case 
@@ -106,8 +102,8 @@ If ($doMore)  //action for the form regardless of new or existing record
 		v1Time:=?00:00:00?
 		vTextServ:=""
 	End if 
-	jDateTimeRecov([RemoteUser:57]dtCreated:8; ->vDate1; ->vTime1)
-	jDateTimeRecov([RemoteUser:57]dtLastVisit:5; ->vDate2; ->vTime2)
+	DateTime_DTFrom([RemoteUser:57]dtCreated:8; ->vDate1; ->vTime1)
+	DateTime_DTFrom([RemoteUser:57]dtLastVisit:5; ->vDate2; ->vTime2)
 	
 End if 
 

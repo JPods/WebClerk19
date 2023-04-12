@@ -53,26 +53,26 @@ If (vText7="Export")
 		vText9:=""
 		For (vi1; 1; vi2)
 			QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Order:3]customerID:1)
-			//vText9:=[TallyResult]TextBlk1+"002"+"Recs_"+String(DateTime_Enter)+".out"
+			//vText9:=[TallyResult]TextBlk1+"002"+"Recs_"+String(DateTime_DTTo)+".out"
 			Records_Out(->[Customer:2]; vText9; 0)  //File; name of file; keep selection//
 			QUERY:C277([Payment:28]; [Payment:28]idNumOrder:2=[Order:3]idNum:2)
 			If (Records in selection:C76([Payment:28])>0)
-				//vText9:=[TallyResult]TextBlk1+"028"+"Recs_"+String(DateTime_Enter)+".out"
+				//vText9:=[TallyResult]TextBlk1+"028"+"Recs_"+String(DateTime_DTTo)+".out"
 				Records_Out(->[Payment:28]; vText9; 0)  //File; name of file; keep selection//
 			End if 
 			QUERY:C277([Contact:13]; [Contact:13]idNum:28=[Order:3]contactBillTo:87)
 			If (Records in selection:C76([Contact:13])>0)
-				//vText9:=[TallyResult]TextBlk1+String(Table(->[Contact]))+"Recs_b"+String(DateTime_Enter)+".out"
+				//vText9:=[TallyResult]TextBlk1+String(Table(->[Contact]))+"Recs_b"+String(DateTime_DTTo)+".out"
 				Records_Out(->[Contact:13]; vText9; 0)  //File; name of file; keep selection//
 			End if 
 			If ([Order:3]contactBillTo:87#0)
 				QUERY:C277([Contact:13]; [Contact:13]idNum:28=[Order:3]contactBillTo:87)
 				If (Records in selection:C76([Contact:13])>0)
-					//vText9:=[TallyResult]TextBlk1+String(Table(->[Contact]))+"Recs_s"+String(DateTime_Enter)+".out"
+					//vText9:=[TallyResult]TextBlk1+String(Table(->[Contact]))+"Recs_s"+String(DateTime_DTTo)+".out"
 					Records_Out(->[Contact:13]; vText9; 0)  //File; name of file; keep selection//
 				End if 
 			End if 
-			//vText9:=[TallyResult]TextBlk1+"003"+"Recs_"+String(DateTime_Enter)+".out"
+			//vText9:=[TallyResult]TextBlk1+"003"+"Recs_"+String(DateTime_DTTo)+".out"
 			Records_Out(->[Order:3]; vText9; 0)  //File; name of file; keep selection//
 			NEXT RECORD:C51([Order:3])
 		End for 

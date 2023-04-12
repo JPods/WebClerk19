@@ -29,7 +29,7 @@ If ($1>0)
 	aSyncFilePt{4}:=->[Order:3]
 	aSyncFilePt{5}:=->[Invoice:26]
 	aSyncFilePt{6}:=->[Service:6]
-	aSyncFilePt{7}:=->[Lead:48]
+	
 	//[Payment]
 	//  aSyncFilePt{8}:=[PO]
 	//  aSyncFilePt{9}:=[Item]
@@ -41,11 +41,10 @@ If ($1>0)
 	aSyncFldPt{1}:=->[Customer:2]obSync:10
 	aSyncFldPt{2}:=->[Contact:13]obSync:17
 	
-	aSyncFldPt{3}:=->[Proposal:42]obSync:44
+	aSyncFldPt{3}:=->[Proposal:42]obHistory:44
 	aSyncFldPt{4}:=->[Order:3]lng:34
 	aSyncFldPt{5}:=->[Invoice:26]obSync:47
 	aSyncFldPt{6}:=->[Service:6]obSync:29
-	aSyncFldPt{7}:=->[Lead:48]obSync:25
 	//[Payment]DateTimeSync
 	//  aSyncFldPt{8}:=[PO]DateTimeSync
 	//  aSyncFldPt{9}:=[Item]DateTimeSync

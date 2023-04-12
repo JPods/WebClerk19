@@ -17,7 +17,7 @@ C_LONGINT:C283($found)
 
 $found:=Prs_CheckRunnin("Console")
 If ($found>0)
-	<>vConsoleMessage:="ConsoleClose"
-	POST OUTSIDE CALL:C329($found)  //<>theProcessList)
+	<>vConsole_Log:="ConsoleClose"
+	POST OUTSIDE CALL:C329($found)  //Storage.process.processList)
 End if 
 

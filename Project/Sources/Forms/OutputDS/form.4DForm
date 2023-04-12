@@ -12,20 +12,14 @@
 	"events": [
 		"onLoad",
 		"onValidate",
-		"onClick",
 		"onOutsideCall",
-		"onDoubleClick",
-		"onDrop",
 		"onMenuSelect",
 		"onPluginArea",
-		"onDragOver",
 		"onTimer",
 		"onAfterKeystroke",
 		"onSelectionChange",
 		"onAfterEdit",
-		"onBeginDragOver",
-		"onBoundVariableChange",
-		"onPageChange"
+		"onBoundVariableChange"
 	],
 	"windowTitle": "window title",
 	"destination": "detailScreen",
@@ -37,8 +31,8 @@
 			"objects": {
 				"tableName": {
 					"type": "input",
-					"left": 1276,
-					"top": 31,
+					"left": 1280,
+					"top": 9,
 					"width": 158,
 					"height": 17,
 					"dataSource": "tableName",
@@ -46,61 +40,335 @@
 					"enterable": false,
 					"focusable": false
 				},
-				"Text": {
-					"type": "text",
-					"text": "TableName",
-					"top": 10,
-					"left": 1276,
-					"width": 73,
-					"height": 16,
-					"textAlign": "right"
-				},
-				"SF_Input": {
+				"SF_Entry": {
 					"type": "subform",
-					"left": 530,
-					"top": 99,
+					"left": 536,
+					"top": 63,
 					"width": 1012,
 					"height": 725,
-					"method": "ObjectMethods/SF_Input.4dm",
-					"right": 1542,
-					"dataSource": "entryEntity",
-					"bottom": 824
+					"right": 1548,
+					"dataSource": "entry_o",
+					"bottom": 788,
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
 				},
 				"SF_List": {
 					"type": "subform",
 					"left": 5,
-					"top": 99,
+					"top": 63,
 					"width": 520,
 					"height": 725,
 					"method": "ObjectMethods/SF_List.4dm",
 					"right": 525,
-					"dataSource": "",
+					"dataSource": "process_o",
 					"events": [
 						"onLoad"
 					],
-					"bottom": 824
+					"bottom": 788
 				},
-				"aSalesTables_o": {
-					"type": "tab",
-					"top": 64,
-					"left": 59,
-					"width": 323,
-					"height": 26,
-					"dataSource": "aSalesTables",
-					"dataSourceTypeHint": "arrayText",
-					"class": "cssPopups",
-					"method": "ObjectMethods/aSalesTables_o.4dm",
+				"aEntryScripts": {
+					"type": "dropdown",
+					"top": 32,
+					"left": 889,
+					"width": 110,
+					"height": 18,
+					"dataSource": "aEntryScripts",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"textAlign": "center",
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/aEntryScripts.4dm",
 					"events": [
-						"onLoad",
+						"onClick"
+					]
+				},
+				"bShowAll1": {
+					"type": "button",
+					"top": 8,
+					"left": 158,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bShowAll",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Show All"
+					},
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/GLASS - Show All.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bShowAll1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bShowSubset1": {
+					"type": "button",
+					"top": 8,
+					"left": 111,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bShowSubset",
+					"tooltip": "Omit Subset",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/OmitSelection.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bShowSubset1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bShowSubset2": {
+					"type": "button",
+					"top": 8,
+					"left": 64,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bShowSubset",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Show Subset"
+					},
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/GLASS - Show Subset.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bShowSubset2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bAdd_o": {
+					"type": "button",
+					"top": 8,
+					"left": 17,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bAdd",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Add Record"
+					},
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/GLASS - Add Record.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bAdd_o.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bHelp": {
+					"type": "button",
+					"top": 9,
+					"left": 1186,
+					"width": 80,
+					"height": 17,
+					"dataSource": "bHelp",
+					"fontFamily": "Geneva",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "Help",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bHelp.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bQuery1": {
+					"type": "button",
+					"top": 8,
+					"left": 205,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bQuery",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Query"
+					},
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/GLASS - Query.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bQuery1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bReport1": {
+					"type": "button",
+					"top": 8,
+					"left": 1058,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bReport",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report"
+					},
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/GLASS - Report.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bReport1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLabels1": {
+					"type": "button",
+					"top": 8,
+					"left": 1011,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bLabels",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Print Labels"
+					},
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/GLASS - Print Labels.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bLabels1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrint1": {
+					"type": "button",
+					"top": 8,
+					"left": 1105,
+					"width": 48,
+					"height": 48,
+					"dataSource": "bPrint",
+					"tooltip": "UserReports",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#000000",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/library/GLASS - Print Selection.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/bPrint1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"text": "ExportToClip",
+					"top": 30,
+					"left": 1186,
+					"width": 80,
+					"height": 19,
+					"events": [
 						"onClick"
 					],
-					"fontSize": 10
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 35,
+					"left": 845,
+					"width": 40,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Detail",
+					"textAlign": "right"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 14,
+					"left": 261,
+					"width": 40,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Layout",
+					"textAlign": "right"
+				},
+				"aLayouts_o": {
+					"type": "dropdown",
+					"top": 32,
+					"left": 261,
+					"width": 158,
+					"height": 18,
+					"dataSource": "aLayouts",
+					"display": true,
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/aLayouts_o.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Export4D_o": {
+					"type": "button",
+					"text": "Export4D",
+					"top": 30,
+					"left": 1413,
+					"width": 80,
+					"height": 19,
+					"events": [],
+					"method": "ObjectMethods/Export4D_o.4dm",
+					"visibility": "hidden"
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 529,
+					"top": 60,
+					"width": 1,
+					"height": 733,
+					"sizingY": "fixed",
+					"bottom": 793
+				},
+				"Button": {
+					"type": "button",
+					"text": "Button",
+					"top": 24,
+					"left": 425,
+					"width": 100,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 302,
-	"inheritedForm": "oLoButtonBar",
+	"geometryStamp": 652,
+	"inheritedForm": "",
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

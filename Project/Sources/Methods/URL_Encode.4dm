@@ -39,7 +39,7 @@ $vtString:=""
 $vtString:=$1
 $vtEncoded:=""
 
-//ConsoleMessage ($vtString)
+//Console_Log ($vtString)
 
 $vi2:=Length:C16($vtString)
 
@@ -61,6 +61,6 @@ For ($vi1; 1; $vi2)
 	
 End for 
 
-//ConsoleMessage ($vtEncoded)
+//Console_Log ($vtEncoded)
 
 $0:=$vtEncoded

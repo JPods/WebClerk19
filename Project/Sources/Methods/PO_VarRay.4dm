@@ -25,7 +25,7 @@ If ($1=True:C214)
 	aPOExtCost{$element}:=pExtPrice
 	aPOUnitMeas{$element}:=pUnitMeas
 	aPOSerialRc{$element}:=pSerialized
-	aPOSerialNm{$element}:=pSerialNum
+	//aPOSerialNm{$element}:=pSerialNum
 	aPOVndrAlph{$element}:=pVendItem
 	aPODateExp{$element}:=vDate1
 	aPODateRcvd{$element}:=vDate2
@@ -63,7 +63,7 @@ Else
 	pExtPrice:=aPOExtCost{$element}
 	pUnitMeas:=aPOUnitMeas{$element}
 	pSerialized:=aPOSerialRc{$element}
-	pSerialNum:=aPOSerialNm{$element}
+	//pSerialNum:=aPOSerialNm{$element}
 	pVendItem:=aPOVndrAlph{$element}
 	vDate1:=aPODateExp{$element}
 	vDate2:=aPODateRcvd{$element}

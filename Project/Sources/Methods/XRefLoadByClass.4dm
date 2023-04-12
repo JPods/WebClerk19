@@ -115,7 +115,7 @@
 // [Item]ItemNum:=$itemNumMfg
 // [Item]Description:="Missing built by XRef"
 // [Item]Publish:=1
-// [Item]DTSync:=DateTime_Enter 
+// [Item]DTSync:=DateTime_DTTo 
 // [Item]DTReviewed:=0
 // [Item]mfrID:=$theMfgID
 // [Item]MfrItemNum:=aXMLValue{$incXRef}

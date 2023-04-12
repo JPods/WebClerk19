@@ -12,7 +12,7 @@
 
 
 
-Prs_ListActive
+Process_ListActive
 ARRAY TEXT:C222(iLoaText1; 0)
 ARRAY LONGINT:C221(iLoaLongInt1; 0)
 $cntRay:=Size of array:C274(<>aPrsName)

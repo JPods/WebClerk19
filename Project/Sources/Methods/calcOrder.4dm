@@ -161,11 +161,11 @@ If ($1)
 			$shipViaAuto:=Substring:C12(shipVia; 1; $p-1)
 			$freightAutoPrice:=Num:C11(Substring:C12(shipVia; $p+1))
 		End if 
-		[Order:3]autoFreight:40:=False:C215
+		[Order]shipAuto:=False:C215
 		[Order:3]shipFreightCost:38:=$freightAutoPrice
 	Else 
-		If ([Order:3]autoFreight:40)
-			QUERY:C277([LoadTag:88]; [LoadTag:88]orderNum:29=[Order:3]orderNum:2)
+		If ([Order]shipAuto)
+			QUERY:C277([LoadTag:88]; [LoadTag:88]idNumOrder:29=[Order:3]idNum:2)
 			ShippingCost(->[Order:3]shipVia:13; ->[Order:3]zone:14; ->[Order:3]weightEstimate:49; ->[Order:3]shipFreightCost:38; ->[Order:3]shipMiscCosts:25; ->[Order:3]shipAdjustments:26; ->[Order:3]terms:23; ->[Order:3]amount:24; ->[Order:3]labelCount:32)
 			If (($d_rate#1) & (Not:C34(([Order:3]zone:14=-1) | ([Order:3]zone:14=0))))
 				[Order:3]shipFreightCost:38:=Round:C94([Order:3]exchangeRate:68*[Order:3]shipFreightCost:38; $thePrec)
@@ -181,7 +181,7 @@ If ($1)
 	[Order:3]shipTotal:30:=Round:C94([Order:3]shipMiscCosts:25+[Order:3]shipAdjustments:26+[Order:3]shipFreightCost:38; $thePrec)
 	[Order:3]total:27:=Round:C94([Order:3]amount:24+[Order:3]salesTax:28+[Order:3]taxOnCost:109+[Order:3]shipTotal:30; $thePrec)
 	[Order:3]amountBackLog:54:=Round:C94($backLog; $thePrec)
-	QUERY:C277([Payment:28]; [Payment:28]orderNum:2=[Order:3]orderNum:2)
+	QUERY:C277([Payment:28]; [Payment:28]idNumOrder:2=[Order:3]idNum:2)
 	[Order:3]balanceDueEstimated:107:=Sum:C1([Payment:28]amount:1)
 	If (allowAlerts_boo)
 		PayLoadShow(Records in selection:C76([Payment:28]))

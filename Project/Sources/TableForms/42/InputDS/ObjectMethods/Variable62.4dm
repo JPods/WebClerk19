@@ -1,1 +1,1 @@
-entryEntity.takenBy:=DE_PopUpArray(Self:C308)
+process_o.entry_o.takenBy:=DE_PopUpArray(Self:C308)

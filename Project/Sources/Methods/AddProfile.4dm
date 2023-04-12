@@ -60,7 +60,7 @@ If (Count parameters:C259>=4)
 	vpField:=Field:C253(viTableNum; viFieldNum)
 	viType:=Type:C295(vpField->)
 	
-	QUERY:C277([Profile:59]; [Profile:59]docAlphaID:3=vtDocID; *)
+	QUERY:C277([Profile:59]; [Profile:59]idForeign:3=vtDocID; *)
 	QUERY:C277([Profile:59];  & ; [Profile:59]tableNum:1=viTableNum; *)
 	QUERY:C277([Profile:59];  & ; [Profile:59]name:4=vtName; *)
 	QUERY:C277([Profile:59];  & ; [Profile:59]value:5=vtValue; *)
@@ -69,7 +69,7 @@ If (Count parameters:C259>=4)
 	If (Records in selection:C76([Profile:59])=0)
 		
 		If (<>viDebugMode>410)
-			ConsoleMessage("Setting Profile Name: "+vtName+" Value: "+vtValue)
+			ConsoleLog("Setting Profile Name: "+vtName+" Value: "+vtValue)
 		End if 
 		
 		vtMyTime:=String:C10(Current time:C178; HH MM AM PM:K7:5)
@@ -90,7 +90,7 @@ If (Count parameters:C259>=4)
 		If (viType=Is longint:K8:6)
 			[Profile:59]docNumID:2:=Num:C11(vtDocID)  // Secondary field
 		End if 
-		[Profile:59]docAlphaID:3:=vtDocID  // Primary Field
+		[Profile:59]idForeign:3:=vtDocID  // Primary Field
 		[Profile:59]name:4:=vtName
 		[Profile:59]value:5:=vtValue
 		[Profile:59]seq:11:=1

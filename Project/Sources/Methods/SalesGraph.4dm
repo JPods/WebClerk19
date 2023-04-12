@@ -33,7 +33,7 @@ $apYear{3}:=->$arYear3
 $apYear{4}:=->$arYear4
 
 $vtGraphSelected:=$1
-ConsoleMessage("$vtGraphSelected\t"+$vtGraphSelected)
+ConsoleLog("$vtGraphSelected\t"+$vtGraphSelected)
 
 ARRAY LONGINT:C221($aiYear; 0)
 ARRAY TEXT:C222($atYear; 0)
@@ -50,12 +50,12 @@ End for
 SORT ARRAY:C229($aiYear; $atYear; >)
 
 For ($vi1; 1; Size of array:C274($aiYear))
-	ConsoleMessage("$atYear{$vi1}\t"+$atYear{$vi1})
-	QUERY:C277([GenericChild1:90]; [GenericChild1:90]Purpose:4="SalesStats"; *)
-	QUERY:C277([GenericChild1:90];  & [GenericChild1:90]LI05:10=$aiYear{$vi1})
-	ConsoleMessage("Records\t"+String:C10(Records in selection:C76([GenericChild1:90])))
+	ConsoleLog("$atYear{$vi1}\t"+$atYear{$vi1})
+	QUERY:C277([GenericChild1:90]; [GenericChild1:90]purpose:4="SalesStats"; *)
+	QUERY:C277([GenericChild1:90];  & [GenericChild1:90]lI05:10=$aiYear{$vi1})
+	ConsoleLog("Records\t"+String:C10(Records in selection:C76([GenericChild1:90])))
 	$vtArray:="$arYear"+String:C10($vi1)
-	ConsoleMessage("$vtArray\t"+$vtArray)
+	ConsoleLog("$vtArray\t"+$vtArray)
 	
 	
 	FIRST RECORD:C50([GenericChild1:90])
@@ -63,16 +63,16 @@ For ($vi1; 1; Size of array:C274($aiYear))
 		
 		Case of 
 			: ($vtGraphSelected="Orders Total")
-				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]R01:18
+				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]r01:18
 				
 			: ($vtGraphSelected="Orders Amount")
-				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]R02:19
+				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]r02:19
 				
 			: ($vtGraphSelected="Invoices Total")
-				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]R03:20
+				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]r03:20
 				
 			: ($vtGraphSelected="Invoices Amount")
-				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]R04:21
+				$apYear{$vi1}->{$vi2}:=[GenericChild1:90]r04:21
 		End case 
 		NEXT RECORD:C51([GenericChild1:90])
 	End for 
@@ -110,11 +110,11 @@ C_PICTURE:C286(vgSalesGraph)  //Graph variable
 // OB SET(voSettings;Graph legend icon width;40)
 
 // check size of arrays
-ConsoleMessage("$atMonth\t"+String:C10(Size of array:C274($atMonth)))
-ConsoleMessage("$arYear1\t"+String:C10(Size of array:C274($arYear1)))
-ConsoleMessage("$arYear2\t"+String:C10(Size of array:C274($arYear2)))
-ConsoleMessage("$arYear3\t"+String:C10(Size of array:C274($arYear3)))
-ConsoleMessage("$arYear4\t"+String:C10(Size of array:C274($arYear4)))
+ConsoleLog("$atMonth\t"+String:C10(Size of array:C274($atMonth)))
+ConsoleLog("$arYear1\t"+String:C10(Size of array:C274($arYear1)))
+ConsoleLog("$arYear2\t"+String:C10(Size of array:C274($arYear2)))
+ConsoleLog("$arYear3\t"+String:C10(Size of array:C274($arYear3)))
+ConsoleLog("$arYear4\t"+String:C10(Size of array:C274($arYear4)))
 
 //GRAPH(vgSalesGraph;voSettings;$atMonth;$arYear1;$arYear2;$arYear3;$arYear4)  //Draw graph
 
@@ -155,17 +155,17 @@ Case of
 		$vpInvoiceField:=->[Invoice:26]amount:14
 End case 
 
-QUERY:C277([Order:3]; [Order:3]dateOrdered:4>=$vdSOM; *)
-QUERY:C277([Order:3]; [Order:3]dateOrdered:4<=$vdEOM)
+QUERY:C277([Order:3]; [Order:3]dateDocument:4>=$vdSOM; *)
+QUERY:C277([Order:3]; [Order:3]dateDocument:4<=$vdEOM)
 vrOrdersThisMonth:=Sum:C1($vpOrderField->)
 
-QUERY:C277([Order:3]; [Order:3]dateOrdered:4=$vdToday)
+QUERY:C277([Order:3]; [Order:3]dateDocument:4=$vdToday)
 vrOrdersToday:=Sum:C1($vpOrderField->)
 
-QUERY:C277([Invoice:26]; [Invoice:26]dateInvoiced:35>=$vdSOM; *)
-QUERY:C277([Invoice:26]; [Invoice:26]dateInvoiced:35<=$vdEOM)
+QUERY:C277([Invoice:26]; [Invoice:26]dateDocument:35>=$vdSOM; *)
+QUERY:C277([Invoice:26]; [Invoice:26]dateDocument:35<=$vdEOM)
 vrInvoicesThisMonth:=Sum:C1($vpInvoiceField->)
 
-QUERY:C277([Invoice:26]; [Invoice:26]dateInvoiced:35=$vdToday)
+QUERY:C277([Invoice:26]; [Invoice:26]dateDocument:35=$vdToday)
 vrInvoicesToday:=Sum:C1($vpInvoiceField->)
 

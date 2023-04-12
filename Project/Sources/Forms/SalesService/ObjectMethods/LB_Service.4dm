@@ -21,13 +21,13 @@ If (FORM Event:C1606.objectName="LB_Service")
 			
 		: (Form event code:C388=On Selection Change:K2:29)
 			
-			ConsoleMessage("In ListBox On Selection Change")
+			ConsoleLog("In ListBox On Selection Change")
 			
 		: (Form event code:C388=On Double Clicked:K2:5)  //  (Form event code=On Double Clicked)
 			If (cServiceAction.cur#Null:C1517)
 				
 				process_o.id:=cServiceAction.cur.id
-				process_o.tableName:=cServiceAction.cur.tableName
+				process_o.dataClassName:=cServiceAction.cur.tableName
 				
 				var $new_o : Object
 				$new_o:=New object:C1471("ents"; New object:C1471; \
@@ -35,12 +35,12 @@ If (FORM Event:C1606.objectName="LB_Service")
 					"sel"; New object:C1471; \
 					"pos"; -1; \
 					"entsOther"; New object:C1471("tableName"; New object:C1471); \
-					"tableName"; process_o.tableName; \
+					"tableName"; process_o.dataClassName; \
 					"form"; "Input"; \
-					"tableForm"; process_o.tableName+"_Input"; \
+					"tableForm"; process_o.dataClassName+"_Input"; \
 					"id"; cServiceAction.cur.id; \
 					"parent"; Current process:C322)
-				$viProcess:=New process:C317("Process_ByID"; 0; process_o.tableName+" - "+String:C10(Count tasks:C335); $new_o)
+				$viProcess:=New process:C317("Process_ByID"; 0; process_o.dataClassName+" - "+String:C10(Count tasks:C335); $new_o)
 				
 			End if 
 			

@@ -28,7 +28,7 @@ If (OK=1)
 	[Proposal:42]amount:26:=[Order:3]amount:24
 	[Proposal:42]amountForceValue:81:=[Order:3]amountForceValue:112
 	[Proposal:42]attention:37:=[Order:3]attention:44
-	[Proposal:42]autoFreight:38:=[Order:3]autoFreight:40
+	[Proposal:42]shipAuto:38:=[Order:3]shipAuto:40
 	[Proposal:42]bill2Company:57:=[Order:3]billToCompany:76
 	
 	[Proposal:42]comment:36:=[Order:3]comment:33
@@ -112,7 +112,7 @@ If (OK=1)
 		
 		CREATE RECORD:C68([ProposalLine:43])
 		
-		[ProposalLine:43]altItemNum:34:=[OrderLine:49]altItem:31
+		[ProposalLine:43]itemNumAlt:34:=[OrderLine:49]itemNumAlt:31
 		[ProposalLine:43]calculateLine:20:=True:C214
 		[ProposalLine:43]comment:37:=[OrderLine:49]comment:44
 		[ProposalLine:43]commRateRep:27:=[OrderLine:49]commRateRep:18
@@ -137,8 +137,8 @@ If (OK=1)
 		[ProposalLine:43]itemNum:2:=[OrderLine:49]itemNum:4
 		[ProposalLine:43]itemProfile1:46:=[OrderLine:49]profile1:32
 		[ProposalLine:43]itemProfile2:47:=[OrderLine:49]profile2:33
-		[ProposalLine:43]itemProfile3:48:=[OrderLine:49]profile3:34
-		[ProposalLine:43]itemProfile4:49:=[OrderLine:49]profile4:35
+		//[ProposalLine]obHistory:=[OrderLine]profile3
+		//[ProposalLine]obItem:=[OrderLine]profile4
 		[ProposalLine:43]itemType:45:=[OrderLine:49]typeItem:24
 		//[ProposalLine]Leadtime:=[OrderLine]Leadtime
 		[ProposalLine:43]lineNum:43:=[OrderLine:49]lineNum:3

@@ -47,7 +47,7 @@ If (OK=1)  // If a document has been chosen
 		End if 
 	End if 
 	If (<>viDebugMode>=3)
-		ConsoleMessage("File Type = "+$vtFileType+" - "+Document)
+		ConsoleLog("File Type = "+$vtFileType+" - "+Document)
 	End if 
 End if 
 // ### jwm ### 20170323_1623 end test here

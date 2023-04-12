@@ -2,9 +2,10 @@
 
 Case of 
 	: (Form event code:C388=On Data Change:K2:15)
+		process_o.entitySave()
 		KeyModifierCurrent
 		If ((OptKey=1) | (CmdKey=1) | (ShftKey=1))
-			[Customer:2]actionDate:61:=vActionDateCustomer
+			entry_o.actionDate:=vActionDateCustomer
 		End if 
 		
 		

@@ -31,8 +31,8 @@ Case of
 			[WorkOrder:66]salesOrderLine:2:=$LineId
 		End if 
 		WC_Parse(Table:C252(->[WorkOrder:66]); $2; False:C215)
-		If ([WorkOrder:66]woNum:29=0)
-			[WorkOrder:66]woNum:29:=CounterNew(->[WorkOrder:66])
+		If ([WorkOrder:66]idNum:29=0)
+			[WorkOrder:66]idNum:29:=CounterNew(->[WorkOrder:66])
 		End if 
 		[WorkOrder:66]comment:17:="Via WebSite:"+"\r"+[WorkOrder:66]comment:17
 		[WorkOrder:66]mfrID:41:="jitWeb"
@@ -40,10 +40,10 @@ Case of
 		If ($custID#"")
 			[WorkOrder:66]customerID:28:=$custID
 		End if 
-		[WorkOrder:66]dtCreated:44:=DateTime_Enter
+		[WorkOrder:66]dtCreated:44:=DateTime_DTTo
 		SAVE RECORD:C53([WorkOrder:66])
 	Else 
-		QUERY:C277([WorkOrder:66]; [WorkOrder:66]woNum:29=$recordID)
+		QUERY:C277([WorkOrder:66]; [WorkOrder:66]idNum:29=$recordID)
 		If (([WorkOrder:66]customerID:28#"") & ([EventLog:75]securityLevel:16>=<>vbCustMod) & ($modCust))
 			QUERY:C277([Customer:2]; [Customer:2]customerID:1=[WorkOrder:66]customerID:28)
 			http_SaveCust($1; $2)
@@ -103,7 +103,7 @@ Case of
 			SAVE RECORD:C53([WorkOrder:66])
 			vResponse:=vResponse+"WorkOrder posted."+"\r"
 		End if 
-		EventLogsMessage("Posted Service "+String:C10([WorkOrder:66]woNum:29))
+		EventLogsMessage("Posted Service "+String:C10([WorkOrder:66]idNum:29))
 		If ([EventLog:75]idNum:5#0)
 			SAVE RECORD:C53([EventLog:75])
 		End if 

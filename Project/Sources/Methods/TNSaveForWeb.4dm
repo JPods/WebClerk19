@@ -31,6 +31,6 @@ If ($theText#"")
 	$outputText:=TNHTMLheaderFooter([TechNote:58]bodyText:23; "TechNoteTemplate"; "Admin"; 1; "_jit_TechNotes_Namejj")
 	
 	TEXT TO DOCUMENT:C1237(vtDraftPath; $outputText)
-	ConsoleMessage("Document created: "+vtDraftPath)
+	ConsoleLog("Document created: "+vtDraftPath)
 	
 End if 

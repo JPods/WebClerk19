@@ -21,13 +21,13 @@ If (($1=$xRItem) & ($linkType=0))  //force a look to alt discounts
 	If ($4>0)
 		[Item:4]qtySaleDefault:15:=$pQtyOrd  //do not save item
 		//
-		QUERY:C277([ItemXRef:22]; [ItemXRef:22]ItemNumMaster:1=$xRItem)
+		QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNum:1=$xRItem)
 		$k:=Records in selection:C76([ItemXRef:22])
 		ARRAY TEXT:C222($aXItemNums; 0)
 		ARRAY LONGINT:C221($aXRecNum; 0)
 		ARRAY LONGINT:C221($aXLinkType; 0)
 		If ($k>0)
-			SELECTION TO ARRAY:C260([ItemXRef:22]ItemNumXRef:2; $aXItemNums; [ItemXRef:22]XRefLinked:17; $aXLinkType; [ItemXRef:22]; $aXRecNum)
+			SELECTION TO ARRAY:C260([ItemXRef:22]itemNumXRef:2; $aXItemNums; [ItemXRef:22]xRefLinked:17; $aXLinkType; [ItemXRef:22]; $aXRecNum)
 			
 			For ($i; 1; $k)
 				If ($aXLinkType{$i}=$linkType)
@@ -42,13 +42,13 @@ If (($1=$xRItem) & ($linkType=0))  //force a look to alt discounts
 						aoLnComment{aoLineAction}:=String:C10(aoLineAction)+"; "+pvItemNum
 						Case of 
 							: ($linkType=1)
-								aOQtyOrder{aoLineAction}:=$pMasterQtyOrd*[ItemXRef:22]Quantity:12
-								If ([ItemXRef:22]TypeSale:18="FFF")
+								aOQtyOrder{aoLineAction}:=$pMasterQtyOrd*[ItemXRef:22]quantity:12
+								If ([ItemXRef:22]typeSale:18="FFF")
 									aOUnitPrice{aoLineAction}:=0
 								End if 
 							: ($linkType=0)
 								aOQtyOrder{aoLineAction}:=$pMasterQtyOrd
-								If ([ItemXRef:22]TypeSale:18="FFF")
+								If ([ItemXRef:22]typeSale:18="FFF")
 									aOUnitPrice{aoLineAction}:=0
 								End if 
 								//check this by authority level
@@ -64,9 +64,9 @@ Else
 	QUERY:C277([Item:4]; [Item:4]itemNum:1=$xRItem)
 	Case of 
 		: (Records in selection:C76([Item:4])=1)
-			QUERY:C277([ItemXRef:22]; [ItemXRef:22]ItemNumMaster:1=[Item:4]itemNum:1; *)
-			QUERY:C277([ItemXRef:22];  & [ItemXRef:22]ItemNumXRef:2=$xRItem; *)
-			QUERY:C277([ItemXRef:22];  & [ItemXRef:22]XRefLinked:17=$linkType)
+			QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNum:1=[Item:4]itemNum:1; *)
+			QUERY:C277([ItemXRef:22];  & [ItemXRef:22]itemNumXRef:2=$xRItem; *)
+			QUERY:C277([ItemXRef:22];  & [ItemXRef:22]xRefLinked:17=$linkType)
 			If ($4>0)
 				viOrdLnCnt:=viOrdLnCnt+1
 				pvItemNum:=[Item:4]itemNum:1
@@ -75,18 +75,18 @@ Else
 				[Item:4]qtySaleDefault:15:=$3  //do not save item        
 				OrdLnAdd((Size of array:C274(aoLineAction)+1); 1; False:C215)
 				If (Records in selection:C76([ItemXRef:22])=1)
-					aOQtyOrder{aoLineAction}:=$3*[ItemXRef:22]Quantity:12
+					aOQtyOrder{aoLineAction}:=$3*[ItemXRef:22]quantity:12
 					Case of 
-						: ([ItemXRef:22]TypeSale:18="FFF")
+						: ([ItemXRef:22]typeSale:18="FFF")
 							aOUnitPrice{aoLineAction}:=0
 						: ($linkType=11)
-							aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceA:20
+							aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceA:20
 						: ($linkType=12)
-							aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceB:21
+							aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceB:21
 						: ($linkType=13)
-							aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceC:22
+							aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceC:22
 						: ($linkType=14)
-							aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceD:23
+							aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceD:23
 					End case 
 				Else 
 					aOQtyOrder{aoLineAction}:=$3
@@ -97,44 +97,44 @@ Else
 			Else 
 				If (Records in selection:C76([ItemXRef:22])=1)
 					Case of 
-						: ([ItemXRef:22]TypeSale:18="FFF")
+						: ([ItemXRef:22]typeSale:18="FFF")
 							//addDiscount:=0   No change
 						: ($linkType=11)
-							addDiscount:=addDiscount+[ItemXRef:22]PriceA:20
+							addDiscount:=addDiscount+[ItemXRef:22]priceA:20
 						: ($linkType=12)
-							addDiscount:=addDiscount+[ItemXRef:22]PriceB:21
+							addDiscount:=addDiscount+[ItemXRef:22]priceB:21
 						: ($linkType=13)
-							addDiscount:=addDiscount+[ItemXRef:22]PriceC:22
+							addDiscount:=addDiscount+[ItemXRef:22]priceC:22
 						: ($linkType=14)
-							addDiscount:=addDiscount+[ItemXRef:22]PriceD:23
+							addDiscount:=addDiscount+[ItemXRef:22]priceD:23
 					End case 
 				End if 
 			End if 
 		: (Records in selection:C76([Item:4])=0)
-			QUERY:C277([ItemXRef:22]; [ItemXRef:22]ItemNumXRef:2=$xRItem; *)
-			QUERY:C277([ItemXRef:22];  & [ItemXRef:22]XRefLinked:17=$linkType)
+			QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNumXRef:2=$xRItem; *)
+			QUERY:C277([ItemXRef:22];  & [ItemXRef:22]xRefLinked:17=$linkType)
 			If (Records in selection:C76([ItemXRef:22])=1)
 				If ($4>0)
-					QUERY:C277([Item:4]; [Item:4]itemNum:1=[ItemXRef:22]ItemNumMaster:1)
+					QUERY:C277([Item:4]; [Item:4]itemNum:1=[ItemXRef:22]itemNum:1)
 					If (Records in selection:C76([Item:4])=1)
 						viOrdLnCnt:=viOrdLnCnt+1
 						pvItemNum:=[Item:4]itemNum:1
 						pPartNum:=pvItemNum
-						pDescript:=[ItemXRef:22]DescriptionXRef:3
+						pDescript:=[ItemXRef:22]descriptionXRef:3
 						[Item:4]qtySaleDefault:15:=$3  //do not save item
 						OrdLnAdd((Size of array:C274(aoLineAction)+1); 1; False:C215)
-						aOQtyOrder{aoLineAction}:=$3*[ItemXRef:22]Quantity:12
+						aOQtyOrder{aoLineAction}:=$3*[ItemXRef:22]quantity:12
 						Case of 
-							: ([ItemXRef:22]TypeSale:18="FFF")
+							: ([ItemXRef:22]typeSale:18="FFF")
 								aOUnitPrice{aoLineAction}:=0
 							: ($linkType=11)
-								aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceA:20
+								aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceA:20
 							: ($linkType=12)
-								aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceB:21
+								aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceB:21
 							: ($linkType=13)
-								aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceC:22
+								aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceC:22
 							: ($linkType=14)
-								aOUnitPrice{aoLineAction}:=[ItemXRef:22]PriceD:23
+								aOUnitPrice{aoLineAction}:=[ItemXRef:22]priceD:23
 						End case 
 						//check this by authority level
 						//aODiscnt{aoLineAction}:=0
@@ -142,16 +142,16 @@ Else
 					End if 
 				Else 
 					Case of 
-						: ([ItemXRef:22]TypeSale:18="FFF")
+						: ([ItemXRef:22]typeSale:18="FFF")
 							//addDiscount:=0   No change
 						: ($linkType=11)
-							addDiscount:=addDiscount+([ItemXRef:22]PriceA:20*[ItemXRef:22]Quantity:12)
+							addDiscount:=addDiscount+([ItemXRef:22]priceA:20*[ItemXRef:22]quantity:12)
 						: ($linkType=12)
-							addDiscount:=addDiscount+([ItemXRef:22]PriceB:21*[ItemXRef:22]Quantity:12)
+							addDiscount:=addDiscount+([ItemXRef:22]priceB:21*[ItemXRef:22]quantity:12)
 						: ($linkType=13)
-							addDiscount:=addDiscount+([ItemXRef:22]PriceC:22*[ItemXRef:22]Quantity:12)
+							addDiscount:=addDiscount+([ItemXRef:22]priceC:22*[ItemXRef:22]quantity:12)
 						: ($linkType=14)
-							addDiscount:=addDiscount+([ItemXRef:22]PriceD:23*[ItemXRef:22]Quantity:12)
+							addDiscount:=addDiscount+([ItemXRef:22]priceD:23*[ItemXRef:22]quantity:12)
 					End case 
 				End if 
 			End if 

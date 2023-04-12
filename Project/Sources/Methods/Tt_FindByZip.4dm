@@ -31,8 +31,6 @@ If (Length:C16($1->)>0)
 			Case of 
 				: (Table:C252($1)=(Table:C252(->[Customer:2])))
 					[Customer:2]territoryid:120:=[Territory:25]territoryid:3
-				: (Table:C252($1)=(Table:C252(->[Lead:48])))
-					[Lead:48]territoryid:57:=[Territory:25]territoryid:3
 			End case 
 			
 		: (Records in selection:C76([Territory:25])>1)
@@ -62,8 +60,6 @@ If (Length:C16($1->)>0)
 				//If ([Customer]taxJuris="")
 				//[Customer]taxJuris:=[Territory]territoryid
 				//End if 
-			: (ptCurTable=(->[Lead:48]))
-				[Lead:48]territoryid:57:=[Territory:25]territoryid:3
 			: (ptCurTable=(->[Contact:13]))
 				//[Contact]taxJuris:=[Territory]territoryID
 			: (ptCurTable=(->[Invoice:26]))

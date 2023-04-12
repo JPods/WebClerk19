@@ -1,11 +1,19 @@
 //%attributes = {}
 
+// Modified by: Bill James (2022-04-20T05:00:00Z)
+// Method: action_Related_Delete
+// Description 
+// Parameters
+// ----------------------------------------------------
+
+
 
 
 // 4D_25Invoice - 2022-01-15
 C_OBJECT:C1216($selection_Cur; $selection_Main; $selection_Sel; $status)
 C_LONGINT:C283($selection_Pos)
-C_TEXT:C284($LBName; $relation; $1; $2)
+C_TEXT:C284($LBName)
+var $1; $2 : Text
 
 $LBName:=$1  //Name of the Listbox
 $relation:=$2  //Name of the Relational Attribute One-to-Many

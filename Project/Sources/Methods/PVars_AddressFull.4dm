@@ -26,7 +26,7 @@ If (Count parameters:C259>0)
 	End case 
 	JustAddress:=""
 	If ($tableName#"")
-		If ($tableName=process_o.tableName)
+		If ($tableName=process_o.dataClassName)
 			$o:=process_o.cur
 		Else 
 			$o:=process_o.ents[$tableName].first()

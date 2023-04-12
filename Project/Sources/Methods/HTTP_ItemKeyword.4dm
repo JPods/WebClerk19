@@ -20,7 +20,7 @@ $jitPageList:=WCapi_GetParameter("jitPageList"; "")
 $jitPageOne:=WCapi_GetParameter("jitPageOne"; "")
 $jitSkip:=WCapi_GetParameter("jitSkip"; "")
 //
-vlBeenHere:=DateTime_Enter
+vlBeenHere:=DateTime_DTTo
 C_REAL:C285(vValueBonus)
 //
 //TRACE

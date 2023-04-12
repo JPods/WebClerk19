@@ -20,7 +20,7 @@ Case of
 	: (Value type:C1509($1)=Is pointer:K8:14)
 		$tableName:=Table name:C256($1)
 	Else 
-		$tableName:=process_o.tableName
+		$tableName:=process_o.dataClassName
 End case 
 
 Case of 

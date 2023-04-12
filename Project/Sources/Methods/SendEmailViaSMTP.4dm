@@ -69,7 +69,7 @@ If (Count parameters:C259>1)
 		APPEND TO ARRAY:C911($atErrorMessages; "SMTP Error: A Server Info object was provided as a parameter, but it is missing required information. Please make sure it contains the following: port, host, from, username, and password.")
 	End if 
 Else 
-	QUERY:C277([Employee:19]; [Employee:19]nameid:1="Email")
+	QUERY:C277([Employee:19]; [Employee:19]nameID:1="Email")
 	If (Records in selection:C76([Employee:19])=1)
 		$viServerPort:=[Employee:19]emailPortOut:59
 		$vtServerHost:=[Employee:19]emailServerOut:58
@@ -279,7 +279,7 @@ End if
 If (Size of array:C274($aiErrorCodes)#0)
 	$vbSucceeded:=False:C215
 	For ($viCounter; 1; Size of array:C274($aiErrorCodes))
-		ConsoleMessage($atErrorMessages{$viCounter}+" | Code: "+String:C10($aiErrorCodes{$viCounter}))
+		ConsoleLog($atErrorMessages{$viCounter}+" | Code: "+String:C10($aiErrorCodes{$viCounter}))
 	End for 
 End if 
 

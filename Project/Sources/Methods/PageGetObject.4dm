@@ -21,7 +21,7 @@ $vtObjectName:=Replace string:C233($1; "/"; Folder separator:K24:12)
 
 // GET OBJECT PATH
 
-$vtObjectPath:=<>WebFolder+"jitObjects"+Folder separator:K24:12+$vtObjectName
+$vtObjectPath:=Storage:C1525.wc.webFolder+"jitObjects"+Folder separator:K24:12+$vtObjectName
 
 // GET CONTENTS OF OBJECT
 

@@ -33,7 +33,7 @@ Case of
 			While ($i<$k)
 				$i:=$i+1
 				If (aREQHANDLERSTATE{$i}="Pau@")
-					_O_OBJECT SET COLOR:C271(iloText1; -(Black:K11:16+(256*Yellow:K11:2)))
+					OBJECT SET RGB COLORS:C628(*; "iloText1"; Black:K11:16; Yellow:K11:2)
 					$i:=$k
 				End if 
 			End while 

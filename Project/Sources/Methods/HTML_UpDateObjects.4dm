@@ -6,7 +6,7 @@ C_TEXT:C284($strFile; $quoteChar)
 C_TEXT:C284($strField1; $strField2; $strField3; $myText)
 theText:=""
 $quoteChar:=Char:C90(34)
-$docName:=<>WebFolder+$1
+$docName:=Storage:C1525.wc.webFolder+$1
 If (Is macOS:C1572)
 	$lineBreak:=Char:C90(13)
 Else 

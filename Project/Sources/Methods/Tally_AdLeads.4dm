@@ -11,29 +11,33 @@ If (Not:C34(Locked:C147([AdSource:35])))
 	//End if 
 	//SEARCH([Customer])
 	//[AdSource]NumCustAct:=Records in selection([Customer])
-	If (([AdSource:35]dateCalcBegin:5=!00-00-00!) | ([AdSource:35]dateCalcEnd:6=!00-00-00!))
-		QUERY:C277([zzzLead:48]; [zzzLead:48]adSource:27=[AdSource:35]marketEffort:2)
-	Else 
-		QUERY:C277([zzzLead:48]; [zzzLead:48]adSource:27=[AdSource:35]marketEffort:2; *)
-		QUERY:C277([zzzLead:48];  & [zzzLead:48]dateEntered:21>=[AdSource:35]dateCalcBegin:5; *)
-		QUERY:C277([zzzLead:48];  & [zzzLead:48]dateEntered:21<=[AdSource:35]dateCalcEnd:6)
-	End if 
-	[AdSource:35]numLeadAct:18:=Records in selection:C76([zzzLead:48])
+	
+	
+	//PPP 19-FORCED
+	//If (([AdSource]dateCalcBegin=!00-00-00!) | ([AdSource]dateCalcEnd=!00-00-00!))
+	//QUERY([(zzzLead)]; [(zzzLead)]adSource=[AdSource]marketEffort)
+	//Else 
+	//QUERY([(zzzLead)]; [(zzzLead)]adSource=[AdSource]marketEffort; *)
+	//QUERY([(zzzLead)];  & [(zzzLead)]dateEntered>=[AdSource]dateCalcBegin; *)
+	//QUERY([(zzzLead)];  & [(zzzLead)]dateEntered<=[AdSource]dateCalcEnd)
+	//End if 
+	//[AdSource]numLeadAct:=Records in selection([(zzzLead)])
 	$k:=[AdSource:35]numCustAct:16+[AdSource:35]numLeadAct:18
 	If ($k>0)
 		[AdSource:35]costRespAct:20:=[AdSource:35]costAct:22/$k
 	Else 
 		[AdSource:35]costRespAct:20:=[AdSource:35]costAct:22
 	End if 
-	QUERY:C277([TallyChange:65]; [TallyChange:65]complete:6=False:C215; *)
-	QUERY:C277([TallyChange:65];  & [TallyChange:65]alphaKey:3=[AdSource:35]marketEffort:2; *)
-	QUERY:C277([TallyChange:65];  & [TallyChange:65]fileNum:1=Table:C252(->[AdSource:35]); *)
-	If ([AdSource:35]dateCalcEnd:6#!00-00-00!)
-		C_LONGINT:C283($beforeDT)
-		$beforeDT:=DateTime_Enter([AdSource:35]dateCalcEnd:6; ?23:59:59?)
-		QUERY:C277([TallyChange:65];  & [TallyChange:65]dtCreated:7<=$beforeDT; *)
-	End if 
-	QUERY:C277([TallyChange:65])
+	//PPP 19-FORCED
+	//QUERY([TallyChange]; [TallyChange]complete=False; *)
+	//QUERY([TallyChange];  & [TallyChange]idKey=[AdSource]marketEffort; *)
+	//QUERY([TallyChange];  & [TallyChange]idAlpha=Table(->[AdSource]); *)
+	//If ([AdSource]dateCalcEnd#!00-00-00!)
+	//C_LONGINT($beforeDT)
+	//$beforeDT:=DateTime_DTTo([AdSource]dateCalcEnd; ?23:59:59?)
+	//QUERY([TallyChange];  & [TallyChange]dtCreated<=$beforeDT; *)
+	//End if 
+	//QUERY([TallyChange])
 	TallyCalc
 	[AdSource:35]dateofCalc:4:=Current date:C33
 	SAVE RECORD:C53([AdSource:35])

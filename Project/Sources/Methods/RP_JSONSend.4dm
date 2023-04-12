@@ -158,7 +158,7 @@ If (Record number:C243([SyncRelation:103])>-1)
 				//[SyncRecord]rs1:=OB Get($objIncoming; "id")
 				//If (([SyncRecord]rs1#"") & ([SyncRecord]UniqueIDRemote>0))
 				//[SyncRecord]StatusSend:="Sent"
-				//[SyncRecord]DTCompleted:=DateTime_Enter
+				//[SyncRecord]DTCompleted:=DateTime_DTTo
 				//[SyncRecord]DTAction:=[SyncRecord]DTCompleted
 				//End if 
 				[SyncRecord:109]actionReceive:47:=OB Get:C1224($objIncoming; "ActionReceive")

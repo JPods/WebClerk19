@@ -120,7 +120,7 @@ If (<>viOrdStatus>0)
 			: ($woNum>0)
 				QUERY:C277([WorkOrder:66]; [WorkOrder:66]publish:30>0; *)
 				QUERY:C277([WorkOrder:66]; [WorkOrder:66]publish:30>0; *)
-				QUERY:C277([WorkOrder:66];  & [WorkOrder:66]woNum:29=$woNum; *)
+				QUERY:C277([WorkOrder:66];  & [WorkOrder:66]idNum:29=$woNum; *)
 				QUERY:C277([WorkOrder:66];  & [WorkOrder:66]customerID:28=[Customer:2]customerID:1)
 				If (Records in selection:C76([WorkOrder:66])=1)
 					If ([WorkOrder:66]idNumTask:22>0)
@@ -165,7 +165,7 @@ If (<>viOrdStatus>0)
 				//
 				// TRACE
 				QUERY:C277([LoadTag:88]; [LoadTag:88]customerID:23=[Customer:2]customerID:1; *)
-				QUERY:C277([LoadTag:88];  & [LoadTag:88]dtShipOn:10>DateTime_Enter(Current date:C33-30))
+				QUERY:C277([LoadTag:88];  & [LoadTag:88]dtShipOn:10>DateTime_DTTo(Current date:C33-30))
 				//
 				QUERY:C277([Proposal:42]; [Proposal:42]complete:56=False:C215; *)
 				QUERY:C277([Proposal:42];  & [Proposal:42]customerID:1=[Customer:2]customerID:1)

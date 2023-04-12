@@ -12,6 +12,6 @@
 
 Process_InitLocal
 jCenter4DWindow(850; 500; 8; "Item Warehouse Editor"; "CancelCommand")
-DIALOG:C40([Control:1]; "ItemWarehouse")
+DIALOG:C40([Base:1]; "ItemWarehouse")
 CLOSE WINDOW:C154
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)

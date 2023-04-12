@@ -29,14 +29,14 @@ For (vi1; 1; vi2)
 		[Item:4]obGeneral:127.history.sales:=New object:C1471
 	End if 
 	QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Item:4]itemNum:1; *)
-	QUERY:C277([DInventory:36];  & ; [DInventory:36]typeid:14="IV")
+	QUERY:C277([DInventory:36];  & ; [DInventory:36]typeID:14="IV")
 	If (Records in selection:C76([DInventory:36])=0)
 		[Item:4]indicator7:101:=-1
 		vDate1:=!00-00-00!
 	Else 
 		ORDER BY:C49([DInventory:36]; [DInventory:36]dtCreated:15; <)
 		FIRST RECORD:C50([DInventory:36])
-		jDateTimeRecov([DInventory:36]dtCreated:15; ->vDate1)
+		DateTime_DTFrom([DInventory:36]dtCreated:15; ->vDate1)
 		[Item:4]indicator7:101:=Current date:C33-vDate1
 	End if 
 	[Item:4]obGeneral:127.history.sales.dateLast:=vDate1

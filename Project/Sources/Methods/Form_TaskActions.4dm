@@ -16,21 +16,28 @@ If ($tmo#Null:C1517)
 	If (Size of array:C274(aActions)>0)
 		$doStd:=False:C215
 	Else 
-		ConsoleMessage("Tallymaster did not build aName, purpose = olo_list, name = name")
+		ConsoleLog("Tallymaster did not build aName, purpose = olo_list, name = name")
 	End if 
 End if 
-If ($doStd)
-	COPY ARRAY:C226(<>aNameID; aActions)
-	Case of 
-		: (process_o.tableName="Contact")
-			COPY ARRAY:C226(<>aNameID; aActions)
-		: (process_o.tableName="Customer")
-			
-			COPY ARRAY:C226(<>aNameID; aActions)
-		: (process_o.tableName="Order")
-			COPY ARRAY:C226(<>aNameID; aActions)
-		: (process_o.tableName="PO")
-			COPY ARRAY:C226(<>aNameID; aActions)
-		: (process_o.tableName="Customer")
-	End case 
+var $ptArray : Pointer
+var $arrayName : Text
+If (process_o.dataClassName=Null:C1517)
+	$arrayName:="<>aActionsCustomers"
+Else 
+	$arrayName:="<>aActions"+process_o.dataClassName+"s"
+End if 
+
+var $obSel : Object
+var $name : Text
+C_COLLECTION:C1488(cActions)
+cActions:=ds:C1482.PopupChoice.query("arrayName = :1"; $arrayName).orderBy("choice").distinct("choice")
+If (cActions.length=0)
+	cActions:=ds:C1482.PopupChoice.query("arrayName = :1"; "<>aActions").orderBy("choice").distinct("choice")
+End if 
+COLLECTION TO ARRAY:C1562(cActions; aActions)
+If (Size of array:C274(aActions)>0)
+	If (aActions{1}#"")
+		INSERT IN ARRAY:C227(aActions; 1; 1)
+	End if 
+	aActions{1}:="Actions"
 End if 

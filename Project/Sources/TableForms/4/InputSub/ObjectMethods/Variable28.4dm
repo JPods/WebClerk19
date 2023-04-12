@@ -9,7 +9,7 @@ If (False:C215)
 	VERSION_960
 End if 
 
-//[Item]DTItemDate:=DateTime_Enter (Current date;Current time)
-//jDateTimeRecov ([Item]DTItemDate;->vDate1;->vTime1)
-//[Item]obSync:=DateTime_Enter(Current date; Current time)
+//[Item]DTItemDate:=DateTime_DTTo (Current date;Current time)
+//DateTime_DTFrom ([Item]DTItemDate;->vDate1;->vTime1)
+//[Item]obSync:=DateTime_DTTo(Current date; Current time)
 //vDate8:=jDateTimeRDate([Item]obSync)

@@ -33,28 +33,3 @@ CLEAR SET:C117("Current")
 If (Records in selection:C76([Customer:2])>0)
 	DB_ShowCurrentSelection(->[Customer:2]; ""; 1; "Territory Range: "+[Territory:25]beginningZip:4+"->"+[Territory:25]endingZip:5)
 End if 
-
-QUERY:C277([Lead:48]; [Lead:48]zip:10>=[Territory:25]beginningZip:4; *)
-QUERY:C277([Lead:48];  & [Lead:48]zip:10<=[Territory:25]endingZip:5)
-C_LONGINT:C283($i; $k; $lockedCount)
-$k:=Records in selection:C76([Lead:48])
-FIRST RECORD:C50([Lead:48])
-CREATE EMPTY SET:C140([Lead:48]; "Current")
-For ($i; 1; $k)
-	If (Locked:C147([Lead:48]))
-		$lockedCount:=$lockedCount+1
-		ADD TO SET:C119([Lead:48]; "Current")
-	Else 
-		[Lead:48]territoryid:57:=[Territory:25]territoryid:3
-		[Lead:48]repID:12:=[Territory:25]repID:2
-		[Lead:48]salesNameID:13:=[Territory:25]salesNameID:1
-		SAVE RECORD:C53([Lead:48])
-	End if 
-	NEXT RECORD:C51([Lead:48])
-End for 
-REDUCE SELECTION:C351([Lead:48]; 0)
-USE SET:C118("Current")
-CLEAR SET:C117("Current")
-If (Records in selection:C76([Lead:48])>0)
-	DB_ShowCurrentSelection(->[Lead:48]; ""; 1; "Territory Range: "+[Territory:25]beginningZip:4+"->"+[Territory:25]endingZip:5)
-End if 

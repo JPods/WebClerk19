@@ -10,8 +10,8 @@
 // ----------------------------------------------------
 
 C_LONGINT:C283($dtBegin; $dtEnd)
-$dtBegin:=DateTime_Enter(iLoDate1; ?00:00:00?)
-$dtEnd:=DateTime_Enter(iLoDate2; ?23:59:59?)
+$dtBegin:=DateTime_DTTo(iLoDate1; ?00:00:00?)
+$dtEnd:=DateTime_DTTo(iLoDate2; ?23:59:59?)
 QUERY:C277([LoadTag:88]; [LoadTag:88]idNum:1#-111187483)
 If (iLoText1#"")
 	QUERY:C277([LoadTag:88];  & [LoadTag:88]customerID:23=iLoText1; *)

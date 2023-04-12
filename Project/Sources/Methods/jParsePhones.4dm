@@ -26,25 +26,22 @@ Repeat
 			myOK:=1
 			$ptFile:=Table:C252(curTableNum)
 			Case of 
-				: (Table:C252(->[QQQCustomer:2])=curTableNum)
-					ptDestin:=->[QQQCustomer:2]phone:13
-					ptFax:=->[QQQCustomer:2]fax:66
+				: (Table:C252(->[Customer:2])=curTableNum)
+					ptDestin:=->[Customer:2]phone:13
+					ptFax:=->[Customer:2]fax:66
 				: (Table:C252(->[Rep:8])=curTableNum)
-					ptDestin:=->[Rep:8]Phone:10
-					ptFax:=->[Rep:8]FAX:20
-				: (Table:C252(->[QQQVendor:38])=curTableNum)
-					ptDestin:=->[QQQVendor:38]Phone:10
-					ptFax:=->[QQQVendor:38]FAX:13
-				: (Table:C252(->[QQQReference:7])=curTableNum)
-					ptDestin:=->[QQQReference:7]Switchboard:9
-					ptFax:=->[QQQReference:7]Switchboard:9
+					ptDestin:=->[Rep:8]phone:10
+					ptFax:=->[Rep:8]fax:20
+				: (Table:C252(->[Vendor:38])=curTableNum)
+					ptDestin:=->[Vendor:38]phone:10
+					ptFax:=->[Vendor:38]fax:13
+				: (Table:C252(->[Reference:7])=curTableNum)
+					ptDestin:=->[Reference:7]switchboard:9
+					ptFax:=->[Reference:7]switchboard:9
 				: (Table:C252(->[RepContact:10])=curTableNum)
 					
-				: (Table:C252(->[QQQContact:13])=curTableNum)
+				: (Table:C252(->[Contact:13])=curTableNum)
 					
-				: (Table:C252(->[Lead:48])=curTableNum)
-					ptDestin:=->[Lead:48]Phone:4
-					ptFax:=->[Lead:48]FAX:29
 				Else 
 					ALERT:C41("The "+Table name:C256(curTableNum)+" does not contain Phone records.")
 					myOK:=0

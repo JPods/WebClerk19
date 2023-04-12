@@ -24,7 +24,6 @@ $path_par:=HFS_ParentName(Folder:C1567(fk resources folder:K87:11).platformPath)
 If ($tableName="")
 	$path_doc:=$path_par+"Project"+Folder separator:K24:12+"Sources"+Folder separator:K24:12+"Forms"+Folder separator:K24:12+$nameForm
 	If (Test path name:C476($path_doc)=0)
-		//OBJECT SET SUBFORM(*; "SF_Sales"; "ListSelection")
 		OBJECT SET SUBFORM:C1138(*; $nameSF; $nameForm)
 	Else 
 		Form_Draft($nameSF; $tableName; $nameForm)

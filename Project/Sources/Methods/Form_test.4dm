@@ -26,7 +26,7 @@ If (Count parameters:C259>0)
 	
 	CLOSE WINDOW:C154($win)
 	
-	Prs_ListActive
+	Process_ListActive
 	
 Else 
 	var $name : Text

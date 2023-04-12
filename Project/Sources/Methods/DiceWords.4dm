@@ -136,7 +136,7 @@ If (Records in selection:C76([GenericChild2:91])#0)
 		If ($viRecords>0)
 			$vbUnique:=False:C215
 			If (<>ConsoleProcess#0)  // send message to console if open
-				ConsoleMessage("Duplicate Password")
+				ConsoleLog("Duplicate Password")
 			End if 
 		Else 
 			$vbUnique:=True:C214
@@ -150,11 +150,11 @@ If (Records in selection:C76([GenericChild2:91])#0)
 		$0:=$vtPassword
 	End if 
 	
-	ConsoleMessage($0)
+	ConsoleLog($0)
 	
 Else 
 	If (<>ConsoleProcess#0)  // send message to console if open
-		ConsoleMessage("Error:No Diceword Data")
+		ConsoleLog("Error:No Diceword Data")
 	End if 
 	$0:="Error:No Diceword Data"
 End if 

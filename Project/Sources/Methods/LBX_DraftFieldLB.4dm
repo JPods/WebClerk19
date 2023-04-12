@@ -5,7 +5,7 @@
 // Description 
 // Parameters
 // ----------------------------------------------------
-
+// QQQZZZ Delete this method
 
 var $sfName_t; $lbName_t; $tableName; $columnAdder_t; $stringType_t; $align_t; $dateSource : Text
 var $form; $0; $1; $listboxSetup_o; $columnSetup_o : Object
@@ -57,18 +57,19 @@ var $listbox_o : Object
 
 $listbox_o:=New object:C1471("type"; "listbox"; \
 "listboxType"; "collection"; \
-"method"; $lbName_t+".4dm"; \
-"metaSource"; $lbName_t+".meta"; \
-"dataSource"; $lbName_t+".ents"; \
-"currentItemSource"; $lbName_t+".cur"; \
-"currentItemPositionSource"; $lbName_t+".pos"; \
-"selectedItemsSource"; $lbName_t+".sel"; \
+"method"; "Form."+$lbName_t+".4dm"; \
+"metaSource"; "Form."+$lbName_t+".meta"; \
+"dataSource"; "Form."+$lbName_t+".ents"; \
+"currentItemSource"; "Form."+$lbName_t+".cur"; \
+"currentItemPositionSource"; "Form."+$lbName_t+".pos"; \
+"selectedItemsSource"; "Form."+$lbName_t+".sel"; \
 "left"; 0; "top"; 0; \
 "width"; $width+15; "height"; $height; \
 "events"; New collection:C1472; \
 "columns"; New collection:C1472)
 
 
+LISTBOX SET PROPERTY:C1440(*; "LB3"; lk truncate:K53:37; lk without ellipsis:K53:64)
 
 var $cBuild; $cFilter : Collection
 var $obField : Object
@@ -79,27 +80,27 @@ Case of
 			$cBuild.push($obField.fieldName)
 		End for each 
 	: ($listboxSetup_o.fieldList#Null:C1517)
-		$cBuild:=Split string:C1554($listboxSetup_o.fieldList; ",")
+		$cBuild:=Split string:C1554($listboxSetup_o.fieldList; ";")
 	Else 
-		$cBuild:=Split string:C1554("company,address1,actionDate"; ",")
+		$cBuild:=Split string:C1554("company,address1,actionDate"; ";")
 End case 
 If ($cBuild.length=0)  // for covienence
-	$cBuild:=Split string:C1554("company,address1,actionDate"; ",")
+	$cBuild:=Split string:C1554("company,address1,actionDate"; ";")
 End if 
 
 
-$fieldList_t:=$cBuild.join(",")
+$fieldList_t:=$cBuild.join(";")
 $viCnt:=$cBuild.length
 
 
 // define standard events
 // look at options for this
 If ($listboxSetup_o.events=Null:C1517)
-	$listboxSetup_o.events:=Split string:C1554("onLoad,onClick,onDataChange,onSelectionChange"; ",")
+	$listboxSetup_o.events:=Split string:C1554("onLoad,onClick,onDataChange,onSelectionChange"; ";")
 End if 
 
 // set the events
-$listbox_o.events.push($listboxSetup_o.events)
+$listbox_o.events:=$listboxSetup_o.events
 
 // make columns
 var $colObj : Object
@@ -114,85 +115,19 @@ $obDateStore:=ds:C1482[$tableName]
 
 
 For each ($fieldName_t; $cBuild)
-	$colObj:=New object:C1471
-	
-	//$vtColumnName:=$lbName_t+"_"+$fieldName_t
-	$vtColumnName:="Column_"+$lbName_t+"_"+$fieldName_t+"_"+$columnAdder_t
-	$vtColumnName:=$lbName_t+"_"+$fieldName_t+"_"+$columnAdder_t
-	$vtHeader:="Header_"+$lbName_t+"_"+$fieldName_t+"_"+$columnAdder_t
-	$vtFooter:="Footer_"+$lbName_t+"_"+$fieldName_t+"_"+$columnAdder_t
-	$ptHeaderVar:=$NilPtr  // Get pointer($vtHeader)
-	$vtColumnFormula:="This."+$fieldName_t
-	
-	$width:=120
-	$align:=Align left:K42:2
-	$align_t:="left"
-	$format:=""
-	$enterable:=False:C215
-	$fieldType_i:=$obDateStore[$fieldName_t].fieldType
-	$stringType_t:=$obDateStore[$fieldName_t].type
-	Case of 
-		: ($obDateStore[$fieldName_t].type="date")
-			$width:=70
-			$align:=Align center:K42:3
-			$format:=Char:C90(System date short:K1:1)
-			$align_t:="center"
-		: ($obDateStore[$fieldName_t].type="bool")
-			$width:=40
-			$align:=Align center:K42:3
-			$align_t:="center"
-		: ($obDateStore[$fieldName_t].type="number")
-			Case of 
-				: ($fieldName_t="DT@")
-					
-				: ($vtColumnName="@time@")
-					$width:=70
-					$align:=Align center:K42:3
-					$align_t:="center"
-				: ($obDateStore[$fieldName_t].fieldType=Is real:K8:4)
-					//LISTBOX SET PROPERTY(*; $vtColumnName; lk display type; lk numeric format)
-					$width:=80
-					$align:=Align right:K42:4
-					$align_t:="right"
-					$format:="###,###,###,##0.00"
-					//OBJECT SET FORMAT(*; $vtColumnName; HH MM AM PM))  // 5   Char(HH MM AM PM)
-				Else 
-					//LISTBOX SET PROPERTY(*; $vtColumnName; lk display type; lk numeric format)
-					$width:=80
-					$align:=Align right:K42:4
-					$align_t:="right"
-					$format:="###,###,###,##0"
-			End case 
-			
-		: ($obDateStore[$fieldName_t].type="string")
-			Case of 
-				: (($fieldName_t="@phone@") | ($fieldName_t="@fax@"))
-					$format:="### ### (###) ###-####"
-				Else 
-			End case 
-	End case 
-	
-	var $vtTitle : Text
-	$vtTitle:=Uppercase:C13($fieldName_t[[1]])+Substring:C12($fieldName_t; 2; Length:C16($fieldName_t))
-	//  $colObj:=New object("name"; $vtColumnName
-	//"objectName"; $vtColumnName; 
-	$colObj:=New object:C1471("name"; $vtColumnName; \
-		"width"; $width; \
-		"dataSource"; "This."+$fieldName_t; \
-		"header"; New object:C1471("name"; $vtColumnName; "text"; $vtTitle); \
-		"footer"; New object:C1471("name"; $vtFooter); \
-		"textAlign"; $align_t; \
-		"align"; $align; \
-		"format"; $format; \
-		"enterable"; $enterable; \
-		"fieldType"; $obDateStore[$fieldName_t].fieldType)
+	$column_o:=LBX_ColumnFromName(Form:C1466.dataClassName; $field)
+	LBX_ColumnFromName
+	LBX_ColumnSet
 	
 	$listbox_o.columns.push($colObj)
 	
 End for each 
 
+
+
+
 $page:=New object:C1471("objects"; New object:C1471($lbName_t; $listbox_o))
-$form:=New object:C1471("pages"; New collection:C1472(Null:C1517; $page))
+$form:=New object:C1471("pages"; New collection:C1472(New object:C1471("objects"; New object:C1471); $page))
 
 jsonText:=JSON Stringify:C1217($form; *)
 jsonText:=Replace string:C233(jsonText; Char:C90(Tab:K15:37); "    ")

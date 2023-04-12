@@ -22,7 +22,7 @@ If (Size of array:C274(aGLAcct)>0)
 		[TallyResult:73]profile2:18:="Inv Tally"
 		[TallyResult:73]nameProfile3:28:="Process"
 		[TallyResult:73]profile3:19:="Inventory"
-		[TallyResult:73]dtCreated:11:=DateTime_Enter
+		[TallyResult:73]dtCreated:11:=DateTime_DTTo
 		[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
 	End if 
 	$valueDiffer:=0

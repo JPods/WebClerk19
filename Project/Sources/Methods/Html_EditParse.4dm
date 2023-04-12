@@ -2,12 +2,12 @@
 
 //Procedure: Html_EditParse
 HtPageRay(0)
-If (Position:C15("jitWeb"; <>WebFolder)<1)
+If (Position:C15("jitWeb"; Storage:C1525.wc.webFolder)<1)
 	ALERT:C41("No jitWeb folder")
 	jCancelButton
 Else 
 	ARRAY TEXT:C222(aText1; 0)
-	$error:=HFS_CatToArray(<>webFolder; "aText1")
+	$error:=HFS_CatToArray(Storage:C1525.wc.webFolder; "aText1")
 	$k:=Size of array:C274(aText1)
 	C_TEXT:C284($theBody; $testText; $thePage; $theHead; $testSuffix)
 	C_LONGINT:C283($bodyBeg; $hasSelect; $headBeg; $headEnd; $foundOnPage)
@@ -21,10 +21,10 @@ Else
 			C_BOOLEAN:C305($isLocked; $isInvisible)
 			C_DATE:C307($dateCreated; $dateModified)
 			C_TIME:C306($timeCreated; $timeModified)
-			$docName:=<>WebFolder+aText1{$i}
+			$docName:=Storage:C1525.wc.webFolder+aText1{$i}
 			GET DOCUMENT PROPERTIES:C477($docName; $isLocked; $isInvisible; $dateCreated; $timeCreated; $dateModified; $timeModified)
 			If ($isLocked=False:C215)
-				myDoc:=Open document:C264(<>WebFolder+aText1{$i})
+				myDoc:=Open document:C264(Storage:C1525.wc.webFolder+aText1{$i})
 				If (OK=1)
 					$thePage:=""
 					<>vEoF:=Get document size:C479(document)+1  // ### jwm ### 20160714_1147 is plus 1 needed ?
@@ -121,12 +121,12 @@ If (False:C215)
 	
 	//Procedure: Html_EditParse
 	HtPageRay(0)
-	If (HFS_ShortName(<>webFolder)#"jitWeb@")
+	If (HFS_ShortName(Storage:C1525.wc.webFolder)#"jitWeb@")
 		ALERT:C41("No jitWeb folder")
 		jCancelButton
 	Else 
 		ARRAY TEXT:C222(aText1; 0)
-		$error:=HFS_CatToArray(<>webFolder; "aText1")
+		$error:=HFS_CatToArray(Storage:C1525.wc.webFolder; "aText1")
 		$k:=Size of array:C274(aText1)
 		C_TEXT:C284($theBody; $testText; $thePage; $theHead; $testSuffix)
 		C_LONGINT:C283($bodyBeg; $hasSelect; $headBeg; $headEnd; $foundOnPage)
@@ -136,7 +136,7 @@ If (False:C215)
 			If ($bodyBeg=0)
 				DELETE FROM ARRAY:C228(aText1; $i; 1)
 			Else 
-				myDoc:=Open document:C264(<>WebFolder+aText1{$i})
+				myDoc:=Open document:C264(Storage:C1525.wc.webFolder+aText1{$i})
 				If (OK=1)
 					$thePage:=""
 					<>vEoF:=Get document size:C479(document)+1  // ### jwm ### 20160714_1147 is plus 1 needed ?

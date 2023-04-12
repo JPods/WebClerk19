@@ -43,10 +43,10 @@ Case of
 			$thePage:="LWC"+Table name:C256(ptCurTable)+"List"+$strPageID+".html"
 		End if 
 		$theCommand:="LWC_Display?jitPageOne="+$thePage+"&TableName="+Table name:C256(ptCurTable)+"&RecordNum=-11&jitScript="+$theScript
-		If (<>vLocalHost="")
+		If (Storage:C1525.wc.localHost="")
 			OPEN URL:C673("http://localhost:8080/"+$theCommand)
 		Else 
-			OPEN URL:C673("http://"+<>vLocalHost+"/"+$theCommand)
+			OPEN URL:C673("http://"+Storage:C1525.wc.localHost+"/"+$theCommand)
 		End if 
 		DELAY PROCESS:C323(Current process:C322; 600)
 		CLEAR SET:C117("<>curSelSet")
@@ -61,10 +61,10 @@ Case of
 			$thePage:="LWC"+Table name:C256(ptCurTable)+"One"+$strPageID+".html"
 		End if 
 		$theCommand:="LWC_Display?jitPageOne="+$thePage+"&TableName="+Table name:C256(ptCurTable)+"&RecordNum="+String:C10($theRecNum)+"&jitScript="+$theScript
-		If (<>vLocalHost="")
+		If (Storage:C1525.wc.localHost="")
 			OPEN URL:C673("http://localhost:8080/"+$theCommand)
 		Else 
-			OPEN URL:C673("http://"+<>vLocalHost+"/"+$theCommand)
+			OPEN URL:C673("http://"+Storage:C1525.wc.localHost+"/"+$theCommand)
 		End if 
 		
 End case 

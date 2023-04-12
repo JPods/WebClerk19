@@ -9,7 +9,7 @@ $doThis:=0
 vResponse:=""
 Case of 
 	: (voState.url="/Status_SaveRecord@")  //pay the order
-		Http_SaveRecord($1; $2; True:C214)
+		//Http_SaveRecord($1; $2; True)
 		
 		//: (voState.url="/Status_SaveCustomer@")//pay the order
 		//Http_OldCust ($1;$2)
@@ -17,16 +17,16 @@ Case of
 		Http_QueryRecords($1; $2)
 		
 	: (voState.url="/Status_Invoice@")  //pay the order
-		Http_ServerInvoices($c; $2)
+		//Http_ServerInvoices($c; $2)
 		
 	: (voState.url="/Status_Ledgers@")  //pay the order
-		Http_ServerLedgers($c; $2)
+		//Http_ServerLedgers($c; $2)
 		
 	: (voState.url="/Status_LoadTags@")  //pay the order
-		Http_ServerLoadTags($c; $2)
+		//Http_ServerLoadTags($c; $2)
 		
 	: (voState.url="/Status_Order@")  //pay tHttp_InvoiceServerHttp_ServerLoadTagshe order
-		Http_OrdStatus($c; $2)
+		//Http_OrdStatus($c; $2)
 		
 	: ((voState.url="/Status_POAsk@") | (voState.url="/Status_POAsk@"))  //for the remote customer
 		http_POStatusGetReturn($c; ->vText11)

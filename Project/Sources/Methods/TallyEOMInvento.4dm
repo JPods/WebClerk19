@@ -5,8 +5,8 @@ C_TEXT:C284($tallyItem)
 C_BOOLEAN:C305($stopLoop)
 $stopLoop:=False:C215
 
-$vLdiffBeg:=DateTime_Enter($PeriodDate; ?23:59:59?)
-$vLdiffEnd:=DateTime_Enter(Current date:C33; ?23:59:59?)
+$vLdiffBeg:=DateTime_DTTo($PeriodDate; ?23:59:59?)
+$vLdiffEnd:=DateTime_DTTo(Current date:C33; ?23:59:59?)
 If (Count parameters:C259=1)
 	$PeriodDate:=$1
 	$PeriodEnd:=Date_ThisMon($1; 1)
@@ -24,8 +24,8 @@ If (OK=1)
 	ARRAY REAL:C219($aExtValue; 0)
 	If (Current date:C33>$PeriodEnd)
 		C_LONGINT:C283($vLdiffBeg; $vLdiffEnd)
-		$vLdiffBeg:=DateTime_Enter($PeriodDate; ?00:00:00?)
-		$vLdiffEnd:=DateTime_Enter(Current date:C33; ?23:59:59?)
+		$vLdiffBeg:=DateTime_DTTo($PeriodDate; ?00:00:00?)
+		$vLdiffEnd:=DateTime_DTTo(Current date:C33; ?23:59:59?)
 	End if 
 	ALL RECORDS:C47([Item:4])
 	$k:=Records in selection:C76([Item:4])

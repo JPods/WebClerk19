@@ -14,5 +14,5 @@ Case of
 			"sel"; LB_Included.sel; \
 			"page"; 1; \
 			"parentProcess"; Current process:C322)
-		$viProcess:=New process:C317("Process_ByID"; 0; process_o.tableName+" - "+String:C10(Count tasks:C335); $obPassable)
+		$viProcess:=New process:C317("Process_ByID"; 0; process_o.dataClassName+" - "+String:C10(Count tasks:C335); $obPassable)
 End case 

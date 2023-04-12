@@ -134,6 +134,7 @@ For each ($property; $dataClass)  //For each property in the DataClass ($propert
 							"close"; True:C214; \
 							"index"; $index))
 						
+						
 					: ($colOK2Use.indexOf($zeProperty.type)>-1)  //We can use it for sorting or searching
 						$propertyList.push(New object:C1471("name"; $property; \
 							"path"; $property; \

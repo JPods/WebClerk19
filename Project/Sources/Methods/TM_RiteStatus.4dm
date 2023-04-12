@@ -29,7 +29,7 @@ If ((OptKey=1) | (vlStatTime=0))
 Else 
 	QUERY:C277([Order:3]; [Order:3]lng:34>vlStatTime)
 End if 
-vlStatTime:=DateTime_Enter
+vlStatTime:=DateTime_DTTo
 $k:=Records in selection:C76([Order:3])
 If ($k>0)
 	$i:=1
@@ -42,8 +42,8 @@ If ($k>0)
 	FIRST RECORD:C50([Order:3])
 	MESSAGE:C88("Processing Order Status")
 	For ($i; 1; $k)
-		$dtOrd:=DateTime_Enter([Order:3]dateDocument:4; [Order:3]timeOrdered:58)
-		$dtNeed:=DateTime_Enter([Order:3]dateNeeded:5; [Order:3]actionTime:37)
+		$dtOrd:=DateTime_DTTo([Order:3]dateDocument:4; [Order:3]timeOrdered:58)
+		$dtNeed:=DateTime_DTTo([Order:3]dateNeeded:5; [Order:3]actionTime:37)
 		SEND PACKET:C103(myDoc; [Order:3]customerID:1+"\t"+[Order:3]company:15+"\t"+[Order:3]customerPO:3+"\t"+String:C10([Order:3]idNum:2; "0000-0000")+"\t"+String:C10($dtOrd)+"\t"+String:C10($dtNeed)+"\t"+[Order:3]status:59+"\t"+[Order:3]takenBy:36+"\t"+[Order:3]actionBy:55+"\r")
 		NEXT RECORD:C51([Order:3])
 	End for 

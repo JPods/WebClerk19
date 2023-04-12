@@ -25,10 +25,10 @@ C_REAL:C285($invPortion)
 
 [Invoice:26]siteID:86:=DSSetSiteID
 
-If ([Invoice:26]invoiceNum:2=0)
-	[Invoice:26]invoiceNum:2:=CounterNew(->[Invoice:26])
+If ([Invoice:26]idNum:2=0)
+	[Invoice:26]idNum:2:=CounterNew(->[Invoice:26])
 End if 
-[Invoice:26]orderNum:1:=[Order:3]orderNum:2
+[Invoice:26]idNumOrder:1:=[Order:3]idNum:2
 [Invoice:26]customerID:3:=[Order:3]customerID:1
 [Invoice:26]idNumTask:78:=[Order:3]idNumTask:85
 [Invoice:26]contractDetailTag:114:=[Order:3]contractDetailTag:151
@@ -43,7 +43,7 @@ End if
 //TaxFindSales (->sTaxRate;->[Invoice]TaxJuris;->[Customer]TaxExemptID;->doTax)
 [Invoice:26]customerPO:29:=[Order:3]customerPO:3
 [Invoice:26]dateShipped:4:=Invc_DateShippd
-[Invoice:26]dateInvoiced:35:=Current date:C33
+[Invoice:26]dateDocument:35:=Current date:C33
 [Invoice:26]packedBy:30:=Current user:C182
 [Invoice:26]shipVia:5:=[Order:3]shipVia:13
 [Invoice:26]zone:6:=[Order:3]zone:14
@@ -82,8 +82,8 @@ vComSales:=CM_FindRate(->[Invoice:26]salesNameID:23; -><>aComNameID; -><>aEmpRat
 [Invoice:26]currency:62:=[Order:3]currency:69
 [Invoice:26]consignment:63:=[Order:3]consignment:70
 [Invoice:26]producedBy:65:=[Order:3]actionBy:55
-[Invoice:26]autoFreight:32:=[Order:3]autoFreight:40
-//ConsoleMessage ("TEST: createOrdInvRay "+String($i))
+[Invoice:26]shipAuto:32:=[Order:3]shipAuto:40
+//Console_Log ("TEST: createOrdInvRay "+String($i))
 
 [Invoice:26]obGeneral:109:=[Order:3]obGeneral:147
 // ### bj ### 20190104_1416
@@ -101,9 +101,9 @@ Case of
 	: (vPackingProcess="PK")
 		LT_FillArrayLoadItems(0)  //invoices
 	: (vbForceShip=True:C214)  //load planning window
-	: (([Invoice:26]autoFreight:32=False:C215) & ([Invoice:26]orderNum:1>1))
+	: (([Invoice:26]shipAuto:32=False:C215) & ([Invoice:26]idNumOrder:1>1))
 		//skip shipping for commission invoices and other not shipped orders
-	: ((<>vLoadPlanning) & ([Invoice:26]orderNum:1>1) & (False:C215))
+	: ((<>vLoadPlanning) & ([Invoice:26]idNumOrder:1>1) & (False:C215))
 		//TRACE
 		LT_InvoiceShipments  //invoices
 		// Why is this here and subrecords
@@ -113,20 +113,20 @@ End case
 //
 vMod:=calcInvoice(vMod)
 Case of 
-	: (([Invoice:26]orderNum:1#1) & ([Order:3]complete:83=1) & (<>tcNoCodHand))  //do nothing, do in (P) calcInvoice
-	: ([Invoice:26]orderNum:1#1)  //&(Not([Invoice]AutoFreight)))
+	: (([Invoice:26]idNumOrder:1#1) & ([Order:3]complete:83=1) & (<>tcNoCodHand))  //do nothing, do in (P) calcInvoice
+	: ([Invoice:26]idNumOrder:1#1)  //&(Not([Invoice]shipAuto)))
 		If ([Order:3]amount:24=0)  //April 25, 1995   removed partial shipping costs 
 			$invPortion:=1  //based on Chris's thoughts
 		Else 
 			If (allowAlerts_boo)
-				MESSAGE:C88("Review partial shipping costs Invoice "+String:C10([Invoice:26]invoiceNum:2; "0000-0000")+".")
+				MESSAGE:C88("Review partial shipping costs Invoice "+String:C10([Invoice:26]idNum:2; "0000-0000")+".")
 			End if 
 			$invPortion:=1  //([Invoice]Amount/[Order]Amount)
 		End if 
 		[Invoice:26]shipAdjustments:17:=Round:C94([Order:3]shipAdjustments:26*$invPortion; <>tcDecimalTt)
 		[Invoice:26]shipFreightCost:15:=Round:C94([Order:3]shipFreightCost:38*$invPortion; <>tcDecimalTt)
 		[Invoice:26]shipMiscCosts:16:=Round:C94([Order:3]shipMiscCosts:25*$invPortion; <>tcDecimalTt)
-		[Invoice:26]autoFreight:32:=False:C215
+		[Invoice:26]shipAuto:32:=False:C215
 		OBJECT SET ENTERABLE:C238([Invoice:26]shipMiscCosts:16; True:C214)
 		OBJECT SET ENTERABLE:C238([Invoice:26]shipFreightCost:15; True:C214)
 		//else
@@ -134,7 +134,7 @@ Case of
 		//;TOTPREC)
 End case 
 [Invoice:26]division:41:=[Order:3]division:48
-[Invoice:26]projectNum:50:=[Order:3]projectNum:50
+[Invoice:26]idNumProject:50:=[Order:3]projectNum:50
 //
 Case of 
 	: ([Order:3]addressBillTo:71#"")

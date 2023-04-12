@@ -105,7 +105,7 @@ If ($error>-1)
 				GET FIELD PROPERTIES:C258($tableNum; $incRay; $typeFld; $lenField; $indexed; $isUnique; $isInvisible)  // file #, field #, type, length, index
 				If (($typeFld=Is picture:K8:10) | ($typeFld=Is BLOB:K8:12))  // no blobs or pictures
 					If (<>viDebugMode=411)
-						ConsoleMessage("No Picture or Blobs in jsons: "+$atFieldNames{$incRay})
+						ConsoleLog("No Picture or Blobs in jsons: "+$atFieldNames{$incRay})
 					End if 
 				Else 
 					APPEND TO ARRAY:C911($atFieldNames; $ptArrayFields->{$incRay})

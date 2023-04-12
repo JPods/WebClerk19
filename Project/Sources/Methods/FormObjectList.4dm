@@ -54,7 +54,7 @@ ARRAY LONGINT:C221(aiTableNums; 0)
 GET TABLE TITLES:C803(atTableTitles; aiTableNums)
 //$viTableNum:=Find in array(atTableTitles;vtTableName)
 
-ConsoleMessage("Table:\tForm:\tObject:\tName:\tPage:\tStyle\tFont:\tType:")
+ConsoleLog("Table:\tForm:\tObject:\tName:\tPage:\tStyle\tFont:\tType:")
 
 
 For ($vi1; 1; Size of array:C274(atTableTitles))
@@ -244,11 +244,11 @@ For ($vi1; 1; Size of array:C274(atTableTitles))
 							vtVarName:=Txt_Clean(vtVarName; " ")
 							
 							vtVarName:=Substring:C12(vtVarName; 1; 40)
-							ConsoleMessage(atTableTitles{$vi1}+"\t"+atFormNames{$vi2}+"\t"+atObjectNames{$vi3}+"\t"+vtVarName+"\t"+String:C10(aiPages{$vi3})+"\t"+$vtStyle+"\t"+$vtFont+"\t"+$vtType)
+							ConsoleLog(atTableTitles{$vi1}+"\t"+atFormNames{$vi2}+"\t"+atObjectNames{$vi3}+"\t"+vtVarName+"\t"+String:C10(aiPages{$vi3})+"\t"+$vtStyle+"\t"+$vtFont+"\t"+$vtType)
 							
 							
 						: ((vtVarName#"") & (viTableNum=-1) & (viFieldNum=-1))  // variable or array
-							ConsoleMessage(atTableTitles{$vi1}+"\t"+atFormNames{$vi2}+"\t"+atObjectNames{$vi3}+"\t"+vtVarName+"\t"+String:C10(aiPages{$vi3})+"\t"+$vtStyle+"\t"+$vtFont+"\t"+$vtType)
+							ConsoleLog(atTableTitles{$vi1}+"\t"+atFormNames{$vi2}+"\t"+atObjectNames{$vi3}+"\t"+vtVarName+"\t"+String:C10(aiPages{$vi3})+"\t"+$vtStyle+"\t"+$vtFont+"\t"+$vtType)
 							
 						: ((vtVarName#"") & (viTableNum>0) & (viFieldNum=-1))  // array element
 							
@@ -257,7 +257,7 @@ For ($vi1; 1; Size of array:C274(atTableTitles))
 						: ((vtVarName="") & (viTableNum>0) & (viFieldNum=0))  // Table
 							
 						: ((vtVarName="") & (viTableNum>0) & (viFieldNum>0))  // Field
-							ConsoleMessage(atTableTitles{$vi1}+"\t"+atFormNames{$vi2}+"\t"+atObjectNames{$vi3}+"\t"+Field name:C257(apVariables{$vi3})+"\t"+String:C10(aiPages{$vi3})+"\t"+$vtStyle+"\t"+$vtFont+"\t"+$vtType)
+							ConsoleLog(atTableTitles{$vi1}+"\t"+atFormNames{$vi2}+"\t"+atObjectNames{$vi3}+"\t"+Field name:C257(apVariables{$vi3})+"\t"+String:C10(aiPages{$vi3})+"\t"+$vtStyle+"\t"+$vtFont+"\t"+$vtType)
 							
 					End case 
 					
@@ -287,7 +287,7 @@ If (<>viDebugMode>410)
 		vText:=vText+(atNames{$vi1}+"\t"+String:C10(aiNums{$vi1})+"\r")
 	End for 
 	SET TEXT TO PASTEBOARD:C523(vText)
-	ConsoleMessage(vText)
+	ConsoleLog(vText)
 End if 
 
 ALERT:C41("Done")

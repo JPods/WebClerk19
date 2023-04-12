@@ -13,18 +13,18 @@
 C_LONGINT:C283(vHere)
 C_LONGINT:C283($incRec; $cntRec; $lastTable)
 $lastTable:=Get last table number:C254
-QUERY:C277([UserReport:46]; [UserReport:46]tableNum:3>0; *)
-QUERY:C277([UserReport:46];  & ; [UserReport:46]tableNum:3<=$lastTable; *)
-QUERY:C277([UserReport:46];  & ; [UserReport:46]TableName:47="")
-$cntRec:=Records in selection:C76([UserReport:46])
-FIRST RECORD:C50([UserReport:46])
+QUERY:C277([Report:46]; [Report:46]tableNum:3>0; *)
+QUERY:C277([Report:46];  & ; [Report:46]tableNum:3<=$lastTable; *)
+QUERY:C277([Report:46];  & ; [Report:46]tableName:47="")
+$cntRec:=Records in selection:C76([Report:46])
+FIRST RECORD:C50([Report:46])
 For ($incRec; 1; $cntRec)
-	[UserReport:46]TableName:47:=Table name:C256([UserReport:46]tableNum:3)
-	SAVE RECORD:C53([UserReport:46])
-	NEXT RECORD:C51([UserReport:46])
+	[Report:46]tableName:47:=Table name:C256([Report:46]tableNum:3)
+	SAVE RECORD:C53([Report:46])
+	NEXT RECORD:C51([Report:46])
 End for 
 If (vHere<1)
-	REDUCE SELECTION:C351([UserReport:46]; 0)
+	REDUCE SELECTION:C351([Report:46]; 0)
 End if 
 
 
@@ -64,18 +64,5 @@ ARRAY TEXT:C222(<>yURptCreatr; 15)
 <>yURptCreatr{15}:="Clip"
 
 
-ALL RECORDS:C47([UserReport:46])
-$cntRec:=Records in selection:C76([UserReport:46])
-FIRST RECORD:C50([UserReport:46])
-For ($incRec; 1; $cntRec)
-	
-	URpt_SetTypePop
-	
-	SAVE RECORD:C53([UserReport:46])
-	NEXT RECORD:C51([UserReport:46])
-End for 
-If (vHere<1)
-	REDUCE SELECTION:C351([UserReport:46]; 0)
-End if 
 
 

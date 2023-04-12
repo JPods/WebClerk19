@@ -65,12 +65,12 @@ For ($incRay; 1; $cntRay)
 	End if 
 	If (Records in selection:C76([Item:4])=0)
 		If (<>viDebugMode>410)
-			ConsoleMessage("No Item for: "+$itemNumVendor)
+			ConsoleLog("No Item for: "+$itemNumVendor)
 		End if 
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=$ItemNum)
 		If (Records in selection:C76([Item:4])=0)
 			If (<>viDebugMode>410)
-				ConsoleMessage("No Item for 2nd attempt: "+$ItemNum)
+				ConsoleLog("No Item for 2nd attempt: "+$ItemNum)
 			End if 
 		End if 
 	End if 
@@ -81,7 +81,7 @@ For ($incRay; 1; $cntRay)
 	Else 
 		
 		If (<>viDebugMode>410)
-			ConsoleMessage($vtCommentAdd)
+			ConsoleLog($vtCommentAdd)
 		End if 
 		If ($itemNumVendor="")
 			pPartNum:=$itemNum
@@ -114,7 +114,7 @@ For ($incRay; 1; $cntRay)
 		aoLnComment{$incRay}:=$vtCommentAdd+"\r"+aoLnComment{$incRay}
 		[Order:3]commentProcess:12:=[Order:3]commentProcess:12+"\r"+String:C10($incRay)+$vtCommentAdd
 		If (<>viDebugMode>410)
-			ConsoleMessage($vtCommentAdd)
+			ConsoleLog($vtCommentAdd)
 		End if 
 	Else 
 		$vtCommentAdd:=""
@@ -123,7 +123,7 @@ For ($incRay; 1; $cntRay)
 			C_TEXT:C284($vtCommentAdd)
 			$vtCommentAdd:="MisMatchCost: "+$itemNum+": "+String:C10($incRay)+": Inbound: "+String:C10($CostDiscount)+": internal: "+String:C10(aOUnitPrice{$incRay})
 			If (<>viDebugMode>410)
-				ConsoleMessage($vtCommentAdd)
+				ConsoleLog($vtCommentAdd)
 			End if 
 			[Order:3]commentProcess:12:=[Order:3]commentProcess:12+"\r"+String:C10($incRay)+$vtCommentAdd
 			aoLnComment{$incRay}:=$vtCommentAdd+"\r"+aoLnComment{$incRay}
@@ -133,7 +133,7 @@ For ($incRay; 1; $cntRay)
 			aoProfile3{$incRay}:="MisMatchDiscount"
 			$vtCommentAdd:="MisMatchDiscount: "+$itemNum+": Inbound: "+String:C10($Discount)+": internal: "+String:C10(aODiscnt{$incRay})
 			If (<>viDebugMode>410)
-				ConsoleMessage($vtCommentAdd)
+				ConsoleLog($vtCommentAdd)
 			End if 
 			[Order:3]commentProcess:12:=[Order:3]commentProcess:12+"\r"+String:C10($incRay)+": "+$vtCommentAdd
 			aoLnComment{$incRay}:=$vtCommentAdd+"\r"+aoLnComment{$incRay}

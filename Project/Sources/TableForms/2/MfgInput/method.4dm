@@ -35,7 +35,7 @@ Case of
 		REDUCE SELECTION:C351([Service:6]; 0)
 		If ([Customer:2]customerID:1="")
 			OBJECT SET ENTERABLE:C238([Customer:2]customerID:1; True:C214)
-			DBCustomer_init
+			DB_InitCustomer
 			DISABLE MENU ITEM:C150(2; 1)  //no cloning new records
 			srAcct:=[Customer:2]customerID:1
 			bChangeRec:=1

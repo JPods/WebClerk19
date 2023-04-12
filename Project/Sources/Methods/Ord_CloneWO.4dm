@@ -37,8 +37,8 @@ Else
 				[WorkOrder:66]idNumTask:22:=[Order:3]idNumTask:85
 				[WorkOrder:66]dtComplete:6:=0
 				[WorkOrder:66]dtAction:5:=0
-				[WorkOrder:66]dtReleased:4:=DateTime_Enter
-				[WorkOrder:66]woNum:29:=CounterNew(->[WorkOrder:66])
+				[WorkOrder:66]dtReleased:4:=DateTime_DTTo
+				[WorkOrder:66]idNum:29:=CounterNew(->[WorkOrder:66])
 				
 				SAVE RECORD:C53([WorkOrder:66])
 			End for 

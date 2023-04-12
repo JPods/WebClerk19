@@ -74,14 +74,14 @@ Else
 		//
 		//QUERY([WOTemplate];[WOTemplate]TypeWO=<>aWoTypes{schWOTypeNum})
 		CREATE RECORD:C68([WorkOrder:66])
-		[WorkOrder:66]woNum:29:=CounterNew(->[WorkOrder:66])
+		[WorkOrder:66]idNum:29:=CounterNew(->[WorkOrder:66])
 		WO_FillArrays(-8)
 		TaskIDAssign(->[Order:3]idNumTask:85)
 		[WorkOrder:66]idNumTask:22:=[Order:3]idNumTask:85
 		[WorkOrder:66]activity:7:=<>aWoTypes{schWOTypeNum}
 		[WorkOrder:66]actionBy:8:=$1
 		[WorkOrder:66]durationPlanned:10:=$theDuration
-		[WorkOrder:66]dtAction:5:=DateTime_Enter($5; $6)
+		[WorkOrder:66]dtAction:5:=DateTime_DTTo($5; $6)
 		SAVE RECORD:C53([WorkOrder:66])
 		booAccept:=True:C214
 		vMod:=True:C214

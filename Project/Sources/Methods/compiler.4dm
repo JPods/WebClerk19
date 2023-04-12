@@ -112,9 +112,6 @@ C_TEXT:C284(vPartDesc)
 C_TEXT:C284(srItemNum)
 ARRAY TEXT:C222(aOOgItem; 0)
 ARRAY TEXT:C222(aItemNum; 0)
-C_LONGINT:C283(zzz)
-ARRAY TEXT:C222(<>aPrsName; 0)
-ARRAY LONGINT:C221(<>aPrsNum; 0)
 //
 ARRAY LONGINT:C221(<>aItemLines; 0)  //transfer items from QuickQuote
 //

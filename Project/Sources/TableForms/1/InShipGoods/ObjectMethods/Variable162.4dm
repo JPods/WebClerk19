@@ -9,7 +9,7 @@ If ((vMod) | (vrVendorInvoiceFreight=vrVendorInvoiceAmount))
 		haveReceiptID:=True:C214
 		booAccept:=True:C214
 		TRACE:C157
-		vlReceiptID:=PORcpt_CreateNew([PO:39]poNum:5; [PO:39]vendorID:1; True:C214)
+		vlReceiptID:=PORcpt_CreateNew([PO:39]idNum:5; [PO:39]vendorID:1; True:C214)
 		vbSpreadFreight:=False:C215
 	End if 
 	If (vbSpreadFreight)
@@ -25,16 +25,16 @@ If ((vMod) | (vrVendorInvoiceFreight=vrVendorInvoiceAmount))
 			[InventoryStack:29]extendedCost:17:=[POReceipt:95]vendorInvoiceFreight:6
 			[InventoryStack:29]vendorID:10:=[POReceipt:95]vendorID:3
 			[InventoryStack:29]dateEntered:3:=[POReceipt:95]vendorInvoiceDate:5
-			[InventoryStack:29]docid:5:=[POReceipt:95]poNum:2
+			[InventoryStack:29]docid:5:=[POReceipt:95]idNumPO:2
 			[InventoryStack:29]dateVendorInvc:27:=[POReceipt:95]vendorInvoiceDate:5
 			[InventoryStack:29]tableNum:30:=Table:C252(->[POReceipt:95])
 			SAVE RECORD:C53([InventoryStack:29])
-			QUERY:C277([InventoryStack:29]; [InventoryStack:29]docid:5=[POReceipt:95]poNum:2; *)
+			QUERY:C277([InventoryStack:29]; [InventoryStack:29]docid:5=[POReceipt:95]idNumPO:2; *)
 			QUERY:C277([InventoryStack:29];  & [InventoryStack:29]itemNum:2="FreightPO")
 			[PO:39]shipHandling:21:=Sum:C1([InventoryStack:29]extendedCost:17)
 		End if 
 	End if 
-	ConsoleMessage("TEST: AcceptPO")
+	ConsoleLog("TEST: AcceptPO")
 	haveReceiptID:=(vlReceiptID>0)
 	acceptPO
 	haveReceiptID:=False:C215

@@ -107,7 +107,7 @@ If ([Item:4]leadTimePo:55>0)
 Else 
 	aPODateExp{$1}:=!00-00-00!
 End if 
-aPOOrdRef{$1}:=[PO:39]orderNum:18
+aPOOrdRef{$1}:=[PO:39]idNumOrder:18
 aPODateRcvd{$1}:=!00-00-00!
 aPOVndrAlph{$1}:=[Item:4]vendorItemNum:40
 aPoItemNum{$1}:=[Item:4]itemNum:1
@@ -115,7 +115,7 @@ aPoSeq{$1}:=MaxValueInArray(->aPoSeq)+1
 aPoLComment{$1}:=[Item:4]liComment:66
 //
 If (<>viDebugMode>410)
-	ConsoleMessage("POLine: "+[Item:4]itemNum:1+", MyCycle: "+String:C10(myCycle)+", Line#: "+String:C10(aPOLineNum{$1}))
+	ConsoleLog("POLine: "+[Item:4]itemNum:1+", MyCycle: "+String:C10(myCycle)+", Line#: "+String:C10(aPOLineNum{$1}))
 End if 
 
 If (allowAlerts_boo)
@@ -128,7 +128,7 @@ If (allowAlerts_boo)
 		End if 
 	End if 
 	If ((aPOLineAction{$1}=-3) & ([Item:4]alertMessagePO:140#""))
-		ConsoleMessage([Item:4]itemNum:1+"\r"+"\r"+[Item:4]alertMessagePO:140)
+		ConsoleLog([Item:4]itemNum:1+"\r"+"\r"+[Item:4]alertMessagePO:140)
 	End if 
 End if 
 

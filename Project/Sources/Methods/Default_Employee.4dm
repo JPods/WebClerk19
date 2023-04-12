@@ -26,28 +26,24 @@ C_TEXT:C284($vtUserType)
 $vtUserType:="NoEmployeeRec"
 //adjust this at some time for Reps, Vendors, etc....
 If ($obRec#Null:C1517)
+	
 	If ($obRec.preference=Null:C1517)
 		$obRec.preference:=New object:C1471("customerComment"; "Order"; "orderComment"; "process"; "salesTrack"; True:C214; "site"; ""; "siteAdder"; "")
 		$result_o:=$obRec.save()
 	End if 
-	$obUser:=New object:C1471("preference"; $obRec.preference)
-	$obUser.securityLevel:=$obRec.securityLevel
-	$obUser.userType:="Employee"
-Else 
-	$obUser:=New object:C1471
-	$obUser.preference:=New object:C1471("customerComment"; "Order"; "orderComment"; "process"; "salesTrack"; True:C214; "site"; ""; "siteAdder"; "")
-	$obUser.securityLevel:=1
-	$obUser.userType:="NoEmployeeRec"
+	$obRec.preference:=New object:C1471("customerComment"; "Order"; "orderComment"; "process"; "salesTrack"; True:C214; "site"; ""; "siteAdder"; "")
+	$obRec.save()
 End if 
 If ($obRec.obGeneral.tables=Null:C1517)
 	// need to setup default tables to show for different employees
 	$obRec.obGeneral.tables:=New object:C1471("sales"; "Order"; "production"; "Item"; "admin"; "TallyResult")
-	$obRec.save()
+	
 End if 
-$obUser.tables:=$obRec.obGeneral.tables
 
-///  QQQQ
-$obUser.testing:=True:C214
+$obUser:=$obRec
+$obUser.userType:="Employee"
+Storage_ToNew($obUser; "user")
+
 
 If (($obRec.webClerkAutoStart) | ($obRec.nameID="WebClerk@"))
 	WC_StartUpShutDownFlip
@@ -57,7 +53,7 @@ If ($obRec.alertOnStartUp)
 	DB_SalesService
 End if 
 
-Storage_ToNew($obUser; "user")
+
 
 C_LONGINT:C283($viLevel)
 $viLevel:=Storage:C1525.user.securityLevel

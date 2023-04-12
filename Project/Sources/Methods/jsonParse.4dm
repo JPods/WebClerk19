@@ -53,13 +53,13 @@ ARRAY TEXT:C222($atNames; 0)
 ARRAY LONGINT:C221($aiTypes; 0)
 OB GET PROPERTY NAMES:C1232($aoObjects{$viIndex}; $atNames; $aiTypes)
 For (vi5; 1; Size of array:C274($atNames))
-	ConsoleMessage($atNames{vi5}+" - "+String:C10($aiTypes{$vi5}))
+	ConsoleLog($atNames{vi5}+" - "+String:C10($aiTypes{$vi5}))
 End for 
 C_LONGINT:C283($viUniqueID)
 $viUniqueID:=OB Get:C1224($aoObjects{$viIndex}; "OrderNum"; Is longint:K8:6)
 
 $vtTest:=JSON Stringify:C1217($voBatch; *)
 
-ConsoleMessage($vtTest)
+ConsoleLog($vtTest)
 
 

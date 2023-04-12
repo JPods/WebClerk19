@@ -18,7 +18,7 @@ CONFIRM:C162("Import BBB Items")
 If (OK=1)
 	myDoc:=Open document:C264("")
 	If (OK=1)
-		vi9:=DateTime_Enter
+		vi9:=DateTime_DTTo
 		vi5:=1
 		ARRAY TEXT:C222(aText1; 19)
 		Repeat 
@@ -79,7 +79,7 @@ If (OK=1)
 					[Item:4]qtySaleDefault:15:=Num:C11(aText1{12})  //QUANTITY
 					[Item:4]profile2:36:=aText1{13}  //TAG_LINE
 					[Item:4]profile3:37:=aText1{14}  //OTHER_INFO
-					[Item:4]liComment:66:=aText1{15}  //LONG_DESCRIPTION
+					[Item:4]descriptionDetail:66:=aText1{15}  //LONG_DESCRIPTION
 					[Item:4]imagePathTn:114:=aText1{16}  //TN_PICTURE
 					[Item:4]imagePath:104:=aText1{17}  //BIG_PICTURE
 					[Item:4]profile4:38:=aText1{18}  //SECTIONS
@@ -115,7 +115,7 @@ If (False:C215)
 		aText1{12}:=String:C10([Item:4]qtySaleDefault:15)
 		aText1{13}:=[Item:4]profile2:36
 		aText1{14}:=[Item:4]profile3:37
-		aText1{15}:=[Item:4]liComment:66
+		aText1{15}:=[Item:4]descriptionDetail:66
 		aText1{16}:=[Item:4]imagePathTn:114
 		aText1{17}:=[Item:4]imagePath:104
 		aText1{18}:=[Item:4]profile4:38
@@ -140,7 +140,7 @@ If (False:C215)
 			[Item:4]qtySaleDefault:15:=Num:C11(aText1{12})  //QUANTITY
 			[Item:4]profile2:36:=aText1{13}  //TAG_LINE
 			[Item:4]profile3:37:=aText1{14}  //OTHER_INFO
-			[Item:4]liComment:66:=aText1{15}  //LONG_DESCRIPTION
+			[Item:4]descriptionDetail:66:=aText1{15}  //LONG_DESCRIPTION
 			[Item:4]imagePathTn:114:=aText1{16}  //TN_PICTURE
 			[Item:4]imagePath:104:=aText1{17}  //BIG_PICTURE
 			[Item:4]profile4:38:=aText1{18}  //SECTIONS

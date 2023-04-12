@@ -159,7 +159,7 @@ If (OK=1)
 		For ($vi3; 1; Size of array:C274($atValues))
 			$vtMessage:=""
 			$vtMessage:=$atValues{$vi3}+"\t"+String:C10($aiCount{$vi3})
-			ConsoleMessage($vtMessage)
+			ConsoleLog($vtMessage)
 			$vtClipboard:=$vtClipboard+$vtMessage+"\r"
 		End for 
 		

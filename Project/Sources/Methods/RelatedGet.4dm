@@ -22,6 +22,9 @@ var $o : Object
 $o:=ds:C1482.TallyMaster.query("purpose =  :1 & name = :2 & tableNum = :3"; "iLoRelate"; "RelateOnLoad"; Table:C252(ptCurTable)).first()
 
 Case of 
+	: (process.cur=Null:C1517)
+		// skip all this if there is no record
+		
 	: ($o.id#Null:C1517)
 		ExecuteText(0; $o.script)
 	: (ptCurTable=(->[Customer:2]))
@@ -81,12 +84,13 @@ Case of
 		
 		
 	: (ptCurTable=(->[Item:4]))
+		
 		Item_GetSpec
 		
 		QUERY:C277([Usage:5]; [Usage:5]itemNum:1=[Item:4]type:26)
 		
 		QUERY:C277([Usage:5]; [Usage:5]itemNum:1=[Item:4]itemNum:1)
-		QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNumMaster:1=[Item:4]itemNum:1; *)
+		QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNum:1=[Item:4]itemNum:1; *)
 		QUERY:C277([ItemXRef:22];  | ; [ItemXRef:22]itemNumXRef:2=[Item:4]itemNum:1; *)  //### jwm ### 20121016_1242
 		QUERY:C277([ItemXRef:22])  //### jwm ### 20121016_1242
 		QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Item:4]itemNum:1)
@@ -113,6 +117,7 @@ Case of
 		
 		// MustFixQQQZZZ: Bill James (2022-01-22T06:00:00Z)
 		// change to ORDA BOM
+		
 		$bom_o:=ds:C1482.BOM.query("childItem = :1"; process_o.cur.itemNum)
 		
 		If (eParentList>0)
@@ -151,25 +156,24 @@ Case of
 		$doc_o:=ds:C1482.Document.query("idNumTask = :1"; process_o.cur.idNumTask)
 		$wo_o:=ds:C1482.WorkOrder.query("itemNum = :1"; process_o.cur.itemNum)
 		
-		QUERY:C277([PriceMatrix:105]; [PriceMatrix:105]itemNum:11=[Item:4]itemNum:1)
+		QUERY:C277([ItemPriceMatrix:105]; [ItemPriceMatrix:105]itemNum:11=[Item:4]itemNum:1)
 		//PriceMatrix_FillArrays (Records in selection([PriceMatrix]))
 		//QUERY([PriceMatrix];[PriceMatrix]ItemNum=[Item]ItemNum;*)
 		//QUERY([PriceMatrix];&[PriceMatrix]TypeSale="Estimating")
 		If (ePriceMatrixList>0)
-			PriceMatrix_FillArrays(Records in selection:C76([PriceMatrix:105]))
+			PriceMatrix_FillArrays(Records in selection:C76([ItemPriceMatrix:105]))
 			
 		End if 
 		
 		QUERY:C277([Document:100]; [Document:100]itemNum:20=[Item:4]itemNum:1)
 		
 		
-		
 	: (ptCurTable=(->[Usage:5]))
 		var $beginSR; $endSR : Integer
 		var $endDate : Date
 		$endDate:=Date_ThisMon([Usage:5]periodDate:2; 1)
-		$beginSR:=DateTime_Enter([Usage:5]periodDate:2; ?00:00:00?)
-		$endSR:=DateTime_Enter($endDate; ?00:00:00?)
+		$beginSR:=DateTime_DTTo([Usage:5]periodDate:2; ?00:00:00?)
+		$endSR:=DateTime_DTTo($endDate; ?00:00:00?)
 		QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Usage:5]itemNum:1; *)
 		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=$beginSR; *)
 		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15<$endSR)
@@ -178,7 +182,7 @@ Case of
 	: (ptCurTable=(->[Rep:8]))
 		QUERY:C277([Service:6]; [Service:6]repID:2=[Rep:8]repID:1)
 		QUERY:C277([Quota:9]; [Quota:9]repID:1=[Rep:8]repID:1)
-		QUERY:C277([RepContact:10]; [RepContact:10]repID:1=[Rep:8]repID:1)
+		QUERY:C277([zzzRepContact:10]; [zzzRepContact:10]repID:1=[Rep:8]repID:1)
 		QUERY:C277([Order:3]; [Order:3]repID:8=[Rep:8]repID:1)
 		QUERY:C277([Invoice:26]; [Invoice:26]repID:22=[Rep:8]repID:1)
 		QUERY:C277([Proposal:42]; [Proposal:42]repID:7=[Rep:8]repID:1)
@@ -220,9 +224,9 @@ Case of
 			REDUCE SELECTION:C351([Document:100]; 0)
 		End if 
 	: (ptCurTable=(->[Contact:13]))
-		QUERY:C277([CallReport:34]; [CallReport:34]tableNum:2=13; *)  //customer file number
-		QUERY:C277([CallReport:34];  & [CallReport:34]customerID:1=String:C10([Contact:13]idNum:28))
-		ORDER BY:C49([CallReport:34]; [CallReport:34]dtAction:4; <)
+		QUERY:C277([Call:34]; [Call:34]tableNum:2=13; *)  //customer file number
+		QUERY:C277([Call:34];  & [Call:34]customerID:1=String:C10([Contact:13]idNum:28))
+		ORDER BY:C49([Call:34]; [Call:34]dtAction:4; <)
 		//
 		QUERY:C277([QA:70]; [QA:70]customerID:1=String:C10([Contact:13]idNum:28); *)
 		QUERY:C277([QA:70]; [QA:70]tableNum:11=Table:C252(->[Contact:13]))
@@ -273,12 +277,9 @@ Case of
 	: (ptCurTable=(->[Usage:5]))
 		$EndDate:=Date_ThisMon([Usage:5]periodDate:2; 1)
 		QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Usage:5]itemNum:1; *)
-		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=DateTime_Enter([Usage:5]periodDate:2; ?00:00:00?); *)
-		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15<=DateTime_Enter($EndDate; ?23:59:59?))
-	: (ptCurTable=(->[zzzLead:48]))
-		QUERY:C277([CallReport:34]; [CallReport:34]tableNum:2=Table:C252(ptCurTable); *)
-		QUERY:C277([CallReport:34];  & [CallReport:34]customerID:1=String:C10([zzzLead:48]idNum:32))
-		ORDER BY:C49([CallReport:34]; [CallReport:34]dtAction:4; <)
+		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=DateTime_DTTo([Usage:5]periodDate:2; ?00:00:00?); *)
+		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15<=DateTime_DTTo($EndDate; ?23:59:59?))
+		
 	: (ptCurTable=(->[Payment:28]))
 		QUERY:C277([DCash:62]; [DCash:62]docApply:3=[Payment:28]idNum:8; *)
 		QUERY:C277([DCash:62];  & [DCash:62]tableApply:2="P"+"@")
@@ -287,20 +288,20 @@ Case of
 	: (ptCurTable=(->[QAQuestion:71]))
 		QUERY:C277([QAAnswer:72]; [QAAnswer:72]idNumQAQuestion:1=[QAQuestion:71]idNum:1)
 	: (ptCurTable=(->[Carrier:11]))
-		REDUCE SELECTION:C351([CarrierZone:143]; 0)
-		QUERY:C277([CarrierZone:143]; [CarrierZone:143]idNumCarrier:6=[Carrier:11]idNum:44; *)
+		REDUCE SELECTION:C351([zzzCarrierZone:143]; 0)
+		QUERY:C277([zzzCarrierZone:143]; [zzzCarrierZone:143]idNumCarrier:6=[Carrier:11]idNum:44; *)
 		If (([Carrier:11]siteID:36#"") & (Size of array:C274(<>asiteIDs)>1))
-			QUERY:C277([CarrierZone:143]; [CarrierZone:143]siteID:8=[Carrier:11]siteID:36; *)
+			QUERY:C277([zzzCarrierZone:143]; [zzzCarrierZone:143]siteID:8=[Carrier:11]siteID:36; *)
 		End if 
-		QUERY:C277([CarrierZone:143])
-		ORDER BY:C49([CarrierZone:143]; [CarrierZone:143]zipLow:1)
-		REDUCE SELECTION:C351([CarrierWeight:144]; 0)
-		QUERY:C277([CarrierWeight:144]; [CarrierWeight:144]idNumCarrier:13=[Carrier:11]idNum:44)
-		ORDER BY:C49([CarrierWeight:144]; [CarrierWeight:144]weight:1)
+		QUERY:C277([zzzCarrierZone:143])
+		ORDER BY:C49([zzzCarrierZone:143]; [zzzCarrierZone:143]zipLow:1)
+		REDUCE SELECTION:C351([zzzCarrierWeight:144]; 0)
+		QUERY:C277([zzzCarrierWeight:144]; [zzzCarrierWeight:144]idNumCarrier:13=[Carrier:11]idNum:44)
+		ORDER BY:C49([zzzCarrierWeight:144]; [zzzCarrierWeight:144]weight:1)
 	: (ptCurTable=(->[EventLog:75]))
-		QUERY:C277([WebTempRec:101]; [WebTempRec:101]idEventLog:1=[EventLog:75]idNum:5)
-	: (ptCurTable=(->[SpecialDiscount:44]))  // ### jwm ### 20171219_1447
-		QUERY:C277([ItemDiscount:45]; [ItemDiscount:45]specialDiscountsid:1=[SpecialDiscount:44]idNum:4)
+		QUERY:C277([zzzWebTempRec:101]; [zzzWebTempRec:101]idEventLog:1=[EventLog:75]idNum:5)
+	: (ptCurTable=(->[ItemCatalog:44]))  // ### jwm ### 20171219_1447
+		QUERY:C277([ItemCatalogLine:45]; [ItemCatalogLine:45]specialDiscountsid:1=[ItemCatalog:44]idNum:4)
 		
 End case 
 

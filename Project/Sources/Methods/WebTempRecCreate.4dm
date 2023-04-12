@@ -15,8 +15,8 @@
 CREATE RECORD:C68([WebTempRec:101])
 [WebTempRec:101]idEventLog:1:=[EventLog:75]id:54
 [WebTempRec:101]itemNum:3:=[Item:4]itemNum:1
-[WebTempRec:101]dtCreated:16:=DateTime_Enter
-[WebTempRec:101]dtUpdated:17:=DateTime_Enter
+[WebTempRec:101]dtCreated:16:=DateTime_DTTo
+[WebTempRec:101]dtUpdated:17:=DateTime_DTTo
 [WebTempRec:101]description:15:=[Item:4]description:7
 [WebTempRec:101]mfrItemNum:26:=[Item:4]mfrItemNum:39
 [WebTempRec:101]mfrID:22:=[Item:4]mfrID:53

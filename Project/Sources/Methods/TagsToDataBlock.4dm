@@ -56,7 +56,7 @@ Repeat
 			// $textOut:=$textOut+$textWorking // this is done at the end
 			$endLoop:=True:C214  // drop out
 			If (<>viDebugMode>410)
-				ConsoleMessage("No 'jj' end to tag: "+$textWorking)
+				ConsoleLog("No 'jj' end to tag: "+$textWorking)
 			End if 
 		Else 
 			// there is an end tag

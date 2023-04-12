@@ -34,7 +34,7 @@ Case of
 		
 	: ((<>vControlProcess="WorkOrder Transfers") | ($vTaskName="WorkOrder Transfers"))
 		C_LONGINT:C283($dtcurrent)
-		$dtcurrent:=DateTime_Enter
+		$dtcurrent:=DateTime_DTTo
 		CREATE EMPTY SET:C140([WorkOrder:66]; "Current")
 		READ ONLY:C145([Employee:19])
 		READ ONLY:C145([Item:4])

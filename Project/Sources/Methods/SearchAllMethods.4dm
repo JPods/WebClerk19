@@ -32,7 +32,7 @@ vText1:=""
 vtRequest:=Request:C163("Enter Text To search For")
 
 If (vtRequest#"")
-	ConsoleMessage(vtRequest+": Query Structure")
+	ConsoleLog(vtRequest+": Query Structure")
 	vText:="@"+vtRequest+"@"
 	//METHOD GET PATHS(Path Project method;vfileNames_at)
 	METHOD GET PATHS:C1163(Path all objects:K72:16; vfileNames_at)  //Path project form
@@ -67,7 +67,7 @@ If (vtRequest#"")
 	
 	If (vText1#"")
 		//SET TEXT TO PASTEBOARD(vText1)
-		ConsoleMessage(vText1)
+		ConsoleLog(vText1)
 		METHOD SET CODE:C1194("SearchAllMethodResults"; vText1)
 		//ALERT("Results copied to Clipboard")
 	Else 

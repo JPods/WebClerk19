@@ -1,0 +1,704 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #8",
+	"markerBody": 568,
+	"markerBreak": 568,
+	"markerFooter": 585,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Text_UniqueID_1": {
+					"type": "text",
+					"top": 22,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "UniqueID"
+				},
+				"_Text_Command_2": {
+					"type": "text",
+					"top": 45,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Command"
+				},
+				"_Text_Parent_3": {
+					"type": "text",
+					"top": 68,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Parent"
+				},
+				"UniqueID": {
+					"type": "input",
+					"top": 20,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "[Menu:107]idNum:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Command": {
+					"type": "input",
+					"top": 43,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "[Menu:107]command:2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Parent": {
+					"type": "input",
+					"top": 66,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "[Menu:107]parentid:4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_QQQMenu_Style_7": {
+					"type": "input",
+					"top": 89,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "entry_o.Style",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]Style:8"
+				},
+				"_PROP_QQQMenu_Target_8": {
+					"type": "input",
+					"top": 112,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "entry_o.Target",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]Target:7"
+				},
+				"_PROP_QQQMenu_Sequence_9": {
+					"type": "input",
+					"top": 135,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "entry_o.Sequence",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]Sequence:5"
+				},
+				"Command1": {
+					"type": "input",
+					"top": 158,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "[Menu:107]childValue:6",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Parent1": {
+					"type": "input",
+					"top": 181,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "[Menu:107]rootType:9",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_Menu_mfrid_12": {
+					"type": "input",
+					"top": 204,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "entry_o.mfrid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Menu:107]mfrid:10"
+				},
+				"_PROP_QQQMenu_ImagePath_13": {
+					"type": "input",
+					"top": 227,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "entry_o.ImagePath",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]ImagePath:12"
+				},
+				"_PROP_QQQMenu_PriceModifier_14": {
+					"type": "input",
+					"top": 250,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "entry_o.PriceModifier",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]PriceModifier:14"
+				},
+				"Command2": {
+					"type": "input",
+					"top": 273,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "[Menu:107]costModifier:15",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Parent2": {
+					"type": "input",
+					"top": 296,
+					"left": 267,
+					"width": 467,
+					"height": 17,
+					"dataSource": "[Menu:107]priceMatrixid:16",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_QQQMenu_KeyText_17": {
+					"type": "input",
+					"top": 329,
+					"left": 267,
+					"width": 467,
+					"height": 30,
+					"dataSource": "entry_o.KeyText",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]KeyText:17"
+				},
+				"_PROP_QQQMenu_Comment_18": {
+					"type": "input",
+					"top": 371,
+					"left": 267,
+					"width": 467,
+					"height": 84,
+					"dataSource": "entry_o.Comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]Comment:11"
+				},
+				"_PROP_QQQMenu_Script_19": {
+					"type": "input",
+					"top": 467,
+					"left": 267,
+					"width": 721,
+					"height": 222,
+					"dataSource": "entry_o.Script",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQMenu:107]Script:19"
+				},
+				"_Text_Style_20": {
+					"type": "text",
+					"top": 91,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Style"
+				},
+				"_Text_Target_21": {
+					"type": "text",
+					"top": 114,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Target"
+				},
+				"_Text_Sequence_22": {
+					"type": "text",
+					"top": 137,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sequence"
+				},
+				"_VAR_b1_23": {
+					"type": "button",
+					"top": 128,
+					"left": 17,
+					"width": 126,
+					"height": 26,
+					"dataSource": "b1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Show Parent",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable46.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b2_24": {
+					"type": "button",
+					"top": 160,
+					"left": 17,
+					"width": 126,
+					"height": 26,
+					"dataSource": "b2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Show Siblings",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable20.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b3_25": {
+					"type": "button",
+					"top": 191,
+					"left": 17,
+					"width": 126,
+					"height": 27,
+					"dataSource": "b3",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Show Children",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable21.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_ChildValue_26": {
+					"type": "text",
+					"top": 160,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ChildValue"
+				},
+				"_Text_Root_27": {
+					"type": "text",
+					"top": 183,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Root"
+				},
+				"_Text_mfrID_28": {
+					"type": "text",
+					"top": 206,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "mfrID"
+				},
+				"_Text_ImagePath_29": {
+					"type": "text",
+					"top": 229,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ImagePath"
+				},
+				"_Text_PriceModifier_30": {
+					"type": "text",
+					"top": 252,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PriceModifier"
+				},
+				"_Text_CostModifier_31": {
+					"type": "text",
+					"top": 275,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CostModifier"
+				},
+				"_Text_PriceMatrix_32": {
+					"type": "text",
+					"top": 298,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PriceMatrix"
+				},
+				"_Text_KeyworkdText_33": {
+					"type": "text",
+					"top": 331,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "KeyworkdText"
+				},
+				"_Text_Comment_34": {
+					"type": "text",
+					"top": 373,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Comment"
+				},
+				"_Text_Script_35": {
+					"type": "text",
+					"top": 470,
+					"left": 152,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Script"
+				},
+				"_VAR_<>pNavPallet_36": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_37": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_38": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_39": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_40": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_41": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

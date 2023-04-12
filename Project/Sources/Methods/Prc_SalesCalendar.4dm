@@ -15,8 +15,8 @@
 //C_LONGINT($found)
 //$found:=Prs_CheckRunnin("MySales")
 //If ($found>0)
-//If (Frontmost process#<>aPrsNum{$found})
-//BRING TO FRONT(<>aPrsNum{$found})
+//BRING TO FRONT($found)
+//
 //End if 
 //Else 
 

@@ -18,7 +18,7 @@ If (Form:C1466.PopupChoiceCurrent.id#Null:C1517)
 	$obStatus:=$obRec.drop()
 	Case of 
 		: ($obStatus.success)
-			ConsoleMessage("You have dropped PopupChoice "+Form:C1466.PopupChoiceCurrent.choice)  //The dropped entity remains in memory
+			ConsoleLog("You have dropped PopupChoice "+Form:C1466.PopupChoiceCurrent.choice)  //The dropped entity remains in memory
 			Form:C1466.cPopupChoice.remove(Form:C1466.PopupChoicePosition-1)
 		: ($obStatus.status=dk status stamp has changed:K85:20)
 			ALERT:C41($status.statusText)

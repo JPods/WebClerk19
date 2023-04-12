@@ -27,7 +27,7 @@ MESSAGES OFF:C175
 C_TEXT:C284($vtList; $vtName)
 $vtList:=SelectList_Declare
 C_COLLECTION:C1488($vcPopups)
-$vcPopups:=Split string:C1554($vtList; ",")
+$vcPopups:=Split string:C1554($vtList; ";")
 For each ($vtName; $vcPopups)
 	SelectList_Init($vtName)
 End for each 
@@ -50,7 +50,7 @@ If (False:C215)
 		End if 
 		
 		
-		ConsoleMessage([PopUp:23]arrayName:3)
+		ConsoleLog([PopUp:23]arrayName:3)
 		
 		
 		$lenRay:=40
@@ -282,7 +282,7 @@ If (False:C215)
 				C_POINTER:C301(ptPopRay)
 				
 				ptPopRay:=$ptPopRay
-				ConsoleMessage("If ($k>120) ")
+				ConsoleLog("If ($k>120) ")
 				//  ALL SUBRECORDS([PopUp]Choices)
 				//List_LoadFrom([PopUp]arrayName; ptPopRay; 1)
 				
@@ -292,7 +292,7 @@ If (False:C215)
 			$ptPopRay->{1}:=[PopUp:23]listName:4
 			$ptPopRay->:=1
 			If (<>VIDEBUGMODE>410)
-				ConsoleMessage([PopUp:23]listName:4+": "+String:C10(error))
+				ConsoleLog([PopUp:23]listName:4+": "+String:C10(error))
 			End if 
 			
 			// special handling of any popup list

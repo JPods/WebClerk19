@@ -6,7 +6,7 @@ $MinTimeOut:=$1
 C_LONGINT:C283($index)
 C_LONGINT:C283($dtTimeOut)
 
-$dtTimeOut:=DateTime_Enter-($MinTimeOut*60)
+$dtTimeOut:=DateTime_DTTo-($MinTimeOut*60)
 For ($index; 1; Size of array:C274(<>aPrsDTActiv))
 	If (<>aPrsDTActiv{$index}<$dtTimeOut)
 		<>vbInActive:=True:C214

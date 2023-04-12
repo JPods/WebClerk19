@@ -1,0 +1,85 @@
+﻿{"destination":"detailScreen","rightMargin":19,"bottomMargin":20,"markerBody":217,"markerBreak":217,"markerFooter":227,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onDragOver","onPrintingDetail","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onLoadRecord","onAfterEdit","onBeginDragOver","onBoundVariableChange","onPageChange"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"Text7":{"type":"text","top":93,"left":24,"width":525,"height":25,"sizingX":"grow","stroke":"#000000","fontSize":18,"text":"zzMIL_WindowCodes"},"Line8":{"type":"line","top":77,"left":19,"width":654,"sizingX":"grow"},"Text9":{"type":"text","top":126,"left":186,"width":148,"height":15,"textAlign":"right","fontFamily":"Lucida Grande","fontSize":12,"text":"WindowcodeID : "},"Text10":{"type":"text","top":151,"left":186,"width":148,"height":15,"textAlign":"right","fontFamily":"Lucida Grande","fontSize":12,"text":"WindowCategoryID : "},"Text11":{"type":"text","top":176,"left":186,"width":148,"height":15,"textAlign":"right","fontFamily":"Lucida Grande","fontSize":12,"text":"WindowCodeDescription : "},"Text12":{"type":"text","top":201,"left":186,"width":148,"height":15,"textAlign":"right","fontFamily":"Lucida Grande","fontSize":12,"text":"DrawingNo : "},"WindowcodeID":{"type":"input","top":126,"left":339,"width":80,"height":14,"dataSource":"[ServerLog:128]DateSignOff:1","dataSourceTypeHint":"date","textAlign":"left","fontFamily":"Lucida Grande","fontSize":12,"fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"WindowCategoryID":{"type":"input","top":151,"left":339,"width":80,"height":14,"dataSource":"[ServerLog:128]ConnectionID:2","dataSourceTypeHint":"integer","textAlign":"left","fontFamily":"Lucida Grande","fontSize":12,"fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"WindowCodeDescription":{"type":"input","top":176,"left":341,"width":306,"height":14,"dataSource":"[ServerLog:128]DateSignOn:3","dataSourceTypeHint":"date","textAlign":"left","fontFamily":"Lucida Grande","fontSize":12,"fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"DrawingNo":{"type":"input","top":201,"left":339,"width":80,"height":14,"dataSource":"[ServerLog:128]UserID:4","dataSourceTypeHint":"integer","textAlign":"left","fontFamily":"Lucida Grande","fontSize":12,"fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{"objects":["Text7","Line8"]},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}},"geometryStamp":1,"$4d":{"version":"1","kind":"form"}}

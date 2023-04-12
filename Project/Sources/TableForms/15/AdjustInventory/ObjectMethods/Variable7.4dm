@@ -35,7 +35,7 @@ Case of
 		End if 
 		If (OK=1)
 			$theLocation:=-1112
-			$BomID:=-DateTime_Enter
+			$BomID:=-DateTime_DTTo
 			C_LONGINT:C283($BomID)
 			C_REAL:C285($unitCost)
 			

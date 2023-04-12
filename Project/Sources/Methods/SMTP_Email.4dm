@@ -27,18 +27,18 @@ Else
 		End if 
 	End if 
 	If (<>viDeBugMode>0)
-		ConsoleMessage("launch")
+		ConsoleLog("launch")
 	End if 
 	If (False:C215)
 		//use this procedure to locate attachments
 		vtEmailSubject:="This is the subject"
-		vtEmailBody:=[UserReport:46]Template:7
+		vtEmailBody:=[UserReport:46]template:7
 		vtEmailSender:="bill@wineops.com"
 		vtEmailSenderID:="employeeID"
 		vtEmailPath:=""
 		myDocName:=UtilDocumentLocate
 		vtEmailPath:=myDocName
-		vtEmailReceiver:="1"+[QQQCustomer:2]fax:66+"@maxemail.com"
+		vtEmailReceiver:="1"+[Customer:2]fax:66+"@maxemail.com"
 	End if 
 	
 	ARRAY TEXT:C222(aTCP; 7)
@@ -57,8 +57,8 @@ Else
 	$ptFile:=Table:C252([UserReport:46]tableNum:3)
 	If (vHere>1)  // if the current record is not to change
 		
-		If (([UserReport:46]ScriptExecute:4) & ([UserReport:46]ScriptBegin:5#""))  // once per session
-			ExecuteText(0; [UserReport:46]ScriptBegin:5)
+		If (([UserReport:46]scriptExecute:4) & ([UserReport:46]scriptBegin:5#""))  // once per session
+			ExecuteText(0; [UserReport:46]scriptBegin:5)
 		End if 
 		
 		///  zzzqqq
@@ -69,10 +69,10 @@ Else
 		SMTP_SendMsg
 		
 		If (<>viDeBugMode>0)
-			ConsoleMessage("[UserReport]ScriptEnd_20: "+Substring:C12([UserReport:46]ScriptEnd:38; 1; 20))
+			ConsoleLog("[UserReport]ScriptEnd_20: "+Substring:C12([UserReport:46]scriptEnd:38; 1; 20))
 		End if 
-		If ([UserReport:46]ScriptEnd:38#"")  // once per session
-			ExecuteText(0; [UserReport:46]ScriptEnd:38)
+		If ([UserReport:46]scriptEnd:38#"")  // once per session
+			ExecuteText(0; [UserReport:46]scriptEnd:38)
 		End if 
 	Else 
 		//TRACE

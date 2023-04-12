@@ -16,8 +16,8 @@ Case of
 		
 		
 		vScript:="QUERY([dInventory];[dInventory]typeID=\"PO\";*)"
-		vScript:=vScript+"QUERY([dInventory]; & ;[dInventory]docID="+String:C10([PO:39]poNum:5)+")"
-		ProcessTableOpen(Table:C252(->[DInventory:36]); vScript; "PO "+String:C10([PO:39]poNum:5))
+		vScript:=vScript+"QUERY([dInventory]; & ;[dInventory]docID="+String:C10([PO:39]idNum:5)+")"
+		ProcessTableOpen(Table:C252(->[DInventory:36]); vScript; "PO "+String:C10([PO:39]idNum:5))
 		
 		
 	: (vText11="Show dInventory")
@@ -26,8 +26,8 @@ Case of
 		CONFIRM:C162("Rebuild POLines from [dInventory]?")
 		If (OK=1)
 			
-			QUERY:C277([DInventory:36]; [DInventory:36]typeid:14="PO"; *)
-			QUERY:C277([DInventory:36];  & ; [DInventory:36]docid:9=[PO:39]poNum:5)
+			QUERY:C277([DInventory:36]; [DInventory:36]typeID:14="PO"; *)
+			QUERY:C277([DInventory:36];  & ; [DInventory:36]idNumDoc:9=[PO:39]idNum:5)
 			vi2:=Records in selection:C76([DInventory:36])
 			FIRST RECORD:C50([DInventory:36])
 			vi4:=Size of array:C274(aPoItemNum)
@@ -39,31 +39,31 @@ Case of
 					vi5:=vi5+1
 					
 					CREATE RECORD:C68([POLine:40])
-					[POLine:40]poNum:1:=[PO:39]poNum:5
+					[POLine:40]idNumPO:1:=[PO:39]idNum:5
 					[POLine:40]itemNum:2:=[DInventory:36]itemNum:1
 					QUERY:C277([Item:4]; [Item:4]itemNum:1=[DInventory:36]itemNum:1)
 					
 					[POLine:40]vendorID:24:=[PO:39]vendorID:1
 					[POLine:40]refVendor:23:=[PO:39]vendorCompany:39
-					[POLine:40]qtyOrdered:3:=[DInventory:36]qtyOnPo:4
+					[POLine:40]qty:3:=[DInventory:36]qtyOnPo:4
 					[POLine:40]qtyReceived:4:=0
-					[POLine:40]qtyBackLogged:5:=[POLine:40]qtyOrdered:3
+					[POLine:40]qtyBackLogged:5:=[POLine:40]qty:3
 					[POLine:40]description:6:=[Item:4]description:7
 					[POLine:40]unitCost:7:=[DInventory:36]unitCost:7
 					[POLine:40]discount:8:=0
-					[POLine:40]extendedCost:9:=Round:C94([POLine:40]unitCost:7*[POLine:40]qtyOrdered:3; 2)
+					[POLine:40]extendedCost:9:=Round:C94([POLine:40]unitCost:7*[POLine:40]qty:3; 2)
 					[POLine:40]vaTax:10:=0
-					[POLine:40]taxid:11:=""
-					[POLine:40]unitofMeasure:12:=[Item:4]unitofMeasure:11
+					[POLine:40]taxJuris:11:=""
+					[POLine:40]unitofMeasure:12:=[Item:4]unitOfMeasure:11
 					[POLine:40]backOrderAmount:13:=[POLine:40]extendedCost:9
 					[POLine:40]lineNum:14:=vi5
 					[POLine:40]dateExpected:15:=[PO:39]dateOrdered:2
-					[POLine:40]orderNum:16:=[PO:39]orderNum:18
+					[POLine:40]idNumOrder:16:=[PO:39]idNumOrder:18
 					[POLine:40]siteAdder:26:=0
 					[POLine:40]unitWt:29:=[Item:4]weightAverage:8
 					[POLine:40]dateReceived:17:=!00-00-00!
-					[POLine:40]serialNum:19:=""
-					[POLine:40]altItemNum:20:=[Item:4]vendorItemNum:40
+					[POLine:40]obSerial:19:=Null:C1517
+					[POLine:40]itemNumAlt:20:=[Item:4]vendorItemNum:40
 					
 					[POLine:40]serialRc:18:=0
 					[POLine:40]refCustomer:22:=[PO:39]customerPo:34
@@ -81,7 +81,7 @@ Case of
 			End for 
 			ALERT:C41("POLines Added :"+String:C10(vi5-vi4))
 			REDUCE SELECTION:C351([DInventory:36]; 0)
-			vi6:=[PO:39]poNum:5
+			vi6:=[PO:39]idNum:5
 			CANCEL:C270
 		End if 
 		//vScript:="QUERY([PO];[PO]PONum="+String(vi6)+")"
@@ -95,18 +95,18 @@ Case of
 			FIRST RECORD:C50([PO:39])
 			CREATE EMPTY SET:C140([PO:39]; "Current")
 			For (vi1; 1; vi2)
-				QUERY:C277([DInventory:36]; [DInventory:36]typeid:14="PO"; *)
-				QUERY:C277([DInventory:36];  & ; [DInventory:36]docid:9=[PO:39]poNum:5)
+				QUERY:C277([DInventory:36]; [DInventory:36]typeID:14="PO"; *)
+				QUERY:C277([DInventory:36];  & ; [DInventory:36]idNumDoc:9=[PO:39]idNum:5)
 				vi5:=Records in selection:C76([DInventory:36])
 				
-				QUERY:C277([POLine:40]; [POLine:40]poNum:1=[PO:39]poNum:5)
+				QUERY:C277([POLine:40]; [POLine:40]idNumPO:1=[PO:39]idNum:5)
 				vi6:=Records in selection:C76([POLine:40])
 				vi7:=vi5-vi6
 				If (vi7=0)
-					ConsoleMessage("PO: "+String:C10([PO:39]poNum:5)+" matched with lines: "+String:C10(vi7))
+					ConsoleLog("PO: "+String:C10([PO:39]idNum:5)+" matched with lines: "+String:C10(vi7))
 				Else 
 					ADD TO SET:C119([PO:39]; "Current")
-					ConsoleMessage("PO: "+String:C10([PO:39]poNum:5)+" mismatches with POlines/dInventory: "+String:C10(vi5)+"/"+String:C10(vi6))
+					ConsoleLog("PO: "+String:C10([PO:39]idNum:5)+" mismatches with POlines/dInventory: "+String:C10(vi5)+"/"+String:C10(vi6))
 				End if 
 				NEXT RECORD:C51([DInventory:36])
 			End for 

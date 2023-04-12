@@ -6,7 +6,7 @@ If (Application type:C494#4D Server:K5:6)
 	If (Count parameters:C259=1)
 		$tableNum:=1
 	Else 
-		ALL RECORDS:C47([QQQCustomer:2])
+		ALL RECORDS:C47([Customer:2])
 		$tableNum:=2
 	End if 
 	
@@ -17,5 +17,5 @@ If (Application type:C494#4D Server:K5:6)
 	//Repeat 
 	//DELAY PROCESS(Current process;60)
 	//Until (<>prcControl=0)
-	//Prs_ListActive 
+	//Process_ListActive 
 End if 

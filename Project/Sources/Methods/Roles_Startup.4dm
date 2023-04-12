@@ -19,7 +19,7 @@ C_TEXT:C284($tableName)
 C_OBJECT:C1216($voFormFields)
 C_OBJECT:C1216($voListFields)
 C_LONGINT:C283($incSel; $cntSel)
-$vEntFieldChars:=ds:C1482.FieldCharacteristic.query("purpose = @List@")
+$vEntFieldChars:=ds:C1482.FC.query("purpose = @List@")
 
 If ($vEntFieldChars.length=0)
 	//WCapi_FieldList_Create
@@ -43,7 +43,7 @@ C_TEXT:C284($vtRework)
 For each ($vtRole; $vcDistinctRoles)
 	$voFormFields:=New object:C1471
 	$voListFields:=New object:C1471
-	$vEntFieldChars:=ds:C1482.FieldCharacteristic.query("purpose = :1 "; "@List_"+$vtRole)
+	$vEntFieldChars:=ds:C1482.FC.query("purpose = :1 "; "@List_"+$vtRole)
 	For each ($voRec; $vEntFieldChars)  // loop through the List records
 		$tableName:=$voRec.tableName
 		If ($voRec.obGeneral.data#Null:C1517)
@@ -67,7 +67,7 @@ For each ($vtRole; $vcDistinctRoles)
 	voFieldsByRole[$vtRole].form:=$voFormFields
 End for each 
 
-$vEntFieldChars:=ds:C1482.FieldCharacteristic.query("purpose = :1 "; "minRole")
+$vEntFieldChars:=ds:C1482.FC.query("purpose = :1 "; "minRole")
 If ($vEntFieldChars.length=0)
 	$vtTables:="Customers,Contacts,Orders,OrderLines,Invoices,InvoiceLines,Payments,Ledgers,Items;Proposals;ProposalLines;RemoteUsers,Objectives,Projects,WorkOrders,QAQuestions,QAAnswers;QACustomers,Service"
 	//TRACE

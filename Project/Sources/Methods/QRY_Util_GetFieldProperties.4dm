@@ -3,11 +3,11 @@
 
 
 // 4D_25Invoice - 2022-01-15
-//This Method is a Wrapper, which is used in order to wait for a future ORDA capability to deliver directlty these informations
+  //This Method is a Wrapper, which is used in order to wait for a future ORDA capability to deliver directlty these informations
 
-var $fFound; $fLength; $fNum; $fType; $tFound; $tNum : Integer
-var $fIndexed; $fInvisible; $fUnique : Boolean
-var $1; $2; $dataClassName; $fieldName : Text
+C_LONGINT:C283($fFound;$tFound;$fNum;$tNum;$fType;$fLength)
+C_BOOLEAN:C305($fIndexed;$fUnique;$fInvisible)
+C_TEXT:C284($dataClassName;$fieldName)
 
 $dataClassName:=$1
 $fieldName:=$2
@@ -17,14 +17,14 @@ $result:=New object:C1471
 If (True:C214)  //new way using ORDA
 	$property:=ds:C1482[$dataclassname][$fieldname]
 	If ($property#Null:C1517)
-		$types:=New collection:C1472("string"; "number"; "string"; "image"; "date"; ""; "bool"; ""; "number"; "number"; ""; "date"; "variant")  //From 0 to 12, numbers are contiguous
+		$types:=New collection:C1472("string";"number";"string";"image";"date";"";"bool";"";"number";"number";"";"date";"variant")  //From 0 to 12, numbers are contiguous
 		$types[Is string var:K8:2]:="string"
 		$types[Is integer 64 bits:K8:25]:="number"
 		$types[Is BLOB:K8:12]:="blob"
 		$types[Is object:K8:27]:="object"
 		$types[Is collection:K8:32]:="42"
 		$types[Is null:K8:31]:=""
-		//Storage attributes can be "number", "date", "object", "bool", "image", "blob", or "string"
+		  //Storage attributes can be "number", "date", "object", "bool", "image", "blob", or "string"
 		
 		$result.typeL:=$property.fieldType
 		$result.length:=0  //We don't need it now
@@ -38,12 +38,12 @@ If (True:C214)  //new way using ORDA
 Else   //Classic way. Compare the size of the code...
 	If ($dataClassName#"")
 		If ($fieldName#"")
-			$pos:=Position:C15("."; $fieldName)
+			$pos:=Position:C15(".";$fieldName)
 			If ($pos>0)
-				$fieldName:=Substring:C12($fieldName; 1; $pos-1)
+				$fieldName:=Substring:C12($fieldName;1;$pos-1)
 			End if 
 			$tFound:=0
-			For ($tNum; 1; Get last table number:C254)
+			For ($tNum;1;Get last table number:C254)
 				If (Is table number valid:C999($tNum))
 					If (Table name:C256($tNum)=$dataClassName)
 						$tFound:=$tNum
@@ -53,9 +53,9 @@ Else   //Classic way. Compare the size of the code...
 			End for 
 			If ($tFound>0)
 				$fFound:=0
-				For ($fNum; 1; Get last field number:C255($tFound))
-					If (Is field number valid:C1000($tFound; $fNum))
-						If (Field name:C257($tFound; $fNum)=$fieldName)
+				For ($fNum;1;Get last field number:C255($tFound))
+					If (Is field number valid:C1000($tFound;$fNum))
+						If (Field name:C257($tFound;$fNum)=$fieldName)
 							$fFound:=$fNum
 							$fNum:=Get last field number:C255($tFound)
 						End if 
@@ -63,7 +63,7 @@ Else   //Classic way. Compare the size of the code...
 				End for 
 			End if 
 			If ($fFound>0)
-				GET FIELD PROPERTIES:C258($tFound; $fFound; $fType; $fLength; $fIndexed; $fUnique; $fInvisible)
+				GET FIELD PROPERTIES:C258($tFound;$fFound;$fType;$fLength;$fIndexed;$fUnique;$fInvisible)
 				$result.typeL:=$fType
 				$result.length:=$fLength
 				$result.indexed:=$fIndexed
@@ -92,7 +92,7 @@ Else   //Classic way. Compare the size of the code...
 						$result.typeS:="collection"
 						
 					Else 
-						//Is null or not handled
+						  //Is null or not handled
 						$result.typeS:="null"
 				End case 
 			End if 

@@ -11,10 +11,10 @@ var $1; process_o; $selection_o : Object
 process_o:=$1
 process_o.user:=Storage:C1525.user
 var $vtScript; tableName : Text
-If (process_o.tableName=Null:C1517)
+If (process_o.dataClassName=Null:C1517)
 	tableName:=""
 Else 
-	tableName:=process_o.tableName
+	tableName:=process_o.dataClassName
 End if 
 If (process_o.task#Null:C1517)
 	Case of 
@@ -26,7 +26,7 @@ If (process_o.task#Null:C1517)
 			$vtEchoedText:=ExecuteScript(process_o.script)
 			
 	End case 
-	//Prs_ListActive  // get rid of this
+	//Process_ListActive  // get rid of this
 	
 	var $obWindows : Object
 	$obWindows:=WindowCountToShow

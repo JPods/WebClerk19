@@ -15,8 +15,8 @@ C_TEXT:C284($1; $action)
 $action:=$1
 // ### bj ### 20201127_2203
 CREATE RECORD:C68([WorkOrderEvent:121])
-[WorkOrderEvent:121]woNum:5:=[WorkOrder:66]woNum:29
-[WorkOrderEvent:121]timeOrig:2:=DateTime_Enter
+[WorkOrderEvent:121]woNum:5:=[WorkOrder:66]idNum:29
+[WorkOrderEvent:121]timeOrig:2:=DateTime_DTTo
 [WorkOrderEvent:121]table1id:10:=[WorkOrder:66]id:66
 [WorkOrderEvent:121]table1:6:="WorkOrder"
 //[WorkOrderEvent]Lat:=[WorkOrder]lat

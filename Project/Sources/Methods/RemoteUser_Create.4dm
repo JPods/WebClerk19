@@ -30,7 +30,7 @@ $rec_ent:=ds:C1482.RemoteUser.new()
 $rec_ent.dateCreated:=Current date:C33
 
 $rec_ent.userPassword:=$passWord
-$rec_ent.dtLastVisit:=DateTime_Enter
+$rec_ent.dtLastVisit:=DateTime_DTTo
 If ($securityLevel<1)
 	$rec_ent.securityLevel:=1
 Else 
@@ -57,21 +57,6 @@ Case of
 		$rec_ent.save()
 		[Customer:2]remoteUser:84:=True:C214
 		SAVE RECORD:C53([Customer:2])
-	: ($1=(->[zzzLead:48]))
-		[zzzLead:48]email:33:=[zzzLead:48]email:33
-		If ([zzzLead:48]email:33#"")
-			$userName:=[zzzLead:48]email:33
-		End if 
-		$rec_ent.userName:=$userName
-		$rec_ent.domain:=[zzzLead:48]domain:46
-		$rec_ent.email:=[zzzLead:48]email:33
-		$rec_ent.tableNum:=Table:C252(->[zzzLead:48])
-		$rec_ent.customerID:=String:C10([zzzLead:48]idNum:32)
-		$rec_ent.company:=[zzzLead:48]company:5
-		$rec_ent.idPrimary:=[zzzLead:48]id:60
-		$rec_ent.save()
-		[zzzLead:48]remoteUser:44:=True:C214
-		SAVE RECORD:C53([zzzLead:48])
 	: ($1=(->[Rep:8]))
 		[Rep:8]email:22:=[Rep:8]email:22
 		If ([Rep:8]email:22#"")
@@ -81,9 +66,9 @@ Case of
 		$rec_ent.domain:=[Rep:8]domain:30
 		$rec_ent.email:=[Rep:8]email:22
 		$rec_ent.tableNum:=Table:C252(->[Rep:8])
-		$rec_ent.customerID:=[Rep:8]RepID:1
+		$rec_ent.customerID:=[Rep:8]repID:1
 		$rec_ent.company:=[Rep:8]company:2
-		$rec_ent.keyTags:=[Rep:8]RepID:1
+		$rec_ent.keyTags:=[Rep:8]repID:1
 		$rec_ent.role:=[Rep:8]nameFirst:25
 		$rec_ent.idPrimary:=[Rep:8]id:48
 		$rec_ent.save()

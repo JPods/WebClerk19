@@ -211,7 +211,7 @@ Case of
 					[GenericChild1:90]a04:43:=$vtField
 					[GenericChild1:90]d01:24:=Current date:C33
 					[GenericChild1:90]h01:30:=Current time:C178
-					[GenericChild1:90]dt01:34:=DateTime_Enter
+					[GenericChild1:90]dt01:34:=DateTime_DTTo
 					[GenericChild1:90]templateName:57:="CustomField"
 					
 					SAVE RECORD:C53([GenericChild1:90])

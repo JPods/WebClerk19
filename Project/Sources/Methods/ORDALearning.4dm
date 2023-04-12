@@ -22,12 +22,6 @@ For each ($entity; $objSelection)
 	$entity.save()
 End for each 
 
-// two entities pointing to the same record
-// Entities are references to specific records
-C_OBJECT:C1216($objOrders1; $objOrders2)
-$objOrders1:=ds:C1482.Order.getKey(101)
-// get Order object where OrderNum = 1
-$objOrders2:=ds:C1482.Order.getKey(101)
 
 
 C_OBJECT:C1216($entCustomers; $ent2Customers)

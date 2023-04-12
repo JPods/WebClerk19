@@ -61,7 +61,7 @@
 // lang:="us"
 // $suffix:=""
 // End case 
-// vlBeenHere:=DateTime_Enter 
+// vlBeenHere:=DateTime_DTTo 
 // C_REAL(vValueBonus)
 // vValueBonus:=[EventLog]ValueBonus
 // If ([EventLog]eventID#0)
@@ -226,7 +226,7 @@
 // End if 
 //   //
 // C_LONGINT(vlBeenHere)
-// vlBeenHere:=DateTime_Enter 
+// vlBeenHere:=DateTime_DTTo 
 // $theTarget:=""
 // Case of 
 // : ($num>1)

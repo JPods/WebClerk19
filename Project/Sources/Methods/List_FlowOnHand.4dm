@@ -82,11 +82,11 @@ Else
 		$i:=$i+1
 		$e:=$e+1
 		aLsDocType{$e}:="WO"
-		aLsItemNum{$e}:=String:C10([WorkOrder:66]woNum:29; "0000-0000")
+		aLsItemNum{$e}:=String:C10([WorkOrder:66]idNum:29; "0000-0000")
 		aLsItemDesc{$e}:=[WorkOrder:66]activity:7  //vendor
 		aLsQtyOH{$e}:=[WorkOrder:66]qtyOrdered:13
 		aLsQtyPO{$e}:=Round:C94([WorkOrder:66]unitCost:19; <>tcDecimalUP)
-		jDateTimeRecov([WorkOrder:66]dtAction:5; ->aLsDate{$e})
+		DateTime_DTFrom([WorkOrder:66]dtAction:5; ->aLsDate{$e})
 		aLsText1{$e}:=[WorkOrder:66]actionBy:8  //ref cust
 		aLsSrRec{$e}:=-1  //Record number([Item])
 		//

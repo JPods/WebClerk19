@@ -25,7 +25,7 @@ If (Field name:C257($1)="DT@")
 		Else 
 			$theTime:=?00:00:00?
 		End if 
-		$1->:=DateTime_Enter($theDate; $theTime)
+		$1->:=DateTime_DTTo($theDate; $theTime)
 	Else 
 		$1->:=Num:C11($2)
 	End if 

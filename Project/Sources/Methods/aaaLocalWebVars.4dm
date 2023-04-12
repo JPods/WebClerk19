@@ -12,7 +12,7 @@ C_BLOB:C604(vUpLoadBlob)
 C_DATE:C307(vTmpDateBeg; vTmpDateEnd)
 C_TEXT:C284(tcCheckOutPath)
 C_TEXT:C284(vWebClerkPath)
-C_TEXT:C284(<>tcServerFarm)
+
 
 ccWebNum:=<>ccWebNum
 ccWebDate:=<>ccWebDate

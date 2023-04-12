@@ -10,7 +10,7 @@ C_BOOLEAN:C305($0; $1)
 C_LONGINT:C283($totalPrec)
 
 If (<>viDebugMode>410)
-	ConsoleMessage("CalcPO")
+	ConsoleLog("CalcPO")
 End if 
 Case of 
 	: ((<>tcMONEYCHAR=strCurrency) | ([PO:39]exchangeRate:45=0) | (<>tcMONEYCHAR=""))

@@ -15,7 +15,7 @@ C_POINTER:C301($1)
 C_BOOLEAN:C305($0; $accessAllowed)
 $accessAllowed:=True:C214
 Case of 
-	: ($1=(->[Control:1]))
+	: ($1=(->[Base:1]))
 		
 		//
 	: ($1=(->[Invoice:26]))
@@ -51,7 +51,7 @@ Case of
 		//
 	: ($1=(->[Employee:19]))
 		
-	: (($1=(->[SyncRecord:109])) | ($1=(->[SyncRelation:103])) | ($1=(->[SyncMap:112])) | ($1=(->[SyncExchange:104])))
+	: (($1=(->[SyncRecord:109])) | ($1=(->[SyncRelation:103])) | ($1=(->[zzzSyncMap:112])) | ($1=(->[SyncJob:104])))
 		
 		$accessAllowed:=UserInPassWordGroup("Sync")
 		
@@ -94,9 +94,6 @@ If (False:C215)
 		: ($1=(->[Reference:7]))
 			
 			
-		: ($1=(->[Lead:48]))
-			
-			
 			//
 		: ($1=(->[Rep:8]))
 			
@@ -126,7 +123,7 @@ If (False:C215)
 			
 			
 			//
-		: (($1=(->[WOTemplate:69])) | ($1=(->[WOdraw:68])) | ($1=(->[WorkOrderTask:67])) | ($1=(->[WorkOrderEvent:121])))
+		: (($1=(->[WOTemplate:69])) | ($1=(->[WODraw:68])) | ($1=(->[WorkOrderTask:67])) | ($1=(->[WorkOrderEvent:121])))
 			
 			
 		: ($1=(->[WorkOrder:66]))

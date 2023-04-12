@@ -21,13 +21,13 @@ var $cBuild; $cFilter : Collection
 var $obField : Object
 $cBuild:=New collection:C1472
 If (LB_Fields.sel=Null:C1517)
-	$cBuild:=Split string:C1554("company,address1,actionDate"; ",")
+	$cBuild:=Split string:C1554("company,address1,actionDate"; ";")
 Else 
 	For each ($obField; LB_Fields.sel)
 		$cBuild.push($obField.fieldName)
 	End for each 
 End if 
-$fieldList_t:=$cBuild.join(",")
+$fieldList_t:=$cBuild.join(";")
 $viCnt:=$cBuild.length
 
 
@@ -41,7 +41,7 @@ $tableName:=$listboxSetup_o.tableName
 // define standard events
 // look at options for this
 If ($listboxSetup_o.events=Null:C1517)
-	$listboxSetup_o.events:=Split string:C1554("onLoad,onClick,onDataChange,onSelectionChange"; ",")
+	$listboxSetup_o.events:=Split string:C1554("onLoad,onClick,onDataChange,onSelectionChange"; ";")
 End if 
 var $colObj : Object
 $obDateStore:=ds:C1482[$tableName]

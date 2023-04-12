@@ -1,18 +1,11 @@
 //%attributes = {}
 
-// ----------------------------------------------------
-// User name (OS): Bill James
-// Date and time: 2017-08-25T00:00:00, 00:39:23
-// ----------------------------------------------------
+// Modified by: Bill James (2022-07-01T05:00:00Z)
 // Method: TallyMastersExecuteSearch
-// Description
-// Modified: 08/25/17
-// 
-// 
-//
+// Description 
 // Parameters
 // ----------------------------------------------------
-// ### jwm ### 20170928_1147 updated name of Query Editor
+
 
 C_POINTER:C301($ptSelf; $1)
 $ptSelf:=$1
@@ -20,36 +13,26 @@ C_TEXT:C284($theRecName)
 $theRecName:=$ptSelf->{$ptSelf->}
 
 Case of 
-	: ($ptSelf->=1)
+	: ($ptSelf-><2)
 		// do nothing
 	: ($theRecName="Edit TallyMasters")
 		// ### bj ### 20200330_1808  open the queries
 		If (UserInPassWordGroup("AdminControl"))
-			C_TEXT:C284($vtScript)
-			$vtScript:="QUERY([TallyMaster];[TallyMaster]Purpose=\"search\";*) "+"\r"
-			$vtScript:=$vtScript+"QUERY([TallyMaster]; & ;[TallyMaster]TableNum="+String:C10(Table:C252(ptCurTable))+")"
-			ProcessTableOpen(Table:C252(->[TallyMaster:60]); $vtScript; "Table: "+Table name:C256(ptCurTable))
-			REDUCE SELECTION:C351([TallyMaster:60]; 0)
+			var $data; $rec; $new_o : Object
+			// $new_o:=cs.TableShow.new("Customer")
+			$new_o:=cs:C1710.cProcess.new("OutputDS"; "TallyMaster")
+			$data:=ds:C1482.TallyMaster.query("purpose = :1 and tableName = :2"; "query"; process_o.dataClassName)
+			$new_o.setSource($data)
+			$childProcess:=New process:C317("Process_ShowTableDS"; 0; String:C10(Count user processes:C343)+"-"+$new_o.dataClassName; $new_o)
 		End if 
+		
 	: ($theRecName="Query Editor")  // ### jwm ### 20170928_1147
 		jSrchEditor
 	Else 
-		READ ONLY:C145([TallyMaster:60])
-		QUERY:C277([TallyMaster:60];  & [TallyMaster:60]name:8=$theRecName; *)
-		QUERY:C277([TallyMaster:60];  & [TallyMaster:60]purpose:3="search"; *)
-		QUERY:C277([TallyMaster:60];  & [TallyMaster:60]tableNum:1=Table:C252(ptCurTable))
-		Case of 
-			: (Records in selection:C76([TallyMaster:60])>1)
-				FIRST RECORD:C50([TallyMaster:60])
-				ExecuteText(0; [TallyMaster:60]script:9; "ExecuteTM Name: "+[TallyMaster:60]name:8+"; Purpose: "+[TallyMaster:60]purpose:3)
-				
-			: (Records in selection:C76([TallyMaster:60])=0)
-				
-			Else 
-				ExecuteText(0; [TallyMaster:60]script:9; "ExecuteTM Name: "+[TallyMaster:60]name:8+"; Purpose: "+[TallyMaster:60]purpose:3)
-		End case 
-		REDUCE SELECTION:C351([TallyMaster:60]; 0)
-		READ WRITE:C146([TallyMaster:60])
-		MenuTitle  // ### jwm ### 20171211_1255 update window title
+		var $rec : Object
+		$rec:=ds:C1482.TallyMaster.query("name = :1 and purpose = :2 and tableName = :3"; $ptSelf->{$ptSelf->}; "query"; process_o.dataClassName).first()
+		If ($rec.length=1)
+			ExecuteText(0; $rec.script; "ExecuteTM Name: "+$rec.name+"; Purpose: "+$rec.purpose)
+		End if 
 End case 
 $ptSelf->:=1

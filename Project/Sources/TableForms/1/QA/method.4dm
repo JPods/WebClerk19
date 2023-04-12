@@ -13,16 +13,6 @@ Case of
 			v2:=[Customer:2]nameFirst:73
 			v3:=[Customer:2]nameLast:23
 			srAcct:=[Customer:2]customerID:1
-			ptFile:=(->[Lead:48])
-		Else 
-			QUERY:C277([Lead:48]; [Lead:48]idNum:32=Num:C11(<>CustAcct))
-			QUERY:C277([QA:70]; [QA:70]customerID:1=<>CustAcct; *)
-			QUERY:C277([QA:70];  & [QA:70]tableNum:11=Table:C252(<>ptCurTable))
-			v1:=[Lead:48]company:5
-			v2:=[Lead:48]nameFirst:1
-			v3:=[Lead:48]nameLast:2
-			srAcct:=String:C10([Lead:48]idNum:32)
-			ptFile:=(->[Lead:48])
 		End if 
 		//  CHOPPED QA_FillAnswRay(Records in selection([QA]))
 		QA_ALDefine(eAList)
@@ -62,9 +52,7 @@ Case of
 						: (<>ptCurTable=(->[Customer:2]))
 							[Customer:2]questionAns:83:=True:C214
 							SAVE RECORD:C53([Customer:2])
-						: (<>ptCurTable=(->[Lead:48]))
-							[Lead:48]questionAns:43:=True:C214
-							SAVE RECORD:C53([Lead:48])
+							
 					End case 
 				End if 
 				//  --  CHOPPED  AL_UpdateArrays(eAList; -2)
@@ -72,12 +60,7 @@ Case of
 			: (doSearch>0)
 				//  --  CHOPPED  AL_UpdateArrays(eAList; -2)
 				doSearch:=0
-			: ((doSearch=-3) & (Size of array:C274(aQQLns)>0) & (<>ptCurTable=(->[Lead:48])))
-				TRACE:C157
-				zFindMe:=1
-				QA_AddQuestions  //$file)
-				//  CHOPPED QA_FillAnswRay(-5; 1; 1; Table(<>ptCurTable))
-				//  --  CHOPPED  AL_UpdateArrays(eAList; -2)
+				
 			: ((doSearch=-3) & (Size of array:C274(aQQLns)>0) & (<>ptCurTable=(->[Customer:2])))
 				TRACE:C157
 				zFindMe:=1

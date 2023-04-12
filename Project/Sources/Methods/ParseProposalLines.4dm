@@ -25,11 +25,11 @@ C_BOOLEAN:C305($lineTaxable; $notLocked)
 C_LONGINT:C283($viProposalNum; $orderLineUniqueID; $lineDelete; $orderLineRecNum)
 // do the specific line
 
-$viProposalNum:=[ProposalLine:43]proposalNum:1
-If ([Proposal:42]proposalNum:5#[ProposalLine:43]proposalNum:1)
-	QUERY:C277([Proposal:42]; [Proposal:42]proposalNum:5=[ProposalLine:43]proposalNum:1)
+$viProposalNum:=[ProposalLine:43]idNumProposal:1
+If ([Proposal:42]idNum:5#[ProposalLine:43]idNumProposal:1)
+	QUERY:C277([Proposal:42]; [Proposal:42]idNum:5=[ProposalLine:43]idNumProposal:1)
 End if 
-$0:=[ProposalLine:43]proposalNum:1
+$0:=[ProposalLine:43]idNumProposal:1
 If ([Customer:2]customerID:1#[ProposalLine:43]customerID:42)
 	QUERY:C277([Customer:2]; [Customer:2]customerID:1=[ProposalLine:43]customerID:42)
 End if 
@@ -71,7 +71,7 @@ If ($notLocked)
 	
 	If ([ProposalLine:43]typeSale:32#(Old:C35([ProposalLine:43]typeSale:32)))
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[ProposalLine:43]itemNum:2)
-		DscntSetPrice([ProposalLine:43]typeSale:32; [Proposal:42]dateProposed:3)
+		DscntSetPrice([ProposalLine:43]typeSale:32; [Proposal:42]dateDocument:3)
 		OrdSetPrice(->[ProposalLine:43]unitPrice:15; ->[ProposalLine:43]discount:17; [ProposalLine:43]qty:3; ->pComm)
 		vComRep:=CM_FindRate(->[Proposal:42]repID:7; -><>aReps; -><>aRepRate)
 		vComSales:=CM_FindRate(->[Proposal:42]salesNameID:9; -><>aComNameID; -><>aEmpRate)

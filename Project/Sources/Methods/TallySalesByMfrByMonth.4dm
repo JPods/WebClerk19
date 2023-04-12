@@ -26,8 +26,8 @@ DISTINCT VALUES:C339([TallyResult:73]customerID:30; aText1)
 
 vDate1:=Date_ThisYear(vDate3; 0)  // date begin of the year
 vDate2:=Date_ThisYear(vDate3; 1)  // date of the year end
-dtYearBegin:=DateTime_Enter(vDate1; ?00:00:00?)
-dtReport:=DateTime_Enter(vDate2; ?23:59:59?)
+dtYearBegin:=DateTime_DTTo(vDate1; ?00:00:00?)
+dtReport:=DateTime_DTTo(vDate2; ?23:59:59?)
 
 C_TEXT:C284(vcustomerID; vVendorID; vMessage)
 vi2:=Size of array:C274(aText1)
@@ -192,7 +192,7 @@ If (False:C215)
 					// change in either a customer or a vendor
 					C_LONGINT:C283(dtReport)
 					C_TEXT:C284(reportName)
-					dtReport:=DateTime_Enter(vDate2; ?23:59:59?)
+					dtReport:=DateTime_DTTo(vDate2; ?23:59:59?)
 					QUERY:C277([TallyResult:73]; [TallyResult:73]purpose:2="CustMfrByMonth"; *)
 					QUERY:C277([TallyResult:73];  & [TallyResult:73]customerID:30=vcustomerID; *)
 					QUERY:C277([TallyResult:73];  & [TallyResult:73]tableNum:3=Table:C252(->[Customer:2]); *)
@@ -272,7 +272,7 @@ If (False:C215)
 		DISTINCT VALUES:C339([TallyResult:73]customerID:30; aText1)
 		
 		vDate1:=Date_ThisYear(vDate3; 1)
-		dtReport:=DateTime_Enter(vDate2; ?23:59:59?)
+		dtReport:=DateTime_DTTo(vDate2; ?23:59:59?)
 		C_TEXT:C284(vcustomerID; vVendorID; vMessage)
 		vi2:=Size of array:C274(aText1)
 		For (vi1; 1; vi2)
@@ -371,7 +371,7 @@ If (False:C215)
 		DISTINCT VALUES:C339([TallyResult:73]customerID:30; aText1)
 		
 		vDate1:=Date_ThisYear(vDate3; 1)
-		dtReport:=DateTime_Enter(vDate2; ?23:59:59?)
+		dtReport:=DateTime_DTTo(vDate2; ?23:59:59?)
 		C_TEXT:C284(vcustomerID; vVendorID; vMessage)
 		ALL RECORDS:C47([Customer:2])
 		vi2:=Records in selection:C76([Customer:2])

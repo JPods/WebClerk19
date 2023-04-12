@@ -44,7 +44,7 @@ End if
 // ******************************************************************************************** //
 
 $vtDataInCSVFormat:=COL_ExportToCSV($vcCollectionOfObjects; $vcColumnNames)
-ConsoleMessage("CollectionOfObjectsToCSV has been renamed to COL_ExportToCSV ... please update caller script.")
+ConsoleLog("CollectionOfObjectsToCSV has been renamed to COL_ExportToCSV ... please update caller script.")
 
 
 

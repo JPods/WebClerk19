@@ -28,8 +28,8 @@ If (False:C215)  // Not run but an example of how to us SQL to create UUIKey
 	
 	C_TEXT:C284($ConstraintID_txt)
 	C_LONGINT:C283($TableNumber_L)
-	$OUTPUT_txt:="ConsoleMessage ("+Txt_Quoted("ConsoleLaunch")+")"+Char:C90(Carriage return:K15:38)
-	$Output1_txt:="ConsoleMessage ("+Txt_Quoted("ConsoleLaunch")+")"+Char:C90(Carriage return:K15:38)
+	$OUTPUT_txt:="Console_Log ("+Txt_Quoted("ConsoleLaunch")+")"+Char:C90(Carriage return:K15:38)
+	$Output1_txt:="Console_Log ("+Txt_Quoted("ConsoleLaunch")+")"+Char:C90(Carriage return:K15:38)
 	For ($TableNumber_L; 1; Get last table number:C254)
 		If (False:C215)
 			If (Is table number valid:C999($TableNumber_L))
@@ -59,11 +59,11 @@ If (False:C215)  // Not run but an example of how to us SQL to create UUIKey
 		$KeyName_txt:="id"  // Substring($tableName;1;21)+"_UUIDKey_s"
 		//$OUTPUT_txt:=$OUTPUT_txt+"Begin SQL"+Char(Carriage return)+"ALTER TABLE ["+$tableName+"] ADD ["+$KeyName_txt+"] UUID AUTO_GENERATE PRIMARY KEY;"+Char(Carriage return)+"End SQL"+Char(Carriage return)
 		
-		$Output1_txt:=$Output1_txt+"ConsoleMessage ("+Char:C90(Double quote:K15:41)+$tableName+": records "+String:C10($cntRecords)+Char:C90(Double quote:K15:41)+")"+Char:C90(Carriage return:K15:38)
+		$Output1_txt:=$Output1_txt+"Console_Log ("+Char:C90(Double quote:K15:41)+$tableName+": records "+String:C10($cntRecords)+Char:C90(Double quote:K15:41)+")"+Char:C90(Carriage return:K15:38)
 		$Output1_txt:=$Output1_txt+"EXECUTE FORMULA("+Char:C90(Double quote:K15:41)+"SET INDEX(["+$tableName+"]"+$KeyName_txt+";true)"+Char:C90(Double quote:K15:41)+")"+Char:C90(Carriage return:K15:38)
 		
 	End for 
-	$OUTPUT_txt:=$OUTPUT_txt+"ConsoleMessage ("+"Completed"+")"+Char:C90(Carriage return:K15:38)
+	$OUTPUT_txt:=$OUTPUT_txt+"Console_Log ("+"Completed"+")"+Char:C90(Carriage return:K15:38)
 	OK:=1
 	C_TIME:C306($Doc_tm)
 	If (OK=1)

@@ -59,7 +59,7 @@ If (<>emailEncode=0)
 End if 
 <>emailEncode:=2  // 1 = binhex, 2 = base 64, 7 = UUEncode
 If (<>viDeBugMode>0)
-	ConsoleMessage("\r"+"\r"+"SMPT_SendMsg"+"\r"+"<>emailEncode: "+String:C10(<>emailEncode))
+	ConsoleLog("\r"+"\r"+"SMPT_SendMsg"+"\r"+"<>emailEncode: "+String:C10(<>emailEncode))
 End if 
 C_TEXT:C284(vtEmailReport; $listText)
 C_BOOLEAN:C305($reportEmail)
@@ -76,11 +76,11 @@ End if
 vResponse:="email failed to "+vtEmailReceiver+" from "+vtEmailSender
 $errCode:=IT_GetPort(2; $currentPort)  //capture status of current port
 If (<>viDeBugMode>0)
-	ConsoleMessage("IT_GetPort: "+String:C10(viEmailport)+": "+String:C10($errCode))
+	ConsoleLog("IT_GetPort: "+String:C10(viEmailport)+": "+String:C10($errCode))
 End if 
 $errCode:=IT_SetPort(2; viEmailport)  //set to email port // Port must be 587 for MS Exchange server // ### jwm ### 20140910_1547
 If (<>viDeBugMode>0)
-	ConsoleMessage("IT_SetPort: "+String:C10(viEmailport)+": "+String:C10($errCode))
+	ConsoleLog("IT_SetPort: "+String:C10(viEmailport)+": "+String:C10($errCode))
 End if 
 //
 $myMailPref:=2  //force the use of full SMTP process
@@ -90,27 +90,27 @@ Case of
 	: ($myMailPref=2)
 		$errCode:=SMTP_New($myMailID)
 		If (<>viDeBugMode>0)
-			ConsoleMessage("MailID: "+String:C10($myMailID)+": Err: "+String:C10($errCode))
+			ConsoleLog("MailID: "+String:C10($myMailID)+": Err: "+String:C10($errCode))
 		End if 
 		If ($errCode=0)
 			$errCode:=SMTP_Host($myMailID; vtEmailServer)
 			If (<>viDeBugMode>0)
-				ConsoleMessage("vtEmailServer: "+vtEmailServer+": Err: "+String:C10($errCode))
+				ConsoleLog("vtEmailServer: "+vtEmailServer+": Err: "+String:C10($errCode))
 			End if 
 			If ($errCode=0)
 				$errCode:=SMTP_From($myMailID; vtEmailSender)
 				If (<>viDeBugMode>0)
-					ConsoleMessage("vtEmailSender: "+vtEmailSender+": Err: "+String:C10($errCode))
+					ConsoleLog("vtEmailSender: "+vtEmailSender+": Err: "+String:C10($errCode))
 				End if 
 				If ($errCode=0)
 					$errCode:=SMTP_Subject($myMailID; vtEmailSubject)
 					If (<>viDeBugMode>0)
-						ConsoleMessage("vtEmailSubject: "+vtEmailSubject+": Err: "+String:C10($errCode))
+						ConsoleLog("vtEmailSubject: "+vtEmailSubject+": Err: "+String:C10($errCode))
 					End if 
 					If ($errCode=0)
 						$errCode:=SMTP_To($myMailID; vtEmailReceiver)
 						If (<>viDeBugMode>0)
-							ConsoleMessage("vtEmailReceiver: "+vtEmailReceiver+": Err: "+String:C10($errCode))
+							ConsoleLog("vtEmailReceiver: "+vtEmailReceiver+": Err: "+String:C10($errCode))
 						End if 
 						If ($errCode=0)  // ### jwm ### 20140911_0902 add ReplyTo email address
 							If (vtEmailReplyTo="")
@@ -118,7 +118,7 @@ Case of
 							End if 
 							$errCode:=SMTP_ReplyTo($myMailID; vtEmailReplyTo)
 							If (<>viDeBugMode>0)
-								ConsoleMessage("vtEmailReplyTo: "+vtEmailReplyTo+": Err: "+String:C10($errCode))
+								ConsoleLog("vtEmailReplyTo: "+vtEmailReplyTo+": Err: "+String:C10($errCode))
 							End if 
 							If ($errCode=0)  //###_jwm_### 20110110
 								If (vtEmailAttachment#"")
@@ -126,7 +126,7 @@ Case of
 									// Negative encoder values only set the headers and do not perform any encoding function. 
 									$errCode:=SMTP_Attachment($myMailID; vtEmailAttachment; <>emailEncode)  // 1 = binhex, 2 = base 64, 7 = UUEncode
 									If (<>viDeBugMode>0)
-										ConsoleMessage("vtEmailAttachment: "+vtEmailAttachment+": Err: "+String:C10($errCode))
+										ConsoleLog("vtEmailAttachment: "+vtEmailAttachment+": Err: "+String:C10($errCode))
 									End if 
 								Else 
 									$sizeRay:=Size of array:C274(atEmailAttachments)
@@ -139,7 +139,7 @@ Case of
 											$listText:=$listText+atEmailAttachments{$incRay}+", "
 										End for 
 										If (<>viDeBugMode>0)
-											ConsoleMessage("attachments: "+$listText+": Err: "+String:C10($errCode))
+											ConsoleLog("attachments: "+$listText+": Err: "+String:C10($errCode))
 										End if 
 									End if 
 								End if 
@@ -151,7 +151,7 @@ Case of
 										$listText:=$listText+atEmailCC{$incRay}+", "
 									End for 
 									If (<>viDeBugMode>0)
-										ConsoleMessage("atEmailCC: "+$listText+": Err: "+String:C10($errCode))
+										ConsoleLog("atEmailCC: "+$listText+": Err: "+String:C10($errCode))
 									End if 
 									If ($errCode=0)
 										$sizeRay:=Size of array:C274(atEmailBCC)
@@ -161,29 +161,29 @@ Case of
 											$listText:=$listText+atEmailBCC{$incRay}+", "
 										End for 
 										If (<>viDeBugMode>0)
-											ConsoleMessage("atEmailBCC: "+$listText+": Err: "+String:C10($errCode))
+											ConsoleLog("atEmailBCC: "+$listText+": Err: "+String:C10($errCode))
 										End if 
 										If ($errCode=0)
 											If (Position:C15("<html"; vtEmailBody)>0)
 												$errCode:=SMTP_AddHeader($myMailID; "Content-Type:"; "text/html;charset=us-ascii"; 1)
 												If (<>viDeBugMode>0)
-													ConsoleMessage("SMTP_AddHeader: Content-Type: "+"text/html;charset=us-ascii"+": Err: "+String:C10($errCode)+"\r")
+													ConsoleLog("SMTP_AddHeader: Content-Type: "+"text/html;charset=us-ascii"+": Err: "+String:C10($errCode)+"\r")
 												End if 
 											End if 
 											If ($errCode=0)
 												$errCode:=SMTP_Body($myMailID; vtEmailBody)
 												If (<>viDeBugMode>0)
-													ConsoleMessage("Body: (20)"+": Err: "+String:C10($errCode)+": "+Substring:C12(vtEmailBody; 1; 20))
+													ConsoleLog("Body: (20)"+": Err: "+String:C10($errCode)+": "+Substring:C12(vtEmailBody; 1; 20))
 												End if 
 												If ($errCode=0)
 													If ((vtEmailUserName="skip") | (vtEmailPassword="skip"))
 														If (<>viDeBugMode>0)
-															ConsoleMessage("Authorized: "+": Skip used to skip requirement for authenication")
+															ConsoleLog("Authorized: "+": Skip used to skip requirement for authenication")
 														End if 
 													Else 
 														$errCode:=SMTP_Auth($myMailID; vtEmailUserName; vtEmailPassword)
 														If (<>viDeBugMode>0)
-															ConsoleMessage("Authorized: "+": Err: "+String:C10($errCode)+": vtEmailUserName="+vtEmailUserName+": password="+Substring:C12(vtEmailPassword; 1; 3))
+															ConsoleLog("Authorized: "+": Err: "+String:C10($errCode)+": vtEmailUserName="+vtEmailUserName+": password="+Substring:C12(vtEmailPassword; 1; 3))
 														End if 
 													End if 
 													If (($errCode=0) & (Not:C34($testOnly)))
@@ -191,12 +191,12 @@ Case of
 														$errCode:=SMTP_Send($myMailID; viEmailSSL)  // 0 = Zero Send in 'upgradable' mode auto detect SSL/TLS // ### jwm ### 20140910_1546
 														If ($errCode=0)  // ### bj ### 20181211_1900 support web notification
 															vResponse:="email successfully sent to "+vtEmailReceiver+" from "+vtEmailSender
-															ConsoleMessage(vResponse)
+															ConsoleLog(vResponse)
 														Else 
-															ConsoleMessage("Email Error Code: "+vResponse)
+															ConsoleLog("Email Error Code: "+vResponse)
 														End if 
 														If ((<>viDeBugMode>0) | ($errCode#0))  // ### jwm ### 20170606_1032
-															ConsoleMessage("Send: "+"; Err: "+String:C10($errCode)+(Num:C11($errCode=10113)*": AUTHENTICATION ERROR"))
+															ConsoleLog("Send: "+"; Err: "+String:C10($errCode)+(Num:C11($errCode=10113)*": AUTHENTICATION ERROR"))
 														End if 
 													End if 
 												End if 
@@ -222,7 +222,7 @@ Case of
 				vResponse:=vResponse+"\r"+vtEmailStatusMessage
 		End case 
 		If (<>viDeBugMode>0)
-			ConsoleMessage(vtEmailStatusMessage)
+			ConsoleLog(vtEmailStatusMessage)
 		End if 
 		If (False:C215)  // $reportEmail)
 			vtEmailReport:=vtEmailReport
@@ -234,7 +234,7 @@ Case of
 			Else 
 				[EventLog:75]groupid:3:="Failed Email"
 			End if 
-			[EventLog:75]dtEvent:1:=DateTime_Enter
+			[EventLog:75]dtEvent:1:=DateTime_DTTo
 			EventLogsMessage(vtEmailReport)
 			[EventLog:75]status:48:=vtEmailStatusMessage
 			
@@ -244,7 +244,7 @@ Case of
 		End if 
 		$errCode:=SMTP_Clear($myMailID)
 		If (<>viDeBugMode>0)
-			ConsoleMessage("Clear port: "+": Err: "+String:C10($errCode))
+			ConsoleLog("Clear port: "+": Err: "+String:C10($errCode))
 		End if 
 End case 
 

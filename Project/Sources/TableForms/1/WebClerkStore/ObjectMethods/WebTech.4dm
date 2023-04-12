@@ -2,9 +2,24 @@ C_TEXT:C284($wa_htmlEditor_path_t; vtTNPathSystem; $theChapterFolder)
 
 Case of 
 	: (Form event code:C388=On Load:K2:1)  // This event is generated at the start of loading a 
-		// problems with paths
+		var $rec_o : Object
+		var process_o : cs:C1710.cWebArea
 		
-		Execute_TallyMaster(Current machine:C483; "Current Machine")
+		$rec_o:=ds:C1482.TallyMaster.query("purpose = :1 and name = :2"; "webclerk"; "store").first()
+		If ($rec_o#Null:C1517)
+			If ($rec_o.length=1)
+				process_o:=ExecuteScript_Object($rec_o.script)
+			End if 
+		End if 
+		If (process_o.url=Null:C1517)
+			process_o:=cs:C1710.cWebArea.new("Local WebClerk")
+			process_o.set_url("http://act.webclerk.com")
+			vURL:=process_o.url
+		End if 
+		
+		
+		WA OPEN URL:C1020(WebBrowser; vURL)
+		
 		
 		WA SET PREFERENCE:C1041(*; "WebTech"; WA enable contextual menu:K62:6; True:C214)
 		WA SET PREFERENCE:C1041(*; "WebTech"; WA enable Web inspector:K62:7; True:C214)

@@ -1,0 +1,1 @@
+[QQQCustomer:2]creditApproval:39:=Current user:C182

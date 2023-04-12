@@ -61,12 +61,12 @@
 //Else 
 //$color:=White
 //End case 
-//_O_OBJECT SET COLOR($gui_ptr->; -(Black+(256*$color)))
+//OBJECT SET RGB COLORS(*; "$gui_ptr->"; (Black; 256*$color))
 //End if 
 //End if 
 //Else 
 //If (Records in table([DivisionDefault])>0)  //only set colors if there are any [divdefault] otherwise don't touch
-//_O_OBJECT SET COLOR($gui_ptr->; -(Black+(256*White)))
+//OBJECT SET RGB COLORS(*; "$gui_ptr->"; Black; White)
 //End if 
 //End if 
 //End if 

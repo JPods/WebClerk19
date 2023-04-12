@@ -62,7 +62,7 @@ Else
 	$vtVendorID:=OB Get:C1224($obVendor; "VendorID")
 	// consider adding a test to require a match
 	If (<>viDebugMode>410)
-		ConsoleMessage("RP_CreateSOfromPO, VendorID = "+$vtVendorID)
+		ConsoleLog("RP_CreateSOfromPO, VendorID = "+$vtVendorID)
 	End if 
 	
 	
@@ -79,7 +79,7 @@ Else
 	// 3. Each PO Object has an array of POLines
 	
 	If (<>viDebugMode>410)
-		ConsoleMessage("Number of POs = "+String:C10($cntRay))
+		ConsoleLog("Number of POs = "+String:C10($cntRay))
 	End if 
 	
 	
@@ -121,7 +121,7 @@ Else
 		End if 
 		QUERY:C277([Customer:2]; [Customer:2]customerID:1=$vtcustomerID)
 		If (<>viDebugMode>410)
-			ConsoleMessage("customerID = "+$vtcustomerID+": "+String:C10(Records in selection:C76([Customer:2])))
+			ConsoleLog("customerID = "+$vtcustomerID+": "+String:C10(Records in selection:C76([Customer:2])))
 		End if 
 		
 		
@@ -133,7 +133,7 @@ Else
 		NxPvOrders
 		
 		If (<>viDebugMode>410)
-			ConsoleMessage("Creating Order = "+String:C10([Order:3]idNum:2))
+			ConsoleLog("Creating Order = "+String:C10([Order:3]idNum:2))
 		End if 
 		
 		If (vResponse="")
@@ -166,7 +166,7 @@ Else
 		End if 
 		If (vResponse="")
 			// zzzqqq jDateTimeStamp(->[SyncRecord:109]packingNotes:14; Current user:C182+" unpacked")
-			[SyncRecord:109]dtComplete:8:=DateTime_Enter
+			[SyncRecord:109]dtComplete:8:=DateTime_DTTo
 			[SyncRecord:109]statusReceive:19:="Unpacked"
 			SAVE RECORD:C53([SyncRecord:109])
 			VALIDATE TRANSACTION:C240

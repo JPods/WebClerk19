@@ -8,7 +8,7 @@ C_PICTURE:C286(vPict1; vPict2; vPict3; vPict4; vPict5)
 C_BLOB:C604($loadBlob)
 C_LONGINT:C283($err)
 C_TEXT:C284($testFolder; $theDoc)
-$testFolder:=<>WebFolder+"jitimages"+Folder separator:K24:12
+$testFolder:=Storage:C1525.wc.webFolder+"jitimages"+Folder separator:K24:12
 $theDoc:=$testFolder+"Logo_Nav.gif"
 TRACE:C157
 If (HFS_Exists($theDoc)=1)

@@ -22,8 +22,8 @@ If (ptCurTable#Null:C1517)  // classic
 	$ptCurTable:=ptCurTable
 End if 
 If ($ptCurTable=Null:C1517)
-	If (process_o.tableName#Null:C1517)  // adapt to ORDA
-		$ptCurTable:=STR_GetTablePointer(process_o.tableName)
+	If (process_o.dataClassName#Null:C1517)  // adapt to ORDA
+		$ptCurTable:=STR_GetTablePointer(process_o.dataClassName)
 	End if 
 End if 
 If ($ptCurTable=Null:C1517)

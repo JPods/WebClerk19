@@ -1,0 +1,85 @@
+﻿{"$4d":{"version":"1","kind":"form"},"windowSizingX":"variable","windowSizingY":"variable","windowMinWidth":0,"windowMinHeight":0,"windowMaxWidth":32767,"windowMaxHeight":32767,"rightMargin":20,"bottomMargin":20,"events":["onLoad","onPageChange","onValidate","onClick","onDoubleClick","onOutsideCall","onBeginDragOver","onDragOver","onDrop","onAfterKeystroke","onMenuSelect","onPluginArea","onAfterEdit","onTimer","onBoundVariableChange"],"windowTitle":"window title","destination":"detailScreen","pages":[{"objects":{}},{"objects":{"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}}}],"geometryStamp":8}

@@ -102,7 +102,7 @@ Else
 		//If (False)
 		
 		$requestText:=$requestText+"&x_company="+NTKString2HTML([Payment:28]company:48)
-		$requestText:=$requestText+"&x_description="+NTKString2HTML([Order:3]mfrID:52+" - "+[Order:3]remoteRecordID:132+" - "+[Order:3]mfrName:91+" - "+String:C10([Order:3]orderNum:2))
+		$requestText:=$requestText+"&x_description="+NTKString2HTML([Order:3]mfrID:52+" - "+[Order:3]remoteRecordID:132+" - "+[Order:3]mfrName:91+" - "+String:C10([Order:3]idNum:2))
 		
 		$requestText:=$requestText+"&x_first_name="+NTKString2HTML($firstName)
 		$requestText:=$requestText+"&x_last_name="+NTKString2HTML($lastName)
@@ -222,7 +222,10 @@ Else
 	HTTP_Path:=<>tcCCVerURL  //Server command
 	HTTP_Host:=<>tcCCVerHost  //Server manchine
 	HTTP_Port:=<>tcCCVerPort  //the Port
-	$error:=B2B_Exchange
+	
+	
+	// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+	//$error:=B2B_Exchange
 	
 	$response:=BLOB to text:C555(HTTP_BlobReceive; UTF8 text without length:K22:17)  //convert returning message from blob to text
 	//If (HTTPTestMode=1)
@@ -265,9 +268,11 @@ Else
 		$delim:=","
 		$count:=0
 		ARRAY TEXT:C222(aPayAuthFields; 0)  // Array to hold the returned fields from authize.net
-		// Parse Response
-		//$response:=Substring($response;Position($response;Storage.char.crlf+Storage.char.crlf+4))
-		TextToArray($response; ->aPayAuthFields; ","; True:C214)  //text, array, delimiter,record empty
+		var $c : Collection
+		$c:=Split string:C1554($response; ";")
+		COLLECTION TO ARRAY:C1562($c; aPayAuthFields)
+		
+		
 		//aPayAuthFields  values
 		//{1}  1=Approved, 2=Declined, 3=Error
 		//{2}  internal to Auth.net
@@ -377,14 +382,14 @@ Else
 					: (Num:C11(aPayAuthFields{3})=27)
 						$errorText:="AVS mismatch.  Address provided does not match billing address of cardholder."
 					Else 
-						QUERY:C277([GenericChild2:91]; [GenericChild2:91]lI01:6=Num:C11(aPayAuthFields{3}); *)
-						QUERY:C277([GenericChild2:91];  & [GenericChild2:91]name:3="AIM_CC_ResponseCodes")
-						If (Records in selection:C76([GenericChild2:91])=1)
-							$errorText:="("+aPayAuthFields{3}+") "+[GenericChild2:91]t01:32+"\r"+[GenericChild2:91]t02:33
+						QUERY:C277([zzzGenericChild2:91]; [zzzGenericChild2:91]lI01:6=Num:C11(aPayAuthFields{3}); *)
+						QUERY:C277([zzzGenericChild2:91];  & [zzzGenericChild2:91]name:3="AIM_CC_ResponseCodes")
+						If (Records in selection:C76([zzzGenericChild2:91])=1)
+							$errorText:="("+aPayAuthFields{3}+") "+[zzzGenericChild2:91]t01:32+"\r"+[zzzGenericChild2:91]t02:33
 						Else 
 							$errorText:="status message returned ("+aPayAuthFields{3}+")"
 						End if 
-						REDUCE SELECTION:C351([GenericChild2:91]; 0)
+						REDUCE SELECTION:C351([zzzGenericChild2:91]; 0)
 				End case 
 				$avsMessage:=$avsMessage+"\r"+$errorText
 				If (($avsMessage#"") & (<>doCCAlert) & (allowAlerts_boo))

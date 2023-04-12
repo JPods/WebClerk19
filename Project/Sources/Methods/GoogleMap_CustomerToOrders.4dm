@@ -18,7 +18,7 @@ For each ($veRecordCustomers; $veSelectionCustomers)
 				$tableName:="Proposal"
 		End case 
 		$veSelectionRelated:=ds:C1482[$tableName].query("customerID = :1"; $veRecordCustomers.customerID)
-		ConsoleMessage($tableName+": "+String:C10($veSelectionRelated.length)+": "+$veRecordCustomers.lat+": "+$veRecordCustomers.lng)
+		ConsoleLog($tableName+": "+String:C10($veSelectionRelated.length)+": "+$veRecordCustomers.lat+": "+$veRecordCustomers.lng)
 		For each ($veRecordRelated; $veSelectionRelated)
 			$veRecordRelated.lat:=$veRecordCustomers.lat
 			$veRecordRelated.lng:=$veRecordCustomers.lng

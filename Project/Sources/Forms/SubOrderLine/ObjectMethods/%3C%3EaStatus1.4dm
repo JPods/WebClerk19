@@ -1,5 +1,5 @@
 TRACE:C157
-entryEntity.status:=DE_PopUpArray(Self:C308)
+process_o.entry_o.status:=DE_PopUpArray(Self:C308)
 
 // ### jwm ### 20180504_1426 link status to iloScript
 QUERY:C277([TallyMaster:60]; [TallyMaster:60]name:8=[Order:3]status:59; *)
@@ -17,7 +17,7 @@ UNLOAD RECORD:C212([TallyMaster:60])
 If (([Order:3]idNum:2#0) & ([Order:3]status:59#Old:C35([Order:3]status:59)))
 	
 	If (([Order:3]status:59="Completed") | ([Order:3]status:59="Canceled"))
-		[Order:3]dtProdCompl:57:=DateTime_Enter
+		[Order:3]dtProdCompl:57:=DateTime_DTTo
 		complTime:=Current time:C178
 		complDate:=Current date:C33
 	Else 

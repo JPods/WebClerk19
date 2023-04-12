@@ -124,27 +124,27 @@ $ptObCatalog->proposallines.changevalue:=Round:C94($vrQtyChange*$vrCostChange; 2
 REDUCE SELECTION:C351([ProposalLine:43]; 0)
 
 
-QUERY:C277([QQQPOLine:40]; [QQQPOLine:40]qtyBackLogged:5>0; *)
-QUERY:C277([QQQPOLine:40];  & ; [QQQPOLine:40]itemNum:2=[Item:4]itemNum:1)
-$cntRec:=Records in selection:C76([QQQPOLine:40])
+QUERY:C277([POLine:40]; [POLine:40]qtyBackLogged:5>0; *)
+QUERY:C277([POLine:40];  & ; [POLine:40]itemNum:2=[Item:4]itemNum:1)
+$cntRec:=Records in selection:C76([POLine:40])
 
 C_REAL:C285($vrTotalChange)
 C_REAL:C285($vrQtyChange)
-READ WRITE:C146([QQQPOLine:40])
-FIRST RECORD:C50([QQQPOLine:40])
+READ WRITE:C146([POLine:40])
+FIRST RECORD:C50([POLine:40])
 For ($incRec; 1; $cntRec)
-	If ([QQQPOLine:40]obGeneral:38.costchange=Null:C1517)
-		[QQQPOLine:40]obGeneral:38.costchange:=New object:C1471
+	If ([POLine:40]obGeneral:38.costchange=Null:C1517)
+		[POLine:40]obGeneral:38.costchange:=New object:C1471
 	End if 
-	[QQQPOLine:40]obGeneral:38.costchange.id:=$obCatalog->id
-	[QQQPOLine:40]obGeneral:38.costchange.date:=Date:C102(String:C10(Current date:C33))
-	[QQQPOLine:40]obGeneral:38.costchange.change:=$vrCostChange
-	[QQQPOLine:40]obGeneral:38.costchange.percent:=$vrPerCent
+	[POLine:40]obGeneral:38.costchange.id:=$obCatalog->id
+	[POLine:40]obGeneral:38.costchange.date:=Date:C102(String:C10(Current date:C33))
+	[POLine:40]obGeneral:38.costchange.change:=$vrCostChange
+	[POLine:40]obGeneral:38.costchange.percent:=$vrPerCent
 	
-	$vrQtyChange:=$vrQtyChange+[QQQPOLine:40]qtyBackLogged:5
-	[QQQPOLine:40]itemProfile4:33:="CostChange"
-	SAVE RECORD:C53([QQQPOLine:40])
-	NEXT RECORD:C51([QQQPOLine:40])
+	$vrQtyChange:=$vrQtyChange+[POLine:40]qtyBackLogged:5
+	// [POLine]obItem:="CostChange"
+	SAVE RECORD:C53([POLine:40])
+	NEXT RECORD:C51([POLine:40])
 End for 
 If ($ptObCatalog->polines=Null:C1517)
 	$ptObCatalog->polines:=New object:C1471
@@ -152,4 +152,4 @@ End if
 $ptObCatalog->polines.records:=$cntRec
 $ptObCatalog->polines.qty:=$vrQtyChange
 $ptObCatalog->polines.changevalue:=Round:C94($vrQtyChange*$vrCostChange; 2)
-REDUCE SELECTION:C351([QQQPOLine:40]; 0)
+REDUCE SELECTION:C351([POLine:40]; 0)

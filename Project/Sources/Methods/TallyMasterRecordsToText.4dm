@@ -19,7 +19,7 @@
 
 ConsoleLaunch
 
-//ConsoleMessage ("Launch")
+//Console_Log ("Launch")
 C_TEXT:C284($1; $sendDirection)
 C_TEXT:C284($2; $directionTable)
 C_LONGINT:C283($countLoop)
@@ -73,12 +73,12 @@ Case of
 					[TallyMaster:60]template:29:=Tx_ConvertScripts([TallyMaster:60]template:29)
 					SAVE RECORD:C53([TallyMaster:60])
 					
-					ConsoleMessage("Text Out: TM"+String:C10([TallyMaster:60]idNum:4))  // ### jwm ### 20160802_1616
+					ConsoleLog("Text Out: TM"+String:C10([TallyMaster:60]idNum:4))  // ### jwm ### 20160802_1616
 					
 					vtext1:=vtext1+"\r"+"\r"+":($1="+String:C10([TallyMaster:60]idNum:4)+")"+"\r"
 					vText10:="// "+[TallyMaster:60]purpose:3+":_:"+[TallyMaster:60]name:8+":_:"+[TallyMaster:60]status:33
 					vtext1:=vtext1+"\r"+vText10+"\r"
-					vtext1:=vtext1+"Consolemessage("+Txt_Quoted("TM"+String:C10([TallyMaster:60]idNum:4)+": "+[TallyMaster:60]status:33)+")"+"\r"+"\r"
+					vtext1:=vtext1+"ConsoleLog("+Txt_Quoted("TM"+String:C10([TallyMaster:60]idNum:4)+": "+[TallyMaster:60]status:33)+")"+"\r"+"\r"
 					vtext1:=vtext1+"\r"+vText11+vText16+[TallyMaster:60]script:9+"\r"
 					vtext1:=vtext1+"\r"+vText12+[TallyMaster:60]build:6+"\r"
 					vtext1:=vtext1+"\r"+vText13+[TallyMaster:60]after:7+"\r"
@@ -105,7 +105,7 @@ Case of
 					vtext1:=vtext1+"\r"+"\r"+":($1="+String:C10([CronJob:82]idNum:1)+")"+"\r"
 					vText10:="// "+[CronJob:82]nameID:10+":_:"+[CronJob:82]machineName:22+":_:"+[CronJob:82]cronString:28
 					vtext1:=vtext1+"\r"+vText10+"\r"
-					vtext1:=vtext1+"Consolemessage("+Txt_Quoted("CR"+String:C10([CronJob:82]idNum:1)+": "+[CronJob:82]nameID:10)+")"+"\r"+"\r"
+					vtext1:=vtext1+"ConsoleLog("+Txt_Quoted("CR"+String:C10([CronJob:82]idNum:1)+": "+[CronJob:82]nameID:10)+")"+"\r"+"\r"
 					vtext1:=vtext1+"\r"+vText11+[CronJob:82]script:11+"\r"
 					vtext1:=vtext1+"\r"+vText13+[CronJob:82]scriptAfter:25+"\r"
 					vtext1:=vtext1+"\r"+vText15
@@ -202,7 +202,7 @@ Case of
 							[TallyMaster:60]dateRevision:32:=Current date:C33  // ### jwm ### 20160923_0944
 							SAVE RECORD:C53([TallyMaster:60])
 							UNLOAD RECORD:C212([TallyMaster:60])
-							ConsoleMessage("Updates TM: "+$stringRec)
+							ConsoleLog("Updates TM: "+$stringRec)
 						End if 
 						
 						// vText3:=$scriptText+"\r"+"\r"+"\r"+"\r"+$buildScript+"\r"+"\r"+"\r"+"\r"+$afterScript+"\r"+"\r"+"\r"+"\r"+$headerScript

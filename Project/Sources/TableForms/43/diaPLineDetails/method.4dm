@@ -8,12 +8,12 @@ Case of
 		If (Not:C34($doChange))
 			C_LONGINT:C283($theColor)
 			$theColor:=14
-			_O_OBJECT SET COLOR:C271(pGrossMarAfter; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pGrossPCAfter; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommSales; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommRep; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommSPC; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommRPC; -$theColor+(256*$theColor))
+			OBJECT SET RGB COLORS(*; "pGrossMarAfter"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS(*; "pGrossPCAfter"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS(*; "pCommSales"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS(*; "pCommRep"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS(*; "pCommSPC"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS(*; "pCommRPC"; $theColor; 256*$theColor)
 		End if 
 		Pp_VarRay(False:C215)
 		pDscntPrice:=DiscountApply(pUnitPrice; pDiscnt; <>tcDecimalUP)

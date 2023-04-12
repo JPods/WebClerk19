@@ -1,0 +1,1 @@
+_LB_Item_.ents:=ds:C1482.Item.query("itemNum = :1"; "FRP@")

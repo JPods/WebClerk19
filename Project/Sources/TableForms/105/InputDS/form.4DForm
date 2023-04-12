@@ -1,0 +1,531 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerHeader": 24,
+	"markerBody": 331,
+	"markerBreak": 364,
+	"markerFooter": 397,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Rectangle1_1": {
+					"type": "rectangle",
+					"top": 238,
+					"left": 285,
+					"width": 246,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#999999"
+				},
+				"_Rectangle2_2": {
+					"type": "rectangle",
+					"top": 18,
+					"left": 285,
+					"width": 246,
+					"height": 76,
+					"fill": "transparent",
+					"stroke": "#999999"
+				},
+				"_Rectangle3_3": {
+					"type": "rectangle",
+					"top": 120,
+					"left": 285,
+					"width": 124,
+					"height": 95,
+					"fill": "transparent",
+					"stroke": "#999999"
+				},
+				"_PROP_PriceMatrix_ItemNum_4": {
+					"type": "input",
+					"top": 19,
+					"left": 288,
+					"width": 242,
+					"height": 17,
+					"dataSource": "entry_o.ItemNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]ItemNum:11"
+				},
+				"_PROP_PriceMatrix_HowUsed_5": {
+					"type": "input",
+					"top": 38,
+					"left": 288,
+					"width": 242,
+					"height": 17,
+					"dataSource": "entry_o.HowUsed",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]HowUsed:2"
+				},
+				"_PROP_PriceMatrix_TypeSale_6": {
+					"type": "input",
+					"top": 57,
+					"left": 288,
+					"width": 242,
+					"height": 17,
+					"dataSource": "entry_o.TypeSale",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]TypeSale:3"
+				},
+				"_PROP_PriceMatrix_QuantityMin_7": {
+					"type": "input",
+					"top": 76,
+					"left": 288,
+					"width": 120,
+					"height": 17,
+					"dataSource": "entry_o.QuantityMin",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/lgNum"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field1.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]QuantityMin:4"
+				},
+				"_PROP_PriceMatrix_QuantityMax_8": {
+					"type": "input",
+					"top": 76,
+					"left": 410,
+					"width": 120,
+					"height": 17,
+					"dataSource": "entry_o.QuantityMax",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/lgNum"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field7.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]QuantityMax:5"
+				},
+				"_PROP_PriceMatrix_Price_9": {
+					"type": "input",
+					"top": 121,
+					"left": 288,
+					"width": 120,
+					"height": 17,
+					"dataSource": "entry_o.Price",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/lgNum"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]Price:6"
+				},
+				"_PROP_PriceMatrix_CommissionFactor_10": {
+					"type": "input",
+					"top": 140,
+					"left": 288,
+					"width": 120,
+					"height": 17,
+					"dataSource": "entry_o.CommissionFactor",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]CommissionFactor:7"
+				},
+				"_PROP_PriceMatrix_Cost_11": {
+					"type": "input",
+					"top": 159,
+					"left": 288,
+					"width": 120,
+					"height": 17,
+					"dataSource": "entry_o.Cost",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]Cost:9"
+				},
+				"_PROP_PriceMatrix_taxid_12": {
+					"type": "input",
+					"top": 178,
+					"left": 288,
+					"width": 120,
+					"height": 17,
+					"dataSource": "entry_o.taxid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]taxid:8"
+				},
+				"_PROP_PriceMatrix_TypeMatrix_13": {
+					"type": "input",
+					"top": 197,
+					"left": 288,
+					"width": 120,
+					"height": 17,
+					"dataSource": "entry_o.TypeMatrix",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]TypeMatrix:10"
+				},
+				"_PROP_PriceMatrix_idUnique_14": {
+					"type": "input",
+					"top": 239,
+					"left": 287,
+					"width": 242,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[PriceMatrix:105]idUnique:1"
+				},
+				"_Text_TypeSale_15": {
+					"type": "text",
+					"top": 59,
+					"left": 168,
+					"width": 113,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TypeSale"
+				},
+				"_Text_HowUsed_16": {
+					"type": "text",
+					"top": 40,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "HowUsed"
+				},
+				"_Text_Price_17": {
+					"type": "text",
+					"top": 124,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Price"
+				},
+				"_Text_QtyMin_Max_18": {
+					"type": "text",
+					"top": 78,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Qty Min/Max"
+				},
+				"_Text_UniqueID_19": {
+					"type": "text",
+					"top": 242,
+					"left": 196,
+					"width": 85,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				},
+				"_Text_taxID_20": {
+					"type": "text",
+					"top": 181,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "taxID"
+				},
+				"_Text_Cost_21": {
+					"type": "text",
+					"top": 162,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Cost"
+				},
+				"_Text_Commission_22": {
+					"type": "text",
+					"top": 143,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Commission"
+				},
+				"_Text_TypeMatrix_23": {
+					"type": "text",
+					"top": 200,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TypeMatrix"
+				},
+				"_Text_ItemNum_24": {
+					"type": "text",
+					"top": 21,
+					"left": 122,
+					"width": 159,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ItemNum"
+				},
+				"_VAR_<>pNavPallet_25": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_26": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_27": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_28": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_29": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_30": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

@@ -13,11 +13,12 @@
 // ******************************************************************************************** //
 // ** TYPE AND INITIALIZE PARAMETERS ********************************************************** //
 // ******************************************************************************************** //
+#DECLARE($tableName_t : Text)->$ptTable : Pointer
+$ptTable:=Null:C1517
 
-C_POINTER:C301($0; $ptTable)
-C_TEXT:C284($1; $tableName)
-$tableName:=STR_FixCaseTableName($1)
-If (ds:C1482[$tableName]#Null:C1517)
-	$ptTable:=Table:C252(ds:C1482[$tableName].getInfo().tableNumber)
+// may want to remove. Good for web
+$tableName_t:=STR_FixCaseTableName($tableName_t)
+
+If (ds:C1482[$tableName_t]#Null:C1517)
+	$ptTable:=Table:C252(ds:C1482[$tableName_t].getInfo().tableNumber)
 End if 
-$0:=$ptTable

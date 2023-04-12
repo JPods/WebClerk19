@@ -37,7 +37,7 @@ If ((OK=1) & ($k>0))
 		DELETE SELECTION:C66([TallyResult:73])
 	End if 
 	C_LONGINT:C283($dtRpt)
-	$dtRpt:=DateTime_Enter(vdDateEnd; ?23:59:59?)
+	$dtRpt:=DateTime_DTTo(vdDateEnd; ?23:59:59?)
 	ORDER BY:C49([Invoice:26]; [Invoice:26]customerID:3)
 	C_LONGINT:C283($i; $k; $w; $incLine; $cntLine; $p)
 	FIRST RECORD:C50([Invoice:26])

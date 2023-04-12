@@ -72,12 +72,12 @@ Case of
 		If (Not:C34($doChange))
 			C_LONGINT:C283($theColor)
 			$theColor:=14
-			_O_OBJECT SET COLOR:C271(pGrossMarAfter; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pGrossPCAfter; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommSales; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommRep; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommSPC; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271(pCommRPC; -$theColor+(256*$theColor))
+			OBJECT SET RGB COLORS:C628(*; "pGrossMarAfter"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS:C628(*; "pGrossPCAfter"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS:C628(*; "pCommSales"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS:C628(*; "pCommRep"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS:C628(*; "pCommSPC"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS:C628(*; "pCommRPC"; $theColor; 256*$theColor)
 		End if 
 		LineItemPrintManage(1; pPrintThis)
 		//// Modified by: williamjames (130308)

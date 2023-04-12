@@ -1,1 +1,0 @@
-entryEntity.BillInstructions:=DE_PopUpArray(Self:C308)

@@ -46,7 +46,7 @@ End case
 
 If ($vtText#"")
 	$vtDateTime:=DateTime("yyyymmdd_hhmmss")
-	//$vtDocName:=$vtFieldName+"_"+String(DateTime_Enter )+"_"+String(Current process)+".txt"
+	//$vtDocName:=$vtFieldName+"_"+String(DateTime_DTTo )+"_"+String(Current process)+".txt"
 	$vtDocName:=$vtFieldName+"_"+$vtDateTime+".txt"
 	$vhDoc:=Create document:C266(Storage:C1525.folder.jitDebug+$vtDocName)
 	If (OK=1)

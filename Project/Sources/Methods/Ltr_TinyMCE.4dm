@@ -17,7 +17,7 @@
 C_POINTER:C301($1; $2; $ptTable; ptCurTable)
 ARRAY LONGINT:C221(aiRecordNums; 0)
 
-If (ptCurTable=(->[Control:1]))
+If (ptCurTable=(->[Base:1]))
 	ALERT:C41("Letters must be lauched from Input or Output Layouts.")
 Else 
 	If (Count parameters:C259<2)
@@ -45,17 +45,17 @@ Else
 		COPY ARRAY:C226($2->; aiRecordNums)
 		<>prcControl:=0
 		Process_InitLocal
-		ptCurTable:=(->[Control:1])
+		ptCurTable:=(->[Base:1])
 		ControlRecCheck
 		
-		FORM SET INPUT:C55([Control:1]; "LetterWrite")
+		FORM SET INPUT:C55([Base:1]; "LetterWrite")
 		//jSetMenuNums (1;5;6)
 		SRPage:=1
 		
 		Open window:C153(10; 40; 820; 734; 8; "Letters: "+Table name:C256(ptPrintTable))
-		ptCurTable:=(->[Control:1])
-		ProcessTableOpen(->[Control:1]; "skip")
-		POST OUTSIDE CALL:C329(<>theProcessList)
+		ptCurTable:=(->[Base:1])
+		ProcessTableOpen(->[Base:1]; "skip")
+		POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 	End if 
 End if 
 

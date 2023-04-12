@@ -8,7 +8,7 @@
 
 
 // MustFixQQQZZZ: Bill James (2022-01-30T06:00:00Z)
-// Shift this to an object,  print_o or entryEntity.printVar. etc....
+// Shift this to an object,  print_o or entry_o.printVar. etc....
 
 //Ref: P_OrdHeadVars
 // All P_ methods

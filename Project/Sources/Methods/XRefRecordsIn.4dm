@@ -22,7 +22,7 @@
 // myDoc:=Open document(myDocName)
 // TRACE
 // If (OK=1)
-// $dtNow:=DateTime_Enter 
+// $dtNow:=DateTime_DTTo 
 // Repeat 
 // RECEIVE PACKET(myDoc;$theText;"\r")
 // If (OK=1)
@@ -127,7 +127,7 @@
 // TRACE
 // If (OK=1)
 // vText1:=""
-// $dtNow:=DateTime_Enter 
+// $dtNow:=DateTime_DTTo 
 // Repeat 
 // RECEIVE PACKET(myDoc;$theText;"\r")
 // If (OK=1)

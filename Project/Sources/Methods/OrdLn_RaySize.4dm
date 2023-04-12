@@ -51,12 +51,12 @@ Case of
 						DELETE RECORD:C58([OrderLine:49])
 				End case 
 				If ($errorText#"")
-					ConsoleMessage($errorText)
+					ConsoleLog($errorText)
 				End if 
 			End for 
 		End if 
 		ARRAY LONGINT:C221(aoLinesDelete; 0)
-		QUERY:C277([OrderLine:49]; [OrderLine:49]orderNum:1=[Order:3]orderNum:2)
+		QUERY:C277([OrderLine:49]; [OrderLine:49]idNumOrder:1=[Order:3]idNum:2)
 		C_LONGINT:C283($diffRecCnt)
 		$k:=Size of array:C274(aOLineNum)
 		$diffRecCnt:=Records in selection:C76([OrderLine:49])-$k

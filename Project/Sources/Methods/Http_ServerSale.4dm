@@ -18,8 +18,8 @@ Case of
 		$doThis:=1
 		//
 	: ((voState.url="/Sales_MfgPONums@") | (voState.url="/Sales_MfrPONums@"))  //post Proposal              
-		Http_MfgPONeed($c; ->vText11)
-		$doThis:=1
+		//Http_MfgPONeed($c; ->vText11)
+		//$doThis:=1
 		
 	: ((voState.url="/Sales_MfgSplitList@") | (voState.url="/Sales_MfrSplitList@"))  //post Proposal              
 		Http_MfgSplitList($c; ->vText11)  //show split orders, option to print them
@@ -27,8 +27,8 @@ Case of
 		//
 		//
 	: (voState.url="/Sales_MyTasks@")  //post Proposal              
-		Http_MfgPONeed($c; ->vText11)
-		$doThis:=1
+		//Http_MfgPONeed($c; ->vText11)
+		//$doThis:=1
 		//
 End case 
 

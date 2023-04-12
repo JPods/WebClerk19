@@ -20,7 +20,7 @@ If ($cntRay=0)
 	If (allowAlerts_boo)
 		ALERT:C41($working)
 	Else 
-		ConsoleMessage($working)
+		ConsoleLog($working)
 	End if 
 Else 
 	SORT ARRAY:C229(aLDistinct)  // redunant, but incase it was used and changed

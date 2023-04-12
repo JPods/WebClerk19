@@ -20,7 +20,7 @@ NTKString__InitHTMLEntities
 //Compiler_Variables_Inter 
 //Compiler_Arrays_Inter 
 
-ARRAY TEXT:C222(<>atConsoleMessage; 0)  // ### jwm ### 20160711_1328 Console Message Buffer 
+ARRAY TEXT:C222(<>atConsole_Log; 0)  // ### jwm ### 20160711_1328 Console Message Buffer 
 
 ARRAY LONGINT:C221(<>aPrsRelatedParentTable; 0)
 ARRAY LONGINT:C221(<>aPrsRelatedParentRecord; 0)
@@ -168,7 +168,7 @@ ARRAY TEXT:C222(<>aPrecDis; 5)
 MESSAGES ON:C181
 //  MESSAGE("Thank you.")
 //
-//  ConsoleMessage ("TEST: Thank you.")
+//  Console_Log ("TEST: Thank you.")
 
 C_LONGINT:C283(<>iPopFont)
 <>iPopFont:=0
@@ -302,12 +302,12 @@ ARRAY TEXT:C222(<>yURptCreatr; 15)
 <>yURptCreatr{15}:="Clip"
 //
 //fill the Fax Attachment Pop-up and the related UniqueID array
-//ConsoleMessage ("TEST: URpt_FillFaxAtt")  // ### jwm ### 20190930_1827 what was the purpose of doing this ???
+//Console_Log ("TEST: URpt_FillFaxAtt")  // ### jwm ### 20190930_1827 what was the purpose of doing this ???
 URpt_FillFaxAtt
 //
 //set-up for ELog_NewRecord
 C_LONGINT:C283(<>lELogLastDT)
-<>lELogLastDT:=DateTime_Enter
+<>lELogLastDT:=DateTime_DTTo
 C_TEXT:C284(<>vTextStat1; <>vTextStat2; <>vTextStat3; <>vTextStat4; <>vTextStat5)
 C_TEXT:C284(<>vTextStat6; <>vTextStat7; <>vTextStat8; <>vTextStat9; <>vTextStat10)
 //

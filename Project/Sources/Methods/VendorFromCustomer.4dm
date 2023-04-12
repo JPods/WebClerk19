@@ -11,14 +11,14 @@ Case of
 	: (Count parameters:C259=1)
 		$oCust:=$1
 	: (process_o.cur#Null:C1517)
-		If (process_o.tableName="Customer")
+		If (process_o.dataClassName="Customer")
 			$oCust:=process_o.cur
 		End if 
 End case 
 If ($oCust#Null:C1517)
 	$oVend:=ds:C1482.Vendor.query("customerIDCustTable = :1"; $oCust.customerID)
 	If ($oVend#Null:C1517)
-		ConsoleMessage("Vendor already exists with customerID: "+$oCust.customerID)
+		ConsoleLog("Vendor already exists with customerID: "+$oCust.customerID)
 	Else 
 		
 		$oVend:=ds:C1482.Vendor.new()
@@ -53,6 +53,6 @@ If ($oCust#Null:C1517)
 		$oVend.alertMessage:=$oCust.alertMessage
 		$oVend.customerIDCustTable:=$oCust.customerID
 		$oVend.save()
-		ConsoleMessage("Vendor created with customerID: "+$oCust.customerID)
+		ConsoleLog("Vendor created with customerID: "+$oCust.customerID)
 	End if 
 End if 

@@ -21,8 +21,8 @@ Case of
 		If ($notGroup)
 			C_LONGINT:C283($theColor)
 			$theColor:=14
-			_O_OBJECT SET COLOR:C271([Item:4]costAverage:13; -$theColor+(256*$theColor))
-			_O_OBJECT SET COLOR:C271([Item:4]costLastInShip:47; -$theColor+(256*$theColor))
+			OBJECT SET RGB COLORS(*; "[Item:4]costAverage:13"; $theColor; 256*$theColor)
+			OBJECT SET RGB COLORS(*; "[Item:4]costLastInShip:47"; $theColor; 256*$theColor)
 		End if 
 		Item_ListBe4(eQuickQuote)
 		If (<>vItemNum#"")

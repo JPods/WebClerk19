@@ -14,7 +14,6 @@
 // ----------------------------------------------------
 
 C_TEXT:C284(vWCLocalAddress; vWCRemoteAddress; vWCStatus; vWCRequestMethod; vWCRequestURI; vWCDocumentURI; vWCPayload)
-C_TEXT:C284(<>vtapiURLFragment)
 C_LONGINT:C283(vlWCLocalPort)
 C_BOOLEAN:C305(vbWCHeadersSent)
 C_BLOB:C604(vblWCResponse)  // get rid of this, replace with voState
@@ -39,7 +38,7 @@ vtLocked:=""
 vtLockedColor:=""
 
 C_TEXT:C284(vtapiURLFragment)
-vtapiURLFragment:=<>vtapiURLFragment
+vtapiURLFragment:=Storage:C1525.wc.apiURLFragment
 
 SET BLOB SIZE:C606(vblWCResponse; 0)
 

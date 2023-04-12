@@ -99,7 +99,7 @@ If (False:C215)
 						End for 
 					Else 
 						CREATE RECORD:C68([Customer:2])
-						DBCustomer_init
+						DB_InitCustomer
 						[Customer:2]dateLastUpdated:107:=!2009-02-03!
 						[Customer:2]city:6:=aText8{2}
 						[Customer:2]phone:13:=aText8{3}
@@ -125,19 +125,19 @@ If (False:C215)
 			vi2:=Records in selection:C76([Customer:2])
 			ALERT:C41(String:C10(vi2))
 			For (vi1; 1; vi2)
-				CREATE RECORD:C68([CallReport:34])
+				CREATE RECORD:C68([Call:34])
 				
 				//ALERT(String([CallReport]UniqueID))
-				[CallReport:34]customerID:1:=[Customer:2]customerID:1
-				[CallReport:34]company:42:=[Customer:2]company:2
-				[CallReport:34]tableNum:2:=2
-				[CallReport:34]attention:18:=[Customer:2]nameFirst:73+" "+[Customer:2]nameLast:23
-				[CallReport:34]actionBy:3:=Current user:C182
-				[CallReport:34]initiatedBy:23:=Current user:C182
-				[CallReport:34]dtAction:4:=DateTime_Enter
-				[CallReport:34]dateDocument:17:=Current date:C33
-				[CallReport:34]action:15:=vText1
-				SAVE RECORD:C53([CallReport:34])
+				[Call:34]customerID:1:=[Customer:2]customerID:1
+				[Call:34]company:42:=[Customer:2]company:2
+				[Call:34]tableNum:2:=2
+				[Call:34]attention:18:=[Customer:2]nameFirst:73+" "+[Customer:2]nameLast:23
+				[Call:34]actionBy:3:=Current user:C182
+				[Call:34]initiatedBy:23:=Current user:C182
+				[Call:34]dtAction:4:=DateTime_DTTo
+				[Call:34]dateDocument:17:=Current date:C33
+				[Call:34]action:15:=vText1
+				SAVE RECORD:C53([Call:34])
 				NEXT RECORD:C51([Customer:2])
 			End for 
 			USE SET:C118("Current")
@@ -154,7 +154,7 @@ If (False:C215)
 		vText1:="ItemSalesByPrice"
 		vText2:="Monthly"
 		vDate1:=Date:C102(Request:C163("Report Date"; String:C10(Date_ThisMon(Current date:C33-10))))
-		vi10:=DateTime_Enter(vDate1)
+		vi10:=DateTime_DTTo(vDate1)
 		If (OK=1)
 			ORDER BY:C49([InvoiceLine:54]; [InvoiceLine:54]itemNum:4; [InvoiceLine:54]typeSale:27)
 			vi2:=Records in selection:C76([InvoiceLine:54])
@@ -367,7 +367,7 @@ If (False:C215)
 		QUERY:C277([OrderLine:49];  & [OrderLine:49]dateDocument:25>=vDate1; *)
 		QUERY:C277([OrderLine:49];  & [OrderLine:49]dateDocument:25<=vDate2)
 		ALERT:C41(String:C10(vDate1)+": "+String:C10(vDate2)+": "+String:C10(vR1)+": "+String:C10(Records in selection:C76([OrderLine:49])))
-		SELECTION TO ARRAY:C260([OrderLine:49]altItem:31; aTmp35Str1; [OrderLine:49]description:5; aTmp80Str1; [OrderLine:49]qty:6; aTmpReal1; [OrderLine:49]extendedPrice:11; aTmpReal2; [OrderLine:49]customerID:2; aTmp10Str1; [OrderLine:49]idNumOrder:1; aTmpLong1; [OrderLine:49]dateDocument:25; aTmpDate1)
+		SELECTION TO ARRAY:C260([OrderLine:49]itemNumAlt:31; aTmp35Str1; [OrderLine:49]description:5; aTmp80Str1; [OrderLine:49]qty:6; aTmpReal1; [OrderLine:49]extendedPrice:11; aTmpReal2; [OrderLine:49]customerID:2; aTmp10Str1; [OrderLine:49]idNumOrder:1; aTmpLong1; [OrderLine:49]dateDocument:25; aTmpDate1)
 		iLoText8:=">"
 		iLoText9:="<"
 		iLoText10:="="

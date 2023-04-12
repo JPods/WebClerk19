@@ -198,7 +198,7 @@ If (False:C215)
 					AcceptContactsRetired
 				End if 
 				
-				acceptFilePt($unLoad; ->[Customer:2]; ->[Contact:13]; ->[Service:6]; ->[Reference:7]; ->[CallReport:34])  // ### jwm ### 20171207_1050 why is [Customer] saved here and below
+				acceptFilePt($unLoad; ->[Customer:2]; ->[Contact:13]; ->[Service:6]; ->[Reference:7]; ->[Call:34])  // ### jwm ### 20171207_1050 why is [Customer] saved here and below
 				acceptFilePt($unLoad; ->[OrderLine:49]; ->[Order:3]; ->[Invoice:26]; ->[Proposal:42]; ->[InvoiceLine:54])
 				If (([Customer:2]zip:8#"") & ($newRecord))
 					Find Ship Zone(->[Customer:2]zip:8; ->[Customer:2]zone:57; ->[Customer:2]shipVia:12; ->[Customer:2]country:9; ->[Customer:2]siteID:106)
@@ -212,7 +212,7 @@ If (False:C215)
 				End if 
 				If (Find in array:C230(<>aTerms; [Customer:2]terms:33)<1)
 					[Customer:2]terms:33:=Storage:C1525.default.terms
-					//DBCustomer_init 
+					//DB_InitCustomer 
 				End if 
 				<>aLastRecNum{2}:=Record number:C243([Customer:2])
 				SAVE RECORD:C53(ptCurTable->)
@@ -277,7 +277,7 @@ If (False:C215)
 				SAVE RECORD:C53([SpecialDiscount:44])
 				Disc_ArraysDo(-5)
 				// setTypeSalePopu 
-			: (ptCurTable=(->[OrderComment:27]))
+			: (ptCurTable=(->[zOrderComment:27]))
 				SAVE RECORD:C53(ptCurTable->)
 				//setChOrdCom 
 			: (ptCurTable=(->[Process:16]))
@@ -296,14 +296,14 @@ If (False:C215)
 				SAVE RECORD:C53(ptCurTable->)
 				// setChAds 
 			: (ptCurTable=(->[TaxJurisdiction:14]))
-				[TaxJurisdiction:14]dateTimeSync:6:=DateTime_Enter
+				[TaxJurisdiction:14]dateTimeSync:6:=DateTime_DTTo
 				SAVE RECORD:C53([TaxJurisdiction:14])
 				//  setChTax 
 			: (ptCurTable=(->[Letter:20]))
 				//[Letter]LetterPict:=  //**WR O Save to picture (eLetterArea)
 				SAVE RECORD:C53(ptCurTable->)
 			: (ptCurTable=(->[Rep:8]))
-				[Rep:8]dateTimeSync:16:=DateTime_Enter
+				[Rep:8]dateTimeSync:16:=DateTime_DTTo
 				SAVE RECORD:C53([Rep:8])
 				//   setChReps 
 			: (ptCurTable=(->[ItemSpec:31]))
@@ -335,7 +335,7 @@ If (False:C215)
 			: (ptCurTable=(->[RemoteUser:57]))
 				SAVE RECORD:C53([RemoteUser:57])
 				
-			: (ptCurTable=(->[DialingInfo:81]))
+			: (ptCurTable=(->[zDialingInfo:81]))
 				Dial_AcceptDI
 			: (ptCurTable=(->[CronJob:82]))
 				SAVE RECORD:C53([CronJob:82])
@@ -368,7 +368,7 @@ If (False:C215)
 		//[SalesIDTrack]ValueChanged:=String([Payment]Amount)
 		//[SalesIDTrack]ChangedBy:=[Payment]Comment
 		//[SalesIDTrack]DocID:=[Payment]customerID
-		//[SalesIDTrack]DTCreated:=DateTime_Enter 
+		//[SalesIDTrack]DTCreated:=DateTime_DTTo 
 		//SAVE RECORD([SalesIDTrack])
 		//QUERY([Customer];[Customer]customerID=[Payment]customerID)
 		//LOAD RECORD([Customer])
@@ -393,7 +393,7 @@ If (False:C215)
 		End if 
 	End if 
 	
-	//ConsoleMessage ("TEST: End if")
+	//Console_Log ("TEST: End if")
 	
 	//[Payment]AmountAvailable:=[Payment]Amount
 	//[Payment]DateReceived:=Current date
@@ -407,7 +407,7 @@ If (False:C215)
 	//[SalesIDTrack]ValueChanged:=String([Payment]Amount)
 	//[SalesIDTrack]ChangedBy:=[Payment]Comment
 	//[SalesIDTrack]DocID:=[Payment]customerID
-	//[SalesIDTrack]DTCreated:=DateTime_Enter 
+	//[SalesIDTrack]DTCreated:=DateTime_DTTo 
 	//SAVE RECORD([SalesIDTrack])
 	//QUERY([Customer];[Customer]customerID=[Payment]customerID)
 	//LOAD RECORD([Customer])

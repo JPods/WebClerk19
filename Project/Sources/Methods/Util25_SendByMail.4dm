@@ -10,8 +10,11 @@ $invoiceInfo:=$1  //We receive the invoice information
 $settings:=$2
 
 
-$invoice:=ds:C1482.Invoices.get($invoiceInfo.invoiceID)
+$invoice:=ds:C1482.Invoice.get($invoiceInfo.invoiceID)
 
+
+// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+// copied, fix to our relations
 $client:=$invoice.Invoices_to_Clients
 
 $pdf:=$invoiceInfo.invoicePath

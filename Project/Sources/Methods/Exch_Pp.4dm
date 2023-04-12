@@ -27,7 +27,7 @@ If (([Proposal:42]exchangeRate:54#0) & ([Proposal:42]exchangeRate:54#1))
 			aPUnitPrice{$incLn}:=Round:C94(aPUnitPrice{$incLn}*[Proposal:42]exchangeRate:54; viExDisPrec)
 			PpLnExtend($incLn)
 		End for 
-		If ([Proposal:42]autoFreight:38=False:C215)
+		If ([Proposal]shipAuto=False:C215)
 			[Proposal:42]shipFreightCost:30:=Round:C94([Proposal:42]exchangeRate:54*[Proposal:42]shipFreightCost:30; viExDisPrec)
 			[Proposal:42]shipMiscCosts:29:=Round:C94([Proposal:42]exchangeRate:54*[Proposal:42]shipMiscCosts:29; viExDisPrec)
 		End if 
@@ -49,7 +49,7 @@ If (([Proposal:42]exchangeRate:54#0) & ([Proposal:42]exchangeRate:54#1))
 			PpLnExtend($incLn)
 		End for 
 		Exch_InitRays(0)
-		If ([Proposal:42]autoFreight:38=False:C215)
+		If ([Proposal]shipAuto=False:C215)
 			[Proposal:42]shipFreightCost:30:=Round:C94([Proposal:42]shipFreightCost:30/[Proposal:42]exchangeRate:54; viExConPrec)
 			[Proposal:42]shipMiscCosts:29:=Round:C94([Proposal:42]shipMiscCosts:29/[Proposal:42]exchangeRate:54; viExConPrec)
 		End if 

@@ -18,9 +18,8 @@ If (Not:C34(Application type:C494=4D Server:K5:6))
 	Else 
 		$found:=Prs_CheckRunnin("Dept Admin")
 		If ($found>0)
-			If (Frontmost process:C327#<>aPrsNum{$found})
-				BRING TO FRONT:C326(<>aPrsNum{$found})
-			End if 
+			BRING TO FRONT:C326($found)
+			
 		Else 
 			<>ptCurTable:=ptCurTable
 			<>prcControl:=1

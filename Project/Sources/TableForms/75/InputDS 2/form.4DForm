@@ -1,0 +1,2318 @@
+{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 676,
+	"markerBreak": 676,
+	"markerFooter": 692,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_Text__1679561_1": {
+					"type": "text",
+					"top": 12,
+					"left": 171,
+					"width": 86,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,61"
+				},
+				"_Text__1679562_2": {
+					"type": "text",
+					"top": 30,
+					"left": 171,
+					"width": 86,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16795,62"
+				},
+				"_Text__16792215_3": {
+					"type": "text",
+					"top": 70,
+					"left": 270,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,215"
+				},
+				"_Text__167915_4": {
+					"type": "text",
+					"top": 89,
+					"left": 270,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,5"
+				},
+				"_Text__1679563_5": {
+					"type": "text",
+					"top": 108,
+					"left": 270,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,63"
+				},
+				"_PROP_EventLog_groupId_6": {
+					"type": "input",
+					"top": 10,
+					"left": 264,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.groupId",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]groupId:3"
+				},
+				"_PROP_EventLog_company_7": {
+					"type": "input",
+					"top": 68,
+					"left": 120,
+					"width": 144,
+					"height": 18,
+					"dataSource": "entry_o.company",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]company:46"
+				},
+				"_PROP_EventLog_customerid_8": {
+					"type": "input",
+					"top": 87,
+					"left": 120,
+					"width": 144,
+					"height": 18,
+					"dataSource": "entry_o.customerid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]customerid:38"
+				},
+				"_PROP_EventLog_number_9": {
+					"type": "input",
+					"top": 106,
+					"left": 120,
+					"width": 144,
+					"height": 18,
+					"dataSource": "entry_o.number",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]number:2"
+				},
+				"_PROP_EventLog_orderNum_10": {
+					"type": "input",
+					"top": 124,
+					"left": 120,
+					"width": 144,
+					"height": 18,
+					"dataSource": "entry_o.orderNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]orderNum:14"
+				},
+				"_PROP_EventLog_invoiceNum_11": {
+					"type": "input",
+					"top": 143,
+					"left": 120,
+					"width": 144,
+					"height": 18,
+					"dataSource": "entry_o.invoiceNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]invoiceNum:12"
+				},
+				"_PROP_EventLog_WccName_12": {
+					"type": "input",
+					"top": 161,
+					"left": 120,
+					"width": 144,
+					"height": 18,
+					"dataSource": "entry_o.WccName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]WccName:32"
+				},
+				"_PROP_EventLog_qty_13": {
+					"type": "input",
+					"top": 68,
+					"left": 357,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.qty",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]qty:6"
+				},
+				"_PROP_EventLog_Value_14": {
+					"type": "input",
+					"top": 87,
+					"left": 357,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.Value",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]Value:7"
+				},
+				"_PROP_EventLog_hitsTotal_15": {
+					"type": "input",
+					"top": 106,
+					"left": 357,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.hitsTotal",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]hitsTotal:11"
+				},
+				"_PROP_EventLog_Source_16": {
+					"type": "input",
+					"top": 125,
+					"left": 357,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.Source",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]Source:29"
+				},
+				"_PROP_EventLog_allyId_17": {
+					"type": "input",
+					"top": 143,
+					"left": 357,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.allyId",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]allyId:49"
+				},
+				"_PROP_EventLog_operatingSystem_18": {
+					"type": "input",
+					"top": 162,
+					"left": 357,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.operatingSystem",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]operatingSystem:22"
+				},
+				"_PROP_EventLog_tableNumWccPrime_19": {
+					"type": "input",
+					"top": 10,
+					"left": 594,
+					"width": 37,
+					"height": 18,
+					"dataSource": "entry_o.tableNumWccPrime",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]tableNumWccPrime:24"
+				},
+				"_PROP_EventLog_wccRemoteUserid_20": {
+					"type": "input",
+					"top": 10,
+					"left": 634,
+					"width": 63,
+					"height": 18,
+					"dataSource": "entry_o.wccRemoteUserid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]wccRemoteUserid:30"
+				},
+				"_VAR_vdDate_21": {
+					"type": "input",
+					"top": 30,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "vdDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable26.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vtTime_22": {
+					"type": "input",
+					"top": 49,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "vtTime",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"entryFilter": "!0&9##:##",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable27.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_EventLog_tableNum_23": {
+					"type": "input",
+					"top": 68,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "entry_o.tableNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Untitled"
+					},
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]tableNum:9"
+				},
+				"_PROP_EventLog_customerRecNum_24": {
+					"type": "input",
+					"top": 87,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "entry_o.customerRecNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Untitled"
+					},
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]customerRecNum:8"
+				},
+				"_PROP_EventLog_RemoteUserRec_25": {
+					"type": "input",
+					"top": 106,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "entry_o.RemoteUserRec",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]RemoteUserRec:10"
+				},
+				"_PROP_EventLog_SecurityLevel_26": {
+					"type": "input",
+					"top": 125,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "entry_o.SecurityLevel",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]SecurityLevel:16"
+				},
+				"_PROP_EventLog_Status_27": {
+					"type": "input",
+					"top": 163,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "entry_o.Status",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]Status:48"
+				},
+				"_VAR_<>pNavPallet_28": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_29": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 20,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_EventLog_idUnique_30": {
+					"type": "input",
+					"top": 28,
+					"left": 264,
+					"width": 150,
+					"height": 18,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]idUnique:5"
+				},
+				"_Text_Source_31": {
+					"type": "text",
+					"top": 127,
+					"left": 270,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Source"
+				},
+				"_Text_RemoteUser_32": {
+					"type": "text",
+					"top": 12,
+					"left": 507,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "RemoteUser"
+				},
+				"_Text_OS_33": {
+					"type": "text",
+					"top": 164,
+					"left": 270,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "OS"
+				},
+				"_VAR_bAccept_34": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_35": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_36": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_37": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bdEnterKey_38": {
+					"type": "button",
+					"top": 50,
+					"left": 1,
+					"width": 3,
+					"height": 5,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_ProposalNum_39": {
+					"type": "text",
+					"top": 108,
+					"left": 27,
+					"width": 86,
+					"height": 14,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ProposalNum"
+				},
+				"_Text_OrderNum_40": {
+					"type": "text",
+					"top": 126,
+					"left": 27,
+					"width": 86,
+					"height": 14,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "OrderNum"
+				},
+				"_Text_InvoiceNum_41": {
+					"type": "text",
+					"top": 145,
+					"left": 27,
+					"width": 86,
+					"height": 14,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "InvoiceNum"
+				},
+				"_Text_PONum_42": {
+					"type": "text",
+					"top": 163,
+					"left": 27,
+					"width": 86,
+					"height": 14,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PONum"
+				},
+				"_Text_AllyID_43": {
+					"type": "text",
+					"top": 145,
+					"left": 270,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "AllyID"
+				},
+				"_Text__1679134_44": {
+					"type": "text",
+					"top": 32,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,34"
+				},
+				"_Text__16790144_45": {
+					"type": "text",
+					"top": 51,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,144"
+				},
+				"_Text_TableNum_46": {
+					"type": "text",
+					"top": 70,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TableNum"
+				},
+				"_Text__1679564_47": {
+					"type": "text",
+					"top": 89,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,64"
+				},
+				"_Text__1679565_48": {
+					"type": "text",
+					"top": 108,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,65"
+				},
+				"_PROP_EventLog_dateCompleted_49": {
+					"type": "input",
+					"top": 144,
+					"left": 593,
+					"width": 104,
+					"height": 18,
+					"dataSource": "entry_o.dateCompleted",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]dateCompleted:45"
+				},
+				"_Text__1679567_50": {
+					"type": "text",
+					"top": 127,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,67"
+				},
+				"_Text_Complete_51": {
+					"type": "text",
+					"top": 146,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Complete"
+				},
+				"_Text_Status_52": {
+					"type": "text",
+					"top": 165,
+					"left": 521,
+					"width": 66,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Status"
+				},
+				"_Text_Company_53": {
+					"type": "text",
+					"top": 70,
+					"left": 27,
+					"width": 86,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Company"
+				},
+				"_Text_customerID_54": {
+					"type": "text",
+					"top": 89,
+					"left": 27,
+					"width": 86,
+					"height": 14,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "customerID"
+				},
+				"customerID1": {
+					"type": "button",
+					"top": 88,
+					"left": 48,
+					"width": 65,
+					"height": 15,
+					"dataSource": "b1",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/customerID1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"customerID2": {
+					"type": "button",
+					"top": 107,
+					"left": 48,
+					"width": 65,
+					"height": 15,
+					"dataSource": "b1",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/customerID2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"customerID6": {
+					"type": "button",
+					"top": 125,
+					"left": 48,
+					"width": 65,
+					"height": 15,
+					"dataSource": "b1",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/customerID6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"customerID5": {
+					"type": "button",
+					"top": 144,
+					"left": 48,
+					"width": 65,
+					"height": 15,
+					"dataSource": "b1",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/customerID5.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"customerID4": {
+					"type": "button",
+					"top": 162,
+					"left": 48,
+					"width": 65,
+					"height": 15,
+					"dataSource": "b1",
+					"text": ":16789,13",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_EventLog_addressIPLocal_60": {
+					"type": "input",
+					"top": 86,
+					"left": 782,
+					"width": 160,
+					"height": 18,
+					"dataSource": "entry_o.addressIPLocal",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]addressIPLocal:40"
+				},
+				"_PROP_EventLog_addressIPRemote_61": {
+					"type": "input",
+					"top": 105,
+					"left": 782,
+					"width": 160,
+					"height": 18,
+					"dataSource": "entry_o.addressIPRemote",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]addressIPRemote:18"
+				},
+				"_PROP_EventLog_UserAgent_62": {
+					"type": "input",
+					"top": 124,
+					"left": 782,
+					"width": 160,
+					"height": 18,
+					"dataSource": "entry_o.UserAgent",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]UserAgent:42"
+				},
+				"_PROP_EventLog_lastQueryScript_63": {
+					"type": "input",
+					"top": 143,
+					"left": 782,
+					"width": 160,
+					"height": 18,
+					"dataSource": "entry_o.lastQueryScript",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]lastQueryScript:31"
+				},
+				"_PROP_EventLog_WccEmail_64": {
+					"type": "input",
+					"top": 162,
+					"left": 782,
+					"width": 160,
+					"height": 18,
+					"dataSource": "entry_o.WccEmail",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]WccEmail:33"
+				},
+				"_Text_IPLocal_65": {
+					"type": "text",
+					"top": 88,
+					"left": 738,
+					"width": 34,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "IPLocal"
+				},
+				"_Text_IPRemote_66": {
+					"type": "text",
+					"top": 107,
+					"left": 726,
+					"width": 46,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "IPRemote"
+				},
+				"_Text_UsrAgent_67": {
+					"type": "text",
+					"top": 126,
+					"left": 727,
+					"width": 45,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "UsrAgent"
+				},
+				"_Text_LstQry_68": {
+					"type": "text",
+					"top": 145,
+					"left": 741,
+					"width": 32,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "LstQry"
+				},
+				"_Text_LstSort_69": {
+					"type": "text",
+					"top": 164,
+					"left": 739,
+					"width": 34,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "LstSort"
+				},
+				"_PROP_EventLog_message_70": {
+					"type": "input",
+					"top": 206,
+					"left": 50,
+					"width": 890,
+					"height": 375,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "entry_o.message",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]message:4"
+				},
+				"_Text_Message_71": {
+					"type": "text",
+					"top": 189,
+					"left": 43,
+					"width": 134,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Message"
+				},
+				"_PROP_EventLog_id_72": {
+					"type": "input",
+					"top": 10,
+					"left": 782,
+					"width": 160,
+					"height": 18,
+					"dataSource": "entry_o.id",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]id:54"
+				},
+				"_Text_id_73": {
+					"type": "text",
+					"top": 12,
+					"left": 718,
+					"width": 54,
+					"height": 14,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "id"
+				},
+				"bCopy": {
+					"type": "button",
+					"top": 11,
+					"left": 717,
+					"width": 65,
+					"height": 15,
+					"dataSource": "bCopy",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/bCopy.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Text_WCLog_75": {
+					"type": "text",
+					"top": 189,
+					"left": 50,
+					"width": 42,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "WCLog"
+				},
+				"_PROP_QQQRemoteUser_idUnique_76": {
+					"type": "input",
+					"top": 31,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]idUnique:1"
+				},
+				"_PROP_QQQRemoteUser_dtLastVisit_77": {
+					"type": "input",
+					"top": 145,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.dtLastVisit",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]dtLastVisit:5"
+				},
+				"_PROP_QQQRemoteUser_tableNum_78": {
+					"type": "input",
+					"top": 183,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.tableNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]tableNum:9"
+				},
+				"_PROP_RemoteUser_customerid_79": {
+					"type": "input",
+					"top": 221,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.customerid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[RemoteUser:57]customerid:10"
+				},
+				"_PROP_QQQRemoteUser_dtCreated_80": {
+					"type": "input",
+					"top": 107,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.dtCreated",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]dtCreated:8"
+				},
+				"_PROP_QQQRemoteUser_hitCount_81": {
+					"type": "input",
+					"top": 202,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.hitCount",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]hitCount:12"
+				},
+				"_PROP_QQQRemoteUser_userName_82": {
+					"type": "input",
+					"top": 50,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.userName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]userName:2"
+				},
+				"_PROP_QQQRemoteUser_userPassword_83": {
+					"type": "input",
+					"top": 69,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.userPassword",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]userPassword:3"
+				},
+				"_PROP_QQQRemoteUser_securityLevel_84": {
+					"type": "input",
+					"top": 88,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.securityLevel",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]securityLevel:4"
+				},
+				"_PROP_RemoteUser_contactid_85": {
+					"type": "input",
+					"top": 240,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.contactid",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[RemoteUser:57]contactid:11"
+				},
+				"_VAR_vTime1_86": {
+					"type": "input",
+					"top": 126,
+					"left": 868,
+					"width": 86,
+					"height": 18,
+					"dataSource": "vTime1",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vTime2_87": {
+					"type": "input",
+					"top": 164,
+					"left": 868,
+					"width": 86,
+					"height": 18,
+					"dataSource": "vTime2",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_QQQRemoteUser_dotted_88": {
+					"type": "input",
+					"top": 259,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.dotted",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]dotted:6"
+				},
+				"_Text_UniqueID_89": {
+					"type": "text",
+					"top": 33,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "UniqueID"
+				},
+				"_Text__167907_90": {
+					"type": "text",
+					"top": 52,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,7"
+				},
+				"_Text__16792198_91": {
+					"type": "text",
+					"top": 71,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,198"
+				},
+				"_Text__16794154_92": {
+					"type": "text",
+					"top": 90,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,154"
+				},
+				"_Text__16794159_93": {
+					"type": "text",
+					"top": 109,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,159"
+				},
+				"_Text__16794156_94": {
+					"type": "text",
+					"top": 185,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,156"
+				},
+				"_Text__1679157_95": {
+					"type": "text",
+					"top": 223,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,57"
+				},
+				"_Text__16794157_96": {
+					"type": "text",
+					"top": 261,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,157"
+				},
+				"_Text__1679566_97": {
+					"type": "text",
+					"top": 280,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,66"
+				},
+				"_Text__16794158_98": {
+					"type": "text",
+					"top": 242,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,158"
+				},
+				"_Text__16794155_99": {
+					"type": "text",
+					"top": 147,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,155"
+				},
+				"_Text__16794160_100": {
+					"type": "text",
+					"top": 204,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,160"
+				},
+				"_Text__16789204_101": {
+					"type": "text",
+					"top": 427,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,204"
+				},
+				"_Text__16789228_102": {
+					"type": "text",
+					"top": 488,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,228"
+				},
+				"_Text__16789229_103": {
+					"type": "text",
+					"top": 583,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,229"
+				},
+				"_Text__16789230_104": {
+					"type": "text",
+					"top": 564,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,230"
+				},
+				"_Text__16789231_105": {
+					"type": "text",
+					"top": 545,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,231"
+				},
+				"_Text__16789232_106": {
+					"type": "text",
+					"top": 526,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,232"
+				},
+				"_Text__16789233_107": {
+					"type": "text",
+					"top": 507,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,233"
+				},
+				"_Text__1678925_108": {
+					"type": "text",
+					"top": 351,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,25"
+				},
+				"_Text__1678912_109": {
+					"type": "text",
+					"top": 370,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,12"
+				},
+				"_Text__16790189_110": {
+					"type": "text",
+					"top": 389,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,189"
+				},
+				"_Text__16789235_111": {
+					"type": "text",
+					"top": 408,
+					"left": 710,
+					"width": 70,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,235"
+				},
+				"_VAR_v6_112": {
+					"type": "input",
+					"top": 349,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "v6",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v7_113": {
+					"type": "input",
+					"top": 368,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "v7",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v8_114": {
+					"type": "input",
+					"top": 387,
+					"left": 782,
+					"width": 97,
+					"height": 18,
+					"dataSource": "v8",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v13_115": {
+					"type": "input",
+					"top": 387,
+					"left": 882,
+					"width": 73,
+					"height": 18,
+					"dataSource": "v13",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v9_116": {
+					"type": "input",
+					"top": 406,
+					"left": 782,
+					"width": 97,
+					"height": 18,
+					"dataSource": "v9",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v10_117": {
+					"type": "input",
+					"top": 406,
+					"left": 882,
+					"width": 73,
+					"height": 18,
+					"dataSource": "v10",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vAction_118": {
+					"type": "input",
+					"top": 425,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "vAction",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v1Date_119": {
+					"type": "input",
+					"top": 444,
+					"left": 782,
+					"width": 89,
+					"height": 18,
+					"dataSource": "v1Date",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/##",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v1Time_120": {
+					"type": "input",
+					"top": 444,
+					"left": 873,
+					"width": 81,
+					"height": 18,
+					"dataSource": "v1Time",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"entryFilter": "!0&9##:##",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v11_121": {
+					"type": "input",
+					"top": 486,
+					"left": 782,
+					"width": 89,
+					"height": 18,
+					"dataSource": "v11",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v12_122": {
+					"type": "input",
+					"top": 486,
+					"left": 873,
+					"width": 81,
+					"height": 18,
+					"dataSource": "v12",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v1_123": {
+					"type": "input",
+					"top": 505,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "v1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v2_124": {
+					"type": "input",
+					"top": 524,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "v2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v3_125": {
+					"type": "input",
+					"top": 543,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "v3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v4_126": {
+					"type": "input",
+					"top": 562,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "v4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_v5_127": {
+					"type": "input",
+					"top": 581,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "v5",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_Text__16794161_128": {
+					"type": "text",
+					"top": 14,
+					"left": 787,
+					"width": 80,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16794,161"
+				},
+				"_Text__16794162_129": {
+					"type": "text",
+					"top": 330,
+					"left": 788,
+					"width": 81,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16794,162"
+				},
+				"_VAR_vDate1_130": {
+					"type": "input",
+					"top": 126,
+					"left": 782,
+					"width": 84,
+					"height": 18,
+					"dataSource": "vDate1",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vDate2_131": {
+					"type": "input",
+					"top": 164,
+					"left": 782,
+					"width": 84,
+					"height": 18,
+					"dataSource": "vDate2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_EventLog_WCLog_132": {
+					"type": "input",
+					"top": 210,
+					"left": 50,
+					"width": 634,
+					"height": 375,
+					"dataSource": "entry_o.WCLog",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]WCLog:27"
+				},
+				"_PROP_QQQRemoteUser_domain_133": {
+					"type": "input",
+					"top": 278,
+					"left": 782,
+					"width": 172,
+					"height": 18,
+					"dataSource": "entry_o.domain",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQRemoteUser:57]domain:7"
+				},
+				"Parsebtn": {
+					"type": "button",
+					"top": 185,
+					"left": 120,
+					"width": 46,
+					"height": 20,
+					"dataSource": "b31",
+					"class": "cssInputSmall",
+					"focusable": false,
+					"text": "Parse",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Parsebtn.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Subform": {
+					"type": "subform",
+					"top": 232,
+					"left": 50,
+					"width": 885,
+					"height": 348,
+					"dataSource": "Subform",
+					"dataSourceTypeHint": "text",
+					"table": 101,
+					"detailForm": "Input1",
+					"listForm": "included",
+					"scrollbarHorizontal": "visible",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "system"
+				},
+				"_PROP_EventLog_WccCompany_136": {
+					"type": "input",
+					"top": 186,
+					"left": 70,
+					"width": 867,
+					"height": 18,
+					"dataSource": "entry_o.WccCompany",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]WccCompany:19"
+				},
+				"_Text_CarryOvr_137": {
+					"type": "text",
+					"top": 188,
+					"left": 18,
+					"width": 43,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "CarryOvr"
+				},
+				"_Text_WebTempRecs_138": {
+					"type": "text",
+					"top": 214,
+					"left": 27,
+					"width": 86,
+					"height": 12,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "WebTempRecs"
+				},
+				"customerID7": {
+					"type": "button",
+					"top": 213,
+					"left": 21,
+					"width": 84,
+					"height": 15,
+					"dataSource": "b1",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/customerID7.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_EventLog_ObGeneral_140": {
+					"type": "input",
+					"top": 207,
+					"left": 45,
+					"width": 912,
+					"height": 375,
+					"dataSource": "entry_o.ObGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[EventLog:75]ObGeneral:58"
+				},
+				"_Text_ObGeneral_141": {
+					"type": "text",
+					"top": 195,
+					"left": 50,
+					"width": 91,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 6,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

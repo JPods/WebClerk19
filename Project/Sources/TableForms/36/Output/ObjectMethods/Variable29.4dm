@@ -51,7 +51,7 @@ End if
 
 C_TEXT:C284($tableName)
 C_LONGINT:C283($cntRecords)
-$nameOfSelection:=tableName+"_"+String:C10([EventLog:75]idNum:5)
+$nameOfSelection:=[DInventory:36]tableName:30+"_"+String:C10([EventLog:75]idNum:5)
 $ptTable:=(->[DInventory:36])
 $tableName:=Table name:C256($ptTable)
 COPY NAMED SELECTION:C331($ptTable->; $nameOfSelection)
@@ -68,7 +68,7 @@ CREATE RECORD:C68([GenericChild2:91])
 [GenericChild2:91]purpose:4:="NamedSelection"
 [GenericChild2:91]name:3:=$nameOfSelection
 [GenericChild2:91]t01:32:=vText1
-[GenericChild2:91]dtLastSync:45:=DateTime_Enter
+[GenericChild2:91]dtLastSync:45:=DateTime_DTTo
 SAVE RECORD:C53([GenericChild2:91])
 
 $cntRecords:=Records in selection:C76([DInventory:36])

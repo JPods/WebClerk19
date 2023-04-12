@@ -1,1 +1,0 @@
-Exch_PopRate(0; ->[Proposal:42]currency:55; -><>aExchID; ->[Proposal:42]exchangeRate:54; ->[QQQCurrency:61])

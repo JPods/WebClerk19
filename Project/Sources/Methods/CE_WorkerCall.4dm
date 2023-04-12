@@ -22,7 +22,7 @@ If ($index>0)
 	<>aCEThreadName{$index}:=String:C10(<>aCEThreadProcess{$index})+" - "+$pass_o.tableName
 	$index_process:=Find in array:C230(<>aPrsNum; <>aCEThreadProcess{$index})
 	<>aPrsName{$index_process}:=<>aCEThreadName{$index}
-	POST OUTSIDE CALL:C329(<>theProcessList)
+	POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 	DELAY PROCESS:C323(Current process:C322; 10)
 	//SET PROCESS VARIABLE(<>aCEThreadProcess{$index}; process_o; $1)
 	POST OUTSIDE CALL:C329(<>aCEThreadProcess{$index})

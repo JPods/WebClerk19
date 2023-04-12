@@ -1,1 +1,0 @@
-//  CHOPPED DivD_SetFieldColor(Self)

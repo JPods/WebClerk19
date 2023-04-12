@@ -1,4 +1,4 @@
-﻿{
+{
 	"windowSizingX": "fixed",
 	"windowSizingY": "fixed",
 	"rightMargin": 20,
@@ -38,8 +38,8 @@
 			"objects": {
 				"Text8": {
 					"type": "text",
-					"top": 113,
-					"left": 580,
+					"top": 56,
+					"left": 120,
 					"width": 91,
 					"height": 12,
 					"stroke": "#000000",
@@ -110,7 +110,7 @@
 					"left": 218,
 					"width": 88,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]tableNum:1",
+					"dataSource": "[FC:94]tableNum:1",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -129,7 +129,7 @@
 					"left": 310,
 					"width": 120,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]tableName:7",
+					"dataSource": "[FC:94]tableName:7",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -147,7 +147,7 @@
 					"left": 678,
 					"width": 189,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]securityLevel:3",
+					"dataSource": "[FC:94]securityLevel:3",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -166,7 +166,7 @@
 					"left": 218,
 					"width": 88,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]fieldNumber:5",
+					"dataSource": "[FC:94]fieldNumber:5",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -185,7 +185,7 @@
 					"left": 310,
 					"width": 120,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]userName:8",
+					"dataSource": "[FC:94]userName:8",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -203,26 +203,7 @@
 					"left": 678,
 					"width": 189,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]role:12",
-					"stroke": "#000000",
-					"class": "cssInput",
-					"fill": "#FFFFFF",
-					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Characteristic1": {
-					"type": "input",
-					"top": 55,
-					"left": 218,
-					"width": 88,
-					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]data:2",
-					"dataSourceTypeHint": "integer",
+					"dataSource": "[FC:94]role:12",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -240,26 +221,7 @@
 					"left": 678,
 					"width": 189,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]purpose:11",
-					"stroke": "#000000",
-					"class": "cssInput",
-					"fill": "#FFFFFF",
-					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"UniqueID": {
-					"type": "input",
-					"top": 91,
-					"left": 678,
-					"width": 88,
-					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]idNum:4",
-					"dataSourceTypeHint": "integer",
+					"dataSource": "[FC:94]purpose:11",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
@@ -273,11 +235,11 @@
 				},
 				"UniqueID4": {
 					"type": "input",
-					"top": 111,
-					"left": 678,
+					"top": 54,
+					"left": 218,
 					"width": 88,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]idNum:4",
+					"dataSource": "[FC:94]idNum:4",
 					"dataSourceTypeHint": "integer",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -292,36 +254,15 @@
 				},
 				"purpose": {
 					"type": "input",
-					"top": 148,
+					"top": 78,
 					"left": 88,
 					"width": 898,
 					"height": 49,
-					"dataSource": "[FieldCharacteristic:94]comment:13",
+					"dataSource": "[FC:94]comment:13",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"fill": "#FFFFFF",
 					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"UniqueID1": {
-					"type": "input",
-					"top": 91,
-					"left": 678,
-					"width": 88,
-					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]idNum:4",
-					"dataSourceTypeHint": "integer",
-					"stroke": "#000000",
-					"class": "cssInput",
-					"focusable": false,
-					"fill": "#FFFFFF",
-					"borderStyle": "sunken",
-					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
 					"dropping": "none",
@@ -333,9 +274,9 @@
 					"type": "input",
 					"top": 557,
 					"left": 88,
-					"width": 898,
+					"width": 883,
 					"height": 117,
-					"dataSource": "[FieldCharacteristic:94]obSync:6",
+					"dataSource": "[FC:94]obSync:6",
 					"dataSourceTypeHint": "object",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -346,7 +287,8 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"scrollbarVertical": "visible"
 				},
 				"Text20": {
 					"type": "text",
@@ -359,17 +301,6 @@
 					"textAlign": "right",
 					"text": "TableNumber"
 				},
-				"Text21": {
-					"type": "text",
-					"top": 57,
-					"left": 120,
-					"width": 91,
-					"height": 12,
-					"stroke": "#000000",
-					"class": "cssInputLabel",
-					"textAlign": "right",
-					"text": "Characteristic"
-				},
 				"Text22": {
 					"type": "text",
 					"top": 14,
@@ -380,17 +311,6 @@
 					"class": "cssInputLabel",
 					"textAlign": "right",
 					"text": "SecurityLevel"
-				},
-				"Text23": {
-					"type": "text",
-					"top": 93,
-					"left": 580,
-					"width": 91,
-					"height": 12,
-					"stroke": "#000000",
-					"class": "cssInputLabel",
-					"textAlign": "right",
-					"text": "UniqueID"
 				},
 				"Text24": {
 					"type": "text",
@@ -500,11 +420,11 @@
 				},
 				"UniqueID5": {
 					"type": "input",
-					"top": 111,
-					"left": 678,
+					"top": 54,
+					"left": 218,
 					"width": 308,
 					"height": 17,
-					"dataSource": "[FieldCharacteristic:94]id:9",
+					"dataSource": "[FC:94]id:9",
 					"stroke": "#000000",
 					"class": "cssInput",
 					"focusable": false,
@@ -521,7 +441,7 @@
 				"Button": {
 					"type": "button",
 					"text": "names",
-					"top": 239,
+					"top": 169,
 					"left": 13,
 					"width": 68,
 					"height": 21,
@@ -533,7 +453,7 @@
 				"Text": {
 					"type": "text",
 					"text": "Comment",
-					"top": 148,
+					"top": 78,
 					"left": 15,
 					"width": 63,
 					"height": 16,
@@ -541,11 +461,11 @@
 				},
 				"UniqueID2": {
 					"type": "input",
-					"top": 203,
+					"top": 133,
 					"left": 88,
-					"width": 430,
-					"height": 337,
-					"dataSource": "[FieldCharacteristic:94]obGeneral:10",
+					"width": 416,
+					"height": 417,
+					"dataSource": "[FC:94]obGeneral:10",
 					"dataSourceTypeHint": "object",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -556,12 +476,13 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"scrollbarVertical": "visible"
 				},
 				"Text1": {
 					"type": "text",
 					"text": "obGeneral",
-					"top": 203,
+					"top": 133,
 					"left": 13,
 					"width": 70,
 					"height": 16,
@@ -578,11 +499,11 @@
 				},
 				"data": {
 					"type": "input",
-					"top": 208,
+					"top": 169,
 					"left": 556,
-					"width": 430,
-					"height": 337,
-					"dataSource": "[FieldCharacteristic:94]data:2",
+					"width": 415,
+					"height": 369,
+					"dataSource": "[FC:94]data:2",
 					"dataSourceTypeHint": "object",
 					"stroke": "#000000",
 					"class": "cssInput",
@@ -593,7 +514,20 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"scrollbarVertical": "visible"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "stringify",
+					"top": 139,
+					"left": 556,
+					"width": 80,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
 				}
 			}
 		}
@@ -613,7 +547,7 @@
 			"View 9": {}
 		}
 	},
-	"geometryStamp": 101,
+	"geometryStamp": 161,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

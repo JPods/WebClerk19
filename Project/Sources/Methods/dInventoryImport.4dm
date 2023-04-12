@@ -48,7 +48,7 @@ $vtSource:=""
 $vtType:=""
 //</declarations>
 
-ptCurtable:=->[Control:1]
+ptCurtable:=->[Base:1]
 IVNT_dRayInit
 
 ARRAY TEXT:C222($atSelect; 0)
@@ -56,10 +56,10 @@ ARRAY TEXT:C222($atLine; 0)
 ARRAY TEXT:C222($atData; 0)
 
 $Doc:=Select document:C905(""; ".txt"; "Select the data File"; Absolute path:K24:14; $atSelect)
-//ConsoleMessage ($Doc)
-//ConsoleMessage ($atSelect{1})
+//Console_Log ($Doc)
+//Console_Log ($atSelect{1})
 $vtData:=Document to text:C1236($atSelect{1})
-//ConsoleMessage ($vtData)
+//Console_Log ($vtData)
 
 $vtData:=Replace string:C233($vtData; "\r\n"; "\r")
 $vtData:=Replace string:C233($vtData; "\n"; "\r")
@@ -99,7 +99,7 @@ For ($vi1; $viStart; $vi2)
 		$vrQtyOnSO:=0
 		$viTableNum:=0
 		$vtNote:="Due Diligence Inventory"
-		$DTCreated:=DateTime_Enter
+		$DTCreated:=DateTime_DTTo
 		$vtsiteID:="Sharpsville"
 		$vrUnitPrice:=-5
 		
@@ -109,7 +109,7 @@ For ($vi1; $viStart; $vi2)
 		INVT_dInvtApply
 		TallyInventory
 	Else 
-		ConsoleMessage("ERROR: Line did not contain three data elements")
+		ConsoleLog("ERROR: Line did not contain three data elements")
 	End if 
 	
 End for 

@@ -7,18 +7,13 @@ If (vHere=1)
 	TRACE:C157
 	CREATE SET:C116([CallReport:34]; "Open")
 	CREATE EMPTY SET:C140([Customer:2]; "CustLables")
-	CREATE EMPTY SET:C140([Lead:48]; "LeadLables")
 	CREATE EMPTY SET:C140([Vendor:38]; "VendLables")
 	CREATE EMPTY SET:C140([Contact:13]; "ContLables")
 	CREATE EMPTY SET:C140([Rep:8]; "RepLables")
 	FIRST RECORD:C50([CallReport:34])
 	For ($i; 1; Records in selection:C76([CallReport:34]))
 		Case of 
-			: ([CallReport:34]tableNum:2=Table:C252(->[Lead:48]))
-				QUERY:C277([Lead:48]; [Lead:48]idNum:32=Num:C11([CallReport:34]customerID:1))
-				If (Records in selection:C76([Lead:48])=1)
-					ADD TO SET:C119([Lead:48]; "LeadLables")
-				End if 
+				
 			: (([CallReport:34]tableNum:2=Table:C252(->[Customer:2])) | ([CallReport:34]tableNum:2=Table:C252(->[Order:3])) | ([CallReport:34]tableNum:2=Table:C252(->[Service:6])) | ([CallReport:34]tableNum:2=Table:C252(->[Invoice:26])) | ([CallReport:34]tableNum:2=Table:C252(->[Payment:28])) | ([CallReport:34]tableNum:2=Table:C252(->[Proposal:42])))
 				QUERY:C277([Customer:2]; [Customer:2]customerID:1=[CallReport:34]customerID:1)
 				If (Records in selection:C76([Customer:2])=1)
@@ -47,12 +42,7 @@ If (vHere=1)
 		ALERT:C41("Print ShowLead Labels")
 		USE SET:C118("LeadLables")
 		SET AUTOMATIC RELATIONS:C310(True:C214; True:C214)
-		<>ptPrintTable:=(->[Lead:48])
-		//If (False)//Is macOS)
-		//SuperLabel(Table(->[Lead]);"";1536;1;1;"")
-		// Else 
-		PRINT LABEL:C39([Lead:48]; "xyzzxcv")
-		//End if 
+		
 		SET AUTOMATIC RELATIONS:C310(False:C215; False:C215)
 	End if 
 	CLEAR SET:C117("LeadLables")

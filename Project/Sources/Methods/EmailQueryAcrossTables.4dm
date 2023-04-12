@@ -21,7 +21,7 @@ If (Count parameters:C259=1)
 	$userEmailSrch:=$1
 Else 
 	$userEmailSrch:="bill@jit.cc"
-	<>iloText1:="delete selection"
+	$deleteMessage_t:="delete selection"
 	$bTesting:=True:C214
 End if 
 READ ONLY:C145([RemoteUser:57])
@@ -38,7 +38,7 @@ If ($bTesting)
 	$cnt:=$cnt+EmailQuery(->[EventLog:75]email:56; $userEmailSrch; ->vResponse)
 End if 
 If (<>viDebugMode>410)
-	ConsoleMessage($userEmailSrch+": "+vResponse)
+	ConsoleLog($userEmailSrch+": "+vResponse)
 End if 
 
 READ WRITE:C146([RemoteUser:57])
@@ -46,8 +46,8 @@ READ WRITE:C146([Customer:2])
 READ WRITE:C146([Contact:13])
 READ WRITE:C146([Rep:8])
 READ WRITE:C146([Vendor:38])
-C_TEXT:C284(<>iloText1)
-If (<>iloText1="delete selection")
+C_TEXT:C284($deleteMessage_t)
+If ($deleteMessage_t="delete selection")
 	If (UserInPassWordGroup("EditReportScript"))
 		If ($bTesting)
 			OK:=1
@@ -87,8 +87,8 @@ If (<>iloText1="delete selection")
 		ALERT:C41("Not in password group \"EditReportScript\"")
 	End if 
 End if 
-<>iloText1:=""
+$deleteMessage_t:=""
 $0:=$cnt
 // example
-// <>iloText1:="delete selection"
+// $deleteMessage_t:="delete selection"
 // EmailQueryAcrossTables("bill@jit.cc")

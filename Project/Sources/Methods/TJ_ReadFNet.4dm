@@ -125,11 +125,11 @@ If (HFS_Exists(vText1)=1)
 		// End for 
 		Case of 
 			: (vi5=1)
-				vi1:=HFS_Rename(document; "fNet"+String:C10(DateTime_Enter)+".txt")
+				vi1:=HFS_Rename(document; "fNet"+String:C10(DateTime_DTTo)+".txt")
 				vi1:=HFS_Move(document; "C:\\DataReach\\ProcFNet")
 			: (vi5=2)
 				CLOSE DOCUMENT:C267(myDoc)
-				vi1:=HFS_Rename(document; "fNet"+String:C10(DateTime_Enter)+".txt")
+				vi1:=HFS_Rename(document; "fNet"+String:C10(DateTime_DTTo)+".txt")
 			: (vi5=3)
 				vi1:=HFS_Delete(document)
 		End case 

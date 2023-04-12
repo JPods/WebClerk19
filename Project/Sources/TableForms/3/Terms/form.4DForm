@@ -1,0 +1,1240 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 1000,
+	"windowMinHeight": 475,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerBody": 639,
+	"markerBreak": 639,
+	"markerFooter": 639,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperWidth": "167pt",
+		"paperHeight": "288pt",
+		"scale": 80
+	},
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"_PROP_Order_customerPO_": {
+					"type": "input",
+					"top": 65,
+					"left": 83,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.customerPO",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field30.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]customerPO:3"
+				},
+				"_PROP_Order_typeSale_": {
+					"type": "input",
+					"top": 8,
+					"left": 83,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.typeSale",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field31.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]typeSale:22"
+				},
+				"_PROP_Order_terms_": {
+					"type": "input",
+					"top": 27,
+					"left": 83,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.terms",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field10.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]terms:23"
+				},
+				"_PROP_Order_dateNeeded_": {
+					"type": "input",
+					"top": 143,
+					"left": 83,
+					"width": 89,
+					"height": 17,
+					"dataSource": "entry_o.dateNeeded",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field6041.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]dateNeeded:5"
+				},
+				"_PROP_Order_priority_": {
+					"type": "input",
+					"top": 143,
+					"left": 174,
+					"width": 19,
+					"height": 17,
+					"dataSource": "entry_o.priority",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field198.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]priority:129"
+				},
+				"_PROP_Order_orderedBy_": {
+					"type": "input",
+					"top": 84,
+					"left": 83,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.orderedBy",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field37.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]orderedBy:66"
+				},
+				"_PROP_Order_takenBy_": {
+					"type": "input",
+					"top": 103,
+					"left": 83,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.takenBy",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field38.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]takenBy:36"
+				},
+				"_PROP_Order_status_": {
+					"type": "input",
+					"top": 123,
+					"left": 83,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.status",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field39.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]status:59"
+				},
+				"_PROP_Order_contractDetailTag_": {
+					"type": "input",
+					"top": 46,
+					"left": 83,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.contractDetailTag",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"enterable": false,
+					"zzzdataSource": "[Order:3]contractDetailTag:151"
+				},
+				"Variable71": {
+					"type": "input",
+					"top": 85,
+					"left": 523,
+					"width": 53,
+					"height": 17,
+					"dataSource": "complDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 84,
+					"left": 201,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,120"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 8,
+					"left": 8,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,74"
+				},
+				"_PROP_Order_projectNum_": {
+					"type": "input",
+					"top": 103,
+					"left": 276,
+					"width": 53,
+					"height": 17,
+					"dataSource": "entry_o.idNumProject",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]projectNum:50"
+				},
+				"_PROP_Order_proposalNum_": {
+					"type": "input",
+					"top": 103,
+					"left": 333,
+					"width": 53,
+					"height": 17,
+					"dataSource": "entry_o.proposalNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]proposalNum:79"
+				},
+				"_PROP_Customer_creditLimit_": {
+					"type": "input",
+					"top": 8,
+					"left": 276,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.creditLimit",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Customer:2]creditLimit:37"
+				},
+				"Variable70": {
+					"type": "input",
+					"top": 27,
+					"left": 276,
+					"width": 110,
+					"height": 17,
+					"dataSource": "vRunningBal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable69": {
+					"type": "input",
+					"top": 46,
+					"left": 276,
+					"width": 110,
+					"height": 17,
+					"dataSource": "vCreditStat",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_Order_taxJuris_": {
+					"type": "input",
+					"top": 103,
+					"left": 466,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.taxJuris",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field32.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]taxJuris:43"
+				},
+				"_PROP_Order_adSource_": {
+					"type": "input",
+					"top": 123,
+					"left": 276,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.adSource",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field33.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]adSource:41"
+				},
+				"_PROP_Order_repID_": {
+					"type": "input",
+					"top": 65,
+					"left": 276,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.repID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field34.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]repID:8"
+				},
+				"_PROP_Order_salesNameID_": {
+					"type": "input",
+					"top": 84,
+					"left": 276,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.salesNameID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field35.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]salesNameID:10"
+				},
+				"_PROP_Order_dateOrdered_": {
+					"type": "input",
+					"top": 84,
+					"left": 466,
+					"width": 53,
+					"height": 17,
+					"dataSource": "entry_o.dateOrdered",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]dateOrdered:4"
+				},
+				"_PROP_Order_dateShipOn_": {
+					"type": "input",
+					"top": 46,
+					"left": 466,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.dateShipOn",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/##",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field6220.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]dateShipOn:31"
+				},
+				"_PROP_Order_dateVerified_": {
+					"type": "input",
+					"top": 65,
+					"left": 466,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.dateVerified",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/##",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field170.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]dateVerified:126"
+				},
+				"Variable99": {
+					"type": "input",
+					"top": 27,
+					"left": 466,
+					"width": 110,
+					"height": 17,
+					"dataSource": "releaseDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable99.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_Order_consignment_": {
+					"type": "input",
+					"top": 123,
+					"left": 466,
+					"width": 110,
+					"height": 17,
+					"dataSource": "entry_o.consignment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field41.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]consignment:70"
+				},
+				"_PROP_Order_dateInvoiceComp_": {
+					"type": "input",
+					"top": 143,
+					"left": 466,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.dateInvoiceComp",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]dateInvoiceComp:6"
+				},
+				"_PROP_Order_complete_": {
+					"type": "input",
+					"top": 143,
+					"left": 558,
+					"width": 18,
+					"height": 17,
+					"dataSource": "entry_o.complete",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]complete:83"
+				},
+				"_PROP_Order_remotecustomerID_": {
+					"type": "input",
+					"top": 143,
+					"left": 303,
+					"width": 47,
+					"height": 17,
+					"dataSource": "entry_o.remotecustomerID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]remotecustomerID:133"
+				},
+				"_PROP_Order_remoteRecordID_": {
+					"type": "input",
+					"top": 143,
+					"left": 352,
+					"width": 34,
+					"height": 17,
+					"dataSource": "entry_o.remoteRecordID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]remoteRecordID:132"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 143,
+					"left": -6,
+					"width": 43,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Need"
+				},
+				"Text151": {
+					"type": "text",
+					"top": 143,
+					"left": 391,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16791,151"
+				},
+				"Text152": {
+					"type": "text",
+					"top": 123,
+					"left": 391,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,152"
+				},
+				"Text153": {
+					"type": "text",
+					"top": 84,
+					"left": 391,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Ord/Compl"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 27,
+					"left": 391,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,154"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 123,
+					"left": 8,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,121"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 103,
+					"left": 8,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,156"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 84,
+					"left": 8,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,157"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 65,
+					"left": 201,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,76"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 123,
+					"left": 201,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,206"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 103,
+					"left": 391,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,161"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 27,
+					"left": 8,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,162"
+				},
+				"_PROP_Order_flow_": {
+					"type": "input",
+					"top": 143,
+					"left": 276,
+					"width": 25,
+					"height": 17,
+					"dataSource": "entry_o.flow",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Order:3]flow:134"
+				},
+				"Variable68": {
+					"type": "button",
+					"top": 143,
+					"left": 5,
+					"width": 33,
+					"height": 17,
+					"dataSource": "bNeedDate",
+					"text": ":17399,13",
+					"display": false,
+					"method": "ObjectMethods/Variable68.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text26": {
+					"type": "text",
+					"top": 103,
+					"left": 202,
+					"width": 25,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Proj"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 65,
+					"left": 8,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,177"
+				},
+				"Text28": {
+					"type": "text",
+					"top": 8,
+					"left": 201,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,178"
+				},
+				"Text154": {
+					"type": "text",
+					"top": 27,
+					"left": 201,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,179"
+				},
+				"Text30": {
+					"type": "text",
+					"top": 46,
+					"left": 201,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,180"
+				},
+				"Text46": {
+					"type": "text",
+					"top": 103,
+					"left": 247,
+					"width": 25,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,190"
+				},
+				"Text130": {
+					"type": "text",
+					"top": 65,
+					"left": 411,
+					"width": 49,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Verified"
+				},
+				"Text74": {
+					"type": "text",
+					"top": 46,
+					"left": 400,
+					"width": 60,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,209"
+				},
+				"Text156": {
+					"type": "text",
+					"top": 143,
+					"left": 32,
+					"width": 44,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "/Priority"
+				},
+				"Text160": {
+					"type": "text",
+					"top": 143,
+					"left": 201,
+					"width": 69,
+					"height": 17,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Remote"
+				},
+				"Variable26": {
+					"type": "dropdown",
+					"top": 103,
+					"left": 201,
+					"width": 28,
+					"height": 17,
+					"dataSource": "<>aProjectList",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable26.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable105": {
+					"type": "dropdown",
+					"top": 65,
+					"left": 9,
+					"width": 70,
+					"height": 17,
+					"dataSource": "<>aCustomerPO",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 12,
+					"method": "ObjectMethods/Variable105.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable287": {
+					"type": "dropdown",
+					"top": 8,
+					"left": 7,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aTypeSale",
+					"display": false,
+					"class": "cssPopups",
+					"method": "ObjectMethods/Variable287.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable78": {
+					"type": "dropdown",
+					"top": 27,
+					"left": 7,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aTerms",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable78.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable79": {
+					"type": "dropdown",
+					"top": 103,
+					"left": 390,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aTaxJuris",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable79.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable76": {
+					"type": "dropdown",
+					"top": 123,
+					"left": 200,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aAdSources",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable76.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable80": {
+					"type": "dropdown",
+					"top": 65,
+					"left": 200,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aReps",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable80.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable81": {
+					"type": "dropdown",
+					"top": 84,
+					"left": 200,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aComNameID",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable81.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable84": {
+					"type": "dropdown",
+					"top": 84,
+					"left": 7,
+					"width": 72,
+					"height": 17,
+					"dataSource": "aContact",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable84.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable73": {
+					"type": "dropdown",
+					"top": 103,
+					"left": 7,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aNameID",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable73.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable75": {
+					"type": "dropdown",
+					"top": 123,
+					"left": 390,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aConsign",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable75.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"<>aStatus": {
+					"type": "dropdown",
+					"top": 123,
+					"left": 7,
+					"width": 72,
+					"height": 17,
+					"dataSource": "<>aStatus",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/%3C%3EaStatus.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text220": {
+					"type": "text",
+					"top": 46,
+					"left": 37,
+					"width": 40,
+					"height": 17,
+					"stroke": "#006400",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Show"
+				},
+				"bShowTerms1": {
+					"type": "button",
+					"top": 47,
+					"left": 39,
+					"width": 40,
+					"height": 15,
+					"dataSource": "bShowTerms",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/bShowTerms1.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable190": {
+					"type": "dropdown",
+					"top": 7,
+					"left": 466,
+					"width": 110,
+					"height": 17,
+					"dataSource": "aShipVia",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":32369,13",
+					"class": "cssPopups",
+					"method": "ObjectMethods/Variable190.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 9,
+					"left": 391,
+					"width": 69,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ShipVia",
+					"fontTheme": "normal"
+				}
+			},
+			"entryOrder": [
+				"_PROP_Order_projectNum_",
+				"_PROP_Order_proposalNum_",
+				"_PROP_Order_customerPO_",
+				"_PROP_Customer_creditLimit_",
+				"Variable70",
+				"Variable69",
+				"_PROP_Order_typeSale_",
+				"_PROP_Order_terms_",
+				"_PROP_Order_taxJuris_",
+				"_PROP_Order_adSource_",
+				"_PROP_Order_repID_",
+				"_PROP_Order_salesNameID_",
+				"_PROP_Order_dateOrdered_",
+				"_PROP_Order_orderedBy_",
+				"_PROP_Order_takenBy_",
+				"_PROP_Order_status_",
+				"Variable99",
+				"Variable71",
+				"_PROP_Order_consignment_",
+				"_PROP_Order_dateInvoiceComp_",
+				"_PROP_Order_complete_",
+				"Variable26",
+				"Variable105",
+				"Variable287",
+				"Variable78",
+				"Variable79",
+				"Variable76",
+				"Variable80",
+				"Variable81",
+				"Variable84",
+				"Variable73",
+				"Variable75",
+				"Variable68",
+				"<>aStatus",
+				"bShowTerms1",
+				"Variable190"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 1797,
+	"inheritedForm": ""
+}

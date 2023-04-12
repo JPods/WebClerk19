@@ -16,7 +16,7 @@ var $cookie_t; $idUser_t : Text
 C_OBJECT:C1216(obRemoteUser; obEventLog)
 obRemoteUser:=New object:C1471
 obEventLog:=New object:C1471
-$dtNow:=DateTime_Enter
+$dtNow:=DateTime_DTTo
 
 $doFound:=False:C215
 $doHack:=False:C215
@@ -35,9 +35,9 @@ If (Storage:C1525.hacks.bypass="yes")
 End if 
 
 If (<>viDebugMode>=210)
-	ConsoleMessage("voState.request.cookies.eventID: "+voState.request.cookies.eventID)
-	ConsoleMessage("voState.request.parameters.idUser: "+voState.request.parameters.idUser)
-	ConsoleMessage("voState.request.URL.pathName: "+voState.request.URL.pathName)
+	ConsoleLog("voState.request.cookies.eventID: "+voState.request.cookies.eventID)
+	ConsoleLog("voState.request.parameters.idUser: "+voState.request.parameters.idUser)
+	ConsoleLog("voState.request.URL.pathName: "+voState.request.URL.pathName)
 End if 
 $doNewEventLog:=True:C214
 // first see if we have a user with a valid event log

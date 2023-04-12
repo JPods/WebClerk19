@@ -1,5 +1,12 @@
 //%attributes = {}
 
+// Modified by: Bill James (2023-03-17T05:00:00Z)
+// Method: Image_Rotate
+// Description 
+// Parameters
+// ----------------------------------------------------
+//https://jdhao.github.io/2019/07/31/image_rotation_exif_info/
+
 C_PICTURE:C286($1; $gPicture)
 C_REAL:C285($2; $rDegrees)  //Expects 90, 180, or 270
 C_PICTURE:C286($0)

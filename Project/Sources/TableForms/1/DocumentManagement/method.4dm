@@ -1,14 +1,14 @@
 Case of 
 	: ((Before:C29) | (booPreNext))
 		If (Is macOS:C1572)
-			v8:=Replace string:C233(<>WebFolder; "/"; ":")+":"
+			v8:=Replace string:C233(Storage:C1525.wc.webFolder; "/"; ":")+":"
 		Else 
-			v8:=Replace string:C233(<>WebFolder; "/"; "\\")+"\\"
+			v8:=Replace string:C233(Storage:C1525.wc.webFolder; "/"; "\\")+"\\"
 		End if 
 		viRecordsInSelection:=0
 		ARRAY LONGINT:C221(aRayLines; 0)
 		bNewRec:=0
-		jsetBefore(->[Control:1])
+		jsetBefore(->[Admin:1])
 		SET WINDOW TITLE:C213("Document Editor")
 		//  Pict_InputLo (->[Control];1;7)//get PICT resc 21006
 		HtPageRay(0)

@@ -1,0 +1,85 @@
+﻿{"destination":"detailScreen","windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":20,"bottomMargin":20,"menuBar":"Menu Bar #1","markerBody":568,"markerBreak":568,"markerFooter":585,"events":["onLoad","onValidate","onClick","onOutsideCall","onDoubleClick","onDrop","onMenuSelect","onDataChange","onCloseBox","onUnload","onOpenDetail","onCloseDetail","onLoadRecord"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Active":{"type":"checkbox","top":117,"left":273,"width":92,"height":16,"dataSource":"[AccountPayType:106]Active:5","text":"Yes","stroke":"#000000","class":"cssCheckboxLable"},"PayCardAccount":{"type":"input","top":140,"left":273,"width":232,"height":17,"dataSource":"[AccountPayType:106]PayCardAccount:3","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"PayDebitAccount":{"type":"input","top":165,"left":273,"width":232,"height":17,"dataSource":"[AccountPayType:106]PayDebitAccount:2","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"PaymentName":{"type":"input","top":190,"left":273,"width":232,"height":17,"dataSource":"[AccountPayType:106]PaymentName:1","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"TenderClass":{"type":"input","top":215,"left":273,"width":69,"height":17,"dataSource":"[AccountPayType:106]TenderClass:4","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Text20":{"type":"text","top":119,"left":113,"width":150,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Active"},"Text21":{"type":"text","top":142,"left":116,"width":151,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"PayCardAccount"},"Text22":{"type":"text","top":167,"left":116,"width":151,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"PayDebitAccount"},"Text23":{"type":"text","top":192,"left":116,"width":151,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"PaymentName"},"Text24":{"type":"text","top":218,"left":116,"width":151,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"TenderClass"},"Text105":{"type":"text","top":77,"left":553,"width":92,"height":12,"stroke":"#000000","class":"cssInputLabel","text":"Class Values\rCash = 1\rCheck = 2\rCredit Card = 3\rAcct Recv = 4\rMisc 1= 5\rMisc 2 = 6\rMisc 3 = 7"}}}],"editor":{"groups":{"Group1":["Variable132","Variable133","Variable134","Variable135","Variable136","Variable139"]},"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}}}

@@ -59,14 +59,7 @@ Case of
 		SRVarNames{(Size of array:C274(SRVarNames)-2)}:="pvAddressOnly"
 		SRVarNames{(Size of array:C274(SRVarNames)-1)}:="pvPhone"
 		SRVarNames{(Size of array:C274(SRVarNames)-0)}:="pvFAX"
-	: ($tableName="zzzLead")
-		ptField:=->[zzzLead:48]idNum:32
-		INSERT IN ARRAY:C227(SRVarNames; (Size of array:C274(SRVarNames)+1); 4)
-		SRVarNames{(Size of array:C274(SRVarNames)-3)}:="pvAddressCustomer"
-		SRVarNames{(Size of array:C274(SRVarNames)-2)}:="pvAddressOnly"
-		SRVarNames{(Size of array:C274(SRVarNames)-1)}:="pvPhone"
-		SRVarNames{(Size of array:C274(SRVarNames)-0)}:="pvFAX"
-		//SEARCH([Letter];&[Letter]FileID=File([Lead]);*)
+		
 	: (($tableName="Vendor") | ($tableName="PO") | ($tableName="POLine"))
 		ptField:=->[Vendor:38]vendorID:1
 		INSERT IN ARRAY:C227(SRVarNames; (Size of array:C274(SRVarNames)+1); 4)

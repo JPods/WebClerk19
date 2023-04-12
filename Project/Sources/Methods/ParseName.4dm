@@ -9,7 +9,7 @@
 // crude
 
 var $1; $working : Text
-var $0; $entryEntity : Object
+var $0; $entry_o : Object
 var $c : Collection
 var $p : Integer
 $0:=New object:C1471("first"; ""; "last"; ""; "title"; ""; "suffix"; ""; "middel"; ""; "original"; "")
@@ -18,7 +18,7 @@ $working:=$1
 If ($working#"")
 	$p:=Position:C15(","; $working)
 	If ($p>0)
-		$c:=Split string:C1554($1; ",")
+		$c:=Split string:C1554($1; ";")
 		If ($c[0]#Null:C1517)
 			$0.nameLast:=$c[0]
 		End if 

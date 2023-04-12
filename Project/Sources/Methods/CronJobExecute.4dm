@@ -629,7 +629,7 @@ If ((Find in array:C230(atCronMinute; vtMinute)>0) | (vtCronMinute="*"))
 						C_TEXT:C284($myMessage)
 						$myMessage:="CronJob: "+[CronJob:82]eventName:15+": "+[CronJob:82]machineName:22+": "+[CronJob:82]nameID:10+": "+String:C10(Current time:C178)+": "+String:C10(Current date:C33)
 						If (<>VIDEBUGMODE>=2)
-							ConsoleMessage($myMessage)
+							ConsoleLog($myMessage)
 						End if 
 						// Alert($myMessage)
 						//New process ( method ; stack {; name {; param {; param2 ; ... ; paramN}}}{; *} ) -> Function result

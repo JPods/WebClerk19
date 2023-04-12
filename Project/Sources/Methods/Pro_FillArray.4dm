@@ -17,7 +17,7 @@
 C_LONGINT:C283($1; $i; $k; $2; $3)
 C_TEXT:C284($4)
 
-//ConsoleMessage ("TEST: PROFILES")
+//Console_Log ("TEST: PROFILES")
 
 
 If ($1=-9)
@@ -26,7 +26,7 @@ If ($1=-9)
 		If ($4="")
 			QUERY:C277([Profile:59]; [Profile:59]docNumID:2=$3)
 		Else 
-			QUERY:C277([Profile:59]; [Profile:59]docAlphaID:3=$4)
+			QUERY:C277([Profile:59]; [Profile:59]idForeign:3=$4)
 		End if 
 		$1:=Records in selection:C76([Profile:59])
 	Else 
@@ -34,7 +34,7 @@ If ($1=-9)
 	End if 
 End if 
 
-//ConsoleMessage ("TEST: END PROFILES")
+//Console_Log ("TEST: END PROFILES")
 
 Case of 
 	: ($1=0)
@@ -53,7 +53,7 @@ Case of
 		If ($4="")
 			QUERY:C277([Profile:59]; [Profile:59]docNumID:2=$3)
 		Else 
-			QUERY:C277([Profile:59]; [Profile:59]docAlphaID:3=$4)
+			QUERY:C277([Profile:59]; [Profile:59]idForeign:3=$4)
 		End if 
 		If (Records in selection:C76([Profile:59])>Size of array:C274(aProOrName))
 			REDUCE SELECTION:C351([Profile:59]; Records in selection:C76([Profile:59])-Size of array:C274(aProOrName))
@@ -62,7 +62,7 @@ Case of
 			If ($4="")
 				QUERY:C277([Profile:59]; [Profile:59]docNumID:2=$3)
 			Else 
-				QUERY:C277([Profile:59]; [Profile:59]docAlphaID:3=$4)
+				QUERY:C277([Profile:59]; [Profile:59]idForeign:3=$4)
 			End if 
 		End if 
 		$k:=Size of array:C274(aProOrName)
@@ -74,7 +74,7 @@ Case of
 			$aDocNum{$i}:=$3
 			$aAcct{$i}:=$4
 		End for 
-		ARRAY TO SELECTION:C261(aProOrName; [Profile:59]name:4; aProOrValue; [Profile:59]value:5; $aFileNum; [Profile:59]tableNum:1; $aDocNum; [Profile:59]docNumID:2; $aAcct; [Profile:59]docAlphaID:3; aProOrSeq; [Profile:59]seq:11)
+		ARRAY TO SELECTION:C261(aProOrName; [Profile:59]name:4; aProOrValue; [Profile:59]value:5; $aFileNum; [Profile:59]tableNum:1; $aDocNum; [Profile:59]docNumID:2; $aAcct; [Profile:59]idForeign:3; aProOrSeq; [Profile:59]seq:11)
 	: ($1=-3)  //add a line, $2 for $3 lines    
 		//
 		INSERT IN ARRAY:C227(aProOrName; $2; $3)  //name rays

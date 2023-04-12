@@ -85,46 +85,50 @@ If (Size of array:C274(aText3)>0)  //must be coming from
 							[TallyResult:73]real6:42:=[TallyResult:73]real6:42+aQtyNact{$i}  //qty
 							[TallyResult:73]real7:43:=[TallyResult:73]real7:43+aSaleNact{$i}  //sales
 							[TallyResult:73]real8:44:=[TallyResult:73]real8:44+aInvNact{$i}  //Net Sales
-							[TallyResult:73]real9:45:=[TallyResult:73]real9:45+aScpNPlan{$i}  //FOB diff
+							
+							// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+							
+							//[TallyResult]dataRaw:=[TallyResult]dataRaw+aScpNPlan{$i}  //FOB diff
 							[TallyResult:73]real10:46:=[TallyResult:73]real10:46+aScpNact{$i}  //Hidden Frght                    
 					End case 
 					SAVE RECORD:C53([TallyResult:73])
 				Else 
-					CREATE RECORD:C68([TallyChange:65])
+					//PPP 19-FORCED
+					//CREATE RECORD([TallyChange])
 					
-					[TallyChange:65]fileNum:1:=Table:C252(->[TallyResult:73])
-					[TallyChange:65]fieldNum:2:=Table:C252(->[TallyResult:73]real1:13)
-					[TallyChange:65]longIntKey:4:=Record number:C243([TallyResult:73])
-					[TallyChange:65]change:5:=aQtyNact{$i}  //qty
-					SAVE RECORD:C53([TallyResult:73])
-					CREATE RECORD:C68([TallyChange:65])
+					//[TallyChange]idAlpha:=Table(->[TallyResult])
+					//[TallyChange]fieldNum:=Table(->[TallyResult]real1)
+					//[TallyChange]idNumKey:=Record number([TallyResult])
+					//[TallyChange]obEntity:=aQtyNact{$i}  //qty
+					//SAVE RECORD([TallyResult])
+					//CREATE RECORD([TallyChange])
 					
-					[TallyChange:65]fileNum:1:=Table:C252(->[TallyResult:73])
-					[TallyChange:65]fieldNum:2:=Table:C252(->[TallyResult:73]real2:14)
-					[TallyChange:65]longIntKey:4:=Record number:C243([TallyResult:73])
-					[TallyChange:65]change:5:=aSaleNact{$i}  //sales
-					SAVE RECORD:C53([TallyResult:73])
-					CREATE RECORD:C68([TallyChange:65])
+					//[TallyChange]idAlpha:=Table(->[TallyResult])
+					//[TallyChange]fieldNum:=Table(->[TallyResult]real2)
+					//[TallyChange]idNumKey:=Record number([TallyResult])
+					//[TallyChange]obEntity:=aSaleNact{$i}  //sales
+					//SAVE RECORD([TallyResult])
+					//CREATE RECORD([TallyChange])
 					
-					[TallyChange:65]fileNum:1:=Table:C252(->[TallyResult:73])
-					[TallyChange:65]fieldNum:2:=Table:C252(->[TallyResult:73]real3:15)
-					[TallyChange:65]longIntKey:4:=Record number:C243([TallyResult:73])
-					[TallyChange:65]change:5:=aInvNact{$i}  //Net Sales
-					SAVE RECORD:C53([TallyResult:73])
-					CREATE RECORD:C68([TallyChange:65])
+					//[TallyChange]idAlpha:=Table(->[TallyResult])
+					//[TallyChange]fieldNum:=Table(->[TallyResult]real3)
+					//[TallyChange]idNumKey:=Record number([TallyResult])
+					//[TallyChange]obEntity:=aInvNact{$i}  //Net Sales
+					//SAVE RECORD([TallyResult])
+					//CREATE RECORD([TallyChange])
 					
-					[TallyChange:65]fileNum:1:=Table:C252(->[TallyResult:73])
-					[TallyChange:65]fieldNum:2:=Table:C252(->[TallyResult:73]real4:16)
-					[TallyChange:65]longIntKey:4:=Record number:C243([TallyResult:73])
-					[TallyChange:65]change:5:=aScpNPlan{$i}  //FOB diff
-					SAVE RECORD:C53([TallyResult:73])
-					CREATE RECORD:C68([TallyChange:65])
+					//[TallyChange]idAlpha:=Table(->[TallyResult])
+					//[TallyChange]fieldNum:=Table(->[TallyResult]real4)
+					//[TallyChange]idNumKey:=Record number([TallyResult])
+					//[TallyChange]obEntity:=aScpNPlan{$i}  //FOB diff
+					//SAVE RECORD([TallyResult])
+					//CREATE RECORD([TallyChange])
 					
-					[TallyChange:65]fileNum:1:=Table:C252(->[TallyResult:73])
-					[TallyChange:65]fieldNum:2:=Table:C252(->[TallyResult:73]real5:32)
-					[TallyChange:65]longIntKey:4:=Record number:C243([TallyResult:73])
-					[TallyChange:65]change:5:=aScpNact{$i}  //Hidden Frght  
-					SAVE RECORD:C53([TallyResult:73])
+					//[TallyChange]idAlpha:=Table(->[TallyResult])
+					//[TallyChange]fieldNum:=Table(->[TallyResult]real5)
+					//[TallyChange]idNumKey:=Record number([TallyResult])
+					//[TallyChange]obEntity:=aScpNact{$i}  //Hidden Frght  
+					//SAVE RECORD([TallyResult])
 				End if 
 			End for 
 			// End for 

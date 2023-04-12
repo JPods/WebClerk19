@@ -70,7 +70,7 @@ If (Records in selection:C76([UserReport:46])=1)
 		C_TIME:C306($logDoc)
 		//ThermoInitExit ("Emailing:  "+String($cntRec2Send);$cntRec2Send;True)
 		C_LONGINT:C283($theDT)
-		$theDT:=DateTime_Enter
+		$theDT:=DateTime_DTTo
 		For ($incRec2Send; 1; $cntRec2Send)
 			vtEmailBody:=$theBody
 			vtEmailSubject:=$theSubject

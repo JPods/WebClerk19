@@ -1,6 +1,6 @@
 //%attributes = {"publishedWeb":true}
 C_LONGINT:C283($k; $i; $cntRecs)
-$k:=Records in selection:C76([Vendor:38])+Records in selection:C76([Customer:2])+Records in selection:C76([Lead:48])+Records in selection:C76([Contact:13])
+$k:=Records in selection:C76([Vendor:38])+Records in selection:C76([Customer:2])+Records in selection:C76()+Records in selection:C76([Contact:13])
 initCustArrays(0)
 Temp_RayInit
 //
@@ -43,27 +43,6 @@ If ($k>0)
 		$k:=$k-$cntRecs
 	End if 
 	//
-	Case of 
-		: ($k<1)
-			REDUCE SELECTION:C351([Lead:48]; $k)
-		: (Records in selection:C76([Lead:48])>$k)
-			REDUCE SELECTION:C351([Lead:48]; $k)
-	End case 
-	$cntRecs:=Records in selection:C76([Lead:48])
-	If ($cntRecs>0)
-		SELECTION TO ARRAY:C260([Lead:48]; aTmpLong1; [Lead:48]company:5; aQueryFieldNames; [Lead:48]city:8; aTmp40Str2; [Lead:48]zip:10; aTmp12Str1; [Lead:48]phone:4; aTmp20Str1; [Lead:48]repID:12; aTmp25Str1; [Lead:48]salesNameID:13; aTmp25Str2; [Lead:48]nameLast:2; aTmp35Str1; [Lead:48]nameFirst:1; aTmp20Str3; [Lead:48]idNum:32; aTmpLong2)
-		ARRAY TEXT:C222(aTmp2Str1; $cntRecs)
-		ARRAY TEXT:C222(aTmpText1; $cntRecs)
-		ARRAY TEXT:C222(aTmp10Str1; $cntRecs)
-		For ($i; 1; $cntRecs)
-			aTmp2Str1{$i}:="L"
-			aTmp10Str1{$i}:=String:C10(aTmpLong2{$i})
-			aTmpText1{$i}:=aTmp20Str3{$i}+" "+aTmp35Str1{$i}
-		End for 
-		ARRAY LONGINT:C221(aTmpLong2; 0)
-		FindFillRayElem
-		$k:=$k-$cntRecs
-	End if 
 	//
 	Case of 
 		: ($k<1)

@@ -78,7 +78,7 @@ If (False:C215)
 		//CONFIRM("Quit CommerceExpert/WebClerk?")
 		If (<>viCloseOK=1)
 			<>viCloseOK:=0
-			Prs_ListActive
+			Process_ListActive
 			//TRACE
 			//
 			C_LONGINT:C283($countProcesses; $appType)
@@ -89,13 +89,12 @@ If (False:C215)
 				$countProcesses:=4
 			End if 
 			//
-			C_LONGINT:C283(<>viHasSaved)
 			C_LONGINT:C283($myCount; $i; $k; $w; $test; $incProcess)
 			C_TEXT:C284($prcsName)
 			C_LONGINT:C283($prcsNum)
 			//<>vbDoQuit:=True
 			//
-			Prs_ListActive
+			Process_ListActive
 			QUIT 4D:C291
 			//
 			If (False:C215)
@@ -106,14 +105,14 @@ If (False:C215)
 					DELAY PROCESS:C323(Current process:C322; 3600)
 					// End if 
 					If (False:C215)
-						Prs_ListActive
+						Process_ListActive
 						$w:=Find in array:C230(<>aPrsNameWeb; "WC_@")  //HTTP or HTTPS  
 						If ($w>0)
 							MESSAGE:C88("Closinging WebClerk Server Processes 2.")
 							WC_StartUpShutDownFlip(0)
 							DELAY PROCESS:C323(Current process:C322; 3600)
 							//End if 
-							Prs_ListActive
+							Process_ListActive
 							$w:=Find in array:C230(<>aPrsNameWeb; "WC_@")  //HTTP or HTTPS  
 							If ($w>0)
 								MESSAGE:C88("Closinging WebClerk Server Processes 3.")
@@ -124,7 +123,7 @@ If (False:C215)
 					End if 
 				End if 
 				//
-				Prs_ListActive
+				Process_ListActive
 				$k:=Size of array:C274(<>aPrsName)
 				Case of 
 					: (CmdKey=1)

@@ -20,7 +20,7 @@ If (Test path name:C476($1->)>=0)
 		iTIOPCLast:=iTIONameBgn
 		While ((iTIOProgCtr<iTIONameEnd) & (iTIOProgCtr>0))
 			$PCLast:=iTIOProgCtr
-			//ConsoleMessage ("Program Counter\t"+String(iTIOProgCtr))
+			//Console_Log ("Program Counter\t"+String(iTIOProgCtr))
 			TIOI_RunCase(->iTIOProgCtr; <>cptNilPoint; $1)
 			iTIOPCLast:=$PCLast
 			iTIOProgCtr:=iTIOProgCtr+1

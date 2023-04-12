@@ -39,7 +39,7 @@ Else
 	Case of 
 		: (Records in selection:C76([SyncRelation:103])#1)
 			vResponse:="Error: id not found"
-		: ((TCP Is Secure Connection(voState.socket)#1) & (<>vbforceSSL))
+		: ((TCP Is Secure Connection(voState.socket)#1) & (Storage:C1525.wc.bforceSSL))
 			vResponse:="Error: SSL connection required"
 		: ($sizeIncoming=0)
 			vResponse:="Error: No data received"
@@ -123,8 +123,8 @@ Else
 End if 
 
 If (<>viDebugMode>410)
-	ConsoleMessage("RecordPassing")
-	ConsoleMessage(vResponse)
+	ConsoleLog("RecordPassing")
+	ConsoleLog(vResponse)
 End if 
 C_LONGINT:C283($viBytesSent)
 

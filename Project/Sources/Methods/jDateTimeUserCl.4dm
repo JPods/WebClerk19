@@ -18,7 +18,7 @@ Else
 	vDiaCom:="Date/Time Stamp Calculator"
 End if 
 jCenterWindow(320; 200)
-DIALOG:C40([Control:1]; "diaDateTimeCalc")
+DIALOG:C40([Admin:1]; "diaDateTimeCalc")
 CLOSE WINDOW:C154
 
 //MenuBarByLevel 

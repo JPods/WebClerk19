@@ -31,7 +31,7 @@ $cookie:="Set-Cookie: "+$name+"="+$value+"; expires="+$dateExpires+"; path="+$pa
 //Set-Cookie: <name>=<value>[; <Max-Age>=<age>] [; expires=<date>][; domain=<domain_name>] [; path=<some_path>][; secure][; HttpOnly] 
 // ### jwm ### 20180508_1130 added secure and HttpOnly flags to imporve security of cookies
 
-If (<>vbforceSSL)
+If (Storage:C1525.wc.bforceSSL)
 	WC_SetHeaderOut("Set-Cookie"; $name+"="+$value+"; expires="+$dateExpires+"; path="+$path+"; secure; HttpOnly")
 Else 
 	WC_SetHeaderOut("Set-Cookie"; $name+"="+$value+"; expires="+$dateExpires+"; path="+$path+"; HttpOnly")

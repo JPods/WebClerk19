@@ -18,7 +18,7 @@ If (Value type:C1509($1)=Is text:K8:3)
 	$parent_o:=New object:C1471
 	If (process_o.cur#Null:C1517)
 		$id:=process_o.cur.id
-		$tableParent:=process_o.tableName
+		$tableParent:=process_o.dataClassName
 		$windowParent:=Current form window:C827
 		$processParent:=Current process:C322
 		$parent_o:=process_o.cur
@@ -34,7 +34,7 @@ Else
 	Process_InitLocal
 	var process_o : Object
 	process_o:=$1
-	curTableNum:=STR_GetTableNumber(process_o.tableName)
+	curTableNum:=STR_GetTableNumber(process_o.dataClassName)
 	C_POINTER:C301(ptCurTable)
 	ptCurTable:=Table:C252(curTableNum)
 	//ADD RECORD(ptCurTable->)

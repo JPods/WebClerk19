@@ -1,5 +1,9 @@
 //%attributes = {}
 
+$myFormula:=""
+EDIT FORMULA:C806([Customer:2]; $myFormula)
+
+
 // ----------------------------------------------------
 // User name (OS): Bill James
 // Date and time: 12/22/18, 12:09:36
@@ -36,7 +40,7 @@ $o.location:=New object:C1471("we1"; 241; "we2"; 243; "toEZ"; 325; \
 "toSwitch"; 375; "switchDirection"; "left"; "ezSlot"; 234234888)
 $o.others:=New object:C1471
 $o.others.onLine:=New object:C1471("1front"; New object:C1471("id"; "Blue"; "distance"; 143); \
-"1back"; New object:C1471("id"; "Yellow"; "distance"; 98)); 
+"1back"; New object:C1471("id"; "Yellow"; "distance"; 98))
 $o.others.ez:=New object:C1471("1front"; New object:C1471("id"; "Green"; "timeSlot"; 234234777); \
 "1back"; New object:C1471("id"; "Cyan"; "timeSlot"; 234234999))
 $o.others.marker:=New object:C1471("id"; "1223"; "action"; "reset encoder")
@@ -63,7 +67,7 @@ Else
 	$contactUniqueID:=3229
 	$direction:="Send"
 	QUERY:C277([SyncRelation:103]; [SyncRelation:103]name:8="Sourish-MapTasQ")
-	QUERY:C277([WorkOrder:66]; [WorkOrder:66]woNum:29=$workOrderNum)
+	QUERY:C277([WorkOrder:66]; [WorkOrder:66]idNum:29=$workOrderNum)
 	QUERY:C277([Customer:2]; [Customer:2]customerID:1=$customerID)
 	QUERY:C277([Contact:13]; [Contact:13]idNum:28=3230)
 	QUERY:C277([Contact:13]; [Contact:13]idNum:28=3229)  // jimmy dean
@@ -107,7 +111,7 @@ RP_LoadVariablesRelationship  // load the SyncRelationship varibles
 
 MQWOEvent($apiAction)  // create message record
 C_LONGINT:C283($woeventID)
-$woeventID:=[WorkOrderEvent:121]idNum:1
+$woeventID:=[zzzWorkOrderEvent:121]idNum:1
 
 
 C_TEXT:C284($worker)
@@ -130,9 +134,9 @@ HTTP_ContentType:="application/json"
 
 // ### bj ### 20181222_1914, delete this after debugging
 If (<>viDebugMode>410)  // save the exact message
-	[WorkOrderEvent:121]messageOut:17:=$working
-	[WorkOrderEvent:121]obGeneral:11:=JSON Parse:C1218($working)  // try this 
-	SAVE RECORD:C53([WorkOrderEvent:121])
+	[zzzWorkOrderEvent:121]messageOut:17:=$working
+	[zzzWorkOrderEvent:121]obGeneral:11:=JSON Parse:C1218($working)  // try this 
+	SAVE RECORD:C53([zzzWorkOrderEvent:121])
 End if 
 
 HTTPClient_URL:=HTTP_Host
@@ -147,11 +151,11 @@ $error:=WC_Request("POST")  // post to MapTasQ
 // aParameterValue
 
 If (<>viDebugMode>410)  // save the exact message
-	[WorkOrderEvent:121]messageIn:18:=vDataReceived
-	SAVE RECORD:C53([WorkOrderEvent:121])
+	[zzzWorkOrderEvent:121]messageIn:18:=vDataReceived
+	SAVE RECORD:C53([zzzWorkOrderEvent:121])
 End if 
 
-REDUCE SELECTION:C351([WorkOrderEvent:121]; 0)
+REDUCE SELECTION:C351([zzzWorkOrderEvent:121]; 0)
 REDUCE SELECTION:C351([SyncRelation:103]; 0)
 REDUCE SELECTION:C351([WorkOrder:66]; 0)
 REDUCE SELECTION:C351([Customer:2]; 0)
@@ -159,7 +163,7 @@ REDUCE SELECTION:C351([Contact:13]; 0)
 If ((<>viDebugMode>410) | (Caps lock down:C547))
 	C_TEXT:C284($script)
 	$script:="QUERY([WorkOrderEvent];[WorkOrderEvent]UniqueID="+String:C10($woeventID)+")"
-	ProcessTableOpen(Table:C252(->[WorkOrderEvent:121]); $script; $apiAction)
+	ProcessTableOpen(Table:C252(->[zzzWorkOrderEvent:121]); $script; $apiAction)
 	
 End if 
 

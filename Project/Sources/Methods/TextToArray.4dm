@@ -24,6 +24,7 @@
 // Txt_2Array(vText;->aText1;",";True)
 
 // same as Txt_2Array
+//#DECLARE($working_t : Text; $theDelim : Text; $doEmpty : Boolean; $vbUnique; Boolean)
 
 
 C_TEXT:C284($1; $theText; $3)

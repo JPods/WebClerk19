@@ -1,0 +1,673 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 466,
+	"markerBreak": 466,
+	"markerFooter": 466,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Rectangle1_1": {
+					"type": "rectangle",
+					"top": 289,
+					"left": 5,
+					"width": 85,
+					"height": 38,
+					"fill": "transparent"
+				},
+				"_VAR_bSubDel_2": {
+					"type": "pictureButton",
+					"top": 169,
+					"left": 13,
+					"width": 71,
+					"height": 38,
+					"dataSource": "bSubDel",
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/MinusButton.png",
+					"loopBackToFirstFrame": true,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_SpecialDiscount_typeSale_3": {
+					"type": "input",
+					"top": 12,
+					"left": 276,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.typeSale",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]typeSale:1"
+				},
+				"_PROP_SpecialDiscount_dateBegin_4": {
+					"type": "input",
+					"top": 34,
+					"left": 276,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.dateBegin",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]dateBegin:2"
+				},
+				"_PROP_SpecialDiscount_dateEnd_5": {
+					"type": "input",
+					"top": 56,
+					"left": 276,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.dateEnd",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]dateEnd:3"
+				},
+				"_PROP_SpecialDiscount_priceBase_6": {
+					"type": "input",
+					"top": 12,
+					"left": 690,
+					"width": 49,
+					"height": 17,
+					"defaultValue": "1",
+					"dataSource": "entry_o.priceBase",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field5.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]priceBase:8"
+				},
+				"_PROP_SpecialDiscount_perCent_7": {
+					"type": "checkbox",
+					"top": 37,
+					"left": 673,
+					"width": 13,
+					"height": 11,
+					"dataSource": "entry_o.perCent",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]perCent:5"
+				},
+				"_PROP_SpecialDiscount_perCentDiscount_8": {
+					"type": "input",
+					"top": 34,
+					"left": 690,
+					"width": 49,
+					"height": 17,
+					"dataSource": "entry_o.perCentDiscount",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]perCentDiscount:6"
+				},
+				"_PROP_SpecialDiscount_commission_9": {
+					"type": "input",
+					"top": 56,
+					"left": 690,
+					"width": 49,
+					"height": 17,
+					"dataSource": "entry_o.commission",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]commission:9"
+				},
+				"_VAR_ePopDate_10": {
+					"type": "plugin",
+					"top": 28,
+					"left": 767,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPluginArea",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"_VAR_b11_11": {
+					"type": "button",
+					"top": 35,
+					"left": 823,
+					"width": 156,
+					"height": 29,
+					"dataSource": "b11",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16794,25",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b21_12": {
+					"type": "button",
+					"top": 135,
+					"left": 13,
+					"width": 71,
+					"height": 29,
+					"dataSource": "b21",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16790,20",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b24_13": {
+					"type": "button",
+					"top": 252,
+					"left": 12,
+					"width": 73,
+					"height": 29,
+					"dataSource": "b24",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "%",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable105.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_pDiscnt_14": {
+					"type": "input",
+					"top": 290,
+					"left": 8,
+					"width": 81,
+					"height": 17,
+					"dataSource": "pDiscnt",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "##0.0%",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_pGross_15": {
+					"type": "input",
+					"top": 309,
+					"left": 8,
+					"width": 81,
+					"height": 17,
+					"dataSource": "pGross",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_b26_16": {
+					"type": "button",
+					"top": 336,
+					"left": 12,
+					"width": 73,
+					"height": 29,
+					"dataSource": "b26",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Margin",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable108.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_pDscntPrice_17": {
+					"type": "input",
+					"top": 382,
+					"left": 8,
+					"width": 79,
+					"height": 17,
+					"dataSource": "pDscntPrice",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_b25_18": {
+					"type": "button",
+					"top": 416,
+					"left": 12,
+					"width": 73,
+					"height": 28,
+					"dataSource": "b25",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "$",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable106.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_SpecialDiscount_note_19": {
+					"type": "input",
+					"top": 608,
+					"left": 95,
+					"width": 904,
+					"height": 68,
+					"dataSource": "entry_o.note",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[SpecialDiscount:44]note:7"
+				},
+				"_Text_TypeSale_20": {
+					"type": "text",
+					"top": 14,
+					"left": 167,
+					"width": 103,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TypeSale"
+				},
+				"_Text_DateBegin_21": {
+					"type": "text",
+					"top": 36,
+					"left": 167,
+					"width": 103,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DateBegin"
+				},
+				"_Text_DateEnd_22": {
+					"type": "text",
+					"top": 58,
+					"left": 167,
+					"width": 103,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DateEnd"
+				},
+				"_Text_Note_23": {
+					"type": "text",
+					"top": 611,
+					"left": 14,
+					"width": 75,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Note"
+				},
+				"_Text_DefaultPriceLvl_24": {
+					"type": "text",
+					"top": 14,
+					"left": 545,
+					"width": 139,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Default Price Lvl"
+				},
+				"_Text_Discount%_25": {
+					"type": "text",
+					"top": 37,
+					"left": 527,
+					"width": 139,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Discount %"
+				},
+				"_Text_Commission%_26": {
+					"type": "text",
+					"top": 58,
+					"left": 545,
+					"width": 139,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Commission %"
+				},
+				"_VAR_viRecordsInSelection_27": {
+					"type": "input",
+					"top": 104,
+					"left": 5,
+					"width": 79,
+					"height": 17,
+					"dataSource": "viRecordsInSelection",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_Text_Items_28": {
+					"type": "text",
+					"top": 87,
+					"left": 5,
+					"width": 62,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Items"
+				},
+				"_VAR_<>pNavPallet_29": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_30": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_31": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_32": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_33": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_34": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bDateTime_35": {
+					"type": "pictureButton",
+					"top": 625,
+					"left": 33,
+					"width": 42,
+					"height": 34,
+					"dataSource": "bDateTime",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable122.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Subform": {
+					"type": "subform",
+					"left": 97,
+					"top": 84,
+					"width": 902,
+					"height": 524
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 5,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

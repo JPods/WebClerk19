@@ -11,8 +11,8 @@
 // ----------------------------------------------------
 C_TEXT:C284($1)
 C_DATE:C307($2; $3)
-$dtBegin:=DateTime_Enter($2; ?00:00:00?)
-$dtEnd:=DateTime_Enter($3; ?23:59:59?)
+$dtBegin:=DateTime_DTTo($2; ?00:00:00?)
+$dtEnd:=DateTime_DTTo($3; ?23:59:59?)
 QUERY:C277([WorkOrder:66]; [WorkOrder:66]dtAction:5>=$dtBegin; *)
 QUERY:C277([WorkOrder:66];  & [WorkOrder:66]dtAction:5<=$dtEnd; *)
 QUERY:C277([WorkOrder:66];  & [WorkOrder:66]actionBy:8=$1)

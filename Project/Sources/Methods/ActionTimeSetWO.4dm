@@ -21,7 +21,7 @@ If ($k>0)
 		GOTO RECORD:C242([WorkOrder:66]; aWoRecNum{aWoStepLns{$i}})
 		$vDate:=[WorkOrder:66]actionDate:105
 		[WorkOrder:66]actionTime:111:=$vTime
-		[WorkOrder:66]dtAction:5:=DateTime_Enter([WorkOrder:66]actionDate:105; [WorkOrder:66]actionTime:111)
+		[WorkOrder:66]dtAction:5:=DateTime_DTTo([WorkOrder:66]actionDate:105; [WorkOrder:66]actionTime:111)
 		SAVE RECORD:C53([WorkOrder:66])
 		aWoTimeNd{aWoStepLns{$i}}:=vtWoPlan*1
 	End for 

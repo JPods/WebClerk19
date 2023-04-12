@@ -15,7 +15,6 @@ READ ONLY:C145([Employee:19])
 READ ONLY:C145([Invoice:26])
 READ ONLY:C145([CallReport:34])
 READ ONLY:C145([Proposal:42])
-READ ONLY:C145([Lead:48])
 READ ONLY:C145([Time:56])
 If (b1=1)
 	$amount:=0
@@ -26,8 +25,8 @@ If (b1=1)
 	$gmOthDol:=0
 	$gmDolPC:=0
 	$gmAll:=0
-	QUERY:C277([Proposal:42]; [Proposal:42]dateProposed:3>=$2->; *)
-	QUERY:C277([Proposal:42];  & [Proposal:42]dateProposed:3<=$3->; *)
+	QUERY:C277([Proposal:42]; [Proposal:42]dateDocument:3>=$2->; *)
+	QUERY:C277([Proposal:42];  & [Proposal:42]dateDocument:3<=$3->; *)
 	If (Count parameters:C259>3)
 		QUERY:C277(Table:C252(Table:C252($5))->;  & $5->=$4->; *)
 	End if 
@@ -84,8 +83,8 @@ If (b1=1)
 	$amountBL:=0
 	$cntBL:=0
 	$cancel:=0
-	QUERY:C277([Order:3]; [Order:3]dateOrdered:4>=$2->; *)
-	QUERY:C277([Order:3];  & [Order:3]dateOrdered:4<=$3->; *)
+	QUERY:C277([Order:3]; [Order:3]dateDocument:4>=$2->; *)
+	QUERY:C277([Order:3];  & [Order:3]dateDocument:4<=$3->; *)
 	If (Count parameters:C259>3)
 		QUERY:C277([Order:3];  & $6->=$4->; *)
 	End if 
@@ -181,21 +180,21 @@ If (b1=1)
 		FIRST RECORD:C50([Customer:2])
 		For ($i; 1; Records in selection:C76([Customer:2]))
 			If (aBullets{5}#"")
-				QUERY:C277([Order:3]; [Order:3]customerid:1=[Customer:2]customerID:1)
+				QUERY:C277([Order:3]; [Order:3]customerID:1=[Customer:2]customerID:1)
 				$total:=$total+Sum:C1([Order:3]amount:24)
 			End if 
 			If (aBullets{4}#"")
-				QUERY:C277([Order:3]; [Order:3]customerid:1=[Customer:2]customerID:1; *)
-				QUERY:C277([Order:3]; [Order:3]dateOrdered:4>=$2->; *)
-				QUERY:C277([Order:3];  & [Order:3]dateOrdered:4<=$3->)
+				QUERY:C277([Order:3]; [Order:3]customerID:1=[Customer:2]customerID:1; *)
+				QUERY:C277([Order:3]; [Order:3]dateDocument:4>=$2->; *)
+				QUERY:C277([Order:3];  & [Order:3]dateDocument:4<=$3->)
 				$period:=$period+Sum:C1([Order:3]amount:24)
 			End if 
 			If (aBullets{6}#"")
-				QUERY:C277([Order:3]; [Order:3]customerid:1=[Customer:2]customerID:1)
-				ORDER BY:C49([Order:3]; [Order:3]dateOrdered:4)
+				QUERY:C277([Order:3]; [Order:3]customerID:1=[Customer:2]customerID:1)
+				ORDER BY:C49([Order:3]; [Order:3]dateDocument:4)
 				If (Records in selection:C76([Order:3])>0)
 					FIRST RECORD:C50([Order:3])
-					$days:=$days+[Order:3]dateOrdered:4-[Customer:2]dateOpened:14
+					$days:=$days+[Order:3]dateDocument:4-[Customer:2]dateOpened:14
 					$cntInAvg:=$cntInAvg+1
 				End if 
 			End if 
@@ -233,15 +232,7 @@ If (b1=1)
 			QUERY:C277([Time:56])
 			$1->{10}:=String:C10(Sum:C1([Time:56]lapseTime:8); $format)
 		End if 
-		If (aBullets{2}#"")
-			QUERY:C277([Lead:48]; [Lead:48]dateEntered:21>=$2->; *)
-			QUERY:C277([Lead:48];  & [Lead:48]dateEntered:21<=$3->; *)
-			If (Count parameters:C259>3)
-				QUERY:C277([Lead:48];  & $10->=$4->; *)
-			End if 
-			QUERY:C277([Lead:48])
-			$1->{2}:=String:C10(Records in selection:C76([Lead:48]); $format)
-		End if 
+		
 	End if 
 End if 
 READ WRITE:C146([Customer:2])
@@ -252,6 +243,5 @@ READ WRITE:C146([Employee:19])
 READ WRITE:C146([Invoice:26])
 READ WRITE:C146([CallReport:34])
 READ WRITE:C146([Proposal:42])
-READ WRITE:C146([Lead:48])
 READ WRITE:C146([Time:56])
 MESSAGES ON:C181

@@ -25,5 +25,5 @@ If (OptOut_Action="Process_OptOut")
 Else 
 	$doPage:="OptOutRequest.html"
 End if 
-$err:=WC_PageSendWithTags($1; <>WebFolder+$doPage; 0)
+$err:=WC_PageSendWithTags($1; Storage:C1525.wc.webFolder+$doPage; 0)
 

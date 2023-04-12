@@ -8,9 +8,7 @@
 C_LONGINT:C283($found)
 $found:=Prs_CheckRunnin("Scheduler")
 If ($found>0)
-	If (Frontmost process:C327#<>aPrsNum{$found})
-		BRING TO FRONT:C326(<>aPrsNum{$found})
-	End if 
+	BRING TO FRONT:C326($found)
 Else 
 	<>ptCurTable:=ptCurTable
 	<>prcControl:=1
@@ -25,9 +23,7 @@ If (False:C215)
 	$found:=Prs_CheckRunnin("Schedule Setter")
 	//
 	If ($found>0)
-		If (Frontmost process:C327#<>aPrsNum{$found})
-			BRING TO FRONT:C326(<>aPrsNum{$found})
-		End if 
+		BRING TO FRONT:C326($found)
 	Else 
 		<>ptCurTable:=ptCurTable
 		<>prcControl:=1

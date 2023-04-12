@@ -32,7 +32,7 @@ Case of
 		ARRAY DATE:C224(at_DTActionDate; $k)
 		ARRAY LONGINT:C221(at_DTActionTime; $k)
 		For ($i; 1; $k)
-			jDateTimeRecov($tempDT{$i}; ->at_DTActionDate{$i}; ->at_DTActionTime{$i})
+			DateTime_DTFrom($tempDT{$i}; ->at_DTActionDate{$i}; ->at_DTActionTime{$i})
 			at_DTActionTime{$i}:=at_DTActionTime{$i}*1
 		End for 
 		If ($areaList#0)

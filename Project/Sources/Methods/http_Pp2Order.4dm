@@ -18,13 +18,13 @@ If (True:C214)  // currently using record
 	READ ONLY:C145([Proposal:42])
 	READ ONLY:C145([Customer:2])
 	QUERY:C277([Customer:2]; [Customer:2]customerID:1=[RemoteUser:57]customerID:10)
-	[Order:3]orderNum:2:=CounterNew(->[Order:3])
+	[Order:3]idNum:2:=CounterNew(->[Order:3])
 	[Order:3]labelCount:32:=1
 	[Order:3]takenBy:36:="WebClerk"
-	QUERY:C277([ProposalLine:43]; [ProposalLine:43]proposalNum:1=[Proposal:42]proposalNum:5)
+	QUERY:C277([ProposalLine:43]; [ProposalLine:43]idNumProposal:1=[Proposal:42]idNum:5)
 	PpLnFillRays(Records in selection:C76([ProposalLine:43]))
 	Ord_FromProposal
-	[Order:3]dateOrdered:4:=Current date:C33
+	[Order:3]dateDocument:4:=Current date:C33
 	[Order:3]timeOrdered:58:=Current time:C178
 	If (<>tcCancelBy>0)
 		[Order:3]dateCancel:53:=[Order:3]dateNeeded:5+<>tcCancelBy

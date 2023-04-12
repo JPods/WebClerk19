@@ -1,1 +1,0 @@
-[QQQTime:56]TotalDollars:12:=Round:C94([QQQTime:56]Rate:9*([QQQTime:56]LapseTime:8/3600); 2)

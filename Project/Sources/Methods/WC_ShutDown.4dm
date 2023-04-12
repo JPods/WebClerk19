@@ -27,7 +27,7 @@ End if
 If ([TallyResult:73]textBlk1:5#"")
 	[TallyResult:73]textBlk1:5:=("\r"*2)
 End if 
-[TallyResult:73]textBlk1:5:=[TallyResult:73]textBlk1:5+"Period of Operation: "+String:C10(Current date:C33)+": "+String:C10(<>dtStartWebClerk-DateTime_Enter)+("\r"*2)
+[TallyResult:73]textBlk1:5:=[TallyResult:73]textBlk1:5+"Period of Operation: "+String:C10(Current date:C33)+": "+String:C10(<>dtStartWebClerk-DateTime_DTTo)+("\r"*2)
 [TallyResult:73]textBlk1:5:=WebClerkPageUsage
 SAVE RECORD:C53([TallyResult:73])
 REDUCE SELECTION:C351([TallyResult:73]; 0)

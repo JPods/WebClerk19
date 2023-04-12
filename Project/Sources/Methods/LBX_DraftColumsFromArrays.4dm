@@ -11,13 +11,12 @@
 // list of array names
 // list of array labels
 // ----------------------------------------------------
-
-var $arrayName_t; $labelNames_t; $vtColumnName; $lbName_t; $columnAdder_t; $vtHeader; $vtHeaderText; $vtFooter : Text
+var $arrayName_t; $labelNames_t; $vtColumnName; $lbName_t; $columnAdder_t; $vtHeader; $headerText_t; $vtFooter : Text
 var $arrays_c; $labels_c : Collection
 var $viCount; $align_i : Integer
 
-$arrays_c:=Split string:C1554($1; ",")
-$labels_c:=Split string:C1554($2; ",")
+$arrays_c:=Split string:C1554($1; ";")
+$labels_c:=Split string:C1554($2; ";")
 $lbName_t:="LBReplaceName"
 $columnAdder_t:=""
 
@@ -28,21 +27,19 @@ var $columns_c : Collection
 $columns_c:=New collection:C1472
 $viCount:=0
 For each ($arrayName_t; $arrays_c)
-	$vtColumnName:="Column_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t
-	$vtHeader:="Header_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t
-	$vtFooter:="Footer_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t
 	$collumn_o:=New object:C1471
-	If ($labels_c.length>$viCount)
-		$vtHeaderText:=$labels_c[$viCount]
+	If ($labels_c.length>=$viCount)
+		$headerText_t:=$labels_c[$viCount]
 	Else 
-		$vtHeaderText:="addName"
+		$headerText_t:="addName"
 	End if 
-	$collumn_o.name:=$vtColumnName
+	$collumn_o.name:="Column_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t
 	$collumn_o.dataSource:=$arrayName_t
-	//$collumn_o.className:=""
-	//$collumn_o.valueName:=""
-	$collumn_o.header:=New object:C1471("name"; $vtHeader; "text"; $vtHeaderText)
-	$collumn_o.footer:=New object:C1471("name"; $vtFooter)
+	$collumn_o.header:=New object:C1471("name"; \
+		"Header_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t; \
+		"text"; $headerText_t)
+	$collumn_o.footer:=New object:C1471("name"; \
+		"Footer_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t)
 	$collumn_o.wordWrap:=0
 	
 	$ptArray:=Get pointer:C304($arrayName_t)
@@ -89,3 +86,82 @@ For each ($arrayName_t; $arrays_c)
 	$viCount:=$viCount+1
 End for each 
 $0:=New object:C1471("columns"; $columns_c)
+
+
+//var $arrayName_t; $labelNames_t; $vtColumnName; $lbName_t; $columnAdder_t; $vtHeader; $vtHeaderText; $vtFooter : Text
+//var $arrays_c; $labels_c : Collection
+//var $viCount; $align_i : Integer
+
+//$arrays_c:=Split string($1; ";")
+//$labels_c:=Split string($2; ";")
+//$lbName_t:="LBReplaceName"
+//$columnAdder_t:=""
+
+//C_POINTER($ptArray)
+
+//var $result_o; $collumn_o; $0 : Object
+//var $columns_c : Collection
+//$columns_c:=New collection
+//$viCount:=0
+//For each ($arrayName_t; $arrays_c)
+//$vtColumnName:="Column_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t
+//$vtHeader:="Header_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t
+//$vtFooter:="Footer_"+$lbName_t+"_"+$arrayName_t+"_"+$columnAdder_t
+//$collumn_o:=New object
+//If ($labels_c.length>$viCount)
+//$vtHeaderText:=$labels_c[$viCount]
+//Else 
+//$vtHeaderText:="addName"
+//End if 
+//$collumn_o.name:=$vtColumnName
+//$collumn_o.dataSource:=$arrayName_t
+////$collumn_o.className:=""
+////$collumn_o.valueName:=""
+//$collumn_o.header:=New object("name"; $vtHeader; "text"; $vtHeaderText)
+//$collumn_o.footer:=New object("name"; $vtFooter)
+//$collumn_o.wordWrap:=0
+
+//$ptArray:=Get pointer($arrayName_t)
+//If ($ptArray#Null)
+//Case of 
+//: (Type($ptArray->)=LongInt array)
+//$collumn_o.format:=""
+//$collumn_o.align:=3
+//$collumn_o.displayType:=0
+//$collumn_o.width:=80
+//: (Type($ptArray->)=Real array)
+//$collumn_o.format:=""
+//$collumn_o.align:=3
+////$collumn_o.displayType:=0
+//$collumn_o.width:=80
+//: (Type($ptArray->)=Time array)
+//$collumn_o.format:=""
+//$collumn_o.align:=2
+////$collumn_o.displayType:=0
+//$collumn_o.width:=70
+//: (Type($ptArray->)=Date array)
+//$collumn_o.format:=""
+//$collumn_o.align:=2
+////$collumn_o.displayType:=0
+//$collumn_o.width:=70
+//: (Type($ptArray->)=Boolean array)
+//$collumn_o.format:=""
+//$collumn_o.align:=2
+////$collumn_o.displayType:=0
+//$collumn_o.width:=30
+//: ((Type($ptArray->)=String array) | (Type($ptArray->)=Text array))
+//$collumn_o.format:=""
+//$collumn_o.align:=1
+////$collumn_o.displayType:=0
+//$collumn_o.width:=120
+
+//End case 
+//End if 
+//$collumn_o.bgColor:=""
+//$collumn_o.fontColor:=""
+//$collumn_o.resizable:=True
+
+//$columns_c.push($collumn_o)
+//$viCount:=$viCount+1
+//End for each 
+//$0:=New object("columns"; $columns_c)

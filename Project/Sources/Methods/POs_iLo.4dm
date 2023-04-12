@@ -49,10 +49,10 @@ Else
 			If (Is new record:C668([PO:39]))
 				$ptLastTable:=ptCurTable
 				$fillFromPrevious:=True:C214
-				If (ptCurTable=(->[AdSource:35]))
-					[PO:39]customerPo:34:=[AdSource:35]marketEffort:2
-					[PO:39]docType:43:=[AdSource:35]docType:52
-					[PO:39]docReference:44:=[AdSource:35]docRef:53
+				If (ptCurTable=(->[Marketing:35]))
+					[PO:39]customerPo:34:=[Marketing:35]marketEffort:2
+					[PO:39]docType:43:=[Marketing:35]docType:52
+					[PO:39]docReference:44:=[Marketing:35]docRef:53
 				End if 
 			End if 
 		End if 
@@ -120,11 +120,11 @@ Else
 		
 		
 		If (Locked:C147([PO:39]))
-			_O_OBJECT SET COLOR:C271(srCustomer; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srAcct; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srZip; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srPhone; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srPO; -(Yellow:K11:2+(256*Red:K11:4)))
+			OBJECT SET RGB COLORS:C628(*; "srCustomer"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srAcct"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srZip"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srPhone"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srPO"; Yellow:K11:2; 256*Red:K11:4)
 		End if 
 		
 		Before_New(ptCurTable)  //last thing to do

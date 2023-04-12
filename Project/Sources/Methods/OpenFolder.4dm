@@ -22,7 +22,7 @@ If (Count parameters:C259>=1)
 	$vtPath:=$1
 Else 
 	$vtPath:=Select folder:C670("")
-	ConsoleMessage($vtPath)
+	ConsoleLog($vtPath)
 	If (ok=0)  // user did not select a folder
 		$vtPath:=Storage:C1525.folder.jitDocs
 	End if 
@@ -39,7 +39,7 @@ If (Is macOS:C1572)
 	End if 
 	
 	$vtPath:=Replace string:C233($vtpath; " "; "\\ ")  // escape spaces 
-	ConsoleMessage($vtPath)
+	ConsoleLog($vtPath)
 	$vtCommand:="Open "+$vtPath
 Else 
 	SET ENVIRONMENT VARIABLE:C812("_4D_OPTION_HIDE_CONSOLE"; "true")

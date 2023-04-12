@@ -11,6 +11,6 @@
 // ----------------------------------------------------
 Process_InitLocal
 jCenter4DWindow(953; 612; 8; "Record Passing"; "CancelCommand")
-DIALOG:C40([Control:1]; "RP_Editor")
+DIALOG:C40([Base:1]; "RP_Editor")
 CLOSE WINDOW:C154
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)

@@ -132,29 +132,29 @@ End if
 
 ON ERR CALL:C155("jOECNoAction")
 
-ConsoleMessage("\r"+String:C10(Current date:C33; Internal date short:K1:7)+" "+String:C10(Current time:C178; HH MM SS:K7:1)+" Begin IMAP Receive")
+ConsoleLog("\r"+String:C10(Current date:C33; Internal date short:K1:7)+" "+String:C10(Current time:C178; HH MM SS:K7:1)+" Begin IMAP Receive")
 
 $viError:=IT_SetPort($viProtocal; $viPort)  // 14 = SSL IMAP 993 = Port
 If ($viError#0)
-	ConsoleMessage("Error: "+String:C10($viError)+" IT_SetPort")
+	ConsoleLog("Error: "+String:C10($viError)+" IT_SetPort")
 End if 
 $viSessionParam:=1  // 1= ssl
 $viError:=IMAP_Login($vtHost; $vtUserName; $vtUserPassword; $viImap_ID; $viSessionParam)
 If ($viError#0)
-	ConsoleMessage("Error: "+String:C10($viError)+" IMAP_Login")
+	ConsoleLog("Error: "+String:C10($viError)+" IMAP_Login")
 End if 
 
 If ($viError=0)
 	C_TEXT:C284($vtCapability)
 	$viError:=IMAP_Capability($viImap_ID; $vtCapability)
 	If ($viError#0)
-		ConsoleMessage("Error: "+String:C10($viError)+" IMAP_Capability")
+		ConsoleLog("Error: "+String:C10($viError)+" IMAP_Capability")
 	End if 
 	If ($vtCapability%"IMAP4rev1")
-		ConsoleMessage("SUCCESS: IMAP4rev1 Capable")
+		ConsoleLog("SUCCESS: IMAP4rev1 Capable")
 		// IMAP commands using $viImap_ID parameter 
 	Else 
-		ConsoleMessage("WARNING: NOT IMAP4rev1 Capable Could cause errors")
+		ConsoleLog("WARNING: NOT IMAP4rev1 Capable Could cause errors")
 	End if 
 	
 	// Getting the current mailbox when none is selected returns error code 10092
@@ -162,15 +162,15 @@ If ($viError=0)
 	// 
 	// Case of 
 	// : ($viError=10092)
-	// ConsoleMessage ("STATUS: A maibox is not selected")
+	// Console_Log ("STATUS: A maibox is not selected")
 	// $viError:=0
 	// 
 	// : ($vtMBName="")
-	// ConsoleMessage ("STATUS: A maibox is not selected")
+	// Console_Log ("STATUS: A maibox is not selected")
 	// $viError:=0
 	// 
 	// : ($viError#0)
-	// ConsoleMessage ("Error: "+String($viError)+" IMAP_GetCurrentMB")
+	// Console_Log ("Error: "+String($viError)+" IMAP_GetCurrentMB")
 	// 
 	// End case 
 	
@@ -179,7 +179,7 @@ If ($viError=0)
 	$viSubscribedMB:=0  // 0 = all mailboxes
 	$viError:=IMAP_ListMBs($viImap_ID; $vtMBRefName; $vtMBName; $atMBNames; $atMBAttribs; $atMBHierarchy; $viSubscribedMB)
 	If ($viError#0)
-		ConsoleMessage("Error: "+String:C10($viError)+" IMAP_ListMBs")
+		ConsoleLog("Error: "+String:C10($viError)+" IMAP_ListMBs")
 	End if 
 	//  imap_ID LongintinReference to an IMAP login
 	//  mbRefName TextinNull string or Mailbox name or level of mailbox hierarchy
@@ -198,18 +198,18 @@ If ($viError=0)
 	//  \Unmarked: the mailbox does not contain any additional messages since the last selection.
 	
 	//For ($vi1;1;Size of array($atMBNames))
-	//ConsoleMessage ($atMBNames{$vi1})
+	//Console_Log ($atMBNames{$vi1})
 	//End for 
 	
 	$vi1:=Find in array:C230($atMBNames; "INBOX")
 	
 	$vtMBName:=$atMBNames{$vi1}
 	
-	ConsoleMessage("Checking Status of INBOX...")
+	ConsoleLog("Checking Status of INBOX...")
 	
 	$viError:=IMAP_GetMBStatus($viImap_ID; $vtMBName; $viMsgCount; $viMsgCountNew; $viMsgCountUnseen; $viMBID)
 	If ($viError#0)
-		ConsoleMessage("Error: "+String:C10($viError)+" IMAP_GetMBStatus")
+		ConsoleLog("Error: "+String:C10($viError)+" IMAP_GetMBStatus")
 	End if 
 	//  imap_ID LongintinReference to an IMAP login
 	//  mbName TextinName of the mailbox
@@ -219,19 +219,19 @@ If ($viError=0)
 	//  mbUID LongintinSpecified mailbox unique identifier
 	//  Function result IntegerinError code
 	
-	ConsoleMessage("Mailbox: "+$vtMBName)
-	ConsoleMessage("Messages: "+String:C10($viMsgCount))
-	ConsoleMessage("New: "+String:C10($viMsgCountNew))
-	ConsoleMessage("Unseen: "+String:C10($viMsgCountUnseen))
+	ConsoleLog("Mailbox: "+$vtMBName)
+	ConsoleLog("Messages: "+String:C10($viMsgCount))
+	ConsoleLog("New: "+String:C10($viMsgCountNew))
+	ConsoleLog("Unseen: "+String:C10($viMsgCountUnseen))
 	
 	C_TEXT:C284($vtMBName; $flagsCustom; $flagsPermanent)
 	C_LONGINT:C283($numMsg; $numMsgNew; $viMBID)
 	
-	ConsoleMessage("STATUS: Setting Current mailbox to INBOX...")
+	ConsoleLog("STATUS: Setting Current mailbox to INBOX...")
 	
 	$viError:=IMAP_SetCurrentMB($viImap_ID; $vtMBName; $numMsg; $numMsgNew; $flagsCustom; $flagsPermanent; $viMBID)
 	If ($viError#0)
-		ConsoleMessage("Error: "+String:C10($viError)+" IMAP_SetCurrentMB")
+		ConsoleLog("Error: "+String:C10($viError)+" IMAP_SetCurrentMB")
 	End if 
 	//The IMAP_SetCurrentMB command allows you to open a session (i.e. selects the current working Mailbox) 
 	// in order to manage the messages of the specified mailbox.
@@ -267,24 +267,24 @@ If ($viError=0)
 	//APPEND TO ARRAY($atMsgHeader;"Return-Path:")
 	//APPEND TO ARRAY($atMsgHeader;"MIME-Version:")
 	//
-	//ConsoleMessage ("STATUS: Getting Message List...")
+	//Console_Log ("STATUS: Getting Message List...")
 	//$viError:=IMAP_MsgLst ($viImap_ID;$startMsg;$endMsg;$atMsgHeader;$aiMsgNum;$aiMsgID;$atMsgValue)
 	//
-	//ConsoleMessage ("$aiMsgID: "+String(Size of array($aiMsgID)))
-	//ConsoleMessage ("$aiMsgNum: "+String(Size of array($aiMsgNum)))
-	//ConsoleMessage ("$atMsgValue: "+String(Size of array($atMsgValue)))
-	//ConsoleMessage ("$atMsgHeader: "+String(Size of array($atMsgHeader)))
+	//Console_Log ("$aiMsgID: "+String(Size of array($aiMsgID)))
+	//Console_Log ("$aiMsgNum: "+String(Size of array($aiMsgNum)))
+	//Console_Log ("$atMsgValue: "+String(Size of array($atMsgValue)))
+	//Console_Log ("$atMsgHeader: "+String(Size of array($atMsgHeader)))
 	//
 	//If (Size of array($aiMsgID)#Size of array($aiMsgNum))
-	//ConsoleMessage ("Error: Message Array Size Mismatch")
+	//Console_Log ("Error: Message Array Size Mismatch")
 	//End if 
 	//
 	//If (Size of array($atMsgHeader)#Size of array($atMsgValue))
-	//ConsoleMessage ("Error: Headers Array Size Mismatch")
+	//Console_Log ("Error: Headers Array Size Mismatch")
 	//End if 
 	//
 	//If ($viError#0)
-	//ConsoleMessage ("Error: "+String($viError)+" IMAP_MsgLst")
+	//Console_Log ("Error: "+String($viError)+" IMAP_MsgLst")
 	//End if 
 	
 	
@@ -297,10 +297,10 @@ If ($viError=0)
 	//  msgValueArray 2D String array, 2D Text arrayin2D Array of header values
 	//  Function result IntegerinError code
 	
-	ConsoleMessage("STATUS: Getting Message Info...")
+	ConsoleLog("STATUS: Getting Message Info...")
 	$viError:=IMAP_MsgLstInfo($viImap_ID; $startMsg; $endMsg; $aiMsgSize; $aiMsgNum; $aiMsgID)
 	If ($viError#0)
-		ConsoleMessage("Error: "+String:C10($viError)+" IMAP_MsgLstInfo")
+		ConsoleLog("Error: "+String:C10($viError)+" IMAP_MsgLstInfo")
 	End if 
 	//  imap_ID LongintinReference to an IMAP login
 	//  startMsg LongintinStart message number
@@ -310,47 +310,47 @@ If ($viError=0)
 	//  msgIdArray Longint arrayinArray of Unique Msg IDs
 	//  Function result IntegerinError code
 	
-	ConsoleMessage("STATUS: Getting Message Flags...")
+	ConsoleLog("STATUS: Getting Message Flags...")
 	$viError:=IMAP_GetFlags($viImap_ID; $startMsg; $endMsg; $atMsgFlags; $aiMsgNumFlags)
 	
 	If ($viError#0)
-		ConsoleMessage("Error: "+String:C10($viError)+" IMAP_GetFlags")
+		ConsoleLog("Error: "+String:C10($viError)+" IMAP_GetFlags")
 	End if 
 	
 	// Check for Array Size Mismatch
 	$viMsgID:=Size of array:C274($aiMsgID)
-	ConsoleMessage("MsgID:\t"+String:C10($viMsgID))
+	ConsoleLog("MsgID:\t"+String:C10($viMsgID))
 	
 	$viMsgNum:=Size of array:C274($aiMsgNum)
-	ConsoleMessage("MsgNum:\t"+String:C10($viMsgNum))
+	ConsoleLog("MsgNum:\t"+String:C10($viMsgNum))
 	
 	$viMsgSize:=Size of array:C274($aiMsgSize)
-	ConsoleMessage("MsgSize:\t"+String:C10($viMsgSize))
+	ConsoleLog("MsgSize:\t"+String:C10($viMsgSize))
 	
 	$viMsgFlags:=Size of array:C274($atMsgFlags)
-	ConsoleMessage("MsgFlags:\t"+String:C10($viMsgFlags))
+	ConsoleLog("MsgFlags:\t"+String:C10($viMsgFlags))
 	
 	$viMsgNumFlags:=Size of array:C274($aiMsgNumFlags)
-	ConsoleMessage("MsgNumFlags:\t"+String:C10($viMsgNumFlags))
+	ConsoleLog("MsgNumFlags:\t"+String:C10($viMsgNumFlags))
 	
 	Case of 
 		: ($viMsgNum#$viMsgNumFlags)
 			$viError:=10114
-			ConsoleMessage("Error: 10114 ARRAY MISMATCH MSGNUM")
+			ConsoleLog("Error: 10114 ARRAY MISMATCH MSGNUM")
 			
 		: ($viMsgNum#$viMsgID)
 			$viError:=10115
-			ConsoleMessage("Error: 10115 ARRAY MISMATCH MSGID")
+			ConsoleLog("Error: 10115 ARRAY MISMATCH MSGID")
 			
 			
 		: ($viMsgNum#$viMsgSize)
 			$viError:=10116
-			ConsoleMessage("Error: 10116 ARRAY MISMATCH MSGSIZE")
+			ConsoleLog("Error: 10116 ARRAY MISMATCH MSGSIZE")
 			
 			
 		: ($viMsgNum#$viMsgFlags)
 			$viError:=10117
-			ConsoleMessage("Error: 10117 ARRAY MISMATCH MSGFLAGS")
+			ConsoleLog("Error: 10117 ARRAY MISMATCH MSGFLAGS")
 			
 			
 	End case 
@@ -378,7 +378,7 @@ If ($viError=0)
 			CREATE FOLDER:C475($vtAttachmentPath; *)  // create folder path if it does not exist
 		End if 
 		
-		ConsoleMessage("STATUS: Checking Messages...")
+		ConsoleLog("STATUS: Checking Messages...")
 		
 		$viProgressID:=Progress New
 		
@@ -424,7 +424,7 @@ If ($viError=0)
 				$viUpdateSeen:=1  //0 = Update \Seen Flag; 1 = Do not update 
 				IMAP_GetMessage($viImap_ID; $aiMsgNum{$vi1}; $viOffset; $aiMsgSize{$vi1}; $viMsgPart; $vtMsgText; $viUpdateSeen)
 				If ($viError#0)
-					ConsoleMessage("Error: "+String:C10($viError)+" IMAP_GetMessage")
+					ConsoleLog("Error: "+String:C10($viError)+" IMAP_GetMessage")
 				End if 
 				//Parameter Type   Description
 				//imap_ID  Longint in Reference to an IMAP login
@@ -457,7 +457,7 @@ If ($viError=0)
 						[Message:137]action:14:="Read Email"
 						[Message:137]actionDate:16:=Current date:C33
 						[Message:137]time:8:=Current time:C178
-						[Message:137]dtReceived:9:=DateTime_Enter
+						[Message:137]dtReceived:9:=DateTime_DTTo
 						[Message:137]actionBy:17:=Current user:C182
 						
 						//Parameter Type   Description
@@ -523,7 +523,7 @@ If ($viError=0)
 							[Message:137]date:7:=Date:C102($vtHeaderValue)
 						End if 
 						
-						[Message:137]dtReceived:9:=DateTime_Enter
+						[Message:137]dtReceived:9:=DateTime_DTTo
 						[Message:137]keyTags:11:=String:C10($aiMsgID{$vi1})
 						[Message:137]messageIMAPid:41:=$aiMsgID{$vi1}
 						[Message:137]category:25:=$vtUserFolder
@@ -593,10 +593,10 @@ If ($viError=0)
 						SAVE RECORD:C53([Message:137])
 						
 						If ($viRead=1)  // write header before first message received
-							ConsoleMessage("\r Email ID:\t Date:\t Time:\t Subject:")
+							ConsoleLog("\r Email ID:\t Date:\t Time:\t Subject:")
 						End if 
 						
-						ConsoleMessage(String:C10([Message:137]messageIMAPid:41)+"\t"+String:C10([Message:137]date:7; Internal date short:K1:7)+"\t"+String:C10([Message:137]time:8; System time short:K7:9)+"\t"+[Message:137]subject:6)
+						ConsoleLog(String:C10([Message:137]messageIMAPid:41)+"\t"+String:C10([Message:137]date:7; Internal date short:K1:7)+"\t"+String:C10([Message:137]time:8; System time short:K7:9)+"\t"+[Message:137]subject:6)
 						
 					Else   // delete file if duplicate
 						
@@ -707,7 +707,7 @@ If ($viError=0)
 		End case 
 		
 		If ($vtError#"")
-			ConsoleMessage("Error: "+$vtError)
+			ConsoleLog("Error: "+$vtError)
 		End if 
 		
 	End if   // ARRAY MISMATCH
@@ -721,5 +721,5 @@ CLEAR VARIABLE:C89($vtUserPassword)
 ON ERR CALL:C155("")
 
 
-ConsoleMessage("IMAP Receive Complete")
+ConsoleLog("IMAP Receive Complete")
 TRACE:C157

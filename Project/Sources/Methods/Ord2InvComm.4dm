@@ -170,14 +170,14 @@ If (UserInPassWordGroup("ProductInvoice"))
 						//myCycle:=0
 						//       Accept_CalcStat ([Order];False;aOQtyShip;aOQtyBL)
 						If ([Order:3]status:59="Completed")
-							[Order:3]dtProdCompl:57:=DateTime_Enter
+							[Order:3]dtProdCompl:57:=DateTime_DTTo
 							[Order:3]dateInvoiceComp:6:=Current date:C33
 						End if 
 						If ([Order:3]actionBy:55="")
 							[Order:3]actionBy:55:=Current user:C182
 						End if 
 						If ([Order:3]dtProdRelease:56=0)
-							[Order:3]dtProdRelease:56:=DateTime_Enter
+							[Order:3]dtProdRelease:56:=DateTime_DTTo
 						End if 
 						SAVE RECORD:C53([Order:3])
 						vLineMod:=True:C214

@@ -119,14 +119,14 @@ Else
 				
 		End case 
 		
-		//ConsoleMessage(vtPassword)
-		ConsoleMessage(vText)
+		//ConsoleLog(vtPassword)
+		ConsoleLog(vText)
 		
 		QUERY:C277([RemoteUser:57]; [RemoteUser:57]userPassword:3=vtPassword)
 		viRecords:=Records in selection:C76([RemoteUser:57])
 		If (viRecords>0)
 			vbUnique:=False:C215
-			ConsoleMessage("Duplicate Password")
+			ConsoleLog("Duplicate Password")
 		Else 
 			vbUnique:=True:C214
 		End if 
@@ -134,7 +134,7 @@ Else
 		// ### jwm ### 20170627_1304 REMOVE THIS AFTER INSTALLING NEW STRUCTURE WITH PASSWORD LENGTH 255
 		If (Length:C16(vtPassword)>255)
 			vbUnique:=False:C215
-			ConsoleMessage("Length Password > 255")
+			ConsoleLog("Length Password > 255")
 		End if 
 		
 	End while 
@@ -171,7 +171,7 @@ Else
 				If ([RemoteUser:57]obGeneral:31.passwordOld=Null:C1517)
 					[RemoteUser:57]obGeneral:31.passwordOld:=New object:C1471
 				End if 
-				[RemoteUser:57]obGeneral:31.passwordOld[String:C10(DateTime_Enter)]:=vtOldPassword
+				[RemoteUser:57]obGeneral:31.passwordOld[String:C10(DateTime_DTTo)]:=vtOldPassword
 				[RemoteUser:57]userPassword:3:=vtPassword
 				iLoText1:=vtPassword
 				[RemoteUser:57]key:21:=vText
@@ -179,7 +179,7 @@ Else
 				//ALERT("Password Set")
 				//SAVE RECORD([RemoteUser])
 				//ALERT("RemoteUser Saved")
-				ConsoleMessage("Password Updated - "+vtPassword)
+				ConsoleLog("Password Updated - "+vtPassword)
 			Else 
 				ALERT:C41("Error: Password Not Set")
 			End if 

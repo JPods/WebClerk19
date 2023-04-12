@@ -14,5 +14,5 @@
 
 //must open myErrDoc before calling procedure
 If (<>VIDEBUGMODE>410)
-	ConsoleMessage("Error: "+String:C10(error))
+	ConsoleLog("Error: "+String:C10(error))
 End if 

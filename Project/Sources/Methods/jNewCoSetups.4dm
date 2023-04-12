@@ -14,6 +14,10 @@
 // ----------------------------------------------------
 
 
+
+// MustFixQQQZZZ: Bill James (2022-05-12T05:00:00Z)
+// Convert to a Resource load or API
+
 PopUpNameCleanUp  // make sure to rename before creating
 
 ConvertPopups("<>aActions"; "Credit Check"; "Rush Order"; "Send Lit"; "Call Back"; "Send out Rep")

@@ -15,7 +15,7 @@
 
 
 //
-$dtNow:=DateTime_Enter
+$dtNow:=DateTime_DTTo
 C_LONGINT:C283($1; $ordLnUnique; $doLine; $findOrderLine; $dtNow)
 C_REAL:C285($0)
 C_BOOLEAN:C305($doEnd)
@@ -56,7 +56,7 @@ Repeat
 				[GenericParent:89]purpose:3:="LoadTag"
 				[GenericParent:89]lI01:5:=[LoadItem:87]idNumLoadTag:8
 				[GenericParent:89]lI02:6:=[LoadTag:88]idNumInvoice:19
-				[GenericParent:89]lI03:7:=DateTime_Enter
+				[GenericParent:89]lI03:7:=DateTime_DTTo
 				SAVE RECORD:C53([GenericParent:89])
 			End if 
 		End if 

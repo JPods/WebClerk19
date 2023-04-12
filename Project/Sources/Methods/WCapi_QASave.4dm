@@ -101,10 +101,10 @@ Else
 			End if 
 			
 			If (<>VIDEBUGMODE>210)
-				ConsoleMessage("Storage.paths.serverComEx: "+Storage:C1525.paths.serverComEx)
-				ConsoleMessage("Storage.paths.localComEx: "+Storage:C1525.paths.localComEx)
-				ConsoleMessage("$obPayload.path: "+$obPayload.path)
-				ConsoleMessage("$voRecord.imagePath: "+$voRecord.imagePath)
+				ConsoleLog("Storage.paths.serverComEx: "+Storage:C1525.paths.serverComEx)
+				ConsoleLog("Storage.paths.localComEx: "+Storage:C1525.paths.localComEx)
+				ConsoleLog("$obPayload.path: "+$obPayload.path)
+				ConsoleLog("$voRecord.imagePath: "+$voRecord.imagePath)
 			End if 
 			
 		End if 

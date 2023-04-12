@@ -1,0 +1,457 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Variable25": {
+					"type": "dropdown",
+					"top": 11,
+					"left": 415,
+					"width": 95,
+					"height": 18,
+					"dataSource": "aTypeSale",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/Variable25.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"vItemPict_o": {
+					"type": "input",
+					"top": 570,
+					"left": 259,
+					"width": 251,
+					"height": 150,
+					"dataSource": "vItemPict",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontFamily": "System Font",
+					"fontSize": 12,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalTopLeft",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDoubleClick"
+					],
+					"bottom": 720
+				},
+				"Field39": {
+					"type": "input",
+					"top": 570,
+					"left": 40,
+					"width": 214,
+					"height": 14,
+					"dataSource": "_LB_Item_.cur.imagePath",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable13": {
+					"type": "button",
+					"top": 11,
+					"left": 263,
+					"width": 45,
+					"height": 16,
+					"dataSource": "bOmit",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Untitled"
+					},
+					"shortcutKey": "h",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,181",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable12": {
+					"type": "button",
+					"top": 11,
+					"left": 311,
+					"width": 45,
+					"height": 16,
+					"dataSource": "bSelectLine",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Untitled"
+					},
+					"shortcutKey": "g",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16789,180",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field40": {
+					"type": "input",
+					"top": 588,
+					"left": 4,
+					"width": 235,
+					"height": 132,
+					"dataSource": "_LB_Item_.cur.descriptionDetail",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"bottom": 720
+				},
+				"Text29": {
+					"type": "text",
+					"top": 570,
+					"left": 5,
+					"width": 23,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fontStyle": "italic",
+					"text": "Path"
+				},
+				"Variable2": {
+					"type": "button",
+					"top": 11,
+					"left": 360,
+					"width": 45,
+					"height": 16,
+					"dataSource": "b11",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Untitled"
+					},
+					"shortcutKey": "g",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Show",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text27": {
+					"type": "text",
+					"top": 12,
+					"left": 5,
+					"width": 47,
+					"height": 14,
+					"stroke": "#0000CD",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Search"
+				},
+				"_LB_Item_": {
+					"type": "listbox",
+					"left": 3,
+					"top": 49,
+					"width": 507,
+					"height": 331,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onDrop",
+						"onDataChange",
+						"onSelectionChange",
+						"onBeginDragOver"
+					],
+					"listboxType": "collection",
+					"dataSource": "_LB_Item_.ents",
+					"currentItemSource": "_LB_Item_.cur",
+					"currentItemPositionSource": "_LB_Item_.pos",
+					"selectedItemsSource": "_LB_Item_.sel",
+					"method": "ObjectMethods/_LB_Item_.4dm",
+					"alternateFill": "#FFFAEE",
+					"right": 510,
+					"dragging": "custom",
+					"dropping": "custom",
+					"columns": [
+						{
+							"header": {
+								"text": "ItemNum",
+								"name": "_HEAD_Item_itemNum_"
+							},
+							"name": "_PROP_Item_ItemNum_",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.itemNum",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "_HEAD_Item_description_",
+								"text": "Description"
+							},
+							"name": "_PROP_Item_description_",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.description",
+							"width": 267,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "_HEAD_Item_price_",
+								"text": "PriceA"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.priceA",
+							"width": 98,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "_HEAD_Item_cost_",
+								"text": "CostAverage"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.costAverage",
+							"width": 87,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "_HEAD_Item_qty_",
+								"text": "QtyAvailable"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer5"
+							},
+							"dataSource": "This:C1470.qtyAvailable",
+							"width": 74,
+							"enterable": false
+						}
+					]
+				},
+				"Variable24": {
+					"type": "input",
+					"top": 7,
+					"left": 61,
+					"width": 165,
+					"height": 26,
+					"dataSource": "srKeyword",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 18
+				},
+				"LB_FieldList": {
+					"type": "listbox",
+					"left": 5,
+					"top": 406,
+					"width": 505,
+					"height": 156,
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "LB_FieldList.ents",
+					"currentItemSource": "LB_FieldList.cur",
+					"currentItemPositionSource": "LB_FieldList.pos",
+					"selectedItemsSource": "LB_FieldList.sel",
+					"alternateFill": "#FFFAEE",
+					"right": 510,
+					"columns": [
+						{
+							"header": {
+								"text": "FieldName",
+								"name": "_HEAD_fieldName_"
+							},
+							"name": "_COL_name_",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 133
+						},
+						{
+							"header": {
+								"name": "_HEAD_value_",
+								"text": "Value"
+							},
+							"name": "_COL_value_",
+							"footer": {
+								"name": "Footer7"
+							},
+							"dataSource": "This:C1470.value",
+							"width": 359
+						}
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 386,
+					"left": 36,
+					"width": 394,
+					"height": 14,
+					"dataSource": "This:C1470.cur.alertMessage",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 386,
+					"left": 4,
+					"width": 27,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fontStyle": "italic",
+					"text": "Alert"
+				},
+				"_POP_Groups_": {
+					"type": "dropdown",
+					"top": 384,
+					"left": 435,
+					"width": 75,
+					"height": 18,
+					"dataSource": "aGroups",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"fontWeight": "bold",
+					"method": "ObjectMethods/_POP_Groups_.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bItems_o": {
+					"type": "button",
+					"top": 30,
+					"left": 263,
+					"width": 45,
+					"height": 16,
+					"dataSource": "bItems",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Untitled"
+					},
+					"shortcutKey": "h",
+					"shortcutAccel": true,
+					"fontFamily": "Arial",
+					"fontSize": 9,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "FRP",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bItems_o.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 234,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

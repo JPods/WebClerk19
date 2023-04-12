@@ -5,9 +5,9 @@ C_TEXT:C284($2)
 
 If ($1#"")
 	If ($1[[1]]="/")
-		$0:=<>WebFolder+$1
+		$0:=Storage:C1525.wc.webFolder+$1
 	Else 
-		$0:=<>WebFolder+"/"+$1
+		$0:=Storage:C1525.wc.webFolder+"/"+$1
 	End if 
 	If (Is macOS:C1572)
 		$0:=Replace string:C233($0; "/"; ":")

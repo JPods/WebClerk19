@@ -12,7 +12,7 @@
 
 // (PM) WC_ShowMonitor
 // $1 = Dummy parameter used for launching new process
-// Prs_ListActive
+// Process_ListActive
 If (Count parameters:C259=0)  //startup the process
 	C_LONGINT:C283($fia)
 	//<>aPrsName
@@ -43,8 +43,8 @@ Else
 		var $obWindows : Object
 		$obWindows:=WindowCountToShow
 		
-		$window:=Open form window:C675([Control:1]; "WebClerkMonitor"; Plain form window:K39:10; On the left:K39:2; At the top:K39:5)
-		DIALOG:C40([Control:1]; "WebClerkMonitor")
+		$window:=Open form window:C675([Base:1]; "WebClerkMonitor"; Plain form window:K39:10; On the left:K39:2; At the top:K39:5)
+		DIALOG:C40([Base:1]; "WebClerkMonitor")
 		CLOSE WINDOW:C154($window)
 		
 	End if 

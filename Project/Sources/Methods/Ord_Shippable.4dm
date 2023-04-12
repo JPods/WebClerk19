@@ -46,7 +46,7 @@ vR10:=$sumWt
 vR9:=0  //must be set so it will calc
 vR8:=0
 vR7:=0
-If ([Order:3]autoFreight:40)
+If ([Order]shipAuto)
 	ShippingCost(->[Order:3]shipVia:13; ->[Order:3]zone:14; ->vR10; ->vR7; ->vR8; ->vR9; ->[Order:3]terms:23; ->vR2; ->[Order:3]labelCount:32)
 End if 
 vR3:=vR7+vR8+vR9

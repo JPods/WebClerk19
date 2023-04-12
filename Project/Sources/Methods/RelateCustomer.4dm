@@ -17,11 +17,11 @@ C_DATE:C307($vdDateBegin)
 C_LONGINT:C283($dtDateBegin)
 
 If (process_o.tableNum=Null:C1517)
-	process_o.tableNum:=STR_GetTableNumber(process_o.tableName)
+	process_o.tableNum:=STR_GetTableNumber(process_o.dataClassName)
 End if 
 
 $vdDateBegin:=Current date:C33-Storage:C1525.default.recentDays  // ### jwm ### 20171213_1713 auto relate recent history
-$dtDateBegin:=DateTime_Enter($vdDateBegin)
+$dtDateBegin:=DateTime_DTTo($vdDateBegin)
 
 process_o.ents.Profile:=ds:C1482.Profile.query("tableNum = :1 & idForeign = :2"; process_o.tableNum; process_o.cur.id).orderBy("name asc")
 

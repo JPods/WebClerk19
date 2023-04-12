@@ -1,8 +1,8 @@
 //%attributes = {}
 If (Day of:C23(Current date:C33)=1)
 	$PeriodDate:=Date_ThisMon(Current date:C33-10; 0)
-	$PeriodStart:=DateTime_Enter(Date_ThisMon($PeriodDate; 0); ?00:00:00?)
-	$PeriodEnd:=DateTime_Enter(Date_ThisMon($PeriodDate; 1)+1; ?23:59:50?)
+	$PeriodStart:=DateTime_DTTo(Date_ThisMon($PeriodDate; 0); ?00:00:00?)
+	$PeriodEnd:=DateTime_DTTo(Date_ThisMon($PeriodDate; 1)+1; ?23:59:50?)
 	QUERY:C277([Item:4]; [Item:4]tallyByType:19=True:C214)
 	$incItem:=0
 	$cntItem:=Records in selection:C76([Item:4])

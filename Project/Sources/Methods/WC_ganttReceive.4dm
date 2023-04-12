@@ -76,7 +76,7 @@ Else
 		// only if received.
 		[SyncRecord:109]obReceived:46:=JSON Parse:C1218([SyncRecord:109]body:34)
 		[SyncRecord:109]comment:25:="ProjectUUIDKey: "+vUUIDKeypr
-		[SyncRecord:109]dtAction:2:=DateTime_Enter
+		[SyncRecord:109]dtAction:2:=DateTime_DTTo
 		[SyncRecord:109]dtCreated:15:=[SyncRecord:109]dtAction:2
 		[SyncRecord:109]statusReceive:19:="jQuery-Gantt"
 		[SyncRecord:109]statusSend:17:=""

@@ -15,7 +15,7 @@ C_TEXT:C284($comment)
 $comment:=""
 
 CREATE RECORD:C68([DBOM:129])
-[DBOM:129]dtEvent:7:=DateTime_Enter  // ### jwm ### 20160505_1329
+[DBOM:129]dtEvent:7:=DateTime_DTTo  // ### jwm ### 20160505_1329
 [DBOM:129]changedBy:10:=Current user:C182
 [DBOM:129]itemParent:3:=Old:C35([BOM:21]itemNum:1)
 [DBOM:129]itemChild:4:=Old:C35([BOM:21]childItem:2)

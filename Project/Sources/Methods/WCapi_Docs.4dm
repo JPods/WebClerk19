@@ -18,7 +18,7 @@ vResponse:="Error: WCapi_Docs defined"
 If (False:C215)
 	
 	
-	$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"noimage.jpg"
+	$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"noimage.jpg"
 	$tableName:=WCapi_GetParameter("Table"; "")
 	$vtUUIDKey:=WCapi_GetParameter("id"; "")
 	$vtThumbnail:=WCapi_GetParameter("Thumbnail"; "")
@@ -35,18 +35,18 @@ If (False:C215)
 		If (Records in selection:C76($ptTable->)=1)
 			$vtPath:=PathOrTN($tableName; $vtThumbnail)
 			If ($vtPath="")
-				$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"ImagePathEmpty.jpg"
+				$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"ImagePathEmpty.jpg"
 				If (<>viDebugMode>410)
 					If (Test path name:C476($vtPath)#1)
-						ConsoleMessage("Critical image missing: "+$vtPath)
+						ConsoleLog("Critical image missing: "+$vtPath)
 						$vtPath:=""
 					End if 
 				End if 
 			Else 
 				$vtPath:=PathToSystem($vtPath)
 				If (Test path name:C476($vtPath)#1)
-					ConsoleMessage("Invalid Path: "+$vtPath)
-					$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"ImagePathInvalid.jpg"
+					ConsoleLog("Invalid Path: "+$vtPath)
+					$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"ImagePathInvalid.jpg"
 				End if 
 			End if 
 			
@@ -59,7 +59,7 @@ If (False:C215)
 	If (Test path name:C476($vtPath)=1)
 		WC_SendServerResponsePath($vtPath)
 	Else 
-		ConsoleMessage("Error-Path: WCapi_Docs"+$vtPath)
+		ConsoleLog("Error-Path: WCapi_Docs"+$vtPath)
 		vResponse:="Error: pages served only thru vue.js vResponse: "+vResponse
 		WC_voStateError("Error: path: "+$vtPath)
 		WC_SendServerResponse(vResponse)

@@ -28,7 +28,7 @@ ARRAY LONGINT:C221($aiTypes; 0)
 
 OB GET PROPERTY NAMES:C1232($voBatch; $atNames; $aiTypes)
 
-ConsoleMessage($atNames{1})
+ConsoleLog($atNames{1})
 
 $voBatch:=OB Get:C1224($voBatch; $atNames{1}; Is object:K8:27)
 
@@ -46,7 +46,7 @@ OB GET PROPERTY NAMES:C1232($voBatch; $atNames; $aiTypes)
 vi2:=Size of array:C274($atNames)
 If (vi2>0)
 	For ($vi1; 1; vi2)
-		ConsoleMessage($atNames{$vi1})
+		ConsoleLog($atNames{$vi1})
 		$viType:=OB Get type:C1230($voBatch; $atNames{$vi1})
 		If ($viType=39)
 			OB GET ARRAY:C1229($voBatch; $atNames{$vi1}; $aoObjectsTemp)
@@ -69,13 +69,13 @@ If (vi2>0)
 	ARRAY LONGINT:C221($aiTypes; 0)
 	OB GET PROPERTY NAMES:C1232($aoObjects{$viIndex}; $atNames; $aiTypes)
 	For (vi5; 1; Size of array:C274($atNames))
-		ConsoleMessage($atNames{vi5}+" - "+String:C10($aiTypes{$vi5}))
+		ConsoleLog($atNames{vi5}+" - "+String:C10($aiTypes{$vi5}))
 	End for 
 	C_LONGINT:C283($viUniqueID)
 	$viUniqueID:=OB Get:C1224($aoObjects{$viIndex}; "OrderNum"; Is longint:K8:6)
 	
 	$vtTest:=JSON Stringify:C1217($voBatch; *)
 	
-	ConsoleMessage($vtTest)
+	ConsoleLog($vtTest)
 	
 End if 

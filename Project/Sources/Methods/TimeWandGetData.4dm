@@ -7,12 +7,14 @@ C_BOOLEAN:C305($ItemFlag; $doEnd)
 KeyModifierCurrent
 Case of 
 	: (OptKey=1)
-		Case of 
-			: (ptCurTable=(->[Order:3]))
-				myDocName:=Http_POConfirm(1)
-			: (ptCurTable=(->[PO:39]))
-				Http_PORecvd
-		End case 
+		// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+		
+		//Case of 
+		//: (ptCurTable=(->[Order]))
+		//myDocName:=Http_POConfirm(1)
+		//: (ptCurTable=(->[PO]))
+		//Http_PORecvd
+		//End case 
 	Else 
 		ARRAY TEXT:C222(aTWItemNum; 0)
 		ARRAY REAL:C219(aTWQty; 0)

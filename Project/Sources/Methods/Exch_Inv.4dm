@@ -32,7 +32,7 @@ If (([Invoice:26]exchangeRate:61#0) & ([Invoice:26]exchangeRate:61#1))
 		//;viExDisPrec)
 		//calculate in std procedure
 		//one time changes should be done here
-		//If ([Invoice]AutoFreight=False)//will recalc in base currency   
+		//If ([Invoice]shipAuto=False)//will recalc in base currency   
 		//TRACE
 		[Invoice:26]shipFreightCost:15:=Round:C94([Invoice:26]exchangeRate:61*[Invoice:26]shipFreightCost:15; viExDisPrec)
 		[Invoice:26]shipMiscCosts:16:=Round:C94([Invoice:26]exchangeRate:61*[Invoice:26]shipMiscCosts:16; viExDisPrec)
@@ -57,7 +57,7 @@ If (([Invoice:26]exchangeRate:61#0) & ([Invoice:26]exchangeRate:61#1))
 			IvcLnExtend($incLn)
 		End for 
 		Exch_InitRays(0)
-		//If ([Invoice]AutoFreight=False)//will recalc in base currency if AutoFreight i
+		//If ([Invoice]shipAuto=False)//will recalc in base currency if shipAuto i
 		[Invoice:26]shipFreightCost:15:=Round:C94([Invoice:26]shipFreightCost:15/[Invoice:26]exchangeRate:61; viExConPrec)
 		[Invoice:26]shipMiscCosts:16:=Round:C94([Invoice:26]shipMiscCosts:16/[Invoice:26]exchangeRate:61; viExConPrec)
 		// End if 

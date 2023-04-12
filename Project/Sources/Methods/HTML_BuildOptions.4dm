@@ -56,7 +56,7 @@ If (Size of array:C274($atChoiceValues)#Size of array:C274($atChoiceDisplays))
 	
 	$0:=""
 	
-	ConsoleMessage("Error during HTML Select creation. Size of value array doesn't match size of choice array.")
+	ConsoleLog("Error during HTML Select creation. Size of value array doesn't match size of choice array.")
 	
 Else 
 	

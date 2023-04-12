@@ -1,1 +1,1 @@
-OutputFormPrintQR
+Print_QuickReport

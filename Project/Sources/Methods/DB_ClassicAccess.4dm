@@ -13,7 +13,9 @@ $tableName:=$1
 Case of 
 	: (Count parameters:C259=1)
 		$sel_o:=ds:C1482[$tableName].all()
-		$o:=New object:C1471("tableName"; $tableName; \
+		$o:=New object:C1471(\
+			"tableName"; $tableName; \
+			"dataClassName"; $tableName; \
 			"saveOK"; "viewOnly"; \
 			"sel"; New object:C1471; \
 			"cur"; New object:C1471; \
@@ -32,7 +34,7 @@ Case of
 		var $2 : Object
 		var process_o : Object
 		process_o:=$2
-		$tableName:=process_o.tableName
+		$tableName:=process_o.dataClassName
 		process_o.tableNum:=ds:C1482[$tableName].getInfo().tableNumber
 		var ptCurTable : Pointer
 		ptCurTable:=Table:C252(process_o.tableNum)

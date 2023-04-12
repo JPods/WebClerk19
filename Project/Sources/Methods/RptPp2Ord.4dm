@@ -50,8 +50,8 @@ Else
 			If (Locked:C147([Proposal:42]))
 				ADD TO SET:C119([Proposal:42]; "SkipOrders")
 			Else 
-				MESSAGE:C88("Processing Proposal:  "+String:C10([Proposal:42]proposalNum:5))
-				QUERY:C277([ProposalLine:43]; [ProposalLine:43]proposalNum:1=[Proposal:42]proposalNum:5)
+				MESSAGE:C88("Processing Proposal:  "+String:C10([Proposal:42]idNum:5))
+				QUERY:C277([ProposalLine:43]; [ProposalLine:43]idNumProposal:1=[Proposal:42]idNum:5)
 				PpLnFillRays(Records in selection:C76([ProposalLine:43]))
 				C_LONGINT:C283($cntLines; $incLines; $raySize)
 				$cntLines:=Size of array:C274(aPItemNum)
@@ -65,7 +65,7 @@ Else
 				End for 
 				//QUERY([Customer];[Customer]customerID=[Proposal]customerID)
 				CREATE RECORD:C68([Order:3])
-				[Order:3]orderNum:2:=CounterNew(->[Order:3])
+				[Order:3]idNum:2:=CounterNew(->[Order:3])
 				//TRACE
 				Ord_FromProposal
 				booAccept:=True:C214
@@ -130,7 +130,7 @@ Else
 			Until (<>prcControl=0)
 		End if 
 		USE SET:C118("OrigOrders")
-		Prs_ListActive
+		Process_ListActive
 		CLEAR SET:C117("OrigOrders")
 		CLEAR SET:C117("NewInvoices")
 		CLEAR SET:C117("SkipOrders")

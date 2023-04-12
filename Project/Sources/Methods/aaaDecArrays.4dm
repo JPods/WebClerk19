@@ -45,7 +45,7 @@ ARRAY TEXT:C222(atSavedFieldValuesOld; 0)
 ARRAY TEXT:C222(aExecuteScript; 0)
 ARRAY TEXT:C222(aExecuteScript; 0)
 
-ARRAY TEXT:C222(<>atConsoleMessage; 0)
+ARRAY TEXT:C222(<>atConsole_Log; 0)
 
 ARRAY TEXT:C222(aSetCookie; 0)  // ### jwm ### 20160315_1203 used by method SetCookie
 ARRAY TEXT:C222(aBadWords; 0)

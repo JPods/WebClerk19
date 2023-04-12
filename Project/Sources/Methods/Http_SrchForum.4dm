@@ -76,24 +76,24 @@
 // Case of 
 // : (($dateBegin#"") & ($dateEnd#""))
 // If ($testCnt=0)
-// QUERY([Forum];[Forum]DTSubmitted>=DateTime_Enter (Date($dateBegin);?00:00:00?);*)
+// QUERY([Forum];[Forum]DTSubmitted>=DateTime_DTTo (Date($dateBegin);?00:00:00?);*)
 // Else 
-// QUERY([Forum]; & [Forum]DTSubmitted>=DateTime_Enter (Date($dateBegin);?00:00:00?);*)
+// QUERY([Forum]; & [Forum]DTSubmitted>=DateTime_DTTo (Date($dateBegin);?00:00:00?);*)
 // End if 
-// QUERY([Forum]; & [Forum]DTSubmitted<=DateTime_Enter (Date($dateEnd);?23:59:59?);*)
+// QUERY([Forum]; & [Forum]DTSubmitted<=DateTime_DTTo (Date($dateEnd);?23:59:59?);*)
 // $testCnt:=$testCnt+1
 // : (($dateBegin#"") & ($dateEnd=""))
 // If ($testCnt=0)
-// QUERY([Forum];[Forum]DTSubmitted>=DateTime_Enter (Date($dateBegin);?00:00:00?);*)
+// QUERY([Forum];[Forum]DTSubmitted>=DateTime_DTTo (Date($dateBegin);?00:00:00?);*)
 // Else 
-// QUERY([Forum]; & [Forum]DTSubmitted>=DateTime_Enter (Date($dateBegin);?00:00:00?);*)
+// QUERY([Forum]; & [Forum]DTSubmitted>=DateTime_DTTo (Date($dateBegin);?00:00:00?);*)
 // End if 
 // $testCnt:=$testCnt+1
 // : ($dateEnd#"")  //($dateBegin#"")&
 // If ($testCnt=0)
-// QUERY([Forum];[Forum]DTSubmitted>=DateTime_Enter ((Date($dateEnd)-1);?23:59:59?);*)
+// QUERY([Forum];[Forum]DTSubmitted>=DateTime_DTTo ((Date($dateEnd)-1);?23:59:59?);*)
 // Else 
-// QUERY([Forum]; & [Forum]DTSubmitted>=DateTime_Enter ((Date($dateEnd)-1);?23:59:59?);*)
+// QUERY([Forum]; & [Forum]DTSubmitted>=DateTime_DTTo ((Date($dateEnd)-1);?23:59:59?);*)
 // End if 
 // $testCnt:=$testCnt+1
 // End case 

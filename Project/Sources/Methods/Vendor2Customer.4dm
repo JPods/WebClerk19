@@ -44,7 +44,7 @@ Else
 End if 
 If ($doConvert)  //See VendorFromCustTable for opposite action
 	CREATE RECORD:C68([Customer:2])
-	DBCustomer_init
+	DB_InitCustomer
 	[Customer:2]division:70:=Storage:C1525.default.division
 	[Customer:2]mfrLocationid:67:=0
 	[Customer:2]email:81:=[Vendor:38]email:59
@@ -78,7 +78,7 @@ If ($doConvert)  //See VendorFromCustTable for opposite action
 	[Customer:2]taxJuris:65:=Substring:C12([Vendor:38]state:7; 1; 3)
 	[Customer:2]fax:66:=[Vendor:38]fax:13
 	If (([Vendor:38]attention:55#"") & ([Vendor:38]nameLast:86=""))
-		Parse_UnWanted(entryEntity.attention)
+		Parse_UnWanted(process_o.entry_o.attention)
 	Else 
 		[Customer:2]nameFirst:73:=[Vendor:38]nameFirst:85
 		[Customer:2]nameLast:23:=[Vendor:38]nameLast:86

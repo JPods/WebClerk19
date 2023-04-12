@@ -32,7 +32,7 @@ If ($k>0)
 		$0:=$0+"\r"+"<option value="+Txt_Quoted($1->{$i})+">"+$1->{$i}+"</option>"
 	End for 
 Else 
-	ConsoleMessage("Array pointed to has no values.")
+	ConsoleLog("Array pointed to has no values.")
 End if 
 If ($selectOption#"")
 	C_TEXT:C284($targetText)

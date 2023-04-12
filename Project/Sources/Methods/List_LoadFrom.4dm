@@ -23,7 +23,7 @@ ORDER BY:C49([PopupChoice:134]; [PopupChoice:134]choice:3)
 FIRST RECORD:C50([PopupChoice:134])
 For ($i; 1; $k)
 	If (<>VIDEBUGMODE>410)
-		ConsoleMessage("[PopupChoice]choice: "+[PopupChoice:134]choice:3)
+		ConsoleLog("[PopupChoice]choice: "+[PopupChoice:134]choice:3)
 	End if 
 	$w:=Find in array:C230($ptPopRay->; [PopupChoice:134]choice:3)
 	If ($w=-1)

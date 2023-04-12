@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "listScreen",
 	"memorizeGeometry": true,
 	"windowMinWidth": 640,
@@ -209,25 +209,6 @@
 					"iconFrames": 4,
 					"style": "bevel",
 					"method": "ObjectMethods/Variable40.4dm",
-					"events": [
-						"onClick"
-					]
-				},
-				"Variable3": {
-					"type": "button",
-					"top": 13,
-					"left": 849,
-					"width": 98,
-					"height": 19,
-					"dataSource": "b7",
-					"fontFamily": "Geneva",
-					"fontSize": 10,
-					"stroke": "#000000",
-					"focusable": false,
-					"text": "Fill Names",
-					"iconFrames": 4,
-					"style": "bevel",
-					"method": "ObjectMethods/Variable3.4dm",
 					"events": [
 						"onClick"
 					]
@@ -516,6 +497,24 @@
 					"events": [
 						"onClick"
 					]
+				},
+				"Variable3": {
+					"type": "button",
+					"top": 11,
+					"left": 879,
+					"width": 68,
+					"height": 18,
+					"dataSource": "New Variable31805",
+					"fontFamily": "Geneva",
+					"fontSize": 10,
+					"focusable": false,
+					"text": "Delete",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
 				}
 			}
 		},
@@ -671,8 +670,8 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]tableName:7",
-					"class": "\cssInput16",
+					"dataSource": "[FC:94]tableName:7",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -692,8 +691,8 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]fieldName:8",
-					"class": "\cssInput16",
+					"dataSource": "[FC:94]userName:8",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -713,9 +712,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]tableNumber:1",
+					"dataSource": "[FC:94]tableNum:1",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -735,9 +734,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]fieldNumber:5",
+					"dataSource": "[FC:94]fieldNumber:5",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -757,9 +756,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]securityLevel:3",
+					"dataSource": "[FC:94]securityLevel:3",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -779,9 +778,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]characteristic:2",
+					"dataSource": "[FC:94]data:2",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -801,9 +800,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]roles:12",
+					"dataSource": "[FC:94]role:12",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -823,8 +822,8 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]purpose:11",
-					"class": "\cssInput16",
+					"dataSource": "[FC:94]purpose:11",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -844,9 +843,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]obSync:6",
+					"dataSource": "[FC:94]obSync:6",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -866,9 +865,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]idUnique:4",
+					"dataSource": "[FC:94]idNum:4",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -888,9 +887,9 @@
 					"width": 80,
 					"height": 16,
 					"sizingX": "grow",
-					"dataSource": "[FieldCharacteristic:94]id:9",
+					"dataSource": "[FC:94]id:9",
 					"dataSourceTypeHint": "integer",
-					"class": "\cssInput16",
+					"class": "cssInput16",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -1361,5 +1360,10 @@
 			"View 8": {},
 			"View 9": {}
 		}
+	},
+	"geometryStamp": 4,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }

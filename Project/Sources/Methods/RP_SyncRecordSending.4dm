@@ -30,7 +30,7 @@ If (Is new record:C668([SyncRelation:103]))
 Else 
 	CREATE RECORD:C68([SyncRecord:109])
 End if 
-[SyncRecord:109]dtCreated:15:=DateTime_Enter
+[SyncRecord:109]dtCreated:15:=DateTime_DTTo
 // ### bj ### 20190113_0913
 // should theirs be saved with every exchange
 // i do not think so. The fact they worked or did not work is proof they were valid at the time
@@ -70,10 +70,10 @@ C_LONGINT:C283(dtSession)
 Case of 
 	: (dtSession#0)
 		[SyncRecord:109]dtCreated:15:=dtSession
-	: ([ETLJob:104]dtCreated:5#0)
-		[SyncRecord:109]dtCreated:15:=[ETLJob:104]dtCreated:5
+	: ([SyncJob:104]dtCreated:5#0)
+		[SyncRecord:109]dtCreated:15:=[SyncJob:104]dtCreated:5
 	Else 
-		[SyncRecord:109]dtCreated:15:=DateTime_Enter
+		[SyncRecord:109]dtCreated:15:=DateTime_DTTo
 End case 
 
 [SyncRecord:109]size:38:=$size

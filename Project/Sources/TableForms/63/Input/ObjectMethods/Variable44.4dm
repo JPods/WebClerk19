@@ -1,1 +1,0 @@
-entryEntity.DeviceType:=DE_PopUpArray(Self:C308)

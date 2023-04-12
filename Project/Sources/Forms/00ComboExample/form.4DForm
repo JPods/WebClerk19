@@ -1,0 +1,84 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Combo Box": {
+					"type": "combo",
+					"left": 71,
+					"top": 53,
+					"width": 329,
+					"height": 35,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.oCombo"
+				},
+				"Popup Dropdown List": {
+					"type": "dropdown",
+					"left": 61,
+					"top": 117,
+					"width": 339,
+					"height": 27,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.oPop"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Button",
+					"top": 19,
+					"left": 30,
+					"width": 66,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 8,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

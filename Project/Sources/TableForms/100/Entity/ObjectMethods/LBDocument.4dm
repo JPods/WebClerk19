@@ -4,7 +4,7 @@ C_OBJECT:C1216(docList)
 $obFormEvent:=FORM Event:C1606
 
 If (<>viDebugMode>410)
-	ConsoleMessage("evt_description: "+$obFormEvent.description+", row: "+String:C10($obFormEvent.row))
+	ConsoleLog("evt_description: "+$obFormEvent.description+", row: "+String:C10($obFormEvent.row))
 End if 
 
 Case of 
@@ -67,7 +67,7 @@ Case of
 				$obRec.path:=PathtoUniversal($atDocs{$inc})
 			End if 
 			$obRec.dateEntered:=Current date:C33
-			$obRec.dtEvent:=DateTime_Enter
+			$obRec.dtEvent:=DateTime_DTTo
 			$obRec.idNumTask:=0
 			$obRec.customerID:=[Customer:2]customerID:1
 			$obRec.tableNum:=2

@@ -1,0 +1,1364 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 899,
+	"markerBreak": 899,
+	"markerFooter": 916,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bdEnterKey_7": {
+					"type": "button",
+					"top": 50,
+					"left": 1,
+					"width": 3,
+					"height": 5,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Text__16793132_8": {
+					"type": "text",
+					"top": 521,
+					"left": 38,
+					"width": 181,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,132"
+				},
+				"_Text__16793133_9": {
+					"type": "text",
+					"top": 540,
+					"left": 38,
+					"width": 181,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,133"
+				},
+				"_Text__16793134_10": {
+					"type": "text",
+					"top": 559,
+					"left": 38,
+					"width": 181,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,134"
+				},
+				"_VAR_ePopDate_11": {
+					"type": "plugin",
+					"top": 42,
+					"left": 750,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_DefaultAccount_AcctReceivables_12": {
+					"type": "input",
+					"top": 110,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.AcctReceivables",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]AcctReceivables:8"
+				},
+				"_PROP_DefaultAccount_NameAR_13": {
+					"type": "input",
+					"top": 110,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameAR",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameAR:7"
+				},
+				"_PROP_DefaultAccount_DiscountGiven_14": {
+					"type": "input",
+					"top": 129,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.DiscountGiven",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]DiscountGiven:22"
+				},
+				"_PROP_DefaultAccount_NameSaleDiscoun_15": {
+					"type": "input",
+					"top": 129,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameSaleDiscoun",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameSaleDiscoun:21"
+				},
+				"_PROP_DefaultAccount_LateChargeAcct_16": {
+					"type": "input",
+					"top": 148,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.LateChargeAcct",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]LateChargeAcct:46"
+				},
+				"_PROP_DefaultAccount_NameLateCharge_17": {
+					"type": "input",
+					"top": 148,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameLateCharge",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameLateCharge:45"
+				},
+				"_PROP_DefaultAccount_FreightRevenue_18": {
+					"type": "input",
+					"top": 173,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.FreightRevenue",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]FreightRevenue:14"
+				},
+				"_PROP_DefaultAccount_NameFreightReve_19": {
+					"type": "input",
+					"top": 173,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameFreightReve",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameFreightReve:13"
+				},
+				"_PROP_DefaultAccount_TaxPayable_20": {
+					"type": "input",
+					"top": 198,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.TaxPayable",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]TaxPayable:16"
+				},
+				"_PROP_DefaultAccount_NameTaxPay_21": {
+					"type": "input",
+					"top": 198,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameTaxPay",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameTaxPay:15"
+				},
+				"_PROP_DefaultAccount_TaxOnCost_22": {
+					"type": "input",
+					"top": 217,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.TaxOnCost",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]TaxOnCost:85"
+				},
+				"_PROP_DefaultAccount_NameTaxOnCost_23": {
+					"type": "input",
+					"top": 217,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameTaxOnCost",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameTaxOnCost:84"
+				},
+				"_PROP_DefaultAccount_TaxOnShipping_24": {
+					"type": "input",
+					"top": 237,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.TaxOnShipping",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]TaxOnShipping:72"
+				},
+				"_PROP_DefaultAccount_NameTaxOnShipping_25": {
+					"type": "input",
+					"top": 237,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameTaxOnShipping",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameTaxOnShipping:78"
+				},
+				"_PROP_DefaultAccount_CommRepPay_26": {
+					"type": "input",
+					"top": 267,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.CommRepPay",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]CommRepPay:10"
+				},
+				"_PROP_DefaultAccount_NameCommRepPay_27": {
+					"type": "input",
+					"top": 267,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameCommRepPay",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameCommRepPay:9"
+				},
+				"_PROP_DefaultAccount_CommRepExp_28": {
+					"type": "input",
+					"top": 286,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.CommRepExp",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]CommRepExp:12"
+				},
+				"_PROP_DefaultAccount_NameCommRepExp_29": {
+					"type": "input",
+					"top": 286,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameCommRepExp",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameCommRepExp:11"
+				},
+				"_PROP_DefaultAccount_CommEmpPay_30": {
+					"type": "input",
+					"top": 319,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.CommEmpPay",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]CommEmpPay:2"
+				},
+				"_PROP_DefaultAccount_NameCommEmpPay_31": {
+					"type": "input",
+					"top": 319,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameCommEmpPay",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameCommEmpPay:1"
+				},
+				"_PROP_DefaultAccount_CommEmpExp_32": {
+					"type": "input",
+					"top": 338,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.CommEmpExp",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]CommEmpExp:6"
+				},
+				"_PROP_DefaultAccount_NameCommEmpExp_33": {
+					"type": "input",
+					"top": 338,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameCommEmpExp",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameCommEmpExp:5"
+				},
+				"_PROP_DefaultAccount_ItemSalesAcct_34": {
+					"type": "input",
+					"top": 372,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.ItemSalesAcct",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]ItemSalesAcct:24"
+				},
+				"_PROP_DefaultAccount_NameItemSales_35": {
+					"type": "input",
+					"top": 372,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameItemSales",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameItemSales:17"
+				},
+				"_PROP_DefaultAccount_ItemCostofGoods_36": {
+					"type": "input",
+					"top": 391,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.ItemCostofGoods",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]ItemCostofGoods:25"
+				},
+				"_PROP_DefaultAccount_NameItemCoGs_37": {
+					"type": "input",
+					"top": 391,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameItemCoGs",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameItemCoGs:18"
+				},
+				"_PROP_DefaultAccount_ItemInventory_38": {
+					"type": "input",
+					"top": 410,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.ItemInventory",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]ItemInventory:26"
+				},
+				"_PROP_DefaultAccount_NameItemInvtry_39": {
+					"type": "input",
+					"top": 410,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.NameItemInvtry",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NameItemInvtry:19"
+				},
+				"_PROP_DefaultAccount_PurchaseAcct_40": {
+					"type": "input",
+					"top": 446,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.PurchaseAcct",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]PurchaseAcct:27"
+				},
+				"_PROP_DefaultAccount_PurchaseAcctNam_41": {
+					"type": "input",
+					"top": 446,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.PurchaseAcctNam",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]PurchaseAcctNam:44"
+				},
+				"_PROP_DefaultAccount_CurrencyDsct_42": {
+					"type": "input",
+					"top": 477,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.CurrencyDsct",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]CurrencyDsct:56"
+				},
+				"_PROP_DefaultAccount_CurrencyDsctNam_43": {
+					"type": "input",
+					"top": 477,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "entry_o.CurrencyDsctNam",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]CurrencyDsctNam:57"
+				},
+				"_PROP_DefaultAccount_MaterialAdjment_44": {
+					"type": "input",
+					"top": 519,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.MaterialAdjment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]MaterialAdjment:73"
+				},
+				"_PROP_DefaultAccount_NonProductAdjustment_45": {
+					"type": "input",
+					"top": 517,
+					"left": 629,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.NonProductAdjustment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]NonProductAdjustment:76"
+				},
+				"_PROP_DefaultAccount_ScrapAcct_46": {
+					"type": "input",
+					"top": 538,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.ScrapAcct",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]ScrapAcct:74"
+				},
+				"_PROP_DefaultAccount_DutyAdjustment_47": {
+					"type": "input",
+					"top": 536,
+					"left": 629,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.DutyAdjustment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]DutyAdjustment:77"
+				},
+				"_PROP_DefaultAccount_MatlDrawAcct_48": {
+					"type": "input",
+					"top": 557,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "entry_o.MatlDrawAcct",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[DefaultAccount:32]MatlDrawAcct:75"
+				},
+				"_Text_Non-ProductAdjust_49": {
+					"type": "text",
+					"top": 519,
+					"left": 442,
+					"width": 180,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Non-ProductAdjust"
+				},
+				"_Text_DutyAdjust_50": {
+					"type": "text",
+					"top": 538,
+					"left": 442,
+					"width": 180,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Duty Adjust"
+				},
+				"_Text_AccountReceivable_51": {
+					"type": "text",
+					"top": 112,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Account Receivable"
+				},
+				"_Text_LateCharges_52": {
+					"type": "text",
+					"top": 150,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Late Charges"
+				},
+				"_Text_TaxesPayable_53": {
+					"type": "text",
+					"top": 200,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Taxes Payable"
+				},
+				"_Text_FreightRevenue_54": {
+					"type": "text",
+					"top": 175,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Freight Revenue"
+				},
+				"_Text_RepCommPayable_55": {
+					"type": "text",
+					"top": 269,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Rep Comm Payable"
+				},
+				"_Text_RepCommExpense_56": {
+					"type": "text",
+					"top": 288,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Rep Comm Expense"
+				},
+				"_Text_SalesDiscount_57": {
+					"type": "text",
+					"top": 131,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sales Discount"
+				},
+				"_Text_ItemSales_58": {
+					"type": "text",
+					"top": 374,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Item Sales"
+				},
+				"_Text_ItemInventory_59": {
+					"type": "text",
+					"top": 412,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Item Inventory"
+				},
+				"_Text_ItemCostofSales_60": {
+					"type": "text",
+					"top": 393,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Item Cost of Sales"
+				},
+				"_Text_EmployCommPayable_61": {
+					"type": "text",
+					"top": 321,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Employ Comm Payable"
+				},
+				"_Text_EmployCommExpense_62": {
+					"type": "text",
+					"top": 340,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Employ Comm Expense"
+				},
+				"_Text_CurrencyAdjustment_63": {
+					"type": "text",
+					"top": 479,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Currency Adjustment"
+				},
+				"_Text_Payable_Clearing_64": {
+					"type": "text",
+					"top": 448,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Payable/Clearing"
+				},
+				"_Text_Accounts_65": {
+					"type": "text",
+					"top": 91,
+					"left": 226,
+					"width": 138,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Accounts"
+				},
+				"_Text_AccountDescription_66": {
+					"type": "text",
+					"top": 91,
+					"left": 379,
+					"width": 178,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Account Description"
+				},
+				"_Text_TaxesonCost_67": {
+					"type": "text",
+					"top": 219,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Taxes on Cost"
+				},
+				"_Text_TaxesonShipping_68": {
+					"type": "text",
+					"top": 239,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Taxes on Shipping"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_VAR_bSubAdd_69": {
+					"type": "pictureButton",
+					"top": 347,
+					"left": 194,
+					"width": 69,
+					"height": 35,
+					"dataSource": "bSubAdd",
+					"action": "addSubrecord",
+					"shortcutKey": "+",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/Plus.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bSubDel_70": {
+					"type": "pictureButton",
+					"top": 347,
+					"left": 270,
+					"width": 69,
+					"height": 35,
+					"dataSource": "bSubDel",
+					"action": "deleteSubrecord",
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/MinusButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Subform5": {
+					"type": "subform",
+					"top": 113,
+					"left": 30,
+					"width": 720,
+					"height": 222,
+					"dataSourceTypeHint": "text",
+					"table": 106,
+					"detailForm": "Input",
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 388,
+					"left": 33,
+					"width": 720,
+					"height": 267,
+					"dataSourceTypeHint": "text",
+					"table": 53,
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_VAR_<>tcCcDevice_73": {
+					"type": "input",
+					"top": 69,
+					"left": 561,
+					"width": 53,
+					"height": 17,
+					"dataSource": "<>tcCcDevice",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b7_74": {
+					"type": "button",
+					"top": 31,
+					"left": 561,
+					"width": 106,
+					"height": 29,
+					"dataSource": "b7",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Clear Device",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_GLAccounts_75": {
+					"type": "text",
+					"top": 370,
+					"left": 30,
+					"width": 125,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"text": "GL Accounts"
+				},
+				"_Text_1=Cash\t\t\t5=Misc1\r2=Check\t\t\t6=Misc2\r3=CreditCard\t\t7=Misc3\r4=AcctRecv\r_76": {
+					"type": "text",
+					"top": 43,
+					"left": 214,
+					"width": 176,
+					"height": 50,
+					"stroke": "#000000",
+					"fontFamily": "Consolas",
+					"fontSize": 10,
+					"text": "1 = Cash\t\t\t5 = Misc 1\r2 = Check\t\t\t6 = Misc 2\r3 = Credit Card\t\t7 = Misc 3\r4 = Acct Recv\r"
+				},
+				"Group Box": {
+					"type": "groupBox",
+					"top": 22,
+					"left": 201,
+					"width": 189,
+					"height": 78,
+					"class": "cssInputLabel",
+					"fontWeight": "bold",
+					"text": "Class Values\r\r"
+				},
+				"_Text_PaymentTypesandAccounts_78": {
+					"type": "text",
+					"top": 96,
+					"left": 30,
+					"width": 205,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"text": "Payment Types and Accounts"
+				},
+				"_VAR_New Variable1940_79": {
+					"type": "button",
+					"top": 18,
+					"left": 745,
+					"width": 8,
+					"height": 8,
+					"dataSource": "New Variable1940",
+					"display": false,
+					"method": "ObjectMethods/Variable307.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"_VAR_bUsage_80": {
+					"type": "button",
+					"top": 94,
+					"left": 27,
+					"width": 154,
+					"height": 16,
+					"dataSource": "bUsage",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable108.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bUsage_81": {
+					"type": "button",
+					"top": 367,
+					"left": 28,
+					"width": 154,
+					"height": 16,
+					"dataSource": "bUsage",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_1=MacAuthorize\r2=Verifione\r3=PCAuthorize\r4=SyncRelation\r_82": {
+					"type": "text",
+					"top": 40,
+					"left": 434,
+					"width": 93,
+					"height": 51,
+					"stroke": "#000000",
+					"fontFamily": "Consolas",
+					"fontSize": 10,
+					"text": "1 = MacAuthorize\r2 = Verifione\r3 = PCAuthorize\r4 = SyncRelation\r"
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 22,
+					"left": 424,
+					"width": 123,
+					"height": 78,
+					"class": "cssInputLabel",
+					"fontWeight": "bold",
+					"text": "Credit Card Device\r\r"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

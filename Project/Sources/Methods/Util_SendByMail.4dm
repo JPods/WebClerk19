@@ -6,7 +6,7 @@ $invoiceInfo:=$1  //We receive the invoice information
 $settings:=$2
 
 
-$invoice:=ds:C1482.Invoices.get($invoiceInfo.invoiceID)
+$invoice:=ds:C1482.Invoice.get($invoiceInfo.invoiceID)
 
 $client:=$invoice.Invoices_to_Clients
 

@@ -51,8 +51,7 @@ Case of
 		RelateByNumbers(Table:C252($myPtr))
 	: ($myPtr=(->[ProposalLine:43]))
 		BEEP:C151
-	: ($myPtr=(->[Lead:48]))
-		BEEP:C151
+		
 	: ($myPtr=(->[Payment:28]))
 		Cust_ShowRelate
 	: ($myPtr=(->[InvoiceLine:54]))
@@ -90,13 +89,13 @@ Case of
 	: ($myPtr=(->[DInventory:36]))
 		BEEP:C151
 	: ($myPtr=(->[WorkOrder:66]))
-		QUERY:C277([WorkOrderEvent:121]; [WorkOrderEvent:121]woNum:5=[WorkOrder:66]woNum:29)
+		QUERY:C277([WorkOrderEvent:121]; [WorkOrderEvent:121]woNum:5=[WorkOrder:66]idNum:29)
 		WOEvents_FillArrays(Records in selection:C76([WorkOrderEvent:121]))
 		REDUCE SELECTION:C351([WorkOrderEvent:121]; 0)
 		If (eWOEvents>0)
 			//  --  CHOPPED  AL_UpdateArrays(eWOEvents; -2)
 		End if 
-		QUERY:C277([WorkOrderTask:67]; [WorkOrderTask:67]woNum:10=[WorkOrder:66]woNum:29)
+		QUERY:C277([WorkOrderTask:67]; [WorkOrderTask:67]woNum:10=[WorkOrder:66]idNum:29)
 		WoTasksFillArrays(Records in selection:C76([WorkOrderTask:67]))
 		WOTasks_ALDefine(eWOTasks; 1)
 		REDUCE SELECTION:C351([WorkOrderTask:67]; 0)

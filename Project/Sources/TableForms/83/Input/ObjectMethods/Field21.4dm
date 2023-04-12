@@ -1,1 +1,0 @@
-[Requisition:83]CurExtCost:50:=Round:C94(([Requisition:83]CurQty:23*(DiscountApply([Requisition:83]CurCost:22; [Requisition:83]CurDiscount:48; 10)))-[Requisition:83]CurFixedDiscout:49; <>tcDecimalTt)

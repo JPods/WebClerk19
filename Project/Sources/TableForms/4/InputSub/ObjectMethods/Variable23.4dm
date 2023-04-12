@@ -1,10 +1,10 @@
 C_TEXT:C284($strValue)
-$strValue:=[Item:4]typeid:26
-entryEntity.typeid:=DE_PopUpArray(Self:C308)
-If ($strValue#[Item:4]typeid:26)
+$strValue:=[Item:4]type:26
+process_o.entry_o.typeid:=DE_PopUpArray(Self:C308)
+If ($strValue#[Item:4]type:26)
 	READ ONLY:C145([GLAccount:53])
 	QUERY:C277([GLAccount:53]; [GLAccount:53]fileRefNum:2=4; *)
-	QUERY:C277([GLAccount:53];  & [GLAccount:53]typeid:3=[Item:4]typeid:26)
+	QUERY:C277([GLAccount:53];  & [GLAccount:53]typeID:3=[Item:4]type:26)
 	C_LONGINT:C283($i; $k)
 	$k:=Records in selection:C76([GLAccount:53])
 	FIRST RECORD:C50([GLAccount:53])
@@ -36,7 +36,7 @@ If ($strValue#[Item:4]typeid:26)
 	READ WRITE:C146([DefaultAccount:32])
 	[Item:4]tallyByType:19:=True:C214
 	If (([Item:4]profile1:35="") & (Is new record:C668([Item:4])))
-		[Item:4]profile1:35:=[Item:4]typeid:26
+		[Item:4]profile1:35:=[Item:4]type:26
 	End if 
 	Item_SetPopups
 End if 

@@ -10,19 +10,13 @@
 //
 // Parameters
 // ----------------------------------------------------
-
-
-
-
-C_LONGINT:C283($result)
-C_TEXT:C284($pathname)
+// HOWTO:FileObject
+var $pathname : Text
+var $file_o : Object
 $pathname:=Storage:C1525.folder.jitF+"wiki"+Folder separator:K24:12+"MarkdownSyntax1.md"
-$result:=Test path name:C476($pathname)
-If ($result#1)
-	ALERT:C41("There is no 'wiki' folder in the application folder")
+$file_o:=File:C1566($pathname)
+If ($file_o.isFile())
+	vTextSummary:=$file_o.getText()
 Else 
-	C_TIME:C306($myDoc)
-	$myDoc:=Open document:C264($pathname)
-	RECEIVE PACKET:C104($myDoc; vTextSummary; 10000000)
-	CLOSE DOCUMENT:C267($myDoc)
+	ALERT:C41("There is no 'wiki' folder in the application folder")
 End if 

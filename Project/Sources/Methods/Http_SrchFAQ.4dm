@@ -69,10 +69,10 @@ Case of
 		End if 
 		//
 		If ($dateBegin#"")
-			QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11>=DateTime_Enter(Date:C102($dateBegin); ?00:00:00?); *)
+			QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11>=DateTime_DTTo(Date:C102($dateBegin); ?00:00:00?); *)
 		End if 
 		If ($dateEnd#"")
-			QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11<=DateTime_Enter(Date:C102($dateEnd); ?23:59:59?); *)
+			QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11<=DateTime_DTTo(Date:C102($dateEnd); ?23:59:59?); *)
 		End if 
 		QUERY:C277([TallyResult:73];  & [TallyResult:73]publish:36>0; *)
 End case 

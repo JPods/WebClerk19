@@ -11,12 +11,7 @@ C_BOOLEAN:C305(<>syncByBlob)
 
 KeywordsList
 //
-$k:=Records in table:C83([FieldCharacteristic:94])
-If ($k=0)
-	UtilParseAllow(1)
-	UtilParseAllow(5000)
-	UtilParseAllow(5)
-End if 
+
 ARRAY TEXT:C222(<>aCloneOrderStatus; 0)
 ARRAY LONGINT:C221(<>aCloneOrderID; 0)
 ARRAY TEXT:C222(<>aCloneOrderComment; 0)
@@ -25,7 +20,10 @@ ARRAY REAL:C219($aAmount; 0)
 
 QUERY:C277([Order:3]; [Order:3]salesNameID:10="CloneAllowed")
 If (Records in selection:C76([Order:3])>0)
-	SELECTION TO ARRAY:C260([Order:3]orderNum:2; <>aCloneOrderID; [Order:3]status:59; <>aCloneOrderStatus; [Order:3]comment:33; <>aCloneOrderComment; [Order:3]lineCount:35; $aLineCount; [Order:3]amount:24; $aAmount)
+	
+	// Fix_QQQ by: Bill James (2023-03-24T05:00:00Z)
+	// change linecount to object
+	//SELECTION TO ARRAY([Order]idNum; <>aCloneOrderID; [Order]status; <>aCloneOrderStatus; [Order]comment; <>aCloneOrderComment; [Order]lines; $aLineCount; [Order]amount; $aAmount)
 End if 
 C_LONGINT:C283($inc; $cnt)
 $cnt:=Size of array:C274(<>aCloneOrderComment)
@@ -42,7 +40,10 @@ ARRAY LONGINT:C221($aLineCount; 0)
 ARRAY REAL:C219($aAmount; 0)
 QUERY:C277([Proposal:42]; [Proposal:42]salesNameID:9="CloneAllowed")
 If (Records in selection:C76([Proposal:42])>0)
-	SELECTION TO ARRAY:C260([Proposal:42]proposalNum:5; <>aClonePpID; [Proposal:42]status:2; <>aClonePpStatus; [Proposal:42]comment:36; <>aClonePpComment; [Proposal:42]lineCount:48; $aLineCount; [Proposal:42]amount:26; $aAmount)
+	
+	// Fix_QQQ by: Bill James (2023-03-24T05:00:00Z)
+	// reused line to object
+	//SELECTION TO ARRAY([Proposal]idNum; <>aClonePpID; [Proposal]status; <>aClonePpStatus; [Proposal]comment; <>aClonePpComment; [Proposal]lines; $aLineCount; [Proposal]amount; $aAmount)
 End if 
 $cnt:=Size of array:C274(<>aClonePpComment)
 For ($inc; 1; $cnt)

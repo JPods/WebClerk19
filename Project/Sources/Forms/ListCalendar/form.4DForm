@@ -1,0 +1,57 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "612pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"webArea": {
+					"type": "webArea",
+					"top": 70,
+					"left": 61,
+					"width": 845,
+					"height": 656,
+					"urlSource": "webAreaURL",
+					"progressSource": "Web Area_progress",
+					"webEngine": "embedded",
+					"methodsAccessibility": "all",
+					"contextMenu": "none",
+					"borderStyle": "none",
+					"method": "ObjectMethods/webArea.4dm",
+					"events": [
+						"onEndURLLoading"
+					]
+				}
+			}
+		}
+	]
+}

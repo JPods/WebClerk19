@@ -21,10 +21,10 @@ C_LONGINT:C283($k; $viOrderNum; $0)
 C_BOOLEAN:C305($lineTaxable; $notLocked)
 
 C_LONGINT:C283($viOrderNum; $orderLineUniqueID; $lineDelete; $orderLineRecNum)
-$viOrderNum:=[OrderLine:49]orderNum:1
+$viOrderNum:=[OrderLine:49]idNumOrder:1
 $0:=$viOrderNum
-If ([Order:3]orderNum:2#[OrderLine:49]orderNum:1)
-	QUERY:C277([Order:3]; [Order:3]orderNum:2=[OrderLine:49]orderNum:1)
+If ([Order:3]idNum:2#[OrderLine:49]idNumOrder:1)
+	QUERY:C277([Order:3]; [Order:3]idNum:2=[OrderLine:49]idNumOrder:1)
 End if 
 If ([Customer:2]customerID:1#[OrderLine:49]customerID:2)
 	QUERY:C277([Customer:2]; [Customer:2]customerID:1=[OrderLine:49]customerID:2)
@@ -65,8 +65,8 @@ If ($notLocked)
 		[OrderLine:49]lineNum:3:=[OrderLine:49]idNum:50
 		If ([OrderLine:49]typeSale:28#(Old:C35([OrderLine:49]typeSale:28)))
 			QUERY:C277([Item:4]; [Item:4]itemNum:1=[OrderLine:49]itemNum:4)
-			DscntSetPrice([OrderLine:49]typeSale:28; [Order:3]dateOrdered:4)
-			OrdSetPrice(->[OrderLine:49]unitPrice:9; ->[OrderLine:49]discount:10; [OrderLine:49]qtyOrdered:6; ->pComm)
+			DscntSetPrice([OrderLine:49]typeSale:28; [Order:3]dateDocument:4)
+			OrdSetPrice(->[OrderLine:49]unitPrice:9; ->[OrderLine:49]discount:10; [OrderLine:49]qty:6; ->pComm)
 			vComRep:=CM_FindRate(->[Order:3]repID:8; -><>aReps; -><>aRepRate)
 			vComSales:=CM_FindRate(->[Order:3]salesNameID:10; -><>aComNameID; -><>aEmpRate)
 			[OrderLine:49]commRateSales:29:=vComSales*pComm*0.01
@@ -86,8 +86,8 @@ If ($notLocked)
 				// ### bj ### 20191012_1415
 				// If there is a change in quantity ordered
 				
-				$oldOnOrder:=Old:C35([OrderLine:49]qtyOrdered:6)
-				$newOnOrder:=[OrderLine:49]qtyOrdered:6  // restating the obvious for debugging
+				$oldOnOrder:=Old:C35([OrderLine:49]qty:6)
+				$newOnOrder:=[OrderLine:49]qty:6  // restating the obvious for debugging
 				$dOnOrder:=$newOnOrder-$oldOnOrder
 				If ($dOnOrder<0)  // if reducing the order, it cannot drop below qty backLogged
 					$dOnOrder:=-MaxChange([OrderLine:49]qtyBackLogged:8; Abs:C99($dOnOrder))
@@ -100,7 +100,7 @@ If ($notLocked)
 						// reducing the quantity ordered to the 
 						[OrderLine:49]qtyBackLogged:8:=0
 						[OrderLine:49]backOrdAmount:26:=0
-						[OrderLine:49]qtyOrdered:6:=[OrderLine:49]qtyShipped:7
+						[OrderLine:49]qty:6:=[OrderLine:49]qtyShipped:7
 						[OrderLine:49]complete:48:=False:C215
 						OrdLnExtendSub
 					: ($dOnOrder>0)  // adding to the quantity on order
@@ -108,7 +108,7 @@ If ($notLocked)
 						[OrderLine:49]qtyBackLogged:8:=Old:C35([OrderLine:49]qtyBackLogged:8)+$dOnOrder
 						OrdLnExtendSub
 					Else 
-						[OrderLine:49]qtyBackLogged:8:=[OrderLine:49]qtyOrdered:6-[OrderLine:49]qtyShipped:7
+						[OrderLine:49]qtyBackLogged:8:=[OrderLine:49]qty:6-[OrderLine:49]qtyShipped:7
 						OrdLnExtendSub
 				End case 
 		End case 

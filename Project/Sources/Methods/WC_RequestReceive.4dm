@@ -67,7 +67,7 @@ ARRAY TEXT:C222(aHeaderValueOut; 0)
 $headers:=""
 $headers:=$headers+$requestMethod+" "+$path+" HTTP/1.0"+$crlf
 
-ConsoleMessage("\r"+$path+"\r")
+ConsoleLog("\r"+$path+"\r")
 
 //$headers:=$headers+"Referrer: WebClerk."+$crlf
 $headers:=$headers+"Host: "+HTTP_Host+$crlf
@@ -87,7 +87,7 @@ $headers:=$headers+$crlf
 
 
 
-ConsoleMessage("\r"+$headers)
+ConsoleLog("\r"+$headers)
 // Convert the headers to a blob
 TEXT TO BLOB:C554($headers; $vBlobOutGoing; Mac text without length:K22:10)
 
@@ -109,7 +109,7 @@ voState.socket:=TCP Open(HTTP_Host; HTTP_Port; $options)
 $responseSize:=-1
 If (voState.socket=0)
 	vResponse:="Failed socket: WebService Request, host: "+HTTP_Host+", Port: "+String:C10(HTTP_Port)+", options: "+$options
-	ConsoleMessage(vResponse)
+	ConsoleLog(vResponse)
 Else 
 	
 	$bytesSend:=TCP Send Blob(voState.socket; $vBlobOutGoing)
@@ -146,6 +146,6 @@ voState.request.parameters:=WC_ParseRequestParameter
 If (vWCPayload#"")
 	vWCPayload:=JSON Stringify:C1217(voState.request.parameters)
 End if 
-ConsoleMessage(vWCPayload)
+ConsoleLog(vWCPayload)
 
 

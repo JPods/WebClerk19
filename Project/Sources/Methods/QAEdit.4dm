@@ -20,7 +20,7 @@ Else
 	Form_process_o_init
 	process_o.form:="QADraft"
 End if 
-Prs_ListActive
+Process_ListActive
 C_TEXT:C284($form_t)
 C_LONGINT:C283($win_l)
 C_LONGINT:C283($cascade_l)

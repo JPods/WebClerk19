@@ -80,7 +80,7 @@ If ($doThis>0)
 				vMimeType:="text/html"
 			: (Records in selection:C76([TallyMaster:60])=1)
 				If (<>viDebugMode>0)
-					ConsoleMessage("Execute_TallyMaster: "+[TallyMaster:60]name:8+": "+[TallyMaster:60]purpose:3)
+					ConsoleLog("Execute_TallyMaster: "+[TallyMaster:60]name:8+": "+[TallyMaster:60]purpose:3)
 				End if 
 				If ($doThis=4)
 					$4->:=[TallyMaster:60]build:6

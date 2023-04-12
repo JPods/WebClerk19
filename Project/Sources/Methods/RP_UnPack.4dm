@@ -67,7 +67,7 @@ Else
 		SAVE RECORD:C53($ptTable->)
 		
 		vResponse:="Processed"
-		[SyncRecord:109]dtAction:2:=DateTime_Enter
+		[SyncRecord:109]dtAction:2:=DateTime_DTTo
 		[SyncRecord:109]dtComplete:8:=[SyncRecord:109]dtAction:2
 		[SyncRecord:109]statusSend:17:="Unpacked-"+$replaceStatus
 		[SyncRecord:109]actionSend:32:="Unpacked-"+$replaceStatus

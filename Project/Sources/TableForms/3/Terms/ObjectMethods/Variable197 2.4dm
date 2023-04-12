@@ -1,0 +1,1 @@
+Addr_ShowAlt("Enter alternate Ship from or other text."; ->[Order:3]addressShipFrom:72; ->bAltShipBox; 0)

@@ -49,7 +49,7 @@ SR_Register("009864-OEM JIT CORP-Rg7zQ3sCAohPy4bD3G5FXjsI8SP1l2ID")
 
 // www.e-node.net/srp
 C_LONGINT:C283($result)
-ConsoleMessage("Internal licenses")
+ConsoleLog("Internal licenses")
 
 QUERY:C277([TallyMaster:60]; [TallyMaster:60]purpose:3="Admin"; *)
 QUERY:C277([TallyMaster:60];  | [TallyMaster:60]purpose:3="databaselicenses"; *)
@@ -58,11 +58,11 @@ Case of
 	: (Records in selection:C76([TallyMaster:60])>1)
 		
 		DELAY PROCESS:C323(Current process:C322; 60)
-		ConsoleMessage("Multiple TallyMasters records named: databaselicenses")
+		ConsoleLog("Multiple TallyMasters records named: databaselicenses")
 		REDUCE SELECTION:C351([TallyMaster:60]; 0)
 	: (Records in selection:C76([TallyMaster:60])=1)
 		//  Execute_TallyMaster ("Startup";"Admin")
-		ConsoleMessage("TallyMasters named: databaselicenses")
+		ConsoleLog("TallyMasters named: databaselicenses")
 		ExecuteText(0; [TallyMaster:60]script:9)
 		REDUCE SELECTION:C351([TallyMaster:60]; 0)
 	Else 

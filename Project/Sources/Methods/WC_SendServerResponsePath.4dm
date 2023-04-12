@@ -30,7 +30,7 @@ SET BLOB SIZE:C606($vblBody; 0)
 $pathToDoc:=$1
 
 If ($pathToDoc="")
-	ConsoleMessage("WC_SendServerResponsePath: path is empty, replace with voState.url in TM WebCommandOverRide, emptyPath")
+	ConsoleLog("WC_SendServerResponsePath: path is empty, replace with voState.url in TM WebCommandOverRide, emptyPath")
 	viEndUserSecurityLevel:=1
 	Execute_TallyMaster("WebCommandOverRide"; "emptyPath"; 1)
 	
@@ -63,7 +63,7 @@ Else
 			$pathToDoc:=Substring:C12($pathToDoc; $w_i)  // redirect end path
 		Else 
 			$pathToServe:=Storage:C1525.paths.localComEx+"images/pathInvalid.jpg"
-			ConsoleMessage("path in WC_SendServerResponsePath: "+$pathToServe)
+			ConsoleLog("path in WC_SendServerResponsePath: "+$pathToServe)
 	End case 
 End if 
 // alert(Storage.paths.serverDocuments)
@@ -80,7 +80,7 @@ End if
 $vtContentType:="application/json"  // unless over ridden by line 44
 
 If (Test path name:C476($pathToServe)#1)
-	ConsoleMessage("Error: ErrorDocument 404 Path invalid WC_SendServerResponsePath "+voState.url)
+	ConsoleLog("Error: ErrorDocument 404 Path invalid WC_SendServerResponsePath "+voState.url)
 	vResponse:="Error: ErrorDocument 404: "+voState.url
 	WC_voStateError("Error: ErrorDocument 404: "+$pathToServe)
 	WC_SendServerResponse(vResponse)
@@ -94,7 +94,7 @@ Else
 	
 	
 	If (<>viDebugMode>410)
-		ConsoleMessage("pathHappy: "+$pathToServe)
+		ConsoleLog("pathHappy: "+$pathToServe)
 	End if 
 	
 	
@@ -168,7 +168,7 @@ Else
 	$0:=$viBytesSent
 	
 	If (<>viDebugMode>410)
-		ConsoleMessage("BytesSent: "+String:C10($0))
+		ConsoleLog("BytesSent: "+String:C10($0))
 	End if 
 	
 	//*************************************************************************************//

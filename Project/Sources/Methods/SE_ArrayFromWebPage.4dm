@@ -30,7 +30,7 @@ Else
 	$ptTable:=STR_GetTablePointer($tableName)
 	If (Is nil pointer:C315($ptTable))
 		$vtError:="Bad TableName: "+$tableName
-		ConsoleMessage($vtError)
+		ConsoleLog($vtError)
 	Else 
 		C_LONGINT:C283($viTableNum)
 		$viTableNum:=Table:C252($ptTable)
@@ -75,7 +75,7 @@ If ($vtError="")
 				// $textOut:=$textOut+$textWorking // this is done at the end
 				$endLoop:=True:C214  // drop out
 				If (<>viDebugMode>410)
-					ConsoleMessage("No 'jj' end to tag: "+$textWorking)
+					ConsoleLog("No 'jj' end to tag: "+$textWorking)
 				End if 
 			Else 
 				// there is an end tag

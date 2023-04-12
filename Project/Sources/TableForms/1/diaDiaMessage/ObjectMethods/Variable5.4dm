@@ -11,7 +11,7 @@ Case of
 					$clickResult:=aWoStepLns{$i}
 					GOTO RECORD:C242([WorkOrder:66]; aWoRecNum{$clickResult})
 					aWoTimeNd{$clickResult}:=aTimeSlotBegb{aTmpInt1{1}}
-					[WorkOrder:66]dtAction:5:=DateTime_Enter(aWoDateNd{$clickResult}; aWoTimeNd{$clickResult})
+					[WorkOrder:66]dtAction:5:=DateTime_DTTo(aWoDateNd{$clickResult}; aWoTimeNd{$clickResult})
 					SAVE RECORD:C53([WorkOrder:66])
 				End for 
 				//  CHOPPED  AL_GetScroll(eWorkFlow; viVert; viHorz)  //Orders

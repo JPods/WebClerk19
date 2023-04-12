@@ -13,9 +13,9 @@ C_LONGINT:C283($inc; $cnt; $tableNum)
 var $rec_ent; $sel_ent : Object
 
 If (process_o#Null:C1517)
-	If (process_o.tableName#"")
-		$tableName:=process_o.tableName
-		$tableNum:=STR_GetTableNumber(process_o.tableName)
+	If (process_o.dataClassName#"")
+		$tableName:=process_o.dataClassName
+		$tableNum:=STR_GetTableNumber(process_o.dataClassName)
 		
 		// should already be in system
 		
@@ -28,13 +28,13 @@ If (process_o#Null:C1517)
 			End if 
 			DOCUMENT LIST:C474($serverPath; $aServerDocs)
 		Else 
-			ConsoleMessage("Error: Storage.paths.serverComEx: "+Storage:C1525.paths.serverComEx+", $serverPath: "+$serverPath)
+			ConsoleLog("Error: Storage.paths.serverComEx: "+Storage:C1525.paths.serverComEx+", $serverPath: "+$serverPath)
 			$serverPath:=""
 		End if 
 		If (Test path name:C476($localPath)=0)
 			DOCUMENT LIST:C474($localPath; $aLocalDocs)
 		Else 
-			ConsoleMessage("Error: Storage.paths.serverComEx: "+Storage:C1525.paths.localComEx+", $localPath: "+$localPath)
+			ConsoleLog("Error: Storage.paths.serverComEx: "+Storage:C1525.paths.localComEx+", $localPath: "+$localPath)
 			$localPath:=""
 		End if 
 		

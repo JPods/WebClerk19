@@ -1,1 +1,0 @@
-ListItemsLrScrn(->[Proposal:42]; pPartNum)

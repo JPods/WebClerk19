@@ -18,7 +18,7 @@ C_OBJECT:C1216($obSelectLists)
 $obSelectLists:=New object:C1471
 
 If (<>viDebugMode>410)
-	ConsoleMessage("Launch")
+	ConsoleLog("Launch")
 End if 
 
 
@@ -36,7 +36,7 @@ $vtList:="aContractDetail,aActions,aTaxJuris,aNameID,aActionsOrders,aActionsInvo
 "aActionsProposals,aActionsPOs,aTerms,aStatus,aAdSources,aTypeSale,"+\
 "aReps,aNeed"
 C_COLLECTION:C1488($cBegin)
-$cBegin:=Split string:C1554($vtList; ",")
+$cBegin:=Split string:C1554($vtList; ";")
 ARRAY TEXT:C222($aSendList; 0)
 COLLECTION TO ARRAY:C1562($cBegin; $aSendList)
 
@@ -46,7 +46,7 @@ C_COLLECTION:C1488($temp_c)
 C_OBJECT:C1216($obRec)
 $obRec:=ds:C1482.WebClerk.query("publish = 1").first()
 If ($obRec.obGeneral.selectLists=Null:C1517)
-	$vcPopups:=Split string:C1554($vtList; ",")
+	$vcPopups:=Split string:C1554($vtList; ";")
 	$obRec.obGeneral.selectLists:=$vcPopups
 	$result_o:=$obRec.save()
 End if 

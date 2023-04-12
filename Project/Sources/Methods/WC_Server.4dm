@@ -11,7 +11,7 @@
 // Parameters
 // ----------------------------------------------------
 
-C_LONGINT:C283(<>HTTPD_Socket; <>HTTPD_SSLSocket; $1; $webClerkRecordNum)
+C_LONGINT:C283(<>HTTPD_Socket; $1; $webClerkRecordNum)
 C_TEXT:C284($certAlert; $keyAlert)
 //ztest_<>vbWCstop:=False
 //
@@ -22,9 +22,12 @@ GOTO RECORD:C242([WebClerk:78]; $webClerkRecordNum)
 If (Records in selection:C76([WebClerk:78])=1)
 	
 	
-	<>HTTPD_Socket:=TCP Listen(""; <>wcPortNum)
+	<>HTTPD_Socket:=TCP Listen(""; Storage:C1525.wc.portNum)
 	//for the monitor to work
-	<>HTTPD_ServerSocket:=<>HTTPD_Socket
+	
+	// Fix_QQQ by: Bill James (2023-01-06T06:00:00Z)
+	
+	//Storage.wc.serverSocket:=<>HTTPD_Socket
 	
 	
 	<>tcCertificateFile:=[WebClerk:78]pathToCert:21
@@ -33,7 +36,7 @@ If (Records in selection:C76([WebClerk:78])=1)
 	
 	//zzzCheckThis
 	//TRACE
-	//<>wcPortNumSSL:=0
+	//Storage.wc.portNumSSL:=0
 	//TRACE
 	C_TEXT:C284($sslOptions)
 	$sslOptions:=""
@@ -64,7 +67,7 @@ If (Records in selection:C76([WebClerk:78])=1)
 		ALERT:C41("No WebClerk record.")
 	Else 
 		
-		//<>HTTPD_EnableSSL:=[WebClerk]SSLEnable    // ### JWM ### 20171012_1547 set in WC_TestFolder
+		//Storage.wc.enableSSL:=[WebClerk]SSLEnable    // ### JWM ### 20171012_1547 set in WC_TestFolder
 		C_LONGINT:C283($sslOK; $hostingStarted)
 		$sslOK:=WC_CertKeyCheck
 		
@@ -84,51 +87,51 @@ If (Records in selection:C76([WebClerk:78])=1)
 		Case of 
 			: (($certAlert#"") | ($keyAlert#""))
 				ALERT:C41($certAlert+"\r"+$keyAlert)
-			: (Not:C34(<>HTTPD_EnableSSL))
-				<>HTTPD_SSLSocket:=0
+			: (Not:C34(Storage:C1525.wc.enableSSL))
+				Storage:C1525.wc.sslSocket:=0
 			: (($sslOK=1) & (<>tcPrivateKeyPass#""))
 				$sslOptions:=$sslOptions+" ssl-password="+[WebClerk:78]privateKeyPass:36
-				<>HTTPD_SSLSocket:=TCP Listen(""; <>wcPortNumSSL; $sslOptions)
+				Storage:C1525.wc.sslSocket:=TCP Listen(""; Storage:C1525.wc.portNumSSL; $sslOptions)
 			: ($sslOK=1)
-				<>HTTPD_SSLSocket:=TCP Listen(""; <>wcPortNumSSL; $sslOptions)
+				Storage:C1525.wc.sslSocket:=TCP Listen(""; Storage:C1525.wc.portNumSSL; $sslOptions)
 			Else 
-				<>HTTPD_SSLSocket:=0
+				Storage:C1525.wc.sslSocket:=0
 		End case 
-		If ((<>HTTPD_EnableSSL) & (<>HTTPD_SSLSocket=0))
-			ALERT:C41("Failed to launch HTTPD SSL server."+"\r"+"Cert: "+<>tcCertificateFile+"\r"+"Key: "+<>tcPrivateKeyFile+"\r"+"Pass: "+<>tcPrivateKeyPass+"\r"+"SSLSock: "+String:C10(<>HTTPD_SSLSocket)+"\r"+"SSLPort: "+String:C10(<>wcPortNumSSL))
+		If ((Storage:C1525.wc.enableSSL) & (Storage:C1525.wc.sslSocket=0))
+			ALERT:C41("Failed to launch HTTPD SSL server."+"\r"+"Cert: "+<>tcCertificateFile+"\r"+"Key: "+<>tcPrivateKeyFile+"\r"+"Pass: "+<>tcPrivateKeyPass+"\r"+"SSLSock: "+String:C10(Storage:C1525.wc.sslSocket)+"\r"+"SSLPort: "+String:C10(Storage:C1525.wc.portNumSSL))
 		End if 
 		
-		If (<>HTTPD_SSLSocket=0)
+		If (Storage:C1525.wc.sslSocket=0)
 			$hostingStarted:=$hostingStarted-1  // take of once chance
 		End if 
 		
 		// ### jwm ### 20151221_1006 
 		If (<>HTTPD_Socket=0)
-			ALERT:C41("Failed to launch HTTPD server. Port Number: "+String:C10(<>wcPortNum)+"\r")
+			ALERT:C41("Failed to launch HTTPD server. Port Number: "+String:C10(Storage:C1525.wc.portNum)+"\r")
 			$hostingStarted:=$hostingStarted-1
 		End if 
 		
 		If ($hostingStarted=0)
 			ConsoleLaunch
-			ConsoleMessage("Failed to launch HTTPD server."+"\r"+"Cert: "+<>tcCertificateFile+"\r"+"Key: "+<>tcPrivateKeyFile+"\r"+"Pass: "+<>tcPrivateKeyPass+"\r"+"SSLSock: "+String:C10(<>HTTPD_SSLSocket)+"\r"+"SSLPort: "+String:C10(<>wcPortNumSSL))
+			ConsoleLog("Failed to launch HTTPD server."+"\r"+"Cert: "+<>tcCertificateFile+"\r"+"Key: "+<>tcPrivateKeyFile+"\r"+"Pass: "+<>tcPrivateKeyPass+"\r"+"SSLSock: "+String:C10(Storage:C1525.wc.sslSocket)+"\r"+"SSLPort: "+String:C10(Storage:C1525.wc.portNumSSL))
 			
 			If (<>HTTPD_Socket#0)
 				TCP Close(<>HTTPD_Socket)
 			End if 
-			If (<>HTTPD_SSLSocket#0)
-				TCP Close(<>HTTPD_SSLSocket)
+			If (Storage:C1525.wc.sslSocket#0)
+				TCP Close(Storage:C1525.wc.sslSocket)
 			End if 
 		Else 
 			// Launch handers and start listening
 			
-			WC_ThreadPoolStart(<>viWCThreadCount+<>RPServer+<>UpLoadServer; 256*1024; "WC_RequestHandler")
+			WC_ThreadPoolStart(Storage:C1525.wc.threadCount+<>RPServer+<>UpLoadServer; 256*1024; "WC_RequestHandler")
 			
 			While ((<>vbWCstop=False:C215) & (TCP Get State(<>HTTPD_Socket)=TCP Listening))  //&(Process aborted=False)
 				
 				// Check for incoming requests on either socket
 				$socket:=TCP Accept(<>HTTPD_Socket)
-				If (($socket=0) & (<>HTTPD_SSLSocket#0))
-					$socket:=TCP Accept(<>HTTPD_SSLSocket)
+				If (($socket=0) & (Storage:C1525.wc.sslSocket#0))
+					$socket:=TCP Accept(Storage:C1525.wc.sslSocket)
 				End if 
 				
 				If ($socket#0)
@@ -145,8 +148,8 @@ If (Records in selection:C76([WebClerk:78])=1)
 				// We're done, close the stocket and stop the thread pool
 				TCP Close(<>HTTPD_Socket)
 			End if 
-			If (<>HTTPD_SSLSocket#0)
-				TCP Close(<>HTTPD_SSLSocket)
+			If (Storage:C1525.wc.sslSocket#0)
+				TCP Close(Storage:C1525.wc.sslSocket)
 			End if 
 			
 			WC_ThreadPoolStop

@@ -64,7 +64,7 @@ QUERY:C277([TallyMaster:60];  & [TallyMaster:60]purpose:3=$thePurpose)
 C_LONGINT:C283($tableNum)
 $tableNum:=STR_GetTableNumber(Table name:C256([TallyMaster:60]tableNum:1))
 If ((Records in selection:C76([TallyMaster:60])=1) & ($tableNum>0))
-	myDoc:=Create document:C266(String:C10(Year of:C25(Current date:C33))+String:C10(Month of:C24(Current date:C33); "00")+String:C10(Day of:C23(Current date:C33); "00")+Substring:C12([RemoteUser:57]company:16; 1; 7)+String:C10(DateTime_Enter)+".txt")
+	myDoc:=Create document:C266(String:C10(Year of:C25(Current date:C33))+String:C10(Month of:C24(Current date:C33); "00")+String:C10(Day of:C23(Current date:C33); "00")+Substring:C12([RemoteUser:57]company:16; 1; 7)+String:C10(DateTime_DTTo)+".txt")
 	
 	
 	iLoText11:=[TallyMaster:60]script:9  //executes in each record loop

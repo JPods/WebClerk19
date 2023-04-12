@@ -102,7 +102,7 @@ For ($i; 1; $k)
 						If (Records in selection:C76([Rep:8])>0)
 							FIRST RECORD:C50([Rep:8])
 							[CallReport:34]tableNum:2:=Table:C252(->[Rep:8])
-							[CallReport:34]customerID:1:=[Rep:8]RepID:1
+							[CallReport:34]customerID:1:=[Rep:8]repID:1
 							[CallReport:34]company:42:=[Rep:8]company:2
 							$doCallReport:=True:C214
 						Else 
@@ -113,26 +113,6 @@ For ($i; 1; $k)
 								[CallReport:34]customerID:1:=[Vendor:38]vendorID:1
 								[CallReport:34]company:42:=[Vendor:38]company:2
 								$doCallReport:=True:C214
-							Else 
-								QUERY:C277([Lead:48]; [Lead:48]email:33=$from)
-								If (Records in selection:C76([Lead:48])>0)
-									FIRST RECORD:C50([Lead:48])
-									[CallReport:34]tableNum:2:=Table:C252(->[Lead:48])
-									[CallReport:34]customerID:1:=String:C10([Lead:48]idNum:32)
-									[CallReport:34]company:42:=[Lead:48]company:5
-									$doCallReport:=True:C214
-								Else 
-									QUERY:C277([RemoteUser:57]; [RemoteUser:57]email:14=$from)
-									If (Records in selection:C76([RemoteUser:57])>0)
-										FIRST RECORD:C50([RemoteUser:57])
-										[CallReport:34]tableNum:2:=[RemoteUser:57]tableNum:9
-										[CallReport:34]customerID:1:=[RemoteUser:57]customerID:10
-										[CallReport:34]company:42:=[RemoteUser:57]company:16
-										$doCallReport:=True:C214
-									Else 
-										$doCallReport:=True:C214
-									End if 
-								End if 
 							End if 
 						End if 
 					End if 

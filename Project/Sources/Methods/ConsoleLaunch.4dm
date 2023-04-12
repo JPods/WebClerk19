@@ -24,7 +24,7 @@ If (Application type:C494#4D Server:K5:6)  // ### jwm ### 20190227_1734
 				var $rec_ent : Object
 				$rec_ent:=ds:C1482.DefaultSetup.query("variableName =  consoleWidth").first()
 				If ($rec_ent=Null:C1517)
-					DefaultSetupsCreate("consoleWidth"; "420"; "Is longInt"; ""; ""; "Override the width of the Console window, min 420")
+					
 				End if 
 			End if 
 			$consoleWidth:=420
@@ -33,14 +33,13 @@ If (Application type:C494#4D Server:K5:6)  // ### jwm ### 20190227_1734
 		If ($consoleHeight<40)
 			$consoleHeight:=84
 		End if 
-		var $obWindows : Object
-		$obWindows:=WindowCountToShow
+		
 		//  Palette form window
 		// Plain form window
 		// Movable form dialog box
-		$win_l:=Open form window:C675([Control:1]; "Console"; Plain form window:K39:10+On the right:K39:3; Screen width:C187-400; 53+$obWindows.topOffset)
-		DIALOG:C40([Control:1]; "Console")
-		CLOSE WINDOW:C154($win_l)
+		
+		
+		
 		
 		
 	Else 
@@ -48,22 +47,24 @@ If (Application type:C494#4D Server:K5:6)  // ### jwm ### 20190227_1734
 		$found:=Prs_CheckRunnin("Console")
 		//
 		If ($found>0)
-			If (Frontmost process:C327#<>aPrsNum{$found})
-				BRING TO FRONT:C326(<>aPrsNum{$found})
-			End if 
+			BRING TO FRONT:C326($found)
 		Else 
 			If (Storage:C1525.process.console=Null:C1517)
 				//Storage_Setup("console")
 			End if 
+			
 			var $process : Integer
-			$process:=New process:C317("ConsoleLaunch"; 0; "Console"; "launch")
+			CALL WORKER:C1389("Console"; "ConsolePost"; "launch")
+			$found:=Prs_CheckRunnin("Console")
+			//  $process:=New process("ConsoleLaunch"; 0; "Console"; "launch")
 			Use (Storage:C1525)
 				Use (Storage:C1525.process)
 					Storage:C1525.process.console:=$process
 				End use 
 			End use 
+			
 			//DELAY PROCESS(Current process; 360)
-			///ConsoleMessage("Start: "+String(Current date)+": "+String(Current time))
+			///ConsoleLog("Start: "+String(Current date)+": "+String(Current time))
 		End if 
 	End if 
 End if 

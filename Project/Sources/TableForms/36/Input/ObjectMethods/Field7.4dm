@@ -1,1 +1,0 @@
-jDateTimeRecov([DInventory:36]DTItemCard:16; ->vDate2; ->vTime2)

@@ -39,8 +39,8 @@ Case of
 		iLoDate1:=Current date:C33
 		
 		//QUERY([WorkOrder];[WorkOrder]DTCompleted=0;*)
-		QUERY:C277([WorkOrder:66]; [WorkOrder:66]dtCreated:44>=DateTime_Enter((Current date:C33-iLoInteger1); ?00:00:00?); *)
-		QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44<=DateTime_Enter((Current date:C33+iLoInteger1); ?23:59:59?); *)
+		QUERY:C277([WorkOrder:66]; [WorkOrder:66]dtCreated:44>=DateTime_DTTo((Current date:C33-iLoInteger1); ?00:00:00?); *)
+		QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44<=DateTime_DTTo((Current date:C33+iLoInteger1); ?23:59:59?); *)
 		QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]woType:60="Transfer"; *)
 		QUERY:C277([WorkOrder:66])
 		
@@ -61,7 +61,7 @@ Case of
 		OBJECT SET ENABLED:C1123(bQQPull; False:C215)  //QQPull
 		OBJECT SET ENABLED:C1123(b24; True:C214)  //by site
 		
-		ptCurTable:=(->[Control:1])
+		ptCurTable:=(->[Base:1])
 		If (ptCurTable#(->[TallyMaster:60]))
 			TallyMasterPopuuScriptsGeneral(ptCurTable; "WOTransfer"; ""; "aLooLoScripts")
 		End if 

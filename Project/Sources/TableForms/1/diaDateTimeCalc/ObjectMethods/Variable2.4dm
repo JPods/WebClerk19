@@ -1,1 +1,1 @@
-jDateTimeRecov(vlDTStart; ->vdStDate; ->vtStTime)
+DateTime_DTFrom(vlDTStart; ->vdStDate; ->vtStTime)

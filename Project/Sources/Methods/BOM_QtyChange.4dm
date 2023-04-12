@@ -46,7 +46,7 @@ If (UserInPassWordGroup("Costing"))
 			CONFIRM:C162($Comment+" units of "+$1+".")
 			If (OK=1)
 				IVNT_dRayInit
-				$adjID:=DateTime_Enter
+				$adjID:=DateTime_DTTo
 				aLSQtySO{$2}:=0  //was aQtyRecd, seems this needs to be cleared for BOM to operate
 				aLsReason{$2}:="BOM Adj Parent"
 				// Modified by: Bill James (2016-01-19T00:00:00 Unintended processing)
@@ -55,7 +55,7 @@ If (UserInPassWordGroup("Costing"))
 				CREATE SET:C116([Item:4]; "<>Current")
 				$fullCost:=0  //
 				C_LONGINT:C283($transID)
-				$transID:=-DateTime_Enter
+				$transID:=-DateTime_DTTo
 				FIRST RECORD:C50([BOM:21])
 				For ($i; 1; $k)
 					$QtyRequested:=[BOM:21]qtyInAssembly:3*$Change  // was $Qty:=[BOM]QtyInAssembly*$Change
@@ -109,7 +109,7 @@ If (UserInPassWordGroup("Costing"))
 						[TallyResult:73]nameProfile3:28:="Process"
 						[TallyResult:73]profile3:19:="BOM"
 						[TallyResult:73]itemNum:34:=[Item:4]itemNum:1
-						[TallyResult:73]dtCreated:11:=DateTime_Enter
+						[TallyResult:73]dtCreated:11:=DateTime_DTTo
 						[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
 						C_REAL:C285($valueDiffer)
 						$valueDiffer:=$fullCost+$tempCost

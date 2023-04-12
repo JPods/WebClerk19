@@ -1,0 +1,1576 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 568,
+	"markerBreak": 568,
+	"markerFooter": 585,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency21": {
+					"type": "checkbox",
+					"top": 11,
+					"left": 118,
+					"width": 104,
+					"height": 14,
+					"dataSource": "[SyncRelation:103]Active:17",
+					"text": "Active",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"TestMode1": {
+					"type": "checkbox",
+					"top": 27,
+					"left": 118,
+					"width": 73,
+					"height": 14,
+					"dataSource": "[SyncRelation:103]TestMode:37",
+					"text": "TestMode",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Encrypt1": {
+					"type": "checkbox",
+					"top": 43,
+					"left": 118,
+					"width": 61,
+					"height": 14,
+					"visibility": "hidden",
+					"dataSource": "[SyncRelation:103]Encrypt:25",
+					"text": "Encrypt",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency1": {
+					"type": "input",
+					"top": 88,
+					"left": 31,
+					"width": 36,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]PartnerNumber:14",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Frequency1.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Frequency34": {
+					"type": "input",
+					"top": 8,
+					"left": 623,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]CountUse:22",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency33": {
+					"type": "input",
+					"top": 8,
+					"left": 884,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]CountConflicts:21",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency22": {
+					"type": "input",
+					"top": 27,
+					"left": 283,
+					"width": 173,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]CronJobSequence:5",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency32": {
+					"type": "input",
+					"top": 27,
+					"left": 623,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]CountProcessed:24",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency35": {
+					"type": "input",
+					"top": 27,
+					"left": 884,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]CountPendingUnPack:23",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID5": {
+					"type": "input",
+					"top": 56,
+					"left": 283,
+					"width": 238,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]Name:8",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserName2": {
+					"type": "input",
+					"top": 56,
+					"left": 526,
+					"width": 474,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]Description:43",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"URL2": {
+					"type": "input",
+					"top": 76,
+					"left": 283,
+					"width": 138,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Partner1Name:31",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword14": {
+					"type": "input",
+					"top": 76,
+					"left": 424,
+					"width": 97,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]Partner1Email:18",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"URL1": {
+					"type": "input",
+					"top": 76,
+					"left": 585,
+					"width": 201,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Partner1URL:2",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"URL5": {
+					"type": "input",
+					"top": 76,
+					"left": 878,
+					"width": 121,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Partner1AccountID:36",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"URL3": {
+					"type": "input",
+					"top": 97,
+					"left": 283,
+					"width": 138,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Partner2Name:32",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID7": {
+					"type": "input",
+					"top": 97,
+					"left": 424,
+					"width": 97,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]Partner2Email:19",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"URL4": {
+					"type": "input",
+					"top": 97,
+					"left": 585,
+					"width": 201,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Partner2URL:33",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"URL6": {
+					"type": "input",
+					"top": 97,
+					"left": 878,
+					"width": 121,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Partner2AccountID:47",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency3": {
+					"type": "input",
+					"top": 125,
+					"left": 283,
+					"width": 78,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Protocol:52",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency24": {
+					"type": "input",
+					"top": 126,
+					"left": 406,
+					"width": 39,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]PortProduction:9",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency26": {
+					"type": "input",
+					"top": 126,
+					"left": 504,
+					"width": 58,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]TimeOut:16",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserName3": {
+					"type": "input",
+					"top": 147,
+					"left": 283,
+					"width": 279,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]RemoteUserName:3",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword11": {
+					"type": "input",
+					"top": 167,
+					"left": 283,
+					"width": 279,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]RemoteUserPassword:4",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword12": {
+					"type": "input",
+					"top": 187,
+					"left": 283,
+					"width": 279,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]Partner1AccountID:36",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword13": {
+					"type": "input",
+					"top": 207,
+					"left": 283,
+					"width": 279,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]TransactionID:35",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency2": {
+					"type": "input",
+					"top": 126,
+					"left": 688,
+					"width": 312,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]id:30",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency4": {
+					"type": "input",
+					"top": 146,
+					"left": 688,
+					"width": 312,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]Command:41",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency30": {
+					"type": "input",
+					"top": 166,
+					"left": 688,
+					"width": 312,
+					"height": 18,
+					"dataSource": "[SyncRelation:103]Pin:40",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency31": {
+					"type": "input",
+					"top": 187,
+					"left": 688,
+					"width": 312,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]MeterNumber:42",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency27": {
+					"type": "input",
+					"top": 207,
+					"left": 688,
+					"width": 132,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]RequestMethod:38",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Frequency29": {
+					"type": "input",
+					"top": 206,
+					"left": 908,
+					"width": 92,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]ContentType:44",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword5": {
+					"type": "input",
+					"top": 229,
+					"left": 283,
+					"width": 702,
+					"height": 65,
+					"dataSource": "[SyncRelation:103]Comment:29",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text40": {
+					"type": "text",
+					"top": 9,
+					"left": 145,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				},
+				"Partner1Name": {
+					"type": "text",
+					"top": 79,
+					"left": 125,
+					"width": 110,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Partner 1 Name"
+				},
+				"Text42": {
+					"type": "text",
+					"top": 149,
+					"left": 87,
+					"width": 188,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "RemoteUserName"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 169,
+					"left": 87,
+					"width": 188,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "RemoteUserPassword"
+				},
+				"Text44": {
+					"type": "text",
+					"top": 28,
+					"left": 187,
+					"width": 88,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CronJob"
+				},
+				"UniqueID4": {
+					"type": "input",
+					"top": 8,
+					"left": 283,
+					"width": 173,
+					"height": 17,
+					"dataSource": "[SyncRelation:103]idUnique:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text48": {
+					"type": "text",
+					"top": 56,
+					"left": 87,
+					"width": 188,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Name / Description"
+				},
+				"Text50": {
+					"type": "text",
+					"top": 127,
+					"left": 449,
+					"width": 48,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TimeOut"
+				},
+				"Text52": {
+					"type": "text",
+					"top": 10,
+					"left": 805,
+					"width": 71,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Conflicts"
+				},
+				"CountUse": {
+					"type": "text",
+					"top": 10,
+					"left": 544,
+					"width": 71,
+					"height": 12,
+					"stroke": "#006400",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "CountUse"
+				},
+				"Text54": {
+					"type": "text",
+					"top": 29,
+					"left": 805,
+					"width": 71,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "PendingUnpack"
+				},
+				"Text55": {
+					"type": "text",
+					"top": 29,
+					"left": 544,
+					"width": 71,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Processed"
+				},
+				"Partner2Name": {
+					"type": "text",
+					"top": 100,
+					"left": 125,
+					"width": 110,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Partner 2 Name"
+				},
+				"Text62": {
+					"type": "text",
+					"top": 192,
+					"left": 87,
+					"width": 188,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PartnerID"
+				},
+				"Text63": {
+					"type": "text",
+					"top": 209,
+					"left": 87,
+					"width": 188,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TransactionID"
+				},
+				"Text64": {
+					"type": "text",
+					"top": 212,
+					"left": 595,
+					"width": 84,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "RequestMethod"
+				},
+				"Text65": {
+					"type": "text",
+					"top": 171,
+					"left": 595,
+					"width": 84,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Pin/Key"
+				},
+				"Text67": {
+					"type": "text",
+					"top": 190,
+					"left": 605,
+					"width": 76,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Meter\tNumber"
+				},
+				"Text68": {
+					"type": "text",
+					"top": 209,
+					"left": 825,
+					"width": 76,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ContentType"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 128,
+					"left": 585,
+					"width": 96,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "id"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 127,
+					"left": 227,
+					"width": 48,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Protocol"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 127,
+					"left": 353,
+					"width": 48,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Port"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 229,
+					"left": 215,
+					"width": 60,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Comment"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 68,
+					"left": 14,
+					"width": 71,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"text": "Partner#"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 148,
+					"left": 585,
+					"width": 96,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Command"
+				},
+				"Button16": {
+					"type": "button",
+					"top": 9,
+					"left": 567,
+					"width": 49,
+					"height": 14,
+					"dataSource": "b36",
+					"display": false,
+					"method": "ObjectMethods/Button16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Partner1URL": {
+					"type": "text",
+					"top": 79,
+					"left": 529,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "1 URL"
+				},
+				"Partner2URL": {
+					"type": "text",
+					"top": 100,
+					"left": 529,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "2 URL"
+				},
+				"Partner1AccountID": {
+					"type": "text",
+					"top": 79,
+					"left": 803,
+					"width": 70,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "1 AccountID"
+				},
+				"Partner2AccountID": {
+					"type": "text",
+					"top": 100,
+					"left": 803,
+					"width": 70,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "2 AccountID"
+				},
+				"Partner1Email": {
+					"type": "text",
+					"top": 79,
+					"left": 225,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Email"
+				},
+				"Partner2Email": {
+					"type": "text",
+					"top": 100,
+					"left": 225,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Email"
+				}
+			}
+		},
+		{
+			"objects": {
+				"RemoteUserPassword6": {
+					"type": "input",
+					"top": 497,
+					"left": 283,
+					"width": 702,
+					"height": 93,
+					"dataSource": "[SyncRelation:103]ScriptData:28",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword1": {
+					"type": "input",
+					"top": 401,
+					"left": 283,
+					"width": 702,
+					"height": 93,
+					"dataSource": "[SyncRelation:103]ScriptBefore:7",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword2": {
+					"type": "input",
+					"top": 306,
+					"left": 283,
+					"width": 702,
+					"height": 93,
+					"dataSource": "[SyncRelation:103]ScriptSyncRecord:48",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword3": {
+					"type": "input",
+					"top": 592,
+					"left": 283,
+					"width": 702,
+					"height": 93,
+					"dataSource": "[SyncRelation:103]ScriptAfter:11",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 404,
+					"left": 170,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ScriptBefore"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 595,
+					"left": 170,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ScriptAfter"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 501,
+					"left": 165,
+					"width": 110,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ScriptData"
+				},
+				"Button": {
+					"type": "button",
+					"top": 163,
+					"left": 14,
+					"width": 110,
+					"height": 24,
+					"dataSource": "b11",
+					"text": "Client Tester",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button2": {
+					"type": "button",
+					"top": 210,
+					"left": 14,
+					"width": 110,
+					"height": 24,
+					"dataSource": "b12",
+					"text": "Set Credit Card",
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 349,
+					"left": 11,
+					"width": 81,
+					"height": 24,
+					"dataSource": "Button",
+					"text": "parse UPS",
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 382,
+					"left": 12,
+					"width": 81,
+					"height": 24,
+					"dataSource": "Button",
+					"text": "parse",
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 426,
+					"left": 11,
+					"width": 81,
+					"height": 24,
+					"dataSource": "Button",
+					"text": "test",
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"XML_Response": {
+					"type": "input",
+					"top": 452,
+					"left": 11,
+					"width": 136,
+					"height": 225,
+					"dataSource": "XML_Response",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 309,
+					"left": 170,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ScriptSyncRecord"
+				}
+			}
+		},
+		{
+			"objects": {
+				"RemoteUserPassword4": {
+					"type": "input",
+					"top": 306,
+					"left": 283,
+					"width": 701,
+					"height": 35,
+					"dataSource": "[SyncRelation:103]RelatedTables:15",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"RemoteUserPassword10": {
+					"type": "input",
+					"top": 351,
+					"left": 283,
+					"width": 701,
+					"height": 329,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SyncRelation:103]Template:39",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "dropdown",
+					"top": 322,
+					"left": 188,
+					"width": 91,
+					"height": 21,
+					"dataSource": "<>aTableNames",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":18891,13",
+					"class": "\cssPopups",
+					"textDecoration": "underline",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 307,
+					"left": 169,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Related Tables"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 354,
+					"left": 169,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Template"
+				}
+			},
+			"entryOrder": [
+				"RemoteUserPassword4",
+				"RemoteUserPassword10",
+				"Variable3"
+			]
+		},
+		{
+			"objects": {
+				"MakeKeys1": {
+					"type": "button",
+					"top": 433,
+					"left": 71,
+					"width": 159,
+					"height": 20,
+					"dataSource": "b34",
+					"text": "MakeKeys",
+					"method": "ObjectMethods/MakeKeys1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text72": {
+					"type": "text",
+					"top": 316,
+					"left": 187,
+					"width": 81,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Receiving"
+				},
+				"Text73": {
+					"type": "text",
+					"top": 327,
+					"left": 298,
+					"width": 590,
+					"height": 26,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Each partner will use the same key pair to send (encrypt with the private key) and receive (decrypt with the public key). "
+				},
+				"PrivateKeyKeyR": {
+					"type": "text",
+					"top": 367,
+					"left": 205,
+					"width": 71,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PrivateKeyKey"
+				},
+				"PublicKeyR": {
+					"type": "text",
+					"top": 515,
+					"left": 204,
+					"width": 71,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PublicKey"
+				},
+				"PublicKeyReceiving": {
+					"type": "input",
+					"top": 363,
+					"left": 283,
+					"width": 701,
+					"height": 136,
+					"dataSource": "iLoText7",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/PublicKeyReceiving.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"PrivateKeyReceiving": {
+					"type": "input",
+					"top": 515,
+					"left": 283,
+					"width": 701,
+					"height": 176,
+					"dataSource": "iLoText8",
+					"stroke": "#000000",
+					"class": "\cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/PrivateKeyReceiving.4dm",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text10": {
+					"type": "text",
+					"top": 291,
+					"left": 11,
+					"width": 220,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral, case sensitive, example: maps"
+				},
+				"Field258": {
+					"type": "input",
+					"top": 307,
+					"left": 8,
+					"width": 554,
+					"height": 373,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[SyncRelation:103]ObGeneral:53",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TestScripts": {
+					"type": "button",
+					"top": 307,
+					"left": 593,
+					"width": 159,
+					"height": 20,
+					"dataSource": "b43",
+					"text": "Sandbox",
+					"method": "ObjectMethods/TestScripts.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"iLoObject1": {
+					"type": "input",
+					"top": 409,
+					"left": 595,
+					"width": 389,
+					"height": 271,
+					"dataSource": "iLoObject1",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"iLoText1": {
+					"type": "input",
+					"top": 333,
+					"left": 595,
+					"width": 389,
+					"height": 71,
+					"dataSource": "iLoText1",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

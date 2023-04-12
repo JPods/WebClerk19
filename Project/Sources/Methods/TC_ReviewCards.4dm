@@ -4,9 +4,8 @@ If (UserInPassWordGroup("Control"))
 	$found:=Prs_CheckRunnin("Time_Review")
 	//
 	If ($found>0)
-		If (Frontmost process:C327#<>aPrsNum{$found})
-			BRING TO FRONT:C326(<>aPrsNum{$found})
-		End if 
+		BRING TO FRONT:C326($found)
+		
 		If (vHere=0)  //calling menu doubles the menus
 			//MENU BAR(7;<>aPrsNum{$found})
 		End if 
@@ -16,14 +15,6 @@ If (UserInPassWordGroup("Control"))
 		<>processAlt:=New process:C317("TC_ReviewWindow"; <>tcPrsMemory; "Time_Review")
 	End if 
 	
-	If (False:C215)
-		jsetDefaultFile(->[Item:4])
-		C_LONGINT:C283($viProcess)
-		$viProcess:=Current process:C322
-		SET MENU BAR:C67(splashMenu; $viProcess; *)
-		jSetAutoReMenus
-		MESSAGES ON:C181
-	End if 
 	
 End if 
 

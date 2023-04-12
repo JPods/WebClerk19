@@ -22,5 +22,5 @@ Else
 End if 
 
 If (<>viDebugMode>=$viMinDebugLevel)
-	ConsoleMessage($vtMessage)
+	ConsoleLog($vtMessage)
 End if 

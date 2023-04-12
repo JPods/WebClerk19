@@ -17,10 +17,10 @@
 // Must Run to prepare for Version 14.
 C_LONGINT:C283(<>vCounterBuffer)
 C_TIME:C306($timeStart; $timeElapsed)
-ConsoleMessage("ConsoleLaunch")
+ConsoleLog("ConsoleLaunch")
 DELAY PROCESS:C323(Current process:C322; 30)
 $timeStart:=Current time:C178
-ConsoleMessage("Start Time: "+String:C10($timeStart))
+ConsoleLog("Start Time: "+String:C10($timeStart))
 C_TEXT:C284($reportText)
 
 C_BOOLEAN:C305($indexed; $isUnique; $isInvisible)
@@ -53,7 +53,7 @@ For ($incTables; 1; $cntTables)
 		UniqueBySequence($incTables)
 	End if 
 End for 
-ConsoleMessage("Completed duration: "+String:C10(Current time:C178-$timeStart))
+ConsoleLog("Completed duration: "+String:C10(Current time:C178-$timeStart))
 
 SelectionToZero
 

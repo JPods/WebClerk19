@@ -7,7 +7,7 @@ C_TEXT:C284($tallyType)
 C_TEXT:C284($tallyDescri)
 C_BOOLEAN:C305($stopLoop)
 $stopLoop:=False:C215
-$stakDT:=DateTime_Enter
+$stakDT:=DateTime_DTTo
 READ WRITE:C146([DInventory:36])
 READ WRITE:C146([Usage:5])
 QUERY:C277([DInventory:36]; [DInventory:36]dtStack:17=0)
@@ -18,15 +18,15 @@ Else
 	ORDER BY:C49([DInventory:36]; [DInventory:36]itemNum:1; [DInventory:36]dtCreated:15)
 	FIRST RECORD:C50([DInventory:36])
 	$earlyDT:=[DInventory:36]dtCreated:15
-	jDateTimeRecov([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)
+	DateTime_DTFrom([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)
 	//
 	$PeriodDate:=Date_ThisMon(vdDateBeg; 0)
-	$PeriodEnd:=DateTime_Enter(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
+	$PeriodEnd:=DateTime_DTTo(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
 	
 	//
 	//$PeriodDate:=Date(String(Month of(vdDateBeg))+"/1/"+String(Year of
 	//(vdDateBeg)))
-	//$PeriodEnd:=DateTime_Enter (Date(String(Month of($PeriodDate+31))+"/1/"
+	//$PeriodEnd:=DateTime_DTTo (Date(String(Month of($PeriodDate+31))+"/1/"
 	//+String(Year of($PeriodDate+31)));00:00:00)
 	$k:=Records in selection:C76([DInventory:36])
 	$i:=0
@@ -64,17 +64,17 @@ Else
 						$tallyType:=[Item:4]type:26
 						$tallyDescri:=[Item:4]description:7
 				End case 
-				jDateTimeRecov([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)  //different item reject the month
+				DateTime_DTFrom([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)  //different item reject the month
 				
 				$PeriodDate:=Date_ThisMon(vdDateBeg; 0)
-				$PeriodEnd:=DateTime_Enter(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
+				$PeriodEnd:=DateTime_DTTo(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
 				
 			End if 
 			If ([DInventory:36]dtCreated:15>$PeriodEnd)  //same item but different month
-				jDateTimeRecov([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)
+				DateTime_DTFrom([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)
 				//
 				$PeriodDate:=Date_ThisMon(vdDateBeg; 0)
-				$PeriodEnd:=DateTime_Enter(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
+				$PeriodEnd:=DateTime_DTTo(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
 				//        
 			End if 
 			If (([Usage:5]periodDate:2#$PeriodDate) | ([Usage:5]itemNum:1#$tallyItem))
@@ -106,7 +106,7 @@ Else
 					End if 
 					//
 				: ([DInventory:36]typeID:14[[1]]="i")  //S for sales order
-					If (([DInventory:36]receiptid:11=1) | ([DInventory:36]takeAction:19=4))  //POS Invoice, both order and invoice
+					If (([DInventory:36]idReceipt:11=1) | ([DInventory:36]takeAction:19=4))  //POS Invoice, both order and invoice
 						[Usage:5]numOrders:19:=[Usage:5]numOrders:19+1
 						[Usage:5]ordQtyActual:26:=[Usage:5]ordQtyActual:26+[DInventory:36]qtyOnSO:3
 						[Usage:5]ordersActual:20:=[Usage:5]ordersActual:20+([DInventory:36]qtyOnSO:3*[DInventory:36]unitPrice:21)

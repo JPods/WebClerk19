@@ -57,8 +57,8 @@ Case of
 		<>prcControl:=1
 		<>processAlt:=New process:C317("ItemPeriodSales"; <>tcPrsMemory; "ItemPeriodSales"; 1)
 End case 
-//If (Frontmost process#<>aPrsNum{$found})
-//BRING TO FRONT(<>aPrsNum{$found})
+//BRING TO FRONT($found)
+//
 //End if 
 //Else 
 

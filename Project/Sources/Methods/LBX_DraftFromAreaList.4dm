@@ -10,7 +10,7 @@ $final_o:=New object:C1471("LB_NameThis"; New object:C1471("type"; "listbox"; \
 "top"; 459; \
 "width"; 1298; \
 "height"; 363; \
-"alternateFill"; "#FFFAE6"; \
+"alternateFill"; "#FFFCCC"; \
 "movableRows"; False:C215; \
 "listboxType"; "collection"; \
 "dataSource"; "LB_NameThis_sel"; \

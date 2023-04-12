@@ -22,7 +22,7 @@ $doPage:="Register4Error.html"
 $userEmail:=WCapi_GetParameter("email"; "")
 $code:=WCapi_GetParameter("code"; "")
 C_LONGINT:C283($dtCurrent)
-$dtCurrent:=DateTime_Enter
+$dtCurrent:=DateTime_DTTo
 
 C_LONGINT:C283($viAbandoned)
 $viAbandoned:=obEventLog.id
@@ -60,7 +60,7 @@ If (Records in selection:C76([EventLog:75])=1)
 		
 		$doPage:=WCapi_GetParameter("jitPageOne"; "")
 		If ($doPage="")
-			If (<>vbWCRegisterLeads)
+			If (Storage:C1525.wc.bWCRegisterLeads)
 				$doPage:="Register3DataLeads.html"  // form to fill out
 			Else 
 				$doPage:="Register3DataCustomers.html"  // form to fill out
@@ -79,7 +79,7 @@ End if
 SAVE RECORD:C53([EventLog:75])
 // send the page
 If (<>videbugmode=311)
-	ConsoleMessage(vResponse)
+	ConsoleLog(vResponse)
 End if 
 
 $doPage:=WC_DoPage($doPage; "")

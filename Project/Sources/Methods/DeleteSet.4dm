@@ -42,7 +42,7 @@ If (Size of array:C274(aText4)>0)
 					
 				Else 
 					
-					ConsoleMessage("ERROR: Unable To Delete Saved Set Not Found")
+					ConsoleLog("ERROR: Unable To Delete Saved Set Not Found")
 					
 				End if   // tallmaster = 1
 				

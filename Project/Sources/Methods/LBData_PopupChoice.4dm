@@ -34,7 +34,7 @@ End if
 $obSel:=$obSel.orderBy("choice")
 $cTemp:=New collection:C1472
 C_COLLECTION:C1488($cFilter)
-$cFilter:=Split string:C1554("choice,alternate,id"; ",")
+$cFilter:=Split string:C1554("choice,alternate,id"; ";")
 $cTemp:=$obSel.toCollection($cFilter)
 
 // Form.cPopupChoice:=$cTemp

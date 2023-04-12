@@ -1,1 +1,1 @@
-entryEntity.taxJuris:=DE_PopUpArray(Self:C308)
+process_o.entry_o.taxJuris:=DE_PopUpArray(Self:C308)

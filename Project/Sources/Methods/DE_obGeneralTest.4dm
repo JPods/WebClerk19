@@ -8,7 +8,7 @@
 var $1; $rec_ent : Object
 $rec_ent:=$1
 If ($rec_ent.obGeneral=Null:C1517)
-	$rec_ent.obGeneral:=New object:C1471("keyTags"; ""; "keyText"; "")
+	$rec_ent.obGeneral:=Init_obGeneral
 End if 
 If ($rec_ent.obGeneral.keyTags=Null:C1517)
 	$rec_ent.obGeneral.keyTags:=""

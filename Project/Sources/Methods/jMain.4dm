@@ -3,4 +3,4 @@
 
 ProcessTableOpen(Table:C252(ptCurTable)*-1)
 DELAY PROCESS:C323(Current process:C322; 180)
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)

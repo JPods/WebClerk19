@@ -1,1 +1,0 @@
-entryEntity.profile2:=DE_PopUpArray(Self:C308)

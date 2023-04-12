@@ -17,7 +17,6 @@ C_LONGINT:C283($viOnlyMessage)
 C_LONGINT:C283(viAlertTimes; <>viAlertMax)
 C_BOOLEAN:C305($vbAlert)
 If (<>viAlertMax=0)
-	DefaultSetupsCreate("<>viAlertMax"; "3"; "Is longint"; "Alerts"; ""; "Sets the maximum number of times an customer/vendor alert message will be repeated in a process.")
 	<>viAlertMax:=3
 End if 
 
@@ -54,12 +53,12 @@ If ($vtMessage#"")
 	If (allowAlerts_boo)
 		ALERT:C41($vtMessage)
 	Else 
-		ConsoleMessage($vtMessage)
+		ConsoleLog($vtMessage)
 	End if 
 End if 
 
 If (<>viDebugMode>410)
-	ConsoleMessage("Alert: "+$vtMessage)
+	ConsoleLog("Alert: "+$vtMessage)
 End if 
 $vtMessage:=""
 
@@ -68,7 +67,7 @@ If (False:C215)  // method 2 complex alert
 	Case of 
 		: (ptCurTable=->[Order:3])
 			
-			$vtHeader:=$vtLine+"\r"+"ORDER: "+String:C10([Order:3]orderNum:2; "0000-0000")+"\r\r"+$vtLine+"\r"
+			$vtHeader:=$vtLine+"\r"+"ORDER: "+String:C10([Order:3]idNum:2; "0000-0000")+"\r\r"+$vtLine+"\r"
 			
 			If ([Order:3]alertMessage:80#"")
 				$vbAlert:=True:C214
@@ -98,7 +97,7 @@ If (False:C215)  // method 2 complex alert
 			
 		: (ptCurTable=->[Invoice:26])
 			
-			$vtHeader:=$vtLine+"\r"+"INVOICE: "+String:C10([Invoice:26]invoiceNum:2; "0000-0000")+"\r\r"+$vtLine+"\r"
+			$vtHeader:=$vtLine+"\r"+"INVOICE: "+String:C10([Invoice:26]idNum:2; "0000-0000")+"\r\r"+$vtLine+"\r"
 			
 			If ([Invoice:26]alertMessage:74#"")
 				$vbAlert:=True:C214
@@ -128,7 +127,7 @@ If (False:C215)  // method 2 complex alert
 			
 		: (ptCurTable=->[Proposal:42])
 			
-			$vtHeader:=$vtLine+"\r"+"PROPOSALS: "+String:C10([Proposal:42]proposalNum:5; "0000-0000")+"\r\r"+$vtLine+"\r"
+			$vtHeader:=$vtLine+"\r"+"PROPOSALS: "+String:C10([Proposal:42]idNum:5; "0000-0000")+"\r\r"+$vtLine+"\r"
 			
 			
 			If ([Proposal:42]alertMessage:65#"")
@@ -159,7 +158,7 @@ If (False:C215)  // method 2 complex alert
 			
 		: (ptCurTable=->[PO:39])
 			
-			$vtHeader:=$vtLine+"\r"+"PO: "+String:C10([PO:39]poNum:5; "0000-0000")+"\r\r"+$vtLine+"\r"
+			$vtHeader:=$vtLine+"\r"+"PO: "+String:C10([PO:39]idNum:5; "0000-0000")+"\r\r"+$vtLine+"\r"
 			
 			If ([PO:39]alertMessage:62#"")
 				$vbAlert:=True:C214
@@ -259,13 +258,13 @@ If (False:C215)  // method 2 complex alert
 		$vtMessage:=$vtHeader+$vtMessage
 		
 		If (allowAlerts_boo)
-			ConsoleMessage($vtMessage)
+			ConsoleLog($vtMessage)
 		Else 
-			ConsoleMessage($vtMessage)
+			ConsoleLog($vtMessage)
 		End if 
 	End if 
 	If (<>viDebugMode>410)
-		ConsoleMessage("Alert_OPiP: "+$vtMessage)
+		ConsoleLog("Alert_OPiP: "+$vtMessage)
 	End if 
 	$vtMessage:=""
 	
@@ -301,7 +300,7 @@ If (False:C215)  // method 1 original alert
 		End if 
 	End if 
 	If ([Order:3]alertMessage:80#"")
-		If ((ptCurTable=(->[Control:1])) | (ptCurTable=(->[Order:3])))
+		If ((ptCurTable=(->[Base:1])) | (ptCurTable=(->[Order:3])))
 			If (viAlertTimes<=<>viAlertMax)
 				viAlertTimes:=viAlertTimes+1
 				$vtMessage:=$vtMessage+(Num:C11($vtMessage#"")*("\r"+"\r"+"#########"+"\r"+"\r"))+"Order: "+[Order:3]alertMessage:80

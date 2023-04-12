@@ -24,7 +24,7 @@ CREATE RECORD:C68([TallyResult:73])
 [TallyResult:73]name:1:="Tally_OpenItmAm"
 [TallyResult:73]name:1:="TallyAction"
 [TallyResult:73]salesNameID:31:=Current user:C182
-[TallyResult:73]dtReport:12:=DateTime_Enter(Current date:C33; Current time:C178)
+[TallyResult:73]dtReport:12:=DateTime_DTTo(Current date:C33; Current time:C178)
 [TallyResult:73]profile1:17:="Update Open Item Qty"
 
 C_LONGINT:C283($i; $k)

@@ -35,7 +35,7 @@ If (Application type:C494#4D Server:K5:6)  // ### jwm ### 20190228_0906 do not r
 	
 	While (<>vCronLoop>0)
 		
-		$dtDueNow:=DateTime_Enter+$viDelay
+		$dtDueNow:=DateTime_DTTo+$viDelay
 		
 		If (Application type:C494=4D Server:K5:6)
 			QUERY:C277([CronJob:82]; [CronJob:82]runOnServer:18=True:C214; *)

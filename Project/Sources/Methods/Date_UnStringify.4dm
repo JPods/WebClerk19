@@ -36,7 +36,7 @@ Else
 	$vdDefaultIfError:=!00-00-00!
 End if 
 
-ConsoleMessage("Please replace usage of Date_UnStringify with Date_ImportFromString.")
+ConsoleLog("Please replace usage of Date_UnStringify with Date_ImportFromString.")
 $vdDate:=Date_ImportFromString($vtStringifiedDate; $vdDefaultIfError)
 
 

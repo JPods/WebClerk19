@@ -27,18 +27,18 @@ If (<>prcControl=1)
 	<>prcControl:=0
 	Process_InitLocal
 	WindowOpenTaskOffSets(0; 170; 180)
-	ptCurTable:=(->[Control:1])
+	ptCurTable:=(->[Base:1])
 End if 
 //vCalendarBegin:=Current date
 ControlRecCheck
-FORM SET INPUT:C55([Control:1]; "ScheduleSetter2")
-ptCurTable:=(->[Control:1])
+FORM SET INPUT:C55([Base:1]; "ScheduleSetter2")
+ptCurTable:=(->[Base:1])
 // calSupport:=File([Service])//to be used for mixing calanders between files
 //ProcessTableOpen (->[Control];"skip")
-MODIFY RECORD:C57([Control:1])
+MODIFY RECORD:C57([Base:1])
 
 
-Prs_ListActive
+Process_ListActive
 WO_FillArrays(0)
 Tm_SchFillRays(0)
 For ($i; 1; 11)

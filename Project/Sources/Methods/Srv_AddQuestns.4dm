@@ -18,12 +18,7 @@ If (Size of array:C274(aQQLns)>0)
 			$tableNum:=2
 			[Customer:2]questionAns:83:=True:C214
 			SAVE RECORD:C53([Customer:2])
-		: (aServiceTableName{aSrvLines{1}}="L")
-			$doAdd:=True:C214
-			$acct:=String:C10([Lead:48]idNum:32)
-			$tableNum:=48
-			[Lead:48]questionAns:43:=True:C214
-			SAVE RECORD:C53([Lead:48])
+			
 		: (aServiceTableName{aSrvLines{1}}="i")
 			$doAdd:=True:C214
 			$acct:=String:C10([Contact:13]idNum:28)

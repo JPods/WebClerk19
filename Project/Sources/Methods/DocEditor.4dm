@@ -9,9 +9,8 @@ C_LONGINT:C283($found)
 $found:=Prs_CheckRunnin("Document Editor")
 //
 If ($found>0)
-	If (Frontmost process:C327#<>aPrsNum{$found})
-		BRING TO FRONT:C326(<>aPrsNum{$found})
-	End if 
+	BRING TO FRONT:C326($found)
+	
 Else 
 	<>ptCurTable:=ptCurTable
 	<>prcControl:=1

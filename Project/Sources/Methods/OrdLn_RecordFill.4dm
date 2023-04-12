@@ -25,19 +25,19 @@ End if
 If (Is new record:C668([OrderLine:49]))
 	// 
 	aoUniqueID{$i}:=[OrderLine:49]idNum:50  // arrays should never receive a uniqueID, only records
-	[OrderLine:49]orderNum:1:=[Order:3]orderNum:2
+	[OrderLine:49]idNumOrder:1:=[Order:3]idNum:2
 	[OrderLine:49]lineNum:3:=aOLineNum{$i}
 	[OrderLine:49]itemNum:4:=aOItemNum{$i}
-	[OrderLine:49]dateOrdered:25:=Current date:C33
+	[OrderLine:49]dateDocument:25:=Current date:C33
 End if 
 [OrderLine:49]seq:30:=aOSeq{$i}
 
 [OrderLine:49]customerID:2:=[Order:3]customerID:1
 [OrderLine:49]repID:36:=[Order:3]repID:8
 [OrderLine:49]salesNameID:37:=[Order:3]salesNameID:10
-[OrderLine:49]Company:41:=[Customer:2]company:2
+[OrderLine:49]company:41:=[Customer:2]company:2
 
-[OrderLine:49]altItem:31:=aOAltItem{$i}
+[OrderLine:49]itemNumAlt:31:=aOAltItem{$i}
 [OrderLine:49]description:5:=aODescpt{$i}
 [OrderLine:49]qty:6:=aOQtyOrder{$i}
 [OrderLine:49]qtyShipped:7:=aOQtyShip{$i}
@@ -61,7 +61,7 @@ End if
 [OrderLine:49]extendedWt:21:=aOExtWt{$i}
 [OrderLine:49]location:22:=aOLocation{$i}
 [OrderLine:49]serialRc:27:=aOSerialRc{$i}
-[OrderLine:49]serialNum:40:=aoSerialNm{$i}
+//[OrderLine]obSerial:=aoSerialNm{$i}
 [OrderLine:49]typeSale:28:=aOPricePt{$i}
 [OrderLine:49]dateRequired:23:=aoDateReq{$i}
 [OrderLine:49]dateShipOn:38:=aoDateShipOn{$i}
@@ -71,7 +71,7 @@ End if
 //
 [OrderLine:49]lineProfile1:45:=aoProfile1{$i}
 [OrderLine:49]lineProfile2:46:=aoProfile2{$i}
-[OrderLine:49]lineProfile3:47:=aoProfile3{$i}
+//[OrderLine]obItem:=aoProfile3{$i}
 [OrderLine:49]complete:48:=(aOLnCmplt{$i}#"")
 //
 [OrderLine:49]qtyCancelled:51:=aOQtyCanceled{$i}

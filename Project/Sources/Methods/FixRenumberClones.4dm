@@ -29,11 +29,11 @@ If (OK=1)
 			For ($i; 1; $k)
 				$foundEmpty:=False:C215
 				Repeat 
-					QUERY:C277([Proposal:42]; [Proposal:42]proposalNum:5=$lastOK)
+					QUERY:C277([Proposal:42]; [Proposal:42]idNum:5=$lastOK)
 					QUERY:C277([QA:70]; [QA:70]idNumTask:12=[Proposal:42]idNumTask:70)
 					DELETE SELECTION:C66([QA:70])
 					If (Records in selection:C76([Proposal:42])=0)
-						QUERY:C277([ProposalLine:43]; [ProposalLine:43]proposalNum:1=$lastOK)
+						QUERY:C277([ProposalLine:43]; [ProposalLine:43]idNumProposal:1=$lastOK)
 						DELETE SELECTION:C66([ProposalLine:43])
 						$foundEmpty:=True:C214
 						If ($startNum=0)
@@ -44,12 +44,12 @@ If (OK=1)
 					End if 
 				Until ($foundEmpty)
 				GOTO RECORD:C242([Proposal:42]; $aiRecordNums{$i})
-				QUERY:C277([ProposalLine:43]; [ProposalLine:43]proposalNum:1=[Proposal:42]proposalNum:5)
-				APPLY TO SELECTION:C70([ProposalLine:43]; [ProposalLine:43]proposalNum:1:=$lastOK)
-				[Proposal:42]proposalNum:5:=$lastOK
+				QUERY:C277([ProposalLine:43]; [ProposalLine:43]idNumProposal:1=[Proposal:42]idNum:5)
+				APPLY TO SELECTION:C70([ProposalLine:43]; [ProposalLine:43]idNumProposal:1:=$lastOK)
+				[Proposal:42]idNum:5:=$lastOK
 				SAVE RECORD:C53([Proposal:42])
 			End for 
-			ConsoleMessage("Renumbered Proposals: "+String:C10($k)+" starting: "+String:C10($startNum)+" ending: "+String:C10($lastOK))
+			ConsoleLog("Renumbered Proposals: "+String:C10($k)+" starting: "+String:C10($startNum)+" ending: "+String:C10($lastOK))
 		: (ptCurTable=(->[Order:3]))
 			SELECTION TO ARRAY:C260([Order:3]; $aiRecordNums)
 			$k:=Size of array:C274($aiRecordNums)
@@ -58,9 +58,9 @@ If (OK=1)
 			For ($i; 1; $k)
 				$foundEmpty:=False:C215
 				Repeat 
-					QUERY:C277([Order:3]; [Order:3]orderNum:2=$lastOK)
+					QUERY:C277([Order:3]; [Order:3]idNum:2=$lastOK)
 					If (Records in selection:C76([Order:3])=0)
-						QUERY:C277([OrderLine:49]; [OrderLine:49]orderNum:1=$lastOK)
+						QUERY:C277([OrderLine:49]; [OrderLine:49]idNumOrder:1=$lastOK)
 						DELETE SELECTION:C66([OrderLine:49])
 						$foundEmpty:=True:C214
 						If ($startNum=0)
@@ -71,14 +71,14 @@ If (OK=1)
 					End if 
 				Until ($foundEmpty)
 				GOTO RECORD:C242([Order:3]; $aiRecordNums{$i})
-				QUERY:C277([OrderLine:49]; [OrderLine:49]orderNum:1=[Order:3]orderNum:2)
-				APPLY TO SELECTION:C70([OrderLine:49]; [OrderLine:49]orderNum:1:=$lastOK)
-				[Order:3]orderNum:2:=$lastOK
+				QUERY:C277([OrderLine:49]; [OrderLine:49]idNumOrder:1=[Order:3]idNum:2)
+				APPLY TO SELECTION:C70([OrderLine:49]; [OrderLine:49]idNumOrder:1:=$lastOK)
+				[Order:3]idNum:2:=$lastOK
 				SAVE RECORD:C53([Order:3])
 			End for 
-			ConsoleMessage("Renumbered Orders: "+String:C10($k)+" starting: "+String:C10($startNum)+" ending: "+String:C10($lastOK))
+			ConsoleLog("Renumbered Orders: "+String:C10($k)+" starting: "+String:C10($startNum)+" ending: "+String:C10($lastOK))
 		Else 
-			ConsoleMessage("Renumbering is only for Proposals and Orders")
+			ConsoleLog("Renumbering is only for Proposals and Orders")
 	End case 
 End if 
 

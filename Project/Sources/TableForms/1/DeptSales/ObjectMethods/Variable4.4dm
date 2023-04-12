@@ -9,7 +9,7 @@ If (<>iSabrd=1)  // & (Current user="bill.james"))
 	$fOne:=Position:C15("Personal Information"; $workingText; 0)
 	$fTwo:=Position:C15("Personal Information"; $workingText; 0)
 	If ($fOne<1)
-		//ConsoleMessage ("TEST: No info on clipboard")
+		//Console_Log ("TEST: No info on clipboard")
 	Else 
 		iSabrd
 		C_TEXT:C284($firstName; $lastName; $zip; $class; $school; $graduationname)

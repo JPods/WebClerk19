@@ -18,11 +18,11 @@ C_BOOLEAN:C305($0)
 $ptTable:=$1
 $0:=True:C214  // $returnOriginalValue
 Case of 
-	: (($ptTable=(->[QQQCustomer:2])) | ($ptTable=(->[QQQContact:13])) | ($ptTable=(->[Lead:48])))
+	: (($ptTable=(->[Customer:2])) | ($ptTable=(->[Contact:13])))
 		$0:=False:C215
-	: (($ptTable=(->[QQQPOLine:40])) | ($ptTable=(->[OrderLine:49])))
+	: (($ptTable=(->[POLine:40])) | ($ptTable=(->[OrderLine:49])))
 		$0:=False:C215
-	: (($ptTable=(->[QQQVendor:38])) | ($ptTable=(->[Rep:8])) | ($ptTable=(->[Employee:19])))
+	: (($ptTable=(->[Vendor:38])) | ($ptTable=(->[Rep:8])) | ($ptTable=(->[Employee:19])))
 		$0:=False:C215
 	: (($ptTable=(->[Order:3])) | ($ptTable=(->[Proposal:42])) | ($ptTable=(->[Invoice:26])) | ($ptTable=(->[PO:39])))
 		$0:=False:C215
@@ -34,9 +34,9 @@ Case of
 		
 	: (($ptTable=(->[EventLog:75])))
 		$0:=False:C215
-	: (($ptTable=(->[QQQCarrier:11])))
+	: (($ptTable=(->[Carrier:11])))
 		$0:=False:C215
-	: (($ptTable=(->[DefaultQQQ:15])))  // one record table
+	: (($ptTable=(->[Default:15])))  // one record table
 		$0:=False:C215
 	: (($ptTable=(->[DefaultAccount:32])))  // one record table
 		$0:=False:C215

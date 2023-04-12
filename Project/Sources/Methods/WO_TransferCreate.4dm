@@ -57,14 +57,14 @@ If (Count parameters:C259>0)
 									QUERY:C277([Item:4]; [Item:4]itemNum:1=$itemNum)
 								End if 
 								CREATE RECORD:C68([WorkOrder:66])
-								[WorkOrder:66]woNum:29:=CounterNew(->[WorkOrder:66])
+								[WorkOrder:66]idNum:29:=CounterNew(->[WorkOrder:66])
 								[WorkOrder:66]woType:60:="Transfer"
 								[WorkOrder:66]action:33:=$status
 								
 								//###jwm ###20121129_1529 Begin
 								
-								[WorkOrder:66]dtCreated:44:=DateTime_Enter
-								[WorkOrder:66]dtAction:5:=DateTime_Enter(iLoDate1)
+								[WorkOrder:66]dtCreated:44:=DateTime_DTTo
+								[WorkOrder:66]dtAction:5:=DateTime_DTTo(iLoDate1)
 								[WorkOrder:66]dateComplete:64:=!00-00-00!
 								[WorkOrder:66]idNumTask:22:=$taskID
 								
@@ -72,7 +72,7 @@ If (Count parameters:C259>0)
 								
 								[WorkOrder:66]qtyOrdered:13:=$qty
 								If ([WorkOrder:66]action:33="PendingTransfer")
-									[WorkOrder:66]qtyActual:14:=$qty
+									[WorkOrder:66]qty:14:=$qty
 								End if 
 								[WorkOrder:66]itemNum:12:=[Item:4]itemNum:1
 								[WorkOrder:66]itemDescript:34:=[Item:4]description:7  //###jwm ###20121129_1600
@@ -98,7 +98,7 @@ If (Count parameters:C259>0)
 								SAVE RECORD:C53([WorkOrder:66])
 								
 								If ([WorkOrder:66]action:33="PendingTransfer")
-									[WorkOrder:66]qtyActual:14:=$qty
+									[WorkOrder:66]qty:14:=$qty
 									WOTransfer_dInventory("Ship")
 									
 									//QUERY([UserReport];[UserReport]Name="InventoryTransferWO_Auto")

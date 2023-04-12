@@ -16,7 +16,7 @@ If (OK=1)
 		$dUtCost:=aStkNwCost{aStkSelect{$i}}-aStkOrCost{aStkSelect{$i}}
 		$dDuty:=aStkDuty{aStkSelect{$i}}-[InventoryStack:29]duties:21
 		$dNotProd:=aStkNonPd{aStkSelect{$i}}-[InventoryStack:29]nonProcCosts:22
-		$dVAT:=aStkVAT{aStkSelect{$i}}-[InventoryStack:29]vaTax:23
+		$dVAT:=aStkVAT{aStkSelect{$i}}-[InventoryStack:29]taxVA:23
 		//
 		If (OptKey=1)
 			QUERY:C277([POLine:40]; [POLine:40]idNumPO:1=[InventoryStack:29]docid:5; *)
@@ -28,7 +28,7 @@ If (OK=1)
 				If ($dUtCost#0)
 					[POLine:40]unitCost:7:=aStkNwCost{aStkSelect{$i}}
 					[POLine:40]discount:8:=0
-					[POLine:40]extendedCost:9:=([POLine:40]unitCost:7*[POLine:40]qtyOrdered:3)
+					[POLine:40]extendedCost:9:=([POLine:40]unitCost:7*[POLine:40]qty:3)
 				End if 
 				SAVE RECORD:C53([POLine:40])
 				$w:=Find in array:C230($aDoPos; [POLine:40]idNumPO:1)
@@ -48,7 +48,7 @@ If (OK=1)
 			$dSumCost:=$dUtCost+$dDuty+$dNotProd
 		End if 
 		If (($dUtCost#0) | ($dDuty#0) | ($dNotProd#0) | ($dSumCost#0))
-			[InventoryStack:29]wayBillNum:24:=v1
+			[InventoryStack:29]idWayBill:24:=v1
 			[InventoryStack:29]duties:21:=aStkDuty{aStkSelect{$i}}
 			[InventoryStack:29]nonProcCosts:22:=aStkNonPd{aStkSelect{$i}}
 			[InventoryStack:29]unitCost:11:=aStkNwCost{aStkSelect{$i}}
@@ -64,14 +64,14 @@ If (OK=1)
 			[DInventory:36]qtyOnPo:4:=0
 			[DInventory:36]qtyOnWO:5:=0
 			[DInventory:36]qtyOnAdj:6:=[InventoryStack:29]qtyOnHand:9
-			[DInventory:36]projectNum:8:=[InventoryStack:29]projectNum:4
-			[DInventory:36]docid:9:=[InventoryStack:29]idNum:1
+			[DInventory:36]idNumProject:8:=[InventoryStack:29]idNumProject:4
+			[DInventory:36]idNumDoc:9:=[InventoryStack:29]idNum:1
 			[DInventory:36]idNumLine:10:=0
-			[DInventory:36]receiptid:11:=[InventoryStack:29]receiptid:16
+			[DInventory:36]idReceipt:11:=[InventoryStack:29]idReceipt:16
 			[DInventory:36]customerID:12:=[InventoryStack:29]vendorID:10
 			[DInventory:36]reason:13:=[InventoryStack:29]changeReason:6
 			[DInventory:36]typeID:14:="Ch"
-			[DInventory:36]dtCreated:15:=DateTime_Enter
+			[DInventory:36]dtCreated:15:=DateTime_DTTo
 			[DInventory:36]note:18:=""
 			[DInventory:36]takeAction:19:=15
 			[DInventory:36]siteID:20:=""
@@ -81,7 +81,7 @@ If (OK=1)
 			[DInventory:36]unitCost:7:=$dUtCost
 			[DInventory:36]duties:26:=$dDuty
 			[DInventory:36]vaTax:27:=$dVAT
-			[DInventory:36]tableNum:30:=Table:C252(->[InventoryStack:29])
+			[DInventory:36]tableName:30:=Table name:C256(->[InventoryStack:29])
 			SAVE RECORD:C53([DInventory:36])
 		End if 
 	End for 

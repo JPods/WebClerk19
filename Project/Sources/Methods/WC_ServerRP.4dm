@@ -41,16 +41,16 @@ Case of
 		SET BLOB SIZE:C606(vblWCResponse; 0)
 		$myMessage:="Reply?Heartbeat=true&Reply="+Storage:C1525.default.company+"&Version="+Storage:C1525.version.rev
 		If ($exchangeID>0)
-			QUERY:C277([ETLJob:104]; [ETLJob:104]idNum:1=$exchangeID)
-			If (Records in selection:C76([ETLJob:104])=1)
+			QUERY:C277([zzzSyncJob:104]; [zzzSyncJob:104]idNum:1=$exchangeID)
+			If (Records in selection:C76([zzzSyncJob:104])=1)
 				$myMessage:=$myMessage+"&SyncExchangeMatch=true"
 				QUERY:C277([SyncRecord:109]; [SyncRecord:109]purpose:40=$exchangeID)
 				If (Records in selection:C76([SyncRecord:109])>0)
 					Case of 
 						: ($exchangeAction="completeexchange")
-							[ETLJob:104]status:4:="ReceiveComplete"
+							[zzzSyncJob:104]status:4:="ReceiveComplete"
 							$myMessage:=$myMessage+"&message=ReceiveComplete"
-							SAVE RECORD:C53([ETLJob:104])
+							SAVE RECORD:C53([zzzSyncJob:104])
 						: ($exchangeAction="showselection")
 							$myMessage:=$myMessage+"&SyncRecord="+String:C10(Records in selection:C76([SyncRecord:109]))
 							ProcessTableOpen(Table:C252(->[SyncRecord:109]))

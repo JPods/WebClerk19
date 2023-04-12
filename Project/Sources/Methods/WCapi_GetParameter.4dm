@@ -29,12 +29,8 @@ Else
 		$0:=$2  // ### jwm ### 20160218_0903
 	Else 
 		$0:=""
-		If (False:C215)  // ### bj ### 20210105_0010
-			C_OBJECT:C1216($voSelDefaults)
-			$voSelDefaults:=ds:C1482.FieldCharacteristic.query("TableNumber = :1 AND Role = :2"; -5; $2)
-			If ($voSelDefaults#Null:C1517)  // look at adding something like this
-				$0:=$voSelDefaults[0].FieldName
-			End if 
-		End if 
+		
+		// Modified by: Bill James (2022-12-15T06:00:00Z)
+		// look at augmenting with FC
 	End if 
 End if 

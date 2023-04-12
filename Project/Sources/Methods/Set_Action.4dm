@@ -116,7 +116,7 @@ If (Count parameters:C259=4)
 					
 				: ($viSetCount>1)
 					
-					ConsoleMessage("Error: Duplicate Records")
+					ConsoleLog("Error: Duplicate Records")
 					ProcessTableOpen(Table:C252(->[TallyMaster:60]); ""; "Duplicate Sets")
 					
 					//FIRST RECORD([TallyMaster])
@@ -192,7 +192,7 @@ If (Count parameters:C259=4)
 			CLEAR NAMED SELECTION:C333($vtNamedSelection)
 			
 	End case 
-	ConsoleMessage("Error: Method Sets_FromTallyMaster requires 4 parameters")
+	ConsoleLog("Error: Method Sets_FromTallyMaster requires 4 parameters")
 End if 
 
 

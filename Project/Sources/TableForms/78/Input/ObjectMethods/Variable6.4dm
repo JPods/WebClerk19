@@ -1,1 +1,0 @@
-entryEntity.TypeSale:=DE_PopUpArray(Self:C308)

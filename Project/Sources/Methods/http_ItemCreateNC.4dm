@@ -31,10 +31,10 @@ If (Records in selection:C76([Item:4])=0)
 		[Item:4]description:7:=$nc_URL
 	End if 
 End if 
-If ($nc_URLArticle#"")
-	
-	http_NC_GetArticle($nc_URLArticle; $2)
-End if 
+//If ($nc_URLArticle#"")
+
+//http_NC_GetArticle($nc_URLArticle; $2)
+//End if 
 //TRACE
 ARRAY TEXT:C222(aText1; 0)
 //
@@ -94,7 +94,7 @@ If (Is new record:C668([Item:4]))
 	[Item:4]priceB:3:=0.4
 	[Item:4]priceC:4:=0.3
 	[Item:4]priceD:5:=0.2
-	[Item:4]liComment:66:="URL_Local:  "+theDocumentURL+"\r"+"URL_Publisher: "+$nc_URL
+	[Item:4]descriptionDetail:66:="URL_Local:  "+theDocumentURL+"\r"+"URL_Publisher: "+$nc_URL
 	If ($publevel="")
 		[Item:4]publish:60:=1
 	Else 

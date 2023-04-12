@@ -48,7 +48,7 @@ Case of
 		$doThis:=True:C214
 		$tempFold:=$4
 	: (Count parameters:C259=3)
-		$tempFold:=<>WebFolder
+		$tempFold:=Storage:C1525.wc.webFolder
 		$doThis:=True:C214
 		$oldCreator:=$1
 		$myCreator:=$2
@@ -80,7 +80,7 @@ Case of
 		$doThis:=False:C215
 		
 	: (Count parameters:C259=2)
-		$tempFold:=<>WebFolder
+		$tempFold:=Storage:C1525.wc.webFolder
 		$doThis:=True:C214
 		$oldCreator:=$1
 		$myCreator:=$2

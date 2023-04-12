@@ -171,7 +171,7 @@
 ////
 //[Item]description:=$aValues{2}  //Description, 4;7
 //[Item]profile1:=$aValues{3}  //Year  4;35
-//[Item]dtItemDate:=DateTime_Enter(Date("01/01/"+[Item]profile1))
+//[Item]dtItemDate:=DateTime_DTTo(Date("01/01/"+[Item]profile1))
 //[ItemSpec]profile4:=$aValues{4}  //Prime Drinking  31;8
 //If (Length($aValues{4})>0)
 //$pSep:=Position("-"; $aValues{4})
@@ -182,8 +182,8 @@
 //$beginDate:=Date("01/01/"+$aValues{4})
 //$endDate:=Date("12/01/"+Substring($aValues{4}; $pSep+1))
 //End if 
-//[Item]dtBestUseStart:=DateTime_Enter($beginDate)
-//[Item]dtBestUseEnd:=DateTime_Enter($endDate)
+//[Item]dtBestUseStart:=DateTime_DTTo($beginDate)
+//[Item]dtBestUseEnd:=DateTime_DTTo($endDate)
 //End if 
 //[Item]profile2:=$aValues{5}  //Region  4;36
 //[Item]profile3:=$aValues{6}  //Appellation  4;37

@@ -198,7 +198,7 @@ If ($tableNum>0)
 	// ### jwm ### 20171214_2203 moved inside if $tablenum > 0 to protect from pointer Error
 	SavedRecordNum:=Record number:C243(Table:C252($tableNum)->)  // ### azm ### 20171006_1330
 Else 
-	ConsoleMessage("Method: WccSaveRecord \rERROR: "+$tableName+"does not resolve to valid Table Number ["+String:C10($tableNum)+"] \r\rFull Request = "+voState.request.headers.Referer)
+	ConsoleLog("Method: WccSaveRecord \rERROR: "+$tableName+"does not resolve to valid Table Number ["+String:C10($tableNum)+"] \r\rFull Request = "+voState.request.headers.Referer)
 End if 
 
 Case of 

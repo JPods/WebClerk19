@@ -10,7 +10,7 @@ If (Size of array:C274(aText1)>0)
 	End if 
 	$endDate:=Date:C102(Request:C163("Enter the end date for this reporting period."))
 	If (OK=1)
-		$dtDate:=DateTime_Enter($endDate; ?23:59:59?)
+		$dtDate:=DateTime_DTTo($endDate; ?23:59:59?)
 		If ($doByRep)
 			SORT ARRAY:C229(aText1; aText2; aText3; aText4; aText5; aText6; aText7; aText8; aText9; aText10; aText11; aText12)
 		Else 

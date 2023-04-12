@@ -37,7 +37,7 @@ End if
 // ???
 USE NAMED SELECTION:C332("<>curReportSet")
 CLEAR NAMED SELECTION:C333("<>curReportSet")
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 
 GOTO RECORD:C242([UserReport:46]; $reportRecordNum)  //
 //<>ptPrintTable:=Table([UserReport]TableNum)

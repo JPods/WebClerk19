@@ -24,21 +24,21 @@ If (Storage:C1525.default.dtStampFldMods)  //
 	Case of 
 		: (($Type=0) | ($Type=2) | ($Type=24))  //string
 			If (processs_o.currentRecord[$fieldName]="")
-				$ModMessage:=$fieldName+" changed to "+entryEntity[$fieldName]
+				$ModMessage:=$fieldName+" changed to "+entry_o[$fieldName]
 			Else 
-				$ModMessage:=$fieldName+" changed to "+entryEntity[$fieldName]+" from "+processs_o.currentRecord[$fieldName]
+				$ModMessage:=$fieldName+" changed to "+entry_o[$fieldName]+" from "+processs_o.currentRecord[$fieldName]
 			End if 
 		: (($Type=1) | ($Type=8) | ($Type=9))  //number
-			$ModMessage:=$fieldName+" changed to "+String:C10(entryEntity[$fieldName])+" from "+String:C10(processs_o.currentRecord[$fieldName])
+			$ModMessage:=$fieldName+" changed to "+String:C10(entry_o[$fieldName])+" from "+String:C10(processs_o.currentRecord[$fieldName])
 		: ($Type=11)  //time
-			$ModMessage:=$fieldName+" changed to "+String:C10(entryEntity[$fieldName]; 5)+" from "+String:C10(processs_o.currentRecord[$fieldName]; 5)
+			$ModMessage:=$fieldName+" changed to "+String:C10(entry_o[$fieldName]; 5)+" from "+String:C10(processs_o.currentRecord[$fieldName]; 5)
 		: ($Type=4)  //date
 			var $oldDate : Date
 			$oldDate:=processs_o.currentRecord[$fieldName]
 			If (($oldDate<(Current date:C33-370)) | ($oldDate>(Current date:C33+420)))  //###_jwm_### 20101111
 				$oldDate:=!00-00-00!
 			End if 
-			$ModMessage:=$fieldName+" changed to "+String:C10(entryEntity[$fieldName]; 1)+" from "+String:C10($oldDate; 1)
+			$ModMessage:=$fieldName+" changed to "+String:C10(entry_o[$fieldName]; 1)+" from "+String:C10($oldDate; 1)
 		: ($Type=6)  //boolean
 			var $old : Text
 			If (processs_o.currentRecord[$fieldName])
@@ -47,16 +47,16 @@ If (Storage:C1525.default.dtStampFldMods)  //
 				$old:="False"
 			End if 
 			var $new : Text
-			If (entryEntity[$fieldName])
+			If (entry_o[$fieldName])
 				$new:="True"
 			Else 
 				$new:="False"
 			End if 
 			$ModMessage:=$fieldName+" changed to "+$new+" from "+$old
 	End case 
-	If (entryEntity#Null:C1517)
+	If (entry_o#Null:C1517)
 		$tempTxt:=String:C10(Current date:C33; 1)+";  "+String:C10(Current time:C178; 2)+"; "+Current user:C182+" - "
-		entryEntity[$commentName]:=$tempTxt+$ModMessage+"\r"+entryEntity[$commentName]
+		entry_o[$commentName]:=$tempTxt+$ModMessage+"\r"+entry_o[$commentName]
 	Else 
 		Case of 
 			: (($Type=0) | ($Type=2) | ($Type=24))  //string

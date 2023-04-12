@@ -19,7 +19,7 @@ If (False:C215)  // script version
 	vi9:=BLOB size:C605([UserReport:46]reportBlob:27)
 	vi10:=0
 	vText7:="XMLblob: "+String:C10(vi8)+"\r"+"ReportBlob: "+String:C10(vi9)
-	ConsoleMessage(vText7)
+	ConsoleLog(vText7)
 	ALERT:C41(vText7)
 	If (vi8>1000)
 		CONFIRM:C162("From XMLblob to XMLText, size: "+String:C10(vi8))

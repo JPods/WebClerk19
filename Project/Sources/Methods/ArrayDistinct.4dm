@@ -25,13 +25,13 @@ Case of
 		$fieldNum:=Field:C253($ptField)
 		$tableNum:=Table:C252($ptField)
 		$ptTable:=Table:C252($tableNum)
-	: (PTCURTABLE=(->[QQQCounter:41]))
-		$tableNum:=[QQQCounter:41]TableNum:4
+	: (PTCURTABLE=(->[Counter:41]))
+		$tableNum:=[Counter:41]tableNum:4
 		$ptTable:=Table:C252($tableNum)
-		$fieldNum:=STR_GetUniqueFieldNum(Table name:C256([QQQCounter:41]TableNum:4))
-		$ptField:=Field:C253([QQQCounter:41]TableNum:4; $fieldNum)
+		$fieldNum:=STR_GetUniqueFieldNum(Table name:C256([Counter:41]tableNum:4))
+		$ptField:=Field:C253([Counter:41]tableNum:4; $fieldNum)
 	Else 
-		ConsoleMessage("(P) ArrayDistinct:  Pass a pointer to a field or be in a [Counter] record.")
+		ConsoleLog("(P) ArrayDistinct:  Pass a pointer to a field or be in a [Counter] record.")
 End case 
 
 

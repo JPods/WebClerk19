@@ -90,8 +90,8 @@ If ((b64=1) & (vltaskID>0))
 	QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]idNumTask:22=vltaskID; *)
 End if 
 
-QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44>=DateTime_Enter((iLoDate1-iLoInteger1); ?00:00:00?); *)
-QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44<=DateTime_Enter((iLoDate1+iLoInteger1); ?23:59:59?); *)
+QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44>=DateTime_DTTo((iLoDate1-iLoInteger1); ?00:00:00?); *)
+QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44<=DateTime_DTTo((iLoDate1+iLoInteger1); ?23:59:59?); *)
 QUERY:C277([WorkOrder:66])
 
 WOTransfers_Sort(iLoText2)

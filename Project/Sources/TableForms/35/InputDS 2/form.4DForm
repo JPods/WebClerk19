@@ -1,0 +1,1851 @@
+{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 465,
+	"markerBreak": 465,
+	"markerFooter": 465,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_AdSource_active_3": {
+					"type": "checkbox",
+					"top": 16,
+					"left": 156,
+					"width": 93,
+					"height": 14,
+					"dataSource": "entry_o.active",
+					"text": "Active",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]active:7"
+				},
+				"_PROP_AdSource_marketEffort_4": {
+					"type": "input",
+					"top": 16,
+					"left": 379,
+					"width": 196,
+					"height": 17,
+					"dataSource": "entry_o.marketEffort",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]marketEffort:2"
+				},
+				"_PROP_AdSource_publication_5": {
+					"type": "input",
+					"top": 35,
+					"left": 379,
+					"width": 196,
+					"height": 17,
+					"dataSource": "entry_o.publication",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]publication:30"
+				},
+				"_PROP_AdSource_issue_6": {
+					"type": "input",
+					"top": 54,
+					"left": 379,
+					"width": 196,
+					"height": 17,
+					"dataSource": "entry_o.issue",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]issue:29"
+				},
+				"_PROP_AdSource_adCode_7": {
+					"type": "input",
+					"top": 73,
+					"left": 379,
+					"width": 82,
+					"height": 17,
+					"dataSource": "entry_o.adCode",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]adCode:1"
+				},
+				"_PROP_AdSource_dateofEffort_8": {
+					"type": "input",
+					"top": 73,
+					"left": 463,
+					"width": 112,
+					"height": 17,
+					"dataSource": "entry_o.dateofEffort",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]dateofEffort:3"
+				},
+				"_PROP_AdSource_size_9": {
+					"type": "input",
+					"top": 16,
+					"left": 687,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.size",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]size:54"
+				},
+				"_PROP_AdSource_circulation_10": {
+					"type": "input",
+					"top": 16,
+					"left": 804,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.circulation",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]circulation:55"
+				},
+				"_PROP_AdSource_dateCalcBegin_11": {
+					"type": "input",
+					"top": 35,
+					"left": 687,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.dateCalcBegin",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]dateCalcBegin:5"
+				},
+				"_PROP_AdSource_dateCalcEnd_12": {
+					"type": "input",
+					"top": 35,
+					"left": 804,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.dateCalcEnd",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]dateCalcEnd:6"
+				},
+				"_PROP_AdSource_dateofCalc_13": {
+					"type": "input",
+					"top": 53,
+					"left": 687,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.dateofCalc",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]dateofCalc:4"
+				},
+				"_PROP_AdSource_idNum_14": {
+					"type": "input",
+					"top": 36,
+					"left": 132,
+					"width": 138,
+					"height": 17,
+					"dataSource": "entry_o.idNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]idNum:56"
+				},
+				"_PROP_AdSource_costPlan_15": {
+					"type": "input",
+					"top": 118,
+					"left": 143,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.costPlan",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]costPlan:23"
+				},
+				"_PROP_AdSource_numLeadPlan_16": {
+					"type": "input",
+					"top": 137,
+					"left": 143,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.numLeadPlan",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numLeadPlan:19"
+				},
+				"_PROP_AdSource_numCustPlan_17": {
+					"type": "input",
+					"top": 156,
+					"left": 143,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.numCustPlan",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numCustPlan:17"
+				},
+				"_PROP_AdSource_costRespPlan_18": {
+					"type": "input",
+					"top": 175,
+					"left": 143,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.costRespPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]costRespPlan:21"
+				},
+				"_PROP_AdSource_numOrdPlan_19": {
+					"type": "input",
+					"top": 226,
+					"left": 143,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.numOrdPlan",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numOrdPlan:14"
+				},
+				"_PROP_AdSource_valueOrdPlan_20": {
+					"type": "input",
+					"top": 245,
+					"left": 143,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.valueOrdPlan",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]valueOrdPlan:15"
+				},
+				"_PROP_AdSource_numInvPlan_21": {
+					"type": "input",
+					"top": 332,
+					"left": 142,
+					"width": 109,
+					"height": 17,
+					"dataSource": "entry_o.numInvPlan",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numInvPlan:10"
+				},
+				"_PROP_AdSource_valueInvPlan_22": {
+					"type": "input",
+					"top": 351,
+					"left": 142,
+					"width": 109,
+					"height": 17,
+					"dataSource": "entry_o.valueInvPlan",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]valueInvPlan:11"
+				},
+				"_PROP_AdSource_costAct_23": {
+					"type": "input",
+					"top": 119,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.costAct",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"numberFormat": "###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]costAct:22"
+				},
+				"_PROP_AdSource_numLeadAct_24": {
+					"type": "input",
+					"top": 137,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.numLeadAct",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numLeadAct:18"
+				},
+				"_PROP_AdSource_numCustAct_25": {
+					"type": "input",
+					"top": 156,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.numCustAct",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numCustAct:16"
+				},
+				"_PROP_AdSource_costRespAct_26": {
+					"type": "input",
+					"top": 175,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.costRespAct",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]costRespAct:20"
+				},
+				"_PROP_AdSource_newResponces_27": {
+					"type": "input",
+					"top": 194,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.newResponces",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]newResponces:28"
+				},
+				"_PROP_AdSource_numOrdAct_28": {
+					"type": "input",
+					"top": 226,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.numOrdAct",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numOrdAct:12"
+				},
+				"_PROP_AdSource_valueOrdAct_29": {
+					"type": "input",
+					"top": 245,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.valueOrdAct",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]valueOrdAct:13"
+				},
+				"_PROP_AdSource_costofSales_30": {
+					"type": "input",
+					"top": 264,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.costofSales",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]costofSales:26"
+				},
+				"_PROP_AdSource_value1stOrd_31": {
+					"type": "input",
+					"top": 283,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.value1stOrd",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]value1stOrd:27"
+				},
+				"_PROP_AdSource_num1stOrd_32": {
+					"type": "input",
+					"top": 302,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.num1stOrd",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]num1stOrd:25"
+				},
+				"_PROP_AdSource_numInvAct_33": {
+					"type": "input",
+					"top": 332,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.numInvAct",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]numInvAct:8"
+				},
+				"_PROP_AdSource_valueInvAct_34": {
+					"type": "input",
+					"top": 351,
+					"left": 276,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.valueInvAct",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "###,###,##0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]valueInvAct:9"
+				},
+				"_PROP_AdSource_pOReference_35": {
+					"type": "input",
+					"top": 119,
+					"left": 512,
+					"width": 167,
+					"height": 17,
+					"dataSource": "entry_o.pOReference",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/0000-0000"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]pOReference:31"
+				},
+				"_PROP_AdSource_paceItem1_36": {
+					"type": "input",
+					"top": 400,
+					"left": 143,
+					"width": 149,
+					"height": 17,
+					"dataSource": "entry_o.paceItem1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceItem1:32"
+				},
+				"_PROP_AdSource_paceItem2_37": {
+					"type": "input",
+					"top": 419,
+					"left": 143,
+					"width": 149,
+					"height": 17,
+					"dataSource": "entry_o.paceItem2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceItem2:33"
+				},
+				"_PROP_AdSource_paceItem3_38": {
+					"type": "input",
+					"top": 438,
+					"left": 143,
+					"width": 149,
+					"height": 17,
+					"dataSource": "entry_o.paceItem3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceItem3:34"
+				},
+				"_PROP_AdSource_paceItem4_39": {
+					"type": "input",
+					"top": 457,
+					"left": 143,
+					"width": 149,
+					"height": 17,
+					"dataSource": "entry_o.paceItem4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceItem4:35"
+				},
+				"_PROP_AdSource_paceItem5_40": {
+					"type": "input",
+					"top": 476,
+					"left": 143,
+					"width": 149,
+					"height": 17,
+					"dataSource": "entry_o.paceItem5",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceItem5:36"
+				},
+				"_PROP_AdSource_pacePerCent1_41": {
+					"type": "input",
+					"top": 400,
+					"left": 294,
+					"width": 57,
+					"height": 17,
+					"dataSource": "entry_o.pacePerCent1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]pacePerCent1:37"
+				},
+				"_PROP_AdSource_pacePerCent2_42": {
+					"type": "input",
+					"top": 419,
+					"left": 294,
+					"width": 57,
+					"height": 17,
+					"dataSource": "entry_o.pacePerCent2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]pacePerCent2:38"
+				},
+				"_PROP_AdSource_pacePerCent3_43": {
+					"type": "input",
+					"top": 438,
+					"left": 294,
+					"width": 57,
+					"height": 17,
+					"dataSource": "entry_o.pacePerCent3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]pacePerCent3:39"
+				},
+				"_PROP_AdSource_pacePerCent4_44": {
+					"type": "input",
+					"top": 457,
+					"left": 294,
+					"width": 57,
+					"height": 17,
+					"dataSource": "entry_o.pacePerCent4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]pacePerCent4:40"
+				},
+				"_PROP_AdSource_pacePerCent5_45": {
+					"type": "input",
+					"top": 476,
+					"left": 294,
+					"width": 57,
+					"height": 17,
+					"dataSource": "entry_o.pacePerCent5",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]pacePerCent5:41"
+				},
+				"_PROP_AdSource_paceSales1_46": {
+					"type": "input",
+					"top": 400,
+					"left": 353,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceSales1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceSales1:42"
+				},
+				"_PROP_AdSource_paceSales2_47": {
+					"type": "input",
+					"top": 419,
+					"left": 353,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceSales2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceSales2:43"
+				},
+				"_PROP_AdSource_paceSales3_48": {
+					"type": "input",
+					"top": 438,
+					"left": 353,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceSales3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceSales3:44"
+				},
+				"_PROP_AdSource_paceSales4_49": {
+					"type": "input",
+					"top": 457,
+					"left": 353,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceSales4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceSales4:45"
+				},
+				"_PROP_AdSource_paceSales5_50": {
+					"type": "input",
+					"top": 476,
+					"left": 353,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceSales5",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceSales5:46"
+				},
+				"_PROP_AdSource_paceMargin1_51": {
+					"type": "input",
+					"top": 400,
+					"left": 470,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceMargin1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceMargin1:47"
+				},
+				"_PROP_AdSource_paceMargin2_52": {
+					"type": "input",
+					"top": 419,
+					"left": 470,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceMargin2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceMargin2:48"
+				},
+				"_PROP_AdSource_paceMargin3_53": {
+					"type": "input",
+					"top": 438,
+					"left": 470,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceMargin3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceMargin3:49"
+				},
+				"_PROP_AdSource_paceMargin4_54": {
+					"type": "input",
+					"top": 457,
+					"left": 470,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceMargin4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceMargin4:50"
+				},
+				"_PROP_AdSource_paceMargin5_55": {
+					"type": "input",
+					"top": 476,
+					"left": 470,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.paceMargin5",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]paceMargin5:51"
+				},
+				"_VAR_vRM1_56": {
+					"type": "input",
+					"top": 400,
+					"left": 587,
+					"width": 56,
+					"height": 17,
+					"dataSource": "vRM1",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "##,##0.0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_vRM2_57": {
+					"type": "input",
+					"top": 419,
+					"left": 587,
+					"width": 56,
+					"height": 17,
+					"dataSource": "vRM2",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "##,##0.0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_vRM3_58": {
+					"type": "input",
+					"top": 438,
+					"left": 587,
+					"width": 56,
+					"height": 17,
+					"dataSource": "vRM3",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "##,##0.0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_vRM4_59": {
+					"type": "input",
+					"top": 457,
+					"left": 587,
+					"width": 56,
+					"height": 17,
+					"dataSource": "vRM4",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "##,##0.0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_vRM5_60": {
+					"type": "input",
+					"top": 476,
+					"left": 587,
+					"width": 56,
+					"height": 17,
+					"dataSource": "vRM5",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "##,##0.0",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_AdSource_comment_61": {
+					"type": "input",
+					"top": 525,
+					"left": 30,
+					"width": 937,
+					"height": 139,
+					"dataSource": "entry_o.comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[AdSource:35]comment:24"
+				},
+				"Tally": {
+					"type": "button",
+					"top": 90,
+					"left": 687,
+					"width": 81,
+					"height": 20,
+					"dataSource": "bCalcRespon",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Tally",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Tally.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b1_63": {
+					"type": "button",
+					"top": 119,
+					"left": 421,
+					"width": 86,
+					"height": 16,
+					"dataSource": "b1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_$-Cost;$_R-Cost_Repsonse;#O=OrderCnt;$0-OrderValue_64": {
+					"type": "text",
+					"top": 473,
+					"left": 753,
+					"width": 168,
+					"height": 23,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "$-Cost; $/R-Cost/Repsonse; #O=Order Cnt; $0-Order Value"
+				},
+				"_Text__16793155_65": {
+					"type": "text",
+					"top": 266,
+					"left": 27,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,155"
+				},
+				"_Text__16793156_66": {
+					"type": "text",
+					"top": 285,
+					"left": 27,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,156"
+				},
+				"_Text__16793157_67": {
+					"type": "text",
+					"top": 304,
+					"left": 27,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,157"
+				},
+				"_Text__16793158_68": {
+					"type": "text",
+					"top": 18,
+					"left": 579,
+					"width": 101,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,158"
+				},
+				"_Text__16793159_69": {
+					"type": "text",
+					"top": 37,
+					"left": 579,
+					"width": 101,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,159"
+				},
+				"_Text__1679224_70": {
+					"type": "text",
+					"top": 55,
+					"left": 579,
+					"width": 101,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16792,24"
+				},
+				"_Text_POReference_71": {
+					"type": "text",
+					"top": 121,
+					"left": 389,
+					"width": 116,
+					"height": 12,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PO Reference"
+				},
+				"_Text_PacingItem5_72": {
+					"type": "text",
+					"top": 478,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Pacing Item 5"
+				},
+				"_Text_PacingItem4_73": {
+					"type": "text",
+					"top": 459,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Pacing Item 4"
+				},
+				"_Text_PacingItem3_74": {
+					"type": "text",
+					"top": 440,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Pacing Item 3"
+				},
+				"_Text_PacingItem2_75": {
+					"type": "text",
+					"top": 421,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Pacing Item 2"
+				},
+				"_Text_PacingItem1_76": {
+					"type": "text",
+					"top": 402,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Pacing Item 1"
+				},
+				"_Text_InvoiceValue_77": {
+					"type": "text",
+					"top": 353,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Invoice Value"
+				},
+				"_Text_#Invoices_78": {
+					"type": "text",
+					"top": 334,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "#Invoices"
+				},
+				"_Text_OrderValue_79": {
+					"type": "text",
+					"top": 247,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Order Value"
+				},
+				"_Text_#Orders_80": {
+					"type": "text",
+					"top": 228,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "#Orders"
+				},
+				"_Text_CostofEffort_81": {
+					"type": "text",
+					"top": 120,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Cost of Effort"
+				},
+				"_Text_#Leads_82": {
+					"type": "text",
+					"top": 139,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "#Leads"
+				},
+				"_Text_#Customers_83": {
+					"type": "text",
+					"top": 158,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "#Customers"
+				},
+				"_Text_Cost_Response_84": {
+					"type": "text",
+					"top": 177,
+					"left": 11,
+					"width": 125,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Cost/Response"
+				},
+				"_Text_Comment_85": {
+					"type": "text",
+					"top": 508,
+					"left": 28,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Comment"
+				},
+				"_Text_AdCode_Date_86": {
+					"type": "text",
+					"top": 75,
+					"left": 232,
+					"width": 140,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "AdCode/Date"
+				},
+				"_Text_Issue_87": {
+					"type": "text",
+					"top": 56,
+					"left": 232,
+					"width": 140,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Issue"
+				},
+				"_Text_Publication_Show_88": {
+					"type": "text",
+					"top": 37,
+					"left": 232,
+					"width": 140,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Publication/Show"
+				},
+				"_Text_MarketEffort_89": {
+					"type": "text",
+					"top": 18,
+					"left": 232,
+					"width": 140,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Market Effort"
+				},
+				"_Text_PacingItem_90": {
+					"type": "text",
+					"top": 382,
+					"left": 161,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Pacing Item"
+				},
+				"_Text_%_91": {
+					"type": "text",
+					"top": 382,
+					"left": 300,
+					"width": 43,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "%"
+				},
+				"_Text_Sales_92": {
+					"type": "text",
+					"top": 382,
+					"left": 360,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Sales"
+				},
+				"_Text_Margin_93": {
+					"type": "text",
+					"top": 378,
+					"left": 473,
+					"width": 165,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Margin"
+				},
+				"_Text_Plan_94": {
+					"type": "text",
+					"top": 100,
+					"left": 144,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Plan"
+				},
+				"_Text_Actual_95": {
+					"type": "text",
+					"top": 100,
+					"left": 276,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Actual"
+				},
+				"_VAR_bAccept_96": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_97": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_98": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_99": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Graph": {
+					"type": "input",
+					"top": 117,
+					"left": 687,
+					"width": 291,
+					"height": 289,
+					"dataSource": "vPGraf",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "scaled",
+					"dragging": "none"
+				},
+				"SF_Document": {
+					"type": "subform",
+					"left": 404,
+					"top": 144,
+					"width": 275,
+					"height": 224,
+					"method": "ObjectMethods/SF_Document.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.Document"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 14,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

@@ -21,11 +21,11 @@ If ($direction=0)
 	FIRST RECORD:C50([Rep:8])
 	$k:=Records in selection:C76([Rep:8])
 	For ($i; 1; $k)
-		QUERY:C277([Employee:19]; [Employee:19]nameid:1=[Rep:8]repID:1)
+		QUERY:C277([Employee:19]; [Employee:19]nameID:1=[Rep:8]repID:1)
 		If (Records in selection:C76([Employee:19])=0)
 			CREATE RECORD:C68([Employee:19])
 		End if 
-		[Employee:19]nameid:1:=[Rep:8]repID:1
+		[Employee:19]nameID:1:=[Rep:8]repID:1
 		[Employee:19]nameLast:2:=[Rep:8]nameLast:27
 		[Employee:19]nameFirst:3:=[Rep:8]nameFirst:25
 		[Employee:19]address1:17:=[Rep:8]address1:4
@@ -52,11 +52,11 @@ Else
 	FIRST RECORD:C50([Employee:19])
 	$k:=Records in selection:C76([Employee:19])
 	For ($i; 1; $k)
-		QUERY:C277([Rep:8]; [Employee:19]nameid:1=[Rep:8]repID:1)
+		QUERY:C277([Rep:8]; [Employee:19]nameID:1=[Rep:8]repID:1)
 		If (Records in selection:C76([Employee:19])=0)
 			CREATE RECORD:C68([Rep:8])
 		End if 
-		[Rep:8]repID:1:=[Employee:19]nameid:1
+		[Rep:8]repID:1:=[Employee:19]nameID:1
 		[Rep:8]nameLast:27:=[Employee:19]nameLast:2
 		[Rep:8]nameFirst:25:=[Employee:19]nameFirst:3
 		[Rep:8]address1:4:=[Employee:19]address1:17
@@ -86,7 +86,7 @@ If ($doThis)
 	FIRST RECORD:C50([Employee:19])
 	$k:=Records in selection:C76([Employee:19])
 	For ($i; 1; $k)
-		Parse_UnWanted(entryEntity.nameid)
+		Parse_UnWanted(process_o.entry_o.nameid)
 		SAVE RECORD:C53([Employee:19])
 		NEXT RECORD:C51([Employee:19])
 	End for 
@@ -96,7 +96,7 @@ If ($doThis)
 	FIRST RECORD:C50([Rep:8])
 	$k:=Records in selection:C76([Rep:8])
 	For ($i; 1; $k)
-		Parse_UnWanted(entryEntity.repID)
+		Parse_UnWanted(process_o.entry_o.repID)
 		SAVE RECORD:C53([Rep:8])
 		NEXT RECORD:C51([Rep:8])
 	End for 
@@ -109,7 +109,7 @@ If ($doThis)
 	FIRST RECORD:C50([Employee:19])
 	$k:=Records in selection:C76([Employee:19])
 	For ($i; 1; $k)
-		RemoteUser_Create(->[Employee:19]; [Employee:19]email:16; [Employee:19]nameid:1; 5000)
+		RemoteUser_Create(->[Employee:19]; [Employee:19]email:16; [Employee:19]nameID:1; 5000)
 		SAVE RECORD:C53([Employee:19])
 		NEXT RECORD:C51([Employee:19])
 	End for 

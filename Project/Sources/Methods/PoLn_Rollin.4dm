@@ -26,7 +26,7 @@ For ($i; $k; 2; -1)
 		$baseCost:=$baseCost+(aPOQtyOrder{$i}*aPoUnitCost{$i})
 		$discount:=$discount+(aPODiscnt{$i}*0.01*aPOQtyOrder{$i}*aPOUnitCost{$i})
 		$totalCost:=$totalCost+aPOExtCost{$i}
-		$serialNums:=$serialNums+aPOSerialNm{$i}
+		//$serialNums:=$serialNums+aPOSerialNm{$i}
 		$comment:=$comment+aPoLComment{$i}
 		POLn_RaySize(-1; $i; 1)
 	End if 
@@ -40,7 +40,7 @@ For ($i; $k; 2; -1)
 		$baseCost:=$baseCost+(aPOQtyOrder{$i}*aPoUnitCost{$i})
 		$discount:=$discount+(aPODiscnt{$i}*0.01*aPOQtyOrder{$i}*aPOUnitCost{$i})
 		$totalCost:=$totalCost+aPOExtCost{$i}
-		$serialNums:=$serialNums+aPOSerialNm{$i}
+		//$serialNums:=$serialNums+aPOSerialNm{$i}
 		$comment:=$comment+aPoLComment{$i}
 		//
 		aPOQtyNow{$i}:=$qtyNow
@@ -58,7 +58,7 @@ For ($i; $k; 2; -1)
 			aPoUnitCost{$i}:=0
 			aPoDscntUP{$i}:=0
 		End if 
-		aPOSerialNm{$i}:=$serialNums
+		//aPOSerialNm{$i}:=$serialNums
 		aPOQtyRcvd{$i}:=$qtyRcvd
 		aPOQtyBL{$i}:=$qtyBL
 		aPoLComment{$i}:=$comment

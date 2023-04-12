@@ -26,7 +26,7 @@ If (OK=1)
 			vText9:=vText9+"\r"+"<li><a href=\"movies/"+aText1{vi1}+"\" target=\"Main_Frame\">"+aText1{vi1}+"</a></li>"
 		End if 
 	End for 
-	ConsoleMessage(vText9)
+	ConsoleLog(vText9)
 	SET TEXT TO PASTEBOARD:C523(vText9)
 	
 End if 

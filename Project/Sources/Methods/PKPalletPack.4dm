@@ -89,8 +89,8 @@ If ($err=0)
 		[LoadTag:88]idNumOrder:29:=[Order:3]idNum:2
 		[LoadTag:88]tableNum:34:=3
 		[LoadTag:88]documentID:17:=[LoadTag:88]idNumOrder:29
-		[LoadTag:88]dtShipOn:10:=DateTime_Enter
-		[LoadTag:88]dtAssembly:9:=DateTime_Enter  //###_jwm_### 20100204
+		[LoadTag:88]dtShipOn:10:=DateTime_DTTo
+		[LoadTag:88]dtAssembly:9:=DateTime_DTTo  //###_jwm_### 20100204
 		[LoadTag:88]dateDocument:39:=Current date:C33  //###_jwm_### 20100204
 		SAVE RECORD:C53([LoadTag:88])
 		$recNumPallet:=Record number:C243([LoadTag:88])

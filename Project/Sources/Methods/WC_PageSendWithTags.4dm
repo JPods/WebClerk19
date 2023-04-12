@@ -28,7 +28,7 @@ $doRecord:=False:C215
 // get the page from the correct web folder
 $text2Send:=WC_PageLoad($documentPath; ->$documentPath)  // ### AZM ### 20180914 SEND POINTER SO THAT UPDATED DOCUMENT PATH CAN BE USED LATER
 
-$text2Send:=Replace string:C233($text2Send; "jitRemote"; <>vWCPathRemoteViaWeb)
+$text2Send:=Replace string:C233($text2Send; "jitRemote"; Storage:C1525.wc.pathRemoteViaWeb)
 
 // ### jwm ### 20150922_1108 check security level
 C_LONGINT:C283($jitSecure)
@@ -45,7 +45,7 @@ $jitSecure:=Num:C11($content)
 // ### jwm ### 20181210_1649 updated security check
 If (($jitSecure>viSecureLvl) & ($jitSecure>vWccSecurity))
 	vResponse:="Error: Security level required above current access"
-	$documentPath:=<>WebFolder+"error.html"
+	$documentPath:=Storage:C1525.wc.webFolder+"error.html"
 	$text2Send:=WC_PageLoad($documentPath; ->$documentPath)  // ### AZM ### 20180914 SEND POINTER SO THAT UPDATED DOCUMENT PATH CAN BE USED LATER
 End if 
 C_LONGINT:C283($offset; $lenBlob)
@@ -69,7 +69,7 @@ Case of
 End case 
 
 If (<>viDebugMode>410)
-	ConsoleMessage("$textFinal: "+$textFinal)  // ### jwm ### 20171006_0941
+	ConsoleLog("$textFinal: "+$textFinal)  // ### jwm ### 20171006_0941
 	//SET TEXT TO PASTEBOARD($textFinal)
 End if 
 

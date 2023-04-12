@@ -155,12 +155,12 @@ Case of
 		[LoadTag:88]insuranceid:16:=aPKInsuranceID{$2}
 		[LoadTag:88]dtShipOn:10:=aPKDTShipOn{$2}
 		If ([LoadTag:88]dtShipOn:10=0)
-			[LoadTag:88]dtShipOn:10:=DateTime_Enter
+			[LoadTag:88]dtShipOn:10:=DateTime_DTTo
 		End if 
 		[LoadTag:88]dtReceiveExpected:12:=aPKDTReceiveExpected{$2}
 		[LoadTag:88]dtAssembly:9:=aPKDTAssembly{$2}
 		If ([LoadTag:88]dtAssembly:9=0)
-			[LoadTag:88]dtAssembly:9:=DateTime_Enter
+			[LoadTag:88]dtAssembly:9:=DateTime_DTTo
 		End if 
 		If ([LoadTag:88]dateDocument:39=!00-00-00!)  //###_jwm_### 20100202 Set Date Created
 			[LoadTag:88]dateDocument:39:=Current date:C33

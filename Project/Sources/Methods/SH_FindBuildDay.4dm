@@ -20,7 +20,7 @@ jDateTimeUserCl  //vdStDate vdEndDate
 CONFIRM:C162("Build daily pacing history from "+String:C10(vdStDate)+"; "+String:C10(vdEndDate))
 If (OK=1)
 	//
-	QUERY:C277([TallyChange:65]; [TallyChange:65]fileNum:1=Table:C252(->[DInventory:36]); *)
+	QUERY:C277([TallyChange:65]; [TallyChange:65]idAlpha:1=Table:C252(->[DInventory:36]); *)
 	QUERY:C277([TallyChange:65];  & [TallyChange:65]complete:6=False:C215)
 	$k:=Records in selection:C76([TallyChange:65])
 	If ($k>0)
@@ -30,15 +30,20 @@ If (OK=1)
 		For ($i; 1; $k)
 			LOAD RECORD:C52([TallyChange:65])
 			If (Not:C34(Locked:C147([TallyChange:65])))
-				GOTO RECORD:C242([DInventory:36]; [TallyChange:65]longIntKey:4)
+				GOTO RECORD:C242([DInventory:36]; [TallyChange:65]idNumKey:4)
 				LOAD RECORD:C52([DInventory:36])
 				If (Not:C34(Locked:C147([DInventory:36])))
-					If ([TallyChange:65]fieldNum:2=Table:C252(->[DInventory:36]pacing:23))
-						[DInventory:36]paceTallied:24:=[TallyChange:65]booleanValue:8
-						SAVE RECORD:C53([DInventory:36])
-						[TallyChange:65]complete:6:=True:C214
-						SAVE RECORD:C53([TallyChange:65])
-					End if 
+					
+					
+					// MustFixQQQZZZ: Bill James (2022-06-24T05:00:00Z)
+					// look at pacing reporting
+					
+					//If ([TallyChange]obHistory=Table(->[DInventory]pacing))
+					//[DInventory]paceTallied:=[TallyChange]booleanValue
+					//SAVE RECORD([DInventory])
+					//[TallyChange]complete:=True
+					//SAVE RECORD([TallyChange])
+					//End if 
 				End if 
 			End if 
 		End for 
@@ -60,8 +65,8 @@ If (OK=1)
 		TRACE:C157
 		For ($i; 1; $k)
 			vdEndDate:=vdStDate
-			vlDTStart:=DateTime_Enter(vdStDate; ?00:00:00?)
-			vlDTEnd:=DateTime_Enter(vdEndDate; ?23:59:59?)
+			vlDTStart:=DateTime_DTTo(vdStDate; ?00:00:00?)
+			vlDTEnd:=DateTime_DTTo(vdEndDate; ?23:59:59?)
 			QUERY:C277([DInventory:36]; [DInventory:36]typeID:14="IV"; *)
 			QUERY:C277([DInventory:36];  | [DInventory:36]typeID:14="SO"; *)
 			QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=vlDTStart; *)

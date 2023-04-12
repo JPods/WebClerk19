@@ -21,8 +21,6 @@ If ($k>0)
 			Case of 
 				: ($curTableNum=2)  //Customers
 					QUERY:C277([Customer:2]; [Customer:2]customerID:1=$theAcct)
-				: ($curTableNum=48)  //Leads
-					QUERY:C277([Lead:48]; [Lead:48]idNum:32=Num:C11($theAcct))
 				: ($curTableNum=Table:C252(->[Contact:13]))  //Contacts
 					QUERY:C277([Contact:13]; [Contact:13]idNum:28=Num:C11($theAcct))
 				: ($curTableNum=Table:C252(->[Vendor:38]))  //Vendor

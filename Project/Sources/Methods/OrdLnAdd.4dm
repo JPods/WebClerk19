@@ -176,7 +176,7 @@ If (allowAlerts_boo)
 		End if 
 	End if 
 	If ([Item:4]alertMessage:52#"")
-		ConsoleMessage([Item:4]itemNum:1+"\r"+"\r"+[Item:4]alertMessage:52)
+		ConsoleLog([Item:4]itemNum:1+"\r"+"\r"+[Item:4]alertMessage:52)
 	End if 
 End if 
 //vLineMod:=True

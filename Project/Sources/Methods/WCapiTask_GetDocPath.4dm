@@ -12,7 +12,7 @@
 // ----------------------------------------------------
 
 // tableName=QACustomers&UUIDKeyjj=EA5E271B809C6B4C80AF8B5531982202&Thumbnail=true
-$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"noimage.jpg"
+$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"noimage.jpg"
 $tableName:=WCapi_GetParameter("tableName"; "")
 $vtUUIDKey:=WCapi_GetParameter("id"; "")
 $vtThumbnail:=WCapi_GetParameter("Thumbnail"; "")
@@ -31,14 +31,14 @@ Else
 	Else 
 		$vtPath:=PathOrTN($tableName; $vtThumbnail)
 		If ($vtPath="")
-			$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"ImagePathEmpty.jpg"
+			$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"ImagePathEmpty.jpg"
 			vResponse:="Error: No valid DocPath for tableName: "+$tableName+", "+$vtUUIDKey
 		Else 
 			$vtPath:=PathToSystem($vtPath)
 			If (Test path name:C476($vtPath)=1)
 				WC_SendServerResponsePath($vtPath)
 			Else 
-				ConsoleMessage("Error-Path: WCapi_Docs"+$vtPath)
+				ConsoleLog("Error-Path: WCapi_Docs"+$vtPath)
 				vResponse:="Error: pages served only thru vue.js vResponse: "+vResponse
 				WC_voStateError("Error: path: "+$vtPath)
 				WC_SendServerResponse(vResponse)

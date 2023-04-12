@@ -24,9 +24,9 @@ C_OBJECT:C1216($voSelGantt; $voRecGantt)
 C_OBJECT:C1216($voChartToSend)
 C_DATE:C307(vdDateBegin; vdDateEnd)
 
-$voSelGantt:=ds:C1482.FieldCharacteristic.query("purpose = Gantt")
+$voSelGantt:=ds:C1482.FC.query("purpose = Gantt")
 If ($voSelGantt=Null:C1517)
-	Response:="Error: No FieldCharacteristics record exists for Gantt"
+	Response:="Error: No FC record exists for Gantt"
 Else 
 	$voRecGantt:=$voSelGantt.first()
 	$voChartToSend:=$voRecGantt.obGeneral.gantt

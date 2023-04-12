@@ -1,1 +1,0 @@
-ContactFromAttn(->[Proposal:42]attention:37)

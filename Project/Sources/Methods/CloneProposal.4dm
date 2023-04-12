@@ -16,17 +16,17 @@
 // ### bj ### 20200218_0113 so clone can be called from the wcc
 $obClone:=New object:C1471
 $obClone.cloneType:=[Proposal:42]status:2
-$obClone.parent:=[Proposal:42]proposalNum:5
+$obClone.parent:=[Proposal:42]idNum:5
 PpLnInitRays
-QUERY:C277([ProposalLine:43]; [ProposalLine:43]proposalNum:1=[Proposal:42]proposalNum:5)
+QUERY:C277([ProposalLine:43]; [ProposalLine:43]idNumProposal:1=[Proposal:42]idNum:5)
 PpLnFillRays(Records in selection:C76([ProposalLine:43]))
 REDUCE SELECTION:C351([ProposalLine:43]; 0)
 DUPLICATE RECORD:C225([Proposal:42])
-[Proposal:42]proposalNum:5:=CounterNew(->[Proposal:42])
+[Proposal:42]idNum:5:=CounterNew(->[Proposal:42])
 
 CREATE RECORD:C68([Task:140])
 [Task:140]obRelate:17:=New object:C1471
-[Task:140]obRelate:17.Proposal:=[Proposal:42]proposalNum:5
+[Task:140]obRelate:17.Proposal:=[Proposal:42]idNum:5
 SAVE RECORD:C53([Task:140])
 [Proposal:42]idNumTask:70:=[Task:140]idNum:4
 newProp:=True:C214
@@ -41,13 +41,13 @@ End if
 // ### bj ### 20200609_2214
 [Proposal:42]obGeneral:93:=New object:C1471
 [Proposal:42]obGeneral:93.clone:=$obClone
-[Proposal:42]dateProposed:3:=Current date:C33
+[Proposal:42]dateDocument:3:=Current date:C33
 [Proposal:42]salesNameID:9:=Current user:C182
 [Proposal:42]dateNeeded:4:=Current date:C33+<>tcNeedDelay
 [Proposal:42]inquiryCode:6:=""
 [Proposal:42]status:2:="Open"
 [Proposal:42]complete:56:=False:C215
-srPp:=[Proposal:42]proposalNum:5
+srPp:=[Proposal:42]idNum:5
 ARRAY LONGINT:C221(aPpOgRec; 0)
 REDUCE SELECTION:C351([ProposalLine:43]; 0)
 For ($i; 1; Size of array:C274(aPLineAction))

@@ -154,7 +154,7 @@ If ($myOK=1)
 	//[Order]TakenBy:=[Proposal]TakenBy
 	//End if 
 	[Order:3]orderedBy:66:=[Proposal:42]requestedBy:62
-	[Order:3]autoFreight:40:=[Proposal:42]autoFreight:38
+	[Order:3]shipAuto:40:=[Proposal:42]shipAuto:38
 	If ([Proposal:42]adSource:47#"")
 		[Order:3]adSource:41:=[Proposal:42]adSource:47
 	Else 

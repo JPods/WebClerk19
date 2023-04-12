@@ -77,7 +77,7 @@ If ($direction="in")
 		End if 
 		If (vResponse="")
 			// zzzqqq jDateTimeStamp(->[SyncRecord:109]packingNotes:14; Current user:C182+" unpacked")
-			[SyncRecord:109]dtComplete:8:=DateTime_Enter
+			[SyncRecord:109]dtComplete:8:=DateTime_DTTo
 			[SyncRecord:109]statusReceive:19:="Unpacked"
 			SAVE RECORD:C53([SyncRecord:109])
 			VALIDATE TRANSACTION:C240

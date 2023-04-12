@@ -47,7 +47,7 @@ Case of
 			End for 
 			If (OK=1)
 				C_LONGINT:C283($dtNow)
-				$dtNow:=DateTime_Enter
+				$dtNow:=DateTime_DTTo
 				//CONFIRM("Invoice "+String($k)+" packages.")
 				//If (OK=1)
 				//TRACE

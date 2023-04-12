@@ -32,13 +32,13 @@ If (False:C215)
 		// DISTINCT VALUES([PO]VendorID;$aVendorID)
 		FIRST RECORD:C50([PO:39])
 		For ($inc; 1; $cnt)
-			QUERY:C277([QQQVendor:38]; [QQQVendor:38]VendorID:1=[PO:39]vendorId:1)
-			QUERY:C277([SyncRelation:103]; [SyncRelation:103]Name:8="POstoVendor-"+[QQQVendor:38]VendorID:1)
+			QUERY:C277([Vendor:38]; [Vendor:38]vendorID:1=[PO:39]vendorID:1)
+			QUERY:C277([SyncRelation:103]; [SyncRelation:103]name:8="POstoVendor-"+[Vendor:38]vendorID:1)
 			If (Records in selection:C76([SyncRelation:103])=1)
 				REDUCE SELECTION:C351([SyncRecord:109]; 0)
 				// the [SyncRecord] will be created during the sending process
 				RP_JSONSend
-				$comment:="RecordPassing: "+[SyncRelation:103]Name:8
+				$comment:="RecordPassing: "+[SyncRelation:103]name:8
 			Else 
 				$comment:="RecordPassing Error: [SyncRelation]Name defined"
 			End if 
@@ -53,14 +53,14 @@ Else
 	C_TEXT:C284(vtRPVendorID)
 	// must be set in the calling script
 	If (vtRPVendorID="")
-		If ([SyncRelation:103]PartnerNumber:14=1)
-			vtRPVendorID:=[SyncRelation:103]Partner2AccountID:47
+		If ([SyncRelation:103]partnerNumber:14=1)
+			vtRPVendorID:=[SyncRelation:103]partner2Accountid:47
 		Else 
-			vtRPVendorID:=[SyncRelation:103]Partner1AccountID:36
+			vtRPVendorID:=[SyncRelation:103]partner1Accountid:36
 		End if 
 	End if 
 	
-	QUERY:C277([QQQVendor:38]; [QQQVendor:38]VendorID:1=vtRPVendorID)
+	QUERY:C277([Vendor:38]; [Vendor:38]vendorID:1=vtRPVendorID)
 	// ### bj ### 20190127_1042
 	// [SyncRelation] can now be used for all types of transactions between parnters 
 	// one record per partnership instead of one per transaction type
@@ -70,11 +70,11 @@ Else
 		QUERY:C277([SyncRelation:103]; [SyncRelation:103]id:30=vtRPUUIDKey)
 	End if 
 	
-	If (([QQQVendor:38]VendorID:1#"") & ([SyncRelation:103]Name:8#""))
+	If (([Vendor:38]vendorID:1#"") & ([SyncRelation:103]name:8#""))
 		Ord2POForceVendor  // create the PO from the SO
 		//  RP_PO2VendorSO ($ptObject)  // move this outside this procedure
 	Else 
-		ConsoleMessage("Failed: Ord2POForceVendor <>vtVendorIDRP: "+[QQQVendor:38]VendorID:1+" : [SyncRelation]Name: "+[SyncRelation:103]Name:8)
+		ConsoleLog("Failed: Ord2POForceVendor <>vtVendorIDRP: "+[Vendor:38]vendorID:1+" : [SyncRelation]Name: "+[SyncRelation:103]name:8)
 	End if 
 	vtVendorIDRP:=""
 End if 

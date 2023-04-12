@@ -18,7 +18,7 @@ Case of
 	: (Is new record:C668($1->))
 		// no new records in classic
 		CANCEL:C270
-	: (process_o.tableName=Null:C1517)
+	: (process_o.dataClassName=Null:C1517)
 		
 		// MustFixQQQZZZ: Bill James (2022-01-22T06:00:00Z)
 		// add user security to this also
@@ -31,15 +31,15 @@ Case of
 		$doLoad:=False:C215
 		Case of 
 			: (process_o.cur=Null:C1517)
-				process_o.cur:=DB_RecordReturnObject(process_o.tableName)
+				process_o.cur:=DB_RecordReturnObject(process_o.dataClassName)
 				process_o.old:=Null:C1517  // NEVER_FROM_CLASSIC Bill James (2022-01-28T06:00:00Z)
 				
 				$doLoad:=True:C214
 			: (process_o.cur.id=Null:C1517)
 				CANCEL:C270
 				ALERT:C41("No existing record.")
-			: (process_o.cur.id#(STR_Get_idPointer(process_o.tableName)->))
-				process_o.cur:=DB_RecordReturnObject(process_o.tableName)
+			: (process_o.cur.id#(STR_Get_idPointer(process_o.dataClassName)->))
+				process_o.cur:=DB_RecordReturnObject(process_o.dataClassName)
 				$doLoad:=True:C214
 		End case 
 		
@@ -48,8 +48,10 @@ Case of
 			
 			curRecNum:=Record number:C243($1->)  // even if -3, Manage Last Record
 			var $o : Object
-			$o:=New object:C1471(process_o.tableName; process_o.cur.id)
-			Storage_Replace($o; "lastEntity")
+			If (process_o.cur#Null:C1517)  // ignor on loading
+				$o:=New object:C1471(process_o.dataClassName; process_o.cur.id)
+				Storage_Replace($o; "lastEntity")
+			End if 
 			//remember the current record number to avoid reloading details
 			//jOpenLastRec can manage -3 values
 			// only place in the program this should be called

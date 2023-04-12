@@ -17,7 +17,7 @@ $vbLaunch:=False:C215
 
 // ### JWM ### 20171016_1820 launch console if needed to display error messages
 If (<>consoleProcess=0)
-	ConsoleMessage("Launch")
+	ConsoleLog("Launch")
 End if 
 
 // IF WE HAVE A WEBCLERK RECORD OPEN, USE IT. THIS IS THE TOP LEVEL OVERRIDE.
@@ -29,7 +29,7 @@ End if
 // LAYOUTCHANGE   // ### bj ### 20190806_1239 to show the publish nature at the top
 
 // ### bj ### 20210822_1422
-DefaultSetupsCreate("<>vtQueryBy"; "contains"; "is text"; "WebClerk"; ""; "contains, object, keyword: in ajax_QueryKeyword")
+
 <>vtQueryBy:=DefaultSetupsReturnValue("<>vtQueryBy")
 REDUCE SELECTION:C351([DefaultSetup:86]; 0)
 
@@ -37,7 +37,7 @@ If (vHere=2)
 	
 	ONE RECORD SELECT:C189([WebClerk:78])
 	
-	ConsoleMessage("WebClerk Preferences From Input Layout: \rMachine = "+String:C10([WebClerk:78]machine:35)+"\rPublish = "+String:C10([WebClerk:78]publish:7)+"\rSequence = "+String:C10([WebClerk:78]seq:14))
+	ConsoleLog("WebClerk Preferences From Input Layout: \rMachine = "+String:C10([WebClerk:78]machine:35)+"\rPublish = "+String:C10([WebClerk:78]publish:7)+"\rSequence = "+String:C10([WebClerk:78]seq:14))
 	
 	
 	$vbLaunch:=True:C214
@@ -58,8 +58,8 @@ Else
 	
 	If (Records in selection:C76([WebClerk:78])=1)
 		
-		// ### JWM ### 20171016_1814 changed from Alert to ConsoleMessage
-		ConsoleMessage("WebClerk Preferences For This Machine: \rMachine = "+String:C10([WebClerk:78]machine:35)+"\rPublish = "+String:C10([WebClerk:78]publish:7)+"\rSequence = "+String:C10([WebClerk:78]seq:14))
+		// ### JWM ### 20171016_1814 changed from Alert to Console_Log
+		ConsoleLog("WebClerk Preferences For This Machine: \rMachine = "+String:C10([WebClerk:78]machine:35)+"\rPublish = "+String:C10([WebClerk:78]publish:7)+"\rSequence = "+String:C10([WebClerk:78]seq:14))
 		
 		$vbLaunch:=True:C214
 		
@@ -71,15 +71,15 @@ Else
 		
 		If (Records in selection:C76([WebClerk:78])=1)
 			
-			// ### JWM ### 20171016_1814 changed from Alert to ConsoleMessage
-			ConsoleMessage("WebClerk Default Preferences: \rMachine = "+String:C10([WebClerk:78]machine:35)+"\rPublish = "+String:C10([WebClerk:78]publish:7)+"\rSequence = "+String:C10([WebClerk:78]seq:14))
+			// ### JWM ### 20171016_1814 changed from Alert to Console_Log
+			ConsoleLog("WebClerk Default Preferences: \rMachine = "+String:C10([WebClerk:78]machine:35)+"\rPublish = "+String:C10([WebClerk:78]publish:7)+"\rSequence = "+String:C10([WebClerk:78]seq:14))
 			
 			$vbLaunch:=True:C214
 			
 		Else 
 			
-			// ### JWM ### 20171016_1814 changed from Alert to ConsoleMessage
-			ConsoleMessage("Error: Valid WebClerk Preferences Not Found WebClerk Server Launch Aborted")
+			// ### JWM ### 20171016_1814 changed from Alert to Console_Log
+			ConsoleLog("Error: Valid WebClerk Preferences Not Found WebClerk Server Launch Aborted")
 			//ALERT("We couldn't find a valid preferences record, so we are aborting the WebClerk Server launch.")
 			
 			$vbLaunch:=False:C215

@@ -23,9 +23,9 @@ Case of   //Turn on/off the appropriate choices
 			"task"; "Splash"; \
 			"entsOther"; New object:C1471("tableName"; New object:C1471); \
 			"entities"; New object:C1471)
-	: (process_o.tableName=Null:C1517)
+	: (process_o.dataClassName=Null:C1517)
 		
-	: (process_o.tableName="Order")
+	: (process_o.dataClassName="Order")
 		If (vHere=0)
 			//MENU BAR(1)
 			ENABLE MENU ITEM:C149(4; 8)
@@ -46,13 +46,13 @@ Case of   //Turn on/off the appropriate choices
 			End if 
 			// DISABLE MENU ITEM(5;5)  // ### jwm ### 20150219_1011 removed disable of Show OrderLines
 		End if 
-	: (process_o.tableName="Invoice")
+	: (process_o.dataClassName="Invoice")
 		If (vHere=0)
 			//   MENU BAR(1)
 		Else 
 			ENABLE MENU ITEM:C149(5; 5)
 		End if 
-	: (process_o.tableName="Proposal")
+	: (process_o.dataClassName="Proposal")
 		DISABLE MENU ITEM:C150(4; 6)
 		DISABLE MENU ITEM:C150(4; 7)
 		DISABLE MENU ITEM:C150(4; 12)
@@ -64,11 +64,11 @@ Case of   //Turn on/off the appropriate choices
 			srAcct:=[Customer:2]customerID:1
 			srZip:=[Customer:2]zip:8
 		End if 
-	: (process_o.tableName="Item")
+	: (process_o.dataClassName="Item")
 		ENABLE MENU ITEM:C149(3; 4)
-	: (process_o.tableName="Service")
+	: (process_o.dataClassName="Service")
 		DISABLE MENU ITEM:C150(3; 15)
-	: ((process_o.tableName="PO") | (process_o.tableName="POLine"))
+	: ((process_o.dataClassName="PO") | (process_o.dataClassName="POLine"))
 		ENABLE MENU ITEM:C149(5; 6)
 		ENABLE MENU ITEM:C149(5; 7)
 		ENABLE MENU ITEM:C149(5; 8)
@@ -76,7 +76,7 @@ Case of   //Turn on/off the appropriate choices
 		srPhone:=[Vendor:38]phone:10
 		srAcct:=[Vendor:38]vendorID:1
 		srZip:=[Vendor:38]zip:8
-	: (process_o.tableName="Contact")
+	: (process_o.dataClassName="Contact")
 		DISABLE MENU ITEM:C150(3; 2)
 End case 
 //If (vHere>2)

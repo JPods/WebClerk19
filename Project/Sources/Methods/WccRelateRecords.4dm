@@ -20,20 +20,18 @@ End if
 $skipAll:=False:C215  //add this sometime
 Case of 
 	: ($skipAll)
-	: ($1=(->[CallReport:34]))
+	: ($1=(->[Call:34]))
 		Case of 
-			: ([CallReport:34]tableNum:2=2)
-				QUERY:C277([Customer:2]; [Customer:2]customerID:1=[CallReport:34]customerID:1)
-			: ([CallReport:34]tableNum:2=13)  //customer file number
-				QUERY:C277([Contact:13]; [Contact:13]idNum:28=Num:C11([CallReport:34]customerID:1))
+			: ([Call:34]tableNum:2=2)
+				QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Call:34]customerID:1)
+			: ([Call:34]tableNum:2=13)  //customer file number
+				QUERY:C277([Contact:13]; [Contact:13]idNum:28=Num:C11([Call:34]customerID:1))
 				If (Records in selection:C76([Contact:13])=1)
 					QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Contact:13]customerID:1)
 				End if 
-			: ([CallReport:34]tableNum:2=48)  //customer file number
-				QUERY:C277([zzzLead:48]; [zzzLead:48]idNum:32=Num:C11([CallReport:34]customerID:1))
 		End case 
-		If (Records in selection:C76([CallReport:34])>1)
-			ORDER BY:C49([CallReport:34]; [CallReport:34]dtAction:4; <)
+		If (Records in selection:C76([Call:34])>1)
+			ORDER BY:C49([Call:34]; [Call:34]dtAction:4; <)
 		End if 
 	: ($1=(->[Customer:2]))
 		If (([RemoteUser:57]customerID:10=[Customer:2]customerID:1) | (vWccSecurity>1))
@@ -41,9 +39,9 @@ Case of
 				QUERY:C277([DCash:62]; [DCash:62]customerIDApply:1=[Customer:2]customerID:1)
 			End if 
 			If ((Find in array:C230(aTmpText1; "CallReport")>0) | ($doAll))
-				QUERY:C277([CallReport:34]; [CallReport:34]tableNum:2=2; *)  //customer file number
-				QUERY:C277([CallReport:34];  & [CallReport:34]customerID:1=[Customer:2]customerID:1)
-				ORDER BY:C49([CallReport:34]; [CallReport:34]dtAction:4; <)
+				QUERY:C277([Call:34]; [Call:34]tableNum:2=2; *)  //customer file number
+				QUERY:C277([Call:34];  & [Call:34]customerID:1=[Customer:2]customerID:1)
+				ORDER BY:C49([Call:34]; [Call:34]dtAction:4; <)
 			End if 
 			If ((Find in array:C230(aTmpText1; "ItemSerial")>0) | ($doAll))
 				QUERY:C277([ItemSerial:47]; [ItemSerial:47]customerID:9=[Customer:2]customerID:1)
@@ -72,8 +70,8 @@ Case of
 			If ((Find in array:C230(aTmpText1; "QACust")>0) | ($doAll))
 				QUERY:C277([QA:70]; [QA:70]customerID:1=[Customer:2]customerID:1)
 			End if 
-			QUERY:C277([CommunicationDevice:63]; [CommunicationDevice:63]tableNum:2=Table:C252(->[Customer:2]); *)
-			QUERY:C277([CommunicationDevice:63];  & [CommunicationDevice:63]customerID:1=[Customer:2]customerID:1)
+			QUERY:C277([zzzCommunicationDevice:63]; [zzzCommunicationDevice:63]tableNum:2=Table:C252(->[Customer:2]); *)
+			QUERY:C277([zzzCommunicationDevice:63];  & [zzzCommunicationDevice:63]customerID:1=[Customer:2]customerID:1)
 			//QUERY([ReferencesTable];[ReferencesTable]customerID=[Customer]customerID)
 			//QUERY([Payment];[Payment]customerID=[Customer]customerID)
 			//ORDER BY([Payment];[Payment]DateReceived;<)
@@ -182,7 +180,7 @@ Case of
 				End if 
 			End if 
 			If ((Find in array:C230(aTmpText1; "ItemXRef")>0) | ($doAll))
-				QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNumMaster:1=[Item:4]itemNum:1)
+				QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNum:1=[Item:4]itemNum:1)
 			End if 
 			If ((Find in array:C230(aTmpText1; "dInventory")>0) | ($doAll))
 				QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Item:4]itemNum:1)
@@ -197,8 +195,8 @@ Case of
 		If (vWccSecurity>10)
 			If ((Find in array:C230(aTmpText1; "dInventory")>0) | ($doAll))
 				$endDate:=Date_ThisMon([Usage:5]periodDate:2; 1)
-				$beginSR:=DateTime_Enter([Usage:5]periodDate:2; ?00:00:00?)
-				$endSR:=DateTime_Enter($endDate; ?00:00:00?)
+				$beginSR:=DateTime_DTTo([Usage:5]periodDate:2; ?00:00:00?)
+				$endSR:=DateTime_DTTo($endDate; ?00:00:00?)
 				QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Usage:5]itemNum:1; *)
 				QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=$beginSR; *)
 				QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15<$endSR)
@@ -214,7 +212,7 @@ Case of
 		If ((vWccSecurity>=1000) & ([Rep:8]repIDGroup:45#""))
 			$repID:=[Rep:8]repIDGroup:45+"@"
 		Else 
-			$repID:=[Rep:8]RepID:1
+			$repID:=[Rep:8]repID:1
 		End if 
 		If ((Find in array:C230(aTmpText1; "Service")>0) | ($doAll))
 			QUERY:C277([Service:6]; [Service:6]repID:2=$repID)
@@ -250,9 +248,9 @@ Case of
 		End if 
 	: ($1=(->[Contact:13]))
 		If ((Find in array:C230(aTmpText1; "Quota")>0) | ($doAll))
-			QUERY:C277([CallReport:34]; [CallReport:34]tableNum:2=13; *)  //customer file number
-			QUERY:C277([CallReport:34];  & [CallReport:34]customerID:1=String:C10([Contact:13]idNum:28))
-			ORDER BY:C49([CallReport:34]; [CallReport:34]dtAction:4; <)
+			QUERY:C277([Call:34]; [Call:34]tableNum:2=13; *)  //customer file number
+			QUERY:C277([Call:34];  & [Call:34]customerID:1=String:C10([Contact:13]idNum:28))
+			ORDER BY:C49([Call:34]; [Call:34]dtAction:4; <)
 		End if 
 		QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Contact:13]customerID:1)
 	: ($1=(->[Proposal:42]))
@@ -283,14 +281,9 @@ Case of
 	: ($1=(->[Usage:5]))
 		$EndDate:=Date_ThisMon([Usage:5]periodDate:2; 1)
 		QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Usage:5]itemNum:1; *)
-		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=DateTime_Enter([Usage:5]periodDate:2; ?00:00:00?); *)
-		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15<=DateTime_Enter($EndDate; ?23:59:59?))
-	: ($1=(->[zzzLead:48]))
-		If ((Find in array:C230(aTmpText1; "CallReport")>0) | ($doAll))
-			QUERY:C277([CallReport:34]; [CallReport:34]tableNum:2=Table:C252($1); *)
-			QUERY:C277([CallReport:34];  & [CallReport:34]customerID:1=String:C10([zzzLead:48]idNum:32))
-			ORDER BY:C49([CallReport:34]; [CallReport:34]dtAction:4; <)
-		End if 
+		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15>=DateTime_DTTo([Usage:5]periodDate:2; ?00:00:00?); *)
+		QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15<=DateTime_DTTo($EndDate; ?23:59:59?))
+		
 	: ($1=(->[Payment:28]))
 		If (([RemoteUser:57]customerID:10=[Payment:28]customerID:4) | (vWccSecurity>1))
 			QUERY:C277([DCash:62]; [DCash:62]docApply:3=[Payment:28]idNum:8; *)

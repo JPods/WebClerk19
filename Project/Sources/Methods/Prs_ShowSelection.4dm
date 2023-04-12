@@ -142,7 +142,7 @@ If (Application type:C494#4D Server:K5:6)
 				USE SET:C118("<>curSelSet")
 				CLEAR SET:C117("<>curSelSet")
 			Else 
-				ConsoleMessage("Error: SET <>curSelSet is Empty, <>ptCurTable = "+Table name:C256(<>ptCurTable))
+				ConsoleLog("Error: SET <>curSelSet is Empty, <>ptCurTable = "+Table name:C256(<>ptCurTable))
 			End if 
 			
 			C_TEXT:C284($setName)

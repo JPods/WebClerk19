@@ -93,9 +93,9 @@ If ($doMore)  //action for the form regardless of new or existing record
 	End if 
 	
 	
-	jDateTimeRecov([SyncRecord:109]dtAction:2; ->iLoDate1; ->iLoTime1)
-	jDateTimeRecov([SyncRecord:109]dtComplete:8; ->iLoDate2; ->iLoTime2)
-	jDateTimeRecov([SyncRecord:109]dtCreated:15; ->iLoDate3; ->iLoTime3)
+	DateTime_DTFrom([SyncRecord:109]dtAction:2; ->iLoDate1; ->iLoTime1)
+	DateTime_DTFrom([SyncRecord:109]dtComplete:8; ->iLoDate2; ->iLoTime2)
+	DateTime_DTFrom([SyncRecord:109]dtCreated:15; ->iLoDate3; ->iLoTime3)
 	Before_New(ptCurTable)  //last thing to do
 End if 
 //every cycle

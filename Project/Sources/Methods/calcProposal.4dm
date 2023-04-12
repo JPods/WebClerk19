@@ -90,7 +90,7 @@ If ($1)
 		[Proposal:42]daysValidFor:39:=30
 	End if 
 	//
-	If ([Proposal:42]autoFreight:38)
+	If ([Proposal]shipAuto)
 		[Proposal:42]weightEstimate:45:=$TotWt
 		ShippingCost(->[Proposal:42]shipVia:18; ->[Proposal:42]zone:19; ->[Proposal:42]weightEstimate:45; ->[Proposal:42]shipFreightCost:30; ->[Proposal:42]shipMiscCosts:29; ->[Proposal:42]shipAdjustments:28; ->[Proposal:42]terms:21; ->[Proposal:42]amount:26)
 		If (($d_rate#1) & (Not:C34(([Proposal:42]zone:19=-1) | ([Proposal:42]zone:19=0))))

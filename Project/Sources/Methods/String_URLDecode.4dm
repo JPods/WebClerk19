@@ -23,8 +23,8 @@ $vtURLToDecode:=$1
 vbOK:=PHP Execute:C1058(""; "urldecode"; $vtURLDecoded; $vtURLToDecode)
 
 If (<>viDebugMode>410)
-	ConsoleMessage("$vtURLToDecode\t"+$vtURLToDecode)
-	ConsoleMessage("$vtURLDecoded\t"+$vtURLDecoded)
+	ConsoleLog("$vtURLToDecode\t"+$vtURLToDecode)
+	ConsoleLog("$vtURLDecoded\t"+$vtURLDecoded)
 End if 
 
 // RETURN ENCODED URL

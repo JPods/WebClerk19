@@ -25,7 +25,7 @@ C_TEXT:C284(vtDTReservation; vtDTRevenue; vtDTReviewed; vtDTShipOn; vtDTSignIn; 
 C_TEXT:C284(vtDTStampFldMods; vtDTStarted; vtDTSubmitted; vtDTSync; vtDTTEventsDirt; vtDTUpdated; vtDtUser)
 C_TEXT:C284(vtDTCreated; vtDTSignOn; vtDTSignOff)
 C_PICTURE:C286(vPGraf)
-C_TEXT:C284(<>vConsoleMessage)
+C_TEXT:C284(<>vConsole_Log)
 C_TEXT:C284(RequiredField)  // ### jwm ### 20160810_1053
 C_BOOLEAN:C305(<>salesRepSpreadSheet; <>useTransactions; transactionActive)
 <>salesRepSpreadSheet:=False:C215

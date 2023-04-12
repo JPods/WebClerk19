@@ -22,7 +22,7 @@ MESSAGES OFF:C175
 iLoQAText1:=""
 allowAlerts_boo:=True:C214
 booPreNext:=False:C215
-$tableName:=process_o.tableName
+$tableName:=process_o.dataClassName
 iLoPagePopUpMenuBar($tableName)  // This should be reviewed for removal
 
 If (process_o.saveOK#Null:C1517)
@@ -36,15 +36,6 @@ If (process_o.saveOK#Null:C1517)
 		
 		booDuringDo:=True:C214  //use to avoid all during phase actions when side buttons are used.
 		
-		vHere:=2
-		If (jRestrictedFile)  //Restricted files may only be entered at the vHere=2 level
-			DISABLE MENU ITEM:C150(2; 1)
-			DISABLE MENU ITEM:C150(2; 2)
-			DISABLE MENU ITEM:C150(2; 7)
-		End if 
-		//If (ptCurTable#$1)//Assure that the menus and screens are set w/o (P) jSetDefaultFile     
-		
-		//End if 
 		jSetAutoReMenus
 		
 		
@@ -53,8 +44,7 @@ If (process_o.saveOK#Null:C1517)
 		
 		
 		iLoPagePopUpMenuBar($1)
-		aPages:=FORM Get current page:C276
-		jNxPvButtonSet
+		aPages:=1
 		SET MENU BAR:C67(iLoMenu)  //;$viProcess;*)
 	End if 
 End if 

@@ -36,8 +36,8 @@ $OK:=myOK
 C_LONGINT:C283($soa; $index)
 $soa:=Records in selection:C76([InventoryStack:29])
 If (($soa>0) & ($OK=1))
-	ORDER BY:C49([InventoryStack:29]; [InventoryStack:29]docid:5; [InventoryStack:29]receiptid:16; [InventoryStack:29]dateVendorInvc:27)
-	SELECTION TO ARRAY:C260([InventoryStack:29]; $RecNum; [InventoryStack:29]docid:5; $DocID; [InventoryStack:29]receiptid:16; $ReceiptID; [InventoryStack:29]dateVendorInvc:27; $DateVenInvc)
+	ORDER BY:C49([InventoryStack:29]; [InventoryStack:29]docid:5; [InventoryStack:29]idReceipt:16; [InventoryStack:29]dateVendorInvc:27)
+	SELECTION TO ARRAY:C260([InventoryStack:29]; $RecNum; [InventoryStack:29]docid:5; $DocID; [InventoryStack:29]idReceipt:16; $ReceiptID; [InventoryStack:29]dateVendorInvc:27; $DateVenInvc)
 	SELECTION TO ARRAY:C260([InventoryStack:29]vendorID:10; $VendorID; [InventoryStack:29]extendedCost:17; $ExtendCost; [InventoryStack:29]itemNum:2; $ItemNum)
 	ARRAY TEXT:C222($aDivision; $soa)
 	ARRAY LONGINT:C221($Sort; $soa)
@@ -195,7 +195,7 @@ If (($soa>0) & ($OK=1))
 				
 				[TallyResult:73]name:1:=HFS_ShortName($myDocName)
 				[TallyResult:73]purpose:2:="Purchase Journal"
-				[TallyResult:73]dtCreated:11:=DateTime_Enter
+				[TallyResult:73]dtCreated:11:=DateTime_DTTo
 				[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
 				[TallyResult:73]textBlk1:5:=$myDocName
 				[TallyResult:73]nameProfile1:26:="Document Type"
@@ -224,7 +224,7 @@ If (($soa>0) & ($OK=1))
 	
 	[TallyResult:73]name:1:=HFS_ShortName($myDocName)
 	[TallyResult:73]purpose:2:="Purchase Journal"
-	[TallyResult:73]dtCreated:11:=DateTime_Enter
+	[TallyResult:73]dtCreated:11:=DateTime_DTTo
 	[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
 	[TallyResult:73]textBlk1:5:=$myDocName
 	[TallyResult:73]nameProfile1:26:="Document Type"

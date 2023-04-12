@@ -21,6 +21,6 @@ While (<>vbWCstop=False:C215)
 		End if 
 		<>aCEThreadAvailable{$index}:=True:C214
 		<>aCEThreadName{$index}:=String:C10(<>aCEThreadProcess{$index})+" - pending"
-		POST OUTSIDE CALL:C329(<>theProcessList)
+		POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 	End if 
 End while 

@@ -36,7 +36,7 @@ Else
 		If (<>viDeBugMode>410)
 			C_DATE:C307($vDate)
 			C_TIME:C306($vTime)
-			jDateTimeRecov($2->; ->$vDate; ->$vTime)
+			DateTime_DTFrom($2->; ->$vDate; ->$vTime)
 		End if 
 	End if 
 End if 
@@ -76,7 +76,7 @@ If (False:C215)  // hold we should convert all our DTs to 1970  and likely to ja
 			If ($cntRec>0)
 				C_LONGINT:C283($incFields; $cntFields)
 				$cntFields:=Get last field number:C255($ptTable->)
-				ConsoleMessage(Table name:C256($ptTable)+": Field count: "+String:C10($cntFields))
+				ConsoleLog(Table name:C256($ptTable)+": Field count: "+String:C10($cntFields))
 				FIRST RECORD:C50($ptTable->)
 				For ($incRec; 1; $cntRec)
 					For ($incFields; 1; $cntFields)

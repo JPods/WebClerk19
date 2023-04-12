@@ -175,13 +175,13 @@ Case of
 				[Invoice:26]upsBillingOption:81:="Prepaid & Add"
 			End if 
 			//
-			TallyMasterPopupScirpts(->[Invoice:26])
+			TallyMasterPopupScirpts(process_o.dataClassPtr)
 			$okToSave:=OrderInvoiceLineMisMatch
 			
 			QQSetColor(eItemInv; ->aLsItemNum)  //###_jwm_### 20101115
 			QQSetColor(eIvcList; ->aiItemNum)  //###_jwm_### 20101115
 			
-			Before_New(ptCurTable)  //last thing to do Clear iLoRecordChange
+			Before_New(process_o.dataClassPtr)  //last thing to do Clear iLoRecordChange
 			
 		End if 
 		//every cycle
@@ -190,27 +190,27 @@ Case of
 		MESSAGES OFF:C175
 		//set wt check box to enterable only for "Prepaid & Add" bill to option
 		If ([Invoice:26]upsBillingOption:81="Prepaid@")
-			OBJECT SET ENTERABLE:C238([Invoice:26]autoFreight:32; True:C214)
+			OBJECT SET ENTERABLE:C238([Invoice:26]shipAuto:32; True:C214)
 		Else 
-			[Invoice:26]autoFreight:32:=False:C215
-			OBJECT SET ENTERABLE:C238([Invoice:26]autoFreight:32; False:C215)
-			OBJECT SET ENTERABLE:C238([Invoice:26]shipMiscCosts:16; Not:C34([Invoice:26]autoFreight:32))
-			OBJECT SET ENTERABLE:C238([Invoice:26]shipFreightCost:15; Not:C34([Invoice:26]autoFreight:32))
+			[Invoice:26]shipAuto:32:=False:C215
+			OBJECT SET ENTERABLE:C238([Invoice:26]shipAuto:32; False:C215)
+			OBJECT SET ENTERABLE:C238([Invoice:26]shipMiscCosts:16; Not:C34([Invoice:26]shipAuto:32))
+			OBJECT SET ENTERABLE:C238([Invoice:26]shipFreightCost:15; Not:C34([Invoice:26]shipAuto:32))
 		End if 
 		
 		If (([Invoice:26]consignment:63="") | ([Invoice:26]consignment:63="Complete@"))
-			_O_OBJECT SET COLOR:C271([Invoice:26]consignment:63; -(Black:K11:16+(256*White:K11:1)))
+			OBJECT SET RGB COLORS:C628(*; "[Invoice:26]consignment:63"; Black:K11:16; 256*White:K11:1)
 		Else 
-			_O_OBJECT SET COLOR:C271([Invoice:26]consignment:63; -(Black:K11:16+(256*Yellow:K11:2)))  //SET COLOR (bInfo;  (vForeground + (256 * vBackground)))
+			OBJECT SET RGB COLORS:C628(*; "[Invoice:26]consignment:63"; Black:K11:16; 256*Yellow:K11:2)  //SET COLOR (bInfo;  (vForeground + (256 * vBackground)))
 		End if 
 		
 		
 		If (Locked:C147([Invoice:26]))
-			_O_OBJECT SET COLOR:C271(srCustomer; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srAcct; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srZip; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srPhone; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srIv; -(Yellow:K11:2+(256*Red:K11:4)))
+			OBJECT SET RGB COLORS:C628(*; "srCustomer"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srAcct"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srZip"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srPhone"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srIv"; Yellow:K11:2; 256*Red:K11:4)
 		End if 
 		
 		$vMod:=False:C215

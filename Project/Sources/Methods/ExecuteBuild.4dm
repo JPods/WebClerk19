@@ -1,6 +1,6 @@
 //%attributes = {"publishedWeb":true}
 C_LONGINT:C283($k; $i; $dtCurrent)
-$dtCurrent:=DateTime_Enter
+$dtCurrent:=DateTime_DTTo
 QUERY:C277([TallyMaster:60]; [TallyMaster:60]dtNextRun:12>0; *)
 QUERY:C277([TallyMaster:60]; [TallyMaster:60]dtNextRun:12<=$dtCurrent)
 $k:=Records in selection:C76([TallyMaster:60])

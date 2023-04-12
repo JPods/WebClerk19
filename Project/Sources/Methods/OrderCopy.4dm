@@ -42,7 +42,7 @@ $obRec:=ds:C1482.Order.query("orderNum = :1"; $1).first()
 //[Order]amountForceValue:=$obRec.amountForceValue
 //[Order]approvedBy:=$obRec.approvedBy
 //[Order]attention:=$obRec.attention
-[Order:3]autoFreight:40:=$obRec.autoFreight
+[Order:3]shipAuto:40:=$obRec.autoFreight
 //[Order]balanceDueEstimated:=$obRec.balanceDueEstimated
 //[Order]billToAddress1:=$obRec.billToAddress1
 //[Order]billToAddress2:=$obRec.billToAddress2
@@ -125,13 +125,13 @@ End if
 If ($obRec.obCustomer#Null:C1517)
 	[Order:3]obCustomer:102:=$obRec.obCustomer
 End if 
-[Order:3]obExchange:148:=New object:C1471
-If ($obRec.obForeign#Null:C1517)
-	[Order:3]obExchange:148:=$obRec.obForeign
+[Order:3]obShipping:148:=New object:C1471
+If ($obRec.obShipping#Null:C1517)
+	[Order:3]obShipping:148:=$obRec.obShipping
 End if 
-[Order:3]obForeign:143:=New object:C1471
+[Order:3]obHistory:143:=New object:C1471
 If ($obRec.obForeign#Null:C1517)
-	[Order:3]obForeign:143:=$obRec.obForeign
+	[Order:3]obHistory:143:=$obRec.obHistory
 End if 
 [Order:3]obGeneral:147:=New object:C1471
 If ($obRec.obGeneral#Null:C1517)
@@ -148,9 +148,9 @@ End if
 If ($obRec.objective#Null:C1517)
 	[Order:3]objective:142:=$obRec.objective
 End if 
-[Order:3]obSync:137:=New object:C1471
+[Order:3]obExchange:137:=New object:C1471
 If ($obRec.obSync#Null:C1517)
-	[Order:3]obSync:137:=$obRec.obSync
+	[Order:3]obExchange:137:=$obRec.obSync
 End if 
 //[Order]orderedBy:=$obRec.orderedBy
 //[Order]orderNum:=$obRec.orderNum

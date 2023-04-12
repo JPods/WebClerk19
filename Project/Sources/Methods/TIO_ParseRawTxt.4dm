@@ -80,7 +80,7 @@ If ((OK=1) | (Length:C16($RowText)>5))
 	If ($RowText#"")
 		
 		If (<>viDebugMode>=3)  // ### jwm ### 20170303_1603 could be expanded to case statement
-			ConsoleMessage(vtLineNum+"\t"+$RowText)
+			ConsoleLog(vtLineNum+"\t"+$RowText)
 			//TRACE
 		End if 
 		

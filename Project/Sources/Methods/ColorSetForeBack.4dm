@@ -11,4 +11,4 @@
 // ----------------------------------------------------
 C_POINTER:C301($1)
 C_LONGINT:C283($2; $3)
-_O_OBJECT SET COLOR:C271($1->; -($2+(256*$3)))  //(Foreground+(256*Background))
+OBJECT SET RGB COLORS:C628(*; "$1->"; $2; 256*$3)  //(Foreground+(256*Background))

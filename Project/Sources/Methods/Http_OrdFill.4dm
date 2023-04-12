@@ -278,7 +278,7 @@
 ////TRACE
 ////If ([Order]Zone<1)
 //If ($shipViaAuto#"")
-//[Order]autoFreight:=False
+//[Order]shipAuto:=False
 //[Order]shipMiscCosts:=0
 //[Order]shipAdjustments:=0
 //[Order]shipFreightCost:=$freightAutoPrice

@@ -93,7 +93,7 @@ If ($vcCollectionOfObjects.length>0)
 		
 		// ADD THE RETURN LINE TO THE FULL RETURN TEXT
 		
-		$vcLines.push($vcCells.join(","))
+		$vcLines.push($vcCells.join(";"))
 		
 	End for each 
 	

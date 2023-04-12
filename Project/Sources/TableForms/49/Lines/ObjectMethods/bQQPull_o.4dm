@@ -1,0 +1,1 @@
+LB_Lines.dropItems(_LB_Item_.sel)

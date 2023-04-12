@@ -1,4 +1,11 @@
 //%attributes = {"publishedWeb":true}
+
+// Modified by: Bill James (2022-06-28T05:00:00Z)
+// Method: Clone_Order
+// Description 
+// Parameters
+// ----------------------------------------------------
+
 var $1 : Object
 If ($1.obGeneral=Null:C1517)
 	$1.obGeneral:=New object:C1471("clonedFrom"; $1.idNum)
@@ -31,10 +38,10 @@ TaskIDAssign(->[Order:3]idNumTask:85)
 [Order:3]timesPrinted:39:=0
 [Order:3]dateCancel:53:=Current date:C33+<>tcCancelBy
 [Order:3]amountBackLog:54:=[Order:3]total:27
-[Order:3]dtProdRelease:56:=DateTime_Enter
+[Order:3]dtProdRelease:56:=DateTime_DTTo
 [Order:3]dtProdCompl:57:=0
-jDateTimeRecov([Order:3]dtProdRelease:56; ->releaseDate; ->releaseTime)
-jDateTimeRecov([Order:3]dtProdCompl:57; ->complDate; ->complTime)
+DateTime_DTFrom([Order:3]dtProdRelease:56; ->releaseDate; ->releaseTime)
+DateTime_DTFrom([Order:3]dtProdCompl:57; ->complDate; ->complTime)
 [Order:3]timeOrdered:58:=Current time:C178
 [Order:3]profile6:105:=[Order:3]status:59
 [Order:3]status:59:="Cloned"

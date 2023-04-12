@@ -62,7 +62,7 @@ If (OK=1)
 			NEXT RECORD:C51([InvoiceLine:54])
 		End for 
 		
-		$dtCreate:=DateTime_Enter([Invoice:26]dateDocument:35)
+		$dtCreate:=DateTime_DTTo([Invoice:26]dateDocument:35)
 		dInventoryFillFromArray($dtCreate)
 		// RRAY TO SELECTION(dItemNumKey;[dInventory]ItemNum;dQtyOnHand;[dInventory]QtyOnHand;dQtyOnSO;[dInventory]QtyOnSO;dQtyOnPO;[dInventory]QtyOnPO;dQtyOnWO;[dInventory]QtyOnWO;dQtyOnAdj;[dInventory]QtyOnAdj;dUnitCost;[dInventory]UnitCost;dJobID;[dInventory]projectNum;dDocID;[dInventory]DocID;dLineNum;[dInventory]UniqueIDLine;dReceiptID;[dInventory]ReceiptID;dSource;[dInventory]custVendID;dReason;[dInventory]Reason;dType;[dInventory]typeID;dDTCreated;[dInventory]DTCreated;dNote;[dInventory]Note;dTakeAction;[dInventory]TakeAction;dSite;[dInventory]siteID;dUnitPrice;[dInventory]UnitPrice;dChangeBy;[dInventory]ChangedBy)
 		// PPLY TO SELECTION([dInventory];[dInventory]DTItemCard:=$dtCreate)
@@ -90,7 +90,7 @@ If (OK=1)
 			NEXT RECORD:C51([OrderLine:49])
 		End for 
 		
-		$dtCreate:=DateTime_Enter([Order:3]dateDocument:4)
+		$dtCreate:=DateTime_DTTo([Order:3]dateDocument:4)
 		dInventoryFillFromArray($dtCreate)
 		
 		NEXT RECORD:C51([Order:3])
@@ -124,7 +124,7 @@ If (OK=1)
 			End if 
 			NEXT RECORD:C51([POLine:40])
 		End for 
-		$dtCreate:=DateTime_Enter([PO:39]dateOrdered:2)
+		$dtCreate:=DateTime_DTTo([PO:39]dateOrdered:2)
 		dInventoryFillFromArray($dtCreate)
 		
 		NEXT RECORD:C51([PO:39])

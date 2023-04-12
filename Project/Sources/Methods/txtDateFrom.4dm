@@ -79,13 +79,13 @@ If ($theDate#"")
 						End if 
 					: (Type:C295($4->)=Is longint:K8:6)  //9
 						If (vTmpDateBeg#!00-00-00!)
-							$DTitem:=DateTime_Enter(vTmpDateBeg)
+							$DTitem:=DateTime_DTTo(vTmpDateBeg)
 							//QUERY($ptTable->;&$4->>=$DTitem;*)
 							vURLQueryScript:=vURLQueryScript+"QUERY("+$nameTable+";&"+$nameTable+$nameField+">="+String:C10($DTitem)+";*)"+"\r"
 							$0:=$3+1
 						End if 
 						If (vTmpDateEnd#!00-00-00!)
-							$DTitem:=DateTime_Enter(vTmpDateEnd; ?23:59:59?)
+							$DTitem:=DateTime_DTTo(vTmpDateEnd; ?23:59:59?)
 							//QUERY($ptTable->;&$4-><=$DTitem;*)
 							vURLQueryScript:=vURLQueryScript+"QUERY("+$nameTable+";&"+$nameTable+$nameField+"<="+String:C10($DTitem)+";*)"+"\r"
 							$0:=$3+1
@@ -114,13 +114,13 @@ If ($theDate#"")
 						End if 
 					: (Type:C295($4->)=Is longint:K8:6)  //9
 						If (vTmpDateBeg#!00-00-00!)
-							$DTitem:=DateTime_Enter(vTmpDateBeg)
+							$DTitem:=DateTime_DTTo(vTmpDateBeg)
 							//QUERY($ptTable->;$4->>=$DTitem;*)
 							vURLQueryScript:=vURLQueryScript+"QUERY("+$nameTable+$theContinueQuery+$nameTable+$nameField+">="+String:C10($DTitem)+";*)"+"\r"
 							$0:=$3+1
 						End if 
 						If (vTmpDateEnd#!00-00-00!)
-							$DTitem:=DateTime_Enter(vTmpDateEnd; ?23:59:59?)
+							$DTitem:=DateTime_DTTo(vTmpDateEnd; ?23:59:59?)
 							If ($0=0)
 								//QUERY($ptTable->;$4-><=$DTitem;*)
 								vURLQueryScript:=vURLQueryScript+"QUERY("+$nameTable+$theContinueQuery+$nameTable+$nameField+"<="+String:C10($DTitem)+";*)"+"\r"

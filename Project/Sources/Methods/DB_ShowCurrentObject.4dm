@@ -45,8 +45,8 @@ $o:=New object:C1471(\
 "entsOther"; New object:C1471("tableName"; New object:C1471))
 
 If (process_o#Null:C1517)
-	If (process_o.tableName#Null:C1517)
-		$new_o.tableParent:=process_o.tableName
+	If (process_o.dataClassName#Null:C1517)
+		$new_o.tableParent:=process_o.dataClassName
 	End if 
 	If (process_o.cur#Null:C1517)
 		$new_o.idParent:=process_o.cur.id

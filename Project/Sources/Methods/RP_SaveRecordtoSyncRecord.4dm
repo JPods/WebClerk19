@@ -24,7 +24,7 @@ If (Storage:C1525.k.doArchive)
 		CREATE RECORD:C68([SyncRecord:109])
 		[SyncRecord:109]actionReceive:47:="None"
 		[SyncRecord:109]date:26:=Current date:C33
-		[SyncRecord:109]dtCreated:15:=DateTime_Enter
+		[SyncRecord:109]dtCreated:15:=DateTime_DTTo
 		[SyncRecord:109]purpose:40:="InternalBackup"
 		[SyncRecord:109]tableNum:4:=$tableNum
 		[SyncRecord:109]tableName:44:=$tableName

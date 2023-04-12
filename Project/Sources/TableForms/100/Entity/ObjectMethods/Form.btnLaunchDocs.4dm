@@ -19,10 +19,10 @@ If (Is macOS:C1572)
 				$vtOpenThese:=$vtOpenThese+"\""+$path+"\","
 			: ($result=0)
 				BEEP:C151
-				ConsoleMessage("ERROR: Path is a folder")
+				ConsoleLog("ERROR: Path is a folder")
 			Else 
 				BEEP:C151
-				ConsoleMessage("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
+				ConsoleLog("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
 		End case 
 	End for each 
 	$vtOpenThese:=Substring:C12($vtOpenThese; 1; Length:C16($vtOpenThese)-1)+"}"+"\r"
@@ -40,10 +40,10 @@ Else
 				AE_LaunchDoc($path)
 			: ($result=0)
 				BEEP:C151
-				ConsoleMessage("ERROR: Path is a folder")
+				ConsoleLog("ERROR: Path is a folder")
 			Else 
 				BEEP:C151
-				ConsoleMessage("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
+				ConsoleLog("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
 		End case 
 	End for each 
 End if 

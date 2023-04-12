@@ -23,7 +23,7 @@ If (([PO:39]exchangeRate:45#0) & ([PO:39]exchangeRate:45#1))
 			aPOUnitCost{$incLn}:=Round:C94(aPOUnitCost{$incLn}*[PO:39]exchangeRate:45; viExDisPrec)
 			PoLnExtend($incLn)
 		End for 
-		//If ([Po]AutoFreight=False)//will recalc in base currency      
+		//If ([Po]shipAuto=False)//will recalc in base currency      
 		//[Po]ShipFreightCost:=Round([Po]ExchangeRate*[Po]ShipFreightCost
 		//;$thePrec)
 		//[Po]ShipMiscCosts:=Round([Po]ExchangeRate*[Po]ShipMiscCosts
@@ -46,8 +46,8 @@ If (([PO:39]exchangeRate:45#0) & ([PO:39]exchangeRate:45#1))
 			PoLnExtend($incLn)
 		End for 
 		Exch_InitRays(0)
-		//If ([Po]AutoFreight=False)//will recalc in base currency if
-		// AutoFreight is true   
+		//If ([Po]shipAuto=False)//will recalc in base currency if
+		// shipAuto is true   
 		//[Po]ShipFreightCost:=Round([Po]ShipFreightCost/[Po]ExchangeRate
 		//;$thePrec)
 		//[Po]ShipMiscCosts:=Round([Po]ShipMiscCosts/[Po]ExchangeRate

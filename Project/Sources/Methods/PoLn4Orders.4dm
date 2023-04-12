@@ -30,7 +30,7 @@ If (Size of array:C274(aOrdLnSel)>0)
 			myOK:=3
 		: (OptKey=1)
 			myOK:=1  //New PO      
-		: ((CmdKey=1) & ([PO:39]poNum:5#0))
+		: ((CmdKey=1) & ([PO:39]idNum:5#0))
 			myOK:=2  //add to existing PO      
 		Else 
 			vDiaCom:="Select a new PO"+"\r"+"or enter existing PO#."
@@ -43,7 +43,7 @@ If (Size of array:C274(aOrdLnSel)>0)
 		: (myOK=3)
 			
 			Ord2POByVendor
-			QUERY:C277([POLine:40]; [POLine:40]orderNum:16=[Order:3]orderNum:2)  //returning to included layout
+			QUERY:C277([POLine:40]; [POLine:40]idNumOrder:16=[Order:3]idNum:2)  //returning to included layout
 			//OrdPoPoLineUpDt 
 			UNLOAD RECORD:C212([POLine:40])
 		: (myOK=0)
@@ -65,7 +65,7 @@ If (Size of array:C274(aOrdLnSel)>0)
 			If ([Order:3]customerID:1#[Customer:2]customerID:1)
 				GOTO RECORD:C242([Customer:2]; $theCustRec)
 			End if 
-			QUERY:C277([POLine:40]; [POLine:40]orderNum:16=[Order:3]orderNum:2)  //returning to included layout
+			QUERY:C277([POLine:40]; [POLine:40]idNumOrder:16=[Order:3]idNum:2)  //returning to included layout
 			If ($1=(->[Control:1]))
 				PoArrayManage(-5)
 			End if 
@@ -77,7 +77,7 @@ If (Size of array:C274(aOrdLnSel)>0)
 			myOK:=0
 			
 			If ([Customer:2]alertMessage:79#"")
-				ConsoleMessage([Customer:2]alertMessage:79)
+				ConsoleLog([Customer:2]alertMessage:79)
 			End if 
 			FORM SET INPUT:C55([PO:39]; "Input")
 			
@@ -86,7 +86,7 @@ If (Size of array:C274(aOrdLnSel)>0)
 			If ([Order:3]customerID:1#[Customer:2]customerID:1)
 				GOTO RECORD:C242([Customer:2]; $theCustRec)
 			End if 
-			QUERY:C277([POLine:40]; [POLine:40]orderNum:16=[Order:3]orderNum:2)  //returning to included layout
+			QUERY:C277([POLine:40]; [POLine:40]idNumOrder:16=[Order:3]idNum:2)  //returning to included layout
 			If ($1=(->[Control:1]))
 				PoArrayManage(-5)
 			End if 
@@ -118,7 +118,7 @@ If (False:C215)
 				myOK:=3
 			: (OptKey=1)
 				myOK:=1  //New PO      
-			: ((CmdKey=1) & ([PO:39]poNum:5#0))
+			: ((CmdKey=1) & ([PO:39]idNum:5#0))
 				myOK:=2  //add to existing PO      
 			Else 
 				vDiaCom:="Select a new PO"+"\r"+"or enter existing PO#."
@@ -138,7 +138,7 @@ If (False:C215)
 		Case of 
 			: (myOK=3)
 				Ord2POByVendor
-				QUERY:C277([POLine:40]; [POLine:40]orderNum:16=[Order:3]orderNum:2)
+				QUERY:C277([POLine:40]; [POLine:40]idNumOrder:16=[Order:3]idNum:2)
 				//OrdPoPoLineUpDt 
 				UNLOAD RECORD:C212([POLine:40])
 			: (myOK=0)

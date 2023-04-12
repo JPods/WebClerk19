@@ -1,0 +1,1016 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #9",
+	"markerBody": 676,
+	"markerBreak": 676,
+	"markerFooter": 692,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Text_Changes_Pub_Event_1": {
+					"type": "text",
+					"top": 179,
+					"left": 258,
+					"width": 166,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Changes/Pub/Event"
+				},
+				"_Rectangle6_2": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 149,
+					"width": 844,
+					"height": 381,
+					"fill": "transparent"
+				},
+				"_Rectangle5_3": {
+					"type": "rectangle",
+					"top": 25,
+					"left": 429,
+					"width": 291,
+					"height": 209,
+					"fill": "transparent"
+				},
+				"_PROP_QQQReservation_Active_4": {
+					"type": "checkbox",
+					"top": 26,
+					"left": 211,
+					"width": 18,
+					"height": 11,
+					"dataSource": "entry_o.Active",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]Active:10"
+				},
+				"_PROP_QQQReservation_idUnique_5": {
+					"type": "input",
+					"top": 26,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]idUnique:16"
+				},
+				"_PROP_Reservation_remoteUserid_6": {
+					"type": "input",
+					"top": 45,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "entry_o.remoteUserid",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Reservation:79]remoteUserid:9"
+				},
+				"_PROP_QQQReservation_tableNum_7": {
+					"type": "input",
+					"top": 64,
+					"left": 663,
+					"width": 56,
+					"height": 17,
+					"dataSource": "entry_o.tableNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]tableNum:4"
+				},
+				"_PROP_Reservation_customerid_8": {
+					"type": "input",
+					"top": 64,
+					"left": 432,
+					"width": 229,
+					"height": 17,
+					"dataSource": "entry_o.customerid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Reservation:79]customerid:3"
+				},
+				"_PROP_QQQReservation_NickName_9": {
+					"type": "input",
+					"top": 83,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "entry_o.NickName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]NickName:8"
+				},
+				"_PROP_QQQReservation_Status_10": {
+					"type": "input",
+					"top": 159,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.Status",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]Status:20"
+				},
+				"_VAR_vDate4_11": {
+					"type": "input",
+					"top": 159,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate4",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vTime4_12": {
+					"type": "input",
+					"top": 159,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime4",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable277.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_QQQReservation_AllowChanges_13": {
+					"type": "input",
+					"top": 178,
+					"left": 432,
+					"width": 51,
+					"height": 17,
+					"dataSource": "entry_o.AllowChanges",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]AllowChanges:13"
+				},
+				"_PROP_QQQReservation_Publish_14": {
+					"type": "input",
+					"top": 178,
+					"left": 485,
+					"width": 55,
+					"height": 17,
+					"dataSource": "entry_o.Publish",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]Publish:15"
+				},
+				"_PROP_QQQReservation_QtyReserved_15": {
+					"type": "input",
+					"top": 216,
+					"left": 432,
+					"width": 61,
+					"height": 17,
+					"dataSource": "entry_o.QtyReserved",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]QtyReserved:6"
+				},
+				"_PROP_QQQReservation_ItemNum_16": {
+					"type": "input",
+					"top": 216,
+					"left": 495,
+					"width": 224,
+					"height": 17,
+					"dataSource": "entry_o.ItemNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]ItemNum:1"
+				},
+				"_PROP_QQQReservation_Description_17": {
+					"type": "input",
+					"top": 277,
+					"left": 152,
+					"width": 840,
+					"height": 37,
+					"dataSource": "entry_o.Description",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]Description:17"
+				},
+				"_PROP_QQQReservation_PublicNote_18": {
+					"type": "input",
+					"top": 316,
+					"left": 152,
+					"width": 825,
+					"height": 187,
+					"dataSource": "entry_o.PublicNote",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]PublicNote:11"
+				},
+				"_PROP_QQQReservation_PrivateNote_19": {
+					"type": "input",
+					"top": 505,
+					"left": 152,
+					"width": 825,
+					"height": 151,
+					"dataSource": "entry_o.PrivateNote",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]PrivateNote:12"
+				},
+				"_PROP_QQQReservation_orderNum_20": {
+					"type": "input",
+					"top": 102,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "entry_o.orderNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]orderNum:14"
+				},
+				"_PROP_QQQReservation_DTOriginated_21": {
+					"type": "input",
+					"top": 121,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.DTOriginated",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]DTOriginated:7"
+				},
+				"_PROP_QQQReservation_DTActionLast_22": {
+					"type": "input",
+					"top": 140,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.DTActionLast",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]DTActionLast:2"
+				},
+				"_PROP_QQQReservation_eventLogId_23": {
+					"type": "input",
+					"top": 178,
+					"left": 542,
+					"width": 177,
+					"height": 17,
+					"dataSource": "entry_o.eventLogId",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]eventLogId:5"
+				},
+				"_PROP_QQQReservation_DTReservation_24": {
+					"type": "input",
+					"top": 197,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.DTReservation",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQReservation:79]DTReservation:18"
+				},
+				"_Text_Active_25": {
+					"type": "text",
+					"top": 26,
+					"left": 227,
+					"width": 66,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"text": "Active"
+				},
+				"_Text_UniqueID_26": {
+					"type": "text",
+					"top": 27,
+					"left": 297,
+					"width": 127,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				},
+				"_Text_customerID_Table_27": {
+					"type": "text",
+					"top": 65,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "customerID/Table"
+				},
+				"_Text_NickName_28": {
+					"type": "text",
+					"top": 84,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "NickName"
+				},
+				"_Text_OrderNum_29": {
+					"type": "text",
+					"top": 103,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "OrderNum"
+				},
+				"_Text_Qty_ItemNum_30": {
+					"type": "text",
+					"top": 217,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Qty/ItemNum"
+				},
+				"_Text_Description_31": {
+					"type": "text",
+					"top": 279,
+					"left": 32,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Description"
+				},
+				"_Text_Originated_32": {
+					"type": "text",
+					"top": 122,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Originated"
+				},
+				"_Text_LastAction_33": {
+					"type": "text",
+					"top": 141,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "LastAction"
+				},
+				"_Text_remoteUserID_34": {
+					"type": "text",
+					"top": 46,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "remoteUserID"
+				},
+				"_Text_Status_Action_35": {
+					"type": "text",
+					"top": 160,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Status/Action"
+				},
+				"_VAR_vDate1_36": {
+					"type": "input",
+					"top": 121,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate1",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vTime1_37": {
+					"type": "input",
+					"top": 121,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime1",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vDate2_38": {
+					"type": "input",
+					"top": 140,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vTime2_39": {
+					"type": "input",
+					"top": 140,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime2",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_Text_PublicNote_40": {
+					"type": "text",
+					"top": 319,
+					"left": 32,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PublicNote"
+				},
+				"_Text_PrivateNote_41": {
+					"type": "text",
+					"top": 508,
+					"left": 34,
+					"width": 110,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PrivateNote"
+				},
+				"_Text_Reservation_42": {
+					"type": "text",
+					"top": 198,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Reservation"
+				},
+				"_VAR_vDate3_43": {
+					"type": "input",
+					"top": 197,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_vTime3_44": {
+					"type": "input",
+					"top": 197,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime3",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_bDateTime2_45": {
+					"type": "pictureButton",
+					"top": 549,
+					"left": 96,
+					"width": 42,
+					"height": 33,
+					"dataSource": "bDateTime2",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bDateTime1_46": {
+					"type": "pictureButton",
+					"top": 340,
+					"left": 96,
+					"width": 42,
+					"height": 33,
+					"dataSource": "bDateTime1",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable279.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b12_47": {
+					"type": "button",
+					"top": 173,
+					"left": 745,
+					"width": 117,
+					"height": 27,
+					"dataSource": "b12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Clear Action",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable280.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b12_48": {
+					"type": "button",
+					"top": 62,
+					"left": 273,
+					"width": 153,
+					"height": 18,
+					"dataSource": "b12",
+					"display": false,
+					"method": "ObjectMethods/Variable194.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b11_49": {
+					"type": "button",
+					"top": 99,
+					"left": 322,
+					"width": 104,
+					"height": 20,
+					"dataSource": "b11",
+					"display": false,
+					"method": "ObjectMethods/Variable193.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b13_50": {
+					"type": "button",
+					"top": 215,
+					"left": 309,
+					"width": 117,
+					"height": 19,
+					"dataSource": "b13",
+					"display": false,
+					"method": "ObjectMethods/Variable214.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_<>pNavPallet_51": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_52": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_53": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_54": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_55": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_56": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

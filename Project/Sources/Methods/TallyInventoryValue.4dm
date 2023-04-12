@@ -38,7 +38,7 @@ C_LONGINT:C283($dtTally; $incRecords; $cntRecords)
 C_REAL:C285($inventoryValue; $inventoryItemValue)
 vDate1:=Current date:C33
 vTime1:=?00:00:00?
-$dtTally:=DateTime_Enter(Current date:C33; vTime1)
+$dtTally:=DateTime_DTTo(Current date:C33; vTime1)
 QUERY:C277([TallyResult:73]; [TallyResult:73]dtCreated:11=$dtTally; *)
 QUERY:C277([TallyResult:73];  & [TallyResult:73]purpose:2="DailyInventory")
 If (Records in selection:C76([TallyResult:73])=0)

@@ -1,1 +1,0 @@
-// zzzqqq PopUpWildCard(->[QQQVendor:38]Currency:69; -><>aExchID; ->[QQQCurrency:61])

@@ -31,7 +31,7 @@ For (vi1; 1; vi2)
 		// [Item]ItemNum:=[Item]VendorItemNum
 		[ProposalLine:43]unitCost:7:=[Item:4]costLastInShip:47
 	Else 
-		[ProposalLine:43]itemProfile4:49:="No Item"
+		//[ProposalLine]obItem:="No Item"
 	End if 
 	SAVE RECORD:C53([ProposalLine:43])
 	NEXT RECORD:C51([ProposalLine:43])
@@ -55,9 +55,9 @@ If (False:C215)  // fix part numbers
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[ProposalLine:43]itemNum:2)
 		Case of 
 			: (Records in selection:C76([Item:4])=1)
-				[ProposalLine:43]itemProfile4:49:="Items = 1"
+				//[ProposalLine]obItem:="Items = 1"
 			: (Records in selection:C76([Item:4])>1)
-				[ProposalLine:43]itemProfile4:49:="Items = "+String:C10(Records in selection:C76([Item:4]))
+				[ProposalLine:43]obItem:49:="Items = "+String:C10(Records in selection:C76([Item:4]))
 			Else 
 				vi8:=Position:C15("-"; [ProposalLine:43]itemNum:2)
 				If (vi8>0)
@@ -65,21 +65,21 @@ If (False:C215)  // fix part numbers
 					QUERY:C277([Item:4]; [Item:4]itemNum:1=vText8)
 					Case of 
 						: (Records in selection:C76([Item:4])=1)
-							[ProposalLine:43]itemProfile4:49:="Items = 1 with -"
+							//[ProposalLine]obItem:="Items = 1 with -"
 						: (Records in selection:C76([Item:4])>1)
-							[ProposalLine:43]itemProfile4:49:="Items = "+String:C10(Records in selection:C76([Item:4]))+" with -"
+							[ProposalLine:43]obItem:49:="Items = "+String:C10(Records in selection:C76([Item:4]))+" with -"
 						Else 
 							QUERY:C277([Item:4]; [Item:4]itemNum:1=vText8+"@")
 							If (Records in selection:C76([Item:4])>0)
-								[ProposalLine:43]itemProfile4:49:="Items = with CCS"
+								//[ProposalLine]obItem:="Items = with CCS"
 							Else 
-								[ProposalLine:43]itemProfile4:49:="Items = 0 with -"
+								//[ProposalLine]obItem:="Items = 0 with -"
 							End if 
 							
 							
 					End case 
 				Else 
-					[ProposalLine:43]itemProfile4:49:="Items = 0 no -"
+					//[ProposalLine]obItem:="Items = 0 no -"
 				End if 
 		End case 
 		SAVE RECORD:C53([ProposalLine:43])
@@ -92,12 +92,12 @@ End if
 If (False:C215)
 	
 	
-	QUERY:C277([TallyResult:73]; [TallyResult:73]Purpose:2="ErrorEmail"; *)
-	QUERY:C277([TallyResult:73];  & ; [TallyResult:73]Profile1:17="open")
+	QUERY:C277([TallyResult:73]; [TallyResult:73]purpose:2="ErrorEmail"; *)
+	QUERY:C277([TallyResult:73];  & ; [TallyResult:73]profile1:17="open")
 	If (Records in selection:C76([TallyResult:73])>0)
 		ProcessTableOpen(Table:C252(->[TallyResult:73]))
 	Else 
-		ConsoleMessage("No duplicate Email issues.")
+		ConsoleLog("No duplicate Email issues.")
 	End if 
 	
 	C_POINTER:C301($1; $vpFieldParent; $vpFieldChild; $vpTable)
@@ -107,5 +107,5 @@ If (False:C215)
 	$vpTableChild:=Table:C252(Table:C252($vpFieldChild))
 	QUERY:C277($vpTableChild->; $vpFieldChild->=$vpFieldParent->)
 	//$0:=Records in selection($vpTableChild->)
-	$0:=Selection to JSON:C1234([OrderLine:49]; [OrderLine:49]itemNum:4; [OrderLine:49]qtyOrdered:6)
+	$0:=Selection to JSON:C1234([OrderLine:49]; [OrderLine:49]itemNum:4; [OrderLine:49]qty:6)
 End if 

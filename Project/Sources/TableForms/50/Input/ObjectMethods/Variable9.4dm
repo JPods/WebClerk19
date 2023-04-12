@@ -1,1 +1,0 @@
-QUERY:C277([Invoice:26]; [Invoice:26]jrnlid:71=[SalesJournal:50]linkid:9)

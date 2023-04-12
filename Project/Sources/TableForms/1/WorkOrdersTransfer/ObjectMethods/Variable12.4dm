@@ -33,11 +33,11 @@ If ($cntRec>0)
 	If ((iLo80String1="") | (iLo80String2="") | (iLo80String3="") | (iLo80String4=""))
 		ALERT:C41("Set who and locations")
 	Else 
-		$dtcurrent:=DateTime_Enter
+		$dtcurrent:=DateTime_DTTo
 		READ WRITE:C146([WorkOrder:66])
 		//CREATE SET([WorkOrder];"Current")
 		For ($i; 1; $k)
-			QUERY:C277([WorkOrder:66]; [WorkOrder:66]woNum:29=$aUniqIds{$i})
+			QUERY:C277([WorkOrder:66]; [WorkOrder:66]idNum:29=$aUniqIds{$i})
 			
 			C_LONGINT:C283($workOrderNum)
 			If ([WorkOrder:66]action:33="RequestedTransfer")
@@ -64,7 +64,7 @@ If ($cntRec>0)
 				End if 
 				[WorkOrder:66]actionByInitiated:9:=Current user:C182
 				[WorkOrder:66]dtAction:5:=$dtcurrent
-				[WorkOrder:66]qtyActual:14:=[WorkOrder:66]qtyOrdered:13
+				[WorkOrder:66]qty:14:=[WorkOrder:66]qtyOrdered:13
 				SAVE RECORD:C53([WorkOrder:66])
 				WOTransfer_dInventory("Ship")
 				//

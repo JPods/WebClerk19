@@ -16,11 +16,11 @@ For ($i; 1; $k)
 	If ([Item:4]itemNum:1#[ProposalLine:43]itemNum:2)
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[ProposalLine:43]itemNum:2)
 	End if 
-	[ProposalLine:43]itemTypeid:45:=[Item:4]typeid:26
+	[ProposalLine:43]itemType:45:=[Item:4]type:26
 	[ProposalLine:43]itemProfile1:46:=[Item:4]profile1:35
 	[ProposalLine:43]itemProfile2:47:=[Item:4]profile2:36
-	[ProposalLine:43]itemProfile3:48:=[Item:4]profile3:37
-	[ProposalLine:43]itemProfile4:49:=[Item:4]profile4:38
+	//[ProposalLine]obHistory:=[Item]profile3
+	//[ProposalLine]obItem:=[Item]profile4
 	[ProposalLine:43]vendorID:44:=[Item:4]vendorID:45
 	SAVE RECORD:C53([ProposalLine:43])
 	NEXT RECORD:C51([ProposalLine:43])

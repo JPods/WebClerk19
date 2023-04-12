@@ -53,7 +53,7 @@ While ($i<$k)
 	End if 
 	QUERY:C277([BOM:21]; [BOM:21]itemNum:1=$partNum)
 	If (Records in selection:C76([BOM:21])>0)
-		$adjID:=DateTime_Enter
+		$adjID:=DateTime_DTTo
 		vPartNum:=$partNum
 		vR1:=BOM_Consume($2; ->vPartNum; $totalCnt; $adjID; $bAdjustForQtyOnHand)
 		If ($bAdjustForQtyOnHand)
@@ -70,7 +70,7 @@ End while
 REDUCE SELECTION:C351([DInventory:36]; 0)
 If (Size of array:C274(dItemNumKey)>0)
 	READ WRITE:C146([DInventory:36])
-	ARRAY TO SELECTION:C261(dItemNumKey; [DInventory:36]itemNum:1; dQtyOnHand; [DInventory:36]qtyOnHand:2; dQtyOnSO; [DInventory:36]qtyOnSO:3; dQtyOnPO; [DInventory:36]qtyOnPo:4; dQtyOnWO; [DInventory:36]qtyOnWO:5; dQtyOnAdj; [DInventory:36]qtyOnAdj:6; dUnitCost; [DInventory:36]unitCost:7; dJobID; [DInventory:36]projectNum:8; dDocID; [DInventory:36]docid:9; dLineNum; [DInventory:36]idNumLine:10; dReceiptID; [DInventory:36]receiptid:11; dSource; [DInventory:36]customerID:12; dReason; [DInventory:36]reason:13; dType; [DInventory:36]typeID:14; dDTCreated; [DInventory:36]dtCreated:15; dNote; [DInventory:36]note:18; dTakeAction; [DInventory:36]takeAction:19; dSite; [DInventory:36]siteID:20; dUnitPrice; [DInventory:36]unitPrice:21; dChangeBy; [DInventory:36]changedBy:22)
+	ARRAY TO SELECTION:C261(dItemNumKey; [DInventory:36]itemNum:1; dQtyOnHand; [DInventory:36]qtyOnHand:2; dQtyOnSO; [DInventory:36]qtyOnSO:3; dQtyOnPO; [DInventory:36]qtyOnPo:4; dQtyOnWO; [DInventory:36]qtyOnWO:5; dQtyOnAdj; [DInventory:36]qtyOnAdj:6; dUnitCost; [DInventory:36]unitCost:7; dJobID; [DInventory:36]idNumProject:8; dDocID; [DInventory:36]idNumDoc:9; dLineNum; [DInventory:36]idNumLine:10; dReceiptID; [DInventory:36]idReceipt:11; dSource; [DInventory:36]customerID:12; dReason; [DInventory:36]reason:13; dType; [DInventory:36]typeID:14; dDTCreated; [DInventory:36]dtCreated:15; dNote; [DInventory:36]note:18; dTakeAction; [DInventory:36]takeAction:19; dSite; [DInventory:36]siteID:20; dUnitPrice; [DInventory:36]unitPrice:21; dChangeBy; [DInventory:36]changedBy:22)
 	READ ONLY:C145([DInventory:36])
 	IVNT_dRayInit
 	

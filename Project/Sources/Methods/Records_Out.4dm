@@ -40,9 +40,9 @@ If (UserInPassWordGroup("Export"))
 		$inc:=1
 		Repeat 
 			$incString:=Num:C11($inc>1)*(String:C10($inc))
-			//myDocName:=Storage.folder.jitExportsF+String(Table($ptTable);"000")+"Recs_"+Date_strYrMmDd +$incString+".out"
+			//myDocName:=Storage.folder.jitExports+String(Table($ptTable);"000")+"Recs_"+Date_strYrMmDd +$incString+".out"
 			// ### jwm ### 20180725_1508
-			myDocName:=Storage:C1525.folder.jitExportsF+String:C10(Table:C252($ptTable); "000")+"_"+Table name:C256($ptTable)+"_"+Date_strYrMmDd+$incString+".out"
+			myDocName:=Storage:C1525.folder.jitExports+String:C10(Table:C252($ptTable); "000")+"_"+Table name:C256($ptTable)+"_"+Date_strYrMmDd+$incString+".out"
 			$result:=Test path name:C476(myDocName)
 			$inc:=$inc+1
 		Until ($result<0)

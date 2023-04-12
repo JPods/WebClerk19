@@ -42,7 +42,6 @@ Case of
 			Else 
 				REDUCE SELECTION:C351([Customer:2]; 0)
 				REDUCE SELECTION:C351([Vendor:38]; 0)
-				REDUCE SELECTION:C351([Lead:48]; 0)
 			End if 
 			FillCustArray
 			//  --  CHOPPED  AL_UpdateArrays(eCustList; -2)

@@ -9,7 +9,7 @@ Case of
 	Else 
 		READ WRITE:C146([TallyResult:73])
 		QUERY:C277([TallyResult:73]; [TallyResult:73]customerID:30=[Customer:2]customerID:1; *)
-		QUERY:C277([TallyResult:73];  & [TallyResult:73]dtReport:12=DateTime_Enter([Customer:2]dateService:63; ?00:00:00?); *)
+		QUERY:C277([TallyResult:73];  & [TallyResult:73]dtReport:12=DateTime_DTTo([Customer:2]dateService:63; ?00:00:00?); *)
 		QUERY:C277([TallyResult:73];  & [TallyResult:73]purpose:2="Service Contract")
 		If (Records in selection:C76([TallyResult:73])=0)
 			myOK:=10

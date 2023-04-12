@@ -9,7 +9,7 @@ $cBefore:=New collection:C1472
 $cFailed:=New collection:C1472
 $cTested:=New collection:C1472
 
-$obSel:=ds:C1482.FieldCharacteristic.all()
+$obSel:=ds:C1482.FC.all()
 $cBefore:=New collection:C1472
 $cComplete:=New collection:C1472
 For each ($obRec; $obSel)
@@ -17,7 +17,7 @@ For each ($obRec; $obSel)
 	$obFieldDef:=STR_GetTableDefinition($obRec.tableName)
 	If ($obFieldDef=Null:C1517)
 		$obRec.comment:="bad tableName"
-		ConsoleMessage("FieldCharacteristic bad tableName: "+String:C10($obRec.idNum)+": "+$obRec.tableName)
+		ConsoleLog("FieldCharacteristic bad tableName: "+String:C10($obRec.idNum)+": "+$obRec.tableName)
 	Else 
 		C_TEXT:C284($vtUse)
 		C_OBJECT:C1216($obReturn)

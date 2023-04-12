@@ -110,7 +110,8 @@ Case of
 						vTextSummary:=$textAdd+"\r"+"\r"+vTextSummary
 				End case 
 			: (aiLoText16{$viElement}="Field Details")  //Field details             
-				Draft_FieldDetails
+				$fieldsFlat_t:=Draft_FieldDetails(curTableNum)
+				TextSummary:=$fieldsFlat_t+"\r"+"\r"+vTextSummary
 				
 			: (aiLoText16{$viElement}="Data Tags")  //Data
 				$TableNum:=String:C10(curTableNum)

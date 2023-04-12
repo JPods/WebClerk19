@@ -180,7 +180,7 @@ Case of
 			WC_Parse(Table:C252(->[Service:6]); $2)
 			If (Record number:C243([Service:6])>-1)
 				[Service:6]customerID:1:=[Customer:2]customerID:1
-				[Service:6]dtDocument:16:=DateTime_Enter
+				[Service:6]dtDocument:16:=DateTime_DTTo
 				[Service:6]dtBegin:15:=[Service:6]dtDocument:16
 				
 				If ([Service:6]idNum:26=0)

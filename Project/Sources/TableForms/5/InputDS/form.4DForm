@@ -1,0 +1,1439 @@
+{
+	"memorizeGeometry": true,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 496,
+	"markerBreak": 498,
+	"markerFooter": 498,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_Usage_ItemNum_2": {
+					"type": "input",
+					"top": 20,
+					"left": 328,
+					"width": 215,
+					"height": 17,
+					"dataSource": "entry_o.ItemNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]ItemNum:1"
+				},
+				"_PROP_Usage_PeriodDate_3": {
+					"type": "input",
+					"top": 20,
+					"left": 657,
+					"width": 88,
+					"height": 17,
+					"dataSource": "entry_o.PeriodDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field6.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]PeriodDate:2"
+				},
+				"_VAR_aPages_4": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_ePopDate_5": {
+					"type": "plugin",
+					"top": 41,
+					"left": 767,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_Usage_Description_6": {
+					"type": "input",
+					"top": 46,
+					"left": 328,
+					"width": 305,
+					"height": 17,
+					"dataSource": "entry_o.Description",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]Description:11"
+				},
+				"_PROP_Usage_typeid_7": {
+					"type": "input",
+					"top": 46,
+					"left": 655,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.typeid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]typeid:33"
+				},
+				"_VAR_bAccept_8": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_9": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_10": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_11": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Rectangle16_12": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 654,
+					"width": 92,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Text_ItemNumber_13": {
+					"type": "text",
+					"top": 22,
+					"left": 222,
+					"width": 99,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Item Number"
+				},
+				"_Text_Description_14": {
+					"type": "text",
+					"top": 48,
+					"left": 232,
+					"width": 89,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Description"
+				},
+				"_Text_MonthBeginning_15": {
+					"type": "text",
+					"top": 22,
+					"left": 564,
+					"width": 86,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Month Beginning"
+				},
+				"Group Box3": {
+					"type": "groupBox",
+					"top": 11,
+					"left": 242,
+					"width": 518,
+					"height": 65
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_Usage_MarginFactor_17": {
+					"type": "input",
+					"top": 81,
+					"left": 328,
+					"width": 145,
+					"height": 17,
+					"dataSource": "entry_o.MarginFactor",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]MarginFactor:15"
+				},
+				"_PROP_Usage_DateCalculated_18": {
+					"type": "input",
+					"top": 81,
+					"left": 563,
+					"width": 87,
+					"height": 17,
+					"dataSource": "entry_o.DateCalculated",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]DateCalculated:12"
+				},
+				"_PROP_Usage_TimeCalculated_19": {
+					"type": "input",
+					"top": 81,
+					"left": 656,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.TimeCalculated",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1####"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]TimeCalculated:13"
+				},
+				"_PROP_Usage_OrdersPlan_20": {
+					"type": "input",
+					"top": 140,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.OrdersPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]OrdersPlan:21"
+				},
+				"_PROP_Usage_OrdersActual_21": {
+					"type": "input",
+					"top": 140,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.OrdersActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]OrdersActual:20"
+				},
+				"_PROP_Usage_SalesPlan_22": {
+					"type": "input",
+					"top": 164,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.SalesPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]SalesPlan:9"
+				},
+				"_PROP_Usage_SalesActual_23": {
+					"type": "input",
+					"top": 164,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.SalesActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]SalesActual:10"
+				},
+				"_PROP_Usage_CostPlan_24": {
+					"type": "input",
+					"top": 188,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.CostPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]CostPlan:18"
+				},
+				"_PROP_Usage_CostActual_25": {
+					"type": "input",
+					"top": 188,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.CostActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]CostActual:17"
+				},
+				"_PROP_Usage_SalesQtyPlan_26": {
+					"type": "input",
+					"top": 212,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.SalesQtyPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]SalesQtyPlan:3"
+				},
+				"_PROP_Usage_SalesQtyActual_27": {
+					"type": "input",
+					"top": 212,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.SalesQtyActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]SalesQtyActual:4"
+				},
+				"_PROP_Usage_OrdQtyPlan_28": {
+					"type": "input",
+					"top": 236,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.OrdQtyPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]OrdQtyPlan:27"
+				},
+				"_PROP_Usage_OrdQtyActual_29": {
+					"type": "input",
+					"top": 236,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.OrdQtyActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]OrdQtyActual:26"
+				},
+				"_PROP_Usage_InventoryPlan_30": {
+					"type": "input",
+					"top": 261,
+					"left": 129,
+					"width": 106,
+					"height": 17,
+					"dataSource": "entry_o.InventoryPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]InventoryPlan:5"
+				},
+				"_PROP_Usage_InventoryActual_31": {
+					"type": "input",
+					"top": 261,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.InventoryActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]InventoryActual:6"
+				},
+				"_PROP_Usage_ScrapPlan_32": {
+					"type": "input",
+					"top": 286,
+					"left": 129,
+					"width": 106,
+					"height": 17,
+					"dataSource": "entry_o.ScrapPlan",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]ScrapPlan:7"
+				},
+				"_PROP_Usage_ScrapActual_33": {
+					"type": "input",
+					"top": 286,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.ScrapActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]ScrapActual:8"
+				},
+				"_PROP_Usage_DaysLeadTime_34": {
+					"type": "input",
+					"top": 335,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.DaysLeadTime",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]DaysLeadTime:25"
+				},
+				"_PROP_Usage_NumInvoices_35": {
+					"type": "input",
+					"top": 335,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.NumInvoices",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]NumInvoices:16"
+				},
+				"_PROP_Usage_TargetTurns_36": {
+					"type": "input",
+					"top": 361,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.TargetTurns",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]TargetTurns:22"
+				},
+				"_PROP_Usage_NumOrders_37": {
+					"type": "input",
+					"top": 361,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.NumOrders",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]NumOrders:19"
+				},
+				"_PROP_Usage_Capacity_38": {
+					"type": "input",
+					"top": 388,
+					"left": 129,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.Capacity",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]Capacity:14"
+				},
+				"_PROP_Usage_PurchaseValue_39": {
+					"type": "input",
+					"top": 388,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.PurchaseValue",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]PurchaseValue:30"
+				},
+				"_VAR_vDaysOnHand_40": {
+					"type": "input",
+					"top": 415,
+					"left": 128,
+					"width": 108,
+					"height": 17,
+					"dataSource": "vDaysOnHand",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "##,##0.0###",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"_PROP_Usage_PurchaseQty_41": {
+					"type": "input",
+					"top": 415,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.PurchaseQty",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]PurchaseQty:29"
+				},
+				"_PROP_Usage_ActualTurns_42": {
+					"type": "input",
+					"top": 442,
+					"left": 128,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.ActualTurns",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]ActualTurns:24"
+				},
+				"_PROP_Usage_BOMQtyActual_43": {
+					"type": "input",
+					"top": 442,
+					"left": 381,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.BOMQtyActual",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]BOMQtyActual:36"
+				},
+				"_Text_SalesMarginƒ_44": {
+					"type": "text",
+					"top": 83,
+					"left": 206,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Sales Margin ƒ"
+				},
+				"_Text_Calculated_45": {
+					"type": "text",
+					"top": 83,
+					"left": 472,
+					"width": 83,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Calculated"
+				},
+				"_Text_Orders($)_46": {
+					"type": "text",
+					"top": 142,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Orders ($)"
+				},
+				"_Text_Sales($)_47": {
+					"type": "text",
+					"top": 166,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sales ($)"
+				},
+				"_Text_Costs($)_48": {
+					"type": "text",
+					"top": 190,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Costs ($)"
+				},
+				"_Text_QtyOrdered(#)_49": {
+					"type": "text",
+					"top": 238,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Qty Ordered (#)"
+				},
+				"_Text_QtyPurchase(#)_50": {
+					"type": "text",
+					"top": 417,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Qty Purchase (#)"
+				},
+				"_Text_Scrap($)_51": {
+					"type": "text",
+					"top": 288,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Scrap ($)"
+				},
+				"_Text_LeadTime(days)_52": {
+					"type": "text",
+					"top": 337,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Lead Time (days)"
+				},
+				"_Text_TargetTurns_53": {
+					"type": "text",
+					"top": 363,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Target Turns"
+				},
+				"_Text_Capacity(#_mo)_54": {
+					"type": "text",
+					"top": 390,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Capacity (#/mo)"
+				},
+				"_Text_QtySold(#)_55": {
+					"type": "text",
+					"top": 214,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Qty Sold (#)"
+				},
+				"_Text_Inventory($)_56": {
+					"type": "text",
+					"top": 263,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Inventory ($)"
+				},
+				"_Text_DaysOnHand_57": {
+					"type": "text",
+					"top": 417,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Days On Hand"
+				},
+				"_Text_ActualTurns_58": {
+					"type": "text",
+					"top": 444,
+					"left": 42,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Actual Turns"
+				},
+				"_Text_\"P\"SalesPlan;\"A\"SalesActual;\"T\"LeadTime;\"H\"OnHand_59": {
+					"type": "text",
+					"top": 112,
+					"left": 513,
+					"width": 291,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "\"P\" Sales Plan; \"A\" Sales Actual; \"T\" Lead Time; \"H\" On Hand "
+				},
+				"_Text_\u007F\u007F\u007FBOMQty(#)_60": {
+					"type": "text",
+					"top": 444,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "\u007F\u007F\u007FBOM Qty (#)"
+				},
+				"vpGraph": {
+					"type": "input",
+					"top": 132,
+					"left": 517,
+					"width": 283,
+					"height": 334,
+					"dataSource": "vpGraph",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "scaled",
+					"dragging": "none"
+				},
+				"_Text_Orders($)_62": {
+					"type": "text",
+					"top": 142,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Orders ($)"
+				},
+				"_Text_Sales($)_63": {
+					"type": "text",
+					"top": 166,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sales ($)"
+				},
+				"_Text_Costs($)_64": {
+					"type": "text",
+					"top": 190,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Costs ($)"
+				},
+				"_Text_Purchase($)_65": {
+					"type": "text",
+					"top": 390,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Purchase ($)"
+				},
+				"_Text_Invoices(#)_66": {
+					"type": "text",
+					"top": 337,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Invoices (#)"
+				},
+				"_Text_Orders(#)_67": {
+					"type": "text",
+					"top": 363,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Orders (#)"
+				},
+				"_Text_Scrap($)_68": {
+					"type": "text",
+					"top": 288,
+					"left": 298,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Scrap ($)"
+				},
+				"_Text_QtySold(#)_69": {
+					"type": "text",
+					"top": 214,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Qty Sold (#)"
+				},
+				"_Text_Inventory($)_70": {
+					"type": "text",
+					"top": 263,
+					"left": 298,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Inventory ($)"
+				},
+				"_Text_QtyOrdered(#)_71": {
+					"type": "text",
+					"top": 238,
+					"left": 296,
+					"width": 80,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Qty Ordered (#)"
+				},
+				"Group Box2": {
+					"type": "groupBox",
+					"top": 317,
+					"left": 39,
+					"width": 209,
+					"height": 152,
+					"text": "Actual:"
+				},
+				"Group Box": {
+					"type": "groupBox",
+					"top": 118,
+					"left": 39,
+					"width": 209,
+					"height": 193,
+					"text": "Planned:"
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 118,
+					"left": 282,
+					"width": 212,
+					"height": 351,
+					"text": "Actual:"
+				},
+				"Group Box4": {
+					"type": "groupBox",
+					"top": 75,
+					"left": 242,
+					"width": 518,
+					"height": 31
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Rectangle4_76": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 654,
+					"width": 92,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle3_77": {
+					"type": "rectangle",
+					"top": 45,
+					"left": 325,
+					"width": 421,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle2_78": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 325,
+					"width": 199,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_Usage_ItemNum_79": {
+					"type": "input",
+					"top": 20,
+					"left": 328,
+					"width": 195,
+					"height": 17,
+					"dataSource": "entry_o.ItemNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]ItemNum:1"
+				},
+				"_PROP_Usage_PeriodDate_80": {
+					"type": "input",
+					"top": 20,
+					"left": 657,
+					"width": 88,
+					"height": 17,
+					"dataSource": "entry_o.PeriodDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/##",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field32.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]PeriodDate:2"
+				},
+				"_VAR_ePopDate_81": {
+					"type": "plugin",
+					"top": 41,
+					"left": 767,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_Item_description_82": {
+					"type": "input",
+					"top": 46,
+					"left": 328,
+					"width": 417,
+					"height": 17,
+					"dataSource": "entry_o.description",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Item:4]description:7"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 93,
+					"left": 11,
+					"width": 930,
+					"height": 359,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "text",
+					"table": 36,
+					"listForm": "Included",
+					"focusable": false,
+					"scrollbarHorizontal": "visible",
+					"scrollbarVertical": "visible",
+					"enterableInList": false,
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "fixed"
+				},
+				"_Text_ItemNumber_84": {
+					"type": "text",
+					"top": 22,
+					"left": 257,
+					"width": 64,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fontStyle": "italic",
+					"text": "Item Number"
+				},
+				"_Text_Description_85": {
+					"type": "text",
+					"top": 48,
+					"left": 266,
+					"width": 55,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fontStyle": "italic",
+					"text": "Description"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_Usage_ObGeneral_86": {
+					"type": "input",
+					"top": 111,
+					"left": 28,
+					"width": 792,
+					"height": 346,
+					"dataSource": "entry_o.ObGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Usage:5]ObGeneral:40"
+				},
+				"_Text_ObGeneral_87": {
+					"type": "text",
+					"top": 90,
+					"left": 31,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

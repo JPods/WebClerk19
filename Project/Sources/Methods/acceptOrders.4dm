@@ -68,12 +68,12 @@ If (booAccept=True:C214)
 				[TallyResult:73]name:1:="ZeroOrder"
 				[TallyResult:73]purpose:2:="Error"
 				[TallyResult:73]dateCreated:53:=Current date:C33
-				[TallyResult:73]dtReport:12:=DateTime_Enter
+				[TallyResult:73]dtReport:12:=DateTime_DTTo
 				[Order:3]idNum:2:=CounterNew(->[Order:3])
 				
 				[Order:3]comment:33:="ZeroOrder"+"\r"+[Order:3]comment:33
 				SAVE RECORD:C53([TallyResult:73])
-				ConsoleMessage("Error: zero orderNum converted to "+String:C10([Order:3]idNum:2))
+				ConsoleLog("Error: zero orderNum converted to "+String:C10([Order:3]idNum:2))
 			End if 
 			SAVE RECORD:C53([Order:3])
 			vrOldValue:=[Order:3]amount:24

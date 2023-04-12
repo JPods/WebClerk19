@@ -96,7 +96,10 @@ If ((OK=1) & (vi8>1990) & (vi8<=vi7))
 			[TallyResult:73]real6:42:=Sum:C1([Order:3]amount:24)  //"Order Amount"
 			[TallyResult:73]real7:43:=Sum:C1([Order:3]totalCost:42)  //"Order Margins"
 			[TallyResult:73]real8:44:=Sum:C1([Order:3]amountCancel:60)  //"Order Cancel"
-			[TallyResult:73]real9:45:=Records in selection:C76([Order:3])  //"Invoice"  //"Orders Cancel"
+			// Modified by: Bill James (2022-12-09T06:00:00Z)
+			// mush fix and adjust to data type and object
+			
+			//[TallyResult]dataRaw:=Records in selection([Order])  //"Invoice"  //"Orders Cancel"
 			QUERY:C277([OrderLine:49]; [Order:3]customerID:1=[Customer:2]customerID:1; *)
 			QUERY:C277([OrderLine:49];  & ; [OrderLine:49]dateDocument:25>=vDate1; *)
 			QUERY:C277([OrderLine:49];  & ; [OrderLine:49]dateDocument:25<=vDate2)
@@ -105,13 +108,16 @@ If ((OK=1) & (vi8>1990) & (vi8<=vi7))
 			[TallyResult:73]real11:47:=Sum:C1([OrderLine:49]qty:6)  //"Order Items"
 			[TallyResult:73]real12:48:=Sum:C1([OrderLine:49]qtyCancelled:51)
 			
-			vi7:=DateTime_Enter(vDate1; ?00:00:00?)
-			vi8:=DateTime_Enter(vDate1; ?23:59:59?)
+			vi7:=DateTime_DTTo(vDate1; ?00:00:00?)
+			vi8:=DateTime_DTTo(vDate1; ?23:59:59?)
 			
 			QUERY:C277([Service:6]; [Service:6]customerID:1=[Customer:2]customerID:1; *)
 			QUERY:C277([Service:6];  & ; [Service:6]dtDocument:16>=vi7; *)
 			QUERY:C277([Service:6];  & ; [Service:6]dtDocument:16<=vi8)
-			[TallyResult:73]longInt2:8:=Records in selection:C76([OrderLine:49])  //"Service Records"
+			// Modified by: Bill James (2022-12-09T06:00:00Z)
+			// mush fix and adjust to data type and object
+			
+			//[TallyResult]report:=Records in selection([OrderLine])  //"Service Records"
 			
 			SAVE RECORD:C53([TallyResult:73])
 			ADD TO SET:C119([TallyResult:73]; "current")

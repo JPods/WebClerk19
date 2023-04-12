@@ -50,7 +50,7 @@ End if
 
 
 READ ONLY:C145([DefaultAccount:32])
-UNLOAD RECORD:C212([Control:1])
+UNLOAD RECORD:C212([Admin:1])
 UNLOAD RECORD:C212([DefaultAccount:32])
 
 vDiaCom:=""
@@ -61,7 +61,7 @@ KeyModifierCurrent
 dtSYNC:=Char:C90(207)+Char:C90(223)
 C_TEXT:C284($tempFold)
 C_LONGINT:C283($result)
-C_TEXT:C284(<>webFolder)
+
 
 C_TEXT:C284($docFolder; $aliasPath)
 
@@ -79,13 +79,12 @@ If (Application type:C494#4D Server:K5:6)
 	
 	//FolderMove
 	
-	
+	// replaced in Storage_Init
 	//
 	If (Test path name:C476(Storage:C1525.folder.jitF+"jitCerts")#0)
 		CREATE FOLDER:C475(Storage:C1525.folder.jitF+"jitCerts")
 	End if 
 	If (HFS_Exists(Storage:C1525.folder.jitF+"jitIndex.txt")=0)
-		StructureWrite("NoDialog")
 		//StructureWrite (Storage.folder.jitF+"jitIndex.txt")
 	End if 
 	

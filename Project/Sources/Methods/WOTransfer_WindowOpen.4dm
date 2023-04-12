@@ -14,6 +14,6 @@
 
 Process_InitLocal
 jCenter4DWindow(990; 720; 8; "WO Transfers"; "CancelCommand")
-DIALOG:C40([Control:1]; "WorkOrdersTransfer")
+DIALOG:C40([Base:1]; "WorkOrdersTransfer")
 CLOSE WINDOW:C154
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)

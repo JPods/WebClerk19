@@ -85,12 +85,12 @@ If ($doCalc)
 		[Invoice:26]salesCommission:36:=Round:C94($salesCom; $thePrec)
 	End if 
 	//
-	If ([Invoice:26]autoFreight:32)  //|(Records in selection([LoadTag])>0))
-		QUERY:C277([LoadTag:88]; [LoadTag:88]invoiceNum:19=[Invoice:26]invoiceNum:2)
+	If ([Invoice]shipAuto)  //|(Records in selection([LoadTag])>0))
+		QUERY:C277([LoadTag:88]; [LoadTag:88]idNumInvoice:19=[Invoice:26]idNum:2)
 		
 		//If (Records in selection([LoadTag])>0)
 		ShippingCost(->[Invoice:26]shipVia:5; ->[Invoice:26]zone:6; ->[Invoice:26]weightEstimate:42; ->[Invoice:26]shipFreightCost:15; ->[Invoice:26]shipMiscCosts:16; ->[Invoice:26]shipAdjustments:17; ->[Invoice:26]terms:24; ->[Invoice:26]amount:14; ->[Invoice:26]labelCount:25)
-		If (([Invoice:26]orderNum:1#1) & ([Order:3]completeid:83=1) & (<>tcNoCodHand))
+		If (([Invoice:26]idNumOrder:1#1) & ([Order:3]complete:83=1) & (<>tcNoCodHand))
 			[Invoice:26]shipAdjustments:17:=-[Invoice:26]shipMiscCosts:16
 		End if 
 		//Else 

@@ -46,7 +46,7 @@ If (OK=1)
 	If (error#0)
 		
 		// Modified by: Bill James (2017-04-24T00:00:00)
-		ConsoleMessage("Scale: OK = 1 and Send Packet H Error = "+String:C10(error))
+		ConsoleLog("Scale: OK = 1 and Send Packet H Error = "+String:C10(error))
 		<>pkScaleComment:="Scale: OK = 1, Error = "+String:C10(error)
 	Else 
 		$p:=0
@@ -81,7 +81,7 @@ If (OK=1)
 Else 
 	<>pkScaleComment:="Scale: OK = 0, Error = "+String:C10(error)
 	<>vtjwmError:=("OK = 0 and Error = "+String:C10(error))
-	ConsoleMessage("Scale: OK = 0 and Error = "+String:C10(error))
+	ConsoleLog("Scale: OK = 0 and Error = "+String:C10(error))
 End if 
 //MESSAGE(String(<>vrWeightScale)+"; Error:  "+String(error)+"\r"+$strFromScale)
 If ((error#0) | (OK=0) | ($p<1500))  //err

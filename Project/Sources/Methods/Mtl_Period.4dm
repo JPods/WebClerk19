@@ -48,8 +48,8 @@ If (UserInPassWordGroup("Costing"))
 		ARRAY LONGINT:C221(aLeadTime; 0)
 		ARRAY LONGINT:C221(aFactor; 0)
 	Else 
-		//If (Frontmost process#<>aPrsNum{$found})
-		//BRING TO FRONT(<>aPrsNum{$found})
+		//BRING TO FRONT($found)
+		//
 		//End if 
 		//Else 
 		<>ptCurTable:=ptCurTable

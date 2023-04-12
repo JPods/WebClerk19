@@ -30,7 +30,7 @@ For ($i; 1; $k)
 		// if this is important, save the current record into an object
 		// LogReportDetail (->[OrderLine];"OrderLine Delete, Item: "+[OrderLine]ItemNum)
 		$dOnOrd:=[OrderLine:49]qtyBackLogged:8*Num:C11([OrderLine:49]qtyBackLogged:8>0)
-		Invt_dRecCreate("SO"; [Order:3]orderNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "ord void ln"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; -$dOnOrd; [OrderLine:49]unitCost:12; ""; [Order:3]siteid:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
+		Invt_dRecCreate("SO"; [Order:3]idNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "ord void ln"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; -$dOnOrd; [OrderLine:49]unitCost:12; ""; [Order:3]siteID:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
 		$script:="[SyncRecord]TextSample:="+Txt_Quoted("Deleted Line from Order: ")+"+string([OrderLine]ordernum)"
 		//RP_CreateSyncRecord (->[OrderLine];$script)  //just builds the Sync Record
 		DELETE RECORD:C58([OrderLine:49])
@@ -62,17 +62,17 @@ For ($i; 1; $k)
 			//increases on Order   unless negative  
 			//Invt_dRecCreate ("SO";[Order]OrderNum;0;[Order]customerID;[Order]projectNum;"oi new line";1;[OrderLine]LineNum;[OrderLine]ItemNum;$dOnHand;$dOnOrd;[OrderLine]UnitCost;"";<>tcsiteID;DiscountApply ([OrderLine]UnitPrice;[OrderLine]Discount;<>tcDecimalUP))
 			//### jwm ### 20130621_1327 changed <>tcsiteID to [Order]siteID
-			Invt_dRecCreate("SO"; [Order:3]orderNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "oi new line"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOnOrd; [OrderLine:49]unitCost:12; ""; [Order:3]siteid:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
+			Invt_dRecCreate("SO"; [Order:3]idNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "oi new line"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOnOrd; [OrderLine:49]unitCost:12; ""; [Order:3]siteID:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
 			aoLineAction{$i}:=3  //selected record number if Relate File
 			If ((<>linkProposal) & ([Order:3]proposalNum:79>0))
 				//TRACE
 				READ WRITE:C146([ProposalLine:43])
-				QUERY:C277([ProposalLine:43]; [ProposalLine:43]proposalNum:1=[Order:3]proposalNum:79; *)
+				QUERY:C277([ProposalLine:43]; [ProposalLine:43]idNumParent:1=[Order:3]proposalNum:79; *)
 				QUERY:C277([ProposalLine:43];  & [ProposalLine:43]lineNum:43=[OrderLine:49]lineNum:3)
 				If (Records in selection:C76([ProposalLine:43])=1)
 					[ProposalLine:43]qtyOpen:51:=[ProposalLine:43]qtyOpen:51-$dOnOrd
 					SAVE RECORD:C53([ProposalLine:43])
-					If (([Proposal:42]proposalNum:5=[Order:3]proposalNum:79) & (Size of array:C274(aPQtyOpen)>0))
+					If (([Proposal:42]idNum:5=[Order:3]proposalNum:79) & (Size of array:C274(aPQtyOpen)>0))
 						$w:=Find in array:C230(aPLineNum; aOLineNum{$i})
 						If ($w>0)
 							aPQtyOpen{$w}:=[ProposalLine:43]qtyOpen:51
@@ -86,21 +86,21 @@ For ($i; 1; $k)
 			If ($dOrderQty#0)
 				//Invt_dRecCreate ("SO";[Order]OrderNum;0;[Order]customerID;[Order]projectNum;"ord changed";1;[OrderLine]UniqueID;[OrderLine]ItemNum;0;$dOrderQty;[orderLine]UnitCost;"";<>tcsiteID;DiscountApply ([orderLine]UnitPrice;[orderLine]Discount;<>tcDecimalUP))
 				//### jwm ### 20130410_1627 changed from <>tcsiteID to [Order]siteID
-				Invt_dRecCreate("SO"; [Order:3]orderNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "ord changed"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOrderQty; [OrderLine:49]unitCost:12; ""; [Order:3]siteid:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
+				Invt_dRecCreate("SO"; [Order:3]idNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "ord changed"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOrderQty; [OrderLine:49]unitCost:12; ""; [Order:3]siteID:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
 			End if 
 			OrdLn_RecordFill($i)  // save orderline after accounting for changes
 		: (aoLineAction{$i}=-2000)  //  ????? what is this
-			If (([OrderLine:49]qtyOrdered:6#aOQtyOrder{$i}) | ([OrderLine:49]qtyShipped:7#aOQtyShip{$i}))  // coming from packing window
+			If (([OrderLine:49]qty:6#aOQtyOrder{$i}) | ([OrderLine:49]qtyShipped:7#aOQtyShip{$i}))  // coming from packing window
 				$dOrderQty:=aOQtyBL{$i}-[OrderLine:49]qtyBackLogged:8
 				
 				If (vPackingProcess="PK")
 					//Invt_dRecCreate ("PK";[Order]OrderNum;0;[Order]customerID;[Order]projectNum;"packed";1;[OrderLine]UniqueID;[OrderLine]ItemNum;$dOnHand;$dOrderQty;aOUnitCost{$w};"";<>tcsiteID;DiscountApply ([orderLine]UnitPrice;[orderLine]Discount;<>tcDecimalUP))
 					//### jwm ### 20130410_1630 changed <>tcsiteID to vsiteID (chack to make sure coming from packing window)
-					Invt_dRecCreate("PK"; [Order:3]orderNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "packed"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOrderQty; aOUnitCost{$w}; ""; vsiteID; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
+					Invt_dRecCreate("PK"; [Order:3]idNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "packed"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOrderQty; aOUnitCost{$w}; ""; vsiteID; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
 				Else 
 					//Invt_dRecCreate ("SO";[Order]OrderNum;0;[Order]customerID;[Order]projectNum;"oi ext qty";1;[OrderLine]UniqueID;[OrderLine]ItemNum;$dOnHand;$dOrderQty;aOUnitCost{$w};"";<>tcsiteID;DiscountApply ([orderLine]UnitPrice;[orderLine]Discount;<>tcDecimalUP))
 					//### jwm ### 20130410_1629 changed from <>tcsiteID to [Order]siteID
-					Invt_dRecCreate("SO"; [Order:3]orderNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "oi ext qty"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOrderQty; aOUnitCost{$w}; ""; [Order:3]siteid:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
+					Invt_dRecCreate("SO"; [Order:3]idNum:2; 0; [Order:3]customerID:1; [Order:3]projectNum:50; "oi ext qty"; 1; [OrderLine:49]idNum:50; [OrderLine:49]itemNum:4; $dOnHand; $dOrderQty; aOUnitCost{$w}; ""; [Order:3]siteID:106; DiscountApply([OrderLine:49]unitPrice:9; [OrderLine:49]discount:10; <>tcDecimalUP))
 				End if 
 				
 				OrdLn_RecordFill($i)

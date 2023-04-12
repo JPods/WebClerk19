@@ -52,7 +52,7 @@ vtTableName:="Customer"
 $formData.dataClass:=ds:C1482[vtTableName]
 
 // STR_TablesListBox
-$formData.cFields:=STR_FieldObject($formData.dataClassName)
+$formData.cFields:=STR_FieldCollection($formData.dataClassName)
 
 
 
@@ -64,7 +64,7 @@ $formData.ck_CurrentSel:=New object:C1471  //$inSelection
 
 $formData.windowTitle:="Query Editor"
 
-Prs_ListActive
+Process_ListActive
 C_TEXT:C284($form_t)
 C_LONGINT:C283($win_l)
 C_LONGINT:C283($cascade_l)

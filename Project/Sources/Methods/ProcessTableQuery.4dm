@@ -124,14 +124,14 @@ If (allowAlerts_boo)  //& ($displayTrue) & ((Records in selection($ptTable->)>0)
 	
 Else 
 	If ((<>VIDEBUGMODE>=411) & (Records in selection:C76($ptTable->)>0))  // ### jwm ### 20190625_1548
-		ConsoleMessage("Zero records in selection "+Table name:C256($ptTable))
+		ConsoleLog("Zero records in selection "+Table name:C256($ptTable))
 	End if 
 End if 
 
 If ($seniorProcess>0)
 	POST OUTSIDE CALL:C329($seniorProcess)
 End if 
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 tableNumProcess:=0
 tableNumParent:=0
 MESSAGES ON:C181

@@ -9,7 +9,7 @@ Case of
 		FormEventOnUnloadOLO
 	: ($formEvent=On Display Detail:K2:22)
 		FormEventOnDisplayDetail
-		jDateTimeRecov([TallyResult:73]DTReport:12; ->vDate1; ->vTime1)
+		DateTime_DTFrom([TallyResult:73]dtReport:12; ->vDate1; ->vTime1)
 	: ($formEvent=On Header:K2:17)
 		FormEventOnHeader
 	: ($formEvent=On Selection Change:K2:29)

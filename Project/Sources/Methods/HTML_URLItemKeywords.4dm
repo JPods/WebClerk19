@@ -12,7 +12,7 @@
 //   //TRACE
 // KeyModifierCurrent 
 // If (CapKey=1)
-// testDoc:=create document(Storage.folder.jitF+"test"+String(DateTime_Enter)+".txt")
+// testDoc:=create document(Storage.folder.jitF+"test"+String(DateTime_DTTo)+".txt")
 // End if 
 // C_Longint($err)
 // C_TEXT($confirmStr;$docStr;$URLStr)
@@ -90,11 +90,11 @@
 // $catCount:=Size of array($aBaseCat)
 //   //
 // $basePage:="It"+$docStr+".html"  //causes a duplicate .html
-// If (HFS_Exists (<>WebFolder+$basePage)=1)
-// $err:=HFS_Delete (<>WebFolder+$basePage)
+// If (HFS_Exists (Storage.wc.webFolder+$basePage)=1)
+// $err:=HFS_Delete (Storage.wc.webFolder+$basePage)
 // End if 
 //   //  
-// sumDoc:=create document(<>WebFolder+$basePage)
+// sumDoc:=create document(Storage.wc.webFolder+$basePage)
 // If (OK=1)
 //   //If ($doMoreSpecific)
 //   ////some time extend the middle to an queried value//
@@ -153,7 +153,7 @@
 // $pageCnt:=$pageCnt+1
 //   //
 // $thisPage:="IT"+$docStr+$aBaseCat{$catInc}+(String($pageCnt)*(Num($pageCnt>1)))+".html"
-// $thisPagePath:=<>WebFolder+$thisPage
+// $thisPagePath:=Storage.wc.webFolder+$thisPage
 // If (HFS_Exists ($thisPagePath)=1)
 // $err:=HFS_Delete ($thisPagePath)
 // End if 
@@ -199,7 +199,7 @@
 // If ($pageName#$aPageName{$pageInc})
 // $badPagetoClip:="Bad characters"+"\t"+$aPageName{$pageInc}+"\t"+$pageName+"\r"+$badPagetoClip
 // End if 
-// myDoc:=create document(<>WebFolder+$aPageName{$pageInc})
+// myDoc:=create document(Storage.wc.webFolder+$aPageName{$pageInc})
 // If (OK=1)
 // SEND PACKET(myDoc;"\r"+"\r"+HTML_jitTagMake (1;"-3";"ITheader.txt";"")+"\r")
 // If ($pageCnt>1)

@@ -63,7 +63,7 @@ Case of
 				$obRec.statusConnect:="HOLD_web"
 			End if 
 			$obRec.dateReceived:=Current date:C33
-			$obRec.dtSync:=DateTime_Enter
+			$obRec.dtSync:=DateTime_DTTo
 			If ($obRec.isNew())
 				$obRec.change:=0
 				$obRec.amount:=$obRec.tendered

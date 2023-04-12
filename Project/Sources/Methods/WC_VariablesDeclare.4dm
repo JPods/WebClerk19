@@ -14,14 +14,11 @@
 // ----------------------------------------------------
 // ### bj ### 20210822_1438
 // Put into Storage then delete
-C_LONGINT:C283(<>wcPortNum; <>wcPortNumSSL; <>viWCThreadCount; <>HTTPD_ServerSocket; <>HTTPD_SSLSocket)
 // ports, sockets, and thread counts must be established 
 
 C_BOOLEAN:C305(<>bWebEvent; <>vLookaHead)
 <>vLookaHead:=False:C215
 <>bWebEvent:=False:C215
-
-
 
 ARRAY TEXT:C222(<>aWebSites; 0)
 ARRAY TEXT:C222(<>aWebDefaultPages; 0)
@@ -67,15 +64,15 @@ $doNum:=Num:C11(<>vlWebRealPr>0)
 //
 //
 C_TEXT:C284(<>htmlExpire)
-<>dtStartWebClerk:=DateTime_Enter
+<>dtStartWebClerk:=DateTime_DTTo
 WC_PageArrays("init")
 <>forceEmpty:=""
 C_LONGINT:C283(<>vTicDelay)
 C_BOOLEAN:C305(<>multiSite)
 <>multiSite:=False:C215
-//<>webFolder defined in jStart2
+//Storage.wc.webFolder defined in jStart2
 ARRAY TEXT:C222(<>aWebLog; 0)
-C_LONGINT:C283(<>wcPortNum; <>log; <>postDoc; <>dtStartWebClerk)
+C_LONGINT:C283(<>log; <>postDoc; <>dtStartWebClerk)
 C_TEXT:C284(<>htmlExpire)
 C_LONGINT:C283(<>vMaxLifeBrowser)
 
@@ -101,7 +98,7 @@ C_BOOLEAN:C305(<>bLogHeaders; <>bLogParameters)
 <>bLogHeaders:=[WebClerk:78]logHeaders:45
 <>bLogParameters:=[WebClerk:78]logParameters:46
 
-C_BOOLEAN:C305(<>HTTPD_IsInitialised; <>HTTPD_EnableSSL)
+C_BOOLEAN:C305(<>HTTPD_IsInitialised)
 
 
 

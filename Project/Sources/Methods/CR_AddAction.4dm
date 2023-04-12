@@ -20,18 +20,18 @@ C_TEXT:C284($3)
 KeyModifierCurrent
 Case of 
 	: ((OptKey=1) & ($1->#""))
-		CREATE SET:C116([CallReport:34]; "Current")
-		CREATE RECORD:C68([CallReport:34])
+		CREATE SET:C116([Call:34]; "Current")
+		CREATE RECORD:C68([Call:34])
 		
-		[CallReport:34]customerID:1:=$3
-		[CallReport:34]tableNum:2:=Table:C252($1)
-		[CallReport:34]actionBy:3:=Current user:C182
-		[CallReport:34]dtAction:4:=DateTime_Enter
-		[CallReport:34]dateDocument:17:=Current date:C33
-		[CallReport:34]complete:7:=True:C214
-		[CallReport:34]action:15:=$1->
-		SAVE RECORD:C53([CallReport:34])
-		ADD TO SET:C119([CallReport:34]; "Current")
+		[Call:34]customerID:1:=$3
+		[Call:34]tableNum:2:=Table:C252($1)
+		[Call:34]actionBy:3:=Current user:C182
+		[Call:34]dtAction:4:=DateTime_DTTo
+		[Call:34]dateDocument:17:=Current date:C33
+		[Call:34]complete:7:=True:C214
+		[Call:34]action:15:=$1->
+		SAVE RECORD:C53([Call:34])
+		ADD TO SET:C119([Call:34]; "Current")
 		USE SET:C118("Current")
 		CLEAR SET:C117("Current")
 	: (CmdKey=1)

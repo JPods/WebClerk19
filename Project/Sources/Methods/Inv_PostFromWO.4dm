@@ -81,7 +81,7 @@ If (OK=1)
 				pDescript:=[WorkOrder:66]itemDescript:34
 				[WorkOrder:66]action:33:="Billed-"+Date_strYrMmDd
 				[WorkOrder:66]idNumInvoice:1:=[Invoice:26]idNum:2
-				[WorkOrder:66]dtRequested:31:=DateTime_Enter
+				[WorkOrder:66]dtRequested:31:=DateTime_DTTo
 				[WorkOrder:66]comment:17:=String:C10(Current date:C33)+": "+Current user:C182+"; Invoiced"+"\r"+[WorkOrder:66]comment:17
 				SAVE RECORD:C53([WorkOrder:66])
 				QUERY:C277([Item:4]; [Item:4]itemNum:1=pPartNum)
@@ -92,7 +92,7 @@ If (OK=1)
 					$cntSub:=Records in selection:C76([OrderLine:49])
 					FIRST RECORD:C50([OrderLine:49])
 					For ($incSub; 1; $cntSub)
-						If ([OrderLine:49]location:22=[WorkOrder:66]woNum:29)
+						If ([OrderLine:49]location:22=[WorkOrder:66]idNum:29)
 							aiUnitPrice{aiLineAction}:=[OrderLine:49]unitPrice:9
 							aiDiscnt{aiLineAction}:=[OrderLine:49]discount:10
 							aiQtyRemain{aiLineAction}:=0  //maintain as original, zero for new
@@ -117,9 +117,9 @@ If (OK=1)
 					aiQtyRemain{aiLineAction}:=0
 					aiUnitPrice{aiLineAction}:=[WorkOrder:66]woPrice:47
 					aiDiscnt{aiLineAction}:=0
-					aiProdBy{aiLineAction}:=String:C10([WorkOrder:66]woNum:29)
+					aiProdBy{aiLineAction}:=String:C10([WorkOrder:66]idNum:29)
 					aiShipOrdSt{aiLineAction}:="WOLink"+aiProdBy{aiLineAction}
-					aiLocation{aiLineAction}:=[WorkOrder:66]woNum:29
+					aiLocation{aiLineAction}:=[WorkOrder:66]idNum:29
 					aiSerialNm{aiLineAction}:=[WorkOrder:66]processCodes:24
 					aiProfile1{aiLineAction}:=[WorkOrder:66]processCodes:24
 					aiLnComment{aiLineAction}:=[WorkOrder:66]actionByApproved:48+("; "*Num:C11([WorkOrder:66]actionByApproved:48#""))+QX_FindActiveText([WorkOrder:66]description:3; ">"; "<")
@@ -137,7 +137,7 @@ If (OK=1)
 				vMod:=calcInvoice(vMod)
 				[Invoice:26]producedBy:65:=Current user:C182
 				If (([WorkOrder:66]shipInstructions:45#"") | ([Invoice:26]shipInstruct:40#""))
-					[Invoice:26]shipInstruct:40:=[Invoice:26]shipInstruct:40+(Num:C11([Invoice:26]shipInstruct:40#"")*"\r")+String:C10([WorkOrder:66]woNum:29; "0000-0000")+":  "+[WorkOrder:66]shipInstructions:45
+					[Invoice:26]shipInstruct:40:=[Invoice:26]shipInstruct:40+(Num:C11([Invoice:26]shipInstruct:40#"")*"\r")+String:C10([WorkOrder:66]idNum:29; "0000-0000")+":  "+[WorkOrder:66]shipInstructions:45
 				End if 
 				acceptInvoice(True:C214)
 				ADD TO SET:C119([Invoice:26]; "NewInvoices")

@@ -51,7 +51,7 @@ If ($p<1)
 	End if 
 End if 
 
-$vtPath:=<>WebFolder+Replace string:C233($vtPage; "/"; Folder separator:K24:12)
+$vtPath:=Storage:C1525.wc.webFolder+Replace string:C233($vtPage; "/"; Folder separator:K24:12)
 If (Position:C15(Folder separator:K24:12+Folder separator:K24:12; $vtPath)>0)
 	$vtPath:=Replace string:C233($vtPath; Folder separator:K24:12+Folder separator:K24:12; Folder separator:K24:12)  // protection against double //
 End if 

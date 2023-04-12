@@ -17,7 +17,7 @@ Else
 	C_TEXT:C284($theName)
 	$theName:=String:C10(Count user processes:C343)+Table name:C256(<>ptCurTable)
 	<>processAlt:=New process:C317("Prs_ShowItems"; <>tcPrsMemory; $theName)
-	Prs_ListActive
+	Process_ListActive
 	
 End if 
 

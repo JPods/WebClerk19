@@ -370,14 +370,14 @@ Case of
 				CREATE RECORD:C68([DInventory:36])
 				[DInventory:36]itemNum:1:=aLiItemNum{$i}
 				[DInventory:36]qtyOnHand:2:=-aLiQty{$i}
-				[DInventory:36]docid:9:=srSO
+				[DInventory:36]idNumDoc:9:=srSO
 				[DInventory:36]reason:13:="dun+"
 				[DInventory:36]typeID:14:="dun+"
 				[DInventory:36]dateCreated:39:=Current date:C33
 				[DInventory:36]timeCreated:40:=Current time:C178
-				[DInventory:36]dtCreated:15:=DateTime_Enter
+				[DInventory:36]dtCreated:15:=DateTime_DTTo
 				[DInventory:36]changedBy:22:=Current user:C182
-				[DInventory:36]tableNum:30:=Table:C252(->[Order:3])
+				[DInventory:36]tableName:30:=Table name:C256(->[Order:3])
 				REDUCE SELECTION:C351([DInventory:36]; 0)
 				READ ONLY:C145([DInventory:36])
 			End if 
@@ -437,7 +437,7 @@ Case of
 		End if 
 		
 		aPKtrackID{1}:=$trackingID
-		aPKDTReceiveExpected{1}:=DateTime_Enter
+		aPKDTReceiveExpected{1}:=DateTime_DTTo
 		aPKStatus{1}:=$status
 		aPKdocumentID{1}:=srSO
 		

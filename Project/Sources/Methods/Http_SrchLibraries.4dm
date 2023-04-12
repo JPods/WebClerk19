@@ -108,24 +108,24 @@ Else
 	Case of 
 		: (($dateBegin#"") & ($dateEnd#""))
 			If ($testCnt=0)
-				QUERY:C277([TallyResult:73]; [TallyResult:73]dtCreated:11>=DateTime_Enter(Date:C102($dateBegin); ?00:00:00?); *)
+				QUERY:C277([TallyResult:73]; [TallyResult:73]dtCreated:11>=DateTime_DTTo(Date:C102($dateBegin); ?00:00:00?); *)
 			Else 
-				QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11>=DateTime_Enter(Date:C102($dateBegin); ?00:00:00?); *)
+				QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11>=DateTime_DTTo(Date:C102($dateBegin); ?00:00:00?); *)
 			End if 
-			QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11<=DateTime_Enter(Date:C102($dateEnd); ?23:59:59?); *)
+			QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11<=DateTime_DTTo(Date:C102($dateEnd); ?23:59:59?); *)
 			$testCnt:=$testCnt+1
 		: (($dateBegin#"") & ($dateEnd=""))
 			If ($testCnt=0)
-				QUERY:C277([TallyResult:73]; [TallyResult:73]dtCreated:11>=DateTime_Enter(Date:C102($dateBegin); ?00:00:00?); *)
+				QUERY:C277([TallyResult:73]; [TallyResult:73]dtCreated:11>=DateTime_DTTo(Date:C102($dateBegin); ?00:00:00?); *)
 			Else 
-				QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11>=DateTime_Enter(Date:C102($dateBegin); ?00:00:00?); *)
+				QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11>=DateTime_DTTo(Date:C102($dateBegin); ?00:00:00?); *)
 			End if 
 			$testCnt:=$testCnt+1
 		: ($dateEnd#"")
 			If ($testCnt=0)
-				QUERY:C277([TallyResult:73]; [TallyResult:73]dtCreated:11<=DateTime_Enter(Date:C102($dateEnd); ?23:59:59?); *)
+				QUERY:C277([TallyResult:73]; [TallyResult:73]dtCreated:11<=DateTime_DTTo(Date:C102($dateEnd); ?23:59:59?); *)
 			Else 
-				QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11<=DateTime_Enter(Date:C102($dateEnd); ?23:59:59?); *)
+				QUERY:C277([TallyResult:73];  & [TallyResult:73]dtCreated:11<=DateTime_DTTo(Date:C102($dateEnd); ?23:59:59?); *)
 			End if 
 			$testCnt:=$testCnt+1
 	End case 

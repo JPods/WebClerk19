@@ -131,7 +131,7 @@ If (UserInPassWordGroup("MakePayment"))
 					DB_ShowCurrentSelection(->[Order:3]; ""; 1; "Processed Orders")
 				End if 
 				USE SET:C118("OrigOrders")
-				Prs_ListActive
+				Process_ListActive
 			Else 
 				Repeat 
 					vi1:=Records in set:C195("NewInvoices")
@@ -169,7 +169,7 @@ If (UserInPassWordGroup("MakePayment"))
 			CLEAR SET:C117("NewInvoices")
 			CLEAR SET:C117("SkipOrders")
 			CLEAR SET:C117("OldOrders")
-			If (ptCurTable#(->[Control:1]))  //lose track of vHere in selection options.
+			If (ptCurTable#(->[Base:1]))  //lose track of vHere in selection options.
 				vHere:=3
 			End if 
 			//skip if processing from Ord menu

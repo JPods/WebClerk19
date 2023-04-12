@@ -2,7 +2,7 @@
 C_LONGINT:C283($reports; $w)
 C_POINTER:C301($1)
 Case of 
-	: ($1=(->[QQQCustomer:2]))
+	: ($1=(->[Customer:2]))
 		$w:=Size of array:C274(aRptFiles)+1
 		$reports:=2
 		Ray_InsertElems($w; $reports; ->aRptCreator; ->aWhens; ->aWhys; ->aRptNames; ->aRptRecs; ->aRptFiles; ->aRptAuthLevel)
@@ -16,30 +16,15 @@ Case of
 		aWhys{$w}:="Sales Relationship"
 		aRptNames{$w}:="Lead Sheet"
 		aRptRecs{$w}:=-100
-		aRptFiles{$w}:=Table:C252(->[QQQCustomer:2])
+		aRptFiles{$w}:=Table:C252(->[Customer:2])
 		//
 		aWhens{$w+1}:="Internal"
 		aWhys{$w+1}:="Sales Relationship"
 		aRptNames{$w+1}:="Lead Sheet, Small"
 		aRptRecs{$w+1}:=-101
-		aRptFiles{$w+1}:=Table:C252(->[QQQCustomer:2])
+		aRptFiles{$w+1}:=Table:C252(->[Customer:2])
 		//   
-	: ($1=(->[Lead:48]))
-		$w:=Size of array:C274(aRptFiles)+1
-		$reports:=2
-		Ray_InsertElems($w; $reports; ->aRptCreator; ->aWhens; ->aWhys; ->aRptNames; ->aRptRecs; ->aRptFiles; ->aRptAuthLevel)
-		aWhens{$w}:="Internal"
-		aWhys{$w}:="Sales Relationship"
-		aRptNames{$w}:="Lead Sheet"
-		aRptRecs{$w}:=-100
-		aRptFiles{$w}:=Table:C252(->[Lead:48])
-		//
-		aWhens{$w+1}:="Internal"
-		aWhys{$w+1}:="Sales Relationship"
-		aRptNames{$w+1}:="Lead Sheet, Small"
-		aRptRecs{$w+1}:=-101
-		aRptFiles{$w+1}:=Table:C252(->[Lead:48])
-		//
+		
 	: ($1=(->[Invoice:26]))
 		$w:=Size of array:C274(aRptFiles)+1
 		$reports:=2
@@ -54,7 +39,7 @@ Case of
 		aWhys{$w+1}:="Current shipments"
 		aRptNames{$w+1}:="COD labels"
 		aRptRecs{$w+1}:=-105
-		aRptFiles{$w+1}:=Table:C252(->[QQQCustomer:2])
+		aRptFiles{$w+1}:=Table:C252(->[Customer:2])
 		//
 	: ($1=(->[Employee:19]))
 		$w:=Size of array:C274(aRptFiles)+1

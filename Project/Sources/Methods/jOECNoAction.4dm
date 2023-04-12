@@ -23,13 +23,13 @@ C_OBJECT:C1216($obErr; $obLine)
 C_COLLECTION:C1488($cErrs)
 $cErrs:=New collection:C1472
 GET LAST ERROR STACK:C1015($aiCodes; $atComponents; $atErrors)
-ConsoleMessage("\rjOECNoAction:\rError Code:\t"+String:C10(Error)+" - Method: "+Error Method+" - Line: "+String:C10(Error Line)+"\r")
+ConsoleLog("\rjOECNoAction:\rError Code:\t"+String:C10(Error)+" - Method: "+Error Method+" - Line: "+String:C10(Error Line)+"\r")
 $obErr:=New object:C1471("method"; Error Method; "Line"; Error Line)
 
 For ($viIndex; 1; Size of array:C274($aiCodes))
 	$obLine:=New object:C1471("code"; $aiCodes{$viIndex}; "error"; $atErrors{$viIndex}; "component"; $atComponents{$viIndex})
 	$cErrs.push($obLine)
-	ConsoleMessage("Error Code: "+String:C10($aiCodes{$viIndex})+" - "+$atErrors{$viIndex}+" - "+$atComponents{$viIndex})
+	ConsoleLog("Error Code: "+String:C10($aiCodes{$viIndex})+" - "+$atErrors{$viIndex}+" - "+$atComponents{$viIndex})
 End for 
 
 $obErr.lines:=$cErrs

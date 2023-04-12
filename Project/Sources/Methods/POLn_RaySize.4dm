@@ -38,7 +38,7 @@ If (($1=0) | ($1=2))
 	ARRAY LONGINT:C221(aPOOrdRef; 0)
 	ARRAY DATE:C224(aPODateRcvd; 0)
 	ARRAY LONGINT:C221(aPOSerialRc; 0)
-	ARRAY TEXT:C222(aPOSerialNm; 0)
+	ARRAY OBJECT:C1221(aPOSerialNm; 0)
 	ARRAY TEXT:C222(aPOVndrAlph; 0)
 	ARRAY TEXT:C222(aPoItemNum; 0)
 	ARRAY LONGINT:C221(aPOLineAction; 0)
@@ -71,8 +71,21 @@ Case of
 		viPOLnCnt:=0
 		viBoxCnt:=0
 		
-		SELECTION TO ARRAY:C260([POLine:40]complete:25; aPOLnCmplt; [POLine:40]qtyOrdered:3; aPOQtyOrder; [POLine:40]qtyReceived:4; aPOQtyRcvd; [POLine:40]qtyBackLogged:5; aPOQtyBL; [POLine:40]description:6; aPODescpt; [POLine:40]unitCost:7; aPOUnitCost; [POLine:40]discount:8; aPODiscnt; [POLine:40]extendedCost:9; aPOExtCost; [POLine:40]vaTax:10; aPOVATax; [POLine:40]taxJuris:11; aPOTaxable; [POLine:40]unitofMeasure:12; aPOUnitMeas; [POLine:40]backOrderAmount:13; aPoBackLog; [POLine:40]lineNum:14; aPOLineNum; [POLine:40]dateExpected:15; aPODateExp; [POLine:40]idNumOrder:16; aPOOrdRef; [POLine:40]unitWt:29; aPoUnitWt; [POLine:40]dateReceived:17; aPODateRcvd; [POLine:40]serialRc:18; aPOSerialRc; [POLine:40]serialNum:19; aPOSerialNm; [POLine:40]altItemNum:20; aPOVndrAlph; [POLine:40]itemNum:2; aPoItemNum; [POLine:40]; aPOLineAction; [POLine:40]seq:21; aPoSeq; [POLine:40]refCustomer:22; aPOCustRef; [POLine:40]siteAdder:26; aPoSiteRef; [POLine:40]comment:27; aPoLComment; [POLine:40]nonProdCosts:28; aPoNPCosts; [POLine:40]duties:30; aPoDuties; [POLine:40]idNum:32; aPoUniqueID; [POLine:40]qtyHold:34; aPoHoldQty)
-		SORT ARRAY:C229(aPoSeq; aPOLnCmplt; aPOQtyOrder; aPOQtyRcvd; aPOQtyBL; aPODescpt; aPOUnitCost; aPODiscnt; aPOExtCost; aPOVATax; aPOTaxable; aPOUnitMeas; aPoBackLog; aPOLineNum; aPODateExp; aPOOrdRef; aPoUnitWt; aPODateRcvd; aPOSerialRc; aPOSerialNm; aPOVndrAlph; aPoItemNum; aPOLineAction; aPOCustRef; aPoSiteRef; aPoLComment; aPoNPCosts; aPoDuties; aPoUniqueID; aPoHoldQty)
+		SELECTION TO ARRAY:C260([POLine:40]complete:25; aPOLnCmplt; [POLine:40]qty:3; aPOQtyOrder; \
+			[POLine:40]qtyReceived:4; aPOQtyRcvd; [POLine:40]qtyBackLogged:5; aPOQtyBL; \
+			[POLine:40]description:6; aPODescpt; [POLine:40]unitCost:7; aPOUnitCost; [POLine:40]discount:8; aPODiscnt; \
+			[POLine:40]extendedCost:9; aPOExtCost; [POLine:40]vaTax:10; aPOVATax; [POLine:40]taxJuris:11; aPOTaxable; \
+			[POLine:40]unitofMeasure:12; aPOUnitMeas; [POLine:40]backOrderAmount:13; aPoBackLog; \
+			[POLine:40]lineNum:14; aPOLineNum; [POLine:40]dateExpected:15; aPODateExp; [POLine:40]idNumOrder:16; aPOOrdRef; \
+			[POLine:40]unitWt:29; aPoUnitWt; [POLine:40]dateReceived:17; aPODateRcvd; [POLine:40]serialRc:18; aPOSerialRc; \
+			[POLine:40]obSerial:19; aPOSerialNm; [POLine:40]itemNumAlt:20; aPOVndrAlph; [POLine:40]itemNum:2; aPoItemNum; \
+			[POLine:40]; aPOLineAction; [POLine:40]seq:21; aPoSeq; [POLine:40]refCustomer:22; aPOCustRef; [POLine:40]siteAdder:26; aPoSiteRef; \
+			[POLine:40]comment:27; aPoLComment; [POLine:40]nonProdCosts:28; aPoNPCosts; [POLine:40]duties:30; aPoDuties; \
+			[POLine:40]idNum:32; aPoUniqueID; [POLine:40]qtyHold:34; aPoHoldQty)
+		SORT ARRAY:C229(aPoSeq; aPOLnCmplt; aPOQtyOrder; aPOQtyRcvd; aPOQtyBL; aPODescpt; aPOUnitCost; \
+			aPODiscnt; aPOExtCost; aPOVATax; aPOTaxable; aPOUnitMeas; aPoBackLog; aPOLineNum; aPODateExp; \
+			aPOOrdRef; aPoUnitWt; aPODateRcvd; aPOSerialRc; aPOSerialNm; aPOVndrAlph; aPoItemNum; \
+			aPOLineAction; aPOCustRef; aPoSiteRef; aPoLComment; aPoNPCosts; aPoDuties; aPoUniqueID; aPoHoldQty)
 		
 		
 		// aPOLnCmplt{$i}:=[POLine]Complete
@@ -168,7 +181,7 @@ Case of
 			poUniqueIDChange:=1
 			QUERY:C277([POLine:40]; [POLine:40]idNum:32=aPoDelete{$i})
 			If (Locked:C147([POLine:40]))
-				ConsoleMessage("[POLine]uniqueID is locked: "+String:C10([POLine:40]idNum:32))
+				ConsoleLog("[POLine]uniqueID is locked: "+String:C10([POLine:40]idNum:32))
 			Else 
 				$dCost:=DiscountApply([POLine:40]unitCost:7; [POLine:40]discount:8; <>tcDecimalUC)
 				$dOnPo:=[POLine:40]qtyBackLogged:5  //*Num([POLine]QtyBackLogged>0)
@@ -194,7 +207,7 @@ Case of
 		C_LONGINT:C283($dAction)
 		$k:=Size of array:C274(aPoUniqueID)
 		C_LONGINT:C283($dtEnter)
-		$dtEnter:=DateTime_Enter
+		$dtEnter:=DateTime_DTTo
 		For ($i; 1; $k)
 			$dAction:=1
 			If (aPoUniqueID{$i}=-3)  // new record
@@ -217,7 +230,7 @@ Case of
 			Else 
 				QUERY:C277([POLine:40]; [POLine:40]idNum:32=aPoUniqueID{$i})
 				If (Locked:C147([POLine:40]))
-					ConsoleMessage("[POLine]uniqueID is locked: "+String:C10([POLine:40]idNum:32))
+					ConsoleLog("[POLine]uniqueID is locked: "+String:C10([POLine:40]idNum:32))
 					$dAction:=-1
 				Else 
 					Case of 
@@ -230,7 +243,7 @@ Case of
 								vlReceiptID:=PORcpt_CreateNew([PO:39]idNum:5; [PO:39]vendorID:1)
 							End if 
 							Invt_dRecCreate("PO"; [PO:39]idNum:5; vlReceiptID; [PO:39]vendorID:1; [PO:39]idNumProject:6; "d Inship"; 1; aPoUniqueID{$i}; aPoItemNum{$i}; $dRec; $dOnPo; aPoDscntUP{$i}; ""; vsiteID; 0)
-						: ([POLine:40]qtyOrdered:3#aPOQtyOrder{$i})
+						: ([POLine:40]qty:3#aPOQtyOrder{$i})
 							$dAction:=1
 							$dRec:=aPOQtyRcvd{$i}-[POLine:40]qtyReceived:4  //aPoOgQOrd{$w}+
 							$dOnPo:=aPOQtyBL{$i}-[POLine:40]qtyBackLogged:5
@@ -258,7 +271,7 @@ Case of
 				
 				[POLine:40]seq:21:=aPoSeq{$i}
 				
-				[POLine:40]qtyOrdered:3:=aPOQtyOrder{$i}
+				[POLine:40]qty:3:=aPOQtyOrder{$i}
 				[POLine:40]qtyReceived:4:=aPOQtyRcvd{$i}
 				[POLine:40]qtyBackLogged:5:=aPOQtyBL{$i}
 				[POLine:40]description:6:=aPODescpt{$i}
@@ -275,8 +288,8 @@ Case of
 				[POLine:40]siteAdder:26:=aPoSiteRef{$i}
 				[POLine:40]unitWt:29:=aPoUnitWt{$i}
 				[POLine:40]dateReceived:17:=aPODateRcvd{$i}
-				[POLine:40]serialNum:19:=aPOSerialNm{$i}
-				[POLine:40]altItemNum:20:=aPOVndrAlph{$i}
+				//[POLine]obSerial:=aPOSerialNm{$i}
+				[POLine:40]itemNumAlt:20:=aPOVndrAlph{$i}
 				
 				[POLine:40]serialRc:18:=aPOSerialRc{$i}
 				[POLine:40]refCustomer:22:=aPOCustRef{$i}

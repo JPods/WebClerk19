@@ -1,16 +1,5 @@
 //%attributes = {"publishedWeb":true}
 
-// ----------------------------------------------------
-// User name (OS): Jim Medlen
-// Date and time: 08/15/18, 10:40:48
-// ----------------------------------------------------
-// Method: IE_GetPict
-// Description
-// 
-//
-// Parameters
-// ----------------------------------------------------
-
 //Procedure: IE_GetPict
 C_LONGINT:C283($err)
 C_PICTURE:C286($thePict)
@@ -41,11 +30,11 @@ Else
 			READ PICTURE FILE:C678($theDoc; $thePict)
 		: ($result=0)
 			If (<>viDebugMode=411)
-				ConsoleMessage("ERROR: Path is a folder")
+				ConsoleLog("ERROR: Path is a folder")
 			End if 
 		Else 
 			If (<>viDebugMode=411)
-				ConsoleMessage("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$theDoc)
+				ConsoleLog("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$theDoc)
 			End if 
 	End case 
 End if 

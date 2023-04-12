@@ -15,14 +15,14 @@
 C_POINTER:C301($1; $ptText)
 C_TEXT:C284($path)
 ARRAY TEXT:C222(aList; 0)
-$path:=Select document:C905(""; ""; "Select the desired document"; Alias selection:K24:10+Multiple files:K24:7+Package open:K24:8+Package selection:K24:9; aList)
+$path:=Select document:C905(""; ""; "Select the desired document"; Allow alias files:K24:10+Multiple files:K24:7+Package open:K24:8+Package selection:K24:9; aList)
 If (OK=1)
 	If (Size of array:C274(aList)=1)
 		If (Count parameters:C259=1)
 			$1->:=$1->+("\r"*2*(Num:C11($1->="")))+$path
 		Else 
 			SET TEXT TO PASTEBOARD:C523($path)
-			ConsoleMessage($path)
+			ConsoleLog($path)
 		End if 
 	Else 
 		$path:=""
@@ -35,7 +35,7 @@ If (OK=1)
 			$1->:=$1->+("\r"*2*(Num:C11($1->#"")))+$path
 		Else 
 			SET TEXT TO PASTEBOARD:C523($path)
-			ConsoleMessage($path)
+			ConsoleLog($path)
 		End if 
 	End if 
 End if 

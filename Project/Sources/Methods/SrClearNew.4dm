@@ -10,12 +10,12 @@ If (bNewRec=1)
 	srZip:=""
 	REDUCE SELECTION:C351([Contact:13]; 0)
 	CREATE RECORD:C68([Customer:2])
-	DBCustomer_init
+	DB_InitCustomer
 	srAcct:=[Customer:2]customerID:1
 	vRunningBal:=0
-	_O_OBJECT SET COLOR:C271(vRunningBal; -(15+(256*0)))
+	OBJECT SET RGB COLORS:C628(*; "vRunningBal"; 15; 256*0)
 	vCreditStat:="New"
-	_O_OBJECT SET COLOR:C271(vCreditStat; -(15+(256*0)))
+	OBJECT SET RGB COLORS:C628(*; "vCreditStat"; 15; 256*0)
 	Case of 
 		: (Table:C252($1)=Table:C252(->[Order:3]))
 			[Order:3]customerID:1:=srAcct
@@ -55,7 +55,7 @@ If (bNewRec=1)
 				aoSaleComm{$incRay}:=0
 			End for 
 			vMod:=calcOrder(True:C214)
-			DscntSetAll(<>tcbManyType; [Customer:2]customerID:1; [Order:3]typeSale:22; [Order:3]dateOrdered:4)
+			DscntSetAll(<>tcbManyType; [Customer:2]customerID:1; [Order:3]typeSale:22; [Order:3]dateDocument:4)
 		: (Table:C252($1)=Table:C252(->[Invoice:26]))
 			[Invoice:26]customerID:3:=srAcct
 			[Invoice:26]company:7:=""

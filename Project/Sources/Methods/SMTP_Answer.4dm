@@ -16,7 +16,7 @@ vtEmailMessage:=vtEmailMessage+"\r"+"C:  No Thread"
 If ($serverThread#0)
 	If ($2#"")  //passing "" procedure can be used to just receive
 		$err:=TCP Send($serverThread; $2)  // log on SMTP host
-		ConsoleMessage(">> \r"+$2)
+		ConsoleLog(">> \r"+$2)
 		vtEmailMessage:="\r"+"C: "+$2
 		
 		$buff:="\n"
@@ -42,7 +42,7 @@ If ($serverThread#0)
 			$endServer:=Position:C15(Storage:C1525.char.crlf+Storage:C1525.char.crlf; $buff)  //+Num(<>vbWCstop)
 		Until (($0#0) | (<>vbWCstop))
 		
-		ConsoleMessage("<<"+$buff)
+		ConsoleLog("<<"+$buff)
 		
 		If ($buff=Char:C90(9))
 			vtEmailMessageLog:=vtEmailMessageLog+"S:  No response, Result="+String:C10($result)+"\r"

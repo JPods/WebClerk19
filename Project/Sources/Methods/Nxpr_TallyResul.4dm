@@ -1,7 +1,7 @@
 //%attributes = {"publishedWeb":true}
 //Nxpr_TallyResul
 If (Is new record:C668([TallyResult:73]))
-	[TallyResult:73]dtCreated:11:=DateTime_Enter
+	[TallyResult:73]dtCreated:11:=DateTime_DTTo
 End if 
 Case of 
 	: (myOK<10)
@@ -35,6 +35,6 @@ Case of
 		[TallyResult:73]profile1:17:=String:C10(Current date:C33)
 		[TallyResult:73]profile2:18:=String:C10(Date_AddPeriod("year"; Current date:C33))
 		[TallyResult:73]longint1:7:=0
-		[TallyResult:73]dtReport:12:=DateTime_Enter(Date:C102([TallyResult:73]profile2:18); ?00:00:00?)
+		[TallyResult:73]dtReport:12:=DateTime_DTTo(Date:C102([TallyResult:73]profile2:18); ?00:00:00?)
 End case 
 myOK:=0

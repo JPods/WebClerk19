@@ -27,7 +27,7 @@ If (([Order:3]exchangeRate:68#0) & ([Order:3]exchangeRate:68#1))
 			aoUnitPrice{$incLn}:=Round:C94(aoUnitPrice{$incLn}*[Order:3]exchangeRate:68; viExDisPrec)
 			OrdLnExtend($incLn)
 		End for 
-		//If ([Invoice]AutoFreight=False)
+		//If ([Invoice]shipAuto=False)
 		[Order:3]shipFreightCost:38:=Round:C94([Order:3]exchangeRate:68*[Order:3]shipFreightCost:38; viExDisPrec)
 		[Order:3]shipMiscCosts:25:=Round:C94([Order:3]exchangeRate:68*[Order:3]shipMiscCosts:25; viExDisPrec)
 		//End if 
@@ -53,7 +53,7 @@ If (([Order:3]exchangeRate:68#0) & ([Order:3]exchangeRate:68#1))
 			OrdLnExtend($incLn)
 		End for 
 		Exch_InitRays(0)
-		//If ([Order]AutoFreight=False)
+		//If ([Order]shipAuto=False)
 		[Order:3]shipFreightCost:38:=Round:C94([Order:3]shipFreightCost:38/[Order:3]exchangeRate:68; viExConPrec)
 		[Order:3]shipMiscCosts:25:=Round:C94([Order:3]shipMiscCosts:25/[Order:3]exchangeRate:68; viExConPrec)
 		//End if 

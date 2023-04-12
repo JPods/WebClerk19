@@ -32,7 +32,7 @@ If (False:C215)
 	READ WRITE:C146([WorkOrder:66])
 End if 
 
-QUERY:C277([WorkOrder:66]; [WorkOrder:66]woNum:29=$1)
+QUERY:C277([WorkOrder:66]; [WorkOrder:66]idNum:29=$1)
 
 If (NotLocked(->[WorkOrder:66]))
 	If ([WorkOrder:66]action:33="PendingTransfer")
@@ -54,11 +54,11 @@ If (NotLocked(->[WorkOrder:66]))
 			[WorkOrder:66]siteIDTo:61:=iLo80String2
 		End if 
 		
-		[WorkOrder:66]dtComplete:6:=DateTime_Enter
+		[WorkOrder:66]dtComplete:6:=DateTime_DTTo
 		[WorkOrder:66]actionByInitiated:9:=Current user:C182
 		[WorkOrder:66]actionBy:8:=iLo80String4
 		[WorkOrder:66]dateComplete:64:=Current date:C33
-		[WorkOrder:66]qtyActual:14:=[WorkOrder:66]qtyActual:14
+		[WorkOrder:66]qty:14:=[WorkOrder:66]qty:14
 		SAVE RECORD:C53([WorkOrder:66])
 		WOTransfer_dInventory("Receive")
 		TallyInventory  // ### jwm ### 20180928_1132

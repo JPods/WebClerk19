@@ -10,5 +10,5 @@ Case of
 		//$cDefaults.push(New object([Item]itemNum
 		$fields_t:="itemNum,description,qtyOrdered,qtyShipped,qtyBackLogged,unitPrice,discount,extendedPrice,backOrdAmount,unitCost,extendedCost"
 		$obSetup:=New object:C1471("listboxName"; "LB_OrderLineOB"; "tableName"; "OrderLine"; "fieldList"; $fields_t; "priority"; "textBlock"; "columnAdder"; "ob")
-		LBX_DraftFromFieldString($obSetup)
+		//LBX_DraftFromFieldString($obSetup)
 End case 

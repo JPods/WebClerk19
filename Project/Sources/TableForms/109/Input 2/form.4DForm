@@ -1,0 +1,1513 @@
+﻿{
+	"memorizeGeometry": true,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 649,
+	"markerBreak": 649,
+	"markerFooter": 666,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Text31": {
+					"type": "text",
+					"top": 56,
+					"left": 573,
+					"width": 90,
+					"height": 12,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "RelationshipUUID"
+				},
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button16": {
+					"type": "button",
+					"top": 53,
+					"left": 574,
+					"width": 89,
+					"height": 19,
+					"dataSource": "b36",
+					"display": false,
+					"method": "ObjectMethods/Button16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Direction": {
+					"type": "input",
+					"top": 14,
+					"left": 228,
+					"width": 310,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]Command:23",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTAction3": {
+					"type": "input",
+					"top": 34,
+					"left": 365,
+					"width": 173,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]Size:38",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID3": {
+					"type": "input",
+					"top": 54,
+					"left": 228,
+					"width": 134,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]Direction:29",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Direction1": {
+					"type": "input",
+					"top": 54,
+					"left": 365,
+					"width": 173,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]Purpose:40",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID": {
+					"type": "input",
+					"top": 95,
+					"left": 228,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]idUnique:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID1": {
+					"type": "input",
+					"top": 115,
+					"left": 228,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]id:43",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID2": {
+					"type": "input",
+					"top": 135,
+					"left": 228,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]siteIDLocal:13",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FromSite4": {
+					"type": "input",
+					"top": 13,
+					"left": 670,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]Relationship:41",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FromSite3": {
+					"type": "input",
+					"top": 33,
+					"left": 670,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]SyncRelationID:24",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FromSite6": {
+					"type": "input",
+					"top": 53,
+					"left": 670,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]idRelation:49",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"eventID1": {
+					"type": "input",
+					"top": 96,
+					"left": 670,
+					"width": 310,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]idUniqueRemote:27",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"eventID4": {
+					"type": "input",
+					"top": 116,
+					"left": 670,
+					"width": 310,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]siteIDRemote:20",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"eventID5": {
+					"type": "input",
+					"top": 136,
+					"left": 670,
+					"width": 310,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]Host:45",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTCompleted2": {
+					"type": "input",
+					"top": 34,
+					"left": 228,
+					"width": 134,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]Date:26",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 36,
+					"left": 132,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Date / Size"
+				},
+				"Text24": {
+					"type": "text",
+					"top": 55,
+					"left": 112,
+					"width": 110,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Direction / Purpose"
+				},
+				"Text25": {
+					"type": "text",
+					"top": 16,
+					"left": 573,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Relationship"
+				},
+				"Text28": {
+					"type": "text",
+					"top": 98,
+					"left": 132,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 15,
+					"left": 132,
+					"width": 90,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Command"
+				},
+				"Text30": {
+					"type": "text",
+					"top": 36,
+					"left": 573,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "RelationshipID"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 79,
+					"left": 228,
+					"width": 90,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"fontStyle": "italic",
+					"text": "Local"
+				},
+				"Text32": {
+					"type": "text",
+					"top": 79,
+					"left": 673,
+					"width": 90,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"fontStyle": "italic",
+					"text": "Remote"
+				},
+				"Text33": {
+					"type": "text",
+					"top": 98,
+					"left": 575,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				},
+				"Text35": {
+					"type": "text",
+					"top": 118,
+					"left": 132,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UUID"
+				},
+				"Text41": {
+					"type": "text",
+					"top": 138,
+					"left": 132,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "siteID"
+				},
+				"Text42": {
+					"type": "text",
+					"top": 118,
+					"left": 575,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "siteID"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 138,
+					"left": 575,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Host"
+				}
+			}
+		},
+		{
+			"objects": {
+				"ApprovedBy": {
+					"type": "input",
+					"top": 199,
+					"left": 228,
+					"width": 310,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]ApprovedBySend:10",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTAction2": {
+					"type": "input",
+					"top": 218,
+					"left": 228,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]StatusSend:17",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ApprovedBy1": {
+					"type": "input",
+					"top": 238,
+					"left": 228,
+					"width": 310,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]ActionSend:32",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Approved": {
+					"type": "input",
+					"top": 198,
+					"left": 670,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]ApprovedByReceive:9",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTCompleted3": {
+					"type": "input",
+					"top": 218,
+					"left": 670,
+					"width": 310,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]StatusReceive:19",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ApprovedBy2": {
+					"type": "input",
+					"top": 238,
+					"left": 670,
+					"width": 310,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]ActionReceive:47",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"eventID2": {
+					"type": "input",
+					"top": 278,
+					"left": 130,
+					"width": 340,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]request:22",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTAction6": {
+					"type": "input",
+					"top": 298,
+					"left": 130,
+					"width": 340,
+					"height": 18,
+					"dataSource": "[SyncRecord:109]TableName:44",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FieldValue1": {
+					"type": "input",
+					"top": 319,
+					"left": 130,
+					"width": 340,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]FieldValue:6",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TextSample2": {
+					"type": "input",
+					"top": 345,
+					"left": 130,
+					"width": 850,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]PathToDocument:18",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 300,
+					"left": 565,
+					"width": 135,
+					"height": 17,
+					"dataSource": "iLoDate1",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 319,
+					"left": 565,
+					"width": 135,
+					"height": 17,
+					"dataSource": "iLoTime1",
+					"dataSourceTypeHint": "time",
+					"class": "\cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 300,
+					"left": 705,
+					"width": 135,
+					"height": 17,
+					"dataSource": "iLoDate2",
+					"dataSourceTypeHint": "date",
+					"class": "\cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 319,
+					"left": 705,
+					"width": 135,
+					"height": 17,
+					"dataSource": "iLoTime2",
+					"dataSourceTypeHint": "time",
+					"class": "\cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 300,
+					"left": 845,
+					"width": 135,
+					"height": 17,
+					"dataSource": "iLoDate3",
+					"class": "\cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 319,
+					"left": 845,
+					"width": 135,
+					"height": 17,
+					"dataSource": "iLoTime3",
+					"dataSourceTypeHint": "time",
+					"class": "\cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TextSample3": {
+					"type": "input",
+					"top": 369,
+					"left": 130,
+					"width": 835,
+					"height": 174,
+					"dataSource": "[SyncRecord:109]Body:34",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TextSample": {
+					"type": "input",
+					"top": 546,
+					"left": 130,
+					"width": 835,
+					"height": 67,
+					"dataSource": "[SyncRecord:109]Comment:25",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TextSample1": {
+					"type": "input",
+					"top": 615,
+					"left": 130,
+					"width": 835,
+					"height": 68,
+					"dataSource": "[SyncRecord:109]PackingNotes:14",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text37": {
+					"type": "text",
+					"top": 549,
+					"left": 15,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "TextSample"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 618,
+					"left": 15,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "PackingNotes"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 347,
+					"left": 15,
+					"width": 107,
+					"height": 12,
+					"stroke": "#008000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "PathToDoc"
+				},
+				"Button15": {
+					"type": "button",
+					"top": 345,
+					"left": 35,
+					"width": 87,
+					"height": 19,
+					"dataSource": "b35",
+					"display": false,
+					"method": "ObjectMethods/Button15.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 241,
+					"left": 15,
+					"width": 113,
+					"height": 25,
+					"dataSource": "b75",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssInput16",
+					"focusable": false,
+					"text": "LaunchFolder",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text29": {
+					"type": "text",
+					"top": 262,
+					"left": 575,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"text": "DTAction"
+				},
+				"Text34": {
+					"type": "text",
+					"top": 262,
+					"left": 715,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"text": "DTCompleted"
+				},
+				"DTAction": {
+					"type": "input",
+					"top": 281,
+					"left": 565,
+					"width": 135,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]DTAction:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTCompleted": {
+					"type": "input",
+					"top": 281,
+					"left": 705,
+					"width": 135,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]DTCompleted:8",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DTAction1": {
+					"type": "input",
+					"top": 281,
+					"left": 845,
+					"width": 135,
+					"height": 17,
+					"dataSource": "[SyncRecord:109]DTCreated:15",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 262,
+					"left": 855,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"text": "DTCreated"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 280,
+					"left": 32,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Request"
+				},
+				"Text22": {
+					"type": "text",
+					"top": 301,
+					"left": 32,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Table/ID/FieldNum"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 321,
+					"left": 32,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "FieldValue"
+				},
+				"Text36": {
+					"type": "text",
+					"top": 201,
+					"left": 132,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "ApprovedBy"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 220,
+					"left": 132,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Status"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 184,
+					"left": 228,
+					"width": 90,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"fontStyle": "italic",
+					"text": "Send"
+				},
+				"Text26": {
+					"type": "text",
+					"top": 181,
+					"left": 673,
+					"width": 90,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"fontStyle": "italic",
+					"text": "Receive"
+				},
+				"Text43": {
+					"type": "text",
+					"top": 240,
+					"left": 132,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Action"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 369,
+					"left": 15,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Body"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 201,
+					"left": 573,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "ApprovedBy"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 220,
+					"left": 573,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Status"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 240,
+					"left": 573,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Action"
+				}
+			}
+		},
+		{
+			"objects": {
+				"ApprovedBy3": {
+					"type": "input",
+					"top": 181,
+					"left": 44,
+					"width": 413,
+					"height": 236,
+					"dataSource": "[SyncRecord:109]ObReceived:46",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ApprovedBy5": {
+					"type": "input",
+					"top": 491,
+					"left": 44,
+					"width": 413,
+					"height": 188,
+					"dataSource": "[SyncRecord:109]ObGeneral:16",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 166,
+					"left": 44,
+					"width": 90,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObjReceived"
+				},
+				"TestScripts": {
+					"type": "button",
+					"top": 181,
+					"left": 491,
+					"width": 159,
+					"height": 20,
+					"dataSource": "b43",
+					"text": "Sandbox",
+					"method": "ObjectMethods/TestScripts.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"iLoText1": {
+					"type": "input",
+					"top": 207,
+					"left": 495,
+					"width": 489,
+					"height": 151,
+					"dataSource": "iLoText1",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"ApprovedBy4": {
+					"type": "input",
+					"top": 383,
+					"left": 495,
+					"width": 489,
+					"height": 297,
+					"dataSource": "[SyncRecord:109]ObWorking:12",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 365,
+					"left": 495,
+					"width": 90,
+					"height": 15,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObjWorking"
+				},
+				"Text49": {
+					"type": "text",
+					"top": 471,
+					"left": 44,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				},
+				"bBody": {
+					"type": "button",
+					"top": 133,
+					"left": 44,
+					"width": 124,
+					"height": 20,
+					"dataSource": "b23",
+					"class": "cssInputLabel",
+					"focusable": false,
+					"text": "Body to ObReceived",
+					"style": "bevel",
+					"method": "ObjectMethods/bBody.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 186,
+					"left": 673,
+					"width": 91,
+					"height": 13,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Test Script"
+				},
+				"bProcessPOs": {
+					"type": "button",
+					"top": 425,
+					"left": 44,
+					"width": 82,
+					"height": 20,
+					"dataSource": "bProcessPOs",
+					"class": "cssInputLabel",
+					"focusable": false,
+					"text": "POsCreateSO",
+					"style": "bevel",
+					"method": "ObjectMethods/bProcessPOs.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bProcessItems": {
+					"type": "button",
+					"top": 425,
+					"left": 309,
+					"width": 108,
+					"height": 20,
+					"dataSource": "bProcessItems",
+					"class": "cssInputLabel",
+					"focusable": false,
+					"text": "ProcessItems",
+					"style": "bevel",
+					"method": "ObjectMethods/bProcessItems.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 4,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

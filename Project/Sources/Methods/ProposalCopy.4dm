@@ -32,7 +32,7 @@ $obRec:=ds:C1482.Proposal.query("proposalNum = :1"; $1).first()
 [Proposal:42]amount:26:=$obRec.amount
 [Proposal:42]amountForceValue:81:=$obRec.amountForceValue
 //[Proposal]attention:=$obRec.attention
-[Proposal:42]autoFreight:38:=$obRec.autoFreight
+[Proposal]shipAuto:=$obRec.autoFreight
 //[Proposal]bill2Company:=$obRec.bill2Company
 //[Proposal]city:=$obRec.city
 [Proposal:42]comment:36:=$obRec.comment

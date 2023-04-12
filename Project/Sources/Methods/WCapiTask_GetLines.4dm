@@ -20,6 +20,11 @@ $vtUUIDkey:=WCapi_GetParameter("id")
 If (False:C215)  // 1020
 	$tableName:="Order"
 	$vtUUIDkey:="B037D70D521AE041A7C9A848D06AD1CF"
+	
+	// 2017
+	$tableName:="Order"
+	$vtUUIDkey:="C51B9C3D7EF948C7A64E3F0E554FBA1E"
+	
 End if 
 
 If (($tableName="") | (Length:C16($vtUUIDkey)<20))

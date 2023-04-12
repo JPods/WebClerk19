@@ -30,8 +30,8 @@ Case of
 End case 
 If ($myTask=1)
 	pPartNum:=[Item:4]itemNum:1
-	If ([Item:4]unitofMeasure:11="ByLine@")
-		Qx_PriceThis
+	If ([Item:4]unitOfMeasure:11="ByLine@")
+		//Qx_PriceThis
 	Else 
 		vUseBase:=SetPricePoint([Customer:2]typeSale:18)
 		[WorkOrder:66]woPrice:47:=Field:C253(4; vUseBase)->  //[Item]PriceA*$cntLines  
@@ -56,7 +56,7 @@ If ($myTask=1)
 	If ([WorkOrder:66]qtyOrdered:13=0)
 		[WorkOrder:66]qtyOrdered:13:=[Item:4]qtySaleDefault:15
 	End if 
-	[WorkOrder:66]mfrid:41:=[Item:4]mfrid:53
+	[WorkOrder:66]mfrID:41:=[Item:4]mfrID:53
 	[WorkOrder:66]mfrItemNum:42:=[Item:4]mfrItemNum:39
 	pPartNum:=[WorkOrder:66]itemNum:12
 	C_BOOLEAN:C305($doSpec)
@@ -85,8 +85,8 @@ Else
 	ptCurTable:=(->[WorkOrder:66])
 	//$found:=Prs_CheckRunnin ("QuickQuote")
 	//If ($found>0)
-	//If (Frontmost process#<>aPrsNum{$found})
-	//BRING TO FRONT(<>aPrsNum{$found})
+	//BRING TO FRONT($found)
+	//
 	//End if 
 	//End if 
 End if 

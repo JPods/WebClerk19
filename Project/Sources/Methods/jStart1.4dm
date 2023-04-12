@@ -39,13 +39,13 @@ vi1:=[DefaultAccount:32]rs1t:68  //Registration Number
 If ([DefaultAccount:32]rs2t:69=0)
 	READ WRITE:C146([DefaultAccount:32])
 	LOAD RECORD:C52([DefaultAccount:32])
-	[DefaultAccount:32]rs2t:69:=DateTime_Enter+Random:C100  //Serial Number
+	[DefaultAccount:32]rs2t:69:=DateTime_DTTo+Random:C100  //Serial Number
 	SAVE RECORD:C53([DefaultAccount:32])
 	READ ONLY:C145([DefaultAccount:32])
 End if 
 vi2:=[DefaultAccount:32]rs2t:69  //Serial Number
 vi3:=[DefaultAccount:32]rst3:70
-vi4:=DateTime_Enter
+vi4:=DateTime_DTTo
 vText9:=[DefaultAccount:32]taxOnShipping:72
 //
 
@@ -87,4 +87,4 @@ INSERT IN ARRAY:C227(<>aProjectNumberList; 1; 1)
 
 $viMilliseconds:=Milliseconds:C459-$viMilliseconds
 
-ConsoleMessage("jStart1\t"+String:C10($viMilliseconds))
+ConsoleLog("jStart1\t"+String:C10($viMilliseconds))

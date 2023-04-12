@@ -40,7 +40,7 @@ $w:=Find in array:C230(<>aExtensionValue; $extension)
 If ($w>0)
 	$contentType:=<>aContentType{$w}
 Else 
-	ConsoleMessage("Missing ContentType: "+$extension)
+	ConsoleLog("Missing ContentType: "+$extension)
 	$contentType:="application/json"
 End if 
 $0:=$contentType

@@ -60,7 +60,7 @@ Case of
 			$strDefault:=DefaultSetupsReturnValue("viWOHours")
 			Case of 
 				: ($strDefault="noRecord")
-					DefaultSetupsCreate("viWOHours"; "11"; "Is longint"; "WorkOrder"; "ScheduleSetter"; "Typical length of a workday")
+					
 					viWOHours:=11
 				: ($strDefault="duplicate")
 					ALERT:C41("GoTo the Defaults record and delete duplicate viWOHours values.")
@@ -73,7 +73,6 @@ Case of
 			$strDefault:=DefaultSetupsReturnValue("vWOStartTime")
 			Case of 
 				: ($strDefault="noRecord")
-					DefaultSetupsCreate("vWOStartTime"; String:C10(?07:00:00?); "Is time"; "WorkOrder"; "ScheduleSetter"; "Start of a typical workday")
 					vWOStartTime:=?07:00:00?
 				: ($strDefault="duplicate")
 					ALERT:C41("GoTo the Defaults record and delete duplicate vWOStartTime values.")

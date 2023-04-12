@@ -1,0 +1,495 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerBody": 376,
+	"markerBreak": 376,
+	"markerFooter": 386,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vRecNum": {
+					"type": "input",
+					"top": 21,
+					"left": 419,
+					"width": 100,
+					"height": 12,
+					"dataSource": "vRecNum",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"focusable": false,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Record Number"
+					},
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vRecNum.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"_Text_AlphaKey__2": {
+					"type": "text",
+					"top": 55,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "AlphaKey : "
+				},
+				"_Text_BooleanValue__3": {
+					"type": "text",
+					"top": 82,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "BooleanValue : "
+				},
+				"_Text_Change__4": {
+					"type": "text",
+					"top": 107,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Change : "
+				},
+				"_Text_Completed__5": {
+					"type": "text",
+					"top": 134,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Completed : "
+				},
+				"_Text_DTCreated__6": {
+					"type": "text",
+					"top": 159,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DTCreated : "
+				},
+				"_Text_dtLastSync__7": {
+					"type": "text",
+					"top": 185,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "dtLastSync : "
+				},
+				"_Text_FieldNum__8": {
+					"type": "text",
+					"top": 211,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "FieldNum : "
+				},
+				"_Text_FileNum__9": {
+					"type": "text",
+					"top": 237,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "FileNum : "
+				},
+				"_Text_LongIntKey__10": {
+					"type": "text",
+					"top": 263,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "LongIntKey : "
+				},
+				"_Text_UniqueID__11": {
+					"type": "text",
+					"top": 289,
+					"left": 126,
+					"width": 98,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "UniqueID : "
+				},
+				"AlphaKey": {
+					"type": "input",
+					"top": 53,
+					"left": 232,
+					"width": 221,
+					"height": 17,
+					"dataSource": "[TallyChange:65]idKey:3",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"BooleanValue": {
+					"type": "checkbox",
+					"top": 80,
+					"left": 232,
+					"width": 62,
+					"height": 16,
+					"dataSource": "[TallyChange:65]booleanValue:8",
+					"text": "Yes",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"textAlign": "left",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Change": {
+					"type": "input",
+					"top": 105,
+					"left": 232,
+					"width": 72,
+					"height": 17,
+					"dataSource": "[TallyChange:65]obEntity:5",
+					"dataSourceTypeHint": "number",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Completed": {
+					"type": "checkbox",
+					"top": 132,
+					"left": 232,
+					"width": 62,
+					"height": 16,
+					"dataSource": "[TallyChange:65]complete:6",
+					"text": "Yes",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"textAlign": "left",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"DTCreated": {
+					"type": "input",
+					"top": 157,
+					"left": 232,
+					"width": 64,
+					"height": 17,
+					"dataSource": "[TallyChange:65]dtCreated:7",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"dtLastSync": {
+					"type": "input",
+					"top": 183,
+					"left": 232,
+					"width": 64,
+					"height": 17,
+					"dataSource": "[TallyChange:65]changedBy:9",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_TallyChange_fieldNum_18": {
+					"type": "input",
+					"top": 209,
+					"left": 232,
+					"width": 64,
+					"height": 17,
+					"dataSource": "entry_o.fieldNum",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[TallyChange:65]fieldNum:2"
+				},
+				"FileNum": {
+					"type": "input",
+					"top": 235,
+					"left": 232,
+					"width": 64,
+					"height": 17,
+					"dataSource": "[TallyChange:65]idAlpha:1",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LongIntKey": {
+					"type": "input",
+					"top": 261,
+					"left": 232,
+					"width": 64,
+					"height": 17,
+					"dataSource": "[TallyChange:65]idNumKey:4",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID": {
+					"type": "input",
+					"top": 287,
+					"left": 232,
+					"width": 64,
+					"height": 17,
+					"dataSource": "[TallyChange:65]tableName:10",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_<>pNavPallet_22": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_23": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_24": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_25": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_26": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_27": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_TallyChange_obGeneral_28": {
+					"type": "input",
+					"top": 31,
+					"left": 484,
+					"width": 394,
+					"height": 273,
+					"dataSource": "entry_o.obGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"right": 878,
+					"zzzdataSource": "[TallyChange:65]obGeneral:12"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"objects": [
+					"vRecNum"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 7
+}

@@ -16,7 +16,7 @@ If (UserInPassWordGroup("Archive"))
 	C_LONGINT:C283($startPoint)
 	C_DATE:C307($1)
 	$1:=$1+1
-	$startPoint:=DateTime_Enter($1; ?00:00:00?)
+	$startPoint:=DateTime_DTTo($1; ?00:00:00?)
 	QUERY:C277([DInventory:36]; [DInventory:36]dtStack:17<$startPoint)
 	DELETE SELECTION:C66([DInventory:36])
 End if 

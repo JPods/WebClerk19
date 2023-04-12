@@ -9,8 +9,8 @@ End if
 QUERY:C277([WorkOrder:66]; [WorkOrder:66]dtComplete:6=0; *)
 QUERY:C277([WorkOrder:66];  & [WorkOrder:66]activity:7=$1->; *)
 If ($2#!00-00-00!)
-	vlDTStart:=DateTime_Enter($2; ?00:00:00?)
-	vlDTEnd:=DateTime_Enter($endDate; ?23:59:59?)
+	vlDTStart:=DateTime_DTTo($2; ?00:00:00?)
+	vlDTEnd:=DateTime_DTTo($endDate; ?23:59:59?)
 	QUERY:C277([WorkOrder:66];  & [WorkOrder:66]dtAction:5>=vlDTStart; *)
 	QUERY:C277([WorkOrder:66];  & [WorkOrder:66]dtAction:5<=vlDTEnd; *)
 End if 

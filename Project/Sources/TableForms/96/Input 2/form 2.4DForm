@@ -1,0 +1,85 @@
+﻿{"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":20,"bottomMargin":20,"menuBar":"Menu Bar #1","markerHeader":18,"markerBody":240,"markerBreak":264,"markerFooter":288,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"Rectangle20":{"type":"rectangle","top":83,"left":46,"width":351,"height":199,"sizingX":"grow","sizingY":"grow","fill":"transparent","stroke":"transparent"},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"ZipCode":{"type":"input","top":114,"left":90,"width":42,"height":17,"dataSource":"[QQQZipCode:96]ZipCode:1","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"CityName":{"type":"input","top":160,"left":90,"width":235,"height":17,"dataSource":"[QQQZipCode:96]CityName:2","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"PreferredCityName":{"type":"input","top":207,"left":90,"width":235,"height":17,"dataSource":"[QQQZipCode:96]PreferredCityName:3","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"StateAbbr":{"type":"input","top":254,"left":90,"width":21,"height":17,"dataSource":"[QQQZipCode:96]StateAbbr:4","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","contextMenu":"none","dragging":"none","dropping":"none"},"Text21":{"type":"text","top":94,"left":90,"width":126,"height":12,"stroke":"#000000","class":"cssInputLabel","text":"ZipCode"},"Text22":{"type":"text","top":140,"left":90,"width":126,"height":12,"stroke":"#000000","class":"cssInputLabel","text":"CityName"},"Text23":{"type":"text","top":187,"left":90,"width":126,"height":12,"stroke":"#000000","class":"cssInputLabel","text":"PreferredCityName"},"Text24":{"type":"text","top":234,"left":90,"width":126,"height":12,"stroke":"#000000","class":"cssInputLabel","text":"StateAbbr"},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}}}

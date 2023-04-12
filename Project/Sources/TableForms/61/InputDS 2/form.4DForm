@@ -1,0 +1,527 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 351,
+	"markerBreak": 351,
+	"markerFooter": 368,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_QQQCurrency_Active_3": {
+					"type": "checkbox",
+					"top": 95,
+					"left": 264,
+					"width": 50,
+					"height": 16,
+					"dataSource": "entry_o.Active",
+					"text": "Active",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]Active:2"
+				},
+				"_PROP_QQQCurrency_DisplayPrec_4": {
+					"type": "input",
+					"top": 142,
+					"left": 223,
+					"width": 65,
+					"height": 17,
+					"dataSource": "entry_o.DisplayPrec",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]DisplayPrec:6"
+				},
+				"_PROP_QQQCurrency_ConvertPrec_5": {
+					"type": "input",
+					"top": 142,
+					"left": 290,
+					"width": 65,
+					"height": 17,
+					"dataSource": "entry_o.ConvertPrec",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]ConvertPrec:7"
+				},
+				"_PROP_QQQCurrency_DateLastUpdated_6": {
+					"type": "input",
+					"top": 142,
+					"left": 492,
+					"width": 132,
+					"height": 17,
+					"dataSource": "entry_o.DateLastUpdated",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]DateLastUpdated:12"
+				},
+				"_VAR_ePopDate2_7": {
+					"type": "plugin",
+					"top": 142,
+					"left": 633,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate2",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable69.4dm",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_QQQCurrency_Name_8": {
+					"type": "input",
+					"top": 161,
+					"left": 223,
+					"width": 132,
+					"height": 17,
+					"dataSource": "entry_o.Name",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]Name:8"
+				},
+				"_PROP_QQQCurrency_TimeLastUpdated_9": {
+					"type": "input",
+					"top": 161,
+					"left": 492,
+					"width": 132,
+					"height": 17,
+					"dataSource": "entry_o.TimeLastUpdated",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]TimeLastUpdated:13"
+				},
+				"_VAR_ePopTime_10": {
+					"type": "plugin",
+					"top": 161,
+					"left": 633,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopTime",
+					"pluginAreaKind": "%TM_PopArea",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable68.4dm",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_QQQCurrency_CurrencyID_11": {
+					"type": "input",
+					"top": 180,
+					"left": 223,
+					"width": 132,
+					"height": 17,
+					"dataSource": "entry_o.CurrencyID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]CurrencyID:3"
+				},
+				"_PROP_QQQCurrency_ExchangeRate_12": {
+					"type": "input",
+					"top": 199,
+					"left": 223,
+					"width": 132,
+					"height": 17,
+					"dataSource": "entry_o.ExchangeRate",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field6.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]ExchangeRate:4"
+				},
+				"_VAR_vrLo1_13": {
+					"type": "input",
+					"top": 218,
+					"left": 223,
+					"width": 132,
+					"height": 17,
+					"dataSource": "vrLo1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_QQQCurrency_Comment_14": {
+					"type": "input",
+					"top": 257,
+					"left": 223,
+					"width": 652,
+					"height": 337,
+					"dataSource": "entry_o.Comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCurrency:61]Comment:5"
+				},
+				"_Text__16794209_15": {
+					"type": "text",
+					"top": 182,
+					"left": 104,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,209"
+				},
+				"_Text__16789157_16": {
+					"type": "text",
+					"top": 201,
+					"left": 104,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,157"
+				},
+				"_Text__16794210_17": {
+					"type": "text",
+					"top": 220,
+					"left": 104,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,210"
+				},
+				"_Text__16789145_18": {
+					"type": "text",
+					"top": 260,
+					"left": 104,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,145"
+				},
+				"_VAR_bDateTime_19": {
+					"type": "pictureButton",
+					"top": 298,
+					"left": 168,
+					"width": 41,
+					"height": 33,
+					"dataSource": "bDateTime",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text__16794211_20": {
+					"type": "text",
+					"top": 144,
+					"left": 104,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16794,211"
+				},
+				"_Text__16794212_21": {
+					"type": "text",
+					"top": 124,
+					"left": 223,
+					"width": 64,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16794,212"
+				},
+				"_Text__16794213_22": {
+					"type": "text",
+					"top": 124,
+					"left": 290,
+					"width": 64,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": ":16794,213"
+				},
+				"_Text__167907_23": {
+					"type": "text",
+					"top": 163,
+					"left": 104,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,7"
+				},
+				"_VAR_bAccept_24": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_25": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_26": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_27": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bdEnterKey_28": {
+					"type": "button",
+					"top": 50,
+					"left": 1,
+					"width": 3,
+					"height": 5,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_DateLastUpdated_29": {
+					"type": "text",
+					"top": 144,
+					"left": 375,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DateLastUpdated"
+				},
+				"_Text_TimeLastUpdated_30": {
+					"type": "text",
+					"top": 163,
+					"left": 375,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TimeLastUpdated"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

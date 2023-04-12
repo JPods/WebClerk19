@@ -4,7 +4,7 @@
 // User name (OS): Bill James
 // Date and time: 01/23/21, 23:47:16
 // ----------------------------------------------------
-// Method: Cat_DocumentListt
+// Method: Cat_DocumentList
 // Description
 // 
 //
@@ -47,7 +47,7 @@ If (OK=1)
 	$voCatalog.vendorTag:=$vtVendorTag
 	$voCatalog.dateProcessed:=Current date:C33
 	$voCatalog.timeProcessed:=Current time:C178
-	$voCatalog.dtProcessed:=DateTime_Enter
+	$voCatalog.dtProcessed:=DateTime_DTTo
 	$voCatalog.folder:=$vtPathFolder
 	$vtPathFolder:=Convert path POSIX to system:C1107($vtPathFolder)
 	ARRAY TEXT:C222($atFiles; 0)
@@ -74,7 +74,7 @@ If (False:C215)
 	$voTallyResults:=ds:C1482.TallyResults.new()
 	$voTallyResults.name:=$vtVendorID+" "+Date_yyyy_mm_dd_hh_mm
 	$voTallyResults.purpose:="Catalog"
-	$voTallyResults.dtCreated:=DateTime_Enter
+	$voTallyResults.dtCreated:=DateTime_DTTo
 	$voTallyResults.obGeneral:=New object:C1471
 	$voTallyResults.obGeneral.catelog:=$voCatalog
 	$voTallyResults.save()

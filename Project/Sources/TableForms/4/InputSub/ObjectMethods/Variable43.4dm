@@ -1,1 +1,1 @@
-entryEntity.Profile10:=DE_PopUpArray(Self:C308)
+process_o.entry_o.Profile10:=DE_PopUpArray(Self:C308)

@@ -37,13 +37,13 @@ If (OK=1)
 				QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Service:6]customerID:1)
 				If (Records in selection:C76([Customer:2])=1)
 					QUERY:C277([TallyResult:73]; [TallyResult:73]customerID:30=[Customer:2]customerID:1; *)
-					QUERY:C277([TallyResult:73];  & [TallyResult:73]dtReport:12=DateTime_Enter([Customer:2]dateService:63; ?00:00:00?); *)
+					QUERY:C277([TallyResult:73];  & [TallyResult:73]dtReport:12=DateTime_DTTo([Customer:2]dateService:63; ?00:00:00?); *)
 					QUERY:C277([TallyResult:73];  & [TallyResult:73]purpose:2="Service Contract")
 					If (Records in selection:C76([TallyResult:73])=0)
 						CREATE RECORD:C68([TallyResult:73])
 						
 						[TallyResult:73]customerID:30:=[Customer:2]customerID:1
-						[TallyResult:73]dtReport:12:=DateTime_Enter([Customer:2]dateService:63; ?00:00:00?)
+						[TallyResult:73]dtReport:12:=DateTime_DTTo([Customer:2]dateService:63; ?00:00:00?)
 						[TallyResult:73]purpose:2:="Service Contract"
 					End if 
 					CREATE RECORD:C68([Invoice:26])

@@ -25,10 +25,10 @@ If ((ltrSave+bServRec)>0)
 			End if 
 			CREATE RECORD:C68([Service:6])
 			
-			[Service:6]dtDocument:16:=DateTime_Enter
-			[Service:6]dtBegin:15:=DateTime_Enter
-			[Service:6]dtEnd:38:=DateTime_Enter
-			[Service:6]dtAction:35:=DateTime_Enter
+			[Service:6]dtDocument:16:=DateTime_DTTo
+			[Service:6]dtBegin:15:=DateTime_DTTo
+			[Service:6]dtEnd:38:=DateTime_DTTo
+			[Service:6]dtAction:35:=DateTime_DTTo
 			//[Service]DTCompleted:=0
 			// [Service]DateCompleted:=Current date
 			// [Service]ActionDate:=Current date
@@ -41,10 +41,10 @@ If ((ltrSave+bServRec)>0)
 			Case of 
 				: ($ptPrintTable=(->[RepContact:10]))
 					[Service:6]attention:30:=[RepContact:10]nameFirst:3+" "+[RepContact:10]nameLast:5
-					[Service:6]repID:2:=[Rep:8]RepID:1
+					[Service:6]repID:2:=[Rep:8]repID:1
 				: ($ptPrintTable=(->[Rep:8]))
 					[Service:6]attention:30:=[Rep:8]division:3
-					[Service:6]repID:2:=[Rep:8]RepID:1
+					[Service:6]repID:2:=[Rep:8]repID:1
 				: ($ptPrintTable=(->[Order:3]))
 					[Service:6]attention:30:=[Order:3]attention:44
 					[Service:6]idNumOrder:22:=[Order:3]idNum:2
@@ -76,54 +76,51 @@ If ((ltrSave+bServRec)>0)
 			If ($doPop)
 				POP RECORD:C177([Service:6])
 			End if 
-		: (($ptPrintTable=(->[Contact:13])) | ($ptPrintTable=(->[zzzLead:48])) | ($ptPrintTable=(->[Customer:2])) | ($ptPrintTable=(->[CallReport:34])))
-			If ($ptPrintTable=(->[CallReport:34]))
+		: (($ptPrintTable=(->[Contact:13])) | ($ptPrintTable=(->[Customer:2])) | ($ptPrintTable=(->[Call:34])))
+			If ($ptPrintTable=(->[Call:34]))
 				C_LONGINT:C283($vTableNum)
 				C_TEXT:C284($theAcct)
 				C_TEXT:C284($theWho)
-				$vTableNum:=[CallReport:34]tableNum:2
-				$theAcct:=[CallReport:34]customerID:1
-				$theWho:=[CallReport:34]attention:18
-				PUSH RECORD:C176([CallReport:34])
+				$vTableNum:=[Call:34]tableNum:2
+				$theAcct:=[Call:34]customerID:1
+				$theWho:=[Call:34]attention:18
+				PUSH RECORD:C176([Call:34])
 				$doPop:=True:C214
 			End if 
-			CREATE RECORD:C68([CallReport:34])
+			CREATE RECORD:C68([Call:34])
 			
-			[CallReport:34]dtAction:4:=DateTime_Enter
-			[CallReport:34]dateDocument:17:=Current date:C33
-			[CallReport:34]emailMessage:10:=True:C214
-			[CallReport:34]letter:9:=True:C214
+			[Call:34]dtAction:4:=DateTime_DTTo
+			[Call:34]dateDocument:17:=Current date:C33
+			[Call:34]emailMessage:10:=True:C214
+			[Call:34]letter:9:=True:C214
 			If ([Letter:20]printApplication:4="FAX")
-				[CallReport:34]action:15:="FAX Letter Out"
+				[Call:34]action:15:="FAX Letter Out"
 			Else 
-				[CallReport:34]action:15:="Letter Out"
+				[Call:34]action:15:="Letter Out"
 			End if 
-			[CallReport:34]durationPlanned:5:=2
-			[CallReport:34]subject:14:=[Letter:20]name:1
-			[CallReport:34]customerID:1:=[Customer:2]customerID:1
-			[CallReport:34]actionBy:3:=Current user:C182
+			[Call:34]durationPlanned:5:=2
+			[Call:34]subject:14:=[Letter:20]name:1
+			[Call:34]customerID:1:=[Customer:2]customerID:1
+			[Call:34]actionBy:3:=Current user:C182
 			Case of 
 				: ($ptPrintTable=(->[Contact:13]))
-					[CallReport:34]customerID:1:=String:C10([Contact:13]idNum:28)
-					[CallReport:34]tableNum:2:=13
-					[CallReport:34]attention:18:=[Contact:13]nameFirst:2+" "+[Contact:13]nameLast:4
-				: ($ptPrintTable=(->[zzzLead:48]))
-					[CallReport:34]customerID:1:=String:C10([zzzLead:48]idNum:32)
-					[CallReport:34]tableNum:2:=48
-					[CallReport:34]attention:18:=[Contact:13]nameFirst:2+" "+[Contact:13]nameLast:4
+					[Call:34]customerID:1:=String:C10([Contact:13]idNum:28)
+					[Call:34]tableNum:2:=13
+					[Call:34]attention:18:=[Contact:13]nameFirst:2+" "+[Contact:13]nameLast:4
+					
 				: ($ptPrintTable=(->[Customer:2]))
-					[CallReport:34]tableNum:2:=2
-					[CallReport:34]customerID:1:=[Customer:2]customerID:1
-					[CallReport:34]attention:18:=[Customer:2]nameFirst:73+" "+[Customer:2]nameLast:23
-				: ($ptPrintTable=(->[CallReport:34]))
-					[CallReport:34]tableNum:2:=$vTableNum
-					[CallReport:34]customerID:1:=$theAcct
-					[CallReport:34]attention:18:=$theWho
+					[Call:34]tableNum:2:=2
+					[Call:34]customerID:1:=[Customer:2]customerID:1
+					[Call:34]attention:18:=[Customer:2]nameFirst:73+" "+[Customer:2]nameLast:23
+				: ($ptPrintTable=(->[Call:34]))
+					[Call:34]tableNum:2:=$vTableNum
+					[Call:34]customerID:1:=$theAcct
+					[Call:34]attention:18:=$theWho
 			End case 
 			If (ltrSave=1)
 				TRACE:C157
-				[CallReport:34]feedbackTags:19:="***"
-				[CallReport:34]keyTags:20:="Store internally as 4DWrite Doc"
+				[Call:34]feedbackTags:19:="***"
+				[Call:34]keyTags:20:="Store internally as 4DWrite Doc"
 				C_PICTURE:C286($tempPict)
 				C_LONGINT:C283($tempArea)
 				//$tempPict:=  //**WR Area to picture (eLetterArea)
@@ -134,9 +131,9 @@ If ((ltrSave+bServRec)>0)
 				//[CallReport]LetterPict:=  //**WR O Save to picture ($tempArea)
 				//**WR DELETE OFFSCREEN AREA ($tempArea)
 			End if 
-			SAVE RECORD:C53([CallReport:34])
+			SAVE RECORD:C53([Call:34])
 			If ($doPop)
-				POP RECORD:C177([CallReport:34])
+				POP RECORD:C177([Call:34])
 			End if 
 	End case 
 End if 

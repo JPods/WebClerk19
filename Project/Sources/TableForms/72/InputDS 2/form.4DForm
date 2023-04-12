@@ -1,0 +1,445 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #12",
+	"markerBody": 723,
+	"markerBreak": 732,
+	"markerFooter": 739,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_QAQuestion_questionType_3": {
+					"type": "input",
+					"top": 25,
+					"left": 236,
+					"width": 316,
+					"height": 17,
+					"dataSource": "entry_o.questionType",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAQuestion:71]questionType:2"
+				},
+				"_PROP_QAAnswer_idNumQAQuestion_4": {
+					"type": "input",
+					"top": 81,
+					"left": 510,
+					"width": 103,
+					"height": 17,
+					"dataSource": "entry_o.idNumQAQuestion",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAAnswer:72]idNumQAQuestion:1"
+				},
+				"_PROP_QAQuestion_question_5": {
+					"type": "input",
+					"top": 99,
+					"left": 32,
+					"width": 581,
+					"height": 56,
+					"dataSource": "entry_o.question",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAQuestion:71]question:3"
+				},
+				"_PROP_QAAnswer_idNum_6": {
+					"type": "input",
+					"top": 170,
+					"left": 510,
+					"width": 103,
+					"height": 17,
+					"dataSource": "entry_o.idNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAAnswer:72]idNum:2"
+				},
+				"_PROP_QAAnswer_answer_7": {
+					"type": "input",
+					"top": 188,
+					"left": 32,
+					"width": 581,
+					"height": 56,
+					"dataSource": "entry_o.answer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAAnswer:72]answer:3"
+				},
+				"_Text__1679539_8": {
+					"type": "text",
+					"top": 172,
+					"left": 404,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16795,39"
+				},
+				"_Text__1679529_9": {
+					"type": "text",
+					"top": 172,
+					"left": 30,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": ":16795,29"
+				},
+				"_Text__1679534_10": {
+					"type": "text",
+					"top": 83,
+					"left": 408,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16795,34"
+				},
+				"_Text__1679535_11": {
+					"type": "text",
+					"top": 27,
+					"left": 120,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16795,35"
+				},
+				"_Text__1679528_12": {
+					"type": "text",
+					"top": 83,
+					"left": 30,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fontStyle": "italic",
+					"text": ":16795,28"
+				},
+				"_VAR_bAccept_13": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_14": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_15": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_16": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP___17": {
+					"type": "input",
+					"top": 11,
+					"left": 620,
+					"width": 440,
+					"height": 417,
+					"dataSource": "entry_o.",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"zzzdataSource": "[QAQuestion]obGeneral"
+				},
+				"_PROP_QAAnswer_photoTag_18": {
+					"type": "input",
+					"top": 268,
+					"left": 32,
+					"width": 581,
+					"height": 33,
+					"dataSource": "entry_o.photoTag",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAAnswer:72]photoTag:8"
+				},
+				"_Text_photoTag_19": {
+					"type": "text",
+					"top": 252,
+					"left": 30,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "photoTag"
+				},
+				"_PROP_QAAnswer_url_20": {
+					"type": "input",
+					"top": 328,
+					"left": 32,
+					"width": 581,
+					"height": 33,
+					"dataSource": "entry_o.url",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAAnswer:72]url:6"
+				},
+				"_Text_url_21": {
+					"type": "text",
+					"top": 312,
+					"left": 30,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "url"
+				},
+				"_PROP_QAAnswer_seq_22": {
+					"type": "input",
+					"top": 170,
+					"left": 309,
+					"width": 103,
+					"height": 17,
+					"dataSource": "entry_o.seq",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAAnswer:72]seq:7"
+				},
+				"_Text_seq_23": {
+					"type": "text",
+					"top": 172,
+					"left": 207,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "seq"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 29,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

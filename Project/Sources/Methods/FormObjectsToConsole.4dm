@@ -187,7 +187,7 @@ For (i; 1; Size of array:C274(atObjects))
 	End case 
 	
 	
-	ConsoleMessage(atObjects{i}+"\t"+String:C10(aiType{i})+"\t"+atType{i}+"\t"+vtVarName)
+	ConsoleLog(atObjects{i}+"\t"+String:C10(aiType{i})+"\t"+atType{i}+"\t"+vtVarName)
 End for 
 //FORM UNLOAD
 

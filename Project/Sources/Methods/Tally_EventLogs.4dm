@@ -13,7 +13,7 @@ If (OK=1)
 	If ($OptKey=1)
 		QUERY:C277([EventLog:75])
 	Else 
-		$dtCutoff:=DateTime_Enter(Current date:C33-1)
+		$dtCutoff:=DateTime_DTTo(Current date:C33-1)
 		QUERY:C277([EventLog:75]; [EventLog:75]dtEvent:1<=$dtCutoff; *)
 		QUERY:C277([EventLog:75];  & [EventLog:75]groupid:3="netOrd")
 	End if 

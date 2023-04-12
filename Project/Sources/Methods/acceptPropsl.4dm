@@ -1,7 +1,7 @@
 //%attributes = {"publishedWeb":true}
 If (booAccept=True:C214)
 	If (Is new record:C668([Customer:2]))
-		TallyCreate(Table:C252(->[AdSource:35]); Field:C253(->[AdSource:35]newResponces:28); [Customer:2]adSource:62; 0; 1)
+		TallyCreate(Table:C252(->[Marketing:35]); Field:C253(->[Marketing:35]newResponces:28); [Customer:2]adSource:62; 0; 1)
 		//Data_ArchiveOld(process_o.oldCustomer)
 		Data_ArchiveOld
 		//acceptFilePt ($unLoad;->[Customer];->[Contact];->[Service];->[ReferencesTable];->[CallReport])
@@ -24,7 +24,7 @@ If (booAccept=True:C214)
 		If ([Proposal:42]dateExpected:42=!00-00-00!)
 			[Proposal:42]dateExpected:42:=[Proposal:42]dateNeeded:4
 		End if 
-		[Proposal:42]lineCount:48:=Size of array:C274(aPLineAction)
+		
 		SAVE RECORD:C53([Proposal:42])
 		vrOldValue:=[Proposal:42]amount:26
 		newProp:=False:C215

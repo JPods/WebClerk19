@@ -30,7 +30,7 @@ If (OK=1)
 					// Reset
 				: ($tableName="CronJob")
 				: ($tableName="FieldCharacteristic")
-				: ($tableName="UserReport")
+				: ($tableName="Report")
 				: ($tableName="Carrier")  //($i=11)//Carriers
 				: ($tableName="CarrierWeight")  //($i=11)//Carriers
 				: ($tableName="CarrierZone")  //($i=11)//Carriers
@@ -41,7 +41,7 @@ If (OK=1)
 				: ($tableName="Script")  //: ($i=78)//Params
 				: ($tableName="Employee")  //($i=19)//Employees
 					
-					QUERY:C277([Employee:19]; [Employee:19]nameid:1#"admin@")
+					QUERY:C277([Employee:19]; [Employee:19]nameID:1#"admin@")
 					DELETE SELECTION:C66(Table:C252($i)->)
 				Else 
 					vi9:=1
@@ -54,7 +54,7 @@ If (OK=1)
 						
 						Case of 
 							: ($tableName="Employee")
-								QUERY:C277([Employee:19]; [Employee:19]nameid:1#"Admin@")
+								QUERY:C277([Employee:19]; [Employee:19]nameID:1#"Admin@")
 								// ### bj ### 20210219_1123  Why is this here? QQQ
 							Else 
 								ALL RECORDS:C47(Table:C252($i)->)

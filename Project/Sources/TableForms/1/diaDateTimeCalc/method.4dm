@@ -19,8 +19,8 @@ Case of
 		vtStTime:=?00:00:00?
 		vdEndDate:=Current date:C33
 		vtEndTime:=?23:59:59?
-		vlDTStart:=DateTime_Enter(vdStDate; vtStTime)
-		vlDTEnd:=DateTime_Enter(vdEndDate; vtEndTime)
+		vlDTStart:=DateTime_DTTo(vdStDate; vtStTime)
+		vlDTEnd:=DateTime_DTTo(vdEndDate; vtEndTime)
 		SET MENU BAR:C67(6)
 	: (Outside call:C328)
 		Prs_OutsideCall

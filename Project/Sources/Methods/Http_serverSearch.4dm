@@ -41,13 +41,13 @@ Case of
 		$err:=WC_PageSendWithTags($1; $doPage; 0)
 		
 	: (voState.url="/Search_Custom@")
-		HTTP_Query($socket; ->vText11)
+		//HTTP_Query($socket; ->vText11)
 		
 	: (voState.url="/Search_Table@")
-		Http_SrchGeneral($socket; ->vText11)
+		//Http_SrchGeneral($socket; ->vText11)
 		
 	: (voState.url="/Search_Source@")  //
-		Http_SrchGeneral($socket; ->vText11)
+		//Http_SrchGeneral($socket; ->vText11)
 	: (voState.url="/Search_PO@")  //get /user
 		Http_SearchPO($socket; $2)
 		//: (voState.url="/Search_Password@")

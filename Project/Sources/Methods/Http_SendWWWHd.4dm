@@ -71,7 +71,7 @@ If (vbWCHeadersSent=False:C215)
 	
 	//
 	$hourAfterGMT:=6
-	$dtLong:=DateTime_Enter(Current date:C33; Current time:C178)
+	$dtLong:=DateTime_DTTo(Current date:C33; Current time:C178)
 	$dtLong:=$dtLong+(60*60*$liveHours)
 	$date:=jDateTimeRDate($dtLong)
 	$time:=jDateTimeRTime($dtLong)
@@ -82,7 +82,7 @@ If (vbWCHeadersSent=False:C215)
 	//SMTP_Date (smtp_ID; msgDate; msgTime; timeZone; offset{; deleteOption})  Integer
 	//
 	//If (vleventID="")
-	//vleventID:=String(DateTime_Enter )
+	//vleventID:=String(DateTime_DTTo )
 	//End if 
 	
 	
@@ -104,6 +104,6 @@ If (vbWCHeadersSent=False:C215)
 	
 	
 	If (<>viDebugMode>910)
-		ConsoleMessage($header)
+		ConsoleLog($header)
 	End if 
 End if 

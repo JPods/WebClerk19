@@ -27,20 +27,22 @@ Else
 		SH_FillRays(0)
 		For ($i; 1; $k)
 			$doArray:=False:C215
-			Case of 
-				: (($2="shipped") & Not:C34(([TallyResult:73]real1:13=0) & ([TallyResult:73]real2:14=0) & ([TallyResult:73]real3:15=0) & ([TallyResult:73]real4:16=0) & ([TallyResult:73]real5:32=0)))
-					$doArray:=True:C214
-				: (($2="ordered") & Not:C34(([TallyResult:73]real6:42=0) & ([TallyResult:73]real7:43=0) & ([TallyResult:73]real8:44=0) & ([TallyResult:73]real9:45=0) & ([TallyResult:73]real10:46=0)))
-					$doArray:=True:C214
-			End case 
+			// Fix and change types. commented out
+			// Modified by: Bill James (2022-12-09T06:00:00Z)
+			//Case of 
+			//: (($2="shipped") & Not(([TallyResult]real1=0) & ([TallyResult]real2=0) & ([TallyResult]real3=0) & ([TallyResult]real4=0) & ([TallyResult]real5=0)))
+			//$doArray:=True
+			//: (($2="ordered") & Not(([TallyResult]real6=0) & ([TallyResult]real7=0) & ([TallyResult]real8=0) & ([TallyResult]dataRaw=0) & ([TallyResult]real10=0)))
+			//$doArray:=True
+			//End case 
 			If ($doArray)
 				$w:=Size of array:C274(aText1)+1
 				SH_FillRays(-3; $w; 1)
-				aText1{$w}:=[TallyResult:73]siteid:29
+				aText1{$w}:=[TallyResult:73]siteID:29
 				aText2{$w}:=[TallyResult:73]name:1  //period
 				aText3{$w}:=[TallyResult:73]purpose:2  //
-				aCustAcct{$w}:=[TallyResult:73]custVendid:30
-				aCustRep{$w}:=[TallyResult:73]salesid:31
+				aCustAcct{$w}:=[TallyResult:73]customerID:30
+				aCustRep{$w}:=[TallyResult:73]salesNameID:31
 				aPartNum{$w}:=[TallyResult:73]itemNum:34
 				aTmp20Str1{$w}:=[TallyResult:73]profile1:17
 				aTmp20Str2{$w}:=[TallyResult:73]profile2:18
@@ -58,7 +60,10 @@ Else
 					aQtyNact{$w}:=[TallyResult:73]real6:42  //qty
 					aSaleNact{$w}:=[TallyResult:73]real7:43  //sales
 					aInvNact{$w}:=[TallyResult:73]real8:44  //Net Sales
-					aScpNPlan{$w}:=[TallyResult:73]real9:45  //FOB diff
+					// Modified by: Bill James (2022-12-09T06:00:00Z)
+					// mush fix and adjust to data type and object
+					
+					//aScpNPlan{$w}:=[TallyResult]dataRaw  //FOB diff
 					aScpNact{$w}:=[TallyResult:73]real10:46  //Hidden Frght    
 				End if 
 			End if 

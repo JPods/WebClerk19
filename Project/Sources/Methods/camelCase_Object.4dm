@@ -19,7 +19,7 @@ $cBefore:=New collection:C1472
 If ($obIncoming[$vtUse]=Null:C1517)
 	$cTested.push("id")
 Else 
-	$cBefore:=Split string:C1554($obIncoming[$vtUse]; ",")
+	$cBefore:=Split string:C1554($obIncoming[$vtUse]; ";")
 	$obFieldDef:=STR_GetTableDefinition($tableName)
 	For each ($vtBefore; $cBefore)
 		If ($obFieldDef[$vtBefore]=Null:C1517)
@@ -34,10 +34,10 @@ Else
 		End if 
 	End for each 
 End if 
-$return[$vtUse]:=$cTested.join(",")
-$return[$vtUse+"Fail"]:=$cFailed.join(",")
+$return[$vtUse]:=$cTested.join(";")
+$return[$vtUse+"Fail"]:=$cFailed.join(";")
 $return.form:=""
 If ($return[$vtUse+"Fail"]#"")
-	ConsoleMessage($tableName+"---"+$vtUse+"---"+$return[$vtUse+"Fail"])
+	ConsoleLog($tableName+"---"+$vtUse+"---"+$return[$vtUse+"Fail"])
 End if 
 

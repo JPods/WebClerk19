@@ -24,7 +24,7 @@ Case of
 			EXECUTE FORMULA:C63(procerss_o.method)
 		End if 
 		
-		POST OUTSIDE CALL:C329(<>theProcessList)
+		POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 		
 End case 
 

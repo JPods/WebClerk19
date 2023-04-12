@@ -18,7 +18,7 @@ Path_Set(Storage:C1525.folder.jitExportsF)
 //save Date Time of BOM Export
 [Item:4]dtReviewed:85:=(Current date:C33-!1990-01-01!)*86400+Current time:C178
 SAVE RECORD:C53([Item:4])
-jDateTimeRecov([Item:4]dtReviewed:85; ->iLoDate8)
+DateTime_DTFrom([Item:4]dtReviewed:85; ->iLoDate8)
 
 $vtYear:=String:C10(Year of:C25(Current date:C33); "0000")
 $vtMonth:=String:C10(Month of:C24(Current date:C33); "00")

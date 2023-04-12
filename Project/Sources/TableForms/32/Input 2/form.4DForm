@@ -1,0 +1,1333 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 899,
+	"markerBreak": 899,
+	"markerFooter": 916,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onSelectionChange",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable63": {
+					"type": "button",
+					"top": 50,
+					"left": 1,
+					"width": 3,
+					"height": 5,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"top": 521,
+					"left": 38,
+					"width": 181,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,132"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 540,
+					"left": 38,
+					"width": 181,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,133"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 559,
+					"left": 38,
+					"width": 181,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,134"
+				},
+				"Variable9": {
+					"type": "plugin",
+					"top": 42,
+					"left": 750,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 110,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]AcctReceivables:8",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field2": {
+					"type": "input",
+					"top": 110,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameAR:7",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field3": {
+					"type": "input",
+					"top": 129,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]DiscountGiven:22",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field4": {
+					"type": "input",
+					"top": 129,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameSaleDiscoun:21",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field5": {
+					"type": "input",
+					"top": 148,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]LateChargeAcct:46",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field6": {
+					"type": "input",
+					"top": 148,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameLateCharge:45",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 173,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]FreightRevenue:14",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field8": {
+					"type": "input",
+					"top": 173,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameFreightReve:13",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field9": {
+					"type": "input",
+					"top": 198,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]TaxPayable:16",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 198,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameTaxPay:15",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field32": {
+					"type": "input",
+					"top": 217,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]TaxOnCost:85",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field33": {
+					"type": "input",
+					"top": 217,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameTaxOnCost:84",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field34": {
+					"type": "input",
+					"top": 237,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]TaxOnShipping:72",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field35": {
+					"type": "input",
+					"top": 237,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameTaxOnShipping:78",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 267,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]CommRepPay:10",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 267,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameCommRepPay:9",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "input",
+					"top": 286,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]CommRepExp:12",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 286,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameCommRepExp:11",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 319,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]CommEmpPay:2",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field16": {
+					"type": "input",
+					"top": 319,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameCommEmpPay:1",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 338,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]CommEmpExp:6",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 338,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameCommEmpExp:5",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 372,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]ItemSalesAcct:24",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field20": {
+					"type": "input",
+					"top": 372,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameItemSales:17",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field21": {
+					"type": "input",
+					"top": 391,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]ItemCostofGoods:25",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field22": {
+					"type": "input",
+					"top": 391,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameItemCoGs:18",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field23": {
+					"type": "input",
+					"top": 410,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]ItemInventory:26",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field24": {
+					"type": "input",
+					"top": 410,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NameItemInvtry:19",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field25": {
+					"type": "input",
+					"top": 446,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]PurchaseAcct:27",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field26": {
+					"type": "input",
+					"top": 446,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]PurchaseAcctNam:44",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field27": {
+					"type": "input",
+					"top": 477,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]CurrencyDsct:56",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field28": {
+					"type": "input",
+					"top": 477,
+					"left": 379,
+					"width": 403,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]CurrencyDsctNam:57",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field29": {
+					"type": "input",
+					"top": 519,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]MaterialAdjment:73",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field403": {
+					"type": "input",
+					"top": 517,
+					"left": 629,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]NonProductAdjustment:76",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field30": {
+					"type": "input",
+					"top": 538,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]ScrapAcct:74",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field404": {
+					"type": "input",
+					"top": 536,
+					"left": 629,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]DutyAdjustment:77",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field31": {
+					"type": "input",
+					"top": 557,
+					"left": 226,
+					"width": 151,
+					"height": 17,
+					"dataSource": "[DefaultAccount:32]MatlDrawAcct:75",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text43": {
+					"type": "text",
+					"top": 519,
+					"left": 442,
+					"width": 180,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Non-ProductAdjust"
+				},
+				"Text44": {
+					"type": "text",
+					"top": 538,
+					"left": 442,
+					"width": 180,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Duty Adjust"
+				},
+				"Text65": {
+					"type": "text",
+					"top": 112,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Account Receivable"
+				},
+				"Text77": {
+					"type": "text",
+					"top": 150,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Late Charges"
+				},
+				"Text78": {
+					"type": "text",
+					"top": 200,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Taxes Payable"
+				},
+				"Text79": {
+					"type": "text",
+					"top": 175,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Freight Revenue"
+				},
+				"Text80": {
+					"type": "text",
+					"top": 269,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Rep Comm Payable"
+				},
+				"Text14603": {
+					"type": "text",
+					"top": 288,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Rep Comm Expense"
+				},
+				"Text14595": {
+					"type": "text",
+					"top": 131,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sales Discount"
+				},
+				"Text90": {
+					"type": "text",
+					"top": 374,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Item Sales"
+				},
+				"Text91": {
+					"type": "text",
+					"top": 412,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Item Inventory"
+				},
+				"Text92": {
+					"type": "text",
+					"top": 393,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Item Cost of Sales"
+				},
+				"Text93": {
+					"type": "text",
+					"top": 321,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Employ Comm Payable"
+				},
+				"Text94": {
+					"type": "text",
+					"top": 340,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Employ Comm Expense"
+				},
+				"Text95": {
+					"type": "text",
+					"top": 479,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Currency Adjustment"
+				},
+				"Text96": {
+					"type": "text",
+					"top": 448,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Payable/Clearing"
+				},
+				"Text97": {
+					"type": "text",
+					"top": 91,
+					"left": 226,
+					"width": 138,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Accounts"
+				},
+				"Text98": {
+					"type": "text",
+					"top": 91,
+					"left": 379,
+					"width": 178,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"text": "Account Description"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 219,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Taxes on Cost"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 239,
+					"left": 42,
+					"width": 177,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Taxes on Shipping"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Variable14": {
+					"type": "pictureButton",
+					"top": 347,
+					"left": 194,
+					"width": 69,
+					"height": 35,
+					"dataSource": "bSubAdd",
+					"action": "addSubrecord",
+					"shortcutKey": "+",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/Plus.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable15": {
+					"type": "pictureButton",
+					"top": 347,
+					"left": 270,
+					"width": 69,
+					"height": 35,
+					"dataSource": "bSubDel",
+					"action": "deleteSubrecord",
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/MinusButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Subform5": {
+					"type": "subform",
+					"top": 113,
+					"left": 30,
+					"width": 720,
+					"height": 222,
+					"dataSourceTypeHint": "text",
+					"table": 106,
+					"detailForm": "Input",
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 388,
+					"left": 33,
+					"width": 720,
+					"height": 267,
+					"dataSourceTypeHint": "text",
+					"table": 53,
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"Variable23": {
+					"type": "input",
+					"top": 69,
+					"left": 561,
+					"width": 53,
+					"height": 17,
+					"dataSource": "<>tcCcDevice",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable24": {
+					"type": "button",
+					"top": 31,
+					"left": 561,
+					"width": 106,
+					"height": 29,
+					"dataSource": "b7",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Clear Device",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"top": 370,
+					"left": 30,
+					"width": 125,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"text": "GL Accounts"
+				},
+				"Text105": {
+					"type": "text",
+					"top": 43,
+					"left": 214,
+					"width": 176,
+					"height": 50,
+					"stroke": "#000000",
+					"fontFamily": "Consolas",
+					"fontSize": 10,
+					"text": "1 = Cash\t\t\t5 = Misc 1\r2 = Check\t\t\t6 = Misc 2\r3 = Credit Card\t\t7 = Misc 3\r4 = Acct Recv\r"
+				},
+				"Group Box": {
+					"type": "groupBox",
+					"top": 22,
+					"left": 201,
+					"width": 189,
+					"height": 78,
+					"class": "cssInputLabel",
+					"fontWeight": "bold",
+					"text": "Class Values\r\r"
+				},
+				"Text107": {
+					"type": "text",
+					"top": 96,
+					"left": 30,
+					"width": 205,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"text": "Payment Types and Accounts"
+				},
+				"Variable307": {
+					"type": "button",
+					"top": 18,
+					"left": 745,
+					"width": 8,
+					"height": 8,
+					"dataSource": "New Variable1940",
+					"display": false,
+					"method": "ObjectMethods/Variable307.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"Variable108": {
+					"type": "button",
+					"top": 94,
+					"left": 27,
+					"width": 154,
+					"height": 16,
+					"dataSource": "bUsage",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable108.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "button",
+					"top": 367,
+					"left": 28,
+					"width": 154,
+					"height": 16,
+					"dataSource": "bUsage",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"top": 40,
+					"left": 434,
+					"width": 93,
+					"height": 51,
+					"stroke": "#000000",
+					"fontFamily": "Consolas",
+					"fontSize": 10,
+					"text": "1 = MacAuthorize\r2 = Verifione\r3 = PCAuthorize\r4 = SyncRelation\r"
+				},
+				"Group Box1": {
+					"type": "groupBox",
+					"top": 22,
+					"left": 424,
+					"width": 123,
+					"height": 78,
+					"class": "cssInputLabel",
+					"fontWeight": "bold",
+					"text": "Credit Card Device\r\r"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

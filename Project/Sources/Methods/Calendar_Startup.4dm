@@ -23,5 +23,5 @@ GET USER LIST:C609($uname_at; $uid_al)  // Populate usernames and ids arrays
 $currentUserName_t:=Current user:C182  // Specify current username
 // ***
 
-Calendar_UserSetup($currentUserName_t; ->$uname_at; ->$uid_al)
+//Calendar_UserSetup($currentUserName_t; ->$uname_at; ->$uid_al)
 SET DATABASE PARAMETER:C642(Dates inside objects:K37:73; Date type:K37:88)

@@ -22,10 +22,10 @@ Case of
 		
 	: ($formEvent=On Load:K2:1)  //|(booPreNext))//(Before)
 		
-		//ConsoleMessage ("TEST: On Load")
+		//Console_Log ("TEST: On Load")
 		
 		
-		//ConsoleMessage ("TEST: Before")
+		//Console_Log ("TEST: Before")
 		ARRAY TEXT:C222(iLoaText1; 0)
 		ARRAY TEXT:C222(iLoaText2; 0)
 		ARRAY TEXT:C222(iLoaText3; 0)

@@ -1,0 +1,149 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"_LB_FieldList_": {
+					"type": "listbox",
+					"left": 5,
+					"top": 50,
+					"width": 505,
+					"height": 600,
+					"events": [
+						"onLoad",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "_LB_FieldList_.ents",
+					"currentItemSource": "_LB_FieldList_.cur",
+					"currentItemPositionSource": "_LB_FieldList_.pos",
+					"selectedItemsSource": "_LB_FieldList_.sel",
+					"alternateFill": "#FFFAEE",
+					"right": 510,
+					"columns": [
+						{
+							"header": {
+								"text": "FieldName",
+								"name": "_HEAD_fieldName_"
+							},
+							"name": "_COL_name_",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 133
+						},
+						{
+							"header": {
+								"name": "_HEAD_value_",
+								"text": "Value"
+							},
+							"name": "_COL_value_",
+							"footer": {
+								"name": "Footer7"
+							},
+							"dataSource": "This:C1470.value",
+							"width": 359
+						}
+					]
+				},
+				"Field1": {
+					"type": "input",
+					"top": 16,
+					"left": 42,
+					"width": 394,
+					"height": 14,
+					"dataSource": "entyEntity.alertMessage",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 16,
+					"left": 10,
+					"width": 27,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fontStyle": "italic",
+					"text": "Alert"
+				},
+				"Field2": {
+					"type": "input",
+					"top": 654,
+					"left": 3,
+					"width": 507,
+					"height": 66,
+					"dataSource": "entyEntity.obGeneral",
+					"stroke": "#000000",
+					"class": "cssButtonSmall",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"bottom": 720
+				}
+			}
+		}
+	],
+	"geometryStamp": 248,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

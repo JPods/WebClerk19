@@ -20,7 +20,7 @@ $doPage:="Password4Error.html"
 $userEmail:=WCapi_GetParameter("email"; "")
 $code:=WCapi_GetParameter("code"; "")
 C_LONGINT:C283($dtCurrent)
-$dtCurrent:=DateTime_Enter
+$dtCurrent:=DateTime_DTTo
 If (([EventLog:75]id:54=$code) & ([EventLog:75]email:56=$userEmail))
 	// found by cookie on the same machine
 Else 
@@ -60,7 +60,7 @@ End if
 SAVE RECORD:C53([EventLog:75])
 // send the page
 If (<>videbugmode=311)
-	ConsoleMessage(vResponse)
+	ConsoleLog(vResponse)
 End if 
 
 $doPage:=WC_DoPage($doPage; "")

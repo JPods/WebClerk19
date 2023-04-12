@@ -9,6 +9,6 @@ Case of
 		vText:=Keystroke:C390
 		vtChar:=String:C10(Character code:C91(Keystroke:C390))
 		If (vText#"")
-			ConsoleMessage(vtChar+"\t"+vText)
+			ConsoleLog(vtChar+"\t"+vText)
 		End if 
 End case 

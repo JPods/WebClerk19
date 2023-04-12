@@ -13,9 +13,7 @@ End for
 C_LONGINT:C283($found; $theProc)
 $found:=Prs_CheckRunnin("Requisitions")
 If ($found>0)
-	If (Frontmost process:C327#<>aPrsNum{$found})
-		BRING TO FRONT:C326(<>aPrsNum{$found})
-	End if 
+	BRING TO FRONT:C326($found)
 	$theProc:=<>aPrsNum{$found}
 Else 
 	<>ptCurTable:=ptCurTable

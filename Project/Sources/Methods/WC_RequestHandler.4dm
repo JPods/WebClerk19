@@ -86,7 +86,7 @@ While (($continue) & ($timeoutHit>Milliseconds:C459) & (<>vbWCstop=False:C215)) 
 			End if 
 		End if 
 		
-		// <>HTTPD_EnableSSL; 
+		// Storage.wc.enableSSL; 
 		C_LONGINT:C283($viIsSocketSecure)
 		
 		$viIsSocketSecure:=TCP Is Secure Connection(voState.socket)
@@ -168,8 +168,8 @@ End while
 C_LONGINT:C283($viDelayMilli)
 $viDelayMilli:=Milliseconds:C459-voState.debugging.requestStartTime
 If ((<>viDebugMode>=410) | ($viDelayMilli><>vlHangMilli))
-	ConsoleMessage("voState")
-	ConsoleMessage(JSON Stringify:C1217(voState))
+	ConsoleLog("voState")
+	ConsoleLog(JSON Stringify:C1217(voState))
 	
 	If (<>viDebugMode>=510)
 		C_OBJECT:C1216($voTallyResults)
@@ -178,14 +178,14 @@ If ((<>viDebugMode>=410) | ($viDelayMilli><>vlHangMilli))
 		$voTallyResults.name:=voState.urlOriginal
 		$voTallyResults.purpose:="voState"
 		
-		$voTallyResults.obGeneral:=New object:C1471("voState"; voState)
+		$voTallyResults.obGeneral:=Init_obGeneral
 		$voTallyResults.itemNum:=voState.request.method
 		$voTallyResults.profile1:=voState.request.URL.href
 		$voTallyResults.profile2:=voState.request.URL.pathNameTrimmed
 		$voTallyResults.longint1:=$viDelayMilli
 		
 		$voTallyResults.textBlk1:=vResponse
-		$voTallyResults.dtReport:=DateTime_Enter
+		$voTallyResults.dtReport:=DateTime_DTTo
 		$voTallyResults.dateCreated:=Current date:C33
 		$voTallyResults.save()
 	End if 

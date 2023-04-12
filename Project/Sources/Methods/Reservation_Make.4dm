@@ -36,7 +36,7 @@
 //  ARRAY LONGINT($aDoAction; 0)
 //  ARRAY LONGINT($aDoRecNum; 0)
 //  ARRAY REAL($aDoQty; 0)
-//  $DTCurr:=DateTime_Enter
+//  $DTCurr:=DateTime_DTTo
 //  $qtyMaxAllowed:=[Item]qtyOnHand-[Item]qtyOnSalesOrder
 //  //TRACE
 //  If ($qtyMaxAllowed<=0)

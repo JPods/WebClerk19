@@ -54,7 +54,7 @@ If (Record number:C243([Customer:2])>-1)
 		: ($recentDays>0)
 			$dateBegin:=Current date:C33-$recentDays
 			C_LONGINT:C283($beginDT)
-			$beginDT:=DateTime_Enter($dateBegin)
+			$beginDT:=DateTime_DTTo($dateBegin)
 			QUERY:C277([LoadTag:88]; [LoadTag:88]customerID:23=[Customer:2]customerID:1; *)
 			QUERY:C277([LoadTag:88];  & [LoadTag:88]dtAssembly:9>=$beginDT)
 			If (Records in selection:C76([LoadTag:88])>0)
@@ -65,15 +65,15 @@ If (Record number:C243([Customer:2])>-1)
 			End if 
 		: ($dateBegin>!00-00-00!)
 			C_LONGINT:C283($beginDT; $endDT)
-			$beginDT:=DateTime_Enter($dateBegin)
-			$endDT:=DateTime_Enter($dateEnd; ?23:59:59?)
+			$beginDT:=DateTime_DTTo($dateBegin)
+			$endDT:=DateTime_DTTo($dateEnd; ?23:59:59?)
 			QUERY:C277([LoadTag:88]; [LoadTag:88]customerID:23=[Customer:2]customerID:1; *)
 			QUERY:C277([LoadTag:88];  & [LoadTag:88]dtAssembly:9>=$beginDT; *)
 			If (($dateEnd>!00-00-00!) & ($dateBegin<$dateEnd))
-				$endDT:=DateTime_Enter($dateEnd; ?23:59:59?)
+				$endDT:=DateTime_DTTo($dateEnd; ?23:59:59?)
 			Else 
 				$dateEnd:=$dateBegin
-				$endDT:=DateTime_Enter($dateBegin; ?23:59:59?)
+				$endDT:=DateTime_DTTo($dateBegin; ?23:59:59?)
 			End if 
 			QUERY:C277([LoadTag:88];  & [LoadTag:88]dtAssembly:9>=$beginDT)
 			If (Records in selection:C76([LoadTag:88])>0)

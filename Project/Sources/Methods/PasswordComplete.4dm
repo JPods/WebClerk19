@@ -28,7 +28,7 @@ $userEmail:=WCapi_GetParameter("email"; "")
 $password:=WCapi_GetParameter("password"; "")
 
 C_LONGINT:C283($dtCurrent)
-$dtCurrent:=DateTime_Enter
+$dtCurrent:=DateTime_DTTo
 If (([EventLog:75]id:54=$code) & ([EventLog:75]email:56=$userEmail))
 	// found by cookie on the same machine
 Else 
@@ -45,7 +45,7 @@ If ([EventLog:75]id:54#$code)
 Else 
 	[EventLog:75]id:54:=[EventLog:75]id:54+"E4"
 	C_LONGINT:C283($dtCurrent)
-	$dtCurrent:=DateTime_Enter
+	$dtCurrent:=DateTime_DTTo
 	If ($dtCurrent>[EventLog:75]dtExpires:55)
 		vResponse:="Error: Password period expired. Current server time: "+String:C10(Current time:C178)+". Resubmit email: "+$userEmail
 		WC_LogEvent("Password change failed, expired: "+[RemoteUser:57]userPassword:3)
@@ -63,7 +63,7 @@ Else
 				vResponse:="Password is updated."
 				WC_LogEvent("Password change: "+[RemoteUser:57]userPassword:3+": "+$password)
 				If (<>VIDEBUGMODE>410)
-					ConsoleMessage([RemoteUser:57]email:14+" : Password change: "+[RemoteUser:57]userPassword:3+": "+$password)
+					ConsoleLog([RemoteUser:57]email:14+" : Password change: "+[RemoteUser:57]userPassword:3+": "+$password)
 				End if 
 				[RemoteUser:57]userPassword:3:=$password
 				[EventLog:75]remoteUserRec:10:=Record number:C243([RemoteUser:57])
@@ -85,16 +85,11 @@ Else
 						QUERY:C277([Contact:13]; [Contact:13]idNum:28=Num:C11([RemoteUser:57]customerID:10))
 						$doPage:="ContactsOne.html"
 					: ([RemoteUser:57]tableNum:9=Table:C252(->[Rep:8]))
-						QUERY:C277([Rep:8]; [Rep:8]RepID:1=[RemoteUser:57]customerID:10)
+						QUERY:C277([Rep:8]; [Rep:8]repID:1=[RemoteUser:57]customerID:10)
 						$doPage:="RepsOne.html"
 					: ([RemoteUser:57]tableNum:9=Table:C252(->[Vendor:38]))
 						QUERY:C277([Vendor:38]; [Vendor:38]vendorID:1=[RemoteUser:57]customerID:10)
 						$doPage:="VendorsOne.html"
-					: ([RemoteUser:57]tableNum:9=Table:C252(->[zzzLead:48]))
-						QUERY:C277([zzzLead:48]; [zzzLead:48]idNum:32=Num:C11([RemoteUser:57]customerID:10))
-						$doPage:="LeadsOne.html"
-						vUsePricePoint:=[zzzLead:48]typeSale:30
-						pvTypeSale:=[zzzLead:48]typeSale:30
 				End case 
 				viSecureLvl:=[RemoteUser:57]securityLevel:4
 				[EventLog:75]securityLevel:16:=[RemoteUser:57]securityLevel:4
@@ -124,7 +119,7 @@ Else
 End if 
 
 If (<>videbugmode=311)
-	ConsoleMessage(vResponse)
+	ConsoleLog(vResponse)
 End if 
 
 

@@ -105,7 +105,7 @@ Case of
 	Else 
 		If (doSearch>0)
 			If (Records in selection:C76([TechNote:58])=0)
-				ConsoleMessage("No TechNote Records returned.")
+				ConsoleLog("No TechNote Records returned.")
 			Else 
 				TechNotePopulateList
 				

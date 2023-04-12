@@ -26,8 +26,8 @@ READ ONLY:C145([TechNote:58])
 vi1:=0
 ControlRecCheck
 DISABLE MENU ITEM:C150(1; 4)
-FORM SET INPUT:C55([Control:1]; "TechNote")
-ptCurTable:=(->[Control:1])
+FORM SET INPUT:C55([Base:1]; "TechNote")
+ptCurTable:=(->[Base:1])
 jSetMenuNums(1; 5; 6)
 C_LONGINT:C283($formwidth)
 $formwidth:=810
@@ -36,7 +36,7 @@ If (Screen width:C187<700)
 Else 
 	Open window:C153(Screen width:C187-$formwidth-40; 40; Screen width:C187-4-40; 920+40; 4; "Tech Note"; "")
 End if 
-ProcessTableOpen(->[Control:1])
+ProcessTableOpen(->[Base:1])
 READ WRITE:C146([TechNote:58])
 //Process_Running 
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)

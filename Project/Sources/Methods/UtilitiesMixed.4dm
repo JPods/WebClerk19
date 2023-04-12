@@ -105,7 +105,7 @@ If (False:C215)  // look for gaps in numbers to insert CloneAllowed
 	// ### bj ### 20200208_0030 find gaps in sequences
 	ALL RECORDS:C47([Proposal:42])
 	ARRAY LONGINT:C221(aLongInt11; 0)
-	DISTINCT VALUES:C339([Proposal:42]proposalNum:5; aLongInt11)
+	DISTINCT VALUES:C339([Proposal:42]idNum:5; aLongInt11)
 	C_LONGINT:C283(uInteger1; uInteger2)
 	uInteger2:=Size of array:C274(aLongInt11)-2
 	SORT ARRAY:C229(aLongInt11; >)
@@ -113,7 +113,7 @@ If (False:C215)  // look for gaps in numbers to insert CloneAllowed
 	For (uInteger1; 1; uInteger2)
 		If (uInteger1+1<uInteger2)
 			If (aLongInt11{uInteger1}#(aLongInt11{uInteger1+1}-1))
-				ConsoleMessage(String:C10(aLongInt11{uInteger1})+": "+String:C10(aLongInt11{uInteger1+1}))
+				ConsoleLog(String:C10(aLongInt11{uInteger1})+": "+String:C10(aLongInt11{uInteger1+1}))
 			End if 
 		End if 
 	End for 

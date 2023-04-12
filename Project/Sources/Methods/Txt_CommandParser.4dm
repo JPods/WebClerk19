@@ -88,7 +88,7 @@ Else
 					$ptField:=PointerFromName($arrayElements{$incArray})
 					If (Is nil pointer:C315($ptField))  // ### jwm ### 20170426_1650 check for NIL Pointer
 						$arrayElements{3}:=$arrayElements{3}+" // NIL POINTER: "+$arrayElements{$incArray}
-						ConsoleMessage($arrayElements{3})
+						ConsoleLog($arrayElements{3})
 						// leave the value in the array element as is
 					Else 
 						
@@ -109,7 +109,7 @@ Else
 					$ptVariable:=Get pointer:C304($arrayElements{$incArray})
 					If (Is nil pointer:C315($ptVariable))  // ### jwm ### 20170503_1423
 						$arrayElements{3}:=$arrayElements{3}+" // NIL POINTER: "+$arrayElements{$incArray}
-						ConsoleMessage($arrayElements{3})
+						ConsoleLog($arrayElements{3})
 					Else 
 						
 						$theType:=Type:C295($ptVariable->)

@@ -1,1 +1,0 @@
-ALERT:C41("DateRetired will be set automatically when the Lifecycle Status is set to \"Retired\", and is therefore not directly editable.\n\nIf this date is incorrect, please inform IT.")

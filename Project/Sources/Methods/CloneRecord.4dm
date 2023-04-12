@@ -38,6 +38,9 @@ If ($doClone)
 	
 	$tableName:=$entity.getDataClass().tableName
 	$entityNew:=$entity.getDataClass().new()  //create a new entity in the parent dataclass
+	
+	
+	
 	$entityNew.fromObject($entity.toObject())  //get all attributes
 	$entityNew[$entity.getDataClass().getInfo().id]:=Null:C1517  //reset the primary key
 	$status:=$entityNew.save()  //save the duplicated entity
@@ -45,7 +48,7 @@ If ($doClone)
 		
 	Else 
 		process_o.cur:=$entityNew
-		process_o.tableName:=$tableName
+		process_o.dataClassName:=$tableName
 		process_o.ents:=New object:C1471
 		Case of 
 			: ($tableName="Service")
@@ -68,25 +71,25 @@ If ($doClone)
 			: ($tableName="PO")  //??ptCurFile=(?POLine"))
 				Clone_PO
 			: ($tableName="SpecialDiscount")
-				CloneChildrenRecords(->[SpecialDiscount:44]idNum:4; ->[ItemDiscount:45]specialDiscountsid:1; ->[SpecialDiscount:44]typeSale:1; ->[ItemDiscount:45]typeSale:9)
+				CloneChildrenRecords(->[ItemDiscountCatalog:44]idNum:4; ->[ItemDiscountLine:45]specialDiscountsid:1; ->[ItemDiscountCatalog:44]typeSale:1; ->[ItemDiscountLine:45]typeSale:9)
 				//GOTO OBJECT([SpecialDiscount]TypeSale)
 				//HIGHLIGHT TEXT([SpecialDiscount]TypeSale;1;Length([SpecialDiscount]TypeSale))
 				iLoRecordChange:=True:C214  // ### jwm ### 20171219_1504
 				If (False:C215)
-					QUERY:C277([ItemDiscount:45]; [ItemDiscount:45]specialDiscountsid:1=[SpecialDiscount:44]idNum:4)
+					QUERY:C277([ItemDiscountLine:45]; [ItemDiscountLine:45]specialDiscountsid:1=[ItemDiscountCatalog:44]idNum:4)
 					ARRAY LONGINT:C221($aChildren; 0)
-					SELECTION TO ARRAY:C260([ItemDiscount:45]; $aChildren)
-					DUPLICATE RECORD:C225([SpecialDiscount:44])  // autoincrement
-					SAVE RECORD:C53([SpecialDiscount:44])
+					SELECTION TO ARRAY:C260([ItemDiscountLine:45]; $aChildren)
+					DUPLICATE RECORD:C225([ItemDiscountCatalog:44])  // autoincrement
+					SAVE RECORD:C53([ItemDiscountCatalog:44])
 					var $i; $k : Integer
 					$k:=Size of array:C274($aChildren)
 					For ($i; 1; $k)
-						GOTO RECORD:C242([ItemDiscount:45]; $aChildren{$i})  // ### jwm ### 20161024_1353
-						DUPLICATE RECORD:C225([ItemDiscount:45])
-						[ItemDiscount:45]specialDiscountsid:1:=[SpecialDiscount:44]idNum:4
-						SAVE RECORD:C53([ItemDiscount:45])
+						GOTO RECORD:C242([ItemDiscountLine:45]; $aChildren{$i})  // ### jwm ### 20161024_1353
+						DUPLICATE RECORD:C225([ItemDiscountLine:45])
+						[ItemDiscountLine:45]specialDiscountsid:1:=[ItemDiscountCatalog:44]idNum:4
+						SAVE RECORD:C53([ItemDiscountLine:45])
 					End for 
-					UNLOAD RECORD:C212([ItemDiscount:45])
+					UNLOAD RECORD:C212([ItemDiscountLine:45])
 				End if 
 				
 			: ($tableName="Item")
@@ -123,35 +126,35 @@ If ($doClone)
 				
 				// Modified by: Bill James (2015-04-13T00:00:00 Subrecord eliminated)
 				
-				QUERY:C277([CarrierZone:143]; [CarrierZone:143]idNumCarrier:6=[Carrier:11]idNum:44)
+				QUERY:C277([zzzCarrierZone:143]; [zzzCarrierZone:143]idNumCarrier:6=[Carrier:11]idNum:44)
 				ARRAY LONGINT:C221($aCarrierZones; 0)
-				SELECTION TO ARRAY:C260([CarrierZone:143]; $aCarrierZones)
-				QUERY:C277([CarrierWeight:144]; [CarrierWeight:144]idNumCarrier:13=[Carrier:11]idNum:44)
+				SELECTION TO ARRAY:C260([zzzCarrierZone:143]; $aCarrierZones)
+				QUERY:C277([zzzCarrierWeight:144]; [zzzCarrierWeight:144]idNumCarrier:13=[Carrier:11]idNum:44)
 				ARRAY LONGINT:C221($aCarrierWeights; 0)
-				SELECTION TO ARRAY:C260([CarrierWeight:144]; $aCarrierWeights)
+				SELECTION TO ARRAY:C260([zzzCarrierWeight:144]; $aCarrierWeights)
 				DUPLICATE RECORD:C225(ptCurTable->)
 				
 				[Carrier:11]active:6:=False:C215
 				var $i; $k : Integer
 				$k:=Size of array:C274($aCarrierZones)
 				For ($i; 1; $k)
-					GOTO RECORD:C242([CarrierZone:143]; $aCarrierZones{$i})  // ### jwm ### 20161024_1353
-					DUPLICATE RECORD:C225([CarrierZone:143])
+					GOTO RECORD:C242([zzzCarrierZone:143]; $aCarrierZones{$i})  // ### jwm ### 20161024_1353
+					DUPLICATE RECORD:C225([zzzCarrierZone:143])
 					
-					[CarrierZone:143]idNumCarrier:6:=[Carrier:11]idNum:44
-					[CarrierZone:143]carrierid:7:=[Carrier:11]carrierid:10  // ### jwm ### 20150421_1033
+					[zzzCarrierZone:143]idNumCarrier:6:=[Carrier:11]idNum:44
+					[zzzCarrierZone:143]carrierid:7:=[Carrier:11]carrierid:10  // ### jwm ### 20150421_1033
 					//[CarrierZone]siteID:=[Carrier]siteID  // ### jwm ### 20150421_1259 Do not overwrite Site ID
-					SAVE RECORD:C53([CarrierZone:143])
+					SAVE RECORD:C53([zzzCarrierZone:143])
 				End for 
 				$k:=Size of array:C274($aCarrierWeights)
 				For ($i; 1; $k)
-					GOTO RECORD:C242([CarrierWeight:144]; $aCarrierWeights{$i})  // ### jwm ### 20161024_1353
-					DUPLICATE RECORD:C225([CarrierWeight:144])
+					GOTO RECORD:C242([zzzCarrierWeight:144]; $aCarrierWeights{$i})  // ### jwm ### 20161024_1353
+					DUPLICATE RECORD:C225([zzzCarrierWeight:144])
 					
-					[CarrierWeight:144]idNumCarrier:13:=[Carrier:11]idNum:44
-					[CarrierWeight:144]carrierid:14:=[Carrier:11]carrierid:10  // ### jwm ### 20150421_1033
-					[CarrierWeight:144]siteID:19:=[Carrier:11]siteID:36  // ### jwm ### 20150421_1033
-					SAVE RECORD:C53([CarrierWeight:144])
+					[zzzCarrierWeight:144]idNumCarrier:13:=[Carrier:11]idNum:44
+					[zzzCarrierWeight:144]carrierid:14:=[Carrier:11]carrierid:10  // ### jwm ### 20150421_1033
+					[zzzCarrierWeight:144]siteID:19:=[Carrier:11]siteID:36  // ### jwm ### 20150421_1033
+					SAVE RECORD:C53([zzzCarrierWeight:144])
 				End for 
 				SAVE RECORD:C53([Carrier:11])  // ### jwm ### 20161024_1342
 				Set_Window_Title
@@ -164,15 +167,15 @@ If ($doClone)
 			: ($tableName="TallyResult")
 				DUPLICATE RECORD:C225([TallyResult:73])
 				
-				[TallyResult:73]dtCreated:11:=DateTime_Enter
+				[TallyResult:73]dtCreated:11:=DateTime_DTTo
 			: ($tableName="Forum")
 				DUPLICATE RECORD:C225([Forum:80])
 				
-				[Forum:80]dtSubmitted:6:=DateTime_Enter
+				[Forum:80]dtSubmitted:6:=DateTime_DTTo
 			: ($tableName="UserReport")
-				DUPLICATE RECORD:C225([UserReport:46])
+				DUPLICATE RECORD:C225([Report:46])
 				
-				[UserReport:46]isPrimary:15:=False:C215
+				[Report:46]isPrimary:15:=False:C215
 			: ($tableName="Invoice")
 				$k:=0
 				ARRAY LONGINT:C221(aInvoices; $k)

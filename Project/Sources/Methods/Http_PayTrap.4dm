@@ -40,5 +40,5 @@ C_DATE:C307($ccDate)
 //C_REAL($fullTotal)
 //C_TEXT($theDotted;$custID;$payType;$AuthNum;$avs;$refNum)
 //
-//$err:=WC_PageSendWithTags ($1;<>WebFolder+"SSLRemote.html"+$suffix+".html"
+//$err:=WC_PageSendWithTags ($1;Storage.wc.webFolder+"SSLRemote.html"+$suffix+".html"
 //;0)

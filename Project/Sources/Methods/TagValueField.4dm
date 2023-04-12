@@ -187,7 +187,7 @@ Else
 			End case 
 		: ($type=Is longint:K8:6)  //Longint     9
 			If (Field name:C257(Field:C253($tableNum; $field))="DT@")
-				jDateTimeRecov(Field:C253($tableNum; $field)->; ->vDate1; ->vTime1)
+				DateTime_DTFrom(Field:C253($tableNum; $field)->; ->vDate1; ->vTime1)
 				Case of 
 					: ($strFormat="DateOnly")
 						$0:=String:C10(vDate1; 1)

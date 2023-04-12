@@ -17,28 +17,28 @@ $ptPict:=$2
 var $w : Integer
 CLEAR VARIABLE:C89($ptPict->)
 $path:=PathToSystem($path)
-ConsoleMessage("pathFinal: "+$path)
+ConsoleLog("pathFinal: "+$path)
 $result:=Test path name:C476($path)
 Case of 
 	: ($result=1)
 		READ PICTURE FILE:C678($path; $ptPict->)
 	: ($result=0)
 		BEEP:C151
-		ConsoleMessage("ERROR: Path is a folder")
+		ConsoleLog("ERROR: Path is a folder")
 	Else 
-		ConsoleMessage("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
+		ConsoleLog("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
 		BEEP:C151
 		$w:=Position:C15("CommerceExpert"; $path)
 		If ($w>0)
 			$pathServer:=Storage:C1525.paths.serverComEx+Substring:C12($path; $w+15)
 			If ((Test path name:C476($pathServer)=1) & ($pathServer#""))
 				READ PICTURE FILE:C678($pathServer; $ptPict->)
-				ConsoleMessage("ERROR: "+String:C10($result)+"  FILE Server FOUND\r"+$path)
+				ConsoleLog("ERROR: "+String:C10($result)+"  FILE Server FOUND\r"+$path)
 			Else 
 				$pathLocal:=Storage:C1525.paths.localComEx+Substring:C12($path; $w+15)
 				If (Test path name:C476($path)=1)
 					READ PICTURE FILE:C678($pathLocal; $ptPict->)
-					ConsoleMessage("ERROR: "+String:C10($result)+"  FILE local FOUND\r"+$path)
+					ConsoleLog("ERROR: "+String:C10($result)+"  FILE local FOUND\r"+$path)
 				End if 
 			End if 
 		End if 

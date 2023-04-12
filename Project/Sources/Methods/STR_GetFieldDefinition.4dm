@@ -24,12 +24,16 @@ Else
 	$tableName:=$1
 	$vtFieldName:=$2
 End if 
-$obRec:=ds:C1482[$tableName].new()
-If ($obRec#Null:C1517)
-	$obClass:=$obRec.getDataClass()
+$obClass:=ds:C1482[$tableName]
+If ($obClass#Null:C1517)
 	$voFieldDefinition:=$obClass[$vtFieldName]
 End if 
 $0:=$voFieldDefinition
+
+
+For each ($property; $obClass)
+	
+End for each 
 
 
 

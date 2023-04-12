@@ -11,8 +11,8 @@
 // ----------------------------------------------------
 
 If (eSerCal>0)
-	$dtBegin:=DateTime_Enter(Date_ThisMon(vCalendarBegin; 0))
-	$dtEnd:=DateTime_Enter(vCalendarend; ?23:59:59?)
+	$dtBegin:=DateTime_DTTo(Date_ThisMon(vCalendarBegin; 0))
+	$dtEnd:=DateTime_DTTo(vCalendarend; ?23:59:59?)
 	QUERY:C277([WorkOrder:66]; [WorkOrder:66]dtAction:5>=$dtBegin; *)
 	QUERY:C277([WorkOrder:66];  & [WorkOrder:66]dtAction:5<=$dtEnd; *)
 	If (aTmp25Str2>1)

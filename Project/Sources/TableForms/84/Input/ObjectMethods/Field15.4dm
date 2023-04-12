@@ -1,1 +1,0 @@
-[Map:84]tableNum:15:=STR_GetTableNumber(Self:C308->)

@@ -21,7 +21,7 @@ If (Count parameters:C259=0)
 			KeyTag_RebuildTable($tableName)
 		End if 
 	End for 
-	ConsoleMessage("KeyTags complete for all tables.")
+	ConsoleLog("KeyTags complete for all tables.")
 Else 
 	var $rec_ent; $sel_ent; $temp_o : Object
 	$tableName:=$1
@@ -40,7 +40,7 @@ Else
 		$rec_ent.obGeneral:=$temp_o
 		$rec_ent.save()
 	End for each 
-	ConsoleMessage("KeyTags: "+$tableName)
+	ConsoleLog("KeyTags: "+$tableName)
 End if 
 
 
@@ -52,9 +52,6 @@ If (False:C215)
 	$sel_ent:=Create entity selection:C1512([Item:4])
 	vi1:=0
 	For each ($rec_ent; $sel_ent)
-		
-		
-		
 		
 		$rec_ent.obGeneral:=$temp_o
 		$rec_ent.save()

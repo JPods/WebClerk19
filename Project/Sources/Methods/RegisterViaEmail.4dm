@@ -32,7 +32,7 @@ Else
 		
 		C_LONGINT:C283($i; $k; $cntFoundEmails)
 		If (<>viDebugMode>410)
-			ConsoleMessage("RegisterViaEmail")
+			ConsoleLog("RegisterViaEmail")
 		End if 
 		$cntFoundEmails:=EmailQueryAcrossTables($userEmail)
 		
@@ -47,7 +47,7 @@ Else
 			CREATE RECORD:C68([TallyResult:73])
 			[TallyResult:73]name:1:=$userEmail
 			[TallyResult:73]purpose:2:="ErrorEmail"
-			[TallyResult:73]dtReport:12:=DateTime_Enter
+			[TallyResult:73]dtReport:12:=DateTime_DTTo
 			[TallyResult:73]dateCreated:53:=Current date:C33
 			[TallyResult:73]profile1:17:="open"
 			[TallyResult:73]profile2:18:="multiple emails"
@@ -65,7 +65,7 @@ Else
 			EventLogsMessage("\r"+"Registration: "+$userEmail+": "+vResponse)
 			[EventLog:75]email:56:=$userEmail
 			C_LONGINT:C283($dtCurrent)
-			$dtCurrent:=DateTime_Enter
+			$dtCurrent:=DateTime_DTTo
 			
 			[EventLog:75]dtExpires:55:=$dtCurrent+7200  // start 2 hours
 			SAVE RECORD:C53([EventLog:75])

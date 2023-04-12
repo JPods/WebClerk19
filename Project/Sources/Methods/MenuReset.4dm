@@ -56,7 +56,7 @@ Case of
 		SET WINDOW TITLE:C213("Sales Department - "+Storage:C1525.default.company)
 	: ($1=0)
 		Open window:C153(19; 165; 19; 165; 1)
-		DIALOG:C40([Control:1]; "OpenClose")
+		DIALOG:C40([Admin:1]; "OpenClose")
 		CLOSE WINDOW:C154
 	Else 
 		SET MENU BAR:C67($1)

@@ -19,7 +19,7 @@
 
 
 jCenterWindow(600; 440; 1)
-DIALOG:C40([Control:1]; "HelpWeb")
+DIALOG:C40([Admin:1]; "HelpWeb")
 CLOSE WINDOW:C154
 vDiaCom:=""
 If (myOK=1)
@@ -29,20 +29,20 @@ If (myOK=1)
 		: (<>vHelpSite#"")
 			OPEN URL:C673("http://"+<>vHelpSite+"/"+iLoText2)
 		: (aHelpChoice=1)
-			OPEN URL:C673("http://"+<>vLocalHost+"/"+iLoText2)
+			OPEN URL:C673("http://"+Storage:C1525.wc.localHost+"/"+iLoText2)
 			OPEN URL:C673("http://"+Storage:C1525.default.domain+"/"+iLoText2)
 			OPEN URL:C673("http://www.webclerk.com/"+iLoText2)
 		: (aHelpChoice=2)
-			OPEN URL:C673("http://"+<>vLocalHost+"/"+iLoText2)
+			OPEN URL:C673("http://"+Storage:C1525.wc.localHost+"/"+iLoText2)
 			OPEN URL:C673("http://"+Storage:C1525.default.domain+"/"+iLoText2)
 		: (aHelpChoice=3)
 			OPEN URL:C673("http://www.webclerk.com/"+iLoText2)
 		: (aHelpChoice=4)
 			OPEN URL:C673("http://"+Storage:C1525.default.domain+"/"+iLoText2)
 		: (aHelpChoice=5)
-			OPEN URL:C673("http://"+<>vLocalHost+"/"+iLoText2)
+			OPEN URL:C673("http://"+Storage:C1525.wc.localHost+"/"+iLoText2)
 		: (aHelpChoice=5)
-			OPEN URL:C673("http://"+<>vLocalHost+"/"+iLoText2)
+			OPEN URL:C673("http://"+Storage:C1525.wc.localHost+"/"+iLoText2)
 		: (aHelpChoice=6)
 			OPEN URL:C673("http://"+iLo35String4+"/"+iLoText2)
 		Else 

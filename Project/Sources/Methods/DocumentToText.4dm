@@ -19,7 +19,7 @@ C_TIME:C306($myDoc)
 $myDoc:=Open document:C264($1; "*"; Read mode:K24:5)  // 
 $0:=""
 If (OK=1)
-	RECEIVE PACKET:C104($myDoc; $text; 2000000)
 	CLOSE DOCUMENT:C267($myDoc)
+	$Text:=Document to text:C1236(document)
 	$0:=$text
 End if 

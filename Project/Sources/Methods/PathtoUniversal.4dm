@@ -20,7 +20,7 @@ If ((<>vtServerName="") | (<>vtShareName=""))
 	// no server to reference
 	// we are done
 	If (<>viDebugMode>410)
-		ConsoleMessage("No server paths defined: <>vtServerName or <>vtShareName are empty in Defaults")
+		ConsoleLog("No server paths defined: <>vtServerName or <>vtShareName are empty in Defaults")
 	End if 
 Else 
 	Case of 

@@ -4,6 +4,7 @@ C_POINTER:C301($1)
 C_BOOLEAN:C305($2)
 MESSAGES OFF:C175
 OBJECT SET ENABLED:C1123(bSubAdd; True:C214)
+var vhere : Integer
 If (vHere>2)
 	vHere:=vHere-1
 Else 
@@ -21,12 +22,13 @@ Else
 	FORM GOTO PAGE:C247(1)
 End if 
 
-If (ptCurTable#(->[Control:1]))
+If (ptCurTable#(->[Base:1]))
 	Set_Window_Title($1)
 End if 
 If (vHere<=2)
 	vInclTrue:=False:C215
 End if 
+iLoMenu:=3
 SET MENU BAR:C67(iLoMenu; Current process:C322)  //;*)
 
 

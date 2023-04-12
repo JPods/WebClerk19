@@ -1,0 +1,137 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 5,
+	"bottomMargin": 5,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"QRY_HOW_1": {
+					"type": "radio",
+					"top": 6,
+					"left": 10,
+					"width": 215,
+					"height": 26,
+					"dataSource": "Form:C1466.how_1",
+					"text": ":xliff:HOW_1",
+					"class": "Texts12N",
+					"focusable": false,
+					"radioGroup": "Group1",
+					"events": [
+						"onClick"
+					]
+				},
+				"QRY_HOW_2": {
+					"type": "radio",
+					"top": 34,
+					"left": 10,
+					"width": 215,
+					"height": 26,
+					"dataSource": "Form:C1466.how_2",
+					"text": ":xliff:HOW_2",
+					"class": "Texts12N",
+					"focusable": false,
+					"radioGroup": "Group1",
+					"events": [
+						"onClick"
+					]
+				},
+				"QRY_HOW_3": {
+					"type": "radio",
+					"top": 62,
+					"left": 10,
+					"width": 215,
+					"height": 26,
+					"dataSource": "Form:C1466.how_3",
+					"text": ":xliff:HOW_3",
+					"class": "Texts12N",
+					"focusable": false,
+					"radioGroup": "Group1",
+					"events": [
+						"onClick"
+					]
+				},
+				"QRY_HOW_4": {
+					"type": "radio",
+					"top": 90,
+					"left": 10,
+					"width": 215,
+					"height": 26,
+					"dataSource": "Form:C1466.how_4",
+					"text": ":xliff:HOW_4",
+					"class": "Texts12N",
+					"focusable": false,
+					"radioGroup": "Group1",
+					"events": [
+						"onClick"
+					]
+				},
+				"QRY_SEL": {
+					"type": "checkbox",
+					"top": 120,
+					"left": 10,
+					"width": 215,
+					"height": 26,
+					"dataSource": "Form:C1466.inSelection",
+					"text": ":xliff:In_Sel",
+					"class": "Texts12N",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"top": 151,
+					"left": 58,
+					"width": 98,
+					"height": 21,
+					"action": "cancel",
+					"text": ":xliff:OK",
+					"class": "Texts12N",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"groups": {
+			"Group1": [
+				"QRY_HOW_1",
+				"QRY_HOW_2",
+				"QRY_HOW_3",
+				"QRY_HOW_4"
+			]
+		}
+	}
+}

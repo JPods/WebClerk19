@@ -28,8 +28,7 @@ If (($tableNum>1) & ($tableNum<=Get last table number:C254))
 			Case of 
 				: ([RemoteUser:57]tableNum:9=2)
 					QUERY:C277([Customer:2]; [Customer:2]customerID:1=[RemoteUser:57]customerID:10)
-				: ([RemoteUser:57]tableNum:9=48)
-					QUERY:C277([Lead:48]; [Lead:48]idNum:32=Num:C11([RemoteUser:57]customerID:10))
+					
 				: ([RemoteUser:57]tableNum:9=13)
 					QUERY:C277([Contact:13]; [Contact:13]idNum:28=Num:C11([RemoteUser:57]customerID:10))
 			End case 

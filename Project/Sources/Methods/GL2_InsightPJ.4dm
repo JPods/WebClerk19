@@ -149,7 +149,7 @@
 
 //[TallyResult]name:=HFS_ShortName($myDocName)
 //[TallyResult]purpose:="Purchase Journal"
-//[TallyResult]dtCreated:=DateTime_Enter
+//[TallyResult]dtCreated:=DateTime_DTTo
 //[TallyResult]dtReport:=[TallyResult]dtCreated
 //[TallyResult]textBlk1:=$myDocName
 //[TallyResult]nameProfile1:="Document Type"
@@ -177,7 +177,7 @@
 
 //[TallyResult]name:=HFS_ShortName($myDocName)
 //[TallyResult]purpose:="Purchase Journal"
-//[TallyResult]dtCreated:=DateTime_Enter
+//[TallyResult]dtCreated:=DateTime_DTTo
 //[TallyResult]dtReport:=[TallyResult]dtCreated
 //[TallyResult]textBlk1:=$myDocName
 //[TallyResult]nameProfile1:="Document Type"

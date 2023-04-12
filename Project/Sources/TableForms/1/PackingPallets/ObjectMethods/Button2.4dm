@@ -11,7 +11,7 @@ If (<>orderPacking>0)
 	[LoadTag:88]idNumOrder:29:=[Order:3]idNum:2
 	[LoadTag:88]tableNum:34:=3
 	[LoadTag:88]documentID:17:=[LoadTag:88]idNumOrder:29
-	[LoadTag:88]dtShipOn:10:=DateTime_Enter
+	[LoadTag:88]dtShipOn:10:=DateTime_DTTo
 	SAVE RECORD:C53([LoadTag:88])
 	PKArrayManage22(-3; 1; 1)
 	PKArrayManage22(-6; 1; 1)

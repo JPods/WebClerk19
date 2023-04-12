@@ -21,7 +21,7 @@ If ($rayCnt>0)
 					aWoTimeCmp{aWoStepLns{$index}}:=Current time:C178*1
 					aWoDateCmp{aWoStepLns{$index}}:=Current date:C33
 					GOTO RECORD:C242([WorkOrder:66]; aWoRecNum{aWoStepLns{$index}})
-					[WorkOrder:66]dtComplete:6:=DateTime_Enter(Current date:C33; Current time:C178)
+					[WorkOrder:66]dtComplete:6:=DateTime_DTTo(Current date:C33; Current time:C178)
 					SAVE RECORD:C53([WorkOrder:66])
 					UNLOAD RECORD:C212([WorkOrder:66])
 				End if 
@@ -30,7 +30,7 @@ If ($rayCnt>0)
 				CONFIRM:C162("Mark these closed.")
 				If (ok=1)
 					GOTO RECORD:C242([WorkOrder:66]; aWoRecNum{aWoStepLns{$index}})
-					[WorkOrder:66]dtComplete:6:=DateTime_Enter(Current date:C33; Current time:C178)
+					[WorkOrder:66]dtComplete:6:=DateTime_DTTo(Current date:C33; Current time:C178)
 					aWoTimeCmp{aWoStepLns{$index}}:=Current time:C178*1
 					aWoDateCmp{aWoStepLns{$index}}:=Current date:C33
 					SAVE RECORD:C53([WorkOrder:66])

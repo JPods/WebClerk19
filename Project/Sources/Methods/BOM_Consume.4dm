@@ -51,7 +51,7 @@ Case of
 			QUERY:C277([BOM:21]; [BOM:21]itemNum:1=$2->)
 			Bom_FillArray(Records in selection:C76([BOM:21]))
 			$k:=Size of array:C274(aRptPartNum)
-			$adjID:=DateTime_Enter
+			$adjID:=DateTime_DTTo
 			For ($i; 1; $k)
 				QUERY:C277([Item:4]; [Item:4]itemNum:1=aRptPartNum{$i})
 				$unitMeasBy:=1

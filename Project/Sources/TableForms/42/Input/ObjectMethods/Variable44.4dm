@@ -1,1 +1,0 @@
-bCalcNow:=1

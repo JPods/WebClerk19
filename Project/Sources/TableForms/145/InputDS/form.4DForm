@@ -1,0 +1,1397 @@
+{
+	"destination": "detailScreen",
+	"width": 992,
+	"height": 692,
+	"menuBar": "Menu Bar #3",
+	"markerBody": 697,
+	"markerBreak": 697,
+	"markerFooter": 707,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "792pt",
+		"paperHeight": "611pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Text_PerCent__7": {
+					"type": "text",
+					"top": 16,
+					"left": 169,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PerCent : "
+				},
+				"_Text_Active__8": {
+					"type": "text",
+					"top": 18,
+					"left": 146,
+					"width": 50,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Active : "
+				},
+				"_Text_Class__9": {
+					"type": "text",
+					"top": 200,
+					"left": 74,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Class : "
+				},
+				"_Text_Contact__10": {
+					"type": "text",
+					"top": 38,
+					"left": 318,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Contact : "
+				},
+				"_Text_DateClosed__11": {
+					"type": "text",
+					"top": 38,
+					"left": 682,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DateClosed : "
+				},
+				"_Text_DatePublished__12": {
+					"type": "text",
+					"top": 16,
+					"left": 682,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DatePublished : "
+				},
+				"_Text_Intent__13": {
+					"type": "text",
+					"top": 182,
+					"left": 74,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Intent : "
+				},
+				"PerCent": {
+					"type": "input",
+					"top": 14,
+					"left": 266,
+					"width": 64,
+					"height": 18,
+					"dataSource": "[Objective:145]perCent:22",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Priority": {
+					"type": "input",
+					"top": 36,
+					"left": 266,
+					"width": 64,
+					"height": 18,
+					"dataSource": "[Objective:145]priority:20",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Status": {
+					"type": "input",
+					"top": 14,
+					"left": 411,
+					"width": 268,
+					"height": 18,
+					"dataSource": "[Objective:145]status:21",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Contact": {
+					"type": "input",
+					"top": 37,
+					"left": 411,
+					"width": 268,
+					"height": 17,
+					"dataSource": "[Objective:145]contact:23",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"DatePublished": {
+					"type": "input",
+					"top": 15,
+					"left": 784,
+					"width": 81,
+					"height": 17,
+					"dataSource": "[Objective:145]datePublished:17",
+					"dataSourceTypeHint": "date",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Publish": {
+					"type": "input",
+					"top": 14,
+					"left": 919,
+					"width": 36,
+					"height": 18,
+					"dataSource": "[Objective:145]publish:15",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"DateClosed": {
+					"type": "input",
+					"top": 37,
+					"left": 784,
+					"width": 81,
+					"height": 17,
+					"dataSource": "[Objective:145]dateClosed:18",
+					"dataSourceTypeHint": "date",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Who": {
+					"type": "input",
+					"top": 75,
+					"left": 172,
+					"width": 148,
+					"height": 18,
+					"dataSource": "[Objective:145]who:1",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"What": {
+					"type": "input",
+					"top": 75,
+					"left": 324,
+					"width": 115,
+					"height": 18,
+					"dataSource": "[Objective:145]what:3",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Why": {
+					"type": "input",
+					"top": 75,
+					"left": 444,
+					"width": 204,
+					"height": 18,
+					"dataSource": "[Objective:145]why:6",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"WhenDate": {
+					"type": "input",
+					"top": 75,
+					"left": 651,
+					"width": 81,
+					"height": 18,
+					"dataSource": "[Objective:145]whenDate:2",
+					"dataSourceTypeHint": "date",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Where": {
+					"type": "input",
+					"top": 75,
+					"left": 736,
+					"width": 219,
+					"height": 18,
+					"dataSource": "[Objective:145]where:9",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Objective": {
+					"type": "input",
+					"top": 123,
+					"left": 172,
+					"width": 783,
+					"height": 35,
+					"dataSource": "[Objective:145]objective:5",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Intent": {
+					"type": "input",
+					"top": 181,
+					"left": 172,
+					"width": 783,
+					"height": 17,
+					"dataSource": "[Objective:145]intent:27",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Class": {
+					"type": "input",
+					"top": 200,
+					"left": 172,
+					"width": 320,
+					"height": 17,
+					"dataSource": "[Objective:145]class:19",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Subform7": {
+					"type": "subform",
+					"top": 458,
+					"left": 29,
+					"width": 926,
+					"height": 202,
+					"dataSourceTypeHint": "text",
+					"table": 157,
+					"detailForm": "Input",
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "fixed",
+					"borderStyle": "system"
+				},
+				"Active": {
+					"type": "checkbox",
+					"top": 16,
+					"left": 131,
+					"width": 30,
+					"height": 15,
+					"dataSource": "[Objective:145]active:16",
+					"text": " ",
+					"stroke": "#000000",
+					"textAlign": "left",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"_Text_Objective__31": {
+					"type": "text",
+					"top": 123,
+					"left": 74,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Objective : "
+				},
+				"_Text_Priority__32": {
+					"type": "text",
+					"top": 38,
+					"left": 169,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Priority : "
+				},
+				"_Text_Publish__33": {
+					"type": "text",
+					"top": 16,
+					"left": 824,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Publish : "
+				},
+				"_Text_Status__34": {
+					"type": "text",
+					"top": 16,
+					"left": 338,
+					"width": 70,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Status : "
+				},
+				"_Text_What__35": {
+					"type": "text",
+					"top": 59,
+					"left": 324,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "What : "
+				},
+				"_Text_WhenDate__36": {
+					"type": "text",
+					"top": 59,
+					"left": 651,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "WhenDate : "
+				},
+				"_Text_Where__37": {
+					"type": "text",
+					"top": 59,
+					"left": 736,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Where : "
+				},
+				"_Text_Who__38": {
+					"type": "text",
+					"top": 59,
+					"left": 173,
+					"width": 80,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Who : "
+				},
+				"_Text_Why__39": {
+					"type": "text",
+					"top": 59,
+					"left": 444,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Why : "
+				},
+				"_Text_SinglememorablesentanceofWhodoesWhatWhyWhenWhere.Ifticannotberecitedfrommemoryitisnotanobjective._40": {
+					"type": "text",
+					"top": 103,
+					"left": 173,
+					"width": 782,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Single, memorable sentance of Who, does What, Why, When, Where. If ti cannot be recited from memory, it is not an objective."
+				},
+				"_Text_Whatisintentedtheoverarchingconcept_41": {
+					"type": "text",
+					"top": 163,
+					"left": 173,
+					"width": 782,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "What is intented, the overarching concept"
+				},
+				"_Text_Brevity__42": {
+					"type": "text",
+					"top": 79,
+					"left": 94,
+					"width": 70,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Brevity :"
+				},
+				"_Text_Result\t__43": {
+					"type": "text",
+					"top": 437,
+					"left": 29,
+					"width": 50,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Result\t : "
+				},
+				"_Text_Action__44": {
+					"type": "text",
+					"top": 210,
+					"left": 29,
+					"width": 50,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Action : "
+				},
+				"lbContacts": {
+					"type": "listbox",
+					"left": 35,
+					"top": 228,
+					"width": 941,
+					"height": 116,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeaderClick"
+					],
+					"dataSource": "Form:C1466.obContacts",
+					"listboxType": "collection",
+					"currentItemSource": "Form:C1466.contactCurrent",
+					"currentItemPositionSource": "Form:C1466.contactPosition",
+					"selectedItemsSource": "Form:C1466.contactSelected",
+					"method": "ObjectMethods/lbContacts.4dm",
+					"columns": []
+				},
+				"Form.lbContactBuilt": {
+					"type": "listbox",
+					"left": 755,
+					"top": 103,
+					"width": 381,
+					"height": 75,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.obContactBuilt",
+					"currentItemSource": "Form:C1466.ContactBuiltCurrent",
+					"currentItemPositionSource": "Form:C1466.ContactBuiltPosition",
+					"selectedItemsSource": "Form:C1466.ContactBuiltSelected",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							}
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							}
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Header3"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							}
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Header4"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							}
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Header5"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							}
+						}
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 38,
+					"top": 367,
+					"width": 938,
+					"height": 76,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header6"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Text_Situation__48": {
+					"type": "text",
+					"top": 101,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Situation : "
+				},
+				"Logistics": {
+					"type": "input",
+					"top": 19,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]logistics:25",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Communications": {
+					"type": "input",
+					"top": 46,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]communications:26",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"SocialContractMembers": {
+					"type": "input",
+					"top": 73,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]socialContractMembers:13",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Situation": {
+					"type": "input",
+					"top": 101,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]situation:12",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Alignment": {
+					"type": "input",
+					"top": 130,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]alignment:10",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Culture": {
+					"type": "input",
+					"top": 158,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]culture:11",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"KeyText": {
+					"type": "input",
+					"top": 186,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]keyText:14",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"myWebArea": {
+					"type": "webArea",
+					"top": 252,
+					"left": 3,
+					"width": 978,
+					"height": 432,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "myWebArea",
+					"urlSource": "myWebArea_url",
+					"progressSource": "myWebArea_progress",
+					"contextMenu": "none",
+					"borderStyle": "none",
+					"method": "ObjectMethods/myWebArea.4dm",
+					"events": [
+						"onLoad",
+						"onEndURLLoading"
+					]
+				},
+				"_Text_SocialMembers__57": {
+					"type": "text",
+					"top": 73,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "SocialMembers : "
+				},
+				"_Text_Alignment__58": {
+					"type": "text",
+					"top": 131,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Alignment : "
+				},
+				"_Text_Logistics__59": {
+					"type": "text",
+					"top": 19,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Logistics : "
+				},
+				"_Text_Communications__60": {
+					"type": "text",
+					"top": 46,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Communications : "
+				},
+				"_Text_Culture__61": {
+					"type": "text",
+					"top": 158,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Culture : "
+				},
+				"_Text_KeyText__62": {
+					"type": "text",
+					"top": 186,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "KeyText : "
+				},
+				"TabControl1": {
+					"type": "tab",
+					"top": 220,
+					"left": 2,
+					"width": 987,
+					"height": 24,
+					"dataSource": "aTabControl1",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Logistics",
+						"Communications",
+						"Members",
+						"Situtaion",
+						"Alignment",
+						"Culture",
+						"KeyText"
+					],
+					"method": "ObjectMethods/TabControl1.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_Objective_obGeneral_64": {
+					"type": "input",
+					"top": 231,
+					"left": 8,
+					"width": 432,
+					"height": 257,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "entry_o.obGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Objective:145]obGeneral:30"
+				},
+				"_Text_ObGeneral_65": {
+					"type": "text",
+					"top": 210,
+					"left": 11,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				},
+				"_Text_Situation__66": {
+					"type": "text",
+					"top": 101,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Situation : "
+				},
+				"Logistics1": {
+					"type": "input",
+					"top": 19,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]logistics:25",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Communications1": {
+					"type": "input",
+					"top": 46,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]communications:26",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"SocialContractMembers1": {
+					"type": "input",
+					"top": 73,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]socialContractMembers:13",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Situation1": {
+					"type": "input",
+					"top": 101,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]situation:12",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Alignment1": {
+					"type": "input",
+					"top": 130,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]alignment:10",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"Culture1": {
+					"type": "input",
+					"top": 158,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]culture:11",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"KeyText1": {
+					"type": "input",
+					"top": 186,
+					"left": 205,
+					"width": 760,
+					"height": 26,
+					"dataSource": "[Objective:145]keyText:14",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					]
+				},
+				"_Text_SocialMembers__74": {
+					"type": "text",
+					"top": 73,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "SocialMembers : "
+				},
+				"_Text_Alignment__75": {
+					"type": "text",
+					"top": 131,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Alignment : "
+				},
+				"_Text_Logistics__76": {
+					"type": "text",
+					"top": 19,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Logistics : "
+				},
+				"_Text_Communications__77": {
+					"type": "text",
+					"top": 46,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Communications : "
+				},
+				"_Text_Culture__78": {
+					"type": "text",
+					"top": 158,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Culture : "
+				},
+				"_Text_KeyText__79": {
+					"type": "text",
+					"top": 186,
+					"left": 112,
+					"width": 90,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "KeyText : "
+				},
+				"_PROP_Objective_obRelated_80": {
+					"type": "input",
+					"top": 503,
+					"left": 8,
+					"width": 432,
+					"height": 177,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "entry_o.obRelated",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Objective:145]obRelated:31"
+				},
+				"_PROP___81": {
+					"type": "input",
+					"top": 231,
+					"left": 460,
+					"width": 505,
+					"height": 257,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "entry_o.",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Objective]obDetail"
+				},
+				"_PROP_Objective_obExternal_82": {
+					"type": "input",
+					"top": 503,
+					"left": 460,
+					"width": 505,
+					"height": 177,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "entry_o.obExternal",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Objective:145]obExternal:36"
+				}
+			}
+		}
+	],
+	"geometryStamp": 41,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

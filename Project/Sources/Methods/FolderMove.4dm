@@ -64,8 +64,8 @@ If (False:C215)
 				// this should be rare, but if it happens an alert is important to clean out old stuff
 				COPY DOCUMENT:C541($oldPath; Storage:C1525.folder.jitF; *)
 				ALERT:C41("Copied: "+Storage:C1525.folder.jitF)
-				ConsoleMessage("Copied: "+$oldPath)
-				ConsoleMessage("Copied to: "+Storage:C1525.folder.jitF)
+				ConsoleLog("Copied: "+$oldPath)
+				ConsoleLog("Copied to: "+Storage:C1525.folder.jitF)
 				// PAUSE PROCESS(Current process;20)
 				// DELETE FOLDER($oldPath;Delete with contents)
 			End if 

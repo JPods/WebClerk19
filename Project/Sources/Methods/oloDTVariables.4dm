@@ -31,7 +31,7 @@ For ($viFieldNum; 1; Get last field number:C255(ptCurTable))
 			$vpField:=Field:C253($viTableNum; $viFieldNum)  // get pointer to field
 			$vpVariable->:=jDateTimeRBoth($vpField->)  // set variable to date time string
 			
-			//ConsoleMessage ($vtFieldName+"\t"+String($vpField->)+"\t"+$vpVariable->)
+			//Console_Log ($vtFieldName+"\t"+String($vpField->)+"\t"+$vpVariable->)
 			
 		End if   // Field Name begins with DT
 		

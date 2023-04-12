@@ -48,8 +48,10 @@ Case of
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]name:8=$nc_Script)
 				If (Records in selection:C76([TallyMaster:60])=1)
 					ExecuteText(0; [TallyMaster:60]script:9)
-					http_NC_GetArticle($nc_URLArticle)
-					$0:=WC_SiteInsert
+					//http_NC_GetArticle($nc_URLArticle)
+					//$0:=WC_SiteInsert
+					// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+					
 				End if 
 			Else 
 				$0:=$2

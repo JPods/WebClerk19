@@ -1,0 +1,1004 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #9",
+	"markerBody": 676,
+	"markerBreak": 676,
+	"markerFooter": 692,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text20": {
+					"type": "text",
+					"top": 179,
+					"left": 258,
+					"width": 166,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Changes/Pub/Event"
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 149,
+					"width": 844,
+					"height": 381,
+					"fill": "transparent"
+				},
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 25,
+					"left": 429,
+					"width": 291,
+					"height": 209,
+					"fill": "transparent"
+				},
+				"Field9": {
+					"type": "checkbox",
+					"top": 26,
+					"left": 211,
+					"width": 18,
+					"height": 11,
+					"dataSource": "[QQQReservation:79]Active:10",
+					"text": " ",
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field7": {
+					"type": "input",
+					"top": 26,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]idUnique:16",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field17": {
+					"type": "input",
+					"top": 45,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "[Reservation:79]remoteUserid:9",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field10": {
+					"type": "input",
+					"top": 64,
+					"left": 663,
+					"width": 56,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]tableNum:4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field11": {
+					"type": "input",
+					"top": 64,
+					"left": 432,
+					"width": 229,
+					"height": 17,
+					"dataSource": "[Reservation:79]customerid:3",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field12": {
+					"type": "input",
+					"top": 83,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]NickName:8",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field343": {
+					"type": "input",
+					"top": 159,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]Status:20",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable276": {
+					"type": "input",
+					"top": 159,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate4",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable277": {
+					"type": "input",
+					"top": 159,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime4",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable277.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field19": {
+					"type": "input",
+					"top": 178,
+					"left": 432,
+					"width": 51,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]AllowChanges:13",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field28": {
+					"type": "input",
+					"top": 178,
+					"left": 485,
+					"width": 55,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]Publish:15",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field14": {
+					"type": "input",
+					"top": 216,
+					"left": 432,
+					"width": 61,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]QtyReserved:6",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field26": {
+					"type": "input",
+					"top": 216,
+					"left": 495,
+					"width": 224,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]ItemNum:1",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field27": {
+					"type": "input",
+					"top": 277,
+					"left": 152,
+					"width": 840,
+					"height": 37,
+					"dataSource": "[QQQReservation:79]Description:17",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field29": {
+					"type": "input",
+					"top": 316,
+					"left": 152,
+					"width": 825,
+					"height": 187,
+					"dataSource": "[QQQReservation:79]PublicNote:11",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field46": {
+					"type": "input",
+					"top": 505,
+					"left": 152,
+					"width": 825,
+					"height": 151,
+					"dataSource": "[QQQReservation:79]PrivateNote:12",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field13": {
+					"type": "input",
+					"top": 102,
+					"left": 432,
+					"width": 287,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]orderNum:14",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field15": {
+					"type": "input",
+					"top": 121,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]DTOriginated:7",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field16": {
+					"type": "input",
+					"top": 140,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]DTActionLast:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field18": {
+					"type": "input",
+					"top": 178,
+					"left": 542,
+					"width": 177,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]eventLogId:5",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Field234": {
+					"type": "input",
+					"top": 197,
+					"left": 432,
+					"width": 108,
+					"height": 17,
+					"dataSource": "[QQQReservation:79]DTReservation:18",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"top": 26,
+					"left": 227,
+					"width": 66,
+					"height": 11,
+					"stroke": "#000000",
+					"class": "\cssCheckboxLable",
+					"text": "Active"
+				},
+				"Text10": {
+					"type": "text",
+					"top": 27,
+					"left": 297,
+					"width": 127,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 65,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "customerID/Table"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 84,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "NickName"
+				},
+				"Text13": {
+					"type": "text",
+					"top": 103,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "OrderNum"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 217,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Qty/ItemNum"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 279,
+					"left": 32,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Description"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 122,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Originated"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 141,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "LastAction"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 46,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "remoteUserID"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 160,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Status/Action"
+				},
+				"Variable9": {
+					"type": "input",
+					"top": 121,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate1",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 121,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime1",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable17": {
+					"type": "input",
+					"top": 140,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate2",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable18": {
+					"type": "input",
+					"top": 140,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime2",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text153": {
+					"type": "text",
+					"top": 319,
+					"left": 32,
+					"width": 112,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PublicNote"
+				},
+				"Text154": {
+					"type": "text",
+					"top": 508,
+					"left": 34,
+					"width": 110,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PrivateNote"
+				},
+				"Text169": {
+					"type": "text",
+					"top": 198,
+					"left": 276,
+					"width": 148,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Reservation"
+				},
+				"Variable163": {
+					"type": "input",
+					"top": 197,
+					"left": 542,
+					"width": 90,
+					"height": 17,
+					"dataSource": "vDate3",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable164": {
+					"type": "input",
+					"top": 197,
+					"left": 634,
+					"width": 85,
+					"height": 17,
+					"dataSource": "vTime3",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "\cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "pictureButton",
+					"top": 549,
+					"left": 96,
+					"width": 42,
+					"height": 33,
+					"dataSource": "bDateTime2",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable279": {
+					"type": "pictureButton",
+					"top": 340,
+					"left": 96,
+					"width": 42,
+					"height": 33,
+					"dataSource": "bDateTime1",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable279.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable280": {
+					"type": "button",
+					"top": 173,
+					"left": 745,
+					"width": 117,
+					"height": 27,
+					"dataSource": "b12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "\cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Clear Action",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable280.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable194": {
+					"type": "button",
+					"top": 62,
+					"left": 273,
+					"width": 153,
+					"height": 18,
+					"dataSource": "b12",
+					"display": false,
+					"method": "ObjectMethods/Variable194.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable193": {
+					"type": "button",
+					"top": 99,
+					"left": 322,
+					"width": 104,
+					"height": 20,
+					"dataSource": "b11",
+					"display": false,
+					"method": "ObjectMethods/Variable193.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable214": {
+					"type": "button",
+					"top": 215,
+					"left": 309,
+					"width": 117,
+					"height": 19,
+					"dataSource": "b13",
+					"display": false,
+					"method": "ObjectMethods/Variable214.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "\cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

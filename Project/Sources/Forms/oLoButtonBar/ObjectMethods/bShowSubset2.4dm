@@ -1,1 +1,2 @@
-Form:C1466.ents:=Form:C1466.sel
+process_o.entitySave()
+process_o.ents:=process_o.sel

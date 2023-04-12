@@ -18,4 +18,4 @@ $voRec.fieldValue1:=String:C10($2)
 $voRec.tableName1:=Table name:C256($1)
 $voRec.user:=Current user:C182
 $result_o:=$voRec.save()
-ConsoleMessage($voRec.tableName1+": "+$voRec.fieldValue1+" abandoned, LogReport: "+String:C10($voRec.uniqueId))
+ConsoleLog($voRec.tableName1+": "+$voRec.fieldValue1+" abandoned, LogReport: "+String:C10($voRec.uniqueId))

@@ -1,6 +1,6 @@
 C_OBJECT:C1216($obRec)
 C_TEXT:C284($vtName; $vtTopic)
-$vtName:=Request:C163("Enter Letter Name"; "DraftName - "+process_o.tableName)
+$vtName:=Request:C163("Enter Letter Name"; "DraftName - "+process_o.dataClassName)
 If ($vtName#"")
 	$vtTopic:=Request:C163("Enter Letter Topic"; "DraftTopic")
 	If ($vtTopic#"")
@@ -8,7 +8,7 @@ If ($vtName#"")
 		$obRec:=ds:C1482.Letter.new()
 		$result_o:=$obRec.save()
 		$obRec.active:=True:C214
-		$obRec.tableNum:=ds:C1482[process_o.tableName].getInfo().tableNumber  //  (process_o.tableName)
+		$obRec.tableNum:=ds:C1482[process_o.dataClassName].getInfo().tableNumber  //  (process_o.dataClassName)
 		
 		$obRec.name:=$vtName
 		$obRec.topic:=$vtTopic
@@ -16,7 +16,7 @@ If ($vtName#"")
 		WA EXECUTE JAVASCRIPT FUNCTION:C1043(WebTech; "getContent"; tinyMCE_Content_t)
 		$obRec.body:=Replace string:C233(tinyMCE_Content_t; "</p>\n<p>"; "</p><p>")
 		$result_o:=$obRec.save()
-		$cTemp:=Ltr_GetCollection(process_o.tableName)
+		$cTemp:=Ltr_GetCollection(process_o.dataClassName)
 		Form:C1466.cLetter:=$cTemp
 		C_LONGINT:C283($viPosition)
 		If (False:C215)

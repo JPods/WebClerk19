@@ -467,18 +467,20 @@
 					"scrollbarHorizontal": "automatic",
 					"scrollbarVertical": "automatic",
 					"resizingMode": "legacy",
-					"currentItemSource": "Form:C1466.LB_Table.cur",
-					"currentItemPositionSource": "Form:C1466.LB_Table.pos",
-					"selectedItemsSource": "Form:C1466.LB_Table.sel",
+					"currentItemSource": "Form:C1466.LB_Tables.cur",
+					"currentItemPositionSource": "Form:C1466.LB_Tables.pos",
+					"selectedItemsSource": "Form:C1466.LB_Tables.sel",
 					"class": "cssInput16",
 					"events": [
 						"onLoad",
-						"onClick"
+						"onDoubleClick"
 					],
 					"selectionMode": "single",
 					"showHeaders": true,
 					"method": "ObjectMethods/LB_Tables.4dm",
 					"borderStyle": "double",
+					"alternateFill": "#FFFCCC",
+					"metaSource": "metaExpression",
 					"columns": [
 						{
 							"header": {
@@ -579,9 +581,9 @@
 					"top": 21,
 					"left": 1130,
 					"width": 229,
-					"height": 285,
+					"height": 298,
 					"visibility": "visible",
-					"sizingX": "move",
+					"sizingX": "fixed",
 					"sizingY": "fixed",
 					"headerHeight": "1em",
 					"listboxType": "collection",
@@ -594,12 +596,13 @@
 					"class": "cssInput16",
 					"events": [
 						"onLoad",
-						"onClick"
+						"onDoubleClick"
 					],
 					"selectionMode": "single",
 					"showHeaders": true,
 					"method": "ObjectMethods/LB_Primes.4dm",
 					"borderStyle": "double",
+					"alternateFill": "#FFFCCC",
 					"columns": [
 						{
 							"header": {
@@ -629,11 +632,47 @@
 							"enterable": false
 						}
 					]
+				},
+				"Button1": {
+					"type": "button",
+					"text": "DataBrowser",
+					"top": 218,
+					"left": 835,
+					"width": 100,
+					"height": 59,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "JsonToPasteBoard",
+					"top": 316,
+					"left": 835,
+					"width": 149,
+					"height": 59,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Button",
+					"top": 540,
+					"left": 841,
+					"width": 100,
+					"height": 59,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 292,
+	"geometryStamp": 314,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -204,7 +204,7 @@ Else
 	$vhPKWindow:=Frontmost window:C447
 	
 	jCenterWindow(360; 360; 1)
-	DIALOG:C40([Control:1]; "Calculator")
+	DIALOG:C40([Admin:1]; "Calculator")
 	CLOSE WINDOW:C154
 	
 	If (OK=1)
@@ -388,7 +388,7 @@ Else
 					$message:=$message+"<>wtPrecisionFinalPC = "+String:C10(<>wtPrecisionFinalPC)+"\r"
 					$message:=$message+"<>wtTarePC = "+String:C10(<>wtTarePC)+"\r"
 					
-					ConsoleMessage($message)
+					ConsoleLog($message)
 					
 					Case of 
 						: (iLoInteger1=1)  // ignore Weight over ride
@@ -437,12 +437,12 @@ Else
 							
 					End case 
 					If (OBJECT Get enabled:C1079(b3))  // if #3 Box Button Enabled No Weight Errors
-						_O_OBJECT SET COLOR:C271(<>pkScaleComment; -(White:K11:1+(256*Green:K11:9)))
+						OBJECT SET RGB COLORS:C628(*; "<>pkScaleComment"; White:K11:1; 256*Green:K11:9)
 						//iLoInteger1:=0  // ignore weight false
 						PKBoxItemsTags
 						
 					Else 
-						_O_OBJECT SET COLOR:C271(<>pkScaleComment; -(White:K11:1+(256*Red:K11:4)))
+						OBJECT SET RGB COLORS:C628(*; "<>pkScaleComment"; White:K11:1; 256*Red:K11:4)
 						// ### jwm ### 20180516_1334 STOP PROCESSING force drop out of loop
 						$vbBuildPallet:=False:C215
 						$viQtyPackTotal:=0
@@ -498,7 +498,7 @@ Else
 			End case 
 			
 			If ($vbError)
-				_O_OBJECT SET COLOR:C271(<>pkScaleComment; -(White:K11:1+(256*Red:K11:4)))
+				OBJECT SET RGB COLORS:C628(*; "<>pkScaleComment"; White:K11:1; 256*Red:K11:4)
 				If (<>barcodeErrorSound#"")
 					PLAY:C290(<>barcodeErrorSound)
 				Else 

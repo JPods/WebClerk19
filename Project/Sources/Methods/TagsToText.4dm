@@ -11,7 +11,7 @@
 //
 // Parameters
 // ----------------------------------------------------
-// ### jwm ### 20160927_1753 commented out consolemessage used for debugging
+// ### jwm ### 20160927_1753 commented out Console_Log used for debugging
 
 C_TEXT:C284($0; $1; $textWorking; $textOut; $fieldOrObject; $textBlock; $actionText)
 C_LONGINT:C283(breakTable; breakField; vWebTagTableNum)
@@ -27,7 +27,7 @@ $endLoop:=False:C215
 
 C_LONGINT:C283($pSecure; $viSecureRequired)
 
-//ConsoleMessage ($textWorking)
+//Console_Log ($textWorking)
 
 Repeat 
 	$p:=Position:C15(<>jitTag; $textWorking)  //find the next tag beginning
@@ -75,7 +75,7 @@ Repeat
 					: (vWebTagTable="headbreak")  //lists
 						breakTable:=vWebTagTableNum
 						$mySort:="_jitSort_"+String:C10(breakTable)+"_"+vWebTagTable+"jj"
-						breakField:=Http_DoSort($mySort)
+						//breakField:=Http_DoSort($mySort)
 						//$p:=Position("_jit_headend";$textWorking)
 						//$breakText:=Substring($textWorking;1;$p-1)
 						//$textWorking:=Substring($textWorking;$p+1)
@@ -90,17 +90,17 @@ Repeat
 							vWebTagTableNum:=<>aTableNums{$foundTableNum}  // get the matching table number
 						Else 
 							vWebTagTableNum:=Num:C11(vWebTagField)  // 
-							//ConsoleMessage ($actionText)
+							//Console_Log ($actionText)
 						End if 
 						$textWorking:=Substring:C12($textWorking; $pEnd+11)
 						
-						//ConsoleMessage ($textWorking)
+						//Console_Log ($textWorking)
 						
 						$textBlock:=TagsToDataBlock($actionText)  //;vWebTagField)  //;$doRecord;$tableNumBreak;$breakField;$breakText)
-						//ConsoleMessage ($textBlock)
+						//Console_Log ($textBlock)
 						$textOut:=$textOut+$textBlock
 						$textBlock:=""
-						//ConsoleMessage ($textOut)
+						//Console_Log ($textOut)
 						
 					Else 
 						C_TEXT:C284($convText)
@@ -116,7 +116,7 @@ Repeat
 						//else 
 						//$textOut:=$textOut+Tag2Value (vWebTagTableNum;viWebTagFieldNum;1)  //found a table and field in TagToComponents  
 						//end if 
-						//ConsoleMessage ($textOut)
+						//Console_Log ($textOut)
 						$convText:=""
 				End case 
 			End if 

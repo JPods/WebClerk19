@@ -16,7 +16,7 @@ C_BOOLEAN:C305($vbisTN; $vbDoItems)
 READ ONLY:C145([Item:4])
 $tableName:=$1
 $vbisTN:=(($2="1@") | ($2="t@"))
-$vtPath:=<>webFolder+"images"+Folder separator:K24:12+"noimage.jpg"
+$vtPath:=Storage:C1525.wc.webFolder+"images"+Folder separator:K24:12+"noimage.jpg"
 Case of 
 	: ($tableName="QACustomer")
 		If ($vbisTN)

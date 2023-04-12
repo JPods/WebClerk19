@@ -21,7 +21,7 @@ Case of
 		C_LONGINT:C283($viPage)
 		$viPage:=FORM Get current page:C276
 		$ptid:=STR_Get_idPointer(Table name:C256(ptCurTable))
-		ConsoleMessage($ptid->)
+		ConsoleLog($ptid->)
 		aPages:=$viPage
 	: (aPages{aPages}="Help")
 		KeyModifierCurrent
@@ -67,10 +67,14 @@ Case of
 				FORM GOTO PAGE:C247($k)
 				Case of 
 					: (aPages{aPages}="Docs")
-						OBJECT SET SUBFORM:C1138(*; "SF_List"; "ListSelection")
+						OBJECT SET SUBFORM:C1138(*; "SF_List"; "ListDocument")
 					: (aPages{aPages}="Q&A")
-						
+						OBJECT SET SUBFORM:C1138(*; "SF_List"; "ListQA")
 					: (aPages{aPages}="Object")
+						OBJECT SET SUBFORM:C1138(*; "SF_List"; "ListObject")
+						//SF_Tell(OBJECT Get pointer(Object current); OBJECT Get value(OBJECT Get name(Object current)))
+						//process_o.layout:="Object"
+						//CALL SUBFORM CONTAINER(-100)
 						
 				End case 
 				
@@ -78,23 +82,23 @@ Case of
 				Process_ByID
 				//var $obPassable : Object
 				//$ent:=process_o.cur
-				//$obPassable:=New object("tableName"; process_o.tableName; \
-					"form"; ""; "tableForm"; \
-					process_o.tableName+"_InputDS"; \
-					"ents"; _LB_OutputDS_.ents; \
-					"pos"; _LB_OutputDS_.pos; \
-					"cur"; _LB_OutputDS_.cur; \
-					"sel"; _LB_OutputDS_.sel; \
-					"page"; aPages; \
-					"parentProcess"; Current process)
-				//$viProcess:=New process("Process_ByID"; 0; process_o.tableName+" - "+String(Count tasks); $obPassable)
+				//$obPassable:=New object("tableName"; process_o.dataClassName; \
+																																			"form"; ""; "tableForm"; \
+																																			process_o.dataClassName+"_InputDS"; \
+																																			"ents"; _LB_process__.ents; \
+																																			"pos"; _LB_process__.pos; \
+																																			"cur"; _LB_process__.cur; \
+																																			"sel"; _LB_process__.sel; \
+																																			"page"; aPages; \
+																																			"parentProcess"; Current process)
+				//$viProcess:=New process("Process_ByID"; 0; process_o.dataClassName+" - "+String(Count tasks); $obPassable)
 				
 			: (Current form name:C1298="InputDS")
 				FORM GOTO PAGE:C247($k)
 				SF_Manage_Pages
 		End case 
 		
-		If (ptCurTable#(->[Control:1]))
+		If (ptCurTable#(->[Admin:1]))
 			Set_Window_Title($1)
 		End if 
 		aPagePath{Table:C252(ptCurTable)}:=$k

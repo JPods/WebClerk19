@@ -382,12 +382,12 @@ C_TEXT:C284($myText)
 
 If (False:C215)  // (Caps lock down)  // viDebugMode not defined at this point in startup
 	$myText:="TableNum\tFieldNum\tTableName\tUniqueField"
-	ConsoleMessage($myText)
+	ConsoleLog($myText)
 	$cntRay:=Size of array:C274(<>aTableNames)
 	For ($incRay; 1; $cntRay)
 		If ($incRay=129)
 		End if 
-		ConsoleMessage(String:C10(<>aTableNums{$incRay})+"\t"+String:C10(<>aUniqueFieldNum{$incRay})+"\t"+<>aTableNames{$incRay}+"\t"+Field name:C257(<>aTableNums{$incRay}; Abs:C99(<>aUniqueFieldNum{$incRay})))
+		ConsoleLog(String:C10(<>aTableNums{$incRay})+"\t"+String:C10(<>aUniqueFieldNum{$incRay})+"\t"+<>aTableNames{$incRay}+"\t"+Field name:C257(<>aTableNums{$incRay}; Abs:C99(<>aUniqueFieldNum{$incRay})))
 	End for 
 End if   //  <>aUniqueFieldNum   // keep this array unsorted, tablenum will return
 

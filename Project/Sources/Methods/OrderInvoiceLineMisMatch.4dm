@@ -45,9 +45,12 @@ Case of
 			If ($errList#"")
 				CREATE RECORD:C68([TallyResult:73])
 				
-				[TallyResult:73]dtCreated:11:=DateTime_Enter
+				[TallyResult:73]dtCreated:11:=DateTime_DTTo
 				[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
-				[TallyResult:73]fieldNum:4:=3
+				
+				// Modified by: Bill James (2022-12-09T06:00:00Z)
+				// mush fix and adjust to data type and object
+				//[TallyResult]data:=3
 				[TallyResult:73]name:1:="MisMatchOrder"
 				[TallyResult:73]salesNameID:31:=Current user:C182
 				[TallyResult:73]textBlk1:5:=$errList
@@ -89,14 +92,17 @@ Case of
 			If ($errList#"")
 				CREATE RECORD:C68([TallyResult:73])
 				
-				[TallyResult:73]dtCreated:11:=DateTime_Enter
+				[TallyResult:73]dtCreated:11:=DateTime_DTTo
 				[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
-				[TallyResult:73]fieldNum:4:=Table:C252(->[Invoice:26])
+				
+				// Modified by: Bill James (2022-12-09T06:00:00Z)
+				// mush fix and adjust to data type and object
+				//[TallyResult]data:=Table(->[Invoice])
 				[TallyResult:73]name:1:="MisMatchInvoice"
 				[TallyResult:73]salesNameID:31:=Current user:C182
 				[TallyResult:73]textBlk1:5:=$errList
 				[TallyResult:73]longint1:7:=[Order:3]idNum:2
-				[TallyResult:73]longInt2:8:=[Invoice:26]idNum:2
+				//[TallyResult]report:=[Invoice]idNum
 				[TallyResult:73]nameLong1:24:="[Order]OrderNum"
 				[TallyResult:73]nameLong2:25:="[Invoice]InvoiceNum"
 				SAVE RECORD:C53([TallyResult:73])

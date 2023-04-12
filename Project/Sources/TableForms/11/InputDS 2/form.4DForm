@@ -1,0 +1,1536 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerHeader": 20,
+	"markerBody": 276,
+	"markerBreak": 303,
+	"markerFooter": 331,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Rectangle94_7": {
+					"type": "rectangle",
+					"top": 15,
+					"left": 691,
+					"width": 194,
+					"height": 38,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle92_8": {
+					"type": "rectangle",
+					"top": 16,
+					"left": 298,
+					"width": 281,
+					"height": 38,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_QQQCarrier_CarrierID_9": {
+					"type": "input",
+					"top": 17,
+					"left": 301,
+					"width": 277,
+					"height": 17,
+					"dataSource": "entry_o.CarrierID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCarrier:11]CarrierID:10"
+				},
+				"_PROP_QQQCarrier_ShipperID_10": {
+					"type": "input",
+					"top": 16,
+					"left": 694,
+					"width": 190,
+					"height": 17,
+					"dataSource": "entry_o.ShipperID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCarrier:11]ShipperID:21"
+				},
+				"_PROP_QQQCarrier_FreightType_11": {
+					"type": "input",
+					"top": 35,
+					"left": 694,
+					"width": 190,
+					"height": 17,
+					"dataSource": "entry_o.FreightType",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCarrier:11]FreightType:22"
+				},
+				"_Text_CarrierID_12": {
+					"type": "text",
+					"top": 19,
+					"left": 174,
+					"width": 121,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CarrierID"
+				},
+				"_Text_ShipperID_13": {
+					"type": "text",
+					"top": 18,
+					"left": 568,
+					"width": 120,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ShipperID"
+				},
+				"_Text_FreightType_14": {
+					"type": "text",
+					"top": 37,
+					"left": 568,
+					"width": 120,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "FreightType"
+				},
+				"_PROP_QQQCarrier_idUnique_15": {
+					"type": "input",
+					"top": 36,
+					"left": 301,
+					"width": 277,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCarrier:11]idUnique:44"
+				},
+				"_Text_UniqueID_16": {
+					"type": "text",
+					"top": 38,
+					"left": 174,
+					"width": 121,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Rectangle73_17": {
+					"type": "rectangle",
+					"top": 92,
+					"left": 131,
+					"width": 100,
+					"height": 76,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_QQQCarrier_Zone2_18": {
+					"type": "input",
+					"top": 234,
+					"left": 232,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone2:12"
+				},
+				"_PROP_QQQCarrier_Zone3_19": {
+					"type": "input",
+					"top": 234,
+					"left": 274,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone3:13"
+				},
+				"_PROP_QQQCarrier_Zone4_20": {
+					"type": "input",
+					"top": 234,
+					"left": 316,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone4",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone4:14"
+				},
+				"_PROP_QQQCarrier_Zone5_21": {
+					"type": "input",
+					"top": 234,
+					"left": 358,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone5",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone5:15"
+				},
+				"_PROP_QQQCarrier_Zone6_22": {
+					"type": "input",
+					"top": 234,
+					"left": 400,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone6",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone6:16"
+				},
+				"_PROP_QQQCarrier_Zone7_23": {
+					"type": "input",
+					"top": 234,
+					"left": 442,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone7",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone7:17"
+				},
+				"_PROP_QQQCarrier_Zone8_24": {
+					"type": "input",
+					"top": 234,
+					"left": 484,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone8",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone8:18"
+				},
+				"_PROP_QQQCarrier_Zone9_25": {
+					"type": "input",
+					"top": 234,
+					"left": 526,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone9",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone9:29"
+				},
+				"_PROP_QQQCarrier_Zone10_26": {
+					"type": "input",
+					"top": 234,
+					"left": 568,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone10",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone10:30"
+				},
+				"_PROP_QQQCarrier_Zone11_27": {
+					"type": "input",
+					"top": 234,
+					"left": 610,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone11",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone11:31"
+				},
+				"_PROP_QQQCarrier_Zone12_28": {
+					"type": "input",
+					"top": 234,
+					"left": 652,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone12",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone12:42"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 253,
+					"left": 35,
+					"width": 131,
+					"height": 406,
+					"dataSource": "Subform1",
+					"dataSourceTypeHint": "text",
+					"table": 143,
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "system"
+				},
+				"Subform": {
+					"type": "subform",
+					"top": 253,
+					"left": 186,
+					"width": 784,
+					"height": 406,
+					"dataSource": "Subform",
+					"dataSourceTypeHint": "text",
+					"table": 144,
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "system"
+				},
+				"_Text_ZoneTable_31": {
+					"type": "text",
+					"top": 237,
+					"left": 36,
+					"width": 54,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Zone Table"
+				},
+				"_Text_WeightTable_32": {
+					"type": "text",
+					"top": 237,
+					"left": 165,
+					"width": 65,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Weight Table"
+				},
+				"Invisible Button": {
+					"type": "button",
+					"top": 234,
+					"left": 32,
+					"width": 59,
+					"height": 17,
+					"dataSource": "b1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invisible Button1": {
+					"type": "button",
+					"top": 234,
+					"left": 163,
+					"width": 66,
+					"height": 16,
+					"dataSource": "b1",
+					"display": false,
+					"method": "ObjectMethods/Invisible Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_QQQCarrier_Zone13_35": {
+					"type": "input",
+					"top": 234,
+					"left": 694,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone13",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone13:47"
+				},
+				"_PROP_QQQCarrier_Zone14_36": {
+					"type": "input",
+					"top": 234,
+					"left": 737,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone14",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone14:48"
+				},
+				"_PROP_QQQCarrier_Zone15_37": {
+					"type": "input",
+					"top": 234,
+					"left": 780,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone15",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone15:49"
+				},
+				"_PROP_QQQCarrier_Zone16_38": {
+					"type": "input",
+					"top": 234,
+					"left": 823,
+					"width": 38,
+					"height": 17,
+					"dataSource": "entry_o.Zone16",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Zone16:50"
+				},
+				"_Rectangle2_39": {
+					"type": "rectangle",
+					"top": 81,
+					"left": 359,
+					"width": 102,
+					"height": 114,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_QQQCarrier_ApprovedNameID_40": {
+					"type": "input",
+					"top": 93,
+					"left": 134,
+					"width": 96,
+					"height": 17,
+					"dataSource": "entry_o.ApprovedNameID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]ApprovedNameID:2"
+				},
+				"_PROP_QQQCarrier_DateEntered_41": {
+					"type": "input",
+					"top": 112,
+					"left": 134,
+					"width": 96,
+					"height": 17,
+					"dataSource": "entry_o.DateEntered",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]DateEntered:1"
+				},
+				"_PROP_QQQCarrier_ZipLength_42": {
+					"type": "input",
+					"top": 131,
+					"left": 134,
+					"width": 96,
+					"height": 17,
+					"defaultValue": "3",
+					"dataSource": "entry_o.ZipLength",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]ZipLength:19"
+				},
+				"_PROP_QQQCarrier_CostType_43": {
+					"type": "radio",
+					"top": 190,
+					"left": 30,
+					"width": 108,
+					"height": 16,
+					"dataSource": "entry_o.CostType",
+					"text": "$ Per Shipment",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"radioGroup": "Field8_group",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]CostType:20"
+				},
+				"_PROP_ot_CostType_44": {
+					"type": "radio",
+					"top": 190,
+					"left": 158,
+					"width": 124,
+					"height": 16,
+					"dataSource": "entry_o.CostType",
+					"text": "$ Per Unit Wt",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"radioGroup": "Field8_group",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "Not:C34([QQQCarrier:11]CostType:20)"
+				},
+				"_PROP_QQQCarrier_scacCode_45": {
+					"type": "input",
+					"top": 82,
+					"left": 362,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.scacCode",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]scacCode:28"
+				},
+				"_PROP_QQQCarrier_Factor_46": {
+					"type": "input",
+					"top": 101,
+					"left": 362,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.Factor",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "0.000 ;0.000-",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Factor:5"
+				},
+				"_PROP_QQQCarrier_AvgBoxWt_47": {
+					"type": "input",
+					"top": 120,
+					"left": 362,
+					"width": 98,
+					"height": 17,
+					"defaultValue": "25",
+					"dataSource": "entry_o.AvgBoxWt",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "###,##0.######",
+					"min": 1E-05,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]AvgBoxWt:8"
+				},
+				"_PROP_QQQCarrier_ServcIndicator_48": {
+					"type": "input",
+					"top": 139,
+					"left": 362,
+					"width": 28,
+					"height": 17,
+					"dataSource": "entry_o.ServcIndicator",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]ServcIndicator:32"
+				},
+				"_PROP_QQQCarrier_ServiceType_49": {
+					"type": "input",
+					"top": 139,
+					"left": 392,
+					"width": 68,
+					"height": 17,
+					"dataSource": "entry_o.ServiceType",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]ServiceType:34"
+				},
+				"_PROP_QQQCarrier_CarrierName_50": {
+					"type": "input",
+					"top": 158,
+					"left": 362,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.CarrierName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]CarrierName:40"
+				},
+				"_PROP_QQQCarrier_CarrierCode_51": {
+					"type": "input",
+					"top": 177,
+					"left": 362,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.CarrierCode",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]CarrierCode:41"
+				},
+				"_Rectangle72_52": {
+					"type": "rectangle",
+					"top": 73,
+					"left": 604,
+					"width": 102,
+					"height": 152,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_QQQCarrier_CODCharge_53": {
+					"type": "input",
+					"top": 74,
+					"left": 607,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.CODCharge",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]CODCharge:7"
+				},
+				"_PROP_QQQCarrier_HandlingCharge_54": {
+					"type": "input",
+					"top": 93,
+					"left": 607,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.HandlingCharge",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "###,##0.00",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]HandlingCharge:9"
+				},
+				"_PROP_QQQCarrier_InsureAt_55": {
+					"type": "input",
+					"top": 112,
+					"left": 607,
+					"width": 48,
+					"height": 17,
+					"dataSource": "entry_o.InsureAt",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]InsureAt:27"
+				},
+				"_PROP_QQQCarrier_InsureIncrement_56": {
+					"type": "input",
+					"top": 112,
+					"left": 657,
+					"width": 48,
+					"height": 17,
+					"dataSource": "entry_o.InsureIncrement",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]InsureIncrement:23"
+				},
+				"_PROP_QQQCarrier_InsuranceRate_57": {
+					"type": "input",
+					"top": 131,
+					"left": 607,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.InsuranceRate",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]InsuranceRate:24"
+				},
+				"_PROP_QQQCarrier_InsureMinimum_58": {
+					"type": "input",
+					"top": 150,
+					"left": 607,
+					"width": 48,
+					"height": 17,
+					"dataSource": "entry_o.InsureMinimum",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]InsureMinimum:38"
+				},
+				"_PROP_QQQCarrier_InsureMinumumCharge_59": {
+					"type": "input",
+					"top": 150,
+					"left": 657,
+					"width": 48,
+					"height": 17,
+					"dataSource": "entry_o.InsureMinumumCharge",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]InsureMinumumCharge:39"
+				},
+				"_PROP_QQQCarrier_TrackingRate_60": {
+					"type": "input",
+					"top": 169,
+					"left": 607,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.TrackingRate",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]TrackingRate:25"
+				},
+				"_PROP_QQQCarrier_CallTagRate_61": {
+					"type": "input",
+					"top": 188,
+					"left": 607,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.CallTagRate",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Cr$"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]CallTagRate:26"
+				},
+				"_PROP_QQQCarrier_FuelFactor_62": {
+					"type": "input",
+					"top": 207,
+					"left": 607,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.FuelFactor",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": "0.000 ;0.000-",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]FuelFactor:35"
+				},
+				"_PROP_QQQCarrier_Residential_63": {
+					"type": "checkbox",
+					"top": 74,
+					"left": 760,
+					"width": 124,
+					"height": 14,
+					"dataSource": "entry_o.Residential",
+					"text": "Residential",
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontSize": 11,
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Residential:33"
+				},
+				"_Text__16792118_64": {
+					"type": "text",
+					"top": 84,
+					"left": 277,
+					"width": 79,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,118"
+				},
+				"_Text_SrvInd_Type_65": {
+					"type": "text",
+					"top": 141,
+					"left": 251,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Srv Ind/Type"
+				},
+				"_Text_FuelFactor_66": {
+					"type": "text",
+					"top": 209,
+					"left": 500,
+					"width": 101,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Fuel Factor"
+				},
+				"_Text_ZipLength_67": {
+					"type": "text",
+					"top": 133,
+					"left": 16,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ZipLength"
+				},
+				"_Text_DateEntered_68": {
+					"type": "text",
+					"top": 114,
+					"left": 16,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DateEntered"
+				},
+				"_Text_ApprovedBy_69": {
+					"type": "text",
+					"top": 95,
+					"left": 16,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ApprovedBy"
+				},
+				"_Text_AvgBoxWt_70": {
+					"type": "text",
+					"top": 122,
+					"left": 244,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Avg Box Wt"
+				},
+				"_Text_Factor_71": {
+					"type": "text",
+					"top": 103,
+					"left": 244,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Factor"
+				},
+				"_Text_COD_72": {
+					"type": "text",
+					"top": 76,
+					"left": 523,
+					"width": 78,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "COD"
+				},
+				"_Text_InsureRate_73": {
+					"type": "text",
+					"top": 133,
+					"left": 475,
+					"width": 126,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "InsureRate"
+				},
+				"_Text_InsureAt_Incr_74": {
+					"type": "text",
+					"top": 114,
+					"left": 490,
+					"width": 111,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "InsureAt/Incr"
+				},
+				"_Text_Handling_75": {
+					"type": "text",
+					"top": 95,
+					"left": 490,
+					"width": 111,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Handling"
+				},
+				"_Text_CallTagRate_76": {
+					"type": "text",
+					"top": 190,
+					"left": 475,
+					"width": 126,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CallTagRate"
+				},
+				"_Text_TrackRate_77": {
+					"type": "text",
+					"top": 171,
+					"left": 490,
+					"width": 111,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TrackRate"
+				},
+				"_Text_InsureMinimum_Charge_78": {
+					"type": "text",
+					"top": 152,
+					"left": 475,
+					"width": 126,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "InsureMinimum/Charge"
+				},
+				"_Text_CarrierName_79": {
+					"type": "text",
+					"top": 160,
+					"left": 251,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CarrierName"
+				},
+				"_Text_CarrierCode_80": {
+					"type": "text",
+					"top": 179,
+					"left": 251,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CarrierCode"
+				},
+				"_PROP_Carrier_siteid_81": {
+					"type": "input",
+					"top": 150,
+					"left": 134,
+					"width": 96,
+					"height": 17,
+					"defaultValue": "3",
+					"dataSource": "entry_o.siteid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[Carrier:11]siteid:36"
+				},
+				"_Text_siteID_82": {
+					"type": "text",
+					"top": 152,
+					"left": 16,
+					"width": 112,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "siteID"
+				},
+				"_PROP_QQQCarrier_ZoneByCountry_83": {
+					"type": "checkbox",
+					"top": 97,
+					"left": 760,
+					"width": 124,
+					"height": 14,
+					"dataSource": "entry_o.ZoneByCountry",
+					"text": "ZoneByCountry",
+					"stroke": "#000000",
+					"textAlign": "right",
+					"fontSize": 11,
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[QQQCarrier:11]ZoneByCountry:46"
+				},
+				"Approved": {
+					"type": "checkbox",
+					"top": 55,
+					"left": 298,
+					"width": 66,
+					"height": 14,
+					"dataSource": "[Carrier:11]active:6",
+					"text": "Approved",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"method": "ObjectMethods/Approved.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_QQQCarrier_Script_85": {
+					"type": "input",
+					"top": 121,
+					"left": 38,
+					"width": 910,
+					"height": 559,
+					"dataSource": "entry_o.Script",
+					"class": "cssScript",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCarrier:11]Script:37"
+				},
+				"_Text_Script_86": {
+					"type": "text",
+					"top": 104,
+					"left": 38,
+					"width": 200,
+					"height": 12,
+					"class": "cssInputLabel",
+					"text": "Script"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_QQQCarrier_ObGeneral_87": {
+					"type": "input",
+					"top": 111,
+					"left": 8,
+					"width": 992,
+					"height": 569,
+					"dataSource": "entry_o.ObGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCarrier:11]ObGeneral:52"
+				},
+				"_Text_ObGeneral_88": {
+					"type": "text",
+					"top": 90,
+					"left": 11,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

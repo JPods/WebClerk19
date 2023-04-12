@@ -27,7 +27,7 @@ Case of
 		$theCount:=5
 		$startStringNum:=60  //Ascii("<")//60  the ; (Ascii 59) must not be included for cookies
 		$endStringNum:=Character code:C91("z")  //122
-		$strDT:=String:C10(DateTime_Enter; "###000000000")
+		$strDT:=String:C10(DateTime_DTTo; "###000000000")
 End case 
 //
 For ($i; 1; $theCount)

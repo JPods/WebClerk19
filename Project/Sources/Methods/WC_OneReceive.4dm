@@ -75,7 +75,7 @@ While (($continue) & ($timeoutHit>Milliseconds:C459) & (<>vbWCstop=False:C215)) 
 		// #### AZM #### 20180716 // SET A VARIABLE TO HOLD THE ENTIRE REQUESTED URL
 		
 		If (Caps lock down:C547)
-			ConsoleMessage(voState.request.headers.Referer)
+			ConsoleLog(voState.request.headers.Referer)
 		End if 
 		// ### bj ### 20190124_1918
 		

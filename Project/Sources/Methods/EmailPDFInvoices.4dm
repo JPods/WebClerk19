@@ -50,7 +50,7 @@ For (vi1; 1; vi2)
 	
 	vi3:=Records in selection:C76([Invoice:26])
 	If ((vi3>0))
-		ConsoleMessage("\r"+String:C10(vi3)+" "+[RemoteUser:57]name:20+" Invoices ")
+		ConsoleLog("\r"+String:C10(vi3)+" "+[RemoteUser:57]name:20+" Invoices ")
 		vHere:=0  // called from Script
 		ptCurTable:=->[Invoice:26]
 		QUERY:C277([UserReport:46]; [UserReport:46]name:2="PDF Invoice Export"; *)
@@ -96,7 +96,7 @@ For (vi1; 1; vi2)
 		//vtEmailReceiver:="j.medlen@functionaldevices.com; jmedlen@aol.com; j.medlen@comcast.net"
 		vtEmailSubject:="PDF Invoices"
 		
-		ConsoleMessage("Sending email "+vtEmailSubject+" to "+vtEmailReceiver)
+		ConsoleLog("Sending email "+vtEmailSubject+" to "+vtEmailReceiver)
 		
 		//SMTP_Email // contains email_build
 		

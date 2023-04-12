@@ -1,0 +1,278 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Subform5": {
+					"type": "subform",
+					"left": 374,
+					"top": 57,
+					"width": 1,
+					"height": 1
+				},
+				"QATable": {
+					"type": "text",
+					"top": 16,
+					"left": 12,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "QA"
+				},
+				"Form.btnShowRecs": {
+					"type": "button",
+					"top": 15,
+					"left": 7,
+					"width": 78,
+					"height": 14,
+					"dataSource": "",
+					"text": "QA",
+					"display": false,
+					"method": "ObjectMethods/Form.btnShowRecs.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable14104": {
+					"type": "input",
+					"top": 379,
+					"left": 3,
+					"width": 507,
+					"height": 341,
+					"dataSource": "imageQA_p",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 13,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalTopLeft",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"right": 510,
+					"bottom": 720
+				},
+				"Combo Box3": {
+					"type": "combo",
+					"left": 190,
+					"top": 131,
+					"width": 1,
+					"height": 1,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_LB_QA_": {
+					"type": "listbox",
+					"left": 3,
+					"top": 42,
+					"width": 507,
+					"height": 307,
+					"events": [
+						"onClick"
+					],
+					"listboxType": "collection",
+					"selectionMode": "multiple",
+					"dropping": "custom",
+					"dataSource": "LB_QA.ents",
+					"singleClickEdit": false,
+					"method": "ObjectMethods/_LB_QA_.4dm",
+					"currentItemSource": "LB_QA.cur",
+					"currentItemPositionSource": "LB_QA.pos",
+					"selectedItemsSource": "LB_QA.sel",
+					"stroke": "automatic",
+					"headerHeight": "17px",
+					"metaSource": "_LB_QA_.meta",
+					"alternateFill": "#FFFAEE",
+					"right": 510,
+					"bottom": 349,
+					"columns": [
+						{
+							"header": {
+								"name": "Header3",
+								"text": "idGroup"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.idGroup",
+							"width": 19
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Seq"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer5"
+							},
+							"width": 45,
+							"dataSource": "This:C1470.seq",
+							"dataSourceTypeHint": "number"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Type"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.questionType",
+							"width": 28
+						},
+						{
+							"header": {
+								"text": "Question",
+								"name": "Header5"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.question",
+							"width": 159,
+							"visibility": "visible",
+							"wordwrap": "normal"
+						},
+						{
+							"header": {
+								"name": "Header10",
+								"text": "Answer"
+							},
+							"name": "Column9",
+							"footer": {
+								"name": "Footer10"
+							},
+							"width": 260,
+							"dataSource": "This:C1470.answer",
+							"wordwrap": "normal"
+						},
+						{
+							"header": {
+								"name": "Header11",
+								"text": "URL"
+							},
+							"name": "Column10",
+							"footer": {
+								"name": "Footer11"
+							},
+							"width": 63,
+							"dataSource": "This:C1470.url",
+							"dataSourceTypeHint": "date"
+						},
+						{
+							"header": {
+								"name": "Header12",
+								"text": "Header1"
+							},
+							"name": "Column11",
+							"footer": {
+								"name": "Footer12"
+							},
+							"dataSource": "This:C1470.dateOfAnswer",
+							"width": 87
+						},
+						{
+							"header": {
+								"name": "Header13",
+								"text": "Answered By"
+							},
+							"name": "Column12",
+							"footer": {
+								"name": "Footer13"
+							},
+							"dataSource": "This:C1470.answeredBy",
+							"width": 92
+						}
+					]
+				},
+				"Popup Dropdown List": {
+					"type": "dropdown",
+					"left": 140,
+					"top": 8,
+					"width": 458,
+					"height": 29,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "aAnswers",
+					"method": "ObjectMethods/Popup Dropdown List.4dm"
+				},
+				"Variable69": {
+					"type": "input",
+					"top": 355,
+					"left": 3,
+					"width": 507,
+					"height": 18,
+					"dataSource": "pathQA_t",
+					"dataSourceTypeHint": "text",
+					"stroke": "#000000",
+					"fontFamily": "Geneva",
+					"fontSize": 13,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 41,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

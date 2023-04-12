@@ -19,23 +19,26 @@ C_TEXT:C284($1; $2; $tableName; $vtKeyword; $vtFieldName)
 C_POINTER:C301($ptTable; $ptKeyTagsField; $ptObjField; $ptField)
 $tableName:=$1
 $vtKeyword:=$2
-$obSel:=ds:C1482[$tableName].new()
+
+$tableName:="Customer"
+$vtKeyword:="th,th"
+
+var $dataClass : Object
+$dataClass:=ds:C1482[$tableName]
 If ($obSel=Null:C1517)
 	vResponse:="Table not valid: "+$tableName
 	//vMimeType:="text/html"
 Else 
-	$ptTable:=STR_GetTablePointer($tableName)
-	$ptKeyTagsField:=STR_GetFieldPointer($tableName; "keyTags")
-	If (Is nil pointer:C315($ptKeyTagsField))
-		$ptObjField:=STR_GetFieldPointer($tableName; "obGeneral")
-		If (Is nil pointer:C315($ptObjField))
-			vResponse:="No ObGeneral or KeyTags field available: "+$tableName
-		Else 
+	Case of 
+		: ($dataClass.keyTags#Null:C1517)
+			vResponse:="Query keyTags"
+			$ptKeyTagsField:=STR_GetFieldPointer($tableName; "keyTags")
+		: ($dataClass.obGeneral#Null:C1517)
 			vResponse:="Query obGeneral"
-		End if 
-	Else 
-		vResponse:="Query keyTags"
-	End if 
+			$ptObjField:=STR_GetFieldPointer($tableName; "obGeneral")
+		Else 
+			vResponse:="No ObGeneral or KeyTags field available: "+$tableName
+	End case 
 End if 
 If (vResponse="Query@")
 	ARRAY TEXT:C222($atKeyWord; 0)

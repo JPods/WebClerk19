@@ -20,7 +20,7 @@ If (False:C215)  // <>FreightService=2)
 		[Order:3]shipVia:13:=(Self:C308->{Self:C308->})
 	End if 
 Else 
-	entryEntity.shipVia:=DE_PopUpArray(Self:C308)
-	Find Ship Zone(->[Order:3]zip:20; ->[Order:3]zone:14; ->[Order:3]shipVia:13; ->[Order:3]country:21; ->[Order:3]siteid:106)
+	entry_o.shipVia:=DE_PopUpArray(Self:C308)
+	Find Ship Zone(->[Order:3]zip:20; ->[Order:3]zone:14; ->[Order:3]shipVia:13; ->[Order:3]country:21; ->[Order:3]siteID:106)
 	// zzzqqq U_DTStampFldMod(->[Order:3]commentProcess:12; ->[Order:3]shipVia:13)
 End if 

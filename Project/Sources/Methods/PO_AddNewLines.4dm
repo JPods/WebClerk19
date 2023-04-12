@@ -67,9 +67,9 @@ Case of
 				QUERY:C277([Item:4]; [Item:4]itemNum:1=aOItemNum{aOrdLnSel{$index}})
 				Case of 
 					: (Records in selection:C76([Item:4])>1)
-						ConsoleMessage("Multiple ItemNus: "+aOItemNum{aOrdLnSel{$index}})
+						ConsoleLog("Multiple ItemNus: "+aOItemNum{aOrdLnSel{$index}})
 					: (Records in selection:C76([Item:4])=0)
-						ConsoleMessage("No ItemNum: "+aOItemNum{aOrdLnSel{$index}})
+						ConsoleLog("No ItemNum: "+aOItemNum{aOrdLnSel{$index}})
 					Else 
 						listItemsFill(->[PO:39]; True:C214)  //[Item] selection may be empty
 						$soa:=Size of array:C274(aPOOrdRef)

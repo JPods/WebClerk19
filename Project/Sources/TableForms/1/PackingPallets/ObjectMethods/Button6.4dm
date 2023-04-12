@@ -11,7 +11,7 @@ If (OK=1)
 		[LoadTag:88]complete:36:=1
 		[LoadTag:88]status:6:="Pending"  //###_jwm_###
 		aPKStatus22{aPalletSel{$i}}:="Pending"  //###_jwm_###
-		//[LoadTag]DTShipOn:=DateTime_Enter 
+		//[LoadTag]DTShipOn:=DateTime_DTTo 
 		//PKPalletWeightReCalc ($curUniqueID)
 		SAVE RECORD:C53([LoadTag:88])
 		UNLOAD RECORD:C212([LoadTag:88])

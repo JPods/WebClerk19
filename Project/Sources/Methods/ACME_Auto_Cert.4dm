@@ -40,7 +40,7 @@
 // If (ca="")
 // C_TEXT($msg)
 // $msg:="CA is not set; please include a CA property in the Object passed"
-// ConsoleMessage($msg)
+// ConsoleLog($msg)
 // ALERT($msg)
 // Else 
 // // ca is set so continue
@@ -66,7 +66,7 @@
 // 
 // logger:=""
 // 
-// ConsoleMessage("Started @ "+String(Current date; ISO date; Current time)+"\r")
+// ConsoleLog("Started @ "+String(Current date; ISO date; Current time)+"\r")
 // 
 // WEB START SERVER
 // If (OK=1)
@@ -78,10 +78,10 @@
 // _signDomains($letsEncrypt_ob)
 // End if 
 // Else 
-// ConsoleMessage("web server could not start!")
+// ConsoleLog("web server could not start!")
 // End if 
 // 
-// ConsoleMessage("Ended @ "+String(Current date; ISO date; Current time)+"\r")
+// ConsoleLog("Ended @ "+String(Current date; ISO date; Current time)+"\r")
 // 
 // OB SET($letsEncrypt_ob; "log"; logger)
 // End if 

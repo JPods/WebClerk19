@@ -1,0 +1,3995 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #8",
+	"markerBody": 1161,
+	"markerBreak": 1161,
+	"markerFooter": 1178,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"fontStyle": "italic",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bdEnterKey_7": {
+					"type": "button",
+					"top": 50,
+					"left": 1,
+					"width": 3,
+					"height": 5,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Rectangle7_8": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 516,
+					"width": 484,
+					"height": 57,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle5_9": {
+					"type": "rectangle",
+					"top": 386,
+					"left": 169,
+					"width": 120,
+					"height": 95,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Text_contactID_10": {
+					"type": "text",
+					"top": 228,
+					"left": 387,
+					"width": 126,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "contactID"
+				},
+				"_VAR_bContact_11": {
+					"type": "button",
+					"top": 226,
+					"left": 400,
+					"width": 115,
+					"height": 16,
+					"dataSource": "bContact",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Rectangle6_12": {
+					"type": "rectangle",
+					"top": 60,
+					"left": 438,
+					"width": 199,
+					"height": 38,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle2_13": {
+					"type": "rectangle",
+					"top": 206,
+					"left": 517,
+					"width": 120,
+					"height": 190,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle59_14": {
+					"type": "rectangle",
+					"top": 97,
+					"left": 169,
+					"width": 468,
+					"height": 76,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle4_15": {
+					"type": "rectangle",
+					"top": 15,
+					"left": 651,
+					"width": 353,
+					"height": 362,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Text_VendorID_16": {
+					"type": "text",
+					"top": 209,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "VendorID"
+				},
+				"_Rectangle57_17": {
+					"type": "rectangle",
+					"top": 206,
+					"left": 169,
+					"width": 120,
+					"height": 171,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle3_18": {
+					"type": "rectangle",
+					"top": 485,
+					"left": 55,
+					"width": 948,
+					"height": 182,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Text__1679461_19": {
+					"type": "text",
+					"top": 342,
+					"left": 400,
+					"width": 113,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16794,61"
+				},
+				"_Rectangle1_20": {
+					"type": "rectangle",
+					"top": 60,
+					"left": 169,
+					"width": 199,
+					"height": 38,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_ItemSerial_OnFloorPlan_21": {
+					"type": "checkbox",
+					"top": 38,
+					"left": 218,
+					"width": 151,
+					"height": 13,
+					"dataSource": "entry_o.OnFloorPlan",
+					"text": "FloorPlan",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"fontStyle": "italic",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]OnFloorPlan:16"
+				},
+				"_PROP_ItemSerial_Status_22": {
+					"type": "input",
+					"top": 61,
+					"left": 172,
+					"width": 195,
+					"height": 17,
+					"dataSource": "entry_o.Status",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Status:8"
+				},
+				"_PROP_ItemSerial_ItemNum_23": {
+					"type": "input",
+					"top": 80,
+					"left": 172,
+					"width": 195,
+					"height": 17,
+					"dataSource": "entry_o.ItemNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ItemNum:1"
+				},
+				"_PROP_ItemSerial_emailCustomer_24": {
+					"type": "input",
+					"top": 61,
+					"left": 441,
+					"width": 195,
+					"height": 17,
+					"dataSource": "entry_o.emailCustomer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]emailCustomer:32"
+				},
+				"_PROP_ItemSerial_Manufacturer_25": {
+					"type": "input",
+					"top": 80,
+					"left": 441,
+					"width": 195,
+					"height": 17,
+					"dataSource": "entry_o.Manufacturer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Manufacturer:31"
+				},
+				"_PROP_ItemSerial_Description_26": {
+					"type": "input",
+					"top": 98,
+					"left": 172,
+					"width": 464,
+					"height": 17,
+					"dataSource": "entry_o.Description",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Description:2"
+				},
+				"_PROP_ItemSerial_FloorPlanID_27": {
+					"type": "input",
+					"top": 117,
+					"left": 172,
+					"width": 230,
+					"height": 17,
+					"dataSource": "entry_o.FloorPlanID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]FloorPlanID:14"
+				},
+				"_PROP_ItemSerial_FPLineNumber_28": {
+					"type": "input",
+					"top": 117,
+					"left": 404,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.FPLineNumber",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]FPLineNumber:19"
+				},
+				"_PROP_ItemSerial_FPExpireDate_29": {
+					"type": "input",
+					"top": 117,
+					"left": 521,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.FPExpireDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]FPExpireDate:15"
+				},
+				"_PROP_ItemSerial_ModelNum_30": {
+					"type": "input",
+					"top": 136,
+					"left": 172,
+					"width": 464,
+					"height": 17,
+					"dataSource": "entry_o.ModelNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ModelNum:3"
+				},
+				"_PROP_ItemSerial_SerialNum_31": {
+					"type": "input",
+					"top": 155,
+					"left": 172,
+					"width": 464,
+					"height": 17,
+					"dataSource": "entry_o.SerialNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]SerialNum:4"
+				},
+				"_PROP_ItemSerial_VendorID_32": {
+					"type": "input",
+					"top": 207,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.VendorID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]VendorID:5"
+				},
+				"_PROP_ItemSerial_poNum_33": {
+					"type": "input",
+					"top": 226,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.poNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]poNum:6"
+				},
+				"_PROP_ItemSerial_PoLnRefID_34": {
+					"type": "input",
+					"top": 245,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.PoLnRefID",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]PoLnRefID:7"
+				},
+				"_PROP_ItemSerial_DateReceived_35": {
+					"type": "input",
+					"top": 264,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.DateReceived",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]DateReceived:12"
+				},
+				"_PROP_ItemSerial_idUnique_36": {
+					"type": "input",
+					"top": 283,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]idUnique:18"
+				},
+				"_PROP_ItemSerial_Cost_37": {
+					"type": "input",
+					"top": 302,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Cost",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Cost:24"
+				},
+				"_PROP_ItemSerial_Price_38": {
+					"type": "input",
+					"top": 321,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Price",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Price:26"
+				},
+				"_PROP_ItemSerial_Discount_39": {
+					"type": "input",
+					"top": 340,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Discount",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Discount:25"
+				},
+				"_PROP_ItemSerial_RecieptRetail_40": {
+					"type": "input",
+					"top": 359,
+					"left": 173,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.RecieptRetail",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]RecieptRetail:41"
+				},
+				"_PROP_ItemSerial_Profile1_41": {
+					"type": "input",
+					"top": 387,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Profile1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile1:33"
+				},
+				"_PROP_ItemSerial_Profile2_42": {
+					"type": "input",
+					"top": 406,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Profile2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile2:34"
+				},
+				"_PROP_ItemSerial_Profile3_43": {
+					"type": "input",
+					"top": 425,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Profile3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile3:35"
+				},
+				"_PROP_ItemSerial_Profile4_44": {
+					"type": "input",
+					"top": 444,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Profile4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile4:36"
+				},
+				"_PROP_ItemSerial_Profile5_45": {
+					"type": "input",
+					"top": 463,
+					"left": 172,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.Profile5",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile5:37"
+				},
+				"_PROP_ItemSerial_customerid_46": {
+					"type": "input",
+					"top": 207,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.customerid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]customerid:9"
+				},
+				"_PROP_ItemSerial_invoiceNum_47": {
+					"type": "input",
+					"top": 245,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.invoiceNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]invoiceNum:10"
+				},
+				"_PROP_ItemSerial_SalesLnRefID_48": {
+					"type": "input",
+					"top": 264,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.SalesLnRefID",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]SalesLnRefID:11"
+				},
+				"_PROP_ItemSerial_DateShipped_49": {
+					"type": "input",
+					"top": 283,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.DateShipped",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]DateShipped:13"
+				},
+				"_PROP_ItemSerial_WarrantyDays_50": {
+					"type": "input",
+					"top": 302,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.WarrantyDays",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field22.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]WarrantyDays:20"
+				},
+				"_PROP_ItemSerial_DateWarrantyEnd_51": {
+					"type": "input",
+					"top": 321,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.DateWarrantyEnd",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]DateWarrantyEnd:21"
+				},
+				"_PROP_ItemSerial_ClaimCosts_52": {
+					"type": "input",
+					"top": 340,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.ClaimCosts",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ClaimCosts:22"
+				},
+				"_PROP_ItemSerial_ClaimPrice_53": {
+					"type": "input",
+					"top": 359,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.ClaimPrice",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ClaimPrice:28"
+				},
+				"_PROP_ItemSerial_ClaimCount_54": {
+					"type": "input",
+					"top": 378,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.ClaimCount",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ClaimCount:29"
+				},
+				"_PROP_ItemSerial_Profile6_55": {
+					"type": "input",
+					"top": 409,
+					"left": 519,
+					"width": 480,
+					"height": 17,
+					"dataSource": "entry_o.Profile6",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile6:38"
+				},
+				"_PROP_ItemSerial_Profile7_56": {
+					"type": "input",
+					"top": 428,
+					"left": 519,
+					"width": 480,
+					"height": 17,
+					"dataSource": "entry_o.Profile7",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile7:39"
+				},
+				"_PROP_ItemSerial_Profile8_57": {
+					"type": "input",
+					"top": 447,
+					"left": 519,
+					"width": 480,
+					"height": 17,
+					"dataSource": "entry_o.Profile8",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Profile8:40"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 488,
+					"left": 56,
+					"width": 925,
+					"height": 177,
+					"dataSourceTypeHint": "text",
+					"table": 64,
+					"detailForm": "Input1",
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"printFrame": "fixed",
+					"borderStyle": "solid"
+				},
+				"_VAR_bDateTime2_59": {
+					"type": "pictureButton",
+					"top": 17,
+					"left": 593,
+					"width": 41,
+					"height": 33,
+					"dataSource": "bDateTime2",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bModPop_60": {
+					"type": "pictureButton",
+					"top": 488,
+					"left": 30,
+					"width": 19,
+					"height": 29,
+					"dataSource": "bModPop",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/+dChange.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAddPop_61": {
+					"type": "pictureButton",
+					"top": 488,
+					"left": 8,
+					"width": 19,
+					"height": 29,
+					"dataSource": "bAddPop",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/+dAdd.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bVendor_62": {
+					"type": "button",
+					"top": 207,
+					"left": 36,
+					"width": 131,
+					"height": 16,
+					"dataSource": "bVendor",
+					"text": "Set Vendor",
+					"display": false,
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text__1679462_63": {
+					"type": "text",
+					"top": 361,
+					"left": 400,
+					"width": 113,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16794,62"
+				},
+				"_Text__1679463_64": {
+					"type": "text",
+					"top": 380,
+					"left": 400,
+					"width": 113,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16794,63"
+				},
+				"_VAR_b10_65": {
+					"type": "button",
+					"top": 342,
+					"left": 410,
+					"width": 105,
+					"height": 16,
+					"dataSource": "b10",
+					"text": "Update",
+					"display": false,
+					"method": "ObjectMethods/Variable16.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text__16790121_66": {
+					"type": "text",
+					"top": 63,
+					"left": 82,
+					"width": 83,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,121"
+				},
+				"_Text_ItemNum_67": {
+					"type": "text",
+					"top": 82,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "ItemNum"
+				},
+				"_Text_Description_68": {
+					"type": "text",
+					"top": 100,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Description"
+				},
+				"_Text_FloorPlanID_Ln_Dt_69": {
+					"type": "text",
+					"top": 119,
+					"left": 15,
+					"width": 150,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "FloorPlanID/Ln/Dt"
+				},
+				"_Text_ModelNum_70": {
+					"type": "text",
+					"top": 138,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "ModelNum"
+				},
+				"_Text_SerialNum_71": {
+					"type": "text",
+					"top": 157,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "SerialNum"
+				},
+				"_Text_PONum_72": {
+					"type": "text",
+					"top": 228,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "PONum"
+				},
+				"_Text_poLineID_73": {
+					"type": "text",
+					"top": 247,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "poLineID"
+				},
+				"_Text_DateRec'd_74": {
+					"type": "text",
+					"top": 266,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Date Rec'd"
+				},
+				"_Text_UniqueID_75": {
+					"type": "text",
+					"top": 285,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID"
+				},
+				"_Text_Cost_76": {
+					"type": "text",
+					"top": 304,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Cost"
+				},
+				"_Text_SoldPrice_77": {
+					"type": "text",
+					"top": 323,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Sold Price"
+				},
+				"_Text_SoldDiscount_78": {
+					"type": "text",
+					"top": 342,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Sold Discount"
+				},
+				"_Text_InvoiceNum_79": {
+					"type": "text",
+					"top": 247,
+					"left": 387,
+					"width": 126,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "InvoiceNum"
+				},
+				"_Text_InvoiceLineNum_80": {
+					"type": "text",
+					"top": 266,
+					"left": 387,
+					"width": 126,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "InvoiceLineNum"
+				},
+				"_Text_DateShipped_81": {
+					"type": "text",
+					"top": 285,
+					"left": 387,
+					"width": 126,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "DateShipped"
+				},
+				"_Text_WarrantyLength_82": {
+					"type": "text",
+					"top": 307,
+					"left": 387,
+					"width": 126,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Warranty Length"
+				},
+				"_Text_DateWarrantyEnds_83": {
+					"type": "text",
+					"top": 323,
+					"left": 387,
+					"width": 126,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Date Warranty Ends"
+				},
+				"_Text_customerID_84": {
+					"type": "text",
+					"top": 209,
+					"left": 387,
+					"width": 126,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "customerID"
+				},
+				"_VAR_bDomain_85": {
+					"type": "button",
+					"top": 79,
+					"left": 52,
+					"width": 115,
+					"height": 16,
+					"dataSource": "bDomain",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCustomer_86": {
+					"type": "button",
+					"top": 207,
+					"left": 400,
+					"width": 115,
+					"height": 16,
+					"dataSource": "bCustomer",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable22.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPO_87": {
+					"type": "button",
+					"top": 226,
+					"left": 36,
+					"width": 131,
+					"height": 16,
+					"dataSource": "bPO",
+					"text": "Set Vendor",
+					"display": false,
+					"method": "ObjectMethods/Variable24.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bInvoice_88": {
+					"type": "button",
+					"top": 245,
+					"left": 400,
+					"width": 115,
+					"height": 17,
+					"dataSource": "bInvoice",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable27.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bDateTime_89": {
+					"type": "button",
+					"top": 17,
+					"left": 425,
+					"width": 151,
+					"height": 35,
+					"dataSource": "bDateTime",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16793,93",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_Profile1_90": {
+					"type": "text",
+					"top": 389,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile1 "
+				},
+				"_Text_Profile2_91": {
+					"type": "text",
+					"top": 408,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile2 "
+				},
+				"_Text_Profile3_92": {
+					"type": "text",
+					"top": 427,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile3 "
+				},
+				"_Text_Profile4_93": {
+					"type": "text",
+					"top": 446,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile4 "
+				},
+				"_Text_Profile5_94": {
+					"type": "text",
+					"top": 465,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile5 "
+				},
+				"_Text_eMail_95": {
+					"type": "text",
+					"top": 63,
+					"left": 370,
+					"width": 64,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "eMail"
+				},
+				"_Text_Manufr_96": {
+					"type": "text",
+					"top": 82,
+					"left": 370,
+					"width": 64,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Manufr"
+				},
+				"_Text_Profile6_97": {
+					"type": "text",
+					"top": 411,
+					"left": 397,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile6 "
+				},
+				"_Text_Profile7_98": {
+					"type": "text",
+					"top": 430,
+					"left": 397,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile7 "
+				},
+				"_Text_Profile8_99": {
+					"type": "text",
+					"top": 449,
+					"left": 397,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Profile8 "
+				},
+				"_Text_ReceiptRetail_100": {
+					"type": "text",
+					"top": 361,
+					"left": 50,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "ReceiptRetail"
+				},
+				"_PROP_ItemSerial_Comments_101": {
+					"type": "input",
+					"top": 17,
+					"left": 652,
+					"width": 335,
+					"height": 358,
+					"dataSource": "entry_o.Comments",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]Comments:23"
+				},
+				"_PROP_ItemSerial_contactid_102": {
+					"type": "input",
+					"top": 226,
+					"left": 520,
+					"width": 116,
+					"height": 17,
+					"dataSource": "entry_o.contactid",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]contactid:30"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Rectangle8_103": {
+					"type": "rectangle",
+					"top": 192,
+					"left": 142,
+					"width": 359,
+					"height": 152,
+					"fill": "transparent",
+					"stroke": "#0021D8"
+				},
+				"_Rectangle11_104": {
+					"type": "rectangle",
+					"top": 26,
+					"left": 749,
+					"width": 222,
+					"height": 145,
+					"fill": "transparent",
+					"stroke": "#404040"
+				},
+				"_Rectangle15_105": {
+					"type": "rectangle",
+					"top": 419,
+					"left": 611,
+					"width": 186,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#404040"
+				},
+				"_Rectangle14_106": {
+					"type": "rectangle",
+					"top": 440,
+					"left": 611,
+					"width": 186,
+					"height": 152,
+					"fill": "transparent",
+					"stroke": "#0000FF"
+				},
+				"_Rectangle13_107": {
+					"type": "rectangle",
+					"top": 400,
+					"left": 143,
+					"width": 357,
+					"height": 228,
+					"fill": "transparent",
+					"stroke": "#0027FF"
+				},
+				"_Rectangle12_108": {
+					"type": "rectangle",
+					"top": 381,
+					"left": 280,
+					"width": 220,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#404040"
+				},
+				"_Rectangle10_109": {
+					"type": "rectangle",
+					"top": 17,
+					"left": 280,
+					"width": 221,
+					"height": 161,
+					"fill": "transparent",
+					"stroke": "#404040"
+				},
+				"_PROP_ItemSerial_customerid_110": {
+					"type": "input",
+					"top": 18,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.customerid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field92.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]customerid:9"
+				},
+				"_PROP_ItemSerial_CustomerName_111": {
+					"type": "input",
+					"top": 37,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.CustomerName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field80.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]CustomerName:43"
+				},
+				"_PROP_ItemSerial_SalesPerson_112": {
+					"type": "input",
+					"top": 56,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.SalesPerson",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field86.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]SalesPerson:53"
+				},
+				"_PROP_ItemSerial_PhoneCustomer_113": {
+					"type": "input",
+					"top": 75,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.PhoneCustomer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field81.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]PhoneCustomer:50"
+				},
+				"_PROP_ItemSerial_emailCustomer_114": {
+					"type": "input",
+					"top": 94,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.emailCustomer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field87.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]emailCustomer:32"
+				},
+				"_PROP_ItemSerial_AddressText1_115": {
+					"type": "input",
+					"top": 113,
+					"left": 283,
+					"width": 217,
+					"height": 64,
+					"dataSource": "entry_o.AddressText1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field85.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]AddressText1:46"
+				},
+				"_PROP_QQQCustomer_company_116": {
+					"type": "input",
+					"top": 193,
+					"left": 145,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.company",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field49.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]company:2"
+				},
+				"_PROP_QQQCustomer_individual_117": {
+					"type": "checkbox",
+					"top": 212,
+					"left": 150,
+					"width": 31,
+					"height": 16,
+					"dataSource": "entry_o.individual",
+					"text": "i",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]individual:72"
+				},
+				"_PROP_QQQCustomer_nameFirst_118": {
+					"type": "input",
+					"top": 212,
+					"left": 184,
+					"width": 149,
+					"height": 17,
+					"dataSource": "entry_o.nameFirst",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field47.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]nameFirst:73"
+				},
+				"_PROP_QQQCustomer_nameLast_119": {
+					"type": "input",
+					"top": 212,
+					"left": 335,
+					"width": 165,
+					"height": 17,
+					"dataSource": "entry_o.nameLast",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field48.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]nameLast:23"
+				},
+				"_PROP_QQQCustomer_address1_120": {
+					"type": "input",
+					"top": 231,
+					"left": 145,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.address1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field50.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]address1:4"
+				},
+				"_PROP_QQQCustomer_address2_121": {
+					"type": "input",
+					"top": 250,
+					"left": 145,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.address2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field51.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]address2:5"
+				},
+				"_PROP_QQQCustomer_city_122": {
+					"type": "input",
+					"top": 269,
+					"left": 145,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.city",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field40.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]city:6"
+				},
+				"_PROP_QQQCustomer_state_123": {
+					"type": "input",
+					"top": 288,
+					"left": 145,
+					"width": 178,
+					"height": 17,
+					"dataSource": "entry_o.state",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field41.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]state:7"
+				},
+				"_PROP_QQQCustomer_zip_124": {
+					"type": "input",
+					"top": 288,
+					"left": 325,
+					"width": 109,
+					"height": 17,
+					"dataSource": "entry_o.zip",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field42.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]zip:8"
+				},
+				"_PROP_QQQCustomer_zone_125": {
+					"type": "input",
+					"top": 288,
+					"left": 436,
+					"width": 64,
+					"height": 17,
+					"dataSource": "entry_o.zone",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]zone:57"
+				},
+				"_PROP_QQQCustomer_country_126": {
+					"type": "input",
+					"top": 307,
+					"left": 145,
+					"width": 285,
+					"height": 17,
+					"dataSource": "entry_o.country",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field44.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]country:9"
+				},
+				"_PROP_QQQCustomer_domain_127": {
+					"type": "input",
+					"top": 326,
+					"left": 145,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.domain",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field45.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]domain:90"
+				},
+				"_PROP_ItemSerial_VendorID_128": {
+					"type": "input",
+					"top": 382,
+					"left": 283,
+					"width": 216,
+					"height": 17,
+					"dataSource": "entry_o.VendorID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field93.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]VendorID:5"
+				},
+				"_PROP_QQQVendor_Attention_129": {
+					"type": "input",
+					"top": 401,
+					"left": 146,
+					"width": 353,
+					"height": 17,
+					"dataSource": "entry_o.Attention",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field63.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Attention:55"
+				},
+				"_PROP_QQQVendor_Phone_130": {
+					"type": "input",
+					"top": 420,
+					"left": 146,
+					"width": 175,
+					"height": 17,
+					"dataSource": "entry_o.Phone",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field64.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Phone:10"
+				},
+				"_PROP_QQQVendor_FAX_131": {
+					"type": "input",
+					"top": 420,
+					"left": 323,
+					"width": 176,
+					"height": 17,
+					"dataSource": "entry_o.FAX",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field65.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]FAX:13"
+				},
+				"_PROP_QQQVendor_Company_132": {
+					"type": "input",
+					"top": 439,
+					"left": 146,
+					"width": 353,
+					"height": 17,
+					"dataSource": "entry_o.Company",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field66.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Company:2"
+				},
+				"_PROP_QQQVendor_Division_133": {
+					"type": "input",
+					"top": 458,
+					"left": 146,
+					"width": 353,
+					"height": 17,
+					"dataSource": "entry_o.Division",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field67.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Division:3"
+				},
+				"_PROP_QQQVendor_Address1_134": {
+					"type": "input",
+					"top": 477,
+					"left": 146,
+					"width": 353,
+					"height": 17,
+					"dataSource": "entry_o.Address1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field68.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Address1:4"
+				},
+				"_PROP_QQQVendor_Address2_135": {
+					"type": "input",
+					"top": 496,
+					"left": 146,
+					"width": 353,
+					"height": 17,
+					"dataSource": "entry_o.Address2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field69.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Address2:5"
+				},
+				"_PROP_QQQVendor_City_136": {
+					"type": "input",
+					"top": 515,
+					"left": 146,
+					"width": 353,
+					"height": 17,
+					"dataSource": "entry_o.City",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field70.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]City:6"
+				},
+				"_PROP_QQQVendor_State_137": {
+					"type": "input",
+					"top": 534,
+					"left": 146,
+					"width": 175,
+					"height": 17,
+					"dataSource": "entry_o.State",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field71.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]State:7"
+				},
+				"_PROP_QQQVendor_Zip_138": {
+					"type": "input",
+					"top": 534,
+					"left": 323,
+					"width": 176,
+					"height": 17,
+					"dataSource": "entry_o.Zip",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field72.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Zip:8"
+				},
+				"_PROP_QQQVendor_Country_139": {
+					"type": "input",
+					"top": 553,
+					"left": 146,
+					"width": 353,
+					"height": 17,
+					"dataSource": "entry_o.Country",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field73.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Country:9"
+				},
+				"_PROP_QQQVendor_Terms_140": {
+					"type": "input",
+					"top": 572,
+					"left": 146,
+					"width": 47,
+					"height": 17,
+					"dataSource": "entry_o.Terms",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Terms:30"
+				},
+				"_PROP_QQQVendor_SICCode_141": {
+					"type": "input",
+					"top": 572,
+					"left": 195,
+					"width": 126,
+					"height": 17,
+					"dataSource": "entry_o.SICCode",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]SICCode:57"
+				},
+				"_VAR_srDisplayEmail_142": {
+					"type": "input",
+					"top": 572,
+					"left": 323,
+					"width": 176,
+					"height": 17,
+					"dataSource": "srDisplayEmail",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable3394.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_QQQVendor_Domain_143": {
+					"type": "input",
+					"top": 591,
+					"left": 146,
+					"width": 173,
+					"height": 17,
+					"dataSource": "entry_o.Domain",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field82.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Domain:68"
+				},
+				"_PROP_QQQVendor_PortPostingOrders_144": {
+					"type": "input",
+					"top": 591,
+					"left": 321,
+					"width": 68,
+					"height": 17,
+					"dataSource": "entry_o.PortPostingOrders",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]PortPostingOrders:88"
+				},
+				"_PROP_Vendor_customerIDAtVend_145": {
+					"type": "input",
+					"top": 591,
+					"left": 391,
+					"width": 108,
+					"height": 17,
+					"dataSource": "entry_o.customerIDAtVend",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Vendor:38]customerIDAtVend:67"
+				},
+				"_PROP_QQQVendor_UserName_146": {
+					"type": "input",
+					"top": 610,
+					"left": 146,
+					"width": 173,
+					"height": 17,
+					"dataSource": "entry_o.UserName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]UserName:78"
+				},
+				"_PROP_QQQVendor_Password_147": {
+					"type": "input",
+					"top": 610,
+					"left": 321,
+					"width": 178,
+					"height": 17,
+					"dataSource": "entry_o.Password",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQVendor:38]Password:79"
+				},
+				"_Text_customerID_148": {
+					"type": "text",
+					"top": 20,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "customerID"
+				},
+				"_Rectangle9_149": {
+					"type": "rectangle",
+					"top": 190,
+					"left": 611,
+					"width": 359,
+					"height": 205,
+					"fill": "transparent",
+					"stroke": "#0000FF"
+				},
+				"_Text__16793217_150": {
+					"type": "text",
+					"top": 422,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,217"
+				},
+				"_Text_Domain_151": {
+					"type": "text",
+					"top": 328,
+					"left": 47,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Domain"
+				},
+				"_Text_Attention_152": {
+					"type": "text",
+					"top": 214,
+					"left": 40,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Attention"
+				},
+				"_VAR_bDomain_153": {
+					"type": "button",
+					"top": 326,
+					"left": 36,
+					"width": 104,
+					"height": 19,
+					"dataSource": "bDomain",
+					"display": false,
+					"method": "ObjectMethods/Variable59.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_Company_154": {
+					"type": "text",
+					"top": 195,
+					"left": 40,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Company"
+				},
+				"_Text_Address1_155": {
+					"type": "text",
+					"top": 233,
+					"left": 40,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Address1"
+				},
+				"_Text_Address2_156": {
+					"type": "text",
+					"top": 252,
+					"left": 40,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Address2"
+				},
+				"_Text_City_157": {
+					"type": "text",
+					"top": 271,
+					"left": 40,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "City"
+				},
+				"_Text_St_Zip_Zn_158": {
+					"type": "text",
+					"top": 290,
+					"left": 40,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "St/Zip/Zn"
+				},
+				"_Text_Country_div_159": {
+					"type": "text",
+					"top": 309,
+					"left": 40,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Country/div"
+				},
+				"_PROP_QQQCustomer_divisionAccounting_160": {
+					"type": "input",
+					"top": 307,
+					"left": 432,
+					"width": 68,
+					"height": 17,
+					"dataSource": "entry_o.divisionAccounting",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field4504.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQCustomer:2]divisionAccounting:70"
+				},
+				"_Text__16792175_161": {
+					"type": "text",
+					"top": 593,
+					"left": 71,
+					"width": 68,
+					"height": 12,
+					"stroke": "#097400",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,175"
+				},
+				"_VAR_<>aTerms_162": {
+					"type": "dropdown",
+					"top": 575,
+					"left": 7,
+					"width": 67,
+					"height": 17,
+					"dataSource": "<>aTerms",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,140",
+					"class": "cssPopups",
+					"textAlign": "right",
+					"method": "ObjectMethods/Variable124.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text__16791184_163": {
+					"type": "text",
+					"top": 403,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,184"
+				},
+				"_Text__1678925_164": {
+					"type": "text",
+					"top": 441,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,25"
+				},
+				"_Text__16793218_165": {
+					"type": "text",
+					"top": 460,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,218"
+				},
+				"_Text__16793219_166": {
+					"type": "text",
+					"top": 479,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,219"
+				},
+				"_Text__16793220_167": {
+					"type": "text",
+					"top": 498,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,220"
+				},
+				"_Text__16791115_168": {
+					"type": "text",
+					"top": 517,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,115"
+				},
+				"_Text__1679291_169": {
+					"type": "text",
+					"top": 536,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,91"
+				},
+				"_Text_Country_Zone_170": {
+					"type": "text",
+					"top": 555,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Country/Zone"
+				},
+				"_Text__16793222_171": {
+					"type": "text",
+					"top": 574,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16793,222"
+				},
+				"_Text_User_Pass_172": {
+					"type": "text",
+					"top": 612,
+					"left": 44,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "User/Pass"
+				},
+				"_VAR_b6_173": {
+					"type": "button",
+					"top": 592,
+					"left": 82,
+					"width": 59,
+					"height": 17,
+					"dataSource": "b6",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"_Text__16792145_174": {
+					"type": "text",
+					"top": 193,
+					"left": 513,
+					"width": 94,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,145"
+				},
+				"_PROP_ItemSerial_contactid_175": {
+					"type": "input",
+					"top": 27,
+					"left": 752,
+					"width": 218,
+					"height": 17,
+					"dataSource": "entry_o.contactid",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field90.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]contactid:30"
+				},
+				"_PROP_ItemSerial_ContactName_176": {
+					"type": "input",
+					"top": 46,
+					"left": 752,
+					"width": 218,
+					"height": 17,
+					"dataSource": "entry_o.ContactName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field79.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ContactName:45"
+				},
+				"_PROP_ItemSerial_PhoneContact_177": {
+					"type": "input",
+					"top": 65,
+					"left": 752,
+					"width": 218,
+					"height": 17,
+					"dataSource": "entry_o.PhoneContact",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field88.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]PhoneContact:51"
+				},
+				"_PROP_ItemSerial_emailContact_178": {
+					"type": "input",
+					"top": 84,
+					"left": 752,
+					"width": 218,
+					"height": 17,
+					"dataSource": "entry_o.emailContact",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field91.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]emailContact:49"
+				},
+				"_PROP_ItemSerial_AddressText2_179": {
+					"type": "input",
+					"top": 103,
+					"left": 752,
+					"width": 218,
+					"height": 67,
+					"dataSource": "entry_o.AddressText2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field89.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]AddressText2:47"
+				},
+				"_PROP_QQQContact_NameFirst_180": {
+					"type": "input",
+					"top": 191,
+					"left": 614,
+					"width": 211,
+					"height": 17,
+					"dataSource": "entry_o.NameFirst",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field52.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]NameFirst:2"
+				},
+				"_PROP_Control_CompanyName_181": {
+					"type": "input",
+					"top": 191,
+					"left": 827,
+					"width": 142,
+					"height": 17,
+					"dataSource": "entry_o.CompanyName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Control:1]CompanyName:3"
+				},
+				"_PROP_QQQContact_NameLast_182": {
+					"type": "input",
+					"top": 210,
+					"left": 614,
+					"width": 211,
+					"height": 17,
+					"dataSource": "entry_o.NameLast",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field54.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]NameLast:4"
+				},
+				"_PROP_QQQContact_NameSuffix_183": {
+					"type": "input",
+					"top": 210,
+					"left": 827,
+					"width": 142,
+					"height": 17,
+					"dataSource": "entry_o.NameSuffix",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]NameSuffix:43"
+				},
+				"_PROP_QQQContact_Title_184": {
+					"type": "input",
+					"top": 229,
+					"left": 614,
+					"width": 211,
+					"height": 17,
+					"dataSource": "entry_o.Title",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field56.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]Title:5"
+				},
+				"_PROP_QQQContact_Salutation_185": {
+					"type": "input",
+					"top": 229,
+					"left": 827,
+					"width": 142,
+					"height": 17,
+					"dataSource": "entry_o.Salutation",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field57.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]Salutation:15"
+				},
+				"_PROP_QQQContact_Address1_186": {
+					"type": "input",
+					"top": 248,
+					"left": 614,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.Address1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field58.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]Address1:6"
+				},
+				"_PROP_QQQContact_Address2_187": {
+					"type": "input",
+					"top": 267,
+					"left": 614,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.Address2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field59.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]Address2:7"
+				},
+				"_PROP_QQQContact_City_188": {
+					"type": "input",
+					"top": 286,
+					"left": 614,
+					"width": 210,
+					"height": 17,
+					"dataSource": "entry_o.City",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field60.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]City:8"
+				},
+				"_PROP_QQQContact_State_189": {
+					"type": "input",
+					"top": 286,
+					"left": 826,
+					"width": 53,
+					"height": 17,
+					"dataSource": "entry_o.State",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field61.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]State:9"
+				},
+				"_PROP_QQQContact_Zip_190": {
+					"type": "input",
+					"top": 286,
+					"left": 881,
+					"width": 88,
+					"height": 17,
+					"dataSource": "entry_o.Zip",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field62.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]Zip:11"
+				},
+				"_PROP_QQQContact_Country_191": {
+					"type": "input",
+					"top": 305,
+					"left": 614,
+					"width": 355,
+					"height": 17,
+					"defaultValue": "USA",
+					"dataSource": "entry_o.Country",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field74.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]Country:12"
+				},
+				"_PROP_QQQContact_Phone_192": {
+					"type": "input",
+					"top": 324,
+					"left": 614,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.Phone",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field77.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]Phone:30"
+				},
+				"_PROP_QQQContact_PhoneCell_193": {
+					"type": "input",
+					"top": 343,
+					"left": 614,
+					"width": 355,
+					"height": 17,
+					"dataSource": "entry_o.PhoneCell",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field78.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[QQQContact:13]PhoneCell:52"
+				},
+				"_VAR_srDisplayEmail_194": {
+					"type": "input",
+					"top": 362,
+					"left": 614,
+					"width": 355,
+					"height": 32,
+					"dataSource": "srDisplayEmail",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_ItemSerial_lng_195": {
+					"type": "input",
+					"top": 420,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.lng",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]lng:42"
+				},
+				"_PROP_Service_ActionCreatedBy_196": {
+					"type": "input",
+					"top": 441,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.ActionCreatedBy",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field95.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]ActionCreatedBy:40"
+				},
+				"_PROP_Service_actionBy_197": {
+					"type": "input",
+					"top": 460,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.actionBy",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field96.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]actionBy:12"
+				},
+				"_PROP_Service_action_198": {
+					"type": "input",
+					"top": 479,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.action",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field97.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]action:20"
+				},
+				"_PROP_Service_noteType_199": {
+					"type": "input",
+					"top": 498,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.noteType",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field98.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]noteType:21"
+				},
+				"_PROP_Service_Reference_200": {
+					"type": "input",
+					"top": 517,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.Reference",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field99.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]Reference:37"
+				},
+				"_PROP_Service_process_201": {
+					"type": "input",
+					"top": 536,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.process",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field100.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]process:4"
+				},
+				"_PROP_Service_attribute_202": {
+					"type": "input",
+					"top": 555,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.attribute",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field101.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]attribute:5"
+				},
+				"_PROP_Service_cause_203": {
+					"type": "input",
+					"top": 574,
+					"left": 614,
+					"width": 182,
+					"height": 17,
+					"dataSource": "entry_o.cause",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field102.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Service:6]cause:7"
+				},
+				"_Text__16789220_204": {
+					"type": "text",
+					"top": 364,
+					"left": 552,
+					"width": 55,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,220"
+				},
+				"_Text__16792147_205": {
+					"type": "text",
+					"top": 231,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,147"
+				},
+				"_Text__16789236_206": {
+					"type": "text",
+					"top": 250,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,236"
+				},
+				"_Text__16789237_207": {
+					"type": "text",
+					"top": 269,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,237"
+				},
+				"_Text_City_St_Zip_208": {
+					"type": "text",
+					"top": 288,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "City/St/Zip"
+				},
+				"_Text_Country_Div_209": {
+					"type": "text",
+					"top": 307,
+					"left": 512,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Country/Div"
+				},
+				"Line4": {
+					"type": "line",
+					"top": 235,
+					"left": 827,
+					"width": 8,
+					"height": 14,
+					"strokeDashArray": "1 1"
+				},
+				"_VAR_<>aSalutation_211": {
+					"type": "dropdown",
+					"top": 231,
+					"left": 507,
+					"width": 45,
+					"height": 17,
+					"dataSource": "<>aSalutation",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,140",
+					"class": "cssPopups",
+					"method": "ObjectMethods/Variable28.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text__1678912_212": {
+					"type": "text",
+					"top": 326,
+					"left": 552,
+					"width": 55,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,12"
+				},
+				"_Text_Cell_213": {
+					"type": "text",
+					"top": 345,
+					"left": 552,
+					"width": 55,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Cell"
+				},
+				"_Text__16792146_214": {
+					"type": "text",
+					"top": 212,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,146"
+				},
+				"_VAR_Dial It_215": {
+					"type": "button",
+					"top": 324,
+					"left": 555,
+					"width": 54,
+					"height": 16,
+					"dataSource": "Dial It",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable25.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"_Text_SalesPerson_216": {
+					"type": "text",
+					"top": 58,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sales Person"
+				},
+				"_Text_Customer_217": {
+					"type": "text",
+					"top": 39,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Customer"
+				},
+				"_Text_Phone_218": {
+					"type": "text",
+					"top": 77,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Phone"
+				},
+				"_Text_eMail_219": {
+					"type": "text",
+					"top": 96,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "eMail"
+				},
+				"_Text_Address_220": {
+					"type": "text",
+					"top": 115,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"_Text_contactID_221": {
+					"type": "text",
+					"top": 29,
+					"left": 647,
+					"width": 98,
+					"height": 12,
+					"stroke": "#00BB00",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "contactID"
+				},
+				"_Text_Name_222": {
+					"type": "text",
+					"top": 48,
+					"left": 647,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Name"
+				},
+				"_Text_Phone_223": {
+					"type": "text",
+					"top": 67,
+					"left": 647,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Phone"
+				},
+				"_Text_eMail_224": {
+					"type": "text",
+					"top": 86,
+					"left": 647,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "eMail"
+				},
+				"_Text_Address_225": {
+					"type": "text",
+					"top": 106,
+					"left": 647,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Address"
+				},
+				"_Text_VendorID_226": {
+					"type": "text",
+					"top": 384,
+					"left": 173,
+					"width": 98,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "VendorID"
+				},
+				"_VAR_b24_227": {
+					"type": "button",
+					"top": 28,
+					"left": 630,
+					"width": 115,
+					"height": 16,
+					"dataSource": "b24",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b22_228": {
+					"type": "button",
+					"top": 380,
+					"left": 152,
+					"width": 124,
+					"height": 17,
+					"dataSource": "b22",
+					"text": "Set Vendor",
+					"display": false,
+					"method": "ObjectMethods/Variable5.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"_VAR_b23_229": {
+					"type": "button",
+					"top": 19,
+					"left": 164,
+					"width": 114,
+					"height": 16,
+					"dataSource": "b23",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_ServiceID_230": {
+					"type": "text",
+					"top": 422,
+					"left": 530,
+					"width": 77,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "ServiceID"
+				},
+				"_Text_CreatedBy_231": {
+					"type": "text",
+					"top": 443,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "CreatedBy"
+				},
+				"_Text_ActionName_232": {
+					"type": "text",
+					"top": 462,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ActionName"
+				},
+				"_Text_Action_233": {
+					"type": "text",
+					"top": 481,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Action"
+				},
+				"_Text_NoteType_234": {
+					"type": "text",
+					"top": 500,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "NoteType"
+				},
+				"_Text_Reference_235": {
+					"type": "text",
+					"top": 519,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Reference"
+				},
+				"_Text_Process_236": {
+					"type": "text",
+					"top": 538,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Process"
+				},
+				"_Text_Attribute_237": {
+					"type": "text",
+					"top": 557,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Attribute"
+				},
+				"_Text_Cause_238": {
+					"type": "text",
+					"top": 576,
+					"left": 515,
+					"width": 92,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Cause"
+				},
+				"_VAR_b25_239": {
+					"type": "button",
+					"top": 421,
+					"left": 507,
+					"width": 102,
+					"height": 17,
+					"dataSource": "b25",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable7.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_ItemSerial_ObGeneral_240": {
+					"type": "input",
+					"top": 111,
+					"left": 8,
+					"width": 992,
+					"height": 569,
+					"dataSource": "entry_o.ObGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ObGeneral:62"
+				},
+				"_Text_ObGeneral_241": {
+					"type": "text",
+					"top": 90,
+					"left": 11,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				},
+				"_PROP_ItemSerial_customerid_242": {
+					"type": "input",
+					"top": 18,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.customerid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field103.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]customerid:9"
+				},
+				"_PROP_ItemSerial_CustomerName_243": {
+					"type": "input",
+					"top": 37,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.CustomerName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field104.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]CustomerName:43"
+				},
+				"_PROP_ItemSerial_SalesPerson_244": {
+					"type": "input",
+					"top": 56,
+					"left": 283,
+					"width": 217,
+					"height": 17,
+					"dataSource": "entry_o.SalesPerson",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field105.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]SalesPerson:53"
+				},
+				"_Text_customerID_245": {
+					"type": "text",
+					"top": 20,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "customerID"
+				},
+				"_PROP_ItemSerial_contactid_246": {
+					"type": "input",
+					"top": 27,
+					"left": 752,
+					"width": 218,
+					"height": 17,
+					"dataSource": "entry_o.contactid",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field106.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]contactid:30"
+				},
+				"_PROP_ItemSerial_ContactName_247": {
+					"type": "input",
+					"top": 46,
+					"left": 752,
+					"width": 218,
+					"height": 17,
+					"dataSource": "entry_o.ContactName",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field107.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemSerial:47]ContactName:45"
+				},
+				"_Text_Customer_248": {
+					"type": "text",
+					"top": 39,
+					"left": 178,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Customer"
+				},
+				"_Text_contactID_249": {
+					"type": "text",
+					"top": 29,
+					"left": 647,
+					"width": 98,
+					"height": 12,
+					"stroke": "#00BB00",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "contactID"
+				},
+				"_Text_Name_250": {
+					"type": "text",
+					"top": 48,
+					"left": 647,
+					"width": 98,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Name"
+				},
+				"_VAR_b24_251": {
+					"type": "button",
+					"top": 28,
+					"left": 630,
+					"width": 115,
+					"height": 16,
+					"dataSource": "b24",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b23_252": {
+					"type": "button",
+					"top": 19,
+					"left": 164,
+					"width": 114,
+					"height": 16,
+					"dataSource": "b23",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

@@ -363,63 +363,6 @@ C_LONGINT:C283(CC_ZonSetPort; $1)
 //CLONE_ITEM
 C_REAL:C285(Clone_Item; $1)
 
-//CM_ALLLINECALC
-C_REAL:C285(CM_AllLineCalc; $0)
-C_LONGINT:C283(CM_AllLineCalc; $1)
-C_POINTER:C301(CM_AllLineCalc; $2)
-C_POINTER:C301(CM_AllLineCalc; $3)
-C_POINTER:C301(CM_AllLineCalc; $4)
-C_POINTER:C301(CM_AllLineCalc; $5)
-C_POINTER:C301(CM_AllLineCalc; $6)
-C_POINTER:C301(CM_AllLineCalc; $7)
-C_POINTER:C301(CM_AllLineCalc; $8)
-C_POINTER:C301(CM_AllLineCalc; $9)
-
-//CM_CHANGERATEBYNAMEID
-C_POINTER:C301(CM_ChangeRateByNameID; $1)
-C_POINTER:C301(CM_ChangeRateByNameID; $2)
-C_POINTER:C301(CM_ChangeRateByNameID; $3)
-C_POINTER:C301(CM_ChangeRateByNameID; $4)
-C_POINTER:C301(CM_ChangeRateByNameID; $5)
-C_LONGINT:C283(CM_ChangeRateByNameID; $6)
-C_POINTER:C301(CM_ChangeRateByNameID; $7)
-C_POINTER:C301(CM_ChangeRateByNameID; $8)
-C_POINTER:C301(CM_ChangeRateByNameID; $9)
-C_POINTER:C301(CM_ChangeRateByNameID; $10)
-C_POINTER:C301(CM_ChangeRateByNameID; $11)
-C_POINTER:C301(CM_ChangeRateByNameID; $12)
-C_POINTER:C301(CM_ChangeRateByNameID; $13)
-
-//CM_CHANGEWHO
-C_POINTER:C301(CM_ChangeWho; $1)
-C_POINTER:C301(CM_ChangeWho; $2)
-C_POINTER:C301(CM_ChangeWho; $3)
-C_POINTER:C301(CM_ChangeWho; $4)
-C_POINTER:C301(CM_ChangeWho; $5)
-C_LONGINT:C283(CM_ChangeWho; $6)
-C_POINTER:C301(CM_ChangeWho; $7)
-C_POINTER:C301(CM_ChangeWho; $8)
-C_POINTER:C301(CM_ChangeWho; $9)
-C_POINTER:C301(CM_ChangeWho; $10)
-C_POINTER:C301(CM_ChangeWho; $11)
-C_POINTER:C301(CM_ChangeWho; $12)
-C_POINTER:C301(CM_ChangeWho; $13)
-
-//CM_FINDRATE
-C_REAL:C285(CM_FindRate; $0)
-C_POINTER:C301(CM_FindRate; $1)
-C_POINTER:C301(CM_FindRate; $2)
-C_POINTER:C301(CM_FindRate; $3)
-
-//CM_LINECALC
-C_LONGINT:C283(CM_LineCalc; $1)
-C_LONGINT:C283(CM_LineCalc; $2)
-C_POINTER:C301(CM_LineCalc; $3)
-C_POINTER:C301(CM_LineCalc; $4)
-C_POINTER:C301(CM_LineCalc; $5)
-C_POINTER:C301(CM_LineCalc; $6)
-C_POINTER:C301(CM_LineCalc; $7)
-
 
 //COMMORDINITVAR
 C_LONGINT:C283(CommOrdInitVar; $1)
@@ -718,23 +661,6 @@ C_LONGINT:C283(Dup_CustDetail; $1)
 C_LONGINT:C283(Dup_CustDetail; $2)
 C_LONGINT:C283(Dup_CustDetail; $3)
 
-//DUP_LEADDETAILS
-C_LONGINT:C283(Dup_LeadDetails; $1)
-C_LONGINT:C283(Dup_LeadDetails; $2)
-C_LONGINT:C283(Dup_LeadDetails; $3)
-
-//EDI_ORDLNADDCOMPLETE
-C_TEXT:C284(EDI_OrdLnAddComplete; $1)
-C_REAL:C285(EDI_OrdLnAddComplete; $2)
-
-//EDI_ORDLNDUPCHECK
-C_BOOLEAN:C305(EDI_OrdLnDupCheck; $0)
-C_TEXT:C284(EDI_OrdLnDupCheck; $1)
-C_TEXT:C284(EDI_OrdLnDupCheck; $2)
-
-//EDI_OUTMAKEFILE
-C_LONGINT:C283(EDI_OutMakeFile; $1)
-C_TEXT:C284(EDI_OutMakeFile; $2)
 
 //EI_CREATEDOC
 C_LONGINT:C283(EI_CreateDoc; $0)
@@ -1088,214 +1014,36 @@ C_LONGINT:C283(HtPageRay; $1)
 C_LONGINT:C283(HtPageRay; $2)
 C_LONGINT:C283(HtPageRay; $3)
 
-//HTTP_4DPICT
-C_LONGINT:C283(http_4DPict; $1)
-C_POINTER:C301(http_4DPict; $2)
 
-
-
-//HTTP_CALENDAR
-C_LONGINT:C283(Http_Calendar; $1)
-C_POINTER:C301(Http_Calendar; $2)
-
-//HTTP_CALENDARBU
-C_TEXT:C284(http_CalendarBu; $0)
-C_DATE:C307(http_CalendarBu; $1)
-
-//HTTP_CHECKACTIVE
-C_TEXT:C284(Http_CheckActive; $1)
-C_TEXT:C284(Http_CheckActive; $2)
-
-//HTTP_CHECKOUT
-C_LONGINT:C283(http_CheckOut; $1)
-C_POINTER:C301(http_CheckOut; $2)
-
-//HTTP_CHECKPP
-C_LONGINT:C283(Http_CheckPp; $1)
-C_POINTER:C301(Http_CheckPp; $2)
-
-//HTTP_CHECKPROPOSAL
-C_LONGINT:C283(http_CheckProposal; $1)
-C_POINTER:C301(http_CheckProposal; $2)
-
-//HTTP_CLONEORD
-C_LONGINT:C283(Http_CloneOrd; $1)
-C_POINTER:C301(Http_CloneOrd; $2)
-
-
-//HTTP_CUSTOM
-C_LONGINT:C283(http_Custom; $1)
-C_POINTER:C301(http_Custom; $2)
-C_REAL:C285(http_Custom; $3)
-
-//HTTP_DEALLOCATE
-C_LONGINT:C283(Http_DealLocate; $1)
-C_POINTER:C301(Http_DealLocate; $2)
-
-//HTTP_DOSORT
-C_LONGINT:C283(Http_DoSort; $0)
-C_TEXT:C284(Http_DoSort; $1)
-
-//HTTP_EMAILFORM
-C_LONGINT:C283(Http_eMailForm; $1)
-C_POINTER:C301(Http_eMailForm; $2)
-
-//HTTP_EMPLOYEES
-C_LONGINT:C283(Http_Employees; $1)
-C_POINTER:C301(Http_Employees; $2)
-
-
-//HTTP_FILLARRAY
+//Http_FillArray
 C_TEXT:C284(Http_FillArray; $0)
 C_POINTER:C301(Http_FillArray; $1)
 C_LONGINT:C283(Http_FillArray; $2)
-
-//HTTP_FORUMNEW
-C_LONGINT:C283(Http_ForumNew; $1)
-C_POINTER:C301(Http_ForumNew; $2)
-
-//HTTP_FORUMREPLY
-C_LONGINT:C283(Http_ForumReply; $1)
-C_POINTER:C301(Http_ForumReply; $2)
-
-//HTTP_GETCC
-C_LONGINT:C283(Http_GetCC; $1)
-C_POINTER:C301(Http_GetCC; $2)
 
 //WCapi_GetParameter
 C_TEXT:C284(WCapi_GetParameter; $0)
 C_TEXT:C284(WCapi_GetParameter; $1)
 
 
-//HTTP_SERVERINVOICES
-C_LONGINT:C283(Http_ServerInvoices; $1)
-C_POINTER:C301(Http_ServerInvoices; $2)
 
-//HTTP_ITEMADDS
+//Http_ItemAdds
 C_TEXT:C284(Http_ItemAdds; $1)
 C_TEXT:C284(Http_ItemAdds; $2)
 C_REAL:C285(Http_ItemAdds; $3)
 C_LONGINT:C283(Http_ItemAdds; $4)
 
-//HTTP_ITEMBUILDADDS
+//Http_ItemBuildAdds
 C_TEXT:C284(Http_ItemBuildAdds; $1)
 C_TEXT:C284(Http_ItemBuildAdds; $2)
 C_REAL:C285(Http_ItemBuildAdds; $3)
 C_LONGINT:C283(Http_ItemBuildAdds; $4)
 
-//HTTP_ITEMCREATENC
-C_LONGINT:C283(http_ItemCreateNC; $1)
-C_POINTER:C301(http_ItemCreateNC; $2)
 
-//HTTP_ITEMEXTENDS
-C_TEXT:C284(Http_ItemExtends; $1)
-C_LONGINT:C283(Http_ItemExtends; $2)
-
-//HTTP_ITEMLIBRARY
-C_REAL:C285(Http_ItemLibrary; $1)
-C_POINTER:C301(Http_ItemLibrary; $2)
-
-//HTTP_ITEMPARSEADDS
+//Http_ItemParseAdds
 C_TEXT:C284(Http_ItemParseAdds; $0)
 C_TEXT:C284(Http_ItemParseAdds; $1)
 
-//HTTP_ITEMRELATED
-C_LONGINT:C283(Http_ItemRelated; $1)
-C_TEXT:C284(Http_ItemRelated; $2)
 
-//HTTP_ITEMRESERVATIONEACH
-C_LONGINT:C283(Http_ItemReservationEach; $1)
-
-//HTTP_ITEMSNAR
-C_LONGINT:C283(Http_ItemsNar; $1)
-C_POINTER:C301(Http_ItemsNar; $2)
-C_TEXT:C284(Http_ItemsNar; $3)
-
-//HTTP_ITEMSPECIALS
-C_LONGINT:C283(Http_ItemSpecials; $1)
-C_POINTER:C301(Http_ItemSpecials; $2)
-
-//HTTP_LISTMORE
-C_TEXT:C284(Http_ListMore; ${-1})
-C_TEXT:C284(Http_ListMore; $1)
-C_TEXT:C284(Http_ListMore; $2)
-C_TEXT:C284(Http_ListMore; $3)
-C_TEXT:C284(Http_ListMore; $4)
-C_TEXT:C284(Http_ListMore; $5)
-C_POINTER:C301(Http_ListMore; $6)
-C_POINTER:C301(Http_ListMore; $7)
-C_POINTER:C301(Http_ListMore; $8)
-
-//HTTP_MAKEPASS
-C_BOOLEAN:C305(Http_MakePass; $1)
-
-//HTTP_METAPARSE
-C_POINTER:C301(Http_MetaParse; $1)
-
-//HTTP_MINOF2VALUES
-C_LONGINT:C283(Http_MinOf2Values; $0)
-C_TEXT:C284(Http_MinOf2Values; $1)
-C_TEXT:C284(Http_MinOf2Values; $2)
-C_TEXT:C284(Http_MinOf2Values; $3)
-C_TEXT:C284(Http_MinOf2Values; $4)
-
-//HTTP_MODCALL
-C_LONGINT:C283(Http_ModCall; $1)
-C_POINTER:C301(Http_ModCall; $2)
-
-//HTTP_MODCONTACT
-C_LONGINT:C283(Http_ModContact; $1)
-C_POINTER:C301(Http_ModContact; $2)
-
-//HTTP_MODCUSTOMER
-C_LONGINT:C283(Http_ModCustomer; $1)
-C_POINTER:C301(Http_ModCustomer; $2)
-
-//HTTP_MODLEAD
-C_LONGINT:C283(Http_ModLead; $1)
-C_POINTER:C301(Http_ModLead; $2)
-C_LONGINT:C283(Http_ModLead; $3)
-
-//HTTP_MODSERV
-C_LONGINT:C283(Http_ModServ; $1)
-C_POINTER:C301(Http_ModServ; $2)
-
-//HTTP_MODWO
-C_LONGINT:C283(http_ModWO; $1)
-C_POINTER:C301(http_ModWO; $2)
-
-//HTTP_MULTIDOMAIN
-C_TEXT:C284(Http_MultiDomain; $0)
-
-//HTTP_NC_GETARTICLE
-C_TEXT:C284(http_NC_GetArticle; $1)
-C_POINTER:C301(http_NC_GetArticle; $2)
-
-//HTTP_SAVERECORD
-C_LONGINT:C283(Http_SaveRecord; $1)
-C_POINTER:C301(Http_SaveRecord; $2)
-C_BOOLEAN:C305(Http_SaveRecord; $3)
-
-//HTTP_ORDCLEARCART
-C_LONGINT:C283(http_OrdClearCart; $1)
-C_POINTER:C301(http_OrdClearCart; $2)
-
-//HTTP_ORDERCONFIRM
-C_LONGINT:C283(Http_OrderConfirm; $1)
-C_TEXT:C284(Http_OrderConfirm; $2)
-
-//HTTP_ORDFILL
-C_LONGINT:C283(Http_OrdFill; $1)
-C_POINTER:C301(Http_OrdFill; $2)
-C_BOOLEAN:C305(Http_OrdFill; $3)
-
-//HTTP_ORDSEARCH
-C_LONGINT:C283(Http_OrdSearch; $1)
-C_POINTER:C301(Http_OrdSearch; $2)
-
-//HTTP_ORDSTATUS
-C_LONGINT:C283(Http_OrdStatus; $1)
-C_POINTER:C301(Http_OrdStatus; $2)
 
 //WC_PageSendWithTags
 C_REAL:C285(WC_PageSendWithTags; $0)
@@ -1319,226 +1067,31 @@ C_TEXT:C284(HTML_ParseBody; $4)
 C_REAL:C285(HTML_ParseJitVar; $0)
 C_TEXT:C284(HTML_ParseJitVar; $1)
 
-//333Http_PayAdd
-C_LONGINT:C283(333Http_PayAdd; $1)
-C_POINTER:C301(333Http_PayAdd; $2)
-C_BOOLEAN:C305(333Http_PayAdd; $3)
 
-//HTTP_PAYORDER
-C_LONGINT:C283(http_PayOrder; $1)
-C_POINTER:C301(http_PayOrder; $2)
 
-//HTTP_PAYREQUEST
-C_LONGINT:C283(http_PayRequest; $1)
-C_POINTER:C301(http_PayRequest; $2)
-C_LONGINT:C283(http_PayRequest; $3)
 
-//HTTP_PAYSSLRECS
-C_LONGINT:C283(http_PaySSLRecs; $1)
-C_POINTER:C301(http_PaySSLRecs; $2)
-C_LONGINT:C283(http_PaySSLRecs; $3)
-
-//HTTP_PAYSSLSETUP
-C_LONGINT:C283(Http_PaySSLSetup; $1)
-C_POINTER:C301(Http_PaySSLSetup; $2)
-C_LONGINT:C283(Http_PaySSLSetup; $3)
-
-//HTTP_PAYTRAP
-C_LONGINT:C283(Http_PayTrap; $1)
-C_POINTER:C301(Http_PayTrap; $2)
-
-//HTTP_POCONFIRM
-C_TEXT:C284(Http_POConfirm; $0)
-C_LONGINT:C283(Http_POConfirm; $1)
-
-//HTTP_PORECVD
-C_LONGINT:C283(Http_PORecvd; $1)
-
-//HTTP_POST2MOM
-C_TEXT:C284(Http_Post2Mom; $1)
-C_TEXT:C284(Http_Post2Mom; $2)
-C_LONGINT:C283(Http_Post2Mom; $3)
-C_LONGINT:C283(Http_Post2Mom; $4)
-
-//HTTP_POSTATUSGETRETURN
-C_LONGINT:C283(http_POStatusGetReturn; $1)
-C_POINTER:C301(http_POStatusGetReturn; $2)
-
-//B2BPOSTATUSGET
-C_TEXT:C284(B2BPOStatusGet; $1)
-
-//HTTP_POSTATUSRECEIVE
-C_LONGINT:C283(Http_POStatusReceive; $1)
-C_POINTER:C301(Http_POStatusReceive; $2)
-
-//HTTP_POSTAUTOPP
-C_TEXT:C284(Http_PostAutoPp; $1)
-C_TEXT:C284(Http_PostAutoPp; $2)
-
-//HTTP_POSTCC
-C_LONGINT:C283(Http_PostCC; $1)
-C_POINTER:C301(Http_PostCC; $2)
-C_REAL:C285(Http_PostCC; $3)
-
-//HTTP_POSTGEN
-C_LONGINT:C283(Http_PostGen; $1)
-C_POINTER:C301(Http_PostGen; $2)
-C_POINTER:C301(Http_PostGen; $3)
-C_TEXT:C284(Http_PostGen; $4)
-
-//HTTP_POSTLEAD
-C_LONGINT:C283(Http_PostLead; $1)
-C_POINTER:C301(Http_PostLead; $2)
-
-//HTTP_PP2ORDER
+//http_Pp2Order
 C_LONGINT:C283(http_Pp2Order; $1)
 C_POINTER:C301(http_Pp2Order; $2)
 C_LONGINT:C283(http_Pp2Order; $3)
 
-//HTTP_PPFILL
-C_LONGINT:C283(Http_PpFill; $1)
-C_POINTER:C301(Http_PpFill; $2)
-C_BOOLEAN:C305(Http_PpFill; $3)
-
-//HTTP_PPNEW
-C_LONGINT:C283(Http_PpNew; $1)
-C_POINTER:C301(Http_PpNew; $2)
-C_BOOLEAN:C305(Http_PpNew; $3)
-
-//HTTP_PPSEARCH
-C_LONGINT:C283(Http_PPSearch; $1)
-C_POINTER:C301(Http_PPSearch; $2)
 
 
 
-//HTTP_REGISTER
-C_LONGINT:C283(http_Register; $1)
-C_POINTER:C301(http_Register; $2)
-
-//HTTP_RESERVATIONSRCH
-C_LONGINT:C283(Http_ReservationSrch; $1)
-C_POINTER:C301(Http_ReservationSrch; $2)
-
-
-//HTTP_SAVECALL
-C_LONGINT:C283(http_SaveCall; $1)
-C_POINTER:C301(http_SaveCall; $2)
-
-//HTTP_SAVECONTAC
-C_LONGINT:C283(Http_SaveContac; $1)
-C_POINTER:C301(Http_SaveContac; $2)
-C_LONGINT:C283(Http_SaveContac; $3)
-
-//HTTP_SAVECUST
-C_LONGINT:C283(http_SaveCust; $1)
-C_POINTER:C301(http_SaveCust; $2)
-C_LONGINT:C283(http_SaveCust; $3)
-
-//HTTP_SAVELEAD
-C_LONGINT:C283(Http_SaveLead; $1)
-C_POINTER:C301(Http_SaveLead; $2)
-C_LONGINT:C283(Http_SaveLead; $3)
-
-//HTTP_SAVESERVIC
-C_LONGINT:C283(Http_SaveServic; $1)
-C_POINTER:C301(Http_SaveServic; $2)
-
-//HTTP_SAVEWO
-C_LONGINT:C283(http_SaveWO; $1)
-C_POINTER:C301(http_SaveWO; $2)
-
-
-//HTTP_SEARCHPO
-C_LONGINT:C283(Http_SearchPO; $1)
-C_POINTER:C301(Http_SearchPO; $2)
-
-
-//HTTP_SENDLOG
+//http_SendLog
 C_LONGINT:C283(http_SendLog; $1)
 C_TEXT:C284(http_SendLog; $2)
 
-//HTTP_SENDWWWHD
+//Http_SendWWWHd
 C_LONGINT:C283(Http_SendWWWHd; $1)
 C_TEXT:C284(Http_SendWWWHd; $2)
 C_LONGINT:C283(Http_SendWWWHd; $3)
 C_LONGINT:C283(Http_SendWWWHd; $4)
 
-//HTTP_SERVERADMIN
-C_LONGINT:C283(Http_ServerAdmin; $1)
-C_POINTER:C301(Http_ServerAdmin; $2)
-
-//HTTP_SERVERFLEX
-C_LONGINT:C283(Http_ServerFlex; $1)
-C_POINTER:C301(Http_ServerFlex; $2)
-
-//HTTP_SERVERFORU
-C_LONGINT:C283(Http_ServerForu; $1)
-C_POINTER:C301(Http_ServerForu; $2)
-
-//HTTP_SERVERITEMS
-C_LONGINT:C283(Http_ServerItems; $1)
-C_POINTER:C301(Http_ServerItems; $2)
-C_REAL:C285(Http_ServerItems; $3)
-
-//HTTP_SERVERORD
-C_LONGINT:C283(Http_serverOrd; $1)
-C_POINTER:C301(Http_serverOrd; $2)
-C_REAL:C285(Http_serverOrd; $3)
-
-//HTTP_SERVERPAY
-C_LONGINT:C283(Http_ServerPay; $1)
-C_POINTER:C301(Http_ServerPay; $2)
-C_LONGINT:C283(Http_ServerPay; $3)
-
-//HTTP_SERVERRESERVATION
-C_LONGINT:C283(Http_ServerReservation; $1)
-C_POINTER:C301(Http_ServerReservation; $2)
-
-//HTTP_SERVERSALE
-C_LONGINT:C283(Http_ServerSale; $1)
-C_POINTER:C301(Http_ServerSale; $2)
-
-//HTTP_SERVERSEARCH
-C_LONGINT:C283(Http_serverSearch; $1)
-C_POINTER:C301(Http_serverSearch; $2)
-
-//HTTP_SERVERSTATUS
-C_LONGINT:C283(Http_serverStatus; $1)
-C_POINTER:C301(Http_serverStatus; $2)
-
-//HTTP_SHOWUSER
-C_LONGINT:C283(Http_ShowUser; $1)
-C_POINTER:C301(Http_ShowUser; $2)
-
-//HTTP_SIGNINPO2ORD
-C_POINTER:C301(Http_SignInPO2Ord; $1)
-
-//HTTP_SIGNINSCRIPT
-C_TEXT:C284(Http_SignInScript; $1)
-
-//HTTP_SRCHFAQ
-C_LONGINT:C283(Http_SrchFAQ; $1)
-C_POINTER:C301(Http_SrchFAQ; $2)
-
-//HTTP_SRCHFORUM
-C_LONGINT:C283(Http_SrchForum; $1)
-C_POINTER:C301(Http_SrchForum; $2)
-
-//HTTP_SRCHLIBRARIES
-C_LONGINT:C283(Http_SrchLibraries; $1)
-C_POINTER:C301(Http_SrchLibraries; $2)
-
-//HTTP_SRCHTECH
-C_LONGINT:C283(http_srchTech; $1)
-C_POINTER:C301(http_srchTech; $2)
 
 //WC_StartUpShutDownFlip
 C_LONGINT:C283(WC_StartUpShutDownFlip; $1)
 
-
-
-//333Http_UserGet
-C_LONGINT:C283(333Http_UserGet; $1)
 
 
 //WC_PageLoad
@@ -1567,53 +1120,6 @@ C_TEXT:C284(IE_CSVQuote; $1)
 C_TEXT:C284(IE_GetPict; $1)
 C_POINTER:C301(IE_GetPict; $2)
 
-//IE_ORDAPPENDORDLINES
-C_LONGINT:C283(IE_OrdAppendOrdLines; $1)
-
-//IE_ORDFILLFIELDSBYPTRARRAY
-C_TEXT:C284(IE_OrdFillFieldsByPtrArray; $0)
-C_POINTER:C301(IE_OrdFillFieldsByPtrArray; $1)
-C_POINTER:C301(IE_OrdFillFieldsByPtrArray; $2)
-
-//IE_ORDFILLORDLINEARRAYSBYPTRARR
-C_POINTER:C301(IE_OrdFillOrdLineArraysByPtrArr; $1)
-C_POINTER:C301(IE_OrdFillOrdLineArraysByPtrArr; $2)
-C_LONGINT:C283(IE_OrdFillOrdLineArraysByPtrArr; $3)
-
-//IE_ORDFINDFIELDPTRINARRAY
-C_POINTER:C301(IE_OrdFindFieldPtrInArray; $0)
-C_POINTER:C301(IE_OrdFindFieldPtrInArray; $1)
-C_POINTER:C301(IE_OrdFindFieldPtrInArray; $2)
-C_POINTER:C301(IE_OrdFindFieldPtrInArray; $3)
-
-//IE_ORDPARSECUSTOMERIMPORT
-C_LONGINT:C283(IE_OrdParseCustomerImport; $1)
-
-//IE_ORDPARSEORDERIMPORT
-C_LONGINT:C283(IE_OrdParseOrderImport; $1)
-
-//IE_ORDPARSEORDERLINEIMPORT
-C_LONGINT:C283(IE_OrdParseOrderLineImport; $1)
-
-//IE_ORDVERIFYIMPORTFIELDS
-C_BOOLEAN:C305(IE_OrdVerifyImportFields; $0)
-C_TEXT:C284(IE_OrdVerifyImportFields; $1)
-C_LONGINT:C283(IE_OrdVerifyImportFields; $2)
-C_POINTER:C301(IE_OrdVerifyImportFields; $3)
-C_POINTER:C301(IE_OrdVerifyImportFields; $4)
-C_POINTER:C301(IE_OrdVerifyImportFields; $5)
-
-//IE_ORDVERIFYMANDATORYFIELDS
-C_BOOLEAN:C305(IE_OrdVerifyMandatoryFields; $0)
-C_POINTER:C301(IE_OrdVerifyMandatoryFields; $1)
-C_POINTER:C301(IE_OrdVerifyMandatoryFields; $2)
-
-
-//IMPORT_FILEMKRE
-C_TEXT:C284(import_FileMkRe; $1)
-C_TEXT:C284(import_FileMkRe; $2)
-C_TEXT:C284(import_FileMkRe; $3)
-C_POINTER:C301(import_FileMkRe; $4)
 
 //INFOREP
 C_TEXT:C284(InfoRep; $1)
@@ -1705,8 +1211,6 @@ C_TEXT:C284(Invt_dRecCreate; $13)
 C_TEXT:C284(Invt_dRecCreate; $14)
 C_REAL:C285(Invt_dRecCreate; $15)
 
-//INV_POSTFROMWO
-C_LONGINT:C283(Inv_PostFromWO; $1)
 
 //ITEMCRITICALRAY
 C_LONGINT:C283(ItemCriticalRay; $1)
@@ -1921,10 +1425,10 @@ C_TEXT:C284(jCountry; $0)
 C_TEXT:C284(jCountry; $1)
 C_TEXT:C284(jCountry; $2)
 
-//DateTime_Enter
-C_LONGINT:C283(DateTime_Enter; $0)
-C_DATE:C307(DateTime_Enter; $1)
-C_TIME:C306(DateTime_Enter; $2)
+//DateTime_DTTo
+C_LONGINT:C283(DateTime_DTTo; $0)
+C_DATE:C307(DateTime_DTTo; $1)
+C_TIME:C306(DateTime_DTTo; $2)
 
 //JDATETIMERBOTH
 C_TEXT:C284(jDateTimeRBoth; $0)
@@ -1935,10 +1439,10 @@ C_DATE:C307(jDateTimeRBoth; $2)
 C_DATE:C307(jDateTimeRDate; $0)
 C_LONGINT:C283(jDateTimeRDate; $1)
 
-//JDATETIMERECOV
-C_LONGINT:C283(jDateTimeRecov; $1)
-C_POINTER:C301(jDateTimeRecov; $2)
-C_POINTER:C301(jDateTimeRecov; $3)
+//DateTime_DTFrom
+C_LONGINT:C283(DateTime_DTFrom; $1)
+C_POINTER:C301(DateTime_DTFrom; $2)
+C_POINTER:C301(DateTime_DTFrom; $3)
 
 //JDATETIMERTIME
 C_TIME:C306(jDateTimeRTime; $0)
@@ -2194,8 +1698,7 @@ C_POINTER:C301(JSr_MatchRelate; $3)
 //StructureFields
 C_LONGINT:C283(StructureFields; $1)
 
-//JTEMPFILECLEAR
-C_LONGINT:C283(jTempFileClear; $1)
+
 
 //JUNIQUEACCTCODE
 C_POINTER:C301(jUniqueAcctCode; $1)
@@ -2593,8 +2096,6 @@ C_POINTER:C301(Move_RecPvNx; $2)
 //MOVE_SETPVNXBUT
 C_POINTER:C301(Move_SetPvNxBut; $1)
 
-//StructureWrite
-C_TEXT:C284(StructureWrite; $1)
 
 //MY_ARFROMMAC
 C_TEXT:C284(My_ARfromMAC; $1)
@@ -2610,12 +2111,6 @@ C_TEXT:C284(PVar_EmployeeSignedBy; $0)
 C_TEXT:C284(PVar_EmployeeSignedBy; $1)
 
 
-//NC_GETARTICLE2
-C_TEXT:C284(NC_GetArticle2; $1)
-C_POINTER:C301(NC_GetArticle2; $2)
-
-//NC_PARSEHAGEN
-C_TEXT:C284(NC_ParseHagen; $1)
 
 //NXPVINVACCESS
 C_BOOLEAN:C305(NxPvInvAccess; $0)
@@ -3324,36 +2819,6 @@ C_POINTER:C301(QtyOrd_SerialCh; $2)
 //QUICKENLINK
 C_LONGINT:C283(QuickenLink; $1)
 
-//QX_BUILDLISTQTY
-C_LONGINT:C283(Qx_BuildListQty; $1)
-
-//QX_FINDACTIVETEXT
-C_TEXT:C284(QX_FindActiveText; $0)
-C_TEXT:C284(QX_FindActiveText; $1)
-C_TEXT:C284(QX_FindActiveText; $2)
-C_TEXT:C284(QX_FindActiveText; $3)
-
-//QX_PACK
-C_TEXT:C284(Qx_Pack; $1)
-
-//QX_PLACE
-C_TEXT:C284(Qx_Place; $1)
-
-//QX_PLACEBOTTOMRIDERS
-C_TEXT:C284(Qx_PlaceBottomRiders; $1)
-
-//QX_PLACEPACKEDTIGHT
-C_TEXT:C284(Qx_PlacePackedTight; $1)
-
-//QX_PLACETOPRIDER
-C_TEXT:C284(Qx_PlaceTopRider; $1)
-
-//QX_PLACETOPRIDERS
-C_TEXT:C284(QX_PlaceTopRiders; $1)
-
-//QX_SETGROUPS
-C_TEXT:C284(Qx_SetGroups; $0)
-C_TEXT:C284(Qx_SetGroups; $1)
 
 //RAY_CHECKRAYS
 C_POINTER:C301(Ray_CheckRays; ${-1})
@@ -4323,23 +3788,7 @@ C_DATE:C307(TallyVendSaleMo; $1)
 C_DATE:C307(TallyYearlyUsageSum; $1)
 C_DATE:C307(TallyYearlyUsageSum; $2)
 
-//TALLY_ADDREC
-C_TEXT:C284(Tally_AddRec; $1)
-C_TEXT:C284(Tally_AddRec; $2)
-C_REAL:C285(Tally_AddRec; $3)
-C_REAL:C285(Tally_AddRec; $4)
-C_TEXT:C284(Tally_AddRec; $5)
-C_TEXT:C284(Tally_AddRec; $6)
-C_REAL:C285(Tally_AddRec; $7)
-C_REAL:C285(Tally_AddRec; $8)
-C_REAL:C285(Tally_AddRec; $9)
-C_REAL:C285(Tally_AddRec; $10)
-C_REAL:C285(Tally_AddRec; $11)
-C_REAL:C285(Tally_AddRec; $12)
-C_REAL:C285(Tally_AddRec; $13)
-C_TEXT:C284(Tally_AddRec; $14)
-C_TEXT:C284(Tally_AddRec; $15)
-C_TEXT:C284(Tally_AddRec; $16)
+
 
 //TALLY_DINVENT
 C_LONGINT:C283(Tally_dInvent; $0)
@@ -5056,13 +4505,10 @@ C_LONGINT:C283(SQLServerCreate_WriteField; $3)
 //SQLSERVERCREATE_WRITETABLE
 C_LONGINT:C283(SQLServerCreate_WriteTable; $1)
 
-//HTTP_PASSWORDFORGET
+//HTTP_passwordForget
 C_LONGINT:C283(HTTP_passwordForget; $1)
 C_POINTER:C301(HTTP_passwordForget; $2)
 
-//HTTP_OPTOUT
-C_LONGINT:C283(Http_OptOut; $1)
-C_POINTER:C301(Http_OptOut; $2)
 
 //EMAIL_GOVERNOR
 C_TEXT:C284(Email_Governor; $1)
@@ -5119,10 +4565,6 @@ C_TEXT:C284(HTML_jitTagMake; $2)
 C_TEXT:C284(HTML_jitTagMake; $3)
 C_TEXT:C284(HTML_jitTagMake; $4)
 
-//HTTP_RETURNOS
-C_TEXT:C284(Http_ReturnOS; $0)
-C_TEXT:C284(Http_ReturnOS; $1)
-C_POINTER:C301(Http_ReturnOS; $2)
 
 //HTML_TAGCLIP
 C_LONGINT:C283(HTML_TagClip; $0)
@@ -5151,10 +4593,6 @@ C_LONGINT:C283(Txt_RandomString; $1)
 C_TEXT:C284(Txt_RandomString; $2)
 C_TEXT:C284(Txt_RandomString; $3)
 
-//WCCSERVER
-C_LONGINT:C283(WccSERVER; $1)
-C_POINTER:C301(WccSERVER; $2)
-C_LONGINT:C283(WccSERVER; $3)
 
 //TXT_CHUNK
 C_LONGINT:C283(Txt_Chunk; $0)
@@ -5237,17 +4675,6 @@ C_TEXT:C284(txt_MaxLength; $0)
 C_TEXT:C284(txt_MaxLength; $1)
 C_LONGINT:C283(txt_MaxLength; $2)
 
-//HTTP_MFGORDSPLIT
-C_LONGINT:C283(Http_MfgOrdSplit; $1)
-C_POINTER:C301(Http_MfgOrdSplit; $2)
-
-//HTTP_MFGPONEED
-C_LONGINT:C283(Http_MfgPONeed; $1)
-C_POINTER:C301(Http_MfgPONeed; $2)
-
-//HTTP_SIGNINAS
-C_LONGINT:C283(Http_SignInAs; $1)
-C_POINTER:C301(Http_SignInAs; $2)
 
 //WCCAUTHACCESSBYACCT
 C_POINTER:C301(WccAuthAccessByAcct; $1)
@@ -5289,9 +4716,7 @@ C_TEXT:C284(STR_GetTableNumber; $1)
 //HTML_IMAGESBYXWIDE
 C_LONGINT:C283(Html_ImagesByXWide; $1)
 
-//B2B_SERVER
-C_LONGINT:C283(B2B_Server; $1)
-C_POINTER:C301(B2B_Server; $2)
+
 
 //WCCPARSEPARAMETERS
 C_LONGINT:C283(WccParseParameters; $0)
@@ -5322,10 +4747,6 @@ C_LONGINT:C283(WccExecuteTask; $2)
 C_LONGINT:C283(TN_DocumentRecs; $1)
 
 
-//HTTP_DEBUGCALL
-C_TEXT:C284(Http_DeBugCall; $1)
-C_LONGINT:C283(Http_DeBugCall; $2)
-C_LONGINT:C283(Http_DeBugCall; $3)
 
 //CWSCOMMUNITYSERVER
 C_LONGINT:C283(CWSCommunityServer; $1)
@@ -5342,23 +4763,12 @@ C_TEXT:C284(KWDistinct; $1)
 C_TEXT:C284(KWDistinct; $2)
 C_POINTER:C301(KWDistinct; $3)
 
-//TextToArray
-C_TEXT:C284(TextToArray; $1)
-C_POINTER:C301(TextToArray; $2)
-C_TEXT:C284(TextToArray; $3)
-C_BOOLEAN:C305(TextToArray; $4)
-
 
 
 //KEY_SEARCH
 C_TEXT:C284(Key_Search; $1)
 C_POINTER:C301(Key_Search; $2)
 C_TEXT:C284(Key_Search; $3)
-
-//HTTP_POSTORD2_HOLD
-C_LONGINT:C283(Http_PostOrd2_Hold; $1)
-C_POINTER:C301(Http_PostOrd2_Hold; $2)
-C_LONGINT:C283(Http_PostOrd2_Hold; $3)
 
 
 //COMMISSIONRECALCORDERS
@@ -5411,32 +4821,14 @@ C_LONGINT:C283(MxFillArray; $1)
 C_LONGINT:C283(MxFillArray; $2)
 C_LONGINT:C283(MxFillArray; $3)
 
-//HTTP_ORDLINECOMBINE
-C_LONGINT:C283(Http_OrdLineCombine; $1)
-C_POINTER:C301(Http_OrdLineCombine; $2)
-C_LONGINT:C283(Http_OrdLineCombine; $3)
-
-
-
-//HTTP_BROWERREQUESTHEAD
-C_TEXT:C284(Http_BrowerRequestHead; $0)
-C_TEXT:C284(Http_BrowerRequestHead; $1)
-C_TEXT:C284(Http_BrowerRequestHead; $2)
-C_LONGINT:C283(Http_BrowerRequestHead; $3)
 
 //UTIL_CONVERTLONGDATE
 C_DATE:C307(Util_ConvertLongDate; $0)
 C_TEXT:C284(Util_ConvertLongDate; $1)
 
-//HTTP_SERVERSERVICE
-C_LONGINT:C283(Http_ServerService; $1)
-C_POINTER:C301(Http_ServerService; $2)
 
 //VENDORFROMCUSTOMER
 C_OBJECT:C1216(VendorFromCustomer; $1)
-
-//HTTP_POPLACE
-C_TEXT:C284(http_POPlace; $1)
 
 
 //TXT2XMLPAIRS
@@ -5465,9 +4857,6 @@ C_TEXT:C284(Key_Combine; $0)
 C_TEXT:C284(Key_Combine; $1)
 C_TEXT:C284(Key_Combine; $2)
 
-//HTTPKEYPAIRS
-C_TEXT:C284(HttpKeyPairs; $0)
-C_POINTER:C301(HttpKeyPairs; $1)
 
 //KEYWORDCOMBINE
 C_TEXT:C284(KeywordCombine; $0)
@@ -5487,18 +4876,12 @@ C_LONGINT:C283(txtDateFrom; $2)
 C_LONGINT:C283(txtDateFrom; $3)
 C_POINTER:C301(txtDateFrom; $4)
 
-//HTTP_SRCHGENERAL
-C_LONGINT:C283(Http_SrchGeneral; $1)
-C_POINTER:C301(Http_SrchGeneral; $2)
 
 //HTMLMENUMAKER
 C_LONGINT:C283(HtmlMenuMaker; $0)
 C_REAL:C285(HtmlMenuMaker; $1)
 C_REAL:C285(HtmlMenuMaker; $2)
 
-//HTTP_MFGSPLITLIST
-C_LONGINT:C283(Http_MfgSplitList; $1)
-C_POINTER:C301(Http_MfgSplitList; $2)
 
 //UTILFILEPREFIX
 C_TEXT:C284(UtilFilePrefix; $1)
@@ -5634,9 +5017,6 @@ C_BOOLEAN:C305(RelateOnWeb; $3)
 C_TEXT:C284(LWCBrowserDisplay; $1)
 C_TEXT:C284(LWCBrowserDisplay; $2)
 
-//HTTP_ITEMKEYWORD
-C_LONGINT:C283(HTTP_ItemKeyword; $1)
-C_POINTER:C301(HTTP_ItemKeyword; $2)
 
 //UTILRETURNMINVALUE
 C_LONGINT:C283(UtilReturnMinValue; $0)
@@ -5659,9 +5039,6 @@ C_REAL:C285(KwItems2Bubbles; $2)
 //KWBUBBLES2ITEMS
 C_TEXT:C284(KwBubbles2Items; $1)
 
-//UTILPARSEALLOW
-C_LONGINT:C283(UtilParseAllow; $1)
-C_LONGINT:C283(UtilParseAllow; $2)
 
 //OrdLnReCalc
 C_LONGINT:C283(OrdLnReCalc; $1)
@@ -5682,17 +5059,12 @@ C_TEXT:C284(SoapProcess; $3)
 C_TEXT:C284(SoapTallyMaster; $1)
 C_TEXT:C284(SoapTallyMaster; $2)
 
-//HTTP_ITEMCOPY
-C_REAL:C285(http_ItemCopy; $0)
-C_LONGINT:C283(http_ItemCopy; $1)
-C_POINTER:C301(http_ItemCopy; $2)
-
 //WINDOWOPENTASKOFFSETS
 C_LONGINT:C283(WindowOpenTaskOffSets; $1)
 C_LONGINT:C283(WindowOpenTaskOffSets; $2)
 C_LONGINT:C283(WindowOpenTaskOffSets; $3)
 
-//MENURESET
+//MenuReset
 C_LONGINT:C283(MenuReset; $1)
 
 //UTILFILLMARKERLINE
@@ -5837,9 +5209,7 @@ C_TEXT:C284(WccQueryValue; $3)
 C_TEXT:C284(WccQueryValue; $4)
 C_POINTER:C301(WccQueryValue; $5)
 
-//HTTP_SEARCHBYSOURCE
-C_LONGINT:C283(Http_SearchBySource; $1)
-C_POINTER:C301(Http_SearchBySource; $2)
+
 
 //TALLYSUMMARYBYPERIOD
 C_DATE:C307(TallySummaryByPeriod; $1)
@@ -5899,9 +5269,6 @@ C_BOOLEAN:C305(WC_ParseMinRequired; $0)
 C_POINTER:C301(WC_ParseMinRequired; $1)
 C_POINTER:C301(WC_ParseMinRequired; $2)
 
-//HTTPPARSEPOSTSAVE
-C_POINTER:C301(HttpParsePostSave; $1)
-C_BOOLEAN:C305(HttpParsePostSave; $2)
 
 //WC_FieldTagToValue
 C_TEXT:C284(WC_FieldTagToValue; $0)
@@ -5938,9 +5305,7 @@ C_TEXT:C284(XRefItem_Fill; $2)
 //XREFLOADBYCLASS
 C_TEXT:C284(XRefLoadByClass; $1)
 
-//MENUCALL
-C_LONGINT:C283(MenuCall; $1)
-C_POINTER:C301(MenuCall; $2)
+
 
 //PKALINVOICE
 C_LONGINT:C283(PKALInvoice; $1)
@@ -6174,55 +5539,23 @@ C_TEXT:C284(BugAlert; $1)
 C_TEXT:C284(BugAlert; $2)
 
 
-//PRINTCOMMENTGENERIC
-C_TEXT:C284(PrintCommentGeneric; $1)
-C_TEXT:C284(PrintCommentGeneric; $2)
-C_POINTER:C301(PrintCommentGeneric; $3)
-C_TEXT:C284(PrintCommentGeneric; $4)
+
 
 //HFS_VOLUME
 C_TEXT:C284(HFS_Volume; $0)
 C_TEXT:C284(HFS_Volume; $1)
 
-//GETIDENTIFIERFIELDPOINTER
-C_POINTER:C301(GetIdentifierFieldPointer; $0)
-C_POINTER:C301(GetIdentifierFieldPointer; $1)
+
 
 //HFS_PATHNAMESUFFIX
 C_TEXT:C284(HFS_PathNameSuffix; $1)
 C_TEXT:C284(HFS_PathNameSuffix; $2)
 
-//B2BREQUESTS
-C_TEXT:C284(B2BRequests; $1)
-C_TEXT:C284(B2BRequests; $2)
-C_TEXT:C284(B2BRequests; $3)
-C_TEXT:C284(B2BRequests; $4)
-C_TEXT:C284(B2BRequests; $5)
-C_LONGINT:C283(B2BRequests; $6)
 
 //IEA_RETURNKEYFIELD
 C_LONGINT:C283(IEA_ReturnKeyField; $0)
 C_POINTER:C301(IEA_ReturnKeyField; $1)
 
-//B2BRECORDGET
-C_LONGINT:C283(B2BRecordGet; $1)
-C_POINTER:C301(B2BRecordGet; $2)
-
-//B2BSYCNAVAILABLE
-C_LONGINT:C283(B2BSycnAvailable; $1)
-C_POINTER:C301(B2BSycnAvailable; $2)
-
-//B2BSYNCREQUEST
-C_TEXT:C284(B2BSyncRequest; $1)
-C_LONGINT:C283(B2BSyncRequest; $2)
-C_TEXT:C284(B2BSyncRequest; $3)
-C_TEXT:C284(B2BSyncRequest; $4)
-C_TEXT:C284(B2BSyncRequest; $5)
-
-
-//B2BRECORDSEND
-C_LONGINT:C283(B2BRecordSend; $1)
-C_POINTER:C301(B2BRecordSend; $2)
 
 //PKARRAYMANAGE22
 C_LONGINT:C283(PKArrayManage22; $1)
@@ -6302,10 +5635,6 @@ C_LONGINT:C283(PasswordInOut; $1)
 //QRQUERY
 C_POINTER:C301(QRQuery; ${1})
 
-//HTTP_ITEMBYZIP
-C_LONGINT:C283(Http_ItemByZip; $1)
-C_POINTER:C301(Http_ItemByZip; $2)
-
 
 //AUTH_VERISIGN
 C_TEXT:C284(Auth_Verisign; $0)
@@ -6319,9 +5648,7 @@ C_LONGINT:C283(PrintArray; $2)
 C_LONGINT:C283(PrintArray; $3)
 
 
-//WCC_SALESSTATUS
-C_LONGINT:C283(Wcc_SalesStatus; $1)
-C_POINTER:C301(Wcc_SalesStatus; $2)
+
 
 //VCARDOUT
 C_LONGINT:C283(vCardOut; $1)
@@ -6550,19 +5877,13 @@ C_TEXT:C284(Date_StrYYYY MM DDTHH MM SS; $3)
 C_TEXT:C284(Date_StrYYYY MM DDTHH MM SS; $4)
 C_TEXT:C284(Date_StrYYYY MM DDTHH MM SS; $5)
 
-//HTTP_REMOTEUSERSEARCH
-C_LONGINT:C283(Http_RemoteUserSearch; $1)
-C_POINTER:C301(Http_RemoteUserSearch; $2)
+
 
 //RPTUSAGEITEMMONTH
 C_TEXT:C284(RptUsageItemMonth; $1)
 C_LONGINT:C283(RptUsageItemMonth; $2)
 C_LONGINT:C283(RptUsageItemMonth; $3)
 
-//HTTP_MYPAGE
-C_LONGINT:C283(Http_MyPage; $1)
-C_POINTER:C301(Http_MyPage; $2)
-C_LONGINT:C283(Http_MyPage; $3)
 
 //TALLYINVENTORYVALUE
 C_POINTER:C301(TallyInventoryValue; $1)
@@ -6571,8 +5892,7 @@ C_POINTER:C301(TallyInventoryValue; $3)
 C_TEXT:C284(TallyInventoryValue; $4)
 C_POINTER:C301(TallyInventoryValue; $5)
 
-//HTTP_USERADDRESS
-C_LONGINT:C283(Http_UserAddress; $1)
+
 
 //HTML_REPLACEHEAD
 C_TEXT:C284(HTML_ReplaceHead; $1)
@@ -6588,9 +5908,6 @@ C_POINTER:C301(UniqueIDPassAlong; $3)
 //OP_SELECTORDER
 C_REAL:C285(OP_SelectOrder; $1)
 
-//HTTP_DOLAST
-C_LONGINT:C283(Http_DoLast; $1)
-C_POINTER:C301(Http_DoLast; $2)
 
 //QQ_PUSH
 C_POINTER:C301(QQ_Push; $1)
@@ -6633,9 +5950,6 @@ C_TEXT:C284(TallyMasterExecutePopup; $3)
 //PRS_UPDATEPRSWINDOW
 C_LONGINT:C283(Prs_UpdatePrsWindow; $1)
 
-//HTTP_SERVERLOADTAGS
-C_LONGINT:C283(Http_ServerLoadTags; $1)
-C_POINTER:C301(Http_ServerLoadTags; $2)
 
 //SET_WINDOW_TITLE
 C_POINTER:C301(Set_Window_Title; $1)
@@ -6688,30 +6002,13 @@ C_POINTER:C301(IEA_SuperiorField; $3)
 C_POINTER:C301(IEA_SuperiorField; $4)
 C_POINTER:C301(IEA_SuperiorField; $5)
 
-//HTTPSAVECONTACT
-C_LONGINT:C283(httpSaveContact; $1)
-C_POINTER:C301(httpSaveContact; $2)
 
-//HTTP_UNIQUEIDMATCH
-C_TEXT:C284(Http_UniqueIDMatch; $0)
-C_TEXT:C284(Http_UniqueIDMatch; $1)
-
-//HTTP_QUERYRECORDS
-C_REAL:C285(Http_QueryRecords; $1)
-C_POINTER:C301(Http_QueryRecords; $2)
-
-//HTTP_QUERY
-C_LONGINT:C283(HTTP_Query; $1)
-C_POINTER:C301(HTTP_Query; $2)
 
 //BARCODEBUILD
 C_PICTURE:C286(BarCodeBuild; $0)
 C_TEXT:C284(BarCodeBuild; $1)
 C_REAL:C285(BarCodeBuild; $2)
 
-//HTTP_SERVERLEDGERS
-C_LONGINT:C283(Http_ServerLedgers; $1)
-C_POINTER:C301(Http_ServerLedgers; $2)
 
 //P_PAYHEADERVARS
 C_LONGINT:C283(P_PayHeaderVars; $1)
@@ -6842,11 +6139,6 @@ C_REAL:C285(MinimumValueReturn; $4)
 C_LONGINT:C283(WC_PathSecurityReturn; $0)
 C_TEXT:C284(WC_PathSecurityReturn; $1)
 
-//HTTP_POSTORD2
-C_LONGINT:C283(Http_PostOrd2; $1)
-C_POINTER:C301(Http_PostOrd2; $2)
-C_LONGINT:C283(Http_PostOrd2; $3)
-C_REAL:C285(Http_PostOrd2; $4)
 
 //ARRAY_GETPARAMWITHIN
 C_LONGINT:C283(Array_GetParamWithIn; $0)
@@ -6984,8 +6276,8 @@ C_BOOLEAN:C305(Records_In; $3)
 //RECORDS_OUT
 C_LONGINT:C283(Records_Out; $4)
 
-//EXECUTEUSERREPORT
-C_TEXT:C284(ExecuteUserReport; $1)
+//Execute_Report
+C_TEXT:C284(Execute_Report; $1)
 
 
 //WCCTABLENAME
@@ -7020,34 +6312,12 @@ C_BOOLEAN:C305(P_AddressesCustomer; $1)
 //ILOPROCEDURE
 C_LONGINT:C283(iLoProcedure; $0)
 
-//B2B_EXCHANGE
-C_LONGINT:C283(B2B_Exchange; $0)
 
 //SMTP_SENDMSG4D
 C_BOOLEAN:C305(SMTP_SendMsg4D; $1)
 
 //FIXNAN
 C_POINTER:C301(FixNAN; $1)
-
-//AREALISTARRAYPOINTER
-C_POINTER:C301(AreaListArrayPointer; ${-1})
-C_POINTER:C301(AreaListArrayPointer; $1)
-C_POINTER:C301(AreaListArrayPointer; $2)
-C_POINTER:C301(AreaListArrayPointer; $3)
-C_POINTER:C301(AreaListArrayPointer; $4)
-C_POINTER:C301(AreaListArrayPointer; $5)
-C_POINTER:C301(AreaListArrayPointer; $6)
-C_POINTER:C301(AreaListArrayPointer; $7)
-C_POINTER:C301(AreaListArrayPointer; $8)
-C_POINTER:C301(AreaListArrayPointer; $9)
-C_POINTER:C301(AreaListArrayPointer; $10)
-C_POINTER:C301(AreaListArrayPointer; $11)
-C_POINTER:C301(AreaListArrayPointer; $12)
-C_POINTER:C301(AreaListArrayPointer; $13)
-C_POINTER:C301(AreaListArrayPointer; $14)
-C_POINTER:C301(AreaListArrayPointer; $15)
-
-
 
 
 //TC_PUTFILENAMEWC
@@ -7176,15 +6446,10 @@ C_LONGINT:C283(Sync_PostOut; $2)
 //FOLDER_DELETE
 C_TEXT:C284(Folder_Delete; $1)
 
-//HTTP_NAVSERVER
-C_LONGINT:C283(Http_NavServer; $1)
-C_POINTER:C301(Http_NavServer; $2)
 
-//HTTP_QUERYSAVE
+//HTTP_QuerySave
 C_POINTER:C301(HTTP_QuerySave; $1)
 
-//CMA_IMPORTORDLINES
-C_TEXT:C284(CMA_ImportOrdLines; $1)
 
 //SYNCORDERS
 C_TEXT:C284(SyncOrders; $1)
@@ -7199,10 +6464,6 @@ C_TEXT:C284(CreateDocumentXPlatform; $1)
 //RENAMEDOCUMENT
 C_TEXT:C284(RenameDocument; $1)
 
-//HTTP_QUERYBUILD
-C_TEXT:C284(Http_QueryBuild; $0)
-C_LONGINT:C283(Http_QueryBuild; $1)
-C_POINTER:C301(Http_QueryBuild; $2)
 
 //EXPORTTABLESFIELDS
 C_TEXT:C284(ExportTablesFields; $1)
@@ -7278,9 +6539,6 @@ C_BOOLEAN:C305(Test; $0)
 //EMPLOYEESREPS
 C_LONGINT:C283(EmployeesReps; $1)
 
-//CMA_ITEMCREATE
-C_TEXT:C284(CMA_ItemCreate; $1)
-C_TEXT:C284(CMA_ItemCreate; $2)
 
 //HFS_HARDNAME
 C_TEXT:C284(HFS_HardName; $0)
@@ -7321,18 +6579,6 @@ C_TEXT:C284(OrderAddLineToExistingOrder; $1)
 C_REAL:C285(Util_NegativePara; $0)
 C_TEXT:C284(Util_NegativePara; $1)
 
-//CMACOMORDERONELINE
-C_LONGINT:C283(CMAComOrderOneLine; $1)
-
-//CMAComInvoiceOneLine
-C_LONGINT:C283(CMAComInvoiceOneLine; $1)
-C_REAL:C285(CMAComInvoiceOneLine; $2)
-C_REAL:C285(CMAComInvoiceOneLine; $3)
-C_REAL:C285(CMAComInvoiceOneLine; $4)
-C_TEXT:C284(CMAComInvoiceOneLine; $5)
-C_DATE:C307(CMAComInvoiceOneLine; $6)
-
-
 
 
 
@@ -7353,16 +6599,6 @@ C_TEXT:C284(LabelsFill; $2)
 C_REAL:C285(OrdersFlowToCommission; $0)
 C_LONGINT:C283(OrdersFlowToCommission; $1)
 
-//CMANewCommOrderLine
-C_LONGINT:C283(CMANewCommOrderLine; $1)
-C_REAL:C285(CMANewCommOrderLine; $2)
-C_REAL:C285(CMANewCommOrderLine; $3)
-C_DATE:C307(CMANewCommOrderLine; $4)
-C_TEXT:C284(CMANewCommOrderLine; $5)
-C_TEXT:C284(CMANewCommOrderLine; $6)
-C_LONGINT:C283(CMANewCommOrderLine; $7)
-C_REAL:C285(CMANewCommOrderLine; $8)
-C_REAL:C285(CMANewCommOrderLine; $9)
 
 //CRONDTNEXT
 C_REAL:C285(CronDTNext; $0)
@@ -7481,8 +6717,6 @@ C_TEXT:C284(PageParameterGet; $2)
 //WC_Parse
 C_BOOLEAN:C305(WC_Parse; $4)
 
-//Http_serverSearch
-C_REAL:C285(Http_serverSearch; $0)
 
 
 
@@ -7554,12 +6788,6 @@ C_BOOLEAN:C305(Tally_OpenOrdAm; $1)
 //WC_jitNum2NameSite
 C_TEXT:C284(WC_jitNum2NameSite; $1)
 
-//Txt_2Array
-C_TEXT:C284(Txt_2Array; $1)
-C_POINTER:C301(Txt_2Array; $2)
-C_TEXT:C284(Txt_2Array; $3)
-C_BOOLEAN:C305(Txt_2Array; $4)
-
 //Key_Search
 C_LONGINT:C283(Key_Search; $0)
 C_TEXT:C284(Key_Search; $4)
@@ -7582,8 +6810,6 @@ C_REAL:C285(WindowOpenTaskOffSets; $5)
 //EmailTextOrderData
 C_LONGINT:C283(EmailTextOrderData; $1)
 
-//DocumentSave2Path
-C_TEXT:C284(DocumentSave2Path; $1)
 
 //PKOrder2Invoice
 C_LONGINT:C283(PKOrder2Invoice; $0)
@@ -7881,9 +7107,7 @@ C_LONGINT:C283(Barcode_AssignLength; $1)
 //AllyFillTemplate
 C_LONGINT:C283(AllyFillTemplate; $1)
 
-//Http_OrderAllyAssign
-C_LONGINT:C283(Http_OrderAllyAssign; $1)
-C_POINTER:C301(Http_OrderAllyAssign; $2)
+
 
 //DefaultSetupsCreate
 C_TEXT:C284(DefaultSetupsCreate; $1)
@@ -7973,11 +7197,6 @@ C_LONGINT:C283(ItemPeriodSales; $1)
 C_POINTER:C301(PopupLoadArrays; $1)
 C_POINTER:C301(PopupLoadArrays; $2)
 
-//ObjectGetNames
-C_POINTER:C301(ObjectGetNames; $1)
-C_POINTER:C301(ObjectGetNames; $2)
-C_POINTER:C301(ObjectGetNames; $3)
-C_LONGINT:C283(ObjectGetNames; $4)
 
 //PasswordGroupAccess
 C_BOOLEAN:C305(PasswordGroupAccess; $0)
@@ -8116,10 +7335,6 @@ C_TEXT:C284(TagsToObjects; $1)
 
 //WebClerkShoppingCartAlready
 C_LONGINT:C283(WebClerkShoppingCartAlready; $1)
-
-//ConsoleMessage
-C_TEXT:C284(ConsoleMessage; $1)
-C_LONGINT:C283(ConsoleMessage; $2)
 
 //GetParameterValue
 C_TEXT:C284(GetParameterValue; $0)
@@ -8304,8 +7519,7 @@ C_POINTER:C301(Txt_CommandParser; $2)
 C_TEXT:C284(TechNoteParseOne4DW; $0)
 C_TEXT:C284(TechNoteParseOne4DW; $1)
 
-//EDI_PackOrder
-C_LONGINT:C283(EDI_PackOrder; $1)
+
 
 //CounterConfirmUnique
 C_LONGINT:C283(CounterConfirmUnique; $1)
@@ -8352,8 +7566,8 @@ C_TEXT:C284(Tx_ClipFromBackToLastDelim; $0)
 C_TEXT:C284(Tx_ClipFromBackToLastDelim; $1)
 C_TEXT:C284(Tx_ClipFromBackToLastDelim; $2)
 
-//TallyMasterExecuteSort
-C_POINTER:C301(TallyMasterExecuteSort; $1)
+//TallyMasterExecuteOrderBy
+C_POINTER:C301(TallyMasterExecuteOrderBy; $1)
 
 //TallyMastersExecuteSearch
 C_POINTER:C301(TallyMastersExecuteSearch; $1)
@@ -8745,9 +7959,6 @@ C_LONGINT:C283(WC_SendServerResponse; $0)
 C_TEXT:C284(WC_SendServerResponse; $1)
 C_TEXT:C284(WC_SendServerResponse; $2)
 
-//ConsoleMessage
-C_TEXT:C284(ConsoleMessage; $1)
-C_LONGINT:C283(ConsoleMessage; $2)
 
 //TNToWebAreaTinymce
 C_LONGINT:C283(TNToWebAreaTinymce; $1)
@@ -8861,10 +8072,7 @@ C_DATE:C307(WO_TransferDirect; $7)
 C_LONGINT:C283(WO_TransferDirect; $8)
 C_LONGINT:C283(WO_TransferDirect; $9)
 
-//RPFieldCharacteristics
-C_TEXT:C284(RPFieldCharacteristics; $0)
-C_LONGINT:C283(RPFieldCharacteristics; $1)
-C_LONGINT:C283(RPFieldCharacteristics; $2)
+
 
 //RP_SycnRecordReceived
 C_POINTER:C301(RP_SycnRecordReceived; $1)
@@ -8951,10 +8159,6 @@ C_POINTER:C301(DistinctSequences; $1)
 //RegisterVerified
 C_LONGINT:C283(RegisterVerified; $1)
 C_POINTER:C301(RegisterVerified; $2)
-
-//http_Password
-C_LONGINT:C283(http_Password; $1)
-C_POINTER:C301(http_Password; $2)
 
 //PasswordReset
 C_LONGINT:C283(PasswordReset; $1)
@@ -9253,8 +8457,6 @@ C_BOOLEAN:C305(STR_IsField; $0)
 C_TEXT:C284(STR_IsField; $1)
 C_TEXT:C284(STR_IsField; $2)
 
-//Cat_DocumentToObject
-C_COLLECTION:C1488(Cat_DocumentToObject; $1)
 
 //Calendar_GetDateRange
 C_OBJECT:C1216(Calendar_GetDateRange; $0)
@@ -9298,7 +8500,7 @@ C_TEXT:C284(DB_LoadCurRecord; $1)
 C_OBJECT:C1216(WCSP_PlaceOrder; $0)
 
 //Return
-C_TEXT:C284(Return; $1)
+//C_TEXT(return ; $1)
 
 //ActionBy_Customers
 C_TEXT:C284(ActionBy_Customers; $0)
@@ -9537,8 +8739,6 @@ C_REAL:C285(CatCostDifference; $2)
 C_POINTER:C301(CatCostDifference; $3)
 C_POINTER:C301(CatCostDifference; $4)
 
-//EDI_Trailer
-C_TEXT:C284(EDI_Trailer; $0)
 
 //String_ValidatePhone
 C_TEXT:C284(String_ValidatePhone; $0)
@@ -9640,9 +8840,6 @@ C_LONGINT:C283(Txt_Pad; $4)
 C_TEXT:C284(En_ShowImage; $1)
 C_POINTER:C301(En_ShowImage; $2)
 
-//HO_CatalogCCS_dead
-C_TEXT:C284(HO_CatalogCCS_dead; $1)
-C_TEXT:C284(HO_CatalogCCS_dead; $2)
 
 //PathName_Unique
 C_TEXT:C284(PathName_Unique; $0)
@@ -9708,10 +8905,6 @@ C_POINTER:C301(RP_SpecialDiscounts; $1)
 C_TEXT:C284(WCR_GetTableName; $0)
 C_TEXT:C284(WCR_GetTableName; $1)
 
-//Calendar_UserSetup
-C_TEXT:C284(Calendar_UserSetup; $1)
-C_POINTER:C301(Calendar_UserSetup; $2)
-C_POINTER:C301(Calendar_UserSetup; $3)
 
 //MySaleSerFieldList
 C_TEXT:C284(MySaleSerFieldList; $0)
@@ -9739,10 +8932,6 @@ C_POINTER:C301(jsonCreateHeader; $1)
 C_TEXT:C284(jsonCreateHeader; $2)
 C_TEXT:C284(jsonCreateHeader; $3)
 
-//HO_CatalogCCS
-C_TEXT:C284(HO_CatalogCCS; $1)
-C_TEXT:C284(HO_CatalogCCS; $2)
-C_TEXT:C284(HO_CatalogCCS; $3)
 
 //DB_CreateEmptySet
 C_TEXT:C284(DB_CreateEmptySet; $1)
@@ -9904,8 +9093,6 @@ C_TEXT:C284(OB_CopyField; $2)
 C_POINTER:C301(OB_CopyField; $3)
 C_TEXT:C284(OB_CopyField; $4)
 
-//EDI_Header
-C_TEXT:C284(EDI_Header; $0)
 
 //DB_GetCurRecordTitle
 C_TEXT:C284(DB_GetCurRecordTitle; $0)
@@ -10190,9 +9377,6 @@ C_BOOLEAN:C305(Tests_OB_Merge; $0)
 C_BLOB:C604(String_ToBlob; $0)
 C_TEXT:C284(String_ToBlob; $1)
 
-//STR_GetFieldNameList
-C_TEXT:C284(STR_GetFieldNameList; $1)
-C_POINTER:C301(STR_GetFieldNameList; $2)
 
 //Cat_BuildLine
 C_OBJECT:C1216(Cat_BuildLine; $0)
@@ -10279,7 +9463,6 @@ C_TEXT:C284(DB_IsCurRecordLoaded; $1)
 //KeyWordCleanup
 C_TEXT:C284(KeyWordCleanup; $0)
 C_TEXT:C284(KeyWordCleanup; $1)
-C_POINTER:C301(KeyWordCleanup; $2)
 
 //temp
 C_POINTER:C301(temp; $1)
@@ -10302,8 +9485,8 @@ C_TEXT:C284(CND_ParseBoolean; $2)
 //Tests_OB_GetType
 C_BOOLEAN:C305(Tests_OB_GetType; $0)
 
-//DBCustomer_init
-C_TEXT:C284(DBCustomer_init; $1)
+//DB_InitCustomer
+C_TEXT:C284(DB_InitCustomer; $1)
 
 //Date_GetPeriodBeginDates
 C_OBJECT:C1216(Date_GetPeriodBeginDates; $0)
@@ -10455,11 +9638,6 @@ C_TEXT:C284(DB_SelectionToArray; $1)
 C_TEXT:C284(DB_SelectionToArray; $2)
 C_POINTER:C301(DB_SelectionToArray; $3)
 
-//BulkEditFromOL
-C_TEXT:C284(BulkEditFromOL; $1)
-C_TEXT:C284(BulkEditFromOL; $2)
-C_TEXT:C284(BulkEditFromOL; $3)
-C_POINTER:C301(BulkEditFromOL; $4)
 
 //Calendar_createData
 C_DATE:C307(Calendar_createData; $1)
@@ -10543,9 +9721,6 @@ C_TEXT:C284(KeyWordByTag; $2)
 C_TEXT:C284(GetEmployeeFullName; $0)
 C_TEXT:C284(GetEmployeeFullName; $1)
 
-//LogAbandonedNumber
-C_LONGINT:C283(LogAbandonedNumber; $1)
-C_LONGINT:C283(LogAbandonedNumber; $2)
 
 //STR_GetFieldPointer
 C_POINTER:C301(STR_GetFieldPointer; $0)
@@ -10587,10 +9762,6 @@ C_TEXT:C284(USR_DoesRecordBelongTo; $1)
 C_TEXT:C284(USR_DoesRecordBelongTo; $2)
 C_OBJECT:C1216(USR_DoesRecordBelongTo; $3)
 
-//HO_CatalogDuravent
-C_TEXT:C284(HO_CatalogDuravent; $1)
-C_TEXT:C284(HO_CatalogDuravent; $2)
-C_BOOLEAN:C305(HO_CatalogDuravent; $3)
 
 //WCR_ApplyFieldOverrideConfig
 C_OBJECT:C1216(WCR_ApplyFieldOverrideConfig; $0)
@@ -10627,3 +9798,1992 @@ C_LONGINT:C283(ProposalCopy; $1)
 C_TEXT:C284(WCapiTask_GetBetweenText; $1)
 C_TEXT:C284(WCapiTask_GetBetweenText; $2)
 C_TEXT:C284(WCapiTask_GetBetweenText; $3)
+
+//EntityLoad
+C_OBJECT:C1216(EntityLoad; $1)
+
+//Txt_CleanForURL
+C_TEXT:C284(Txt_CleanForURL; $0)
+C_TEXT:C284(Txt_CleanForURL; $1)
+
+//Util_ConvertTypeToText
+C_TEXT:C284(Util_ConvertTypeToText; $0)
+C_REAL:C285(Util_ConvertTypeToText; $1)
+
+//LB_GetColumnObject
+C_OBJECT:C1216(LB_GetColumnObject; $0)
+C_TEXT:C284(LB_GetColumnObject; $1)
+C_TEXT:C284(LB_GetColumnObject; $2)
+
+//Util25_PositionFmEnd
+C_REAL:C285(Util25_PositionFmEnd; $0)
+C_TEXT:C284(Util25_PositionFmEnd; $1)
+C_TEXT:C284(Util25_PositionFmEnd; $2)
+
+//Flow_Menu
+C_OBJECT:C1216(Flow_Menu; $1)
+
+//LBX_ColumnFromName
+C_OBJECT:C1216(LBX_ColumnFromName; $0)
+C_TEXT:C284(LBX_ColumnFromName; $1)
+C_TEXT:C284(LBX_ColumnFromName; $2)
+C_TEXT:C284(LBX_ColumnFromName; $3)
+
+//Txt_ClipFrom
+C_TEXT:C284(Txt_ClipFrom; $0)
+C_TEXT:C284(Txt_ClipFrom; $1)
+C_TEXT:C284(Txt_ClipFrom; $2)
+
+//Prs_ShowSelection
+C_LONGINT:C283(Prs_ShowSelection; $1)
+C_TEXT:C284(Prs_ShowSelection; $2)
+C_LONGINT:C283(Prs_ShowSelection; $3)
+C_TEXT:C284(Prs_ShowSelection; $4)
+
+//ConsoleLog
+C_TEXT:C284(ConsoleLog; $1)
+C_REAL:C285(ConsoleLog; $2)
+
+//FC_LaunchWin
+C_OBJECT:C1216(FC_LaunchWin; $1)
+
+//Order_Inc_LB
+C_VARIANT:C1683(Order_Inc_LB; $0)
+C_TEXT:C284(Order_Inc_LB; $1)
+
+//Catalog_ItemUpdate
+C_OBJECT:C1216(Catalog_ItemUpdate; $0)
+C_OBJECT:C1216(Catalog_ItemUpdate; $1)
+C_OBJECT:C1216(Catalog_ItemUpdate; $2)
+
+//Draft_FieldDetails
+C_TEXT:C284(Draft_FieldDetails; $0)
+C_VARIANT:C1683(Draft_FieldDetails; $1)
+
+//imgBase64
+C_OBJECT:C1216(imgBase64; $0)
+
+//action_DragNDrop
+C_OBJECT:C1216(action_DragNDrop; $1)
+C_OBJECT:C1216(action_DragNDrop; $2)
+
+//Form_LastEntity
+C_TEXT:C284(Form_LastEntity; $1)
+
+//Util_OrderSelection_Simple
+C_OBJECT:C1216(Util_OrderSelection_Simple; $0)
+C_OBJECT:C1216(Util_OrderSelection_Simple; $1)
+C_OBJECT:C1216(Util_OrderSelection_Simple; $2)
+
+//LB_Selection
+C_OBJECT:C1216(LB_Selection; $0)
+C_TEXT:C284(LB_Selection; $1)
+
+//Util_GetTypeString
+C_TEXT:C284(Util_GetTypeString; $0)
+C_LONGINT:C283(Util_GetTypeString; $1)
+
+//Storage_ValuesToCollection
+C_TEXT:C284(Storage_ValuesToCollection; $3)
+
+//STR_FieldCollection
+C_COLLECTION:C1488(STR_FieldCollection; $0)
+C_TEXT:C284(STR_FieldCollection; $1)
+
+//PathTestToSave
+C_TEXT:C284(PathTestToSave; $0)
+C_TEXT:C284(PathTestToSave; $1)
+
+
+//GL_PJrInsightDf
+C_BOOLEAN:C305(GL_PJrInsightDf; $0)
+
+//QRY_GetPropertyTypePictures
+C_OBJECT:C1216(QRY_GetPropertyTypePictures; $1)
+C_COLLECTION:C1488(QRY_GetPropertyTypePictures; $2)
+C_TEXT:C284(QRY_GetPropertyTypePictures; $3)
+
+//Util25_OrderSelection_Extended
+C_OBJECT:C1216(Util25_OrderSelection_Extended; $0)
+C_OBJECT:C1216(Util25_OrderSelection_Extended; $1)
+C_OBJECT:C1216(Util25_OrderSelection_Extended; $2)
+C_OBJECT:C1216(Util25_OrderSelection_Extended; $3)
+
+//ColorSet
+C_LONGINT:C283(ColorSet; $0)
+C_TEXT:C284(ColorSet; $1)
+
+//Util25_RecordInNewWindow
+C_TEXT:C284(Util25_RecordInNewWindow; $1)
+
+//Util25_SendByMail_Parse
+C_TEXT:C284(Util25_SendByMail_Parse; $0)
+C_TEXT:C284(Util25_SendByMail_Parse; $1)
+C_OBJECT:C1216(Util25_SendByMail_Parse; $2)
+C_OBJECT:C1216(Util25_SendByMail_Parse; $3)
+C_OBJECT:C1216(Util25_SendByMail_Parse; $4)
+
+//question_01_LB
+C_OBJECT:C1216(question_01_LB; $0)
+C_TEXT:C284(question_01_LB; $1)
+
+//DB_SaveDinventory
+C_TEXT:C284(DB_SaveDinventory; $1)
+C_OBJECT:C1216(DB_SaveDinventory; $2)
+C_OBJECT:C1216(DB_SaveDinventory; $3)
+C_TEXT:C284(DB_SaveDinventory; $4)
+
+//DE_obGeneralTest
+C_OBJECT:C1216(DE_obGeneralTest; $1)
+
+//DB_initProposal
+C_OBJECT:C1216(DB_initProposal; $0)
+C_TEXT:C284(DB_initProposal; $1)
+C_OBJECT:C1216(DB_initProposal; $2)
+
+//DB_SaveObjectToRecord
+C_OBJECT:C1216(DB_SaveObjectToRecord; $1)
+C_OBJECT:C1216(DB_SaveObjectToRecord; $2)
+C_TEXT:C284(DB_SaveObjectToRecord; $3)
+
+//DB_InitCustomer
+C_OBJECT:C1216(DB_InitCustomer; $0)
+C_OBJECT:C1216(DB_InitCustomer; $2)
+
+//LB_TextStringAddID
+C_TEXT:C284(LB_TextStringAddID; $0)
+C_TEXT:C284(LB_TextStringAddID; $1)
+
+//Contact_FillObj 2
+C_OBJECT:C1216(Contact_FillObj 2; $0)
+C_OBJECT:C1216(Contact_FillObj 2; $1)
+
+//doMyScript
+C_TEXT:C284(doMyScript; $1)
+
+//Util_FilterPropertyName
+C_TEXT:C284(Util_FilterPropertyName; $0)
+C_TEXT:C284(Util_FilterPropertyName; $1)
+
+
+//ProcessObject
+C_OBJECT:C1216(ProcessObject; $1)
+
+//Util_GetPropertyTypePictures
+C_OBJECT:C1216(Util_GetPropertyTypePictures; $1)
+C_COLLECTION:C1488(Util_GetPropertyTypePictures; $2)
+C_TEXT:C284(Util_GetPropertyTypePictures; $3)
+
+//Ui_form_spreadToSubforms
+C_OBJECT:C1216(Ui_form_spreadToSubforms; $1)
+
+//Util25_ConvertText2Type
+C_REAL:C285(Util25_ConvertText2Type; $0)
+C_TEXT:C284(Util25_ConvertText2Type; $1)
+
+//action_Property_Delete
+C_TEXT:C284(action_Property_Delete; $1)
+
+//ProcessCurrentSelection
+C_VARIANT:C1683(ProcessCurrentSelection; $1)
+C_TEXT:C284(ProcessCurrentSelection; $2)
+C_REAL:C285(ProcessCurrentSelection; $3)
+C_TEXT:C284(ProcessCurrentSelection; $4)
+
+//Dial_SetNumber
+C_TEXT:C284(Dial_SetNumber; $0)
+C_TEXT:C284(Dial_SetNumber; $1)
+C_TEXT:C284(Dial_SetNumber; $2)
+C_TEXT:C284(Dial_SetNumber; $3)
+
+//CalcInvoiceOB
+C_BOOLEAN:C305(CalcInvoiceOB; $0)
+C_OBJECT:C1216(CalcInvoiceOB; $1)
+
+
+
+//FORM_GET_PAGE_OBJECTS
+C_POINTER:C301(FORM_GET_PAGE_OBJECTS; $1)
+C_POINTER:C301(FORM_GET_PAGE_OBJECTS; $2)
+C_POINTER:C301(FORM_GET_PAGE_OBJECTS; $3)
+C_LONGINT:C283(FORM_GET_PAGE_OBJECTS; $4)
+
+
+//action_Save_Optimistic
+C_BOOLEAN:C305(action_Save_Optimistic; $0)
+C_OBJECT:C1216(action_Save_Optimistic; $1)
+C_OBJECT:C1216(action_Save_Optimistic; $2)
+
+//Util_GiveRecordCount
+C_TEXT:C284(Util_GiveRecordCount; $0)
+C_OBJECT:C1216(Util_GiveRecordCount; $1)
+C_OBJECT:C1216(Util_GiveRecordCount; $2)
+
+
+//InfoShipper
+C_POINTER:C301(InfoShipper; $2)
+C_POINTER:C301(InfoShipper; $3)
+C_POINTER:C301(InfoShipper; $4)
+
+//LBX_DraftColumsFromArrays
+C_OBJECT:C1216(LBX_DraftColumsFromArrays; $0)
+C_TEXT:C284(LBX_DraftColumsFromArrays; $1)
+C_TEXT:C284(LBX_DraftColumsFromArrays; $2)
+
+//InfoRep
+C_POINTER:C301(InfoRep; $2)
+C_POINTER:C301(InfoRep; $3)
+
+//QRY_GetEmojis
+C_OBJECT:C1216(QRY_GetEmojis; $0)
+
+//DS_ProposalLineToOrderLine
+C_OBJECT:C1216(DS_ProposalLineToOrderLine; $0)
+C_OBJECT:C1216(DS_ProposalLineToOrderLine; $1)
+
+//WO_FillArrays
+C_LONGINT:C283(WO_FillArrays; $1)
+C_LONGINT:C283(WO_FillArrays; $2)
+C_LONGINT:C283(WO_FillArrays; $3)
+
+//LBX_Rows_to_Collection 3
+C_OBJECT:C1216(LBX_Rows_to_Collection 3; $0)
+C_TEXT:C284(LBX_Rows_to_Collection 3; $1)
+C_OBJECT:C1216(LBX_Rows_to_Collection 3; $2)
+
+//wrap_distinctPaths
+C_COLLECTION:C1488(wrap_distinctPaths; $0)
+C_OBJECT:C1216(wrap_distinctPaths; $1)
+C_TEXT:C284(wrap_distinctPaths; $2)
+
+//W_show
+C_TEXT:C284(W_show; $1)
+C_OBJECT:C1216(W_show; $2)
+
+//Contact_FillObj
+C_OBJECT:C1216(Contact_FillObj; $0)
+C_OBJECT:C1216(Contact_FillObj; $1)
+
+//action_Property_List
+C_OBJECT:C1216(action_Property_List; $1)
+C_TEXT:C284(action_Property_List; $2)
+
+//ProcessOutput
+C_TEXT:C284(ProcessOutput; $1)
+C_TEXT:C284(ProcessOutput; $2)
+C_TEXT:C284(ProcessOutput; $3)
+
+//action_Delete
+C_OBJECT:C1216(action_Delete; $1)
+C_TEXT:C284(action_Delete; $2)
+
+//QRY_ReturnObject
+C_OBJECT:C1216(QRY_ReturnObject; $0)
+
+//Col_DistinctGet
+C_COLLECTION:C1488(Col_DistinctGet; $0)
+C_COLLECTION:C1488(Col_DistinctGet; $1)
+C_TEXT:C284(Col_DistinctGet; $2)
+
+//UTIL_LB_HIGHLIGHT_INVOICES
+C_OBJECT:C1216(UTIL_LB_HIGHLIGHT_INVOICES; $0)
+
+//Clone_Order
+C_OBJECT:C1216(Clone_Order; $1)
+
+//SF_Tell
+C_POINTER:C301(SF_Tell; $1)
+C_VARIANT:C1683(SF_Tell; $2)
+
+//QRY_SetSortLine
+C_OBJECT:C1216(QRY_SetSortLine; $1)
+C_REAL:C285(QRY_SetSortLine; $2)
+
+//Util_PropagateSelection
+C_VARIANT:C1683(Util_PropagateSelection; $0)
+C_OBJECT:C1216(Util_PropagateSelection; $1)
+C_TEXT:C284(Util_PropagateSelection; $2)
+C_TEXT:C284(Util_PropagateSelection; $3)
+
+//Call_Open1Record
+C_OBJECT:C1216(Call_Open1Record; $1)
+C_OBJECT:C1216(Call_Open1Record; $2)
+
+//DS_OrderLinesToInvoiceLines
+C_OBJECT:C1216(DS_OrderLinesToInvoiceLines; $0)
+C_OBJECT:C1216(DS_OrderLinesToInvoiceLines; $1)
+
+//Catalog_DocToCollection
+C_COLLECTION:C1488(Catalog_DocToCollection; $0)
+C_OBJECT:C1216(Catalog_DocToCollection; $1)
+
+//LBX_Rows_to_Collection 2
+C_OBJECT:C1216(LBX_Rows_to_Collection 2; $0)
+C_TEXT:C284(LBX_Rows_to_Collection 2; $1)
+C_OBJECT:C1216(LBX_Rows_to_Collection 2; $2)
+
+//DB_initPO
+C_OBJECT:C1216(DB_initPO; $0)
+C_TEXT:C284(DB_initPO; $1)
+C_OBJECT:C1216(DB_initPO; $2)
+
+//DB_LockEntities
+C_LONGINT:C283(DB_LockEntities; $0)
+C_OBJECT:C1216(DB_LockEntities; $1)
+
+//Process_ShowTableDS
+C_OBJECT:C1216(Process_ShowTableDS; $1)
+
+//P_FillVars
+C_OBJECT:C1216(P_FillVars; $1)
+
+//action_Property_Add
+C_TEXT:C284(action_Property_Add; $1)
+
+//Process_AddRecord
+C_VARIANT:C1683(Process_AddRecord; $1)
+
+//Settings_GetCurrent
+C_OBJECT:C1216(Settings_GetCurrent; $0)
+
+//Util25_EntityLoad_Specific
+C_BOOLEAN:C305(Util25_EntityLoad_Specific; $1)
+
+//Splash_TableLists
+C_TEXT:C284(Splash_TableLists; $1)
+
+//ShipWindow
+C_OBJECT:C1216(ShipWindow; $1)
+
+//QuoteQuick
+C_OBJECT:C1216(QuoteQuick; $1)
+
+//action_Property_Settings
+C_TEXT:C284(action_Property_Settings; $1)
+C_BOOLEAN:C305(action_Property_Settings; $2)
+
+//CE_WorkerCall
+C_OBJECT:C1216(CE_WorkerCall; $1)
+
+//LBX_seqMov
+C_LONGINT:C283(LBX_seqMov; $0)
+C_OBJECT:C1216(LBX_seqMov; $1)
+C_OBJECT:C1216(LBX_seqMov; $2)
+C_LONGINT:C283(LBX_seqMov; $3)
+
+//Ledger_PaySave
+C_OBJECT:C1216(Ledger_PaySave; $1)
+
+//doMyFormMethod
+C_TEXT:C284(doMyFormMethod; $1)
+
+//action_Related_Add
+C_TEXT:C284(action_Related_Add; $1)
+C_TEXT:C284(action_Related_Add; $2)
+
+//LBX_SelectionIfEmpty
+C_TEXT:C284(LBX_SelectionIfEmpty; $1)
+C_TEXT:C284(LBX_SelectionIfEmpty; $2)
+
+//Util_OrderSelection_Extended
+C_OBJECT:C1216(Util_OrderSelection_Extended; $0)
+C_OBJECT:C1216(Util_OrderSelection_Extended; $1)
+C_OBJECT:C1216(Util_OrderSelection_Extended; $2)
+C_OBJECT:C1216(Util_OrderSelection_Extended; $3)
+
+//Util_RecordInNewWindow
+C_TEXT:C284(Util_RecordInNewWindow; $1)
+
+//CF_CallDownstairs
+C_TEXT:C284(CF_CallDownstairs; $1)
+C_OBJECT:C1216(CF_CallDownstairs; $2)
+
+//Util_ConvertText2Type
+C_REAL:C285(Util_ConvertText2Type; $0)
+C_TEXT:C284(Util_ConvertText2Type; $1)
+
+//Path_CustomerTask
+C_TEXT:C284(Path_CustomerTask; $0)
+
+//Settings_Preset
+C_OBJECT:C1216(Settings_Preset; $1)
+
+//DB_SalesService
+C_OBJECT:C1216(DB_SalesService; $1)
+
+//RPFieldCharacteristics
+C_TEXT:C284(RPFieldCharacteristics; $0)
+C_LONGINT:C283(RPFieldCharacteristics; $1)
+C_LONGINT:C283(RPFieldCharacteristics; $2)
+
+//KeyWord_Query
+C_OBJECT:C1216(KeyWord_Query; $0)
+C_TEXT:C284(KeyWord_Query; $1)
+C_TEXT:C284(KeyWord_Query; $2)
+C_TEXT:C284(KeyWord_Query; $3)
+C_OBJECT:C1216(KeyWord_Query; $4)
+
+//PVars_DearContact
+C_BOOLEAN:C305(PVars_DearContact; $1)
+C_POINTER:C301(PVars_DearContact; $2)
+C_POINTER:C301(PVars_DearContact; $3)
+C_POINTER:C301(PVars_DearContact; $4)
+C_POINTER:C301(PVars_DearContact; $5)
+C_POINTER:C301(PVars_DearContact; $6)
+C_POINTER:C301(PVars_DearContact; $7)
+C_POINTER:C301(PVars_DearContact; $8)
+C_POINTER:C301(PVars_DearContact; $9)
+C_POINTER:C301(PVars_DearContact; $10)
+
+//FHolo_All
+C_TEXT:C284(FHolo_All; $1)
+
+//DB_ClassicAccess
+C_TEXT:C284(DB_ClassicAccess; $1)
+C_OBJECT:C1216(DB_ClassicAccess; $2)
+
+//SF_Sales_Execute
+C_OBJECT:C1216(SF_Sales_Execute; $1)
+
+//DB_SaveTallyChange
+C_OBJECT:C1216(DB_SaveTallyChange; $0)
+C_OBJECT:C1216(DB_SaveTallyChange; $1)
+C_OBJECT:C1216(DB_SaveTallyChange; $2)
+C_OBJECT:C1216(DB_SaveTallyChange; $3)
+
+//Call_TableFmWRef
+C_TEXT:C284(Call_TableFmWRef; $1)
+C_OBJECT:C1216(Call_TableFmWRef; $2)
+
+//action_Unlock
+C_BOOLEAN:C305(action_Unlock; $1)
+C_POINTER:C301(VAR_TO_BLOB; ${1})
+
+//Ui_demoProgressDoSomething
+C_TEXT:C284(Ui_demoProgressDoSomething; $0)
+C_VARIANT:C1683(Ui_demoProgressDoSomething; $1)
+C_VARIANT:C1683(Ui_demoProgressDoSomething; $2)
+C_LONGINT:C283(Ui_demoProgressDoSomething; $3)
+
+
+
+//Init_obSetup
+
+//action_setImage
+C_PICTURE:C286(action_setImage; $0)
+C_TEXT:C284(action_setImage; $1)
+
+//HDI_FORM_CALLBACK
+C_TEXT:C284(HDI_FORM_CALLBACK; $1)
+C_OBJECT:C1216(HDI_FORM_CALLBACK; $2)
+
+//STR_PrimeListBox
+C_TEXT:C284(STR_PrimeListBox; $1)
+
+//Util25_ConvertTypeToText
+C_TEXT:C284(Util25_ConvertTypeToText; $0)
+C_REAL:C285(Util25_ConvertTypeToText; $1)
+
+//action_Move
+C_TEXT:C284(action_Move; $1)
+
+//DB_TableAll
+C_TEXT:C284(DB_TableAll; $1)
+
+//QRY_SetCriteriaLine
+C_OBJECT:C1216(QRY_SetCriteriaLine; $1)
+C_REAL:C285(QRY_SetCriteriaLine; $2)
+
+//Util25_PropagateSelection
+C_VARIANT:C1683(Util25_PropagateSelection; $0)
+C_OBJECT:C1216(Util25_PropagateSelection; $1)
+C_TEXT:C284(Util25_PropagateSelection; $2)
+C_TEXT:C284(Util25_PropagateSelection; $3)
+
+//SF_InputLoad
+C_OBJECT:C1216(SF_InputLoad; $1)
+
+//SFEX_DropDocument
+C_TEXT:C284(SFEX_DropDocument; $0)
+
+//UI_ProgressCallback
+C_TEXT:C284(UI_ProgressCallback; $1)
+C_TEXT:C284(UI_ProgressCallback; $2)
+C_LONGINT:C283(UI_ProgressCallback; $3)
+C_OBJECT:C1216(UI_ProgressCallback; $4)
+
+//Make_Payment
+C_LONGINT:C283(Make_Payment; $1)
+C_POINTER:C301(Make_Payment; $2)
+C_BOOLEAN:C305(Make_Payment; $3)
+
+//Util_GetTypeNum
+C_LONGINT:C283(Util_GetTypeNum; $0)
+C_TEXT:C284(Util_GetTypeNum; $1)
+
+//action_AddPicture
+C_TEXT:C284(action_AddPicture; $1)
+
+//Util25_HandleButtons
+C_OBJECT:C1216(Util25_HandleButtons; $1)
+
+//Process_ByID
+C_OBJECT:C1216(Process_ByID; $1)
+
+//LBX_DraftDialog
+C_OBJECT:C1216(LBX_DraftDialog; $1)
+
+//Address_FullObj
+C_TEXT:C284(Address_FullObj; $0)
+C_OBJECT:C1216(Address_FullObj; $1)
+
+//LBX_seqReset
+C_OBJECT:C1216(LBX_seqReset; $1)
+C_TEXT:C284(LBX_seqReset; $2)
+
+//Catalog_lineOut
+C_TEXT:C284(Catalog_lineOut; $0)
+C_OBJECT:C1216(Catalog_lineOut; $1)
+C_TEXT:C284(Catalog_lineOut; $2)
+
+//Util25_LB_HIGHLIGHT_INVOICES
+C_OBJECT:C1216(Util25_LB_HIGHLIGHT_INVOICES; $0)
+
+//QAEdit
+C_OBJECT:C1216(QAEdit; $1)
+
+//STR_FieldsListBox
+C_TEXT:C284(STR_FieldsListBox; $1)
+C_TEXT:C284(STR_FieldsListBox; $2)
+
+//action_Property_Delete_Tradit
+C_TEXT:C284(action_Property_Delete_Tradit; $1)
+C_COLLECTION:C1488(action_Property_Delete_Tradit; $2)
+C_OBJECT:C1216(action_Property_Delete_Tradit; $3)
+C_COLLECTION:C1488(action_Property_Delete_Tradit; $4)
+C_REAL:C285(action_Property_Delete_Tradit; $5)
+
+//Form_process_o_init
+C_VARIANT:C1683(Form_process_o_init; $1)
+
+//STR_GetFieldNames
+C_TEXT:C284(STR_GetFieldNames; $0)
+C_TEXT:C284(STR_GetFieldNames; $1)
+
+//OB_Set_Path
+C_OBJECT:C1216(OB_Set_Path; $0)
+C_OBJECT:C1216(OB_Set_Path; $1)
+C_TEXT:C284(OB_Set_Path; $2)
+C_OBJECT:C1216(OB_Set_Path; $3)
+
+//Catalog_CSVParse
+C_COLLECTION:C1488(Catalog_CSVParse; $0)
+C_TEXT:C284(Catalog_CSVParse; $1)
+C_TEXT:C284(Catalog_CSVParse; $2)
+
+//Convert_TextToValue
+C_VARIANT:C1683(Convert_TextToValue; $0)
+C_VARIANT:C1683(Convert_TextToValue; $1)
+C_LONGINT:C283(Convert_TextToValue; $2)
+
+
+
+//QRY_Util_GetFieldProperties
+C_OBJECT:C1216(QRY_Util_GetFieldProperties; $0)
+C_TEXT:C284(QRY_Util_GetFieldProperties; $1)
+C_TEXT:C284(QRY_Util_GetFieldProperties; $2)
+
+//Form_TellSub
+C_POINTER:C301(Form_TellSub; $1)
+C_VARIANT:C1683(Form_TellSub; $2)
+
+//Ltr_FillTinyMCE
+C_TEXT:C284(Ltr_FillTinyMCE; $1)
+C_LONGINT:C283(Ltr_FillTinyMCE; $2)
+
+//Task_New
+C_LONGINT:C283(Task_New; $0)
+C_OBJECT:C1216(Task_New; $1)
+C_TEXT:C284(Task_New; $2)
+
+//Ledger_InvSave
+C_OBJECT:C1216(Ledger_InvSave; $1)
+
+//LogIn_ReplyEmployee
+C_TEXT:C284(LogIn_ReplyEmployee; $0)
+
+//Util25_GiveRecordCount
+C_TEXT:C284(Util25_GiveRecordCount; $0)
+C_OBJECT:C1216(Util25_GiveRecordCount; $1)
+C_OBJECT:C1216(Util25_GiveRecordCount; $2)
+
+//Util25_OrderSelection_Simple
+C_OBJECT:C1216(Util25_OrderSelection_Simple; $0)
+C_OBJECT:C1216(Util25_OrderSelection_Simple; $1)
+C_OBJECT:C1216(Util25_OrderSelection_Simple; $2)
+
+//STR_FCNew
+C_OBJECT:C1216(STR_FCNew; $0)
+C_OBJECT:C1216(STR_FCNew; $1)
+
+//Catalog_Load
+C_COLLECTION:C1488(Catalog_Load; $0)
+C_OBJECT:C1216(Catalog_Load; $1)
+
+//Orphan_Answers
+C_COLLECTION:C1488(Orphan_Answers; $0)
+
+//Util_SendByMail_Parse
+C_TEXT:C284(Util_SendByMail_Parse; $0)
+C_TEXT:C284(Util_SendByMail_Parse; $1)
+C_OBJECT:C1216(Util_SendByMail_Parse; $2)
+C_OBJECT:C1216(Util_SendByMail_Parse; $3)
+C_OBJECT:C1216(Util_SendByMail_Parse; $4)
+
+//Util25_FilterPropertyName
+C_TEXT:C284(Util25_FilterPropertyName; $0)
+C_TEXT:C284(Util25_FilterPropertyName; $1)
+
+
+
+//Storage_LastRecord
+C_TEXT:C284(Storage_LastRecord; $1)
+C_TEXT:C284(Storage_LastRecord; $2)
+
+//LBX_DemoReworkedwork
+C_OBJECT:C1216(LBX_DemoReworkedwork; $0)
+C_TEXT:C284(LBX_DemoReworkedwork; $1)
+C_POINTER:C301(LBX_DemoReworkedwork; $2)
+C_POINTER:C301(LBX_DemoReworkedwork; $3)
+
+//LBX_DraftFromAreaList
+C_LONGINT:C283(LBX_DraftFromAreaList; $1)
+C_LONGINT:C283(LBX_DraftFromAreaList; $2)
+
+//SelectList_toCollection
+C_COLLECTION:C1488(SelectList_toCollection; $0)
+C_TEXT:C284(SelectList_toCollection; $1)
+C_LONGINT:C283(SelectList_toCollection; $2)
+
+//DB_initOrder
+C_OBJECT:C1216(DB_initOrder; $0)
+C_TEXT:C284(DB_initOrder; $1)
+C_OBJECT:C1216(DB_initOrder; $2)
+
+//QA_Add
+C_TEXT:C284(QA_Add; $1)
+
+//ExecuteScript_Object
+C_OBJECT:C1216(ExecuteScript_Object; $0)
+C_TEXT:C284(ExecuteScript_Object; $1)
+
+//QRY_OrderSelection
+C_OBJECT:C1216(QRY_OrderSelection; $0)
+C_OBJECT:C1216(QRY_OrderSelection; $1)
+C_OBJECT:C1216(QRY_OrderSelection; $2)
+C_OBJECT:C1216(QRY_OrderSelection; $3)
+
+//DB_RecordReturnObject
+C_OBJECT:C1216(DB_RecordReturnObject; $0)
+C_TEXT:C284(DB_RecordReturnObject; $1)
+
+
+
+//oloBaseLine
+C_POINTER:C301(oloBaseLine; $1)
+
+//LBX_DraftFieldLB
+C_OBJECT:C1216(LBX_DraftFieldLB; $0)
+C_OBJECT:C1216(LBX_DraftFieldLB; $1)
+
+//STR_GetTableNameArray
+C_POINTER:C301(STR_GetTableNameArray; $1)
+C_POINTER:C301(STR_GetTableNameArray; $2)
+
+//QRY_GetPropertyList
+C_COLLECTION:C1488(QRY_GetPropertyList; $0)
+C_TEXT:C284(QRY_GetPropertyList; $1)
+C_OBJECT:C1216(QRY_GetPropertyList; $2)
+C_OBJECT:C1216(QRY_GetPropertyList; $3)
+
+//SplashNew
+C_OBJECT:C1216(SplashNew; $1)
+
+
+
+//Util25_GetPropertyTypePictures
+C_OBJECT:C1216(Util25_GetPropertyTypePictures; $1)
+C_COLLECTION:C1488(Util25_GetPropertyTypePictures; $2)
+C_TEXT:C284(Util25_GetPropertyTypePictures; $3)
+
+//FC_OH
+C_OBJECT:C1216(FC_OH; $1)
+
+//CF_CallUpstairs
+C_TEXT:C284(CF_CallUpstairs; $1)
+C_OBJECT:C1216(CF_CallUpstairs; $2)
+C_OBJECT:C1216(CF_CallUpstairs; $3)
+
+//LB_BuildFromObject
+C_TEXT:C284(LB_BuildFromObject; $1)
+C_OBJECT:C1216(LB_BuildFromObject; $2)
+
+//Util25_GetEmojis
+C_OBJECT:C1216(Util25_GetEmojis; $0)
+
+//Util25_Collection2Object
+C_OBJECT:C1216(Util25_Collection2Object; $0)
+C_COLLECTION:C1488(Util25_Collection2Object; $1)
+
+//Print_4DLables
+C_TEXT:C284(Print_4DLables; $1)
+
+//ORDALearningCalls
+C_OBJECT:C1216(ORDALearningCalls; $1)
+
+//Form_Draft
+C_TEXT:C284(Form_Draft; $1)
+C_TEXT:C284(Form_Draft; $2)
+C_TEXT:C284(Form_Draft; $3)
+
+//WcapiTask_QABuild
+C_TEXT:C284(WcapiTask_QABuild; $0)
+C_VARIANT:C1683(WcapiTask_QABuild; $1)
+
+//Process_Running
+C_OBJECT:C1216(Process_Running; $1)
+
+//STR_TableNameIndex
+C_OBJECT:C1216(STR_TableNameIndex; $1)
+C_TEXT:C284(STR_TableNameIndex; $2)
+
+//Ltr_Get4File
+C_LONGINT:C283(Ltr_Get4File; $1)
+
+//W_Generic_Basics
+C_TEXT:C284(W_Generic_Basics; $1)
+
+//DataEx_RecordtoText
+C_COLLECTION:C1488(DataEx_RecordtoText; $0)
+C_TEXT:C284(DataEx_RecordtoText; $1)
+C_OBJECT:C1216(DataEx_RecordtoText; $2)
+
+//DE_PopUpArray
+C_TEXT:C284(DE_PopUpArray; $0)
+C_POINTER:C301(DE_PopUpArray; $1)
+
+//Util_GetEmojis
+C_OBJECT:C1216(Util_GetEmojis; $0)
+
+//ConsoleLaunch
+C_TEXT:C284(ConsoleLaunch; $1)
+
+//QRY_Do_Query
+C_OBJECT:C1216(QRY_Do_Query; $0)
+C_OBJECT:C1216(QRY_Do_Query; $1)
+C_TEXT:C284(QRY_Do_Query; $2)
+C_OBJECT:C1216(QRY_Do_Query; $3)
+C_OBJECT:C1216(QRY_Do_Query; $4)
+
+//URL_Cleanup
+C_TEXT:C284(URL_Cleanup; $0)
+C_TEXT:C284(URL_Cleanup; $1)
+
+//Data_LoadNewRecord
+C_OBJECT:C1216(Data_LoadNewRecord; $1)
+C_OBJECT:C1216(Data_LoadNewRecord; $2)
+
+//Util25_GetSimplePropertyList
+C_POINTER:C301(Util25_GetSimplePropertyList; $1)
+C_OBJECT:C1216(Util25_GetSimplePropertyList; $2)
+C_COLLECTION:C1488(Util25_GetSimplePropertyList; $3)
+C_TEXT:C284(Util25_GetSimplePropertyList; $4)
+
+//KeyTags_MakeByObject
+C_OBJECT:C1216(KeyTags_MakeByObject; $1)
+
+//action_QuickSelect
+C_OBJECT:C1216(action_QuickSelect; $0)
+C_TEXT:C284(action_QuickSelect; $1)
+C_OBJECT:C1216(action_QuickSelect; $2)
+
+//Util25_UpdateSelection
+C_TEXT:C284(Util25_UpdateSelection; $1)
+
+//Editor_Script
+C_OBJECT:C1216(Editor_Script; $1)
+
+//LaunchShareDrive
+C_TEXT:C284(LaunchShareDrive; $1)
+
+//WebClientTester
+C_TEXT:C284(WebClientTester; $1)
+
+//Txt_ClearExtraReturns
+C_TEXT:C284(Txt_ClearExtraReturns; $0)
+C_TEXT:C284(Txt_ClearExtraReturns; $1)
+
+//Ent_Before
+C_TEXT:C284(Ent_Before; $1)
+
+//QRY_GetPropertyPicture
+C_PICTURE:C286(QRY_GetPropertyPicture; $0)
+C_OBJECT:C1216(QRY_GetPropertyPicture; $1)
+
+//LBPopupJoint
+C_OBJECT:C1216(LBPopupJoint; $1)
+
+//Settings_ApplyToListBox
+C_OBJECT:C1216(Settings_ApplyToListBox; $1)
+C_TEXT:C284(Settings_ApplyToListBox; $2)
+C_BOOLEAN:C305(Settings_ApplyToListBox; $3)
+
+//Util_HandleButtons
+C_OBJECT:C1216(Util_HandleButtons; $1)
+
+//LBX_Generate_Example
+C_OBJECT:C1216(LBX_Generate_Example; $0)
+C_LONGINT:C283(LBX_Generate_Example; $1)
+C_POINTER:C301(LBX_Generate_Example; $2)
+C_POINTER:C301(LBX_Generate_Example; $3)
+
+//Form_SetSubForm
+C_TEXT:C284(Form_SetSubForm; $1)
+C_TEXT:C284(Form_SetSubForm; $2)
+C_TEXT:C284(Form_SetSubForm; $3)
+
+//Init_ObHistory
+C_OBJECT:C1216(Init_ObHistory; $0)
+C_TEXT:C284(Init_ObHistory; $1)
+
+//Util_EntityLoad
+C_OBJECT:C1216(Util_EntityLoad; $1)
+
+//STR_GetTableNameCollection
+C_COLLECTION:C1488(STR_GetTableNameCollection; $0)
+
+
+//SFEX_GetDocument
+C_OBJECT:C1216(SFEX_GetDocument; $1)
+
+//KeyTagsFromAlphaFields
+C_TEXT:C284(KeyTagsFromAlphaFields; $2)
+C_BOOLEAN:C305(KeyTagsFromAlphaFields; $3)
+
+//LBData_PopupChoice
+C_COLLECTION:C1488(LBData_PopupChoice; $0)
+C_OBJECT:C1216(LBData_PopupChoice; $1)
+
+//DataEx_FieldToText
+C_TEXT:C284(DataEx_FieldToText; $0)
+C_TEXT:C284(DataEx_FieldToText; $1)
+C_TEXT:C284(DataEx_FieldToText; $2)
+
+
+
+//LBX_ColumnImportName
+C_OBJECT:C1216(LBX_ColumnImportName; $0)
+C_TEXT:C284(LBX_ColumnImportName; $1)
+C_TEXT:C284(LBX_ColumnImportName; $2)
+
+//Util25_EntityLoad
+C_OBJECT:C1216(Util25_EntityLoad; $1)
+
+//action_CheckSMTP
+C_TEXT:C284(action_CheckSMTP; $0)
+
+//Util25_Get_DragNDropIcon
+C_PICTURE:C286(Util25_Get_DragNDropIcon; $0)
+C_LONGINT:C283(Util25_Get_DragNDropIcon; $1)
+
+//Util_Print_GiveProductName
+C_REAL:C285(Util_Print_GiveProductName; $0)
+
+//Util25_Object2Collection
+C_COLLECTION:C1488(Util25_Object2Collection; $0)
+C_OBJECT:C1216(Util25_Object2Collection; $1)
+
+//Util25_SetWindowTitle
+C_OBJECT:C1216(Util25_SetWindowTitle; $1)
+C_REAL:C285(Util25_SetWindowTitle; $2)
+
+//Form_LBDraft
+C_OBJECT:C1216(Form_LBDraft; $1)
+
+//LBX_DataBrowser
+C_OBJECT:C1216(LBX_DataBrowser; $1)
+
+//QRY_RedrawList
+C_COLLECTION:C1488(QRY_RedrawList; $0)
+C_COLLECTION:C1488(QRY_RedrawList; $1)
+C_REAL:C285(QRY_RedrawList; $2)
+
+//LBX_Prefix
+C_LONGINT:C283(LBX_Prefix; $0)
+C_OBJECT:C1216(LBX_Prefix; $1)
+C_OBJECT:C1216(LBX_Prefix; $2)
+C_LONGINT:C283(LBX_Prefix; $3)
+
+//LBX_FormJSONDef
+C_OBJECT:C1216(LBX_FormJSONDef; $0)
+C_LONGINT:C283(LBX_FormJSONDef; $1)
+C_POINTER:C301(LBX_FormJSONDef; $2)
+C_POINTER:C301(LBX_FormJSONDef; $3)
+
+//Clone_Customer
+C_OBJECT:C1216(Clone_Customer; $1)
+
+//DB_initInvoice
+C_OBJECT:C1216(DB_initInvoice; $0)
+C_TEXT:C284(DB_initInvoice; $1)
+C_OBJECT:C1216(DB_initInvoice; $2)
+
+
+
+//Util25_GetPropertyList
+C_TEXT:C284(Util25_GetPropertyList; $1)
+C_OBJECT:C1216(Util25_GetPropertyList; $2)
+C_OBJECT:C1216(Util25_GetPropertyList; $3)
+
+//DB_ShowCurrentObject
+C_VARIANT:C1683(DB_ShowCurrentObject; $1)
+C_OBJECT:C1216(DB_ShowCurrentObject; $2)
+
+//Prs_UserSetNewWindow
+C_LONGINT:C283(Prs_UserSetNewWindow; $1)
+C_TEXT:C284(Prs_UserSetNewWindow; $2)
+C_TEXT:C284(Prs_UserSetNewWindow; $3)
+C_TEXT:C284(Prs_UserSetNewWindow; $4)
+C_TEXT:C284(Prs_UserSetNewWindow; $5)
+C_TEXT:C284(Prs_UserSetNewWindow; $6)
+C_TEXT:C284(Prs_UserSetNewWindow; $7)
+
+//LBX_Rows_to_Collection
+C_OBJECT:C1216(LBX_Rows_to_Collection; $0)
+C_TEXT:C284(LBX_Rows_to_Collection; $1)
+C_OBJECT:C1216(LBX_Rows_to_Collection; $2)
+
+//LBX_ColumnReturn
+C_OBJECT:C1216(LBX_ColumnReturn; $0)
+C_OBJECT:C1216(LBX_ColumnReturn; $1)
+
+//Data_ArchiveOld
+C_OBJECT:C1216(Data_ArchiveOld; $1)
+
+//Blk_SrCustOrder
+C_POINTER:C301(Blk_SrCustOrder; $1)
+C_POINTER:C301(Blk_SrCustOrder; $2)
+
+//DB_InitItem
+C_OBJECT:C1216(DB_InitItem; $0)
+C_TEXT:C284(DB_InitItem; $1)
+C_OBJECT:C1216(DB_InitItem; $2)
+
+//Util25_UpdateOnContext
+C_REAL:C285(Util25_UpdateOnContext; $1)
+
+//WindowCascade
+C_BOOLEAN:C305(WindowCascade; $1)
+
+//myTest_NewEntityDefaults
+C_OBJECT:C1216(myTest_NewEntityDefaults; $0)
+C_TEXT:C284(myTest_NewEntityDefaults; $1)
+
+//Print_QuickReport
+C_TEXT:C284(Print_QuickReport; $1)
+
+//Data_vCardIn
+C_TEXT:C284(Data_vCardIn; $1)
+C_TEXT:C284(Data_vCardIn; $2)
+C_TEXT:C284(Data_vCardIn; $3)
+C_TEXT:C284(Data_vCardIn; $4)
+C_TEXT:C284(Data_vCardIn; $5)
+
+//ProcessObjectAdd
+C_OBJECT:C1216(ProcessObjectAdd; $1)
+
+
+
+//PVar_AddressOnly
+C_OBJECT:C1216(PVar_AddressOnly; $1)
+
+//dCashManage
+C_OBJECT:C1216(dCashManage; $1)
+
+//KeyWordCleanup
+C_POINTER:C301(KeyWordCleanup; $2)
+
+//Hndl_StatusError
+C_BOOLEAN:C305(Hndl_StatusError; $0)
+C_OBJECT:C1216(Hndl_StatusError; $1)
+
+//W_ShowTable
+C_TEXT:C284(W_ShowTable; $1)
+C_OBJECT:C1216(W_ShowTable; $2)
+
+//Util_PositionFmEnd
+C_REAL:C285(Util_PositionFmEnd; $0)
+C_TEXT:C284(Util_PositionFmEnd; $1)
+C_TEXT:C284(Util_PositionFmEnd; $2)
+
+//Print_Letter
+C_OBJECT:C1216(Print_Letter; $1)
+
+//LBX_ImportLDialog
+C_OBJECT:C1216(LBX_ImportLDialog; $1)
+
+
+//Storage_Replace
+C_OBJECT:C1216(Storage_Replace; $1)
+C_VARIANT:C1683(Storage_Replace; $2)
+C_TEXT:C284(Storage_Replace; $3)
+
+
+
+//Storage_ToNew
+C_TEXT:C284(Storage_ToNew; $3)
+
+//Util25_Print_GiveProductName
+C_REAL:C285(Util25_Print_GiveProductName; $0)
+
+//Util_SetWindowTitle
+C_OBJECT:C1216(Util_SetWindowTitle; $1)
+C_REAL:C285(Util_SetWindowTitle; $2)
+
+//Util25_Get_LocalizedMessage
+C_TEXT:C284(Util25_Get_LocalizedMessage; $0)
+C_TEXT:C284(Util25_Get_LocalizedMessage; ${2})
+C_TEXT:C284(Util25_Get_LocalizedMessage; $1)
+
+
+
+//Util_Collection2Object
+C_OBJECT:C1216(Util_Collection2Object; $0)
+C_COLLECTION:C1488(Util_Collection2Object; $1)
+
+//action_ScrapeWebPage
+C_VARIANT:C1683(action_ScrapeWebPage; $0)
+C_TEXT:C284(action_ScrapeWebPage; $1)
+
+//Util_UpdateSelection
+C_TEXT:C284(Util_UpdateSelection; $1)
+
+//PVars_AddressFull
+C_POINTER:C301(PVars_AddressFull; $2)
+
+//Regex_Split
+C_COLLECTION:C1488(Regex_Split; $0)
+C_TEXT:C284(Regex_Split; $1)
+C_TEXT:C284(Regex_Split; $2)
+C_LONGINT:C283(Regex_Split; $3)
+
+//ContractDetailFill
+C_TEXT:C284(ContractDetailFill; $0)
+C_TEXT:C284(ContractDetailFill; $1)
+C_POINTER:C301(ContractDetailFill; $2)
+
+
+//DialogQuery
+C_OBJECT:C1216(DialogQuery; $1)
+
+//LBX_FromJSONDefinition
+C_OBJECT:C1216(LBX_FromJSONDefinition; $0)
+C_LONGINT:C283(LBX_FromJSONDefinition; $1)
+C_POINTER:C301(LBX_FromJSONDefinition; $2)
+C_POINTER:C301(LBX_FromJSONDefinition; $3)
+
+//STR_TablesListBox
+C_TEXT:C284(STR_TablesListBox; $1)
+
+//LBX_DemoReworked
+C_OBJECT:C1216(LBX_DemoReworked; $0)
+C_TEXT:C284(LBX_DemoReworked; $1)
+C_COLLECTION:C1488(LBX_DemoReworked; $2)
+
+//XML_ToObject
+C_OBJECT:C1216(XML_ToObject; $0)
+C_TEXT:C284(XML_ToObject; $1)
+C_TEXT:C284(XML_ToObject; $2)
+
+//CE_WorkerWake
+C_OBJECT:C1216(CE_WorkerWake; $1)
+
+//WC_SendServerResponsePath
+C_LONGINT:C283(WC_SendServerResponsePath; $0)
+C_TEXT:C284(WC_SendServerResponsePath; $1)
+
+//LBX_Importer
+C_OBJECT:C1216(LBX_Importer; $1)
+
+//Customer_AddBig4
+C_VARIANT:C1683(Customer_AddBig4; $1)
+
+//WindowCountToShow
+C_OBJECT:C1216(WindowCountToShow; $0)
+
+//DB_ShowByTableName
+C_TEXT:C284(DB_ShowByTableName; $1)
+C_TEXT:C284(DB_ShowByTableName; $2)
+C_OBJECT:C1216(DB_ShowByTableName; $3)
+
+//WccExecuteTask
+C_TEXT:C284(WccExecuteTask; $3)
+C_TEXT:C284(WccExecuteTask; $4)
+
+//WC_voStateError
+C_TEXT:C284(WC_voStateError; $1)
+
+//UpdateForm
+C_OBJECT:C1216(UpdateForm; $1)
+C_OBJECT:C1216(UpdateForm; $2)
+
+//QRY_PrepareMenus
+C_COLLECTION:C1488(QRY_PrepareMenus; $0)
+
+//STR_FCGet
+C_OBJECT:C1216(STR_FCGet; $0)
+C_OBJECT:C1216(STR_FCGet; $1)
+C_BOOLEAN:C305(STR_FCGet; $2)
+
+//action_Related_Delete
+C_TEXT:C284(action_Related_Delete; $1)
+C_TEXT:C284(action_Related_Delete; $2)
+
+//Util_Get_LocalizedMessage
+C_TEXT:C284(Util_Get_LocalizedMessage; $0)
+C_TEXT:C284(Util_Get_LocalizedMessage; ${2})
+C_TEXT:C284(Util_Get_LocalizedMessage; $1)
+
+//Util_GetSimplePropertyList
+C_POINTER:C301(Util_GetSimplePropertyList; $1)
+C_OBJECT:C1216(Util_GetSimplePropertyList; $2)
+C_COLLECTION:C1488(Util_GetSimplePropertyList; $3)
+C_TEXT:C284(Util_GetSimplePropertyList; $4)
+
+//PVars_Manufacturer
+C_OBJECT:C1216(PVars_Manufacturer; $1)
+
+//STR_GetFieldPointer
+C_TEXT:C284(STR_GetFieldPointer; $3)
+
+//Util_EntityLoad_Specific
+C_BOOLEAN:C305(Util_EntityLoad_Specific; $1)
+
+//Catalog_Match
+C_COLLECTION:C1488(Catalog_Match; $0)
+C_COLLECTION:C1488(Catalog_Match; $1)
+C_OBJECT:C1216(Catalog_Match; $2)
+
+//ConsolePost
+C_TEXT:C284(ConsolePost; $1)
+
+//FileSelect
+C_OBJECT:C1216(FileSelect; $0)
+C_TEXT:C284(FileSelect; $1)
+
+//Call_Update_Select
+C_OBJECT:C1216(Call_Update_Select; $1)
+
+//Util_GetPropertyList
+C_TEXT:C284(Util_GetPropertyList; $1)
+C_OBJECT:C1216(Util_GetPropertyList; $2)
+C_OBJECT:C1216(Util_GetPropertyList; $3)
+
+//Init_obGeneral
+C_OBJECT:C1216(Init_obGeneral; $0)
+
+//Data_AddressCopy
+C_OBJECT:C1216(Data_AddressCopy; $1)
+C_OBJECT:C1216(Data_AddressCopy; $2)
+
+//entity_Add
+C_OBJECT:C1216(entity_Add; $1)
+C_TEXT:C284(entity_Add; $2)
+C_LONGINT:C283(entity_Add; $3)
+
+//Util_Object2Collection
+C_COLLECTION:C1488(Util_Object2Collection; $0)
+C_OBJECT:C1216(Util_Object2Collection; $1)
+
+//Edit_FieldNamestoText
+C_TEXT:C284(Edit_FieldNamestoText; $0)
+C_COLLECTION:C1488(Edit_FieldNamestoText; $1)
+C_TEXT:C284(Edit_FieldNamestoText; $2)
+C_TEXT:C284(Edit_FieldNamestoText; $3)
+C_TEXT:C284(Edit_FieldNamestoText; $4)
+
+//CloneRecord
+C_OBJECT:C1216(CloneRecord; $1)
+
+//QRY_SetCriteriaValueCell
+C_OBJECT:C1216(QRY_SetCriteriaValueCell; $0)
+C_REAL:C285(QRY_SetCriteriaValueCell; $1)
+C_REAL:C285(QRY_SetCriteriaValueCell; $2)
+C_TEXT:C284(QRY_SetCriteriaValueCell; $3)
+
+//Util_Get_DragNDropIcon
+C_PICTURE:C286(Util_Get_DragNDropIcon; $0)
+C_LONGINT:C283(Util_Get_DragNDropIcon; $1)
+
+//KeyTag_RebuildTable
+C_TEXT:C284(KeyTag_RebuildTable; $1)
+
+//Util25_SendByMail
+C_OBJECT:C1216(Util25_SendByMail; $1)
+C_OBJECT:C1216(Util25_SendByMail; $2)
+
+//Util_SendByMail
+C_OBJECT:C1216(Util_SendByMail; $1)
+C_OBJECT:C1216(Util_SendByMail; $2)
+
+//LBX_RightClickHeader
+C_TEXT:C284(LBX_RightClickHeader; $1)
+C_LONGINT:C283(LBX_RightClickHeader; $2)
+C_LONGINT:C283(LBX_RightClickHeader; $3)
+C_TEXT:C284(LBX_RightClickHeader; $4)
+
+//JFormatFone_2Str
+C_TEXT:C284(JFormatFone_2Str; $0)
+C_TEXT:C284(JFormatFone_2Str; $1)
+
+//PrintVars_Invoice
+C_OBJECT:C1216(PrintVars_Invoice; $1)
+
+//LBX_SetFieldPopup
+C_OBJECT:C1216(LBX_SetFieldPopup; $1)
+
+//Ltr_GetCollection
+C_COLLECTION:C1488(Ltr_GetCollection; $0)
+C_TEXT:C284(Ltr_GetCollection; $1)
+
+//ContactsLoadFromRecord
+C_BOOLEAN:C305(ContactsLoadFromRecord; $0)
+C_POINTER:C301(ContactsLoadFromRecord; $1)
+C_BOOLEAN:C305(ContactsLoadFromRecord; $2)
+
+//CE_ThreadPool
+C_OBJECT:C1216(CE_ThreadPool; $1)
+
+//LBX_ColumnSet
+C_TEXT:C284(LBX_ColumnSet; $1)
+C_LONGINT:C283(LBX_ColumnSet; $2)
+C_OBJECT:C1216(LBX_ColumnSet; $3)
+
+//Cat_Document_to_object
+C_OBJECT:C1216(Cat_Document_to_object; $0)
+C_TEXT:C284(Cat_Document_to_object; $1)
+C_BOOLEAN:C305(Cat_Document_to_object; $2)
+
+//Http_PostAutoPp
+C_TEXT:C284(Http_PostAutoPp; $1)
+C_TEXT:C284(Http_PostAutoPp; $2)
+
+//TextToCollection
+C_COLLECTION:C1488(TextToCollection; $0)
+C_TEXT:C284(TextToCollection; $1)
+C_TEXT:C284(TextToCollection; $2)
+C_BOOLEAN:C305(TextToCollection; $3)
+C_BOOLEAN:C305(TextToCollection; $4)
+
+//Http_SrchFAQ
+C_LONGINT:C283(Http_SrchFAQ; $1)
+C_POINTER:C301(Http_SrchFAQ; $2)
+
+//TextToArray
+C_TEXT:C284(TextToArray; $1)
+C_POINTER:C301(TextToArray; $2)
+C_TEXT:C284(TextToArray; $3)
+C_BOOLEAN:C305(TextToArray; $4)
+
+//http_Password
+C_LONGINT:C283(http_Password; $1)
+C_POINTER:C301(http_Password; $2)
+
+//CM_LineCalc
+C_LONGINT:C283(CM_LineCalc; $1)
+C_LONGINT:C283(CM_LineCalc; $2)
+C_POINTER:C301(CM_LineCalc; $3)
+C_POINTER:C301(CM_LineCalc; $4)
+C_POINTER:C301(CM_LineCalc; $5)
+C_POINTER:C301(CM_LineCalc; $6)
+C_POINTER:C301(CM_LineCalc; $7)
+
+//IE_OrdParseOrderImport
+C_LONGINT:C283(IE_OrdParseOrderImport; $1)
+
+//Http_ListMore
+C_TEXT:C284(Http_ListMore; $1)
+C_TEXT:C284(Http_ListMore; $2)
+C_TEXT:C284(Http_ListMore; $3)
+C_TEXT:C284(Http_ListMore; $4)
+C_TEXT:C284(Http_ListMore; $5)
+C_POINTER:C301(Http_ListMore; $6)
+C_POINTER:C301(Http_ListMore; $7)
+C_POINTER:C301(Http_ListMore; $8)
+
+//HTTP_ItemKeyword
+C_LONGINT:C283(HTTP_ItemKeyword; $1)
+C_POINTER:C301(HTTP_ItemKeyword; $2)
+
+//Qx_Pack
+C_TEXT:C284(Qx_Pack; $1)
+
+//Http_SrchGeneral
+C_LONGINT:C283(Http_SrchGeneral; $1)
+C_POINTER:C301(Http_SrchGeneral; $2)
+
+//B2BRecordGet
+C_LONGINT:C283(B2BRecordGet; $1)
+C_POINTER:C301(B2BRecordGet; $2)
+
+//Qx_PlaceTopRider
+C_TEXT:C284(Qx_PlaceTopRider; $1)
+
+//Http_ServerFlex
+C_LONGINT:C283(Http_ServerFlex; $1)
+C_POINTER:C301(Http_ServerFlex; $2)
+
+//B2BSycnAvailable
+C_LONGINT:C283(B2BSycnAvailable; $1)
+C_POINTER:C301(B2BSycnAvailable; $2)
+
+//19CVT_Loop_RenameClearLayouts
+C_TEXT:C284(19CVT_Loop_RenameClearLayouts; $1)
+
+//B2B_Server
+C_LONGINT:C283(B2B_Server; $1)
+C_POINTER:C301(B2B_Server; $2)
+
+//DocumentSave2Path
+C_TEXT:C284(DocumentSave2Path; $1)
+
+//Http_ItemReservationEach
+C_LONGINT:C283(Http_ItemReservationEach; $1)
+
+//Http_GetCC
+C_LONGINT:C283(Http_GetCC; $1)
+C_POINTER:C301(Http_GetCC; $2)
+
+//B2BSyncRequest
+C_TEXT:C284(B2BSyncRequest; $1)
+C_LONGINT:C283(B2BSyncRequest; $2)
+C_TEXT:C284(B2BSyncRequest; $3)
+C_TEXT:C284(B2BSyncRequest; $4)
+C_TEXT:C284(B2BSyncRequest; $5)
+
+//QX_FindActiveText
+C_TEXT:C284(QX_FindActiveText; $0)
+C_TEXT:C284(QX_FindActiveText; $1)
+C_TEXT:C284(QX_FindActiveText; $2)
+C_TEXT:C284(QX_FindActiveText; $3)
+
+//19CVT_RenameProperties
+C_TEXT:C284(19CVT_RenameProperties; $1)
+C_TEXT:C284(19CVT_RenameProperties; $2)
+
+//Http_OrdLineCombine
+C_LONGINT:C283(Http_OrdLineCombine; $1)
+C_POINTER:C301(Http_OrdLineCombine; $2)
+C_LONGINT:C283(Http_OrdLineCombine; $3)
+
+//http_SaveCust
+C_REAL:C285(http_SaveCust; $1)
+C_POINTER:C301(http_SaveCust; $2)
+
+//http_POPlace
+C_TEXT:C284(http_POPlace; $1)
+
+//Http_ServerItems
+C_LONGINT:C283(Http_ServerItems; $1)
+C_POINTER:C301(Http_ServerItems; $2)
+
+//Http_OrdSearch
+C_LONGINT:C283(Http_OrdSearch; $1)
+C_POINTER:C301(Http_OrdSearch; $2)
+
+//333Cust_OPiRProp
+C_LONGINT:C283(333Cust_OPiRProp; $1)
+
+//AreaListArrayPointer
+C_POINTER:C301(AreaListArrayPointer; $1)
+C_POINTER:C301(AreaListArrayPointer; $2)
+C_POINTER:C301(AreaListArrayPointer; $3)
+C_POINTER:C301(AreaListArrayPointer; $4)
+C_POINTER:C301(AreaListArrayPointer; $5)
+C_POINTER:C301(AreaListArrayPointer; $6)
+C_POINTER:C301(AreaListArrayPointer; $7)
+C_POINTER:C301(AreaListArrayPointer; $8)
+C_POINTER:C301(AreaListArrayPointer; $9)
+C_POINTER:C301(AreaListArrayPointer; $10)
+C_POINTER:C301(AreaListArrayPointer; $11)
+C_POINTER:C301(AreaListArrayPointer; $12)
+C_POINTER:C301(AreaListArrayPointer; $13)
+C_POINTER:C301(AreaListArrayPointer; $14)
+C_POINTER:C301(AreaListArrayPointer; $15)
+
+//EDI_PackOrder
+C_LONGINT:C283(EDI_PackOrder; $1)
+
+//IE_OrdFillOrdLineArraysByPtrArr
+C_POINTER:C301(IE_OrdFillOrdLineArraysByPtrArr; $1)
+C_POINTER:C301(IE_OrdFillOrdLineArraysByPtrArr; $2)
+C_LONGINT:C283(IE_OrdFillOrdLineArraysByPtrArr; $3)
+
+//Http_SaveContac
+C_LONGINT:C283(Http_SaveContac; $1)
+C_POINTER:C301(Http_SaveContac; $2)
+C_LONGINT:C283(Http_SaveContac; $3)
+
+//Http_DoSort
+C_LONGINT:C283(Http_DoSort; $0)
+C_TEXT:C284(Http_DoSort; $1)
+
+//CM_ChangeRateByNameID
+C_POINTER:C301(CM_ChangeRateByNameID; $1)
+C_POINTER:C301(CM_ChangeRateByNameID; $2)
+C_POINTER:C301(CM_ChangeRateByNameID; $3)
+C_POINTER:C301(CM_ChangeRateByNameID; $4)
+C_POINTER:C301(CM_ChangeRateByNameID; $5)
+C_LONGINT:C283(CM_ChangeRateByNameID; $6)
+C_POINTER:C301(CM_ChangeRateByNameID; $7)
+C_POINTER:C301(CM_ChangeRateByNameID; $8)
+C_POINTER:C301(CM_ChangeRateByNameID; $9)
+C_POINTER:C301(CM_ChangeRateByNameID; $10)
+C_POINTER:C301(CM_ChangeRateByNameID; $11)
+C_POINTER:C301(CM_ChangeRateByNameID; $12)
+C_POINTER:C301(CM_ChangeRateByNameID; $13)
+
+//Http_ItemByZip
+C_LONGINT:C283(Http_ItemByZip; $1)
+C_POINTER:C301(Http_ItemByZip; $2)
+
+//Data_ArchiveMake
+C_OBJECT:C1216(Data_ArchiveMake; $1)
+
+//Http_POStatusReceive
+C_LONGINT:C283(Http_POStatusReceive; $1)
+C_POINTER:C301(Http_POStatusReceive; $2)
+
+//Http_POConfirm
+C_TEXT:C284(Http_POConfirm; $0)
+C_LONGINT:C283(Http_POConfirm; $1)
+
+//http_PayRequest
+C_LONGINT:C283(http_PayRequest; $1)
+C_POINTER:C301(http_PayRequest; $2)
+C_LONGINT:C283(http_PayRequest; $3)
+
+//Http_QueryBuild
+C_TEXT:C284(Http_QueryBuild; $0)
+C_LONGINT:C283(Http_QueryBuild; $1)
+C_POINTER:C301(Http_QueryBuild; $2)
+
+//B2BRecordSend
+C_LONGINT:C283(B2BRecordSend; $1)
+C_POINTER:C301(B2BRecordSend; $2)
+
+//Http_CheckActive
+C_TEXT:C284(Http_CheckActive; $1)
+C_TEXT:C284(Http_CheckActive; $2)
+
+//Http_MinOf2Values
+C_LONGINT:C283(Http_MinOf2Values; $0)
+C_TEXT:C284(Http_MinOf2Values; $1)
+C_TEXT:C284(Http_MinOf2Values; $2)
+C_TEXT:C284(Http_MinOf2Values; $3)
+C_TEXT:C284(Http_MinOf2Values; $4)
+
+//Http_DoLast
+C_LONGINT:C283(Http_DoLast; $1)
+C_POINTER:C301(Http_DoLast; $2)
+
+//Http_ItemLibrary
+C_REAL:C285(Http_ItemLibrary; $1)
+C_POINTER:C301(Http_ItemLibrary; $2)
+
+//HttpKeyPairs
+C_TEXT:C284(HttpKeyPairs; $0)
+C_POINTER:C301(HttpKeyPairs; $1)
+
+//Http_SignInAs
+C_REAL:C285(Http_SignInAs; $1)
+C_POINTER:C301(Http_SignInAs; $2)
+
+//Http_ServerSale
+C_LONGINT:C283(Http_ServerSale; $1)
+
+//Http_ServerLoadTags
+C_LONGINT:C283(Http_ServerLoadTags; $1)
+C_POINTER:C301(Http_ServerLoadTags; $2)
+
+//IE_OrdFillFieldsByPtrArray
+C_TEXT:C284(IE_OrdFillFieldsByPtrArray; $0)
+C_POINTER:C301(IE_OrdFillFieldsByPtrArray; $1)
+C_POINTER:C301(IE_OrdFillFieldsByPtrArray; $2)
+
+//zzzInit_obSetup
+C_OBJECT:C1216(zzzInit_obSetup; $0)
+C_TEXT:C284(zzzInit_obSetup; $1)
+
+//http_SaveWO
+C_LONGINT:C283(http_SaveWO; $1)
+C_POINTER:C301(http_SaveWO; $2)
+
+//CM_AllLineCalc
+C_REAL:C285(CM_AllLineCalc; $0)
+C_LONGINT:C283(CM_AllLineCalc; $1)
+C_POINTER:C301(CM_AllLineCalc; $2)
+C_POINTER:C301(CM_AllLineCalc; $3)
+C_POINTER:C301(CM_AllLineCalc; $4)
+C_POINTER:C301(CM_AllLineCalc; $5)
+C_POINTER:C301(CM_AllLineCalc; $6)
+C_POINTER:C301(CM_AllLineCalc; $7)
+C_POINTER:C301(CM_AllLineCalc; $8)
+
+//http_CalendarBu
+C_TEXT:C284(http_CalendarBu; $0)
+C_DATE:C307(http_CalendarBu; $1)
+
+//Inv_PostFromWO
+C_LONGINT:C283(Inv_PostFromWO; $1)
+
+//00_Orderlines_LB
+C_VARIANT:C1683(00_Orderlines_LB; $0)
+C_TEXT:C284(00_Orderlines_LB; $1)
+
+//EDI_Trailer
+C_TEXT:C284(EDI_Trailer; $0)
+
+//Http_MultiDomain
+C_TEXT:C284(Http_MultiDomain; $0)
+
+//Http_SearchPO
+C_LONGINT:C283(Http_SearchPO; $1)
+C_POINTER:C301(Http_SearchPO; $2)
+
+//QX_PlaceTopRiders
+C_TEXT:C284(QX_PlaceTopRiders; $1)
+
+//Http_MfgSplitList
+C_LONGINT:C283(Http_MfgSplitList; $1)
+C_POINTER:C301(Http_MfgSplitList; $2)
+
+//http_ItemCreateNC
+C_LONGINT:C283(http_ItemCreateNC; $1)
+C_POINTER:C301(http_ItemCreateNC; $2)
+
+//HttpParsePostSave
+C_POINTER:C301(HttpParsePostSave; $1)
+C_BOOLEAN:C305(HttpParsePostSave; $2)
+
+//Http_SignInScript
+C_TEXT:C284(Http_SignInScript; $1)
+
+//IE_OrdVerifyMandatoryFields
+C_BOOLEAN:C305(IE_OrdVerifyMandatoryFields; $0)
+C_POINTER:C301(IE_OrdVerifyMandatoryFields; $1)
+C_POINTER:C301(IE_OrdVerifyMandatoryFields; $2)
+
+//HO_CatalogCCS_dead
+C_TEXT:C284(HO_CatalogCCS_dead; $1)
+C_TEXT:C284(HO_CatalogCCS_dead; $2)
+
+//Http_ItemExtends
+C_TEXT:C284(Http_ItemExtends; $1)
+C_LONGINT:C283(Http_ItemExtends; $2)
+
+//Http_PpFill
+C_LONGINT:C283(Http_PpFill; $1)
+C_POINTER:C301(Http_PpFill; $2)
+C_BOOLEAN:C305(Http_PpFill; $3)
+
+//IE_OrdParseCustomerImport
+C_LONGINT:C283(IE_OrdParseCustomerImport; $1)
+
+//Http_PaySSLSetup
+C_LONGINT:C283(Http_PaySSLSetup; $1)
+C_POINTER:C301(Http_PaySSLSetup; $2)
+C_LONGINT:C283(Http_PaySSLSetup; $3)
+
+//333Cust_OPiROrd
+C_LONGINT:C283(333Cust_OPiROrd; $1)
+
+//Http_SaveServic
+C_LONGINT:C283(Http_SaveServic; $1)
+C_POINTER:C301(Http_SaveServic; $2)
+
+//IE_OrdParseOrderLineImport
+C_LONGINT:C283(IE_OrdParseOrderLineImport; $1)
+
+//Http_serverStatus
+C_LONGINT:C283(Http_serverStatus; $1)
+C_POINTER:C301(Http_serverStatus; $2)
+
+//HO_CatalogCCS
+C_TEXT:C284(HO_CatalogCCS; $1)
+C_TEXT:C284(HO_CatalogCCS; $2)
+C_TEXT:C284(HO_CatalogCCS; $3)
+
+//EDI_OrdLnAddComplete
+C_TEXT:C284(EDI_OrdLnAddComplete; $1)
+C_REAL:C285(EDI_OrdLnAddComplete; $2)
+
+//http_POStatusGetReturn
+C_LONGINT:C283(http_POStatusGetReturn; $1)
+C_POINTER:C301(http_POStatusGetReturn; $2)
+
+//Http_ServerLedgers
+C_LONGINT:C283(Http_ServerLedgers; $1)
+C_POINTER:C301(Http_ServerLedgers; $2)
+
+//HO_CatalogCCS_Report
+C_TEXT:C284(HO_CatalogCCS_Report; $1)
+C_TEXT:C284(HO_CatalogCCS_Report; $2)
+C_TEXT:C284(HO_CatalogCCS_Report; $3)
+
+//Http_SearchBySource
+C_LONGINT:C283(Http_SearchBySource; $1)
+C_POINTER:C301(Http_SearchBySource; $2)
+
+//CMANewCommOrderLine
+C_LONGINT:C283(CMANewCommOrderLine; $1)
+C_REAL:C285(CMANewCommOrderLine; $2)
+C_REAL:C285(CMANewCommOrderLine; $3)
+C_DATE:C307(CMANewCommOrderLine; $4)
+C_TEXT:C284(CMANewCommOrderLine; $5)
+C_TEXT:C284(CMANewCommOrderLine; $6)
+C_LONGINT:C283(CMANewCommOrderLine; $7)
+C_REAL:C285(CMANewCommOrderLine; $8)
+C_REAL:C285(CMANewCommOrderLine; $9)
+
+//Http_DeBugCall
+C_TEXT:C284(Http_DeBugCall; $1)
+C_LONGINT:C283(Http_DeBugCall; $2)
+C_LONGINT:C283(Http_DeBugCall; $3)
+
+//Qx_SetGroups
+C_TEXT:C284(Qx_SetGroups; $0)
+C_TEXT:C284(Qx_SetGroups; $1)
+
+//CMAComOrderOneLine
+C_LONGINT:C283(CMAComOrderOneLine; $1)
+
+//Http_SaveRecord
+C_LONGINT:C283(Http_SaveRecord; $1)
+C_POINTER:C301(Http_SaveRecord; $2)
+C_BOOLEAN:C305(Http_SaveRecord; $3)
+
+//19CVT_Loop_RenameProperties
+C_TEXT:C284(19CVT_Loop_RenameProperties; $1)
+
+//Http_OrderConfirm
+C_LONGINT:C283(Http_OrderConfirm; $1)
+C_TEXT:C284(Http_OrderConfirm; $2)
+
+//EDI_OrdLnDupCheck
+C_BOOLEAN:C305(EDI_OrdLnDupCheck; $0)
+C_TEXT:C284(EDI_OrdLnDupCheck; $1)
+C_TEXT:C284(EDI_OrdLnDupCheck; $2)
+
+//Http_Employees
+C_LONGINT:C283(Http_Employees; $1)
+C_POINTER:C301(Http_Employees; $2)
+
+//EDI_Header
+C_TEXT:C284(EDI_Header; $0)
+
+//Http_PPSearch
+C_LONGINT:C283(Http_PPSearch; $1)
+C_POINTER:C301(Http_PPSearch; $2)
+
+//http_PaySSLRecs
+C_LONGINT:C283(http_PaySSLRecs; $1)
+C_POINTER:C301(http_PaySSLRecs; $2)
+C_LONGINT:C283(http_PaySSLRecs; $3)
+
+//Http_serverSearch
+C_LONGINT:C283(Http_serverSearch; $1)
+C_POINTER:C301(Http_serverSearch; $2)
+
+//http_ItemCopy
+C_REAL:C285(http_ItemCopy; $0)
+C_LONGINT:C283(http_ItemCopy; $1)
+C_POINTER:C301(http_ItemCopy; $2)
+
+//Http_MfgOrdSplit
+C_LONGINT:C283(Http_MfgOrdSplit; $1)
+C_POINTER:C301(Http_MfgOrdSplit; $2)
+
+//Http_MetaParse
+C_POINTER:C301(Http_MetaParse; $1)
+
+//Http_PostCC
+C_LONGINT:C283(Http_PostCC; $1)
+C_POINTER:C301(Http_PostCC; $2)
+
+//Txt_2Array
+C_TEXT:C284(Txt_2Array; $1)
+C_POINTER:C301(Txt_2Array; $2)
+C_TEXT:C284(Txt_2Array; $3)
+C_BOOLEAN:C305(Txt_2Array; $4)
+
+//CMAComInvoiceOneLine
+C_LONGINT:C283(CMAComInvoiceOneLine; $1)
+C_REAL:C285(CMAComInvoiceOneLine; $2)
+C_REAL:C285(CMAComInvoiceOneLine; $3)
+C_REAL:C285(CMAComInvoiceOneLine; $4)
+C_TEXT:C284(CMAComInvoiceOneLine; $5)
+C_DATE:C307(CMAComInvoiceOneLine; $6)
+
+//http_4DPict
+C_LONGINT:C283(http_4DPict; $1)
+C_POINTER:C301(http_4DPict; $2)
+
+//Http_ShowUser
+C_LONGINT:C283(Http_ShowUser; $1)
+C_POINTER:C301(Http_ShowUser; $2)
+
+//Http_SalesStats
+C_LONGINT:C283(Http_SalesStats; $1)
+C_POINTER:C301(Http_SalesStats; $2)
+
+//HTTP_Query
+C_LONGINT:C283(HTTP_Query; $1)
+C_POINTER:C301(HTTP_Query; $2)
+
+//http_srchTech
+C_LONGINT:C283(http_srchTech; $1)
+C_POINTER:C301(http_srchTech; $2)
+
+//19TestFillAll
+C_OBJECT:C1216(19TestFillAll; $1)
+
+//http_NC_GetArticle
+C_TEXT:C284(http_NC_GetArticle; $1)
+C_POINTER:C301(http_NC_GetArticle; $2)
+
+//Http_Post2Mom
+C_TEXT:C284(Http_Post2Mom; $1)
+C_TEXT:C284(Http_Post2Mom; $2)
+C_LONGINT:C283(Http_Post2Mom; $3)
+C_LONGINT:C283(Http_Post2Mom; $4)
+
+//Http_BrowerRequestHead
+C_TEXT:C284(Http_BrowerRequestHead; $0)
+C_TEXT:C284(Http_BrowerRequestHead; $1)
+C_TEXT:C284(Http_BrowerRequestHead; $2)
+C_LONGINT:C283(Http_BrowerRequestHead; $3)
+
+//CM_FindRate
+C_REAL:C285(CM_FindRate; $0)
+C_POINTER:C301(CM_FindRate; $1)
+C_POINTER:C301(CM_FindRate; $2)
+C_POINTER:C301(CM_FindRate; $3)
+
+//Http_eMailForm
+C_LONGINT:C283(Http_eMailForm; $1)
+C_POINTER:C301(Http_eMailForm; $2)
+
+//IE_OrdVerifyImportFields
+C_BOOLEAN:C305(IE_OrdVerifyImportFields; $0)
+C_TEXT:C284(IE_OrdVerifyImportFields; $1)
+C_LONGINT:C283(IE_OrdVerifyImportFields; $2)
+C_POINTER:C301(IE_OrdVerifyImportFields; $3)
+C_POINTER:C301(IE_OrdVerifyImportFields; $4)
+C_POINTER:C301(IE_OrdVerifyImportFields; $5)
+
+//B2B_Exchange
+C_LONGINT:C283(B2B_Exchange; $0)
+
+//Http_NavServer
+C_LONGINT:C283(Http_NavServer; $1)
+C_POINTER:C301(Http_NavServer; $2)
+
+//Http_ItemRelated
+C_LONGINT:C283(Http_ItemRelated; $1)
+C_TEXT:C284(Http_ItemRelated; $2)
+
+//333Cust_OPRLProp
+C_LONGINT:C283(333Cust_OPRLProp; $1)
+
+//00_Learning_JPR_2022
+C_OBJECT:C1216(00_Learning_JPR_2022; $1)
+C_BOOLEAN:C305(00_Learning_JPR_2022; $2)
+
+//Http_PpNew
+C_LONGINT:C283(Http_PpNew; $1)
+C_POINTER:C301(Http_PpNew; $2)
+C_BOOLEAN:C305(Http_PpNew; $3)
+
+//Http_UniqueIDMatch
+C_TEXT:C284(Http_UniqueIDMatch; $0)
+C_TEXT:C284(Http_UniqueIDMatch; $1)
+
+//Http_ServerService
+C_LONGINT:C283(Http_ServerService; $1)
+C_POINTER:C301(Http_ServerService; $2)
+
+//Http_RemoteUserSearch
+C_LONGINT:C283(Http_RemoteUserSearch; $1)
+C_POINTER:C301(Http_RemoteUserSearch; $2)
+
+//_InputFormDeleteReplace
+C_TEXT:C284(_InputFormDeleteReplace; $1)
+C_TEXT:C284(_InputFormDeleteReplace; $2)
+C_TEXT:C284(_InputFormDeleteReplace; $3)
+
+//Http_OrdStatus
+C_LONGINT:C283(Http_OrdStatus; $1)
+C_POINTER:C301(Http_OrdStatus; $2)
+
+//IE_OrdAppendOrdLines
+C_LONGINT:C283(IE_OrdAppendOrdLines; $1)
+
+//EDI_OutMakeFile
+C_LONGINT:C283(EDI_OutMakeFile; $1)
+C_TEXT:C284(EDI_OutMakeFile; $2)
+
+//httpSaveContact
+C_LONGINT:C283(httpSaveContact; $1)
+C_POINTER:C301(httpSaveContact; $2)
+
+//00_Learning_Meta
+C_OBJECT:C1216(00_Learning_Meta; $0)
+
+//Http_OptOut
+C_LONGINT:C283(Http_OptOut; $1)
+C_POINTER:C301(Http_OptOut; $2)
+
+//http_Register
+C_LONGINT:C283(http_Register; $1)
+C_POINTER:C301(http_Register; $2)
+
+//Qx_BuildListQty
+C_LONGINT:C283(Qx_BuildListQty; $1)
+
+//Http_QueryRecords
+C_REAL:C285(Http_QueryRecords; $1)
+C_POINTER:C301(Http_QueryRecords; $2)
+
+//Qx_PlaceBottomRiders
+C_TEXT:C284(Qx_PlaceBottomRiders; $1)
+
+//CMA_ImportOrdLines
+C_TEXT:C284(CMA_ImportOrdLines; $1)
+
+//Http_PostGen
+C_LONGINT:C283(Http_PostGen; $1)
+C_POINTER:C301(Http_PostGen; $2)
+C_POINTER:C301(Http_PostGen; $3)
+C_TEXT:C284(Http_PostGen; $4)
+
+//0019FixPaths
+C_TEXT:C284(0019FixPaths; $1)
+C_TEXT:C284(0019FixPaths; $2)
+C_TEXT:C284(0019FixPaths; $3)
+C_TEXT:C284(0019FixPaths; $4)
+
+//Qx_Place
+C_TEXT:C284(Qx_Place; $1)
+
+//Http_SrchLibraries
+C_LONGINT:C283(Http_SrchLibraries; $1)
+C_POINTER:C301(Http_SrchLibraries; $2)
+
+//Http_ServerAdmin
+C_LONGINT:C283(Http_ServerAdmin; $1)
+
+//Http_PayTrap
+C_LONGINT:C283(Http_PayTrap; $1)
+C_POINTER:C301(Http_PayTrap; $2)
+
+//zzz19CVT_HarvestForm
+C_COLLECTION:C1488(zzz19CVT_HarvestForm; $0)
+C_TEXT:C284(zzz19CVT_HarvestForm; $1)
+C_TEXT:C284(zzz19CVT_HarvestForm; $2)
+
+//Http_ReservationSrch
+C_LONGINT:C283(Http_ReservationSrch; $1)
+C_POINTER:C301(Http_ReservationSrch; $2)
+
+//BulkEditFromOL
+C_TEXT:C284(BulkEditFromOL; $1)
+C_TEXT:C284(BulkEditFromOL; $2)
+C_TEXT:C284(BulkEditFromOL; $3)
+C_POINTER:C301(BulkEditFromOL; $4)
+
+//Qx_PlacePackedTight
+C_TEXT:C284(Qx_PlacePackedTight; $1)
+
+//Http_OrderAllyAssign
+C_LONGINT:C283(Http_OrderAllyAssign; $1)
+C_POINTER:C301(Http_OrderAllyAssign; $2)
+
+//CM_ChangeWho
+C_POINTER:C301(CM_ChangeWho; $1)
+C_POINTER:C301(CM_ChangeWho; $2)
+C_POINTER:C301(CM_ChangeWho; $3)
+C_POINTER:C301(CM_ChangeWho; $4)
+C_POINTER:C301(CM_ChangeWho; $5)
+C_LONGINT:C283(CM_ChangeWho; $6)
+C_POINTER:C301(CM_ChangeWho; $7)
+C_POINTER:C301(CM_ChangeWho; $8)
+C_POINTER:C301(CM_ChangeWho; $9)
+C_POINTER:C301(CM_ChangeWho; $10)
+C_POINTER:C301(CM_ChangeWho; $11)
+C_POINTER:C301(CM_ChangeWho; $12)
+C_POINTER:C301(CM_ChangeWho; $13)
+
+//zzzLogAbandonedNumber
+C_LONGINT:C283(zzzLogAbandonedNumber; $1)
+C_LONGINT:C283(zzzLogAbandonedNumber; $2)
+
+//NC_GetArticle2
+C_TEXT:C284(NC_GetArticle2; $1)
+C_POINTER:C301(NC_GetArticle2; $2)
+
+//LogAbandonedNumber
+C_LONGINT:C283(LogAbandonedNumber; $1)
+C_LONGINT:C283(LogAbandonedNumber; $2)
+
+//IE_OrdFindFieldPtrInArray
+C_POINTER:C301(IE_OrdFindFieldPtrInArray; $0)
+C_POINTER:C301(IE_OrdFindFieldPtrInArray; $1)
+C_POINTER:C301(IE_OrdFindFieldPtrInArray; $2)
+C_POINTER:C301(IE_OrdFindFieldPtrInArray; $3)
+
+//Http_ServerInvoices
+C_LONGINT:C283(Http_ServerInvoices; $1)
+C_POINTER:C301(Http_ServerInvoices; $2)
+
+//HO_CatalogDuravent
+C_TEXT:C284(HO_CatalogDuravent; $1)
+C_TEXT:C284(HO_CatalogDuravent; $2)
+C_BOOLEAN:C305(HO_CatalogDuravent; $3)
+
+//Catalog_setValue
+C_OBJECT:C1216(Catalog_setValue; $1)
+C_TEXT:C284(Catalog_setValue; $2)
+C_TEXT:C284(Catalog_setValue; $3)
+
+//zzzCalendar_UserSetup
+C_TEXT:C284(zzzCalendar_UserSetup; $1)
+C_POINTER:C301(zzzCalendar_UserSetup; $2)
+C_POINTER:C301(zzzCalendar_UserSetup; $3)
+
+//Catalog_History
+C_OBJECT:C1216(Catalog_History; $1)
+C_COLLECTION:C1488(Catalog_History; $2)
+
+//IE_GetFileObj
+C_OBJECT:C1216(IE_GetFileObj; $0)
+C_VARIANT:C1683(IE_GetFileObj; $1)
+
+//findInCollection
+C_OBJECT:C1216(findInCollection; $1)
+C_VARIANT:C1683(findInCollection; $2)
+C_VARIANT:C1683(findInCollection; $3)
+
+//IE_SpreadSheetToCollection
+C_COLLECTION:C1488(IE_SpreadSheetToCollection; $0)
+C_OBJECT:C1216(IE_SpreadSheetToCollection; $1)

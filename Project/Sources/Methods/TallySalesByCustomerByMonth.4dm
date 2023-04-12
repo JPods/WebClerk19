@@ -73,7 +73,7 @@ For (vi15; 1; vi16)
 				// change in either a customer or a vendor
 				C_LONGINT:C283(dtReport)
 				C_TEXT:C284(reportName)
-				dtReport:=DateTime_Enter(vDate2; ?23:59:59?)
+				dtReport:=DateTime_DTTo(vDate2; ?23:59:59?)
 				QUERY:C277([TallyResult:73]; [TallyResult:73]purpose:2="CustMfrByMonth"; *)
 				QUERY:C277([TallyResult:73];  & [TallyResult:73]customerID:30=vcustomerID; *)
 				QUERY:C277([TallyResult:73];  & [TallyResult:73]tableNum:3=Table:C252(->[Customer:2]); *)

@@ -52,5 +52,5 @@ If ($viLengthString>0)  // protection against empty string
 	End if 
 Else 
 	$0:=$1  // Empty String ""
-	ConsoleMessage("vWCDocumentURI is an empty String \rRequestURI = "+vWCRequestURI)
+	ConsoleLog("vWCDocumentURI is an empty String \rRequestURI = "+vWCRequestURI)
 End if 

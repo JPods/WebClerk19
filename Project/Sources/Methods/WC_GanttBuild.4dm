@@ -25,18 +25,18 @@ C_LONGINT:C283($incRecs; $cntRecs)
 QUERY:C277([Project:24]; [Project:24]id:23=vUUIDKeypr)
 If (Records in selection:C76([Project:24])=0)
 	If ($projectNum=0)
-		QUERY:C277([Project:24]; [Project:24]projectNum:1=19)
+		QUERY:C277([Project:24]; [Project:24]idNum:1=19)
 	Else 
-		QUERY:C277([Project:24]; [Project:24]projectNum:1=$projectNum)
+		QUERY:C277([Project:24]; [Project:24]idNum:1=$projectNum)
 	End if 
 End if 
-QUERY:C277([WorkOrder:66]; [WorkOrder:66]projectNum:80=[Project:24]projectNum:1)
-QUERY:C277([Order:3]; [Order:3]projectNum:50=[Project:24]projectNum:1)
-QUERY:C277([PO:39]; [PO:39]projectNum:6=[Project:24]projectNum:1)
-QUERY:C277([Proposal:42]; [Proposal:42]projectNum:22=[Project:24]projectNum:1)
+QUERY:C277([WorkOrder:66]; [WorkOrder:66]projectNum:80=[Project:24]idNum:1)
+QUERY:C277([Order:3]; [Order:3]projectNum:50=[Project:24]idNum:1)
+QUERY:C277([PO:39]; [PO:39]idNumProject:6=[Project:24]idNum:1)
+QUERY:C277([Proposal:42]; [Proposal:42]idNumProject:22=[Project:24]idNum:1)
 
 $cntRecs:=Records in selection:C76([WorkOrder:66])
-ORDER BY:C49([WorkOrder:66]; [WorkOrder:66]woNum:29)
+ORDER BY:C49([WorkOrder:66]; [WorkOrder:66]idNum:29)
 
 ARRAY OBJECT:C1221($aObjWorkOrders; 0)
 C_OBJECT:C1216($voProject)
@@ -127,8 +127,8 @@ $working:=JSON Stringify:C1217($voProject)
 $working:=JSON Stringify:C1217($working)
 
 If (<>viDeBugMode>410)
-	ConsoleMessage("GanttBuild")
-	ConsoleMessage($working)
+	ConsoleLog("GanttBuild")
+	ConsoleLog($working)
 End if 
 C_BLOB:C604(vblWCResponse)
 
@@ -208,7 +208,7 @@ If (False:C215)
 	C_TEXT:C284(vtjqresourceId; vtjqroleId; vtjqeffort)
 	
 	
-	[WorkOrder:66]woNum:29:=0
+	[WorkOrder:66]idNum:29:=0
 	[WorkOrder:66]name:76:=""
 	[WorkOrder:66]flowProgress:87:=0
 	[WorkOrder:66]flowProgressByWorklog:97:=False:C215

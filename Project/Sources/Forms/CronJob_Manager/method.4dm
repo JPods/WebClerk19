@@ -67,7 +67,7 @@ Case of
 		vhNow:=Current time:C178  //current time
 		$viSeconds:=vhNow%60  //seconds past the current minute
 		$viDelay:=60-$viSeconds  //seconds to delay until the next minute   //### jwm ### 20120924_1115
-		//$viNow:=DateTime_Enter (Current date;vhNow)
+		//$viNow:=DateTime_DTTo (Current date;vhNow)
 		//$viNext:=$viNow+$viDelay
 		//vhNext:=jDateTimeRTime ($viNext)
 		$vtThen:="00:00:"+String:C10($viDelay; "00")
@@ -112,7 +112,7 @@ Case of
 			vhNow:=Current time:C178  //current time
 			$viSeconds:=vhNow%60  //seconds past the current minute
 			$viDelay:=60-$viSeconds  //seconds to delay until the next minute   //### jwm ### 20120924_1115
-			//$viNow:=DateTime_Enter (Current date;vhNow)
+			//$viNow:=DateTime_DTTo (Current date;vhNow)
 			//$viNext:=$viNow+$viDelay
 			//vhNext:=jDateTimeRTime ($viNext)
 			

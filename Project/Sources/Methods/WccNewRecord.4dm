@@ -126,33 +126,32 @@ If ($newRecord)
 					[Invoice:26]dateShipped:4:=Current date:C33
 					NxPvInvoices
 				: ($tableNum=34)  //call reports
-					[CallReport:34]dtAction:4:=DateTime_Enter
-					[CallReport:34]dateDocument:17:=Current date:C33
-					[CallReport:34]complete:7:=False:C215
-					[CallReport:34]initiatedBy:23:=Current user:C182
-					[CallReport:34]actionBy:3:=Current user:C182
+					[Call:34]dtAction:4:=DateTime_DTTo
+					[Call:34]dateDocument:17:=Current date:C33
+					[Call:34]complete:7:=False:C215
+					[Call:34]initiatedBy:23:=Current user:C182
+					[Call:34]actionBy:3:=Current user:C182
 					Case of 
-						: (([CallReport:34]tableNum:2<1) | ([CallReport:34]tableNum:2>Get last table number:C254))
+						: (([Call:34]tableNum:2<1) | ([Call:34]tableNum:2>Get last table number:C254))
 							vResponse:="No related Table Defined for this Call Report."
-						: ([CallReport:34]tableNum:2=(Table:C252(->[zzzLead:48])))
-							QUERY:C277([zzzLead:48]; [zzzLead:48]idNum:32=Num:C11([CallReport:34]customerID:1))
-						: ([CallReport:34]tableNum:2=(Table:C252(->[Contact:13])))
-							QUERY:C277([Contact:13]; [Contact:13]idNum:28=Num:C11([CallReport:34]customerID:1))
-						: ([CallReport:34]tableNum:2=(Table:C252(->[Customer:2])))
-							QUERY:C277([Customer:2]; [Customer:2]customerID:1=[CallReport:34]customerID:1)
-						: ([CallReport:34]tableNum:2=(Table:C252(->[Item:4])))
-							QUERY:C277([Item:4]; [Item:4]itemNum:1=[CallReport:34]itemNum:24)
-							If ([CallReport:34]profile1:26="AutoLoad")
-								[CallReport:34]profile1:26:=[Item:4]type:26
-								[CallReport:34]profile2:27:=[Item:4]profile1:35
-								[CallReport:34]profile3:28:=[Item:4]profile2:36
-								[CallReport:34]profileName1:30:=<>vItemsType
-								[CallReport:34]profileName2:31:=<>vItemsProfile1
-								[CallReport:34]profileName3:32:=<>vItemsProfile2
+							
+						: ([Call:34]tableNum:2=(Table:C252(->[Contact:13])))
+							QUERY:C277([Contact:13]; [Contact:13]idNum:28=Num:C11([Call:34]customerID:1))
+						: ([Call:34]tableNum:2=(Table:C252(->[Customer:2])))
+							QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Call:34]customerID:1)
+						: ([Call:34]tableNum:2=(Table:C252(->[Item:4])))
+							QUERY:C277([Item:4]; [Item:4]itemNum:1=[Call:34]itemNum:24)
+							If ([Call:34]profile1:26="AutoLoad")
+								[Call:34]profile1:26:=[Item:4]type:26
+								[Call:34]profile2:27:=[Item:4]profile1:35
+								[Call:34]profile3:28:=[Item:4]profile2:36
+								[Call:34]profileName1:30:=<>vItemsType
+								[Call:34]profileName2:31:=<>vItemsProfile1
+								[Call:34]profileName3:32:=<>vItemsProfile2
 								//[CallReport]actionDate:=jDateTimeRDate([Item]dtItemDate)
 							End if 
 					End case 
-					[CallReport:34]actionBy:3:=[RemoteUser:57]userName:2
+					[Call:34]actionBy:3:=[RemoteUser:57]userName:2
 				: ($tableNum=39)  //PO        
 					NxPvPOs
 				: ($tableNum=42)  //proposals

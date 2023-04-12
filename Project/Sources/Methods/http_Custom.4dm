@@ -227,7 +227,7 @@
 //  [WorkOrder]description:=jitCustomBody
 //  //WC_Parse (Table(->[WorkOrder]);->voState.url)
 //  //WC_Parse (Table(->[WorkOrder]);->jitCustomBody)
-//  [WorkOrder]dtReleased:=DateTime_Enter
+//  [WorkOrder]dtReleased:=DateTime_DTTo
 //  [WorkOrder]dtCreated:=[WorkOrder]dtReleased
 //  [WorkOrder]action:="WebInProcess"
 //  [WorkOrder]customerID:=[Customer]customerID

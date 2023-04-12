@@ -56,7 +56,7 @@
 //  //[EventLog]Message:=""
 //  [EventLog]qty:=0
 //  [EventLog]value:=0
-//  [EventLog]beenHere:=DateTime_Enter
+//  [EventLog]beenHere:=DateTime_DTTo
 //  vBeenHere:=[EventLog]beenHere
 //  vlBeenHere:=[EventLog]beenHere
 //  $err:=0

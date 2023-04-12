@@ -1,6 +1,6 @@
 //%attributes = {"publishedWeb":true}
 //Procedure: Date_SetProc
-Prs_ListActive
+Process_ListActive
 C_LONGINT:C283($i; $k)
 $k:=Size of array:C274(<>aPrsNum)
 For ($i; 1; $k)

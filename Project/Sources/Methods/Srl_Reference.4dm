@@ -36,13 +36,13 @@ Else
 			: (ptCurTable=(->[Order:3]))
 				aoSerialRc{aoLineAction}:=-[ItemSerial:47]idNum:18
 				aoSerialNm{aoLineAction}:=vsnSrNum
-				[ItemSerial:47]customerid:9:=[Customer:2]customerID:1
-				$theDoc:=[Order:3]orderNum:2
+				[ItemSerial:47]customerID:9:=[Customer:2]customerID:1
+				$theDoc:=[Order:3]idNum:2
 			: (ptCurTable=(->[Invoice:26]))
 				aiSerialRc{aiLineAction}:=-[ItemSerial:47]idNum:18
 				aiSerialNm{aiLineAction}:=vsnSrNum
-				[ItemSerial:47]customerid:9:=[Customer:2]customerID:1
-				$theDoc:=[Invoice:26]invoiceNum:2
+				[ItemSerial:47]customerID:9:=[Customer:2]customerID:1
+				$theDoc:=[Invoice:26]idNum:2
 				//: (ptCurFile=([Proposal]))
 				//aPSerialRc{aPLineAction}:=-[ItemSerial]SerialRecordID
 				//aPSerialNm{aPLineAction}:=vsnSrNum
@@ -50,9 +50,9 @@ Else
 				//$theDoc:=0
 			: (ptCurTable=(->[PO:39]))
 				aPoSerialRc{aPOLineAction}:=-[ItemSerial:47]idNum:18
-				aPoSerialNm{aPOLineAction}:=vsnSrNum
-				[ItemSerial:47]vendorid:5:=[Vendor:38]vendorid:1
-				$theDoc:=[PO:39]poNum:5
+				//aPoSerialNm{aPOLineAction}:=vsnSrNum
+				[ItemSerial:47]vendorID:5:=[Vendor:38]vendorID:1
+				$theDoc:=[PO:39]idNum:5
 		End case 
 		Srl_Transaction(Table:C252(ptCurTable); $theDoc; True:C214; "Reference")
 		SAVE RECORD:C53([ItemSerial:47])

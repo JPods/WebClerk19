@@ -25,11 +25,11 @@ Else
 	$ptTable:=STR_GetTablePointer($tableName)
 	If (Is nil pointer:C315($ptTable))
 		vResponse:="Error: Invalid tableName: "+$tableName
-		ConsoleMessage("Error: WCapiTask_KeyTags: "+$tableName)
+		ConsoleLog("Error: WCapiTask_KeyTags: "+$tableName)
 	Else 
 		$tableName:=Table name:C256($ptTable)
 		ARRAY TEXT:C222($atMyKeywords; 0)
-		$vtKeyWord:=KeyWordCleanup($vtKeyWord; ->$atMyKeywords)
+		$vtKeyWord:=KeyWordCleanup($vtKeyWord)
 		KeyWordByTag($tableName; $vtKeyWord)
 		$vtRole:="Sales"
 		$vtPurpose:="list"

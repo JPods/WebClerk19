@@ -9,6 +9,8 @@
 //
 // Parameters
 // ----------------------------------------------------
+
+$dateBeg:=Current date:C33-Day of:C23(Current date:C33)+1
 C_TEXT:C284($1; $dateString)
 C_LONGINT:C283($2; $formatNum)
 C_LONGINT:C283(<>DateFormat)

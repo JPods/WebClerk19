@@ -25,109 +25,109 @@ Case of
 	: ($2=(->[ItemXRef:22]))
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[ItemXRef:22]itemNumXRef:2)
 		$doItemTasks:=True:C214
-	: ($2=(->[WebTempRec:101]))
-		QUERY:C277([Item:4]; [Item:4]itemNum:1=[WebTempRec:101]itemNum:3)
+	: ($2=(->[zzzWebTempRec:101]))
+		QUERY:C277([Item:4]; [Item:4]itemNum:1=[zzzWebTempRec:101]itemNum:3)
 		$doItemTasks:=True:C214
 	: ($2=(->[Item:4]))
 		$doItemTasks:=True:C214
 	: (($2=(->[Proposal:42])) & ($doDetails))
 		QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Proposal:42]customerID:1)
-		QUERY:C277([Service:6]; [Service:6]proposalNum:27=[Proposal:42]proposalNum:5; *)
+		QUERY:C277([Service:6]; [Service:6]idNumProposal:27=[Proposal:42]idNum:5; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19>0; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19<=viEndUserSecurityLevel)
 		QUERY:C277([QA:70]; [QA:70]tableNum:11=(Table:C252(->[Proposal:42])); *)
-		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Proposal:42]proposalNum:5); *)
+		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Proposal:42]idNum:5); *)
 		If ([Proposal:42]idNumTask:70#0)
 			QUERY:C277([QA:70];  | [QA:70]idNumTask:12=[Proposal:42]idNumTask:70; *)
 		End if 
 		QUERY:C277([QA:70])
-		QUERY:C277([ProposalLine:43]; [ProposalLine:43]proposalNum:1=[Proposal:42]proposalNum:5)
+		QUERY:C277([ProposalLine:43]; [ProposalLine:43]idNumProposal:1=[Proposal:42]idNum:5)
 		QUERY:C277([Document:100]; [Document:100]event:9=String:C10([Proposal:42]idNumTask:70))
 		P_PpHeadVars
 		
 	: (($2=(->[Order:3])) & ($doDetails))
 		QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Order:3]customerID:1)
-		QUERY:C277([Service:6]; [Service:6]orderNum:22=[Order:3]orderNum:2; *)
+		QUERY:C277([Service:6]; [Service:6]idNumOrder:22=[Order:3]idNum:2; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19>0; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19<=viEndUserSecurityLevel)
 		QUERY:C277([QA:70]; [QA:70]tableNum:11=(Table:C252(->[Order:3])); *)
-		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Order:3]orderNum:2); *)
+		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Order:3]idNum:2); *)
 		If ([Order:3]idNumTask:85#0)
 			QUERY:C277([QA:70];  | [QA:70]idNumTask:12=[Order:3]idNumTask:85; *)
 		End if 
 		QUERY:C277([QA:70])
-		QUERY:C277([OrderLine:49]; [OrderLine:49]orderNum:1=[Order:3]orderNum:2)
-		QUERY:C277([POLine:40]; [POLine:40]orderNum:16=[Order:3]orderNum:2)
+		QUERY:C277([OrderLine:49]; [OrderLine:49]idNumOrder:1=[Order:3]idNum:2)
+		QUERY:C277([POLine:40]; [POLine:40]idNumOrder:16=[Order:3]idNum:2)
 		QUERY:C277([Document:100]; [Document:100]event:9=String:C10([Order:3]idNumTask:85))
 		QUERY:C277([WorkOrder:66]; [WorkOrder:66]idNumTask:22=[Order:3]idNumTask:85)
-		QUERY:C277([LoadTag:88]; [LoadTag:88]orderNum:29=[Order:3]orderNum:2)
+		QUERY:C277([LoadTag:88]; [LoadTag:88]idNumOrder:29=[Order:3]idNum:2)
 		P_OrdHeadVars
 	: (($2=(->[WorkOrder:66])) & ($doDetails))
 		QUERY:C277([Customer:2]; [Customer:2]customerID:1=[WorkOrder:66]customerID:28)
-		QUERY:C277([Order:3]; [Order:3]orderNum:2=[WorkOrder:66]idNumTask:22)
-		QUERY:C277([Service:6]; [Service:6]orderNum:22=[Order:3]orderNum:2; *)
+		QUERY:C277([Order:3]; [Order:3]idNum:2=[WorkOrder:66]idNumTask:22)
+		QUERY:C277([Service:6]; [Service:6]idNumOrder:22=[Order:3]idNum:2; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19>0; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19<=viEndUserSecurityLevel)
 		QUERY:C277([QA:70]; [QA:70]tableNum:11=(Table:C252(->[Order:3])); *)
-		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Order:3]orderNum:2); *)
+		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Order:3]idNum:2); *)
 		If ([Order:3]idNumTask:85#0)
 			QUERY:C277([QA:70];  | [QA:70]idNumTask:12=[Order:3]idNumTask:85; *)
 		End if 
 		QUERY:C277([QA:70])
-		QUERY:C277([OrderLine:49]; [OrderLine:49]orderNum:1=[Order:3]orderNum:2)
-		QUERY:C277([POLine:40]; [POLine:40]orderNum:16=[Order:3]orderNum:2)
+		QUERY:C277([OrderLine:49]; [OrderLine:49]idNumOrder:1=[Order:3]idNum:2)
+		QUERY:C277([POLine:40]; [POLine:40]idNumOrder:16=[Order:3]idNum:2)
 		QUERY:C277([Document:100]; [Document:100]event:9=String:C10([Order:3]idNumTask:85))
 		P_OrdHeadVars
 	: (($2=(->[Invoice:26])) & ($doDetails))
 		QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Invoice:26]customerID:3)
-		QUERY:C277([Service:6]; [Service:6]invoiceNum:23=[Invoice:26]invoiceNum:2; *)
+		QUERY:C277([Service:6]; [Service:6]idNumInvoice:23=[Invoice:26]idNum:2; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19>0; *)
 		QUERY:C277([Service:6];  & [Service:6]publish:19<=viEndUserSecurityLevel)
 		QUERY:C277([QA:70]; [QA:70]tableNum:11=(Table:C252(->[Invoice:26])); *)
-		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Invoice:26]invoiceNum:2); *)
+		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Invoice:26]idNum:2); *)
 		If ([Invoice:26]idNumTask:78#0)
 			QUERY:C277([QA:70];  | [QA:70]idNumTask:12=[Invoice:26]idNumTask:78; *)
 		End if 
 		QUERY:C277([QA:70])
-		QUERY:C277([InvoiceLine:54]; [InvoiceLine:54]invoiceNum:1=[Invoice:26]invoiceNum:2)
+		QUERY:C277([InvoiceLine:54]; [InvoiceLine:54]idNumInvoice:1=[Invoice:26]idNum:2)
 		QUERY:C277([Document:100]; [Document:100]event:9=String:C10([Order:3]idNumTask:85))
-		QUERY:C277([LoadTag:88]; [LoadTag:88]invoiceNum:19=[Invoice:26]invoiceNum:2)
+		QUERY:C277([LoadTag:88]; [LoadTag:88]idNumInvoice:19=[Invoice:26]idNum:2)
 		P_IvcHeadVars
 	: (($2=(->[PO:39])) & ($doDetails))
 		QUERY:C277([Vendor:38]; [Vendor:38]vendorID:1=[PO:39]vendorID:1)
 		QUERY:C277([QA:70]; [QA:70]tableNum:11=(Table:C252(->[PO:39])); *)
-		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([PO:39]poNum:5); *)
+		QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([PO:39]idNum:5); *)
 		If ([PO:39]idNumTask:69#0)
 			QUERY:C277([QA:70];  | [QA:70]idNumTask:12=[PO:39]idNumTask:69; *)
 		End if 
 		QUERY:C277([QA:70])
-		QUERY:C277([POLine:40]; [POLine:40]poNum:1=[PO:39]poNum:5)
+		QUERY:C277([POLine:40]; [POLine:40]idNumPO:1=[PO:39]idNum:5)
 		QUERY:C277([Document:100]; [Document:100]event:9=String:C10([PO:39]idNumTask:69))
-		QUERY:C277([LoadTag:88]; [LoadTag:88]poNum:18=[PO:39]poNum:5)
+		QUERY:C277([LoadTag:88]; [LoadTag:88]idNumPO:18=[PO:39]idNum:5)
 		P_IvcHeadVars
 	: ($2=(->[POLine:40]))
-		If ([POLine:40]poNum:1#[PO:39]poNum:5)
-			QUERY:C277([PO:39]; [PO:39]poNum:5=[POLine:40]poNum:1)
+		If ([POLine:40]idNumPO:1#[PO:39]idNum:5)
+			QUERY:C277([PO:39]; [PO:39]idNum:5=[POLine:40]idNumPO:1)
 		End if 
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[POLine:40]itemNum:2)
 		$doItemTasks:=True:C214
 		
 	: ($2=(->[ProposalLine:43]))
-		If ([ProposalLine:43]proposalNum:1#[Proposal:42]proposalNum:5)
-			QUERY:C277([Proposal:42]; [Proposal:42]proposalNum:5=[ProposalLine:43]proposalNum:1)
+		If ([ProposalLine:43]idNumProposal:1#[Proposal:42]idNum:5)
+			QUERY:C277([Proposal:42]; [Proposal:42]idNum:5=[ProposalLine:43]idNumProposal:1)
 		End if 
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[ProposalLine:43]itemNum:2)
 		$doItemTasks:=True:C214
 	: ($2=(->[OrderLine:49]))
-		If ([OrderLine:49]orderNum:1#[Order:3]orderNum:2)
-			QUERY:C277([Order:3]; [Order:3]orderNum:2=[OrderLine:49]orderNum:1)
+		If ([OrderLine:49]idNumOrder:1#[Order:3]idNum:2)
+			QUERY:C277([Order:3]; [Order:3]idNum:2=[OrderLine:49]idNumOrder:1)
 		End if 
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[OrderLine:49]itemNum:4)
 		$doItemTasks:=True:C214
 		
 	: ($2=(->[InvoiceLine:54]))
-		If ([InvoiceLine:54]invoiceNum:1#[Invoice:26]invoiceNum:2)
-			QUERY:C277([Invoice:26]; [Invoice:26]invoiceNum:2=[InvoiceLine:54]invoiceNum:1)
+		If ([InvoiceLine:54]idNumInvoice:1#[Invoice:26]idNum:2)
+			QUERY:C277([Invoice:26]; [Invoice:26]idNum:2=[InvoiceLine:54]idNumInvoice:1)
 		End if 
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=[InvoiceLine:54]itemNum:4)
 		$doItemTasks:=True:C214
@@ -177,7 +177,10 @@ If ($doItemTasks)
 	
 	If ((<>vlWcGetSpec=1) | ($3))
 		Item_GetSpec
-		Http_ItemPriceBreaks
+		//Http_ItemPriceBreaks
+		
+		// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+		
 		QUERY:C277([BOM:21]; [BOM:21]itemNum:1=[Item:4]itemNum:1)
 		C_TEXT:C284(vBOM)
 		vBOM:=""
@@ -192,9 +195,9 @@ If ($doItemTasks)
 			vBOM:=vBOM+"</Table>"
 		End if 
 	End if 
-	If (([Item:4]reservation:74) & (<>vlPublishReservations<=viEndUserSecurityLevel))
-		Http_ItemReservationEach($1)
-	End if 
+	//If (([Item]reservation) & (<>vlPublishReservations<=viEndUserSecurityLevel))
+	//Http_ItemReservationEach($1)
+	//End if 
 	
 	
 	

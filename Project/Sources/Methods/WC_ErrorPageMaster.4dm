@@ -14,9 +14,9 @@
 // ----------------------------------------------------
 
 C_TEXT:C284(<>vHTTPErrorPage)
-If (Test path name:C476(<>WebFolder+"Error.html")=1)
+If (Test path name:C476(Storage:C1525.wc.webFolder+"Error.html")=1)
 	// open document ReadOnly
-	$docRef:=Open document:C264(<>WebFolder+"Error.html"; "*"; Read mode:K24:5)
+	$docRef:=Open document:C264(Storage:C1525.wc.webFolder+"Error.html"; "*"; Read mode:K24:5)
 	If (OK=1)
 		C_TEXT:C284($docText)
 		<>vEoF:=Get document size:C479(document)+1  // ### jwm ### 20160714_1147 is plus 1 needed ?

@@ -22,7 +22,7 @@ Else
 End if 
 C_TEXT:C284($myObject; $myText)
 $myObject:=Replace string:C233($myObject; "/"; Folder separator:K24:12)
-$myObjectFolder:=<>WebFolder+"jitObjects"+Folder separator:K24:12
+$myObjectFolder:=Storage:C1525.wc.webFolder+"jitObjects"+Folder separator:K24:12
 
 
 // the jitObject must be listed with its path sub jitObjects folder. Nested objects are allowed

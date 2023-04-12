@@ -63,16 +63,16 @@ Case of
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25>0; *)
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25<=vWccSecurity)
 				//
-				QUERY:C277([UserReport:46]; [UserReport:46]why:9="Report_Rep@"; *)
-				QUERY:C277([UserReport:46];  & [UserReport:46]active:1=True:C214; *)
-				QUERY:C277([UserReport:46];  & [UserReport:46]securityLevel:24<=vWccSecurity)
+				QUERY:C277([Report:46]; [Report:46]why:9="Report_Rep@"; *)
+				QUERY:C277([Report:46];  & [Report:46]active:1=True:C214; *)
+				QUERY:C277([Report:46];  & [Report:46]securityLevel:24<=vWccSecurity)
 				vResponse:="Wcc_MyPage_Job rep OK"
 			: (vWccTableNum=Table:C252(->[Employee:19]))
 				If (Record number:C243([Employee:19])#[EventLog:75]wccPrimeUserRec:23)
 					GOTO RECORD:C242([Employee:19]; [EventLog:75]wccPrimeUserRec:23)
 				End if 
 				$thePage:="WccJ"+[Employee:19]role:7+".html"
-				$pathname:=<>WebFolder+$thePage
+				$pathname:=Storage:C1525.wc.webFolder+$thePage
 				If (Test path name:C476($pathname)<1)
 					$thePage:="EmployeesOne.html"
 				End if 
@@ -80,9 +80,9 @@ Case of
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25>0; *)
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25<=vWccSecurity)
 				//
-				QUERY:C277([UserReport:46]; [UserReport:46]why:9="Report_"+[Employee:19]role:7+"@"; *)
-				QUERY:C277([UserReport:46];  & [UserReport:46]active:1=True:C214; *)
-				QUERY:C277([UserReport:46];  & [UserReport:46]securityLevel:24<=vWccSecurity)
+				QUERY:C277([Report:46]; [Report:46]why:9="Report_"+[Employee:19]role:7+"@"; *)
+				QUERY:C277([Report:46];  & [Report:46]active:1=True:C214; *)
+				QUERY:C277([Report:46];  & [Report:46]securityLevel:24<=vWccSecurity)
 				vResponse:="Wcc_MyPage_Job employee OK"
 		End case 
 End case 

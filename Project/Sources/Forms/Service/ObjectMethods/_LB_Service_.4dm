@@ -24,16 +24,16 @@ Case of
 		
 		
 		If (LB_Document.cur=Null:C1517)
-			ConsoleMessage("LB_Document.cur: null")
+			ConsoleLog("LB_Document.cur: null")
 			//LB_Document.cur:=LB_Document.ents[FORM Event.row-1]
 			// pathDoc_t:=LB_Document.cur.path
 			pathDoc_t:=""
 			CLEAR VARIABLE:C89(imageDoc_p)
-			//ConsoleMessage("pathBase: "+pathDoc_t)
+			//ConsoleLog("pathBase: "+pathDoc_t)
 			//En_ShowImage(pathDoc_t; ->imageDoc_p)
 		Else 
 			pathDoc_t:=LB_Document.cur.path
-			ConsoleMessage("pathBase: "+pathDoc_t)
+			ConsoleLog("pathBase: "+pathDoc_t)
 			pathDoc_t:=Replace string:C233(pathDoc_t; "/Applications/4D v18 R5/"; "")
 			var imageDoc_p : Picture
 			En_ShowImage(pathDoc_t; ->imageDoc_p)
@@ -51,9 +51,9 @@ Case of
 	: (Form event code:C388=On Column Resize:K2:31)
 		
 	: (FORM Event:C1606.row>0)
-		ConsoleMessage("LB_Document.cur: null")
+		ConsoleLog("LB_Document.cur: null")
 		LB_Document.cur:=LB_Document.ents[FORM Event:C1606.row-1]
 		pathDoc_t:=LB_Document.cur.path
-		ConsoleMessage("pathBase: "+pathDoc_t)
+		ConsoleLog("pathBase: "+pathDoc_t)
 		En_ShowImage(pathDoc_t; ->imageDoc_p)
 End case 

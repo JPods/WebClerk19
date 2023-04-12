@@ -24,9 +24,9 @@ Else
 	jSetMenuNums(1; 5; 6)
 	var $obWindows : Object
 	$obWindows:=WindowCountToShow  // example
-	$win_l:=Open form window:C675([Control:1]; "dCashReview"; Plain form window:K39:10; $obWindows.leftOffset; 53+$obWindows.topOffset; *)
-	DIALOG:C40([Control:1]; "dCashReview")
+	$win_l:=Open form window:C675([Base:1]; "dCashReview"; Plain form window:K39:10; $obWindows.leftOffset; 53+$obWindows.topOffset; *)
+	DIALOG:C40([Base:1]; "dCashReview")
 	CLOSE WINDOW:C154
 	
-	Prs_ListActive
+	Process_ListActive
 End if 

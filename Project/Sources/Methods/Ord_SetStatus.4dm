@@ -10,9 +10,9 @@ For ($i; 1; $k)
 		$tempStr:="Status changed to "+v8+"."
 		Case of 
 			: (([Order:3]status:59="Completed") & ([Order:3]status:59#v8))
-				[Order:3]dtProdCompl:57:=0  //DateTime_Enter (!00/00/00!;00:00:00)
+				[Order:3]dtProdCompl:57:=0  //DateTime_DTTo (!00/00/00!;00:00:00)
 			: (v8="Completed")
-				[Order:3]dtProdCompl:57:=DateTime_Enter
+				[Order:3]dtProdCompl:57:=DateTime_DTTo
 		End case 
 		[Order:3]status:59:=v8
 		// zzzqqq jDateTimeStamp(->[Order:3]commentProcess:12; $tempStr)

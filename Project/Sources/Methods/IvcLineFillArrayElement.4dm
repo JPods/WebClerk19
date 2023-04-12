@@ -34,11 +34,11 @@ End if
 
 //
 aiItemNum{$i}:=[InvoiceLine:54]itemNum:4
-aiAltItem{$i}:=[InvoiceLine:54]altItem:29
+aiAltItem{$i}:=[InvoiceLine:54]itemNumAlt:29
 aiDescpt{$i}:=[InvoiceLine:54]description:5
 aiQtyOrder{$i}:=[InvoiceLine:54]qtyOrderedAtInvoice:63
 viBoxCnt:=viBoxCnt+aiQtyOrder{$i}
-aiQtyShip{$i}:=[InvoiceLine:54]qtyShipped:7
+aiQtyShip{$i}:=[InvoiceLine:54]qty:7
 
 // Modified by: William James (2014-01-21T00:00:00)
 // The [InvoiceLine]QtyRemain and [InvoiceLine]QtyBackLogged should be set when the record is created
@@ -71,7 +71,7 @@ aiExtPrice{$i}:=[InvoiceLine:54]extendedPrice:11
 aiUnitCost{$i}:=[InvoiceLine:54]unitCost:12
 aiExtCost{$i}:=[InvoiceLine:54]extendedCost:13
 
-aiTaxable{$i}:=[InvoiceLine:54]taxid:14
+aiTaxable{$i}:=[InvoiceLine:54]taxJuris:14
 aiSaleTax{$i}:=[InvoiceLine:54]salesTax:15
 aiTaxCost{$i}:=[InvoiceLine:54]taxCost:51
 aiSaleComm{$i}:=[InvoiceLine:54]commSales:17
@@ -85,14 +85,14 @@ aiLocation{$i}:=[InvoiceLine:54]location:22
 aiLocationBin{$i}:=[InvoiceLine:54]locationBin:53
 aiQtyOpen{$i}:=0
 aiSerialRc{$i}:=[InvoiceLine:54]serialRc:26
-aiSerialNm{$i}:=[InvoiceLine:54]serialNum:36
+//aiSerialNm{$i}:=[InvoiceLine]obSerial
 aiPricePt{$i}:=[InvoiceLine:54]typeSale:27
 aiProdBy{$i}:=[InvoiceLine:54]producedBy:39
 aiLnComment{$i}:=[InvoiceLine:54]comment:40
 aiShipOrdSt{$i}:=[InvoiceLine:54]shipOrderStatus:41
 aiProfile1{$i}:=[InvoiceLine:54]lineProfile1:42
 aiProfile2{$i}:=[InvoiceLine:54]lineProfile2:43
-aiProfile3{$i}:=[InvoiceLine:54]lineProfile3:44
+//aiProfile3{$i}:=[InvoiceLine]obItem
 aiPrintThis{$i}:=[InvoiceLine:54]printNot:52
 
 

@@ -1,1 +1,0 @@
-entryEntity.ShipVia1:=DE_PopUpArray(-><>aShipVia)

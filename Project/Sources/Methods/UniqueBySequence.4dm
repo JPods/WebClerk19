@@ -16,7 +16,7 @@
 //  
 //    // Reset the UniqueIDs
 //  
-//  ConsoleMessage ("ConsoleLaunch")  // ### jwm ### 20160414_1615
+//  Console_Log ("ConsoleLaunch")  // ### jwm ### 20160414_1615
 //  
 //    // aaaqqqzzz
 //    // Called by UniqueForce
@@ -42,7 +42,7 @@
 //  $tableName:=Table name($ptTable)
 //  ALL RECORDS($ptTable->)
 //  $cntRecords:=Records in selection($ptTable->)
-//  ConsoleMessage ($tableName+": records "+String($cntRecords))
+//  Console_Log ($tableName+": records "+String($cntRecords))
 //  Case of 
 //  : ($ptTable=(->[Customer]))
 //  Counters_MaxValue (->[Customer])
@@ -92,7 +92,7 @@
 //    //If ($cntRecords<100000)  // two ways to set uniques by 
 //  If (False)  // two ways to set uniques by pply to selection 
 //  
-//  ConsoleMessage ($tableName+": Sequencing by Arrays")
+//  Console_Log ($tableName+": Sequencing by Arrays")
 //  ARRAY LONGINT($alNegID;$cntRecords)
 //  ARRAY LONGINT($alUniqueID;$cntRecords)
 //  For ($incRecords;1;$cntRecords)
@@ -104,7 +104,7 @@
 //  ARRAY TO SELECTION($alUniqueID;$ptField->)
 //  FLUSH BUFFERS
 //  Else 
-//  ConsoleMessage ($tableName+": Sequencing by Records")
+//  Console_Log ($tableName+": Sequencing by Records")
 //  
 //  Open window(100;200;500;300;8;"Progress")
 //  ERASE WINDOW
@@ -117,14 +117,14 @@
 //  SET WINDOW TITLE($tableName)
 //  ERASE WINDOW
 //  GOTO XY(6;3)
-//  ConsoleMessage (" Record "+String($incRecords)+" of "+String($cntRecords)+"  "+String($percent)+" %")
+//  Console_Log (" Record "+String($incRecords)+" of "+String($cntRecords)+"  "+String($percent)+" %")
 //  
 //  $ptField->:=-$incRecords-10000000
 //  SAVE RECORD($ptTable->)
 //  NEXT RECORD($ptTable->)
 //  $vResult:=Mod($incRecords;$maxBuffer)
 //  If ($vResult=0)
-//  ConsoleMessage ($tableName+": Count "+String($incRecords)+" of "+String($cntRecords))
+//  Console_Log ($tableName+": Count "+String($incRecords)+" of "+String($cntRecords))
 //  FLUSH BUFFERS
 //  End if 
 //  End for 
@@ -137,14 +137,14 @@
 //  NEXT RECORD($ptTable->)
 //  $vResult:=Mod($incRecords;$maxBuffer)
 //  If ($vResult=0)
-//  ConsoleMessage ($tableName+": Count "+String($incRecords)+" of "+String($cntRecords))
+//  Console_Log ($tableName+": Count "+String($incRecords)+" of "+String($cntRecords))
 //  FLUSH BUFFERS
 //  End if 
 //  End for 
 //  
 //  ERASE WINDOW
 //  GOTO XY(6;3)
-//  ConsoleMessage ("Ending Script Basic Loop")
+//  Console_Log ("Ending Script Basic Loop")
 //  CLOSE WINDOW
 //  
 //  FLUSH BUFFERS
@@ -154,9 +154,9 @@
 //  
 //  QUERY([Counter];[Counter]TableNum=$tableNum)
 //  If (Locked([Counter]))
-//  ConsoleMessage ($tableName+": LOCKED: Setting Counter to Max")
+//  Console_Log ($tableName+": LOCKED: Setting Counter to Max")
 //  Else 
-//  ConsoleMessage ($tableName+": Setting Counter to Max")
+//  Console_Log ($tableName+": Setting Counter to Max")
 //  [Counter]Counter:=$cntRecords+5
 //  SAVE RECORD([Counter])
 //  
@@ -167,7 +167,7 @@
 //  
 //  End case 
 //  $timeElapsed:=Current time-$timeStart
-//  ConsoleMessage ($tableName+" Elapsed time =  "+String($timeElapsed))
+//  Console_Log ($tableName+" Elapsed time =  "+String($timeElapsed))
 //  REDUCE SELECTION($ptTable->;0)
 //  
 //  
@@ -192,7 +192,7 @@
 //    // Called by UniqueForce
 //    //  CounterArrays sets up the UniqueField Pointers
 //  
-//  ConsoleMessage ("ConsoleLaunch")  // ### jwm ### 20160414_1615
+//  Console_Log ("ConsoleLaunch")  // ### jwm ### 20160414_1615
 //  
 //  C_LONGINT($1;$tableNum;$fieldNum)
 //  C_LONGINT($incRecords;$cntRecords)
@@ -210,7 +210,7 @@
 //  $tableName:=Table name($ptTable)
 //  ALL RECORDS($ptTable->)
 //  $cntRecords:=Records in selection($ptTable->)
-//  ConsoleMessage ($tableName+": records "+String($cntRecords))
+//  Console_Log ($tableName+": records "+String($cntRecords))
 //  Case of 
 //  : ($ptTable=(->[Customer]))
 //  Counters_MaxValue (->[Customer])
@@ -247,11 +247,11 @@
 //  $fieldNum:=STR_GetUniqueFieldNum($tableNum)
 //  $ptField:=Field($tableNum;$fieldNum)
 //  
-//  ConsoleMessage ($tableName+": Clearing Index")
+//  Console_Log ($tableName+": Clearing Index")
 //    // ### jwm ### 20160415_1459 clear index
 //  SET INDEX($ptField->;False;100)
 //  
-//  ConsoleMessage ($tableName+": Building Index")
+//  Console_Log ($tableName+": Building Index")
 //    // ### jwm ### 20160415_1459 rebuild index
 //  SET INDEX($ptField->;True;100)
 //  
@@ -260,7 +260,7 @@
 //  
 //    //If ($cntRecords<100000)  // two ways to set uniques by 
 //  If (False)  // two ways to set uniques by pply to selection 
-//  ConsoleMessage ($tableName+": Sequencing by Arrays")
+//  Console_Log ($tableName+": Sequencing by Arrays")
 //  ARRAY LONGINT($alNegID;$cntRecords)
 //  ARRAY LONGINT($alUniqueID;$cntRecords)
 //  For ($incRecords;1;$cntRecords)
@@ -270,21 +270,21 @@
 //  ARRAY TO SELECTION($alNegID;$ptField->)
 //  ARRAY TO SELECTION($alUniqueID;$ptField->)
 //  Else 
-//  ConsoleMessage ($tableName+": Sequencing by Records")
+//  Console_Log ($tableName+": Sequencing by Records")
 //  
 //  FIRST RECORD($ptTable->)
 //  For ($incRecords;1;$cntRecords)
 //  
 //  $percent:=Round(($incRecords/$cntRecords*100);0)
 //  
-//  ConsoleMessage (" Record "+String($incRecords)+" of "+String($cntRecords)+"  "+String($percent)+" %")
+//  Console_Log (" Record "+String($incRecords)+" of "+String($cntRecords)+"  "+String($percent)+" %")
 //  
 //  $ptField->:=-$incRecords-100000
 //  SAVE RECORD($ptTable->)
 //  NEXT RECORD($ptTable->)
 //  End for 
 //  
-//  ConsoleMessage ("Ending Script Basic Loop")
+//  Console_Log ("Ending Script Basic Loop")
 //  
 //  FIRST RECORD($ptTable->)
 //  For ($incRecords;1;$cntRecords)
@@ -299,9 +299,9 @@
 //  
 //  QUERY([Counter];[Counter]TableNum=$tableNum)
 //  If (Locked([Counter]))
-//  ConsoleMessage ($tableName+": LOCKED: Setting Counter to Max")
+//  Console_Log ($tableName+": LOCKED: Setting Counter to Max")
 //  Else 
-//  ConsoleMessage ($tableName+": Setting Counter to Max")
+//  Console_Log ($tableName+": Setting Counter to Max")
 //  [Counter]Counter:=$cntRecords+5
 //  SAVE RECORD([Counter])
 //  
@@ -313,7 +313,7 @@
 //  
 //  End case 
 //  $timeElapsed:=Current time-$timeStart
-//  ConsoleMessage ($tableName+" Elapsed time =  "+String($timeElapsed))
+//  Console_Log ($tableName+" Elapsed time =  "+String($timeElapsed))
 //  REDUCE SELECTION($ptTable->;0)
 //  
 //  

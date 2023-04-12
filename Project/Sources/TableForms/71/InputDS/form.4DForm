@@ -1,0 +1,538 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 1039,
+	"markerBreak": 1048,
+	"markerFooter": 1055,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Rectangle4_1": {
+					"type": "rectangle",
+					"top": 247,
+					"left": 126,
+					"width": 587,
+					"height": 354,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 248,
+					"left": 129,
+					"width": 569,
+					"height": 352,
+					"dataSourceTypeHint": "text",
+					"table": 72,
+					"detailForm": "iQAOptions_9",
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"printFrame": "fixed"
+				},
+				"_Rectangle1_3": {
+					"type": "rectangle",
+					"top": 162,
+					"left": 126,
+					"width": 108,
+					"height": 76,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle2_4": {
+					"type": "rectangle",
+					"top": 37,
+					"left": 358,
+					"width": 119,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_QAQuestion_daysToAdd_5": {
+					"type": "input",
+					"top": 182,
+					"left": 129,
+					"width": 104,
+					"height": 17,
+					"dataSource": "entry_o.daysToAdd",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]daysToAdd:5"
+				},
+				"_Rectangle3_6": {
+					"type": "rectangle",
+					"top": 99,
+					"left": 126,
+					"width": 587,
+					"height": 59,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_QAQuestion_questionType_7": {
+					"type": "input",
+					"top": 38,
+					"left": 361,
+					"width": 115,
+					"height": 17,
+					"dataSource": "entry_o.questionType",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]questionType:2"
+				},
+				"_PROP_QAQuestion_defaultT_8": {
+					"type": "checkbox",
+					"top": 63,
+					"left": 360,
+					"width": 105,
+					"height": 14,
+					"dataSource": "entry_o.defaultT",
+					"text": "Default",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"zzzdataSource": "[QAQuestion:71]defaultT:6"
+				},
+				"_PROP_QAQuestion_question_9": {
+					"type": "input",
+					"top": 100,
+					"left": 129,
+					"width": 583,
+					"height": 57,
+					"dataSource": "entry_o.question",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]question:3"
+				},
+				"_PROP_QAQuestion_sequence_10": {
+					"type": "input",
+					"top": 163,
+					"left": 129,
+					"width": 104,
+					"height": 17,
+					"dataSource": "entry_o.sequence",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]sequence:4"
+				},
+				"_PROP_QAQuestion_groupID_11": {
+					"type": "input",
+					"top": 201,
+					"left": 129,
+					"width": 104,
+					"height": 17,
+					"dataSource": "entry_o.groupID",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]groupID:7"
+				},
+				"_Text__1679534_12": {
+					"type": "text",
+					"top": 222,
+					"left": 27,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16795,34"
+				},
+				"_Text__1679535_13": {
+					"type": "text",
+					"top": 40,
+					"left": 244,
+					"width": 109,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,35"
+				},
+				"_Text__1679528_14": {
+					"type": "text",
+					"top": 103,
+					"left": 31,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,28"
+				},
+				"_Text__16790241_15": {
+					"type": "text",
+					"top": 251,
+					"left": 31,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16790,241"
+				},
+				"_Text_Sequence_16": {
+					"type": "text",
+					"top": 165,
+					"left": 27,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Sequence"
+				},
+				"_VAR_bSubDel_17": {
+					"type": "pictureButton",
+					"top": 318,
+					"left": 37,
+					"width": 69,
+					"height": 36,
+					"dataSource": "bSubDel",
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/MinusButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bSubAdd_18": {
+					"type": "pictureButton",
+					"top": 281,
+					"left": 37,
+					"width": 69,
+					"height": 36,
+					"dataSource": "bSubAdd",
+					"shortcutKey": "+",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/Plus.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text__1679537_19": {
+					"type": "text",
+					"top": 184,
+					"left": 27,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16795,37"
+				},
+				"_PROP_QAQuestion_idUnique_20": {
+					"type": "input",
+					"top": 220,
+					"left": 129,
+					"width": 104,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]idUnique:1"
+				},
+				"_Text_TableGroup_21": {
+					"type": "text",
+					"top": 203,
+					"left": 27,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TableGroup"
+				},
+				"_VAR_<>pNavPallet_22": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_23": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_24": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_25": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_26": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_27": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_QAQuestion_photoTag_28": {
+					"type": "input",
+					"top": 163,
+					"left": 341,
+					"width": 371,
+					"height": 18,
+					"dataSource": "entry_o.photoTag",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]photoTag:12"
+				},
+				"_Text_ImageTag_29": {
+					"type": "text",
+					"top": 166,
+					"left": 239,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ImageTag"
+				},
+				"_PROP_QAQuestion_photoRequired_30": {
+					"type": "checkbox",
+					"top": 183,
+					"left": 341,
+					"width": 371,
+					"height": 18,
+					"dataSource": "entry_o.photoRequired",
+					"text": "ImageRequired",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[QAQuestion:71]photoRequired:10"
+				},
+				"_Text_ImageRequired_31": {
+					"type": "text",
+					"top": 186,
+					"left": 239,
+					"width": 95,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ImageRequired"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

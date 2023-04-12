@@ -14,6 +14,6 @@
 If (Form event code:C388=On Load:K2:1)
 	// fill the array on startup
 Else 
-	entryEntity.contractDetailTag:=DE_PopUpArray(Self:C308)
+	entry_o.contractDetailTag:=DE_PopUpArray(Self:C308)
 	ContractDetailFill([Order:3]contractDetailTag:151; ->[Order:3]contractDetail:157)
 End if 

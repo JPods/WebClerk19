@@ -13,18 +13,20 @@
 // Parameters
 // ----------------------------------------------------
 
-
-C_LONGINT:C283($i; $k; $found; $0)
+C_LONGINT:C283($i; $k; $found; $0; $state_i)
 C_TEXT:C284($1)
-$0:=0
 var $processNum : Integer
+$0:=0
+//$k:=Count tasks
+//For ($i; 1; $k)
 $processNum:=Process number:C372($1)
 If ($processNum>0)
-	$found:=Find in array:C230(<>aPrsNum; $processNum)  // the found number is used in the next procedure to select process
-	If ($found>0)
-		$0:=$found
-	Else 
+	$state_i:=Process state:C330($processNum)
+	If ($state_i<0)
 		$0:=0
+	Else 
+		$0:=$processNum
 	End if 
+	//return 
 End if 
-// Prs_ListActive
+//End for 

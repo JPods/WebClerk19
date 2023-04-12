@@ -1,1 +1,1 @@
-entryEntity.taxJuris:=DE_PopUpArray(-><>aTaxJuris)
+process_o.entry_o.taxJuris:=DE_PopUpArray(-><>aTaxJuris)

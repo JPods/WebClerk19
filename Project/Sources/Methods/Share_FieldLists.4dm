@@ -17,4 +17,4 @@ End use
 
 
 
-$voSelFieldChar:=ds:C1482.FieldCharacteristic.query("tableName = FieldLists")
+$voSelFieldChar:=ds:C1482.FC.query("tableName = FieldLists")

@@ -1,4 +1,4 @@
-﻿C_LONGINT:C283($error; $inc; $cnt)
+C_LONGINT:C283($error; $inc; $cnt)
 C_OBJECT:C1216($obRec)
 ARRAY TEXT:C222($atPaths; 0)
 For each ($obRec; obDocSel)
@@ -11,9 +11,9 @@ For each ($obRec; obDocSel)
 			AE_LaunchDoc($path)
 		: ($result=0)
 			BEEP:C151
-			ConsoleMessage("ERROR: Path is a folder")
+			ConsoleLog("ERROR: Path is a folder")
 		Else 
 			BEEP:C151
-			ConsoleMessage("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
+			ConsoleLog("ERROR: "+String:C10($result)+"  FILE NOT FOUND\r"+$path)
 	End case 
 End for each 

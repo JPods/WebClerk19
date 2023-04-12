@@ -20,8 +20,8 @@ If (OK=1)
 	vDate2:=Date_ThisMon(vDate3; 1)
 	C_LONGINT:C283($dtReport; $dtCalc)
 	C_TEXT:C284($ReportName)
-	$dtCalc:=DateTime_Enter
-	$dtReport:=DateTime_Enter(vDate2; ?23:59:59?)
+	$dtCalc:=DateTime_DTTo
+	$dtReport:=DateTime_DTTo(vDate2; ?23:59:59?)
 	$ReportName:="MonSales"+Substring:C12(String:C10(Year of:C25(vDate1)); 3; 4)+String:C10(Month of:C24(vDate1); "00")
 	QUERY:C277([Invoice:26]; <>ptInvoiceDateFld->>=vDate1; *)
 	QUERY:C277([Invoice:26];  & <>ptInvoiceDateFld-><=vDate2)
@@ -76,11 +76,14 @@ If (OK=1)
 			[TallyResult:73]real6:42:=0
 			[TallyResult:73]real7:43:=0
 			[TallyResult:73]real8:44:=0
-			[TallyResult:73]real9:45:=0
+			
+			// Modified by: Bill James (2022-12-09T06:00:00Z)
+			// must fix and adjust to changed data type
+			//[TallyResult]dataRaw:=0
 			[TallyResult:73]real10:46:=0
 		End if 
 		[TallyResult:73]real8:44:=[Customer:2]lastSaleAmount:50
-		[TallyResult:73]real9:45:=[Customer:2]salesLastYr:48
+		//[TallyResult]dataRaw:=[Customer]salesLastYr
 		[TallyResult:73]real10:46:=[Customer:2]salesYTD:47
 		Repeat 
 			[TallyResult:73]real1:13:=[TallyResult:73]real1:13+aTmpReal1{$i}
@@ -96,7 +99,10 @@ If (OK=1)
 		[TallyResult:73]profile1:17:=String:C10([Customer:2]lastSaleDate:49)
 		[TallyResult:73]profile2:18:=String:C10([Customer:2]lastSaleAmount:50)
 		[TallyResult:73]longint1:7:=Round:C94([Customer:2]salesLastYr:48; 0)
-		[TallyResult:73]longInt2:8:=Round:C94([Customer:2]salesYTD:47; 0)
+		// Modified by: Bill James (2022-12-09T06:00:00Z)
+		// mush fix and adjust to data type and object
+		
+		//[TallyResult]report:=Round([Customer]salesYTD; 0)
 		[TallyResult:73]real3:15:=aTmpReal1{$i}-aTmpReal2{$i}
 		[TallyResult:73]real4:16:=Round:C94(([TallyResult:73]real1:13-[TallyResult:73]real2:14)/[TallyResult:73]real1:13*100; 2)
 		If (vR1#0)
@@ -122,7 +128,7 @@ READ ONLY:C145([TallyResult:73])
 //)
 //SEARCH([TallyResult];&[TallyResult]FileID=File([Customer]);*)
 //SEARCH([TallyResult];&[TallyResult]Purpose="CustomerMonthly";*)
-//SEARCH([TallyResult];&[TallyResult]DTReport=(DateTime_Enter (
+//SEARCH([TallyResult];&[TallyResult]DTReport=(DateTime_DTTo (
 //(vDate1-1))))
 //[TallyResult]Real4:=[TallyResult]Real4
 //[TallyResult]Real5:=[TallyResult]Real5

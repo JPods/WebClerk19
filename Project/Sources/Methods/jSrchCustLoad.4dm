@@ -41,8 +41,6 @@ Case of
 						QUERY:C277([Customer:2];  & [Customer:2]dateRetired:111=!00-00-00!; *)
 					: ($1=(->[Contact:13]))
 						QUERY:C277([Contact:13];  & [Contact:13]dateRetired:57=!00-00-00!; *)
-					: ($1=(->[zzzLead:48]))
-						QUERY:C277([zzzLead:48];  & [zzzLead:48]retired:56=!00-00-00!; *)
 					: ($1=(->[Vendor:38]))
 						QUERY:C277([Vendor:38];  & [Vendor:38]dateRetired:90=!00-00-00!; *)
 					: ($1=(->[Rep:8]))
@@ -69,8 +67,6 @@ Case of
 						QUERY:C277([Customer:2];  & [Customer:2]dateRetired:111=!00-00-00!; *)
 					: ($1=(->[Contact:13]))
 						QUERY:C277([Contact:13];  & [Contact:13]dateRetired:57=!00-00-00!; *)
-					: ($1=(->[zzzLead:48]))
-						QUERY:C277([zzzLead:48];  & [zzzLead:48]retired:56=!00-00-00!; *)
 					: ($1=(->[Vendor:38]))
 						QUERY:C277([Vendor:38];  & [Vendor:38]dateRetired:90=!00-00-00!; *)
 					: ($1=(->[Rep:8]))
@@ -84,7 +80,6 @@ Case of
 		$localSrch:=True:C214
 	Else 
 		REDUCE SELECTION:C351([Customer:2]; 0)
-		REDUCE SELECTION:C351([zzzLead:48]; 0)
 		REDUCE SELECTION:C351([Vendor:38]; 0)
 		REDUCE SELECTION:C351([Contact:13]; 0)  //delete contacts for auto listing
 End case 
@@ -100,18 +95,8 @@ If (($localSrch) | ($wideSrch))
 			//ptName:=[Vendor]Company
 			//ptPhone:=[Vendor]Phone
 			REDUCE SELECTION:C351([Customer:2]; 0)
-			REDUCE SELECTION:C351([zzzLead:48]; 0)
 			REDUCE SELECTION:C351([Contact:13]; 0)  //delete contacts for auto listing
 			//$ptMastFile:=([Vendor])
-		: (ptCurTable=(->[zzzLead:48]))
-			//ptZip:=[Lead]Zip
-			//ptAcct:=vsEmpty
-			//ptName:=[Lead]Company
-			//ptPhone:=[Lead]Phone
-			//$ptMastFile:=([Lead])
-			REDUCE SELECTION:C351([Customer:2]; 0)
-			REDUCE SELECTION:C351([Vendor:38]; 0)
-			REDUCE SELECTION:C351([Contact:13]; 0)  //delete contacts for auto listing
 		: (ptCurTable=(->[Contact:13]))
 			//ptZip:=[Lead]Zip
 			//ptAcct:=vsEmpty
@@ -120,14 +105,12 @@ If (($localSrch) | ($wideSrch))
 			//$ptMastFile:=([Lead])
 			REDUCE SELECTION:C351([Customer:2]; 0)
 			REDUCE SELECTION:C351([Vendor:38]; 0)
-			REDUCE SELECTION:C351([zzzLead:48]; 0)  //delete contacts for auto listing
 		Else 
 			//ptZip:=[Customer]Zip
 			//ptAcct:=[Customer]customerID
 			//ptName:=[Customer]Company
 			//ptPhone:=[Customer]Phone
 			//$ptMastFile:=([Customer])
-			REDUCE SELECTION:C351([zzzLead:48]; 0)
 			REDUCE SELECTION:C351([Vendor:38]; 0)
 	End case 
 	Case of 
@@ -163,7 +146,7 @@ If (($localSrch) | ($wideSrch))
 			If (ptCurTable=(->[Customer:2]))
 				booPreNext:=True:C214
 			End if 
-			If (ptCurTable#(->[Control:1]))  //October 28, 1997  added, delete the IF when popup is in control screens
+			If (ptCurTable#(->[Base:1]))  //October 28, 1997  added, delete the IF when popup is in control screens
 				//  CHOPPED  ContactsLoad(-1)
 			End if 
 		: (Records in selection:C76($1->)=0)
@@ -186,19 +169,13 @@ If (($localSrch) | ($wideSrch))
 				srPhone:=[Vendor:38]phone:10
 				srDivision:=""
 				
-			: (ptCurTable=(->[zzzLead:48]))
-				srZip:=[zzzLead:48]zip:10
-				srAcct:=String:C10([zzzLead:48]idNum:32)
-				srCustomer:=[zzzLead:48]company:5
-				srPhone:=[zzzLead:48]phone:4
-				srDivision:=String:C10(Lead_GetDivision)
 				
 			: (ptCurTable=(->[Contact:13]))
 				srZip:=[Contact:13]zip:11
 				srAcct:=String:C10([Contact:13]idNum:28)
 				srCustomer:=[Contact:13]company:23
 				srPhone:=[Contact:13]phone:30
-				srDivision:=String:C10(Lead_GetDivision)
+				
 			Else 
 				srZip:=[Customer:2]zip:8
 				srAcct:=[Customer:2]customerID:1
@@ -217,7 +194,7 @@ If (($localSrch) | ($wideSrch))
 End if 
 If ($doModRec)
 	//KeyModifierCurrent 
-	//ConsoleMessage ("TEST: MODIFY RECORD")
+	//Console_Log ("TEST: MODIFY RECORD")
 	//If (CapKey=0)
 	ProcessTableOpen(Table:C252(ptCurTable)*-1)
 	//Else 

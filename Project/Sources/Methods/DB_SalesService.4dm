@@ -12,7 +12,7 @@ If (Application type:C494=4D Server:K5:6)
 Else 
 	If (Count parameters:C259=1)
 		Process_InitLocal  // ### jwm ### 20180921_1534 initialize variables in new process
-		POST OUTSIDE CALL:C329(<>theProcessList)
+		POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 		C_OBJECT:C1216($1; process_o)  // tableName and purpose
 		process_o:=$1
 		var $form_t : Text
@@ -24,15 +24,14 @@ Else
 		process_o.window:=$win_l
 		DIALOG:C40($form_t)
 		
-		POST OUTSIDE CALL:C329(<>theProcessList)
+		POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 		
 	Else 
 		C_LONGINT:C283($found)
 		$found:=Prs_CheckRunnin("SalesService")
 		If ($found>0)
-			If (Frontmost process:C327#<>aPrsNum{$found})
-				BRING TO FRONT:C326(<>aPrsNum{$found})
-			End if 
+			BRING TO FRONT:C326($found)
+			
 		Else 
 			C_OBJECT:C1216($process_o)
 			$process_o:=New object:C1471("ents"; New object:C1471; \

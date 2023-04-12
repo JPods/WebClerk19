@@ -39,8 +39,8 @@ Else
 End if 
 
 $PeriodDate:=Date_ThisMon($TallyMonth; 0)
-$PeriodStart:=DateTime_Enter(Date_ThisMon($TallyMonth; 0); ?00:00:00?)
-$PeriodEnd:=DateTime_Enter(Date_ThisMon($TallyMonth; 1)+1; ?23:59:59?)
+$PeriodStart:=DateTime_DTTo(Date_ThisMon($TallyMonth; 0); ?00:00:00?)
+$PeriodEnd:=DateTime_DTTo(Date_ThisMon($TallyMonth; 1)+1; ?23:59:59?)
 
 //delete previous usages
 //QUERY([Usage];[Usage]PeriodDate=$PeriodDate)
@@ -88,17 +88,17 @@ If ($k>0)
 				$tallyType:=[Item:4]type:26
 				$tallyDescri:=[Item:4]description:7
 		End case 
-		jDateTimeRecov([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)  //different item reject the month
+		DateTime_DTFrom([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)  //different item reject the month
 		
 		$PeriodDate:=Date_ThisMon(vdDateBeg; 0)
-		$PeriodEnd:=DateTime_Enter(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
+		$PeriodEnd:=DateTime_DTTo(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
 		
 		
 		If ([DInventory:36]dtCreated:15>$PeriodEnd)  //same item but different month
-			jDateTimeRecov([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)
+			DateTime_DTFrom([DInventory:36]dtCreated:15; ->vdDateBeg; ->complTime)
 			//
 			$PeriodDate:=Date_ThisMon(vdDateBeg; 0)
-			$PeriodEnd:=DateTime_Enter(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
+			$PeriodEnd:=DateTime_DTTo(Date_ThisMon($PeriodDate; 1)+1; ?00:00:00?)
 			//        
 		End if 
 		If (([Usage:5]periodDate:2#$PeriodDate) | ([Usage:5]itemNum:1#$tallyItem))
@@ -134,7 +134,7 @@ If ($k>0)
 				End if 
 				//
 			: ([DInventory:36]typeID:14[[1]]="i")  //S for sales order
-				If (([DInventory:36]receiptid:11=1) | ([DInventory:36]takeAction:19=4))  //POS Invoice, both order and invoice
+				If (([DInventory:36]idReceipt:11=1) | ([DInventory:36]takeAction:19=4))  //POS Invoice, both order and invoice
 					[Usage:5]numOrders:19:=[Usage:5]numOrders:19+1
 					[Usage:5]ordQtyActual:26:=[Usage:5]ordQtyActual:26+[DInventory:36]qtyOnSO:3
 					[Usage:5]ordersActual:20:=[Usage:5]ordersActual:20+([DInventory:36]qtyOnSO:3*[DInventory:36]unitPrice:21)

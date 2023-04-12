@@ -34,8 +34,6 @@ Else
 				QUERY:C277([Customer:2]; [Customer:2]customerID:1=[Contact:13]customerID:1)
 				[EventLog:75]typeSale:47:=[Customer:2]typeSale:18
 			End if 
-		: ([EventLog:75]tableNum:9=(Table:C252(->[Lead:48])))
-			[EventLog:75]typeSale:47:=[Lead:48]typeSale:30
 	End case 
 End if 
 If ([EventLog:75]idNum:5#0)

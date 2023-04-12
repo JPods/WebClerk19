@@ -16,8 +16,8 @@ $doLoop:=True:C214
 If (OptKey=1)
 	QUERY:C277([DInventory:36])
 Else 
-	$i:=DateTime_Enter(vdDateBeg; ?00:00:00?)
-	$c:=DateTime_Enter(vdDateEnd; ?24:00:00?)
+	$i:=DateTime_DTTo(vdDateBeg; ?00:00:00?)
+	$c:=DateTime_DTTo(vdDateEnd; ?24:00:00?)
 	QUERY:C277([DInventory:36]; [DInventory:36]dtCreated:15>=$i; *)
 	QUERY:C277([DInventory:36];  & [DInventory:36]dtCreated:15<=$c)
 End if 

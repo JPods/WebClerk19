@@ -45,7 +45,7 @@ $doRep:=0
 vtEmailReport:=""
 
 If (<>viDeBugMode>0)
-	ConsoleMessage("Document sending email"+"\r")
+	ConsoleLog("Document sending email"+"\r")
 End if 
 Case of 
 	: (vtEmailReceiver#"")
@@ -116,8 +116,6 @@ Case of
 				$contactID:=[RemoteUser:57]contactID:11
 			: ([RemoteUser:57]tableNum:9=Table:C252(->[Customer:2]))
 				$doCustomer:=2
-			: ([RemoteUser:57]tableNum:9=Table:C252(->[zzzLead:48]))
-				$doLead:=2
 			: ([RemoteUser:57]tableNum:9=Table:C252(->[Vendor:38]))
 				$doVendor:=2
 			: ([RemoteUser:57]tableNum:9=Table:C252(->[Rep:8]))
@@ -142,8 +140,6 @@ Case of
 				$doContact:=2
 			: ([CallReport:34]tableNum:2=Table:C252(->[Customer:2]))
 				$doCustomer:=2
-			: ([CallReport:34]tableNum:2=Table:C252(->[zzzLead:48]))  //leads
-				$doVendor:=2
 			: ([RemoteUser:57]tableNum:9=Table:C252(->[Vendor:38]))
 				$doVendor:=2
 			: ([RemoteUser:57]tableNum:9=Table:C252(->[Rep:8]))
@@ -201,9 +197,6 @@ Case of
 			: ($ptCurTable=(->[Contact:13]))
 				$doContact:=1
 				vtEmailReport:="Table [Contact]"+"\r"
-			: ($ptCurTable=(->[zzzLead:48]))
-				$doLead:=1
-				vtEmailReport:="Table [Lead]"+"\r"
 			: (($ptCurTable=(->[Vendor:38])) | ($ptCurTable=(->[PO:39])) | ($ptCurTable=(->[POLine:40])))
 				$doVendor:=1
 			: ($ptCurTable=(->[Rep:8]))
@@ -248,21 +241,7 @@ If ($doCustomer>0)
 		SMTP_SentBy([Customer:2]salesNameID:59; "email")
 	End if 
 End if 
-If ($doLead>0)
-	If ($doLead>1)
-		QUERY:C277([zzzLead:48]; [zzzLead:48]idNum:32=Num:C11($custVendID))
-	End if 
-	If ((vHere<2) & ([zzzLead:48]optOut:51#""))
-		$optOut:="Out"
-	End if 
-	If (vtEmailReceiver="")
-		vtEmailReceiver:=[zzzLead:48]email:33
-		vtEmailReceiver_Tag:=[zzzLead:48]nameFirst:1+" "+[zzzLead:48]nameLast:2+" <"+vtEmailReceiver+">"
-	End if 
-	If (vtEmailSender="")
-		SMTP_SentBy([zzzLead:48]salesNameID:13; "email")
-	End if 
-End if 
+
 If ($doVendor>0)
 	If ($doVendor>1)
 		QUERY:C277([Vendor:38]; [Vendor:38]vendorID:1=$custVendID)
@@ -280,7 +259,7 @@ If ($doVendor>0)
 End if 
 If ($doRep>0)
 	If ($doRep>1)
-		QUERY:C277([Rep:8]; [Rep:8]RepID:1=$custVendID)
+		QUERY:C277([Rep:8]; [Rep:8]repID:1=$custVendID)
 	End if 
 	If ((vHere<2) & ([Rep:8]active:21=False:C215))
 		$optOut:="Out"
@@ -292,14 +271,14 @@ If ($doRep>0)
 End if 
 
 If (<>viDeBugMode>0)
-	ConsoleMessage("vtEmailReceiver: "+vtEmailReceiver+", Tag: "+vtEmailReceiver_Tag)
+	ConsoleLog("vtEmailReceiver: "+vtEmailReceiver+", Tag: "+vtEmailReceiver_Tag)
 End if 
 
 If (vtEmailSender="")
 	SMTP_SentBy(Current user:C182; "email")
 End if 
 If (<>viDeBugMode>0)
-	ConsoleMessage("vtEmailSender: "+vtEmailSender)
+	ConsoleLog("vtEmailSender: "+vtEmailSender)
 End if 
 
 C_TEXT:C284(vtEmailBody; vtEmailSubject; vtEmailPath; vtEmailSubject)
@@ -307,13 +286,13 @@ If (Record number:C243([UserReport:46])>-1)  //Print Defined Report
 	If (vtEmailBody="")
 		vtEmailBody:=[UserReport:46]template:7
 		If (<>viDeBugMode>0)
-			ConsoleMessage("[UserReport]DocumentLoc_20: "+Substring:C12(vtEmailBody; 1; 20))
+			ConsoleLog("[UserReport]DocumentLoc_20: "+Substring:C12(vtEmailBody; 1; 20))
 		End if 
 	End if 
 	If (vtEmailSubject="")
 		vtEmailSubject:=[UserReport:46]name:2
 		If (<>viDeBugMode>0)
-			ConsoleMessage("[UserReport]Name: "+vtEmailSubject)
+			ConsoleLog("[UserReport]Name: "+vtEmailSubject)
 		End if 
 	End if 
 	If (vtEmailPath="")
@@ -323,18 +302,18 @@ If (Record number:C243([UserReport:46])>-1)  //Print Defined Report
 		doAlert:=False:C215
 		vResponse:=""
 		If (<>viDeBugMode>0)
-			ConsoleMessage("[UserReport]ScriptLoop_20: "+Substring:C12([UserReport:46]scriptLoop:34; 1; 20))
+			ConsoleLog("[UserReport]ScriptLoop_20: "+Substring:C12([UserReport:46]scriptLoop:34; 1; 20))
 		End if 
 		ExecuteText(0; [UserReport:46]scriptLoop:34)
 		If (<>viDeBugMode>0)
-			ConsoleMessage("vResponse: "+vResponse)
+			ConsoleLog("vResponse: "+vResponse)
 		End if 
 		doAlert:=False:C215
 	End if 
 End if 
 
 If (<>viDeBugMode>0)
-	ConsoleMessage(vtEmailReport+"\r")
+	ConsoleLog(vtEmailReport+"\r")
 End if 
 vtEmailReport:=""
 
@@ -346,7 +325,7 @@ If (vtEmailSenderOverRide#"")
 	$string255:=Substring:C12(vtEmailSenderOverRide; 1; 255)  //### jwm ### 20130221_1533
 	SMTP_SentBy($string255; "email")  //### jwm ### 20120118_0520 test to eliminate range checking error
 	If (<>viDeBugMode>0)
-		ConsoleMessage("vtEmailSenderOverRide: "+vtEmailSenderOverRide)
+		ConsoleLog("vtEmailSenderOverRide: "+vtEmailSenderOverRide)
 	End if 
 End if 
 

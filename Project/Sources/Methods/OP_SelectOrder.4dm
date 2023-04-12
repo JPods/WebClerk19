@@ -69,10 +69,10 @@ If (Size of array:C274(aRayLines)>0)  //could be from a selection
 		If ($creditRisk)
 			vCreditStat:="Risk"
 			BEEP:C151  //PLAY("CreditCheck")
-			_O_OBJECT SET COLOR:C271(vCreditStat; -(15+(256*3)))
+			OBJECT SET RGB COLORS:C628(*; "vCreditStat"; 15; 256*3)
 		Else 
 			vCreditStat:="Current"
-			_O_OBJECT SET COLOR:C271(vCreditStat; -(15+(256*0)))
+			OBJECT SET RGB COLORS:C628(*; "vCreditStat"; 15; 256*0)
 		End if 
 	End if 
 	

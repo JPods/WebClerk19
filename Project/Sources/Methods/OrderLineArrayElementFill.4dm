@@ -20,9 +20,9 @@ aoLineAction{$i}:=10  //Selected record number([OrdLine])
 
 aOLineNum{$i}:=[OrderLine:49]lineNum:3
 aOItemNum{$i}:=[OrderLine:49]itemNum:4
-aOAltItem{$i}:=[OrderLine:49]altItem:31
+aOAltItem{$i}:=[OrderLine:49]itemNumAlt:31
 aODescpt{$i}:=[OrderLine:49]description:5
-aOQtyOrder{$i}:=[OrderLine:49]qtyOrdered:6
+aOQtyOrder{$i}:=[OrderLine:49]qty:6
 aOQtyShip{$i}:=[OrderLine:49]qtyShipped:7
 aOQtyBL{$i}:=[OrderLine:49]qtyBackLogged:8
 
@@ -37,7 +37,7 @@ aOExtPrice{$i}:=[OrderLine:49]extendedPrice:11
 aOBackLog{$i}:=[OrderLine:49]backOrdAmount:26
 aOUnitCost{$i}:=[OrderLine:49]unitCost:12
 aOExtCost{$i}:=[OrderLine:49]extendedCost:13
-aOTaxable{$i}:=[OrderLine:49]taxid:14
+aOTaxable{$i}:=[OrderLine:49]taxJuris:14
 aOSaleTax{$i}:=[OrderLine:49]salesTax:15
 aOTaxCost{$i}:=[OrderLine:49]taxCost:55
 aOSaleComm{$i}:=[OrderLine:49]commSales:17
@@ -52,7 +52,7 @@ aOLocation{$i}:=[OrderLine:49]location:22
 aOQtyOpen{$i}:=0
 aOSerialRc{$i}:=[OrderLine:49]serialRc:27
 //
-aoSerialNm{$i}:=[OrderLine:49]serialNum:40
+//aoSerialNm{$i}:=[OrderLine]obSerial
 //
 aOSeq{$i}:=[OrderLine:49]seq:30
 aOPricePt{$i}:=[OrderLine:49]typeSale:28
@@ -67,7 +67,7 @@ aoLnComment{$i}:=[OrderLine:49]comment:44
 aoShipOrdSt{$i}:=[OrderLine:49]status:58
 aoProfile1{$i}:=[OrderLine:49]lineProfile1:45
 aoProfile2{$i}:=[OrderLine:49]lineProfile2:46
-aoProfile3{$i}:=[OrderLine:49]lineProfile3:47
+//aoProfile3{$i}:=[OrderLine]obItem
 
 aOPrintThis{$i}:=[OrderLine:49]printNot:56
 aoLocationBin{$i}:=[OrderLine:49]locationBin:57

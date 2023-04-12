@@ -21,7 +21,7 @@ If (Count parameters:C259>1)
 	End if 
 	QUERY:C277([TallyResult:73]; [TallyResult:73]name:1=$1; *)
 	If ($dtAware>0)
-		QUERY:C277([TallyResult:73];  & [TallyResult:73]dtReport:12=DateTime_Enter(Current date:C33; ?00:00:00?); *)
+		QUERY:C277([TallyResult:73];  & [TallyResult:73]dtReport:12=DateTime_DTTo(Current date:C33; ?00:00:00?); *)
 	End if 
 	QUERY:C277([TallyResult:73];  & [TallyResult:73]purpose:2="Admin")
 	Case of 
@@ -30,7 +30,7 @@ If (Count parameters:C259>1)
 		: (Records in selection:C76([TallyResult:73])=0)
 			CREATE RECORD:C68([TallyResult:73])
 			
-			[TallyResult:73]dtReport:12:=DateTime_Enter(Current date:C33; ?00:00:00?)
+			[TallyResult:73]dtReport:12:=DateTime_DTTo(Current date:C33; ?00:00:00?)
 			[TallyResult:73]purpose:2:="Admin"
 			[TallyResult:73]name:1:=$1
 	End case 

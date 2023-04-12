@@ -1,1 +1,0 @@
-[Forum:80]dtUser:14:=DateTime_Enter(vDate1; vTime1)

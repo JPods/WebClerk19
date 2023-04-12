@@ -145,7 +145,7 @@ If (UserInPassWordGroup("Archive"))
 							Else 
 								$v3:=String:C10(-LSDistAmts{$r}; <>tcFormatTt)
 							End if 
-							SEND PACKET:C103(sumDoc; "\t"+"\t"+"\t"+"\t"+$payID+"\t"+$v1+"\t"+$v2+"\t"+$v3+"\t"+String:C10([InventoryStack:29]receiptid:16)+"\t"+String:C10([InventoryStack:29]docid:5)+"\t"+[InventoryStack:29]vendorID:10+"\t"+[InventoryStack:29]itemNum:2+"\r")
+							SEND PACKET:C103(sumDoc; "\t"+"\t"+"\t"+"\t"+$payID+"\t"+$v1+"\t"+$v2+"\t"+$v3+"\t"+String:C10([InventoryStack:29]idReceipt:16)+"\t"+String:C10([InventoryStack:29]docid:5)+"\t"+[InventoryStack:29]vendorID:10+"\t"+[InventoryStack:29]itemNum:2+"\r")
 							C_TEXT:C284($division)
 							$division:=GL_GetDivsnPO([InventoryStack:29]docid:5)
 							If ($division#"")
@@ -192,35 +192,35 @@ If (UserInPassWordGroup("Archive"))
 		
 		[TallyResult:73]name:1:=HFS_ShortName(document)
 		[TallyResult:73]purpose:2:="Purchase Journal"
-		ConsoleMessage("\r"+[TallyResult:73]purpose:2+"\t"+[TallyResult:73]name:1)
+		ConsoleLog("\r"+[TallyResult:73]purpose:2+"\t"+[TallyResult:73]name:1)
 		
-		[TallyResult:73]dtCreated:11:=DateTime_Enter
+		[TallyResult:73]dtCreated:11:=DateTime_DTTo
 		[TallyResult:73]dtReport:12:=[TallyResult:73]dtCreated:11
 		[TallyResult:73]textBlk1:5:=document
 		[TallyResult:73]nameProfile1:26:="Document Type"
 		[TallyResult:73]profile1:17:="txt"
-		ConsoleMessage([TallyResult:73]nameProfile1:26+"\t"+[TallyResult:73]profile1:17)
+		ConsoleLog([TallyResult:73]nameProfile1:26+"\t"+[TallyResult:73]profile1:17)
 		
 		[TallyResult:73]nameProfile2:27:="Jrnl ID"
 		[TallyResult:73]profile2:18:=$GLSource
-		ConsoleMessage([TallyResult:73]nameProfile2:27+"\t"+[TallyResult:73]profile2:18)
+		ConsoleLog([TallyResult:73]nameProfile2:27+"\t"+[TallyResult:73]profile2:18)
 		
 		// ### bj ### 20181119_2355
 		[TallyResult:73]nameReal1:20:="InventoryStack"
 		[TallyResult:73]real1:13:=Records in set:C195("Original")
-		ConsoleMessage([TallyResult:73]nameReal1:20+"\t"+String:C10([TallyResult:73]real1:13))
+		ConsoleLog([TallyResult:73]nameReal1:20+"\t"+String:C10([TallyResult:73]real1:13))
 		
 		[TallyResult:73]nameReal2:21:="Linked"
 		[TallyResult:73]real2:14:=Records in set:C195("Linked")
-		ConsoleMessage([TallyResult:73]nameReal2:21+"\t"+String:C10([TallyResult:73]real2:14))
+		ConsoleLog([TallyResult:73]nameReal2:21+"\t"+String:C10([TallyResult:73]real2:14))
 		
 		[TallyResult:73]nameReal3:22:="Skipped"
 		[TallyResult:73]real3:15:=Records in set:C195("Skipped")
-		ConsoleMessage([TallyResult:73]nameReal3:22+"\t"+String:C10([TallyResult:73]real3:15))
+		ConsoleLog([TallyResult:73]nameReal3:22+"\t"+String:C10([TallyResult:73]real3:15))
 		
 		[TallyResult:73]nameReal4:23:="Journals Created"
 		[TallyResult:73]real4:16:=Records in set:C195("Journals")
-		ConsoleMessage([TallyResult:73]nameReal4:23+"\t"+String:C10([TallyResult:73]real4:16))
+		ConsoleLog([TallyResult:73]nameReal4:23+"\t"+String:C10([TallyResult:73]real4:16))
 		
 		[TallyResult:73]textBlk2:6:=Document to text:C1236(document)
 		SAVE RECORD:C53([TallyResult:73])

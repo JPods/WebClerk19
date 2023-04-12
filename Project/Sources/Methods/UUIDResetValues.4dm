@@ -20,7 +20,7 @@ C_LONGINT:C283($uuidFieldNum)
 C_TEXT:C284($tableName)
 
 If (Count parameters:C259=0)
-	ConsoleMessage("ConsoleLaunch")
+	ConsoleLog("ConsoleLaunch")
 	$cntTables:=Get last table number:C254
 	For ($incTables; 1; $cntTables)
 		$tableName:=Table name:C256($incTables)
@@ -46,12 +46,12 @@ If (Count parameters:C259=0)
 				
 				$milliIndex:=$milliIndex-$milliUUID
 				$milliUUID:=$milliUUID-$milliseconds
-				ConsoleMessage($tableName+" ResetUUID records: "+String:C10($cntRecords)+", UUID: "+String:C10($milliUUID)+", Reindex: "+String:C10($milliIndex)+"\r")
+				ConsoleLog($tableName+" ResetUUID records: "+String:C10($cntRecords)+", UUID: "+String:C10($milliUUID)+", Reindex: "+String:C10($milliIndex)+"\r")
 				FLUSH CACHE:C297
 			End if 
 		End if 
 	End for 
-	ConsoleMessage("All Records in All tables have UUIDs"+"\r")
+	ConsoleLog("All Records in All tables have UUIDs"+"\r")
 Else 
 	$ptUUIDField:=$1
 	$ptTable:=Table:C252(Table:C252($ptUUIDField))

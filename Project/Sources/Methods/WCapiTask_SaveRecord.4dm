@@ -59,7 +59,7 @@ If ($vbSave)
 	$vtFieldNameUnique:=STR_GetUniqueFieldName($tableName)
 	For each ($vtFieldName; $voIncoming)
 		If ($voRec[$vtFieldName]=Null:C1517)
-			ConsoleMessage("Err: bad field name: "+$vtFieldName+": WCapiSave_"+$tableName)
+			ConsoleLog("Err: bad field name: "+$vtFieldName+": WCapiSave_"+$tableName)
 			$cBadFieldNames.push($vtFieldName)
 		Else 
 			// if type string, add to keyTags
@@ -159,8 +159,8 @@ If ($vbSave)
 	
 	
 	If ($cBadFieldNames.length>0)
-		voState.badFieldNames:=$cBadFieldNames.join(",")
-		ConsoleMessage("Error: fieldNames from "+voState.request.URL.pathNameTrimmed+": "+voState.badFieldNames)
+		voState.badFieldNames:=$cBadFieldNames.join(";")
+		ConsoleLog("Error: fieldNames from "+voState.request.URL.pathNameTrimmed+": "+voState.badFieldNames)
 		$outPut_o.badFieldNames:=voState.badFieldNames
 	End if 
 	

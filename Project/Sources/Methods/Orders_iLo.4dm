@@ -70,7 +70,7 @@ Case of
 	Else 
 		If (($formEvent=On Load:K2:1) | (booPreNext) | (srSO#[Order:3]idNum:2))  //Before
 			
-			// entryEntity:=process_o.cur
+			// entry_o:=process_o.cur
 			SET TIMER:C645(20)
 			
 			FormSizeAuto
@@ -149,12 +149,12 @@ Case of
 		ILO_OrderDur
 		//set wt check box to enterable only for "Prepaid & Add" bill to option
 		If ([Order:3]upsBillingOption:89="Prepaid@")
-			OBJECT SET ENTERABLE:C238([Order:3]autoFreight:40; True:C214)
+			OBJECT SET ENTERABLE:C238([Order:3]shipAuto:40; True:C214)
 		Else 
-			[Order:3]autoFreight:40:=False:C215
-			OBJECT SET ENTERABLE:C238([Order:3]autoFreight:40; False:C215)
-			OBJECT SET ENTERABLE:C238([Order:3]shipMiscCosts:25; Not:C34([Order:3]autoFreight:40))
-			OBJECT SET ENTERABLE:C238([Order:3]shipFreightCost:38; Not:C34([Order:3]autoFreight:40))
+			[Order:3]shipAuto:40:=False:C215
+			OBJECT SET ENTERABLE:C238([Order:3]shipAuto:40; False:C215)
+			OBJECT SET ENTERABLE:C238([Order:3]shipMiscCosts:25; Not:C34([Order:3]shipAuto:40))
+			OBJECT SET ENTERABLE:C238([Order:3]shipFreightCost:38; Not:C34([Order:3]shipAuto:40))
 		End if 
 		
 End case 

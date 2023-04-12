@@ -122,10 +122,10 @@ Case of
 			vrTooling:=0
 			//
 			
-			jDateTimeRecov([Item:4]dtItemDate:33; ->vDate1; ->vTime1)
-			jDateTimeRecov([Item:4]dtBestUseStart:102; ->iLoDate6)
-			jDateTimeRecov([Item:4]dtBestUseEnd:103; ->iLoDate7)
-			jDateTimeRecov([Item:4]dtReviewed:85; ->iLoDate8)
+			DateTime_DTFrom([Item:4]dtItemDate:33; ->vDate1; ->vTime1)
+			DateTime_DTFrom([Item:4]dtBestUseStart:102; ->iLoDate6)
+			DateTime_DTFrom([Item:4]dtBestUseEnd:103; ->iLoDate7)
+			DateTime_DTFrom([Item:4]dtReviewed:85; ->iLoDate8)
 			Item_SetPopups
 			srItemNum:=[Item:4]itemNum:1
 			//Item_GetSpec 

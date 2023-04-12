@@ -18,7 +18,7 @@ C_TEXT:C284($Txt_method; $Txt_highlighted)
 //In $Txt_method, the full method content
 GET MACRO PARAMETER:C997(Full method text:K5:17; $Txt_method)
 
-//ConsoleMessage ($Txt_method)
+//Console_Log ($Txt_method)
 
 //Script Variable Definitions 20180413.4d
 //The REGEX Plugin defines . as any character except line feed \n (NOT carriage return \r)
@@ -87,7 +87,7 @@ If ($viMatch>=1)
 			APPEND TO ARRAY:C911($atUnique; $atMatch{$vi1})  // mark as unique
 			
 			If (<>viDebugMode>410)
-				ConsoleMessage($atMatch{$vi1})
+				ConsoleLog($atMatch{$vi1})
 			End if 
 			
 		End if 

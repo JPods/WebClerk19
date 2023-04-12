@@ -27,7 +27,7 @@ Case of
 	: ((voState.url="/Bots/watchdog@") | (voState.url="/Bots/pod@"))
 		
 		vResponse:=JSON Stringify:C1217(voState)
-		ConsoleMessage(vResponse)
+		ConsoleLog(vResponse)
 		
 	: (voState.url="/Bots/MapMyStation@")
 		vResponse:="Error: None, Stations Mapped"
@@ -36,7 +36,7 @@ Case of
 		[EventLog:75]status:48:="MapMyStation"
 		[EventLog:75]source:29:=voState.request.headers.Host
 		[EventLog:75]dateCreated:50:=Current date:C33
-		[EventLog:75]dtEvent:1:=DateTime_Enter
+		[EventLog:75]dtEvent:1:=DateTime_DTTo
 		SAVE RECORD:C53([EventLog:75])
 		
 	Else 

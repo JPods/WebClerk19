@@ -45,7 +45,7 @@ For ($inc; $startNum; $cnt)
 			End if 
 			
 			$cntRecs:=Records in selection:C76($ptTable->)
-			ConsoleMessage($tableName+": "+String:C10($cntRecs))
+			ConsoleLog($tableName+": "+String:C10($cntRecs))
 			If ($cntRecs>0)
 				ProcessTableOpen(<>aTableNums{$inc})
 			End if 
@@ -70,11 +70,11 @@ If (False:C215)
 		If (($tableName#"z@") & ($tableName#"(@"))
 			ALL RECORDS:C47($ptTable->)
 			$cntRecs:=Records in selection:C76($ptTable->)
-			ConsoleMessage(Table name:C256(<>aTableNums{$inc})+": "+String:C10($cntRecs))
+			ConsoleLog(Table name:C256(<>aTableNums{$inc})+": "+String:C10($cntRecs))
 			If ($cntRecs>0)
 				ProcessTableOpen(<>aTableNums{$inc})
 			Else 
-				ConsoleMessage(Table name:C256(<>aTableNums{$inc})+": ATTN Zero Records")
+				ConsoleLog(Table name:C256(<>aTableNums{$inc})+": ATTN Zero Records")
 			End if 
 			DELAY PROCESS:C323(Current process:C322; 90)
 			

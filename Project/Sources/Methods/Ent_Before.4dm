@@ -9,31 +9,19 @@
 var $1; $tableName : Text
 var $rec : Object
 $tableName:=$1
-If (process_o=Null:C1517)
-	// should never happend
-	
-	var process_o : Object
-	process_o:=New object:C1471("ents"; New object:C1471; \
-		"cur"; New object:C1471; \
-		"sel"; New object:C1471; \
-		"pos"; -1; \
-		"tableName"; ""; \
-		"tableForm"; ""; \
-		"form"; ""; \
-		"task"; "Ent_Before"; \
-		"entsOther"; New object:C1471("tableName"; New object:C1471); \
-		"cur"; New object:C1471)
-	
-End if 
+
 If (process_o.cur=Null:C1517)  // if making a new record make sure to set curretRecord = null
-	DB_NewEntityDefaults($tableName)
+	//DB_NewEntityDefaults($tableName)
+	TRACE:C157
 End if 
-entryEntity:=process_o.cur.toObject()
+entry_o:=process_o.cur.toObject()
 MESSAGES OFF:C175
 iLoQAText1:=""
 allowAlerts_boo:=True:C214
 
-iLoPagePopUpMenuBar(process_o.tableName)  // This should be reviewed for removal
+
+iLoPagePopUpMenuBar(process_o.dataClassName)  // This should be reviewed for removal
+// this is worthless.
 If (process_o.page=Null:C1517)
 	process_o.page:=FORM Get current page:C276
 End if 

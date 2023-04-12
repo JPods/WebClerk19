@@ -38,9 +38,9 @@ Case of
 			End while 
 			
 			//If (Process state(<>ProcThermoProcess)=Aborted)
-			//ConsoleMessage ("Thermo Process Aborted")
+			//Console_Log ("Thermo Process Aborted")
 			//Else 
-			//ConsoleMessage ("ERROR: Thermo Process NOT Aborted")
+			//Console_Log ("ERROR: Thermo Process NOT Aborted")
 			//End if 
 		End if 
 End case 

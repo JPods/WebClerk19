@@ -47,7 +47,7 @@ viRemoteIP:=0
 C_LONGINT:C283($i; $k)
 $k:=Records in selection:C76([PO:39])
 If ($k>0)
-	//Prs_ListActive 
+	//Process_ListActive 
 	C_LONGINT:C283($w)
 	C_BOOLEAN:C305($killWhenDone)
 	//  
@@ -60,7 +60,7 @@ If ($k>0)
 		If (False:C215)  //(Locked([PO]))
 			BEEP:C151
 			BEEP:C151
-			MESSAGE:C88("PO "+String:C10([PO:39]poNum:5)+" is locked.")
+			MESSAGE:C88("PO "+String:C10([PO:39]idNum:5)+" is locked.")
 		Else 
 			QUERY:C277([Vendor:38]; [Vendor:38]vendorID:1=[PO:39]vendorID:1)
 			Case of 

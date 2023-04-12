@@ -96,7 +96,7 @@ If (viMatch>=1)
 		vifound:=Find in array:C230(atUnique; atMatch{vi1})
 		If (vifound=-1)
 			APPEND TO ARRAY:C911(atUnique; atMatch{vi1})  // mark as unique
-			ConsoleMessage(atMatch{vi1})
+			ConsoleLog(atMatch{vi1})
 		End if 
 	End for 
 	For (vi1; 1; Size of array:C274(atUnique))

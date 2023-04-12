@@ -11,6 +11,7 @@
 // Parameters
 // ----------------------------------------------------
 
+CANCEL:C270
 
 C_TEXT:C284($1)
 If (Count parameters:C259=1)
@@ -35,7 +36,7 @@ If (($k>0) & ($c>0))
 		$myOK:=OK
 	End if 
 	If ($myOK=1)
-		ConsoleMessage(Table name:C256(curTableNum)+" records: "+String:C10($k))
+		ConsoleLog(Table name:C256(curTableNum)+" records: "+String:C10($k))
 		//    ON EVENT CALL("jotcCmdQAction")
 		//ThermoInitExit (("Exporting from File:  "+Table name(curTableNum));$k;True)
 		
@@ -76,9 +77,9 @@ If (($k>0) & ($c>0))
 	Else 
 		Case of 
 			: ($k=0)
-				ConsoleMessage("There are no records in File "+Table name:C256(curTableNum)+" to export.")
+				ConsoleLog("There are no records in File "+Table name:C256(curTableNum)+" to export.")
 			: ($c<0)
-				ConsoleMessage("There are no fields selected to export.")
+				ConsoleLog("There are no fields selected to export.")
 		End case 
 		OK:=$myOK
 	End if 

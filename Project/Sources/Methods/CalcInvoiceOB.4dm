@@ -16,7 +16,7 @@ If ($obOrderRec#Null:C1517)
 	
 	C_OBJECT:C1216($obOrderLines; $obinvoiceLines)
 	
-	$obOrderLines:=ds:C1482.OrderLines.query("orderNum = :1"; $obOrderRec.orderNum)
+	$obOrderLines:=ds:C1482.OrderLine.query("orderNum = :1"; $obOrderRec.orderNum)
 	C_LONGINT:C283($i; $e; $addCnt; $doLine; $k)
 	C_BOOLEAN:C305($0; $notLocked; $doItem)
 	C_REAL:C285($totalShip)
@@ -132,7 +132,7 @@ For ($e; 1; $k)
 						aiQtyShip{$i}:=0
 						// MESSAGE("Multi-site inventory Items automatically backordered.")
 					: ((aOSerialRc{$e}=<>ciSRUnknown) & (<>vbDoSrlNums) & (aOQtyBL{$e}#0))  //)&
-						aiSerialRc{$i}:=CounterNew(->[DialingInfo:81])  // aOSerialRc{$e} 
+						aiSerialRc{$i}:=CounterNew(->[zzzDialingInfo:81])  // aOSerialRc{$e} 
 						// Modified by: Bill James (2017-09-20T00:00:00)
 						// aiSerialRc{$i}:=CounterNew (-[DialingInfo])  //aOSerialRc{$e}   
 						// need to apply serialization to multisite  qqqq     

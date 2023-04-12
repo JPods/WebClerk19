@@ -27,10 +27,10 @@ If (Count parameters:C259=1)
 	// $0:="Records: "+String(LBDocument_ent.length)
 Else 
 	If (process_o#Null:C1517)
-		$tableName:=process_o.tableName
-		$tableNum_i:=ds:C1482[process_o.tableName].getInfo().tableNumber
+		$tableName:=process_o.dataClassName
+		$tableNum_i:=ds:C1482[process_o.dataClassName].getInfo().tableNumber
 		Case of   // add more options for vendor and reps
-			: (process_o.tableName="Customer")
+			: (process_o.dataClassName="Customer")
 				LBDocument_ent:=ds:C1482.Document.query("customerID = :1 & tableNum= :2"; process_o.cur.customerID; $tableNum_i)
 			Else 
 				LBDocument_ent:=ds:C1482.Document.query("idNumTask = :1 "; process_o.cur.idNumTask)
@@ -39,5 +39,5 @@ Else
 End if 
 
 If (<>viDebugMode>410)
-	ConsoleMessage($tableName+": SFEX_GetDocument: LBDocument_ent.length: "+String:C10(LBDocument_ent.length))
+	ConsoleLog($tableName+": SFEX_GetDocument: LBDocument_ent.length: "+String:C10(LBDocument_ent.length))
 End if 

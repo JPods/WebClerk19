@@ -55,7 +55,7 @@ Else
 		pvDateReq:=String:C10(aPODateExp{$w}; 1)*$doBlanks
 		pvDateShip:=String:C10(aPODateRcvd{$w})*$doBlanks
 		
-		pvSerial:=(aPOSerialNm{$w})*$doBlanks
+		//pvSerial:=(aPOSerialNm{$w})*$doBlanks
 		pvReference:=String:C10(aPOOrdRef{$w}; "0000-0000")*$doBlanks
 		pvLnComment:=aPoLComment{$w}*$doBlanks
 		//  p_NameID:={$w}*$doBlanks

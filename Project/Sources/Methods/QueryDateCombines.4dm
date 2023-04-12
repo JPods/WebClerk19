@@ -19,8 +19,8 @@ If (($2#"") & ($3#""))
 	End if 
 	C_LONGINT:C283($dtBegin; $dtEnd)
 	If ($4=0)
-		$dtBegin:=DateTime_Enter($begDate; ?00:00:00?)
-		$dtEnd:=DateTime_Enter($endDate; ?23:59:59?)
+		$dtBegin:=DateTime_DTTo($begDate; ?00:00:00?)
+		$dtEnd:=DateTime_DTTo($endDate; ?23:59:59?)
 		qqq:=""
 		//If ($3=0)
 		//QUERY((Table(Field($1))->;$1->)<=$dtBegin;*)

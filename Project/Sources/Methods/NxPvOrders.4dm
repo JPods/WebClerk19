@@ -161,7 +161,7 @@ Else
 	If (<>tcCancelBy>0)
 		[Order:3]dateCancel:53:=[Order:3]dateNeeded:5+<>tcCancelBy
 	End if 
-	[Order:3]autoFreight:40:=(<>tcAutoFrght=1)
+	[Order:3]shipAuto:40:=(<>tcAutoFrght=1)
 	[Order:3]fob:45:=Storage:C1525.default.fob
 End if 
 
@@ -191,8 +191,8 @@ Else
 	DscntSpecialClr([Order:3]typeSale:22)
 End if 
 curRecNum:=Selected record number:C246([Order:3])
-jDateTimeRecov([Order:3]dtProdRelease:56; ->releaseDate; ->releaseTime)
-jDateTimeRecov([Order:3]dtProdCompl:57; ->complDate; ->complTime)
+DateTime_DTFrom([Order:3]dtProdRelease:56; ->releaseDate; ->releaseTime)
+DateTime_DTFrom([Order:3]dtProdCompl:57; ->complDate; ->complTime)
 aoLineAction:=Num:C11(Size of array:C274(aoLineAction)>0)  //the first line is the default highlight
 ARRAY LONGINT:C221(aRayLines; 1)
 aRayLines{1}:=aoLineAction
@@ -215,8 +215,8 @@ If (allowAlerts_boo)
 	Ln_FillVar(aoLineAction; ->aOItemNum; ->aODescpt; 0; aOQtyOrder{aoLineAction}; aOQtyBL{aoLineAction}; aOUnitPrice{aoLineAction}; aODiscnt{aoLineAction}; aOExtPrice{aoLineAction}; aOPricePt{aoLineAction})
 	//
 	//  Put  the formating in the form  jFormatPhone(->[Order]phone)
-	OBJECT SET ENTERABLE:C238([Order:3]shipMiscCosts:25; Not:C34([Order:3]autoFreight:40))
-	OBJECT SET ENTERABLE:C238([Order:3]shipFreightCost:38; Not:C34([Order:3]autoFreight:40))
+	OBJECT SET ENTERABLE:C238([Order:3]shipMiscCosts:25; Not:C34([Order:3]shipAuto:40))
+	OBJECT SET ENTERABLE:C238([Order:3]shipFreightCost:38; Not:C34([Order:3]shipAuto:40))
 	OBJECT SET FORMAT:C236(aPayShow; "###,###.00 ;###,###.00-")
 	OBJECT SET FORMAT:C236(pUnitPrice; <>tcFormatUP)
 	If (eOrdList#0)
@@ -234,14 +234,14 @@ If (allowAlerts_boo)
 	If ((Not:C34($doChange)) & (Current user:C182#[Order:3]salesNameID:10))
 		C_LONGINT:C283($theColor)
 		$theColor:=14
-		_O_OBJECT SET COLOR:C271([Order:3]salesCommission:11; -$theColor+(256*$theColor))
-		_O_OBJECT SET COLOR:C271(vComSales; -$theColor+(256*$theColor))
+		OBJECT SET RGB COLORS(*; "[Order:3]salesCommission:11"; $theColor; 256*$theColor)
+		OBJECT SET RGB COLORS(*; "vComSales"; $theColor; 256*$theColor)
 	End if 
 	If ((Not:C34($doChange)) & (Current user:C182#[Order:3]repID:8))
 		C_LONGINT:C283($theColor)
 		$theColor:=14
-		_O_OBJECT SET COLOR:C271([Order:3]repCommission:9; -$theColor+(256*$theColor))
-		_O_OBJECT SET COLOR:C271(vComRep; -$theColor+(256*$theColor))
+		OBJECT SET RGB COLORS(*; "[Order:3]repCommission:9"; $theColor; 256*$theColor)
+		OBJECT SET RGB COLORS(*; "vComRep"; $theColor; 256*$theColor)
 	End if 
 	
 	

@@ -81,9 +81,9 @@ If ($vtUUIDKey#"")
 			$qa_c:=New collection:C1472
 			vResponse:="OK: "+$vtQuestionType+", "+String:C10($enRecQuestion.length)+", QA added to "+$tableName
 			If (<>viDebugMode>410)
-				ConsoleMessage(vResponse)
+				ConsoleLog(vResponse)
 			End if 
-			$dtCreated:=DateTime_Enter
+			$dtCreated:=DateTime_DTTo
 			For each ($enRecQuestion; $enSelQuestion)
 				$seq_i:=$seq_i+1
 				$enQA:=ds:C1482.QA.new()

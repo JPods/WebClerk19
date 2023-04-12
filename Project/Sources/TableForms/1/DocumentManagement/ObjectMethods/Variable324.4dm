@@ -16,7 +16,7 @@ Else
 		ARRAY LONGINT:C221(aRayLines; 30)
 	End if 
 	$shortname:="zz"+Replace string:C233(HFS_ShortName(iLoText1); Folder separator:K24:12; "")+".html"
-	myDoc:=EI_UniqueDoc(<>WebFolder+$shortname)
+	myDoc:=EI_UniqueDoc(Storage:C1525.wc.webFolder+$shortname)
 	C_LONGINT:C283($recID)
 	If (OK=1)
 		$shortname:=HFS_ShortName(document)

@@ -8,22 +8,21 @@ $popCust:=False:C215
 $popVend:=False:C215
 srSrlNum:=""
 If (vHere>1)
-	If (Record number:C243([QQQCustomer:2])>-1)
-		PUSH RECORD:C176([QQQCustomer:2])
+	If (Record number:C243([Customer:2])>-1)
+		PUSH RECORD:C176([Customer:2])
 		$popCust:=True:C214
 	End if 
-	If (Record number:C243([QQQVendor:38])>-1)
-		PUSH RECORD:C176([QQQVendor:38])
+	If (Record number:C243([Vendor:38])>-1)
+		PUSH RECORD:C176([Vendor:38])
 		$popVend:=True:C214
 	End if 
 Else 
-	REDUCE SELECTION:C351([QQQCustomer:2]; 0)
-	REDUCE SELECTION:C351([QQQVendor:38]; 0)
+	REDUCE SELECTION:C351([Customer:2]; 0)
+	REDUCE SELECTION:C351([Vendor:38]; 0)
 End if 
 REDUCE SELECTION:C351([ItemSerial:47]; 0)
-REDUCE SELECTION:C351([QQQContact:13]; 0)
+REDUCE SELECTION:C351([Contact:13]; 0)
 UNLOAD RECORD:C212([ItemSerial:47])
-REDUCE SELECTION:C351([Lead:48]; 0)
 initCustArrays(0)
 vClaim:=0
 ARRAY TEXT:C222(aText1; 0)
@@ -37,8 +36,8 @@ ARRAY TEXT:C222(aText1; 0)
 initCustArrays(0)
 srSrlNum:=""
 If ($popCust)
-	POP RECORD:C177([QQQCustomer:2])
+	POP RECORD:C177([Customer:2])
 End if 
 If ($popVend)
-	POP RECORD:C177([QQQVendor:38])
+	POP RECORD:C177([Vendor:38])
 End if 

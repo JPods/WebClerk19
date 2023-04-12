@@ -1,7 +1,7 @@
 //%attributes = {"publishedWeb":true}
 //Procedure: Quit_Processes
 If (Is nil pointer:C315(ptCurTable))
-	ptCurTable:=(->[Control:1])
+	ptCurTable:=(->[Base:1])
 End if 
 If (booAccept)
 	jAcceptButton(True:C214; False:C215)
@@ -18,4 +18,3 @@ If (vHere>0)
 	jsplashCancel
 	mySpecCan:=True:C214
 End if 
-<>viHasSaved:=0

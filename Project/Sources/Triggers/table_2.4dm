@@ -1,5 +1,8 @@
 // Trigger for [anyTable]
 //TRACE
+If ([Customer:2]customerID:1="")
+	[Customer:2]customerID:1:=String:C10(CounterNew("Customer"))
+End if 
 If (False:C215)
 	C_LONGINT:C283($0)
 	C_BOOLEAN:C305($doSave)
@@ -36,7 +39,7 @@ If (False:C215)
 				AcceptContactsRetired
 			End if 
 			
-			acceptFilePt($unLoad; ->[Customer:2]; ->[Contact:13]; ->[Service:6]; ->[Reference:7]; ->[CallReport:34])
+			acceptFilePt($unLoad; ->[Customer:2]; ->[Contact:13]; ->[Service:6]; ->[Reference:7]; ->[Call:34])
 			acceptFilePt($unLoad; ->[OrderLine:49]; ->[Order:3]; ->[Invoice:26]; ->[Proposal:42]; ->[InvoiceLine:54])
 			
 			If ([Customer:2]mfrLocationid:67<-1999999)

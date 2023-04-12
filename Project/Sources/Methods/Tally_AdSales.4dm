@@ -99,16 +99,16 @@ If (Not:C34(Locked:C147([AdSource:35])))
 	READ WRITE:C146([Order:3])
 	//
 	QUERY:C277([TallyChange:65]; [TallyChange:65]complete:6=False:C215; *)
-	QUERY:C277([TallyChange:65];  & [TallyChange:65]fileNum:1=Table:C252(->[AdSource:35]); *)
-	QUERY:C277([TallyChange:65];  & [TallyChange:65]alphaKey:3=[AdSource:35]marketEffort:2; *)
+	QUERY:C277([TallyChange:65];  & [TallyChange:65]idAlpha:1=Table:C252(->[AdSource:35]); *)
+	QUERY:C277([TallyChange:65];  & [TallyChange:65]idKey:3=[AdSource:35]marketEffort:2; *)
 	If ([AdSource:35]dateCalcEnd:6#!00-00-00!)
 		C_LONGINT:C283($beforeDT)
-		$beforeDT:=DateTime_Enter([AdSource:35]dateCalcEnd:6; ?23:59:59?)
+		$beforeDT:=DateTime_DTTo([AdSource:35]dateCalcEnd:6; ?23:59:59?)
 		QUERY:C277([TallyChange:65];  & [TallyChange:65]dtCreated:7<=$beforeDT; *)
 	End if 
 	If ([AdSource:35]dateCalcBegin:5#!00-00-00!)
 		C_LONGINT:C283($afterDT)
-		$afterDT:=DateTime_Enter([AdSource:35]dateCalcBegin:5; ?23:59:59?)
+		$afterDT:=DateTime_DTTo([AdSource:35]dateCalcBegin:5; ?23:59:59?)
 		QUERY:C277([TallyChange:65];  & [TallyChange:65]dtCreated:7>=$afterDT; *)
 	End if 
 	QUERY:C277([TallyChange:65])
@@ -116,16 +116,16 @@ If (Not:C34(Locked:C147([AdSource:35])))
 	$k:=Records in selection:C76([TallyChange:65])
 	[AdSource:35]value1stOrd:27:=0
 	[AdSource:35]num1stOrd:25:=0
-	FIRST RECORD:C50([TallyChange:65])
-	For ($i; 1; $k)
-		Field:C253([TallyChange:65]fileNum:1; [TallyChange:65]fieldNum:2)->:=Field:C253([TallyChange:65]fileNum:1; [TallyChange:65]fieldNum:2)->+[TallyChange:65]change:5
-		If (Field:C253([TallyChange:65]fileNum:1; [TallyChange:65]fieldNum:2)=(->[AdSource:35]value1stOrd:27))
-			[AdSource:35]num1stOrd:25:=[AdSource:35]num1stOrd:25+1
-		End if 
-		[TallyChange:65]complete:6:=True:C214
-		SAVE RECORD:C53([TallyChange:65])
-		NEXT RECORD:C51([TallyChange:65])
-	End for 
+	//FIRST RECORD([TallyChange])
+	//For ($i; 1; $k)
+	//Field([TallyChange]idAlpha; [TallyChange]fieldNum)->:=Field([TallyChange]idAlpha; [TallyChange]fieldNum)->+[TallyChange]obEntity
+	//If (Field([TallyChange]idAlpha; [TallyChange]fieldNum)=(->[AdSource]value1stOrd))
+	//[AdSource]num1stOrd:=[AdSource]num1stOrd+1
+	//End if 
+	//[TallyChange]complete:=True
+	//SAVE RECORD([TallyChange])
+	//NEXT RECORD([TallyChange])
+	//End for 
 	UNLOAD RECORD:C212([TallyChange:65])
 	[AdSource:35]dateofCalc:4:=Current date:C33
 	SAVE RECORD:C53([AdSource:35])

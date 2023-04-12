@@ -171,7 +171,7 @@ If (Size of array:C274($lines)>=2)
 		$voRequest.URL.pathName:=$vcURLParts[0]
 	Else 
 		$voRequest.URL.pathName:=""
-		ConsoleMessage("Bad WC Request, No 'pathName': \""+$httpHeader+"\"")
+		ConsoleLog("Bad WC Request, No 'pathName': \""+$httpHeader+"\"")
 	End if 
 	$voRequest.URL.pathNameTrimmed:=String_TrimEnd($voRequest.URL.pathName; "/")
 	If ($voRequest.URL.pathNameTrimmed="")
@@ -204,7 +204,7 @@ If (Size of array:C274($lines)>=2)
 		$voRequest.URL.hostName:=$vcURLParts[0]
 	Else 
 		$voRequest.URL.hostName:=""
-		ConsoleMessage("Bad WC Request, No 'hostName': \""+$httpHeader+"\"")
+		ConsoleLog("Bad WC Request, No 'hostName': \""+$httpHeader+"\"")
 	End if 
 	
 	// GET THE PORT
@@ -233,7 +233,7 @@ If (Size of array:C274($lines)>=2)
 	
 Else 
 	
-	ConsoleMessage("Bad WC Request: \""+$httpHeader+"\"")
+	ConsoleLog("Bad WC Request: \""+$httpHeader+"\"")
 	
 End if 
 

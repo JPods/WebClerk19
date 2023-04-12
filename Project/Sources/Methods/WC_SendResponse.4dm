@@ -66,7 +66,7 @@ $viBytesSent:=TCP Send(voState.socket; $vtHeadersString)
 // IF THE RESPONSE IS A CSV, WE WANT TO EXPLICITLY SAY THAT IT IS UTF8 BY PREPENDING A "Byte Order Mark" or "BOM".
 
 If (voState.response.isCSV)
-	$viBytesSent:=$viBytesSent+TCP Send Blob(voState.socket; <>vblUTF8BOM)
+	$viBytesSent:=$viBytesSent+TCP Send Blob(voState.socket; Storage:C1525.wc.blUTF8BOM)
 End if 
 $viBytesSent:=$viBytesSent+TCP Send Blob(voState.socket; $vblBody)
 DebugMessage("BytesSent: "+String:C10($viBytesSent))

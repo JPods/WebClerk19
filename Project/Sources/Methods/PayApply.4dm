@@ -30,9 +30,8 @@ If (Count parameters:C259=1)
 Else 
 	$found:=Prs_CheckRunnin("ApplyPayments")
 	If ($found>0)
-		If (Frontmost process:C327#<>aPrsNum{$found})
-			BRING TO FRONT:C326(<>aPrsNum{$found})
-		End if 
+		BRING TO FRONT:C326($found)
+		
 	Else 
 		var $table_o : Object
 		$tableName:="Control"

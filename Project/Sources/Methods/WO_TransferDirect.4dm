@@ -57,7 +57,7 @@ For ($vi1; 1; Count parameters:C259)
 End for 
 
 CREATE RECORD:C68([WorkOrder:66])
-[WorkOrder:66]woNum:29:=CounterNew(->[WorkOrder:66])
+[WorkOrder:66]idNum:29:=CounterNew(->[WorkOrder:66])
 [WorkOrder:66]itemNum:12:=$vtItemNum
 
 If ([Item:4]itemNum:1#$vtItemNum)
@@ -71,7 +71,7 @@ Else
 End if 
 
 [WorkOrder:66]qtyOrdered:13:=$vrQty
-[WorkOrder:66]qtyActual:14:=$vrQty
+[WorkOrder:66]qty:14:=$vrQty
 [WorkOrder:66]woType:60:="Transfer"
 [WorkOrder:66]action:33:="PendingTransfer"
 [WorkOrder:66]siteIDFrom:62:=$vtsiteIDFrom
@@ -81,15 +81,15 @@ End if
 [WorkOrder:66]actionByInitiated:9:=Current user:C182
 [WorkOrder:66]activity:7:=$vtActivity
 [WorkOrder:66]groupid:32:=$viGroupID
-[WorkOrder:66]dtCreated:44:=DateTime_Enter
-[WorkOrder:66]dtAction:5:=DateTime_Enter($vdDateAction)
+[WorkOrder:66]dtCreated:44:=DateTime_DTTo
+[WorkOrder:66]dtAction:5:=DateTime_DTTo($vdDateAction)
 [WorkOrder:66]dateComplete:64:=!00-00-00!
-[WorkOrder:66]qtyActual:14:=[WorkOrder:66]qtyOrdered:13
+[WorkOrder:66]qty:14:=[WorkOrder:66]qtyOrdered:13
 SAVE RECORD:C53([WorkOrder:66])
 WOTransfer_dInventory("Ship")
 
 [WorkOrder:66]action:33:="CompletedTransfer"
-[WorkOrder:66]dtComplete:6:=DateTime_Enter
+[WorkOrder:66]dtComplete:6:=DateTime_DTTo
 [WorkOrder:66]dateComplete:64:=Current date:C33
 SAVE RECORD:C53([WorkOrder:66])
 WOTransfer_dInventory("Receive")

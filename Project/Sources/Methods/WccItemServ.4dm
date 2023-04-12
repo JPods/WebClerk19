@@ -13,8 +13,8 @@ $recordID:=Num:C11(WCapi_GetParameter("RecordID"; ""))
 C_LONGINT:C283($pageControl)
 Case of 
 	: (voState.url="/WCC_ServiceToday@")  //Complex Transactions   
-		$vlDTStart:=DateTime_Enter(Current date:C33; ?00:00:00?)
-		$vlDTEnd:=DateTime_Enter(Current date:C33; ?23:59:59?)
+		$vlDTStart:=DateTime_DTTo(Current date:C33; ?00:00:00?)
+		$vlDTEnd:=DateTime_DTTo(Current date:C33; ?23:59:59?)
 		QUERY:C277([Service:6]; [Service:6]dtAction:35>=$vlDTStart; *)
 		QUERY:C277([Service:6];  & [Service:6]dtAction:35<=$vlDTEnd; *)
 		If ((vWccSecurity<4999) | (justMine="true"))

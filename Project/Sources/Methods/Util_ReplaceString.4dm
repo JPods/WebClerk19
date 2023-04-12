@@ -128,7 +128,7 @@ If (False:C215)
 	vi9:=Position:C15("#0000d4"; $thePage)
 	If (vi9>0)
 		vi11:=vi9
-		myDoc:=Create document:C266(Storage:C1525.folder.jitF+"zzz"+String:C10(DateTime_Enter)+".html")
+		myDoc:=Create document:C266(Storage:C1525.folder.jitF+"zzz"+String:C10(DateTime_DTTo)+".html")
 		Repeat 
 			vi9:=vi9-1
 		Until ($thePage[[vi9]]="\r")

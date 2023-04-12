@@ -13,6 +13,8 @@ C_OBJECT:C1216($obProperty; $obStore; $obClass)
 C_COLLECTION:C1488($cTableNames)
 $cTableNames:=New collection:C1472
 // OB GET PROPERTY NAMES(ds;$atTableNames)
+//$cTableNames:=ds.extract("DataClass")  // does not work
+
 For each ($vtProperty; ds:C1482)
 	If ($vtProperty#"zz@")  // ignore tables beginning with zz or "_@"
 		$cTableNames.push(New object:C1471("tableName"; $vtProperty))

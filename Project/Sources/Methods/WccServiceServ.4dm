@@ -12,8 +12,8 @@ C_LONGINT:C283($pageControl)
 Case of 
 	: (voState.url="/WCC_ServiceToday@")  //Complex Transactions  
 		C_LONGINT:C283($dt00; $dt24)
-		$dt00:=DateTime_Enter(Current date:C33; ?00:00:00?)
-		$dt24:=DateTime_Enter(Current date:C33; ?23:59:59?)
+		$dt00:=DateTime_DTTo(Current date:C33; ?00:00:00?)
+		$dt24:=DateTime_DTTo(Current date:C33; ?23:59:59?)
 		QUERY:C277([Service:6]; [Service:6]actionBy:12=[Employee:19]nameID:1; *)
 		QUERY:C277([Service:6];  | [Service:6]actionCreatedBy:40=[Employee:19]nameID:1; *)
 		QUERY:C277([Service:6];  | [Service:6]repID:2=[Employee:19]nameID:1; *)

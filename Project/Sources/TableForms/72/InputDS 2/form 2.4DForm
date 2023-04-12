@@ -1,0 +1,85 @@
+﻿{"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":0,"bottomMargin":0,"menuBar":"Menu Bar #1","markerBody":723,"markerBreak":732,"markerFooter":739,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onActivate","onDeactivate","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onUnload","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Field4":{"type":"input","top":25,"left":236,"width":316,"height":17,"dataSource":"[QAQuestion:71]questionType:2","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field3":{"type":"input","top":81,"left":510,"width":103,"height":17,"dataSource":"[QAAnswer:72]idNumQAQuestion:1","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field5":{"type":"input","top":99,"left":32,"width":581,"height":56,"dataSource":"[QAQuestion:71]question:3","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"spellcheck":true,"contextMenu":"none","dragging":"none","dropping":"none"},"Field1":{"type":"input","top":170,"left":510,"width":103,"height":17,"dataSource":"[QAAnswer:72]idNum:2","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field2":{"type":"input","top":188,"left":32,"width":581,"height":56,"dataSource":"[QAAnswer:72]answer:3","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","spellcheck":true,"contextMenu":"none","dragging":"none","dropping":"none"},"Text1":{"type":"text","top":172,"left":404,"width":95,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":":16795,39"},"Text2":{"type":"text","top":172,"left":30,"width":92,"height":12,"stroke":"#000000","class":"cssInputLabel","text":":16795,29"},"Text3":{"type":"text","top":83,"left":408,"width":95,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":":16795,34"},"Text4":{"type":"text","top":27,"left":120,"width":109,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":":16795,35"},"Text5":{"type":"text","top":83,"left":30,"width":92,"height":12,"stroke":"#000000","class":"cssInputLabel","fontStyle":"italic","text":":16795,28"},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Field6":{"type":"input","top":11,"left":620,"width":440,"height":417,"dataSource":"[QAQuestion]obGeneral","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"spellcheck":true,"contextMenu":"none","dragging":"none","dropping":"none","sizingX":"grow","sizingY":"grow"},"Field7":{"type":"input","top":268,"left":32,"width":581,"height":33,"dataSource":"[QAAnswer:72]photoTag:8","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","spellcheck":true,"contextMenu":"none","dragging":"none","dropping":"none"},"Text6":{"type":"text","top":252,"left":30,"width":92,"height":12,"stroke":"#000000","class":"cssInputLabel","text":"photoTag"},"Field8":{"type":"input","top":328,"left":32,"width":581,"height":33,"dataSource":"[QAAnswer:72]url:6","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"sunken","spellcheck":true,"contextMenu":"none","dragging":"none","dropping":"none"},"Text7":{"type":"text","top":312,"left":30,"width":92,"height":12,"stroke":"#000000","class":"cssInputLabel","text":"url"},"Field9":{"type":"input","top":170,"left":309,"width":103,"height":17,"dataSource":"[QAAnswer:72]seq:7","dataSourceTypeHint":"integer","stroke":"#000000","class":"cssInput","focusable":false,"fill":"#FFFFFF","borderStyle":"sunken","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Text8":{"type":"text","top":172,"left":207,"width":95,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","fontStyle":"italic","text":"seq"}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}},"geometryStamp":29,"$4d":{"version":"1","kind":"form"}}

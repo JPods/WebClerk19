@@ -39,7 +39,7 @@
 // C_OBJECT($voSelFieldChar; $voRecFieldChar)
 // C_OBJECT($voSelFields; $voRecFields)
 // C_TEXT($vtFieldName)
-// $voSelFieldChar:=ds.FieldCharacteristic.query($vtQuery; $vtRole; $viSecureLvl)
+// $voSelFieldChar:=ds.FC.query($vtQuery; $vtRole; $viSecureLvl)
 // If ($voSelFieldChar.length=0)
 // ARRAY TEXT($vtArrayTables; 0)
 // TextToArray($vtTables; ->$vtArrayTables; ",")
@@ -52,7 +52,7 @@
 // $tableName:=<>voTables[$tableName].tableName
 // $voSelFields:=<>voTables[$tableName].fields
 // For each ($vtFieldName; $voSelFields)
-// $voRecFields:=ds.FieldCharacteristic.new()
+// $voRecFields:=ds.FC.new()
 // $voRecFields.purpose:="List_"+$vtRole
 // $voRecFields.roles:=$vtRole
 // $voRecFields.securityLevel:=$viSecureLvl

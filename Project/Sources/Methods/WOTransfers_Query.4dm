@@ -43,8 +43,8 @@ Case of
 			//QUERY([WorkOrder];&[WorkOrder]DTCompleted=0;*)
 		End if 
 End case 
-QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44>=DateTime_Enter((iLoDate1-iLoInteger1); ?00:00:00?); *)
-QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44<=DateTime_Enter((iLoDate1+iLoInteger1); ?23:59:59?); *)
+QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44>=DateTime_DTTo((iLoDate1-iLoInteger1); ?00:00:00?); *)
+QUERY:C277([WorkOrder:66];  & ; [WorkOrder:66]dtCreated:44<=DateTime_DTTo((iLoDate1+iLoInteger1); ?23:59:59?); *)
 QUERY:C277([WorkOrder:66])
 
 //WOTransfers_Sort (iLoText2)

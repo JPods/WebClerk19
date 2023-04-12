@@ -55,7 +55,7 @@ If (False:C215)  // only use in interpreted
 												GET FIELD PROPERTIES:C258($tableNum; $fieldNum; $type)
 												Case of 
 													: (($fieldName="DT@") & ($type=Is longint:K8:6))
-														$ptField->:=DateTime_Enter($dateNew)
+														$ptField->:=DateTime_DTTo($dateNew)
 													: (($type=Is date:K8:7))
 														If ($ptField-><!2018-06-15!)
 															$ptField->:=$dateNew

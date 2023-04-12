@@ -1,1 +1,0 @@
-Exch_PopRate(0; ->[Invoice:26]currency:62; -><>aExchID; ->[Invoice:26]exchangeRate:61; ->[QQQCurrency:61])

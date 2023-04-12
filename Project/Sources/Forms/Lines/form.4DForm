@@ -1,0 +1,778 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onDrop",
+		"onDataChange",
+		"onTimer",
+		"onAfterKeystroke",
+		"onSelectionChange",
+		"onAfterEdit"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Variable20": {
+					"type": "button",
+					"top": 97,
+					"left": 24,
+					"width": 20,
+					"height": 22,
+					"dataSource": "bItemShow",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_L"
+					},
+					"shortcutKey": "e",
+					"shortcutAccel": true,
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "L",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable20.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable19": {
+					"type": "button",
+					"top": 121,
+					"left": 24,
+					"width": 20,
+					"height": 20,
+					"dataSource": "bItemSpec",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_S"
+					},
+					"shortcutKey": "´",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "S",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable19.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable18": {
+					"type": "button",
+					"top": 141,
+					"left": 24,
+					"width": 20,
+					"height": 21,
+					"dataSource": "bTimeWand",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_T"
+					},
+					"shortcutKey": "t",
+					"shortcutAccel": true,
+					"shortcutAlt": true,
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "T",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable18.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable17": {
+					"type": "button",
+					"top": 141,
+					"left": 46,
+					"width": 47,
+					"height": 21,
+					"dataSource": "bItemXRef",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_XRef"
+					},
+					"shortcutKey": "´",
+					"shortcutAccel": true,
+					"shortcutShift": true,
+					"shortcutAlt": true,
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "XRef",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable17.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable12": {
+					"type": "pictureButton",
+					"top": 58,
+					"left": 24,
+					"width": 69,
+					"height": 37,
+					"dataSource": "bSubDel",
+					"shortcutKey": "-",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/MinusButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable21": {
+					"type": "pictureButton",
+					"top": 21,
+					"left": 24,
+					"width": 69,
+					"height": 36,
+					"dataSource": "bSubAdd",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_Add"
+					},
+					"shortcutKey": "+",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/Plus.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable21.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable22": {
+					"type": "pictureButton",
+					"top": 97,
+					"left": 46,
+					"width": 47,
+					"height": 43,
+					"dataSource": "vDetails",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_MagGlass"
+					},
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/LineDetail.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable22.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable23": {
+					"type": "dropdown",
+					"top": 164,
+					"left": 23,
+					"width": 68,
+					"height": 18,
+					"dataSource": "<>aItemAction",
+					"textFormat": ":15990,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bQQPull1": {
+					"type": "button",
+					"top": 379,
+					"left": 29,
+					"width": 68,
+					"height": 21,
+					"dataSource": "bQQPull",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_Clone"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "QQPull",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bQQPull1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable1": {
+					"type": "dropdown",
+					"top": 424,
+					"left": 30,
+					"width": 68,
+					"height": 18,
+					"dataSource": "aOSOrdProcess",
+					"textFormat": ":18891,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bQQPush1": {
+					"type": "button",
+					"top": 401,
+					"left": 28,
+					"width": 68,
+					"height": 21,
+					"dataSource": "bQQPush",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/IP_Clone"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "QQPush",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/bQQPush1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"LB_Lines": {
+					"type": "listbox",
+					"left": 113,
+					"top": 177,
+					"width": 896,
+					"height": 405,
+					"events": [
+						"onLoad",
+						"onClick",
+						"onDoubleClick",
+						"onDrop",
+						"onDataChange",
+						"onSelectionChange",
+						"onBeginDragOver"
+					],
+					"dataSource": "LB_Lines.ents",
+					"listboxType": "collection",
+					"selectionMode": "multiple",
+					"method": "ObjectMethods/LB_Lines.4dm",
+					"currentItemSource": "LB_Lines.cur",
+					"currentItemPositionSource": "LB_Lines.pos",
+					"selectedItemsSource": "LB_Lines.sel",
+					"alternateFill": "#FFFAEE",
+					"singleClickEdit": true,
+					"metaSource": "LB_OrderLine.meta",
+					"showFooters": true,
+					"dragging": "custom",
+					"dropping": "custom",
+					"columns": [
+						{
+							"header": {
+								"name": "Header_LB_Lines_qty_",
+								"text": "Qty"
+							},
+							"footer": {
+								"name": "_TOTAL_LB_Lines_qty_",
+								"dataSource": "",
+								"dataSourceTypeHint": "number",
+								"numberFormat": {
+									"$ref": "/SOURCES/filters.json#/lgNum"
+								}
+							},
+							"name": "Column_LB_Lines_qty_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.##",
+							"width": 61,
+							"formula": "This.qty",
+							"dataSource": "This:C1470.qty",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/lgNum"
+							},
+							"dataSourceTypeHint": "number"
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_qtyBackLogged_",
+								"text": "QtyBackLogged"
+							},
+							"footer": {
+								"name": "_TOTAL_LB_Lines_qtyBackLogged_",
+								"dataSource": "",
+								"dataSourceTypeHint": "number",
+								"numberFormat": {
+									"$ref": "/SOURCES/filters.json#/lgNum"
+								}
+							},
+							"name": "Column_LB_Lines_qtyBackLogged_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.##",
+							"width": 58,
+							"formula": "This.qtyBackLogged",
+							"dataSource": "This:C1470.qtyBackLogged",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"enterable": false,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/lgNum"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_complete_",
+								"text": "Complete"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_complete_"
+							},
+							"name": "Column_LB_Lines_complete_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 3,
+							"format": "",
+							"width": 31,
+							"formula": "This.complete",
+							"dataSource": "This:C1470.complete",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"enterable": true,
+							"dataSourceTypeHint": "boolean"
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_itemNum_",
+								"text": "ItemNum"
+							},
+							"footer": {
+								"name": "_TOTAL_LB_Lines_cnt_",
+								"dataSourceTypeHint": "number",
+								"numberFormat": {
+									"$ref": "/SOURCES/filters.json#/lgNum"
+								}
+							},
+							"name": "Column_LB_Lines_itemNum_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 1,
+							"format": "",
+							"width": 109,
+							"formula": "This.itemNum",
+							"dataSource": "This:C1470.itemNum",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_itemNumAlt_",
+								"text": "ItemNumAlt"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_itemNumAlt_"
+							},
+							"name": "Column_LB_Lines_itemNumAlt_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 1,
+							"format": "",
+							"width": 10,
+							"formula": "This.itemNumAlt",
+							"dataSource": "This:C1470.itemNumAlt",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_description_",
+								"text": "Description"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_description_"
+							},
+							"name": "Column_LB_Lines_description_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 1,
+							"format": "",
+							"width": 369,
+							"formula": "This.description",
+							"dataSource": "This:C1470.description",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_unitPrice_",
+								"text": "UnitPrice"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_unitPrice_"
+							},
+							"name": "Column_LB_Lines_unitPrice_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 70,
+							"formula": "This.unitPrice",
+							"dataSource": "This:C1470.unitPrice",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/Currency"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_discount_",
+								"text": "Discount"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_discount_"
+							},
+							"name": "Column_LB_Lines_discount_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 58,
+							"formula": "This.discount",
+							"dataSource": "This:C1470.discount",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": "$###,##0.00;-$###,##0.00"
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_extendedPrice_",
+								"text": "ExtendedPrice"
+							},
+							"footer": {
+								"name": "_TOTAL_LB_Lines_extendedPrice_",
+								"dataSource": "",
+								"dataSourceTypeHint": "number",
+								"numberFormat": {
+									"$ref": "/SOURCES/filters.json#/Currency"
+								}
+							},
+							"name": "Column_LB_Lines_extendedPrice_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 112,
+							"formula": "This.extendedPrice",
+							"dataSource": "This:C1470.extendedPrice",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"enterable": false,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/Currency"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_backOrdAmount_",
+								"text": "BackOrdAmount"
+							},
+							"footer": {
+								"name": "_TOTAL_LB_Lines_backOrdAmount_"
+							},
+							"name": "Column_LB_Lines_backOrdAmount_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.backOrdAmount",
+							"dataSource": "This:C1470.backOrdAmount",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/Currency"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_unitCost_",
+								"text": "UnitCost"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_unitCost_"
+							},
+							"name": "Column_LB_Lines_unitCost_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.unitCost",
+							"dataSource": "This:C1470.unitCost",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/Currency"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_taxJuris_",
+								"text": "TaxJuris"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_taxJuris_"
+							},
+							"name": "Column_LB_Lines_taxJuris_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.taxJuris",
+							"dataSource": "This:C1470.taxJuris",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_salesTax_",
+								"text": "SalesTax"
+							},
+							"footer": {
+								"name": "_TOTAL_LB_Lines_salesTax_",
+								"dataSourceTypeHint": "number",
+								"numberFormat": {
+									"$ref": "/SOURCES/filters.json#/Currency"
+								}
+							},
+							"name": "Column_LB_Lines_salesTax_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.salesTax",
+							"dataSource": "This:C1470.salesTax",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/Currency"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_commRateSales_",
+								"text": "CommRateSales"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_commRateSales_"
+							},
+							"name": "Column_LB_Lines_commRateSales_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.commRateSales",
+							"dataSource": "This:C1470.commRateSales",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/0.0"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_commRateRep_",
+								"text": "CommRateRep"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_commRateRep_"
+							},
+							"name": "Column_LB_Lines_commRateRep_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.commRateRep",
+							"dataSource": "This:C1470.commRateRep",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/0.0"
+							}
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_unitofMeasure_",
+								"text": "UnitofMeasure"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_unitofMeasure_"
+							},
+							"name": "Column_LB_Lines_unitofMeasure_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 1,
+							"format": "",
+							"width": 120,
+							"formula": "This.unitofMeasure",
+							"dataSource": "This:C1470.unitofMeasure",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1
+						},
+						{
+							"header": {
+								"name": "Header_LB_Lines_unitWt_",
+								"text": "UnitWt"
+							},
+							"footer": {
+								"name": "Footer_LB_Lines_unitWt_"
+							},
+							"name": "Column_LB_Lines_unitWt_",
+							"className": "LB",
+							"valueName": "DraftTable",
+							"align": 4,
+							"format": "###,###,###,##0.00",
+							"width": 80,
+							"formula": "This.unitWt",
+							"dataSource": "This:C1470.unitWt",
+							"displayType": 0,
+							"wordWrap": 0,
+							"bgColor": "",
+							"fontColor": "",
+							"widthMin": 10,
+							"widthMax": 32000,
+							"resizable": 1,
+							"dataSourceTypeHint": "number",
+							"numberFormat": {
+								"$ref": "/SOURCES/filters.json#/0.00"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 151,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

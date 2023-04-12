@@ -1,0 +1,288 @@
+
+// Modified by: Bill James (2022-04-21T05:00:00Z)
+// Method: cEntry
+// Description 
+// Parameters
+// ----------------------------------------------------
+//Class constructor($dataClassName : Text; $formName : Text; $sfName : Text)
+Class constructor($dataClassName : Text; $formName : Text; $sfName : Text)
+	// cEntry constructor
+	
+	This.dataClassName:=$dataClassName
+	This.dataClass:=ds[This.dataClassName]
+	This.formName:=$formName
+	This.sfName:=$sfName
+	This.form_o:=Null
+	This.fields:=""
+	This.view:=""
+	This.old:=Null
+	This.entry_o:=Null
+	This.entry_e:=Null
+	This.cur:=Null
+	If (Form.LB_Selection.cur#Null)
+		This.cur:=Form.LB_Selection.cur
+		This.entry_e:=Form.LB_Selection.cur
+		// use the object if it is required to separate clicking on a list that 
+		// changes Form.LB_Selection.cur when actions are still required on the data
+		This.entry_o:=Form.LB_Selection.cur.toObject()
+	End if 
+	This.setSpacing()
+	This.fc:=Form.fc
+	
+	
+	
+	//MARK:-  display
+	
+	//MARK:-  setters
+	
+Function setOffset()
+	This.spacing.offSet:=0
+	
+Function setSpacing($spacing_o : Object)
+	If ($spacing_o#Null)
+		This.spacing:=$spacing_o
+	Else 
+		This.spacing:=New object(\
+		"dataStub"; "Form.LB_Selection.cur."; \
+		"offSet"; 0; \
+		"top"; 10; \
+		"bottom"; 5; \
+		"label"; New object(\
+		"left"; 10; \
+		"width"; 120; \
+		"height"; 16); \
+		"field"; New object(\
+		"left"; 130; \
+		"width"; 235; \
+		"height"; New object(\
+		"most"; 16; \
+		"text"; 95; \
+		"picture"; 95; \
+		"object"; 95)); \
+		"tools"; New object(\
+		"left"; 130+235+10; \
+		"height"; 16; \
+		"width"; 90))
+	End if 
+	
+Function setDefaults($options_o : Object)->$results : Object
+	//This.fields:=This.fc.views[].entry.fields
+	If (Count parameters=0)
+		$options_o:=New object
+	End if 
+	If (This.spacing.top=Null)
+		This.spacing.top:=10
+	End if 
+	If ($options_o.entry.fields#Null)
+		This.fields:=$options_o.entry.fields
+	End if 
+	If (This.fields="")
+		This.fields:=Form.entry.fields
+	End if 
+	If (This.fields="")
+		This.getFCFieldList()
+	End if 
+	
+	/* add a similar option for a setting from an object 
+		so we can control individual fields 
+			
+		or pass in the entire form
+	*/
+	
+Function setSubForm($options_o : Object)
+	This.setDefaults($options_o)
+	
+	// build subform
+	$page:=New object
+	var $c : Collection
+	var $fields_c : Collection
+	$c:=New collection
+	$fields_c:=New collection
+	$fields_c:=Split string(This.fields; ",")
+	
+	
+	If (This.cur.id#Form.LB_Selection.cur.id)
+		This.cur:=Form.LB_Selection.cur
+		This.entry_o:=This.cur.toObject()
+	End if 
+	This.spacing.offSet:=0
+	For each ($field; $fields_c)
+		This.setLineEntry($field; $page)
+	End for each 
+	This.spacing.offSet:=0
+	
+	
+	$subform:=New object("pages"; New collection(Null; New object("objects"; $page)))
+	
+	If (This.fc=Null)
+		var $jsonText : Text
+		$jsonText:=JSON Stringify($subform)
+		SET TEXT TO PASTEBOARD(JSON Stringify($subform))
+	End if 
+	
+	
+	//if(This.view#"")
+	//This.fc.data.views[This.view].entry.form_o:=$subform
+	//end if
+	//OBJECT GET SUBFORM   does not return the form
+	
+	OBJECT SET SUBFORM(*; This.sfName; $subform)
+	
+Function setLineEntry($field : Text; $page : Object)
+	$fieldobject:=This.dataClass[$field]
+	If ($fieldobject#Null)
+		If ($fieldobject.kind="storage")
+			If ($fieldobject.fieldType#Is BLOB)
+				var $line_o : Object
+				var $lineHeight; $lineTop; $lineBottom : Integer
+				
+				/*look to find if this field has:
+					# is locked
+					## set style to italic
+					## lock the field
+									
+					# a popup, if yes
+					## name the popup
+					## populate it
+					## build it over the top of the lable
+					## set the color the lable to  000099
+					## lock the field
+					## put behavior in the entry_o class
+									
+					# a button, if yes
+					## name the button
+					## set text color to 009900
+					## put behavior in the entry_o class
+				*/
+				
+				This.spacing.offSet:=This.spacing.offSet+This.spacing.top
+				$lineTop:=This.spacing.offSet
+				
+				// label on the left
+				$formobject:=New object
+				$formobject.text:=$field
+				$formobject.type:="text"
+				$formobject.left:=This.spacing.label.left
+				$formobject.top:=$lineTop  // cumulative
+				$formobject.width:=This.spacing.label.width  // 120
+				$formobject.height:=This.spacing.label.height  // 16
+				// label to page
+				$page[$field]:=$formobject
+				
+				//$formobject.dataSource:="Form.LB_Selection.cur."+$field
+				// different dataSource for images. Need to setByPath
+				//$formobject.dataSource:="Form.cur."+$field
+				// from eEntry: does not update the subform
+				//     here:  $formobject.dataSource:="entry_e."+$field  //Form.LB_Selection.cur
+				//     listbox: entity_e:=
+				
+				
+				// entry in the middle
+				$formobject:=New object
+				$formobject.type:="input"
+				$formobject.dataSource:=This.spacing.dataStub+$field  //Form.LB_Selection.cur
+				$formobject.left:=This.spacing.field.left
+				$formobject.top:=$lineTop  // cumulative
+				$formobject.width:=This.spacing.field.width  // 235
+				$formobject.sizingX:="grow"
+				If (($fieldobject.fieldType#Is text) & ($fieldobject.fieldType#Is picture) & ($fieldobject.fieldType#Is object))
+					$formobject.height:=This.spacing.field.height.most  // 16
+					$lineHeight:=$formobject.height
+					
+					$page[$field+"_entry"]:=$formobject
+					
+					If (($field="phone@") | ($field="email@") | ($field="address1"))
+						$formobject:=New object
+						$formobject.type:="input"
+						$formobject.dataSource:="a"+$field
+						$formobject.left:=This.spacing.tools.left
+						$formobject.top:=$lineTop  // cumulative
+						$formobject.width:=This.spacing.tools.width  // 235
+						$formobject.height:=This.spacing.tools.height  // 16
+						$formobject.sizingX:="move"
+						var $ptVar : Pointer
+						$ptVar:=Get pointer($formobject.dataSource)
+						ARRAY TEXT($ptVar->; 1)
+						$ptVar->{1}:=$field+" choices"
+						
+						$page[$field+"_tool"]:=$formobject
+					End if 
+					
+				Else 
+					If ($fieldobject.fieldType=Is picture)
+						$formobject.dataSourceTypeHint:="picture"
+					End if 
+					$formobject.height:=This.spacing.field.height.picture
+					$lineHeight:=$formobject.height
+					
+					$formobject.sizingY:="grow"
+					
+					// add splitter
+					$page["_"]:=$formobject
+					
+					
+					// build the entry field
+					$formobject:=New object
+					$formobject.type:="splitter"
+					// add a mechanism to get pictures from paths. 
+					// name all fields path that point to images, etc...
+					//var $picture_p:picture
+					$formobject.dataSource:="Form.LB_Selection.cur"+$field
+					//$formobject.dataSource:="Form.entity."+$field  //Form.LB_Selection.cur
+					$formobject.left:=This.spacing.field.left
+					$formobject.top:=$lineTop
+					$formobject.width:=This.spacing.field.width  // 390
+					$formobject.sizingX:="grow"
+					$formobject.height:=This.spacing.field.height.object
+					
+				End if 
+				
+				$page[$field+"_splitter"]:=$formobject
+				This.spacing.offSet:=This.spacing.offSet+$lineHeight+This.spacing.bottom
+			End if 
+		End if 
+	End if 
+	
+	
+	
+	
+Function setEntry()
+	entry_e:=entry_e
+	entry_e:=Form.LB_Selection.cur
+	This.cur:=Form.LB_Selection.cur
+	This.entry_e:=Form.LB_Selection.cur
+	
+	//MARK:-  get
+	
+	
+	
+	
+	
+	
+Function getFCFieldList($view : Text)
+	// cEntry getFCFieldList
+	
+	
+	//MARK:-  calc
+	
+	
+	
+	//Function _setFCNew($purpose : Text)
+	//$fc_o:=ds.FC.new()
+	//$fc_o.tableName:=This.dataClassName
+	//$fc_o.purpose:=$purpose
+	//If ($fc_o.purpose="")
+	//$fc_o.purpose:=This.formName
+	//End if 
+	//$fc_o.obGeneral:=Init_obGeneral
+	//For each ($field; This.dataClass)
+	//$c.push(New object("name"; $field))
+	//End for each 
+	//$c:=$c.orderBy("name asc")
+	//$fc_o.data:=New object(This.sfName; New object(\
+																			"subForm"; This.sfName; \
+																			"entryFields"; $c.join(",")))
+	
+	//$fc_o.save()
+	//This.fc:=$fc_o
+	

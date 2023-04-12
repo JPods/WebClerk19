@@ -12,23 +12,20 @@ Case of   //search for absolute duplicate (ie unique field)
 		$3->:=9
 		$4->:=Field:C253(->[Service:6]obSync:29)
 	: ($1=(->[Proposal:42]))
-		$2->:=Field:C253(->[Proposal:42]proposalNum:5)
+		$2->:=Field:C253(->[Proposal:42]idNum:5)
 		$3->:=9
-		$4->:=Field:C253(->[Proposal:42]obSync:44)
+		$4->:=Field:C253(->[Proposal:42]obHistory:44)
 	: ($1=(->[Order:3]))
-		$2->:=Field:C253(->[Order:3]orderNum:2)
+		$2->:=Field:C253(->[Order:3]idNum:2)
 		$3->:=9
 		$4->:=Field:C253(->[Order:3]lng:34)
 	: ($1=(->[Invoice:26]))
-		$2->:=Field:C253(->[Invoice:26]invoiceNum:2)
+		$2->:=Field:C253(->[Invoice:26]idNum:2)
 		$3->:=9
 		$4->:=Field:C253(->[Invoice:26]obSync:47)
 	: ($1=(->[Contact:13]))
 		$2->:=-1
 		$3->:=-1
 		$4->:=Field:C253(->[Contact:13]obSync:17)
-	: ($1=(->[Lead:48]))
-		$2->:=-1
-		$3->:=-1
-		$4->:=Field:C253(->[Lead:48]obSync:25)
+		
 End case 

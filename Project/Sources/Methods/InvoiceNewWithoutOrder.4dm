@@ -12,11 +12,11 @@
 // Parameters
 // ----------------------------------------------------
 
-If ([Invoice:26]invoiceNum:2=0)
-	[Invoice:26]invoiceNum:2:=CounterNew(->[Invoice:26])
+If ([Invoice:26]idNum:2=0)
+	[Invoice:26]idNum:2:=CounterNew(->[Invoice:26])
 End if 
-[Invoice:26]orderNum:1:=1
-[Invoice:26]autoFreight:32:=(<>tcAutoFrght=1)
+[Invoice:26]idNumOrder:1:=1
+[Invoice]shipAuto:=(<>tcAutoFrght=1)
 [Invoice:26]fob:39:=Storage:C1525.default.fob
 [Invoice:26]siteID:86:=DSGetMachineSiteID
 vsiteID:=[Invoice:26]siteID:86

@@ -1,0 +1,794 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #8",
+	"markerHeader": 1,
+	"markerBody": 629,
+	"markerBreak": 662,
+	"markerFooter": 695,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"PONum": {
+					"type": "input",
+					"top": 36,
+					"left": 306,
+					"width": 79,
+					"height": 17,
+					"dataSource": "[POReceipt:95]idNumPO:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VendorID": {
+					"type": "input",
+					"top": 19,
+					"left": 555,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[POReceipt:95]vendorID:3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VendorInvoiceNum": {
+					"type": "input",
+					"top": 92,
+					"left": 306,
+					"width": 190,
+					"height": 17,
+					"dataSource": "[POReceipt:95]vendorInvoiceNum:4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VendorInvoiceDate": {
+					"type": "input",
+					"top": 117,
+					"left": 306,
+					"width": 190,
+					"height": 17,
+					"dataSource": "[POReceipt:95]vendorInvoiceDate:5",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_POReceipt_PackingListID_11": {
+					"type": "input",
+					"top": 92,
+					"left": 501,
+					"width": 191,
+					"height": 17,
+					"dataSource": "entry_o.PackingListID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[POReceipt:95]PackingListID:12"
+				},
+				"_PROP_POReceipt_PackingListDate_12": {
+					"type": "input",
+					"top": 117,
+					"left": 501,
+					"width": 191,
+					"height": 17,
+					"dataSource": "entry_o.PackingListDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[POReceipt:95]PackingListDate:13"
+				},
+				"_PROP_POReceipt_WayBillID_13": {
+					"type": "input",
+					"top": 142,
+					"left": 501,
+					"width": 191,
+					"height": 17,
+					"dataSource": "entry_o.WayBillID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[POReceipt:95]WayBillID:17"
+				},
+				"VendorInvoiceFreight": {
+					"type": "input",
+					"top": 142,
+					"left": 306,
+					"width": 88,
+					"height": 17,
+					"dataSource": "[POReceipt:95]vendorInvoiceFreight:6",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_POReceipt_StackValues_15": {
+					"type": "input",
+					"top": 168,
+					"left": 401,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.StackValues",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[POReceipt:95]StackValues:10"
+				},
+				"VendorInviceAmount": {
+					"type": "input",
+					"top": 168,
+					"left": 306,
+					"width": 88,
+					"height": 17,
+					"dataSource": "[POReceipt:95]vendorInvoiceAmount:7",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_b4_17": {
+					"type": "button",
+					"top": 84,
+					"left": 720,
+					"width": 161,
+					"height": 31,
+					"dataSource": "b4",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Add Freight Stack",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable158.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b3_18": {
+					"type": "button",
+					"top": 118,
+					"left": 720,
+					"width": 161,
+					"height": 32,
+					"dataSource": "b3",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Add Product Stack",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable157.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b2_19": {
+					"type": "button",
+					"top": 153,
+					"left": 720,
+					"width": 161,
+					"height": 31,
+					"dataSource": "b2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "ReCalc",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable45.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_POReceipt_Comment_20": {
+					"type": "input",
+					"top": 193,
+					"left": 306,
+					"width": 574,
+					"height": 76,
+					"dataSource": "entry_o.Comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[POReceipt:95]Comment:9"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 292,
+					"left": 20,
+					"width": 844,
+					"height": 357,
+					"dataSourceTypeHint": "text",
+					"table": 29,
+					"listForm": "Included",
+					"focusable": false,
+					"scrollbarVertical": "visible",
+					"enterableInList": false,
+					"deletableInList": false,
+					"doubleClickInRowAction": "displaySubrecord",
+					"selectionMode": "single",
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"_Text_PONumber_22": {
+					"type": "text",
+					"top": 38,
+					"left": 202,
+					"width": 98,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PO Number"
+				},
+				"_Text_ReceiptID_23": {
+					"type": "text",
+					"top": 19,
+					"left": 185,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Receipt ID"
+				},
+				"_Text_VendorID_24": {
+					"type": "text",
+					"top": 21,
+					"left": 426,
+					"width": 123,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Vendor ID"
+				},
+				"_Text_VendorInvoice_Stack_Diff_25": {
+					"type": "text",
+					"top": 170,
+					"left": 79,
+					"width": 221,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Vendor Invoice/Stack/Diff"
+				},
+				"_Text_VendorInvoice_PackDate_26": {
+					"type": "text",
+					"top": 119,
+					"left": 85,
+					"width": 215,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Vendor Invoice/Pack Date"
+				},
+				"_Text_VendorInvoiceFreight_27": {
+					"type": "text",
+					"top": 144,
+					"left": 109,
+					"width": 191,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Vendor Invoice Freight"
+				},
+				"_Text_VendorInvoice_PackID_28": {
+					"type": "text",
+					"top": 94,
+					"left": 85,
+					"width": 215,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Vendor Invoice/PackID"
+				},
+				"ReceiptID": {
+					"type": "input",
+					"top": 17,
+					"left": 306,
+					"width": 79,
+					"height": 17,
+					"dataSource": "[POReceipt:95]idNum:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_bPO_30": {
+					"type": "button",
+					"top": 36,
+					"left": 193,
+					"width": 108,
+					"height": 17,
+					"dataSource": "bPO",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable46.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_Comment_31": {
+					"type": "text",
+					"top": 196,
+					"left": 109,
+					"width": 191,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Comment"
+				},
+				"_VAR_vR1_32": {
+					"type": "input",
+					"top": 168,
+					"left": 498,
+					"width": 100,
+					"height": 17,
+					"dataSource": "vR1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_Text_Gointostackto\rchangevalue\rordelete_33": {
+					"type": "text",
+					"top": 18,
+					"left": 717,
+					"width": 164,
+					"height": 45,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Go into stack to \rchange value\ror delete"
+				},
+				"_Text_WayBill_34": {
+					"type": "text",
+					"top": 144,
+					"left": 405,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "WayBill"
+				},
+				"_VAR_bVendor_35": {
+					"type": "button",
+					"top": 19,
+					"left": 442,
+					"width": 108,
+					"height": 16,
+					"dataSource": "bVendor",
+					"text": "Set Vendor",
+					"display": false,
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_POReceipt_ObGeneral_36": {
+					"type": "input",
+					"top": 111,
+					"left": 8,
+					"width": 992,
+					"height": 569,
+					"dataSource": "entry_o.ObGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[POReceipt:95]ObGeneral:20"
+				},
+				"_Text_ObGeneral_37": {
+					"type": "text",
+					"top": 90,
+					"left": 11,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				},
+				"PONum1": {
+					"type": "input",
+					"top": 36,
+					"left": 306,
+					"width": 79,
+					"height": 17,
+					"dataSource": "[POReceipt:95]poNum:2",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"VendorID1": {
+					"type": "input",
+					"top": 19,
+					"left": 555,
+					"width": 116,
+					"height": 17,
+					"dataSource": "[POReceipt:95]VendorID:3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_Text_PONumber_40": {
+					"type": "text",
+					"top": 38,
+					"left": 202,
+					"width": 98,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PO Number"
+				},
+				"_Text_ReceiptID_41": {
+					"type": "text",
+					"top": 19,
+					"left": 185,
+					"width": 115,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Receipt ID"
+				},
+				"_Text_VendorID_42": {
+					"type": "text",
+					"top": 21,
+					"left": 426,
+					"width": 123,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Vendor ID"
+				},
+				"ReceiptID1": {
+					"type": "input",
+					"top": 17,
+					"left": 306,
+					"width": 79,
+					"height": 17,
+					"dataSource": "[POReceipt:95]idUnique:1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_bPO_44": {
+					"type": "button",
+					"top": 36,
+					"left": 193,
+					"width": 108,
+					"height": 17,
+					"dataSource": "bPO",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bVendor_45": {
+					"type": "button",
+					"top": 19,
+					"left": 442,
+					"width": 108,
+					"height": 16,
+					"dataSource": "bVendor",
+					"text": "Set Vendor",
+					"display": false,
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

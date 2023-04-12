@@ -37,7 +37,7 @@ Case of
 		$vodInventory.custVendID:=$voEntity.customerID
 		$vodInventory.Reason:="oi new line"
 		$vodInventory.typeID:="SO"
-		$vodInventory.dtCreated:=DateTime_Enter
+		$vodInventory.dtCreated:=DateTime_DTTo
 		$vodInventory.dateCreated:=Current date:C33
 		$vodInventory.timeCreated:=Current time:C178
 		$vodInventory.note:=""

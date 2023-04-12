@@ -44,7 +44,7 @@ If (Count parameters:C259>0)
 	READ WRITE:C146([EventLog:75])
 	CREATE RECORD:C68([EventLog:75])
 	
-	[EventLog:75]dtEvent:1:=DateTime_Enter
+	[EventLog:75]dtEvent:1:=DateTime_DTTo
 	If ([EventLog:75]dtEvent:1<=<>lELogLastDT)  //don't create one with the same DTEvent
 		[EventLog:75]dtEvent:1:=<>lELogLastDT+1  //this happens after last
 	End if 

@@ -40,18 +40,18 @@ $k:=Size of array:C274($aLat)
 C_REAL:C285($vrLat; $vrLng)
 
 READ ONLY:C145([SyncRelation:103])
-QUERY:C277([SyncRelation:103]; [SyncRelation:103]Name:8="maps.googleapis.com")
-$vtKey:=[SyncRelation:103]Pin:40
+QUERY:C277([SyncRelation:103]; [SyncRelation:103]name:8="maps.googleapis.com")
+$vtKey:=[SyncRelation:103]pin:40
 READ WRITE:C146([SyncRelation:103])
 REDUCE SELECTION:C351([SyncRelation:103]; 0)
 
 If ($vtKey="")
-	ConsoleMessage("There is no [SyncRelation]Pin for maps.googleapis.com")
+	ConsoleLog("There is no [SyncRelation]Pin for maps.googleapis.com")
 	$0:="Error, There is no [SyncRelation]Pin for maps.googleapis.com"
 Else 
 	$vtMarkers:="&zoom=13&size=600x300&maptype=roadmap"
 	If (Size of array:C274($aLng)#$k)
-		ConsoleMessage("Lat and Lng arrays are different sizes")
+		ConsoleLog("Lat and Lng arrays are different sizes")
 		$0:="Error, Lat and Lng arrays are different sizes"
 	Else 
 		For ($i; 1; $k)

@@ -8,14 +8,14 @@ Case of
 		_LB_QA_:=New object:C1471("ents"; New object:C1471; "cur"; New object:C1471; "sel"; New object:C1471; "pos"; -1; "formName"; "_LB_QA_"; "form"; New object:C1471; "meta"; New object:C1471)
 		
 		Case of 
-			: (entryEntity.idNumTask#Null:C1517)
-				If (entryEntity.idNumTask>9)
-					_LB_QA_.ents:=ds:C1482.QA.query("idNumTask =:1"; entryEntity.idNumTask)
+			: (process_o.entry_o.idNumTask#Null:C1517)
+				If (process_o.entry_o.idNumTask>9)
+					_LB_QA_.ents:=ds:C1482.QA.query("idNumTask =:1"; entry_o.idNumTask)
 				Else 
 					_LB_QA_.ents:=New object:C1471
 				End if 
-			: (entryEntity.customerID#Null:C1517)
-				_LB_QA_.ents:=ds:C1482.QA.query("customerID = :1 AND idNumTask < 9"; entryEntity.customerID)
+			: (process_o.entry_o.customerID#Null:C1517)
+				_LB_QA_.ents:=ds:C1482.QA.query("customerID = :1 AND idNumTask < 9"; entry_o.customerID)
 			Else 
 				_LB_QA_.ents:=New object:C1471
 		End case 
@@ -43,7 +43,7 @@ Case of
 			var $rec_ent; $answers_ent : Object
 			
 			If (<>viDebugMode>210)
-				ConsoleMessage("LB_QA_cur.question: "+LB_QA_cur.question)
+				ConsoleLog("LB_QA_cur.question: "+LB_QA_cur.question)
 			End if 
 			$idNumQuestion:=LB_QA_cur.idNumQAQuestion
 			$answers_ent:=ds:C1482.QAAnswer.query("idNumQAQuestion = :1"; $idNumQuestion).orderBy("seq asc, answer asc")

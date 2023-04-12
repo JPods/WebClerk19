@@ -56,7 +56,7 @@ $area:=eOrdList
 //  CHOPPED  $mode:=AL_GetAreaLongProperty($area; ALP_Area_Compatibility)
 tBlank:=$event
 
-ConsoleMessage("Begin: "+String:C10($event)+"\r")
+ConsoleLog("Begin: "+String:C10($event)+"\r")
 Case of 
 		
 	: ($event=AL Null event)  //    0***AL Null event *** No action
@@ -135,5 +135,5 @@ tBlank:=0
 
 //  CHOPPED  $event:=AL_GetAreaLongProperty($area; ALP_Area_AlpEvent)
 
-ConsoleMessage("end: "+String:C10($event)+"\r")
+ConsoleLog("end: "+String:C10($event)+"\r")
 

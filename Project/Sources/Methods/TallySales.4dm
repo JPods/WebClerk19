@@ -29,7 +29,7 @@ $firstDate:=Tally_dInvent
 vdDateBeg:=$begDate
 vdDateEnd:=$endDate
 If ($firstDate#0)
-	jDateTimeRecov($firstDate; ->vdDateBeg; ->complTime)
+	DateTime_DTFrom($firstDate; ->vdDateBeg; ->complTime)
 End if 
 TallySumOrdSale(vdDateBeg)
 

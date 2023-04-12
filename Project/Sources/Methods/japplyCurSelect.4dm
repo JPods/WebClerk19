@@ -15,7 +15,7 @@
 If (UserInPassWordGroup("Import"))
 	
 	jCenterWindow(645; 520; -724; "Apply To Selection"; "Wind_CloseBox")
-	DIALOG:C40([Control:1]; "diaApply2SelRec")
+	DIALOG:C40([Admin:1]; "diaApply2SelRec")
 	CLOSE WINDOW:C154
 	ReadOnlyFiles
 	jaFilesClose

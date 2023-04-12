@@ -1,1 +1,0 @@
-PictureScale(->vItemPict)

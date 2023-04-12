@@ -5,7 +5,7 @@ C_TEXT:C284(vReservations)
 //
 //example from http_PostOrd
 C_LONGINT:C283($endCycle; $endCart; $k; $endTime)
-$endTime:=DateTime_Enter
+$endTime:=DateTime_DTTo
 $endCycle:=$endTime-(<>vlCycleTime*60)
 $endCart:=$endTime-(<>vlCartTime*60)
 //QUERY([Reservation];[Reservation]DTActionLast>=$endCycle;*)

@@ -1,0 +1,1256 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #8",
+	"markerBody": 449,
+	"markerBreak": 449,
+	"markerFooter": 449,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bdEnterKey_7": {
+					"type": "button",
+					"top": 65,
+					"left": 3,
+					"width": 3,
+					"height": 14,
+					"dataSource": "bdEnterKey",
+					"shortcutKey": "[Enter]",
+					"display": false,
+					"method": "ObjectMethods/Variable63.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Rectangle6_8": {
+					"type": "rectangle",
+					"top": 37,
+					"left": 730,
+					"width": 145,
+					"height": 57,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle3_9": {
+					"type": "rectangle",
+					"top": 211,
+					"left": 485,
+					"width": 158,
+					"height": 57,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle4_10": {
+					"type": "rectangle",
+					"top": 211,
+					"left": 798,
+					"width": 158,
+					"height": 57,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle2_11": {
+					"type": "rectangle",
+					"top": 211,
+					"left": 153,
+					"width": 158,
+					"height": 57,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle5_12": {
+					"type": "rectangle",
+					"top": 13,
+					"left": 260,
+					"width": 280,
+					"height": 114,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle7_13": {
+					"type": "rectangle",
+					"top": 126,
+					"left": 260,
+					"width": 137,
+					"height": 57,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle1_14": {
+					"type": "rectangle",
+					"top": 306,
+					"left": 48,
+					"width": 913,
+					"height": 352,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_InventoryStack_ItemNum_15": {
+					"type": "input",
+					"top": 14,
+					"left": 263,
+					"width": 276,
+					"height": 17,
+					"dataSource": "entry_o.ItemNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field3.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]ItemNum:2"
+				},
+				"_PROP_InventoryStack_CreatedBy_16": {
+					"type": "input",
+					"top": 33,
+					"left": 263,
+					"width": 276,
+					"height": 17,
+					"dataSource": "entry_o.CreatedBy",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field4.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]CreatedBy:8"
+				},
+				"_PROP_InventoryStack_ChangeReason_17": {
+					"type": "input",
+					"top": 52,
+					"left": 263,
+					"width": 276,
+					"height": 17,
+					"dataSource": "entry_o.ChangeReason",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]ChangeReason:6"
+				},
+				"_PROP_InventoryStack_WayBillNum_18": {
+					"type": "input",
+					"top": 71,
+					"left": 263,
+					"width": 276,
+					"height": 17,
+					"dataSource": "entry_o.WayBillNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]WayBillNum:24"
+				},
+				"_PROP_InventoryStack_DocID_19": {
+					"type": "input",
+					"top": 90,
+					"left": 263,
+					"width": 134,
+					"height": 17,
+					"dataSource": "entry_o.DocID",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]DocID:5"
+				},
+				"_PROP_InventoryStack_LineNum_20": {
+					"type": "input",
+					"top": 90,
+					"left": 399,
+					"width": 44,
+					"height": 17,
+					"dataSource": "entry_o.LineNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]LineNum:12"
+				},
+				"_PROP_InventoryStack_typeid_21": {
+					"type": "input",
+					"top": 90,
+					"left": 445,
+					"width": 94,
+					"height": 17,
+					"dataSource": "entry_o.typeid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]typeid:19"
+				},
+				"_PROP_InventoryStack_ReceiptID_22": {
+					"type": "input",
+					"top": 109,
+					"left": 263,
+					"width": 134,
+					"height": 17,
+					"dataSource": "entry_o.ReceiptID",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]ReceiptID:16"
+				},
+				"_PROP_InventoryStack_ProjectNum_23": {
+					"type": "input",
+					"top": 109,
+					"left": 399,
+					"width": 140,
+					"height": 17,
+					"dataSource": "entry_o.ProjectNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]ProjectNum:4"
+				},
+				"_PROP_InventoryStack_VendorID_24": {
+					"type": "input",
+					"top": 127,
+					"left": 263,
+					"width": 133,
+					"height": 17,
+					"dataSource": "entry_o.VendorID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]VendorID:10"
+				},
+				"_PROP_InventoryStack_DateEntered_25": {
+					"type": "input",
+					"top": 146,
+					"left": 263,
+					"width": 133,
+					"height": 17,
+					"dataSource": "entry_o.DateEntered",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/##~1##~1##"
+					},
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field13.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]DateEntered:3"
+				},
+				"_PROP_InventoryStack_DateVendorInvc_26": {
+					"type": "input",
+					"top": 165,
+					"left": 263,
+					"width": 133,
+					"height": 17,
+					"dataSource": "entry_o.DateVendorInvc",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]DateVendorInvc:27"
+				},
+				"_VAR_ePopDate_27": {
+					"type": "plugin",
+					"top": 11,
+					"left": 902,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_InventoryStack_JrnlComplete_28": {
+					"type": "checkbox",
+					"top": 14,
+					"left": 731,
+					"width": 131,
+					"height": 14,
+					"dataSource": "entry_o.JrnlComplete",
+					"text": "Jrnl Complete",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[InventoryStack:29]JrnlComplete:13"
+				},
+				"_PROP_InventoryStack_idUnique_29": {
+					"type": "input",
+					"top": 38,
+					"left": 733,
+					"width": 141,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]idUnique:1"
+				},
+				"_PROP_InventoryStack_JrnlCompleteDt_30": {
+					"type": "input",
+					"top": 57,
+					"left": 733,
+					"width": 141,
+					"height": 17,
+					"dataSource": "entry_o.JrnlCompleteDt",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]JrnlCompleteDt:18"
+				},
+				"_PROP_InventoryStack_JrnlID_31": {
+					"type": "input",
+					"top": 76,
+					"left": 733,
+					"width": 141,
+					"height": 17,
+					"dataSource": "entry_o.JrnlID",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]JrnlID:25"
+				},
+				"_PROP_InventoryStack_QtyOnHand_32": {
+					"type": "input",
+					"top": 212,
+					"left": 156,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.QtyOnHand",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field19.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]QtyOnHand:9"
+				},
+				"_PROP_InventoryStack_QtyAvailable_33": {
+					"type": "input",
+					"top": 231,
+					"left": 156,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.QtyAvailable",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field20.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]QtyAvailable:14"
+				},
+				"_PROP_InventoryStack_UnitCostOnly_34": {
+					"type": "input",
+					"top": 212,
+					"left": 488,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.UnitCostOnly",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field21.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]UnitCostOnly:26"
+				},
+				"_PROP_InventoryStack_UnitCost_35": {
+					"type": "input",
+					"top": 231,
+					"left": 488,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.UnitCost",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]UnitCost:11"
+				},
+				"_PROP_InventoryStack_Duties_36": {
+					"type": "input",
+					"top": 212,
+					"left": 801,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.Duties",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field23.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]Duties:21"
+				},
+				"_PROP_InventoryStack_NonProcCosts_37": {
+					"type": "input",
+					"top": 231,
+					"left": 801,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.NonProcCosts",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field24.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]NonProcCosts:22"
+				},
+				"_PROP_InventoryStack_VATax_38": {
+					"type": "input",
+					"top": 250,
+					"left": 801,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.VATax",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]VATax:23"
+				},
+				"_PROP_InventoryStack_Comment_39": {
+					"type": "input",
+					"top": 307,
+					"left": 51,
+					"width": 894,
+					"height": 350,
+					"dataSource": "entry_o.Comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]Comment:7"
+				},
+				"_VAR_b4_40": {
+					"type": "button",
+					"top": 111,
+					"left": 582,
+					"width": 141,
+					"height": 28,
+					"dataSource": "b4",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16793,93",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text__16792155_41": {
+					"type": "text",
+					"top": 54,
+					"left": 167,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16792,155"
+				},
+				"_Text__1678968_42": {
+					"type": "text",
+					"top": 16,
+					"left": 167,
+					"width": 90,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16789,68"
+				},
+				"_Text__1679394_43": {
+					"type": "text",
+					"top": 92,
+					"left": 144,
+					"width": 113,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,94"
+				},
+				"_Text__1679364_44": {
+					"type": "text",
+					"top": 35,
+					"left": 167,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,64"
+				},
+				"_Text__1679395_45": {
+					"type": "text",
+					"top": 129,
+					"left": 167,
+					"width": 90,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,95"
+				},
+				"_Text__1679396_46": {
+					"type": "text",
+					"top": 111,
+					"left": 167,
+					"width": 90,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,96"
+				},
+				"_Text__1679397_47": {
+					"type": "text",
+					"top": 148,
+					"left": 127,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,97"
+				},
+				"_Text__16789145_48": {
+					"type": "text",
+					"top": 290,
+					"left": 50,
+					"width": 67,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": ":16789,145"
+				},
+				"_Text__1679398_49": {
+					"type": "text",
+					"top": 214,
+					"left": 21,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,98"
+				},
+				"_Text__1679399_50": {
+					"type": "text",
+					"top": 233,
+					"left": 21,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,99"
+				},
+				"_Text__16793100_51": {
+					"type": "text",
+					"top": 252,
+					"left": 21,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,100"
+				},
+				"_PROP_InventoryStack_CurrentValue_52": {
+					"type": "input",
+					"top": 250,
+					"left": 156,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.CurrentValue",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]CurrentValue:15"
+				},
+				"_Text__16791249_53": {
+					"type": "text",
+					"top": 233,
+					"left": 354,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16791,249"
+				},
+				"_Text__16791250_54": {
+					"type": "text",
+					"top": 252,
+					"left": 352,
+					"width": 130,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16791,250"
+				},
+				"_Text__16793101_55": {
+					"type": "text",
+					"top": 214,
+					"left": 353,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,101"
+				},
+				"_PROP_InventoryStack_ExtendedCost_56": {
+					"type": "input",
+					"top": 250,
+					"left": 488,
+					"width": 154,
+					"height": 17,
+					"dataSource": "entry_o.ExtendedCost",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]ExtendedCost:17"
+				},
+				"_Text__16793102_57": {
+					"type": "text",
+					"top": 78,
+					"left": 599,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,102"
+				},
+				"_Text__16793103_58": {
+					"type": "text",
+					"top": 214,
+					"left": 666,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,103"
+				},
+				"_Text__16793104_59": {
+					"type": "text",
+					"top": 233,
+					"left": 666,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,104"
+				},
+				"_Text__16793105_60": {
+					"type": "text",
+					"top": 252,
+					"left": 666,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,105"
+				},
+				"_Text__16793106_61": {
+					"type": "text",
+					"top": 73,
+					"left": 164,
+					"width": 93,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,106"
+				},
+				"_Text__16793107_62": {
+					"type": "text",
+					"top": 59,
+					"left": 599,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,107"
+				},
+				"_Text__16793108_63": {
+					"type": "text",
+					"top": 40,
+					"left": 599,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,108"
+				},
+				"_VAR_bDateTime_64": {
+					"type": "pictureButton",
+					"top": 306,
+					"left": 4,
+					"width": 41,
+					"height": 33,
+					"dataSource": "bDateTime",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_VendorInvDate_65": {
+					"type": "text",
+					"top": 167,
+					"left": 117,
+					"width": 140,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Vendor Inv Date"
+				},
+				"_VAR_b2_66": {
+					"type": "button",
+					"top": 111,
+					"left": 732,
+					"width": 142,
+					"height": 28,
+					"dataSource": "b2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Reset value",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable208.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bDomain_67": {
+					"type": "button",
+					"top": 11,
+					"left": 150,
+					"width": 109,
+					"height": 22,
+					"dataSource": "bDomain",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable23.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bVendor_68": {
+					"type": "button",
+					"top": 127,
+					"left": 149,
+					"width": 110,
+					"height": 19,
+					"dataSource": "bVendor",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b17_69": {
+					"type": "button",
+					"top": 107,
+					"left": 149,
+					"width": 110,
+					"height": 21,
+					"dataSource": "b17",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable16.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_InventoryStack_ObGeneral_70": {
+					"type": "input",
+					"top": 111,
+					"left": 8,
+					"width": 992,
+					"height": 569,
+					"dataSource": "entry_o.ObGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]ObGeneral:34"
+				},
+				"_Text_ObGeneral_71": {
+					"type": "text",
+					"top": 90,
+					"left": 11,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				},
+				"_PROP_InventoryStack_ItemNum_72": {
+					"type": "input",
+					"top": 14,
+					"left": 263,
+					"width": 276,
+					"height": 17,
+					"dataSource": "entry_o.ItemNum",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field14.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]ItemNum:2"
+				},
+				"_PROP_InventoryStack_CreatedBy_73": {
+					"type": "input",
+					"top": 33,
+					"left": 263,
+					"width": 276,
+					"height": 17,
+					"dataSource": "entry_o.CreatedBy",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field27.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[InventoryStack:29]CreatedBy:8"
+				},
+				"_Text__1678968_74": {
+					"type": "text",
+					"top": 16,
+					"left": 167,
+					"width": 90,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16789,68"
+				},
+				"_Text__1679364_75": {
+					"type": "text",
+					"top": 35,
+					"left": 167,
+					"width": 90,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": ":16793,64"
+				},
+				"_VAR_bDomain_76": {
+					"type": "button",
+					"top": 11,
+					"left": 150,
+					"width": 109,
+					"height": 22,
+					"dataSource": "bDomain",
+					"text": ":16789,13",
+					"display": false,
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

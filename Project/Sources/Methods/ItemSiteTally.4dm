@@ -39,25 +39,25 @@ If (Size of array:C274(<>asiteIDs)>1)
 		: (Locked:C147([ItemSiteBucket:136]))  //  ### jwm ### 20140122_2359 moved here from end of case
 			$error:=-2
 		: ($error=1)
-			[DInventory:36]repID:28:="Review_LabelissiteID"
+			[DInventory:36]review:28:="Review_LabelissiteID"
 			[DInventory:36]dtSiteID:34:=0
 			SAVE RECORD:C53([DInventory:36])
 			$error:=-4
 		: ($error<=1)
 			//  There is no currently approved siteID
-			[DInventory:36]repID:28:="Review_NositeID"
+			[DInventory:36]review:28:="Review_NositeID"
 			[DInventory:36]dtSiteID:34:=0
 			SAVE RECORD:C53([DInventory:36])
 		: (Records in selection:C76([ItemSiteBucket:136])=0)  // $error already has a postive value >1
 			CreateItemSiteRecord([DInventory:36]siteID:20; [DInventory:36]itemNum:1)
 		: (Records in selection:C76([ItemSiteBucket:136])>1)
-			[DInventory:36]repID:28:="Review_MultisiteID"
+			[DInventory:36]review:28:="Review_MultisiteID"
 			[DInventory:36]dtSiteID:34:=0
 			SAVE RECORD:C53([DInventory:36])
 			$error:=-1
 	End case 
 	If ($error>1)  // no defects //  ### jwm ### 20140122_1927 changed from >= to > 
-		[DInventory:36]dtSiteID:34:=DateTime_Enter
+		[DInventory:36]dtSiteID:34:=DateTime_DTTo
 		Case of   //all cases of inventory change need to match between this procedure and TallyInventory
 			: ([DInventory:36]reason:13="WO Ship")
 				//[ItemSiteBucket]Qty:=[ItemSiteBucket]Qty-[dInventory]QtyOnWO

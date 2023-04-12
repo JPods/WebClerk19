@@ -26,7 +26,7 @@ End if
 For (vi1; 1; vi2)
 	If ([UserReport:46]creator:6="GTsr")
 		
-		$path:=Storage:C1525.folder.jitF+String:C10([UserReport:46]idNum:17)+String:C10(DateTime_Enter)+".srp"
+		$path:=Storage:C1525.folder.jitF+String:C10([UserReport:46]idNum:17)+String:C10(DateTime_DTTo)+".srp"
 		$tempeSRWin:=SR New Offscreen Area
 		//  vi8:=SR Set Area ($tempeSRWin;[UserReport]RescFork)
 		vi8:=SR Save Report($tempeSRWin; $path)

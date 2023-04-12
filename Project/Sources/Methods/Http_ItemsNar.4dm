@@ -116,7 +116,7 @@
 //  End if 
 //  $suffix:=""
 //  
-//  vlBeenHere:=DateTime_Enter
+//  vlBeenHere:=DateTime_DTTo
 //  vBeenHere:=vlBeenHere
 //  If ([EventLog]idNum#0)
 //  SAVE RECORD([EventLog])
@@ -440,7 +440,7 @@
 //  //
 //  
 //  C_LONGINT(vlBeenHere)
-//  vlBeenHere:=DateTime_Enter
+//  vlBeenHere:=DateTime_DTTo
 //  $theTarget:=""
 //  itemDiscounts:=""
 //  vItemKeys:=""

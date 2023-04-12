@@ -25,7 +25,7 @@ If ($k>0)
 		: ((ptCurTable=(->[Order:3])) | (ptCurTable=(->[Invoice:26])))
 			$div:=GL_GetDivsnCust([Customer:2]customerID:1)
 		: (ptCurTable=(->[PO:39]))
-			$div:=GL_GetDivsnPO([PO:39]poNum:5)
+			$div:=GL_GetDivsnPO([PO:39]idNum:5)
 		Else 
 			$div:=Storage:C1525.default.division
 	End case 
@@ -41,15 +41,15 @@ If ($k>0)
 		[DInventory:36]qtyOnWO:5:=dQtyOnWO{$i}
 		[DInventory:36]qtyOnAdj:6:=dQtyOnAdj{$i}
 		[DInventory:36]unitCost:7:=dUnitCost{$i}
-		[DInventory:36]projectNum:8:=dJobID{$i}
-		[DInventory:36]docid:9:=dDocID{$i}
+		[DInventory:36]idNumProject:8:=dJobID{$i}
+		[DInventory:36]idNumDoc:9:=dDocID{$i}
 		[DInventory:36]idNumLine:10:=dLineNum{$i}
-		[DInventory:36]receiptid:11:=dReceiptID{$i}
+		[DInventory:36]idReceipt:11:=dReceiptID{$i}
 		[DInventory:36]customerID:12:=dSource{$i}
 		[DInventory:36]reason:13:=dReason{$i}
 		[DInventory:36]typeID:14:=dType{$i}
 		[DInventory:36]dtCreated:15:=dDTCreated{$i}
-		jDateTimeRecov([DInventory:36]dtCreated:15; ->[DInventory:36]dateCreated:39; ->[DInventory:36]timeCreated:40)
+		DateTime_DTFrom([DInventory:36]dtCreated:15; ->[DInventory:36]dateCreated:39; ->[DInventory:36]timeCreated:40)
 		[DInventory:36]note:18:=dNote{$i}
 		[DInventory:36]takeAction:19:=dTakeAction{$i}
 		[DInventory:36]siteID:20:=dSite{$i}
@@ -58,7 +58,7 @@ If ($k>0)
 		
 		[DInventory:36]division:29:=$div
 		
-		[DInventory:36]tableNum:30:=dTableNum{$i}
+		[DInventory:36]tableName:30:=Table name:C256(dTableNum{$i})
 		SAVE RECORD:C53([DInventory:36])
 	End for 
 	//### jwm ### 20130319_1422 siteID set twice

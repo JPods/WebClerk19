@@ -10,7 +10,7 @@ For ($i; 1; $k)
 		$tempStr:="Order Assigned to "+v11+"."
 		[Order:3]actionBy:55:=v11
 		// zzzqqq jDateTimeStamp(->[Order:3]commentProcess:12; $tempStr)
-		[Order:3]dtProdRelease:56:=DateTime_Enter
+		[Order:3]dtProdRelease:56:=DateTime_DTTo
 		SAVE RECORD:C53([Order:3])
 		aOrdNames{aRayLines{$i}}:=v11
 		$doArray:=True:C214

@@ -19,7 +19,7 @@ ALL RECORDS:C47([TallyMaster:60])
 FIRST RECORD:C50([TallyMaster:60])
 vi2:=Records in selection:C76([TallyMaster:60])
 For (vi1; 1; vi2)
-	ConsoleMessage(String:C10([TallyMaster:60]idNum:4)+" "+[TallyMaster:60]name:8+" "+[TallyMaster:60]purpose:3)
+	ConsoleLog(String:C10([TallyMaster:60]idNum:4)+" "+[TallyMaster:60]name:8+" "+[TallyMaster:60]purpose:3)
 	
 	// Script
 	vText:=[TallyMaster:60]script:9

@@ -24,7 +24,7 @@ $0:=0
 C_LONGINT:C283($viTestCert; $viTestKey)
 C_TEXT:C284($vtPathReport)
 If ([WebClerk:78]pathToCert:21="")
-	ConsoleMessage("Cert: Path is empty")
+	ConsoleLog("Cert: Path is empty")
 Else 
 	$viTestCert:=Test path name:C476([WebClerk:78]pathToCert:21)
 	If ($viTestCert=1)
@@ -32,10 +32,10 @@ Else
 	Else 
 		$vtPathReport:="Failed path"
 	End if 
-	ConsoleMessage("Cert: "+[WebClerk:78]pathToCert:21+", Status: "+$vtPathReport)
+	ConsoleLog("Cert: "+[WebClerk:78]pathToCert:21+", Status: "+$vtPathReport)
 End if 
 If ([WebClerk:78]pathToKey:22="")
-	ConsoleMessage("Key: Path is empty")
+	ConsoleLog("Key: Path is empty")
 Else 
 	$viTestCert:=Test path name:C476([WebClerk:78]pathToCert:21)
 	If ($viTestCert=1)
@@ -43,7 +43,7 @@ Else
 	Else 
 		$vtPathReport:="Failed path"
 	End if 
-	ConsoleMessage("Key: "+[WebClerk:78]pathToKey:22+", Status: "+$vtPathReport)
+	ConsoleLog("Key: "+[WebClerk:78]pathToKey:22+", Status: "+$vtPathReport)
 End if 
 
 If (($viTestCert=1) & (Test path name:C476([WebClerk:78]pathToKey:22)=1))

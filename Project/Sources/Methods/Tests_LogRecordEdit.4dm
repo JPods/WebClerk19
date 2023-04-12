@@ -13,7 +13,7 @@
 
 // LOAD TEST RECORDS
 
-QUERY:C277([Employee:19]; [Employee:19]nameid:1="amercer")
+QUERY:C277([Employee:19]; [Employee:19]nameID:1="amercer")
 QUERY:C277([Customer:2]; [Customer:2]company:2="7.9. Design")
 
 // SET UP VALUES TO FILL OUT CHANGELOG RECORD
@@ -47,63 +47,63 @@ $0:=True:C214
 If ($vtLinkedTableName#[ChangeLog:149]linkedTableName:2)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]LinkedTableName wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]LinkedTableName wasn't set properly.")
 	
 End if 
 
 If ($vtLinkedUniqueID#[ChangeLog:149]ideLinked:3)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]LinkedUniqueID wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]LinkedUniqueID wasn't set properly.")
 	
 End if 
 
 If ($vtAuthorTableName#[ChangeLog:149]authorTableName:9)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]AuthorTableName wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]AuthorTableName wasn't set properly.")
 	
 End if 
 
-If ($vtAuthorUniqueID#[ChangeLog:149]nameIdAuthor:8)
+If ($vtAuthorUniqueID#[ChangeLog:149]nameIDAuthor:8)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]AuthorUniqueID wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]AuthorUniqueID wasn't set properly.")
 	
 End if 
 
 If ($vtFieldName#[ChangeLog:149]fieldName:10)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]FieldName wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]FieldName wasn't set properly.")
 	
 End if 
 
 If ($vtValueOriginal#[ChangeLog:149]valueOriginal:4)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]ValueOriginal wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]ValueOriginal wasn't set properly.")
 	
 End if 
 
 If ($vtValueChanged#[ChangeLog:149]valueChanged:11)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]ValueChanged wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]ValueChanged wasn't set properly.")
 	
 End if 
 
 If ($vtCustomChangeDesc#[ChangeLog:149]customChangeDesc:7)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]CustomChangeDesc wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]CustomChangeDesc wasn't set properly.")
 	
 End if 
 
-If ($vtKeyText#[ChangeLog:149]keyText:13)
+If ($vtKeyText#[ChangeLog:149]keyTags:13)
 	
 	$0:=False:C215
-	ConsoleMessage("Tests_LogRecordEdit: [Changelog]KeyText wasn't set properly.")
+	ConsoleLog("Tests_LogRecordEdit: [Changelog]KeyText wasn't set properly.")
 	
 End if 
 

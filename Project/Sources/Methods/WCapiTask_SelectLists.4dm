@@ -34,7 +34,7 @@ Else
 			$vtChoices:=Substring:C12($vtChoices; 1; Length:C16($vtChoices)-1)
 		End if 
 		// $cSelChoices:=$obSelChoices.toCollection("Choice")
-		// $vtChoices:=$cSelChoices.join(",")
+		// $vtChoices:=$cSelChoices.join(";")
 		$obOutPut:=New object:C1471($vtSelectList; $vtChoices)
 		vResponse:=JSON Stringify:C1217($obRecChoices)
 	End if 

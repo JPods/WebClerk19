@@ -22,7 +22,7 @@ If ($obSel.first()=Null:C1517)
 	$result_o:=$obRec.save()
 Else 
 	$obRec:=$obSel.first()
-	$cKeys:=Split string:C1554($obRec.script; ",")
+	$cKeys:=Split string:C1554($obRec.script; ";")
 	$cKeys:=$cKeys.distinct()
 	ARRAY TEXT:C222(<>aKeyQuery; 0)
 	COLLECTION TO ARRAY:C1562($cKeys; <>aKeyQuery)

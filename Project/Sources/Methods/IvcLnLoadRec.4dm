@@ -75,7 +75,7 @@ End if
 [InvoiceLine:54]repID:34:=[Invoice:26]repID:22
 [InvoiceLine:54]salesNameID:35:=[Invoice:26]salesNameID:23
 [InvoiceLine:54]dateShipped:25:=[Invoice:26]dateShipped:4
-[InvoiceLine:54]altItem:29:=aiAltItem{$1}
+[InvoiceLine:54]itemNumAlt:29:=aiAltItem{$1}
 [InvoiceLine:54]description:5:=aiDescpt{$1}
 
 $qtyShipped_start:=[InvoiceLine:54]qty:7  // qty being shipped minus existing shipped
@@ -122,7 +122,7 @@ $discntPrice:=aiUnitPriceDiscounted{$1}
 
 //
 If (((aiLocation{$1}=-1111) | (aiLocation{$1}=-1112)) & ($dOnHand#0))
-	$BomID:=-DateTime_Enter
+	$BomID:=-DateTime_DTTo
 	aiUnitCost{$1}:=BOM_Consume(aiLocation{$1}; ->aiItemNum{$1}; $dOnHand; $BomID)  //no 5th paramater does not effect QOH
 	aiExtCost{$1}:=Round:C94(aiQtyShip{$1}*aiUnitCost{$1}; <>tcDecimalTt)
 	//If (vPackingProcess="PK")   This needs to be in Orders
@@ -160,7 +160,7 @@ End if
 [InvoiceLine:54]shipOrderStatus:41:=aiShipOrdSt{$1}
 [InvoiceLine:54]lineProfile1:42:=aiProfile1{$1}
 [InvoiceLine:54]lineProfile2:43:=aiProfile2{$1}
-[InvoiceLine:54]lineProfile3:44:=aiProfile3{$1}
+//[InvoiceLine]obItem:=aiProfile3{$1}
 [InvoiceLine:54]printNot:52:=aiPrintThis{$1}
 //
 READ ONLY:C145([Item:4])
@@ -203,10 +203,10 @@ If (aiSerialRc{$1}<<>ciSRThisSerialNumber)
 End if 
 
 // InvoiceLines Direct
-[InvoiceLine:54]serialNum:36:=aiSerialNm{$1}
+[InvoiceLine:54]obSerial:36:=New object:C1471  // aiSerialNm{$1}
 // InvoiceLines Direct
 // ### bj ### 20190104_1423  why is this here??????
-[InvoiceLine:54]serialNum:36:=[InvoiceLine:54]serialNum:36
+[InvoiceLine:54]obSerial:36:=[InvoiceLine:54]obSerial:36
 // ### bj ### 20190104_1421  we were not saving the OrderNum in the InvoiceLines
 [InvoiceLine:54]idNumOrder:60:=[Invoice:26]idNumOrder:1
 // InvoiceLines Direct

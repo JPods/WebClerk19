@@ -59,7 +59,7 @@ For each ($vtLineData; $vcLines)
 	Else 
 		$vcOneLine:=Split string:C1554($vtLineData; "\t")
 	End if 
-	$vtLineData:=$vcOneLine.join(",")
+	$vtLineData:=$vcOneLine.join(";")
 	Case of 
 		: ($vcOneLine.length=0)
 			// skip
@@ -82,7 +82,7 @@ For each ($vtLineData; $vcLines)
 		: ($vcOneLine[1]="@Inventory ID@")
 			COLLECTION TO ARRAY:C1562($vcOneLine; $aHeaders)
 			$cntHeader:=Size of array:C274($aHeaders)
-			$vtHeaders:=$vcOneLine.join(",")
+			$vtHeaders:=$vcOneLine.join(";")
 			$voLine.headers:=$vtHeaders
 			$vcHeaders:=$vcOneLine.copy()
 			$vcOutPut.push($voLine)

@@ -12,7 +12,7 @@ If (False:C215)
 	// Save the Log Date and Time
 	[ServerLog:128]dateSignOn:3:=Current date:C33
 	[ServerLog:128]timeSignOn:8:=Current time:C178
-	[ServerLog:128]dtSignOn:10:=DateTime_Enter
+	[ServerLog:128]dtSignOn:10:=DateTime_DTTo
 	// Save the connection information
 	[ServerLog:128]userid:4:=$1
 	[ServerLog:128]connectionid:2:=$2

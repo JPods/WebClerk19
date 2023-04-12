@@ -1,0 +1,85 @@
+﻿{"windowSizingX":"fixed","windowSizingY":"fixed","rightMargin":0,"bottomMargin":0,"menuBar":"Menu Bar #1","markerBody":676,"markerBreak":676,"markerFooter":692,"events":["onLoad","onValidate","onClick","onHeader","onPrintingBreak","onPrintingFooter","onDisplayDetail","onOutsideCall","onActivate","onDeactivate","onDoubleClick","onDrop","onMenuSelect","onPluginArea","onDataChange","onCloseBox","onPrintingDetail","onUnload","onOpenDetail","onCloseDetail","onTimer","onAfterKeystroke","onResize"],"method":"method.4dm","pageFormat":{"paperName":"US Letter","paperWidth":"612pt","paperHeight":"792pt"},"pages":[null,{"objects":{"Rectangle36":{"type":"rectangle","top":108,"left":225,"width":561,"height":323,"fill":"transparent","stroke":"#666666"},"Rectangle35":{"type":"rectangle","top":40,"left":225,"width":139,"height":57,"fill":"transparent","stroke":"#666666"},"Rectangle1":{"type":"rectangle","top":11,"left":225,"width":294,"height":19,"fill":"transparent","stroke":"#666666"},"PalletImage":{"type":"input","top":0,"left":0,"width":106,"height":55,"dataSource":"<>pNavPallet","dataSourceTypeHint":"picture","stroke":"#000000","fontSize":10,"borderStyle":"none","enterable":false,"contextMenu":"none","dragging":"none","dropping":"none"},"Field1":{"type":"input","top":12,"left":228,"width":290,"height":17,"dataSource":"[PeriodAvailable:74]nameid:1","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"PalletPage": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/PalletPage.4dm",
+					"events": [
+						"onClick"
+					]
+				},"Field2":{"type":"input","top":41,"left":228,"width":135,"height":17,"dataSource":"[PeriodAvailable:74]TimeBegin:2","dataSourceTypeHint":"time","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field3":{"type":"input","top":60,"left":228,"width":135,"height":17,"dataSource":"[PeriodAvailable:74]TimeEnd:3","dataSourceTypeHint":"time","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","dragging":"none","dropping":"none"},"Field4":{"type":"input","top":79,"left":228,"width":135,"height":17,"dataSource":"[PeriodAvailable:74]DateOf:4","dataSourceTypeHint":"date","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","contextMenu":"none","entryFilter":{"$ref":"/SOURCES/filters.json#/##~1##~1##"},"dragging":"none","dropping":"none"},"Field5":{"type":"input","top":109,"left":228,"width":542,"height":321,"dataSource":"[PeriodAvailable:74]Comment:5","stroke":"#000000","class":"cssInput","fill":"#FFFFFF","borderStyle":"none","spellcheck":true,"contextMenu":"none","scrollbarVertical":"visible","dragging":"none","dropping":"none"},"Text1":{"type":"text","top":14,"left":132,"width":88,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"nameID"},"Text43":{"type":"text","top":43,"left":132,"width":88,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"TimeBegin"},"Text44":{"type":"text","top":62,"left":132,"width":88,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"TimeEnd"},"Text45":{"type":"text","top":81,"left":132,"width":88,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"DateOf"},"Text46":{"type":"text","top":111,"left":132,"width":88,"height":12,"stroke":"#000000","class":"cssInputLabel","textAlign":"right","text":"Comment"},"PalletSave": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletPrevious": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"shortcutKey": "[left arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletNext": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"shortcutKey": "[right arrow]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletNext.4dm",
+					"events": [
+						"onClick"
+					]
+				},"PalletCancel": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/PalletCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				}}}],"editor":{"activeView":"View 1","defaultView":"View 1","views":{"View 1":{},"View 2":{},"View 3":{},"View 4":{},"View 5":{},"View 6":{},"View 7":{},"View 8":{},"View 9":{}}},"$4d":{"version":"1","kind":"form"}}

@@ -11,7 +11,7 @@
 // Parameters
 // ----------------------------------------------------
 
-$dtNow:=DateTime_Enter
+$dtNow:=DateTime_DTTo
 
 obEventLog:=ds:C1482.EventLog.new()
 $result_o:=obEventLog.save()

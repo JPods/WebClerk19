@@ -1,1 +1,0 @@
-entryEntity.TaxJuris:=DE_PopUpArray(Self:C308)

@@ -10,9 +10,9 @@
 
 var $1 : Object
 
-$1.dtBegin:=DateTime_Enter
-$1.dtDocument:=DateTime_Enter
-$1.dtAction:=DateTime_Enter
+$1.dtBegin:=DateTime_DTTo
+$1.dtDocument:=DateTime_DTTo
+$1.dtAction:=DateTime_DTTo
 $1.dtEnd:=0
 $1.dtComplete:=0
 $1.complete:=False:C215

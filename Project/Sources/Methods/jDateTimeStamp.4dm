@@ -15,7 +15,7 @@ C_TEXT:C284($2)
 C_TEXT:C284($tempTxt)
 C_POINTER:C301($1)
 C_BOOLEAN:C305(<>vbDateTimeStamp)
-DefaultSetupsCreate("<>vbDateTimeStamp"; "true"; "Is boolean"; "Alerts"; "Input"; "DateTimeStamp [Customer]Comment with changes.")
+
 // alert(string(num(<>vbDateTimeStamp)))
 C_LONGINT:C283($viStamp)
 Case of 

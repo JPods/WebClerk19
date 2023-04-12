@@ -10,8 +10,8 @@
 //C_LONGINT($found)
 //$found:=Prs_CheckRunnin ("Q &A")
 //If ($found>0)
-//If (Frontmost process#<>aPrsNum{$found})
-//BRING TO FRONT(<>aPrsNum{$found})
+//BRING TO FRONT($found)
+//
 //US POSTKEY (Ascii("U");256)
 //End if 
 //Else 

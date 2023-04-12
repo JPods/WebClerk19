@@ -67,19 +67,19 @@ Repeat
 				//: ((<>vrWeightTare<(-<>wtDitherFactor))&(<>vrWeightTare#-77777))
 				//zzzCheck_bj 070920 
 				<>pkScaleComment:="Negative Tare"
-				_O_OBJECT SET COLOR:C271(<>pkScaleComment; -(White:K11:1+(256*Red:K11:4)))
+				OBJECT SET RGB COLORS:C628(*; "<>pkScaleComment"; White:K11:1; 256*Red:K11:4)
 				// : (<>vrWeightErrPC><>wtPrecisionPC)  // (<>vrWeightErrPC><>wtPrecisionPC)
 			: (<>vrWeightErrPC>(<>wtPrecisionPC+<>wtDitherPC))  // ### jwm ### 20141210_2241 added percentage of dither to allowed deviation
 				If (<>vrWeightScale><>wtDitherFactor)
 					<>pkScaleComment:="Weight Mismatch"
-					_O_OBJECT SET COLOR:C271(<>pkScaleComment; -(White:K11:1+(256*Red:K11:4)))
+					OBJECT SET RGB COLORS:C628(*; "<>pkScaleComment"; White:K11:1; 256*Red:K11:4)
 				End if 
 				//SET COLOR($1->;-(Black+(256*Yellow)))
 				//SET COLOR (bInfo;  (vForeground + (256 * vBackground)))
 				
 			Else 
 				<>pkScaleComment:="OK"
-				_O_OBJECT SET COLOR:C271(<>pkScaleComment; -(White:K11:1+(256*Green:K11:9)))
+				OBJECT SET RGB COLORS:C628(*; "<>pkScaleComment"; White:K11:1; 256*Green:K11:9)
 		End case 
 		C_REAL:C285(<>scanItemPC; <>scanScaleItemWt; <>itemWt; <>itemDeltaWt)
 		<>itemDeltaWt:=Round:C94(<>vrWeightScale-<>scanScaleItemWt; 2)

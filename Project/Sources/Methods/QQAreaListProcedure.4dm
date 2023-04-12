@@ -31,7 +31,7 @@ Case of
 			QUERY:C277([ItemSiteBucket:136]; [ItemSiteBucket:136]itemNum:2=aLsItemNum{aItemLines{1}}; *)  //  ### jwm ### 20140122_1349 get Buckets
 			QUERY:C277([ItemSiteBucket:136];  & ; [ItemSiteBucket:136]qtyOnHand:5#0)  // ### jwm ### 20180924_1310 omit zero qty on hand
 			If ([Item:4]alertMessage:52#"")  //### jwm ### 20120515 alert message if not empty
-				ConsoleMessage([Item:4]alertMessage:52)
+				ConsoleLog([Item:4]alertMessage:52)
 			End if 
 		Else 
 			BEEP:C151

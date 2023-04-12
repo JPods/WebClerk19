@@ -1,1 +1,0 @@
-vLnDate2:=vLnDate2+vDiffDays1

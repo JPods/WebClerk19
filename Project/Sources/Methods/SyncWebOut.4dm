@@ -37,7 +37,7 @@
 //ALERT("[SyncRequirement] record is locked"
 //Else 
 //$dateTime:=[SyncRequirement]DTLastUpdate
-//[SyncRequirement]DTLastUpdate:=DateTime_Enter 
+//[SyncRequirement]DTLastUpdate:=DateTime_DTTo 
 //SAVE RECORD([SyncRequirement])
 //QUERY([Customer];[Customer]salesNameID=Current user;*)
 //QUERY([Customer];|[Customer]RepID=Current user;*)

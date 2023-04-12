@@ -94,6 +94,8 @@ DefaultSetupsCreate("vMakeKeyWords"; "1"; "Is Integer"; "all"; "Import Items"; "
 DefaultSetupsCreate("vMakeItemNum"; "1"; "Is Integer"; "all"; "Import Items"; "Automatically sets ItemNum to MfrItemNum_mfrID on importing items if empty.")
 
 
+
+
 C_LONGINT:C283(<>delayProcessUnload)
 DefaultSetupsCreate("<>delayProcessUnload"; "30"; "Is Integer"; "all"; "Process Opening"; "Delays on opening process so records can be unloaded in the initiating process.")
 $error:=DefaultSetupReturn("<>delayProcessUnload")
@@ -117,28 +119,17 @@ End if
 
 REDUCE SELECTION:C351([DefaultSetup:86]; 0)
 
-QUERY:C277([Carrier:11]; [Carrier:11]idNum:44=0)
-If (Records in selection:C76([Carrier:11])>0)
-	ConvertCarrierSubRecs
-	REDUCE SELECTION:C351([Carrier:11]; 0)
-End if 
 
-QUERY:C277([TallyMaster:60]; [TallyMaster:60]purpose:3="jitImportExport")
-C_LONGINT:C283($i; $k)
-$k:=Records in selection:C76([TallyMaster:60])
-If ($k>0)
-	FIRST RECORD:C50([TallyMaster:60])
-	For ($i; 1; $k)
-		[TallyMaster:60]purpose:3:="ImportExport"
-		SAVE RECORD:C53([TallyMaster:60])
-		NEXT RECORD:C51([TallyMaster:60])
-	End for 
-End if 
+DefaultSetupsCreate("<>vbDateTimeStamp"; "true"; "Is boolean"; "Alerts"; "Input"; "DateTimeStamp [Customer]Comment with changes.")
+DefaultSetupsCreate("<>hoursInWorkDay"; "8"; "Is longint"; "metrics"; "WorkOrder"; "Convert time for javascripts and gantt charts")
+DefaultSetupsCreate("consoleWidth"; "420"; "Is longInt"; ""; ""; "Override the width of the Console window, min 420")
+//DefaultSetupsCreate("<>OECWebReport";"1";"Is Integer";"all";"email message";"Set to zero to suppress TallyResult reports of web errors.")
+//$error:=DefaultSetupReturn("<>OECWebReport")
+DefaultSetupsCreate("<>tcBrand"; $default_o.company; "Is text"; "WebClerk"; "[WebClerk]Input"; "Collapsable menu brand name")
+DefaultSetupsCreate("viWOHours"; "11"; "Is longint"; "WorkOrder"; "ScheduleSetter"; "Typical length of a workday")
+DefaultSetupsCreate("<>vtQueryBy"; "contains"; "is text"; "WebClerk"; ""; "contains, object, keyword: in ajax_QueryKeyword")
+DefaultSetupsCreate("<>viAlertMax"; "3"; "Is longint"; "Alerts"; ""; "Sets the maximum number of times an customer/vendor alert message will be repeated in a process.")
+DefaultSetupsCreate("vWOStartTime"; String:C10(?07:00:00?); "Is time"; "WorkOrder"; "ScheduleSetter"; "Start of a typical workday")
 
-
-
-If (False:C215)  // use this to fix all uniqueIDs
-	Utility_FixUniqueID
-End if 
 
 Execute_TallyMaster("Essentials"; "Admin")

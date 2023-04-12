@@ -109,10 +109,10 @@ If (allowAlerts_boo)
 		vCreditStat:="Risk"
 		//PLAY("CreditCheck")
 		BEEP:C151
-		_O_OBJECT SET COLOR:C271(vCreditStat; -(15+(256*3)))
+		OBJECT SET RGB COLORS:C628(*; "vCreditStat"; 15; 256*3)
 	Else 
 		vCreditStat:="Current"
-		_O_OBJECT SET COLOR:C271(vCreditStat; -(15+(256*0)))
+		OBJECT SET RGB COLORS:C628(*; "vCreditStat"; 15; 256*0)
 	End if 
 End if 
 //bCreditStat:=CustFinanceProb ([Customer]Due3160;

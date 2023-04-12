@@ -24,8 +24,8 @@ If (OK=1)
 	$InvcDate:=Invc_PrimeDateP  //set primary invoice control date  
 	$date1:=Date_ThisYear($date3; 0)
 	$date2:=Date_ThisYear($date3; 1)
-	$dtCalc:=DateTime_Enter
-	$dtReport:=DateTime_Enter($date2; ?23:59:59?)
+	$dtCalc:=DateTime_DTTo
+	$dtReport:=DateTime_DTTo($date2; ?23:59:59?)
 	$ReportName:="SaleIDQtr"+Substring:C12(String:C10(Year of:C25($date3)); 3; 4)
 	$k:=Size of array:C274(<>aComNameID)
 	ARRAY REAL:C219($aPrice; 0)
@@ -92,12 +92,17 @@ If (OK=1)
 					[TallyResult:73]real8:44:=$sumCost
 				: ($incQtr=4)
 					[TallyResult:73]real4:16:=$sumPrice
-					[TallyResult:73]real9:45:=$sumCost
+					// Modified by: Bill James (2022-12-09T06:00:00Z)
+					// mush fix and adjust to data type and object
+					
+					//[TallyResult]dataRaw:=$sumCost
 			End case 
 		End for 
 		//
 		[TallyResult:73]real5:32:=[TallyResult:73]real1:13+[TallyResult:73]real2:14+[TallyResult:73]real3:15+[TallyResult:73]real4:16
-		[TallyResult:73]real10:46:=[TallyResult:73]real6:42+[TallyResult:73]real7:43+[TallyResult:73]real8:44+[TallyResult:73]real9:45
+		
+		// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+		//[TallyResult]real10:=[TallyResult]real6+[TallyResult]real7+[TallyResult]real8+[TallyResult]dataRaw
 		[TallyResult:73]longint1:7:=Round:C94($sumPrice-$sumCost; 0)
 		SAVE RECORD:C53([TallyResult:73])
 	End for 

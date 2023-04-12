@@ -12,7 +12,7 @@
 
 C_LONGINT:C283($w)
 If (iLoaText1=1)
-	//POST OUTSIDE CALL(<>theProcessList)
+	//POST OUTSIDE CALL(Storage.process.processList)
 	ProcessPost2Build
 Else 
 	KeyModifierCurrent

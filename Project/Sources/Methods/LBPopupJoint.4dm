@@ -29,14 +29,14 @@ Else
 		"process"; Current process:C322)
 	
 End if 
-Prs_ListActive
+Process_ListActive
 C_TEXT:C284($form_t)
 C_LONGINT:C283($win_l)
 C_LONGINT:C283($cascade_l)
-If (process_o.tableName=Null:C1517)
-	process_o.tableName:="Popup"
+If (process_o.dataClassName=Null:C1517)
+	process_o.dataClassName:="Popup"
 End if 
-vtTableName:=process_o.tableName
+vtTableName:=process_o.dataClassName
 If (process_o.form=Null:C1517)
 	process_o.form:="Output"
 End if 

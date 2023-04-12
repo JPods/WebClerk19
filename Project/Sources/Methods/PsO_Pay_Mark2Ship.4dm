@@ -4,7 +4,7 @@ CONFIRM:C162("Mark Orders for these payments 'OK 2 Ship'")
 If (OK=1)
 	vi2:=Records in selection:C76([Payment:28])
 	FIRST RECORD:C50([Payment:28])
-	vText1:=String:C10(DateTime_Enter)
+	vText1:=String:C10(DateTime_DTTo)
 	For (vi1; 1; vi2)
 		QUERY:C277([Order:3]; [Order:3]idNum:2=[Payment:28]idNumOrder:2)
 		[Order:3]status:59:="OK_2_Ship"

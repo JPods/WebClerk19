@@ -6,6 +6,14 @@ If (False:C215)
 	VERSION_960
 End if 
 
+// Modified by: Bill James (2022-12-09T06:00:00Z)
+// Method: FC_CashFlow
+// Description 
+// Parameters
+// ----------------------------------------------------
+//  QQQREWORK
+
+
 If (UserInPassWordGroup("Accounting"))
 	C_LONGINT:C283($i; $k)
 	C_REAL:C285($runBalance)
@@ -204,8 +212,8 @@ If (UserInPassWordGroup("Accounting"))
 				READ WRITE:C146([PO:39])
 			End if 
 			//
-			$dtEnd:=DateTime_Enter($endDate; ?23:59:59?)
-			$dtStart:=DateTime_Enter($startDate; ?23:59:59?)
+			$dtEnd:=DateTime_DTTo($endDate; ?23:59:59?)
+			$dtStart:=DateTime_DTTo($startDate; ?23:59:59?)
 			READ ONLY:C145([TallyResult:73])
 			QUERY:C277([TallyResult:73]; [TallyResult:73]purpose:2="Forecast/Budgeted"; *)
 			QUERY:C277([TallyResult:73];  & [TallyResult:73]dtReport:12>=$dtStart; *)
@@ -213,7 +221,7 @@ If (UserInPassWordGroup("Accounting"))
 			FIRST RECORD:C50([TallyResult:73])
 			C_LONGINT:C283($thisPO)
 			For ($i; 1; Records in selection:C76([TallyResult:73]))
-				jDateTimeRecov([TallyResult:73]dtReport:12; ->vDate1)
+				DateTime_DTFrom([TallyResult:73]dtReport:12; ->vDate1)
 				BOM_NeedExpand([TallyResult:73]profile1:17; -Round:C94([TallyResult:73]real1:13; 0); vDate1; [TallyResult:73]profile2:18; [TallyResult:73]profile3:19; "TR"; [TallyResult:73]idNum:35; Record number:C243([TallyResult:73]); ->[TallyResult:73]textBlk1:5)
 				$w:=Size of array:C274(aFCRecNum)
 				INSERT IN ARRAY:C227(aFCDesc; $w)
@@ -231,7 +239,7 @@ If (UserInPassWordGroup("Accounting"))
 				//      $cntExp:=[Service]DollarImpactCus-[Service]DollarImpactRep
 				$index:=0
 				$period:=[TallyResult:73]longint1:7+(Num:C11([TallyResult:73]longint1:7=0)*30)
-				$maxIndex:=[TallyResult:73]longInt2:8+(Num:C11([TallyResult:73]longInt2:8=0)*5000)
+				$maxIndex:=[TallyResult:73]real1:13+(Num:C11([TallyResult:73]real1:13=0)*5000)
 				Repeat 
 					$dateDue:=$startDate+($index*$period)
 					$index:=$index+1

@@ -15,12 +15,12 @@ ARRAY TEXT:C222(aText1; 30)
 If (Count parameters:C259=4)
 	$begDate:=$1
 	$endDate:=$2
-	$dtBegin:=DateTime_Enter($begDate)
-	$dtEnd:=DateTime_Enter($endDate; ?23:59:59?)
+	$dtBegin:=DateTime_DTTo($begDate)
+	$dtEnd:=DateTime_DTTo($endDate; ?23:59:59?)
 	$byWhom:=$3
 	$table2Tally:=$4
 	If (($table2Tally="Invoice") | ($table2Tally="TallyAll"))
-		$dtReport:=DateTime_Enter($begDate)
+		$dtReport:=DateTime_DTTo($begDate)
 		QUERY:C277([Invoice:26]; [Invoice:26]dateDocument:35>=$begDate; *)
 		QUERY:C277([Invoice:26];  & [Invoice:26]dateDocument:35<=$endDate; *)
 		If ($byWhom#"")
@@ -183,34 +183,22 @@ If (Count parameters:C259=4)
 		aText1{22}:="New Customer Count"
 	End if 
 	
-	If (($table2Tally="Lead") | ($table2Tally="TallyAll"))
-		QUERY:C277([zzzLead:48]; [zzzLead:48]dateEntered:21>=$begDate; *)
-		QUERY:C277([zzzLead:48];  & [zzzLead:48]dateEntered:21<=$endDate; *)
-		If ($byWhom#"")
-			QUERY:C277([zzzLead:48];  & [zzzLead:48]salesNameID:13=$byWhom; *)
-		End if 
-		QUERY:C277([zzzLead:48])
-		
-		aReal1{23}:=Records in selection:C76([zzzLead:48])
-		aText1{23}:="New Leads Count"
-	End if 
-	
 	If (($table2Tally="Service") | ($table2Tally="TallyAll"))
 		QUERY:C277([Service:6]; [Service:6]dtDocument:16>=$dtBegin; *)
 		QUERY:C277([Service:6];  & [Service:6]dtDocument:16<=$dtEnd)
-		aReal1{24}:=Records in selection:C76([zzzLead:48])
+		aReal1{24}:=Records in selection:C76()
 		aText1{24}:="New Service Count"
 		//
 		QUERY:C277([Service:6]; [Service:6]dtComplete:18>=$dtBegin; *)
 		QUERY:C277([Service:6];  & [Service:6]dtComplete:18<=$dtEnd)
-		aReal1{25}:=Records in selection:C76([zzzLead:48])
+		aReal1{25}:=Records in selection:C76()
 		aText1{25}:="Completed Service Count"
 	End if 
 	//
 	If (($table2Tally="CallReport") | ($table2Tally="TallyAll"))
-		QUERY:C277([CallReport:34]; [CallReport:34]dateDocument:17>=$begDate; *)
-		QUERY:C277([CallReport:34];  & [CallReport:34]dateDocument:17<=$endDate; *)
-		aReal1{26}:=Records in selection:C76([CallReport:34])
+		QUERY:C277([Call:34]; [Call:34]dateDocument:17>=$begDate; *)
+		QUERY:C277([Call:34];  & [Call:34]dateDocument:17<=$endDate; *)
+		aReal1{26}:=Records in selection:C76([Call:34])
 		aText1{26}:="Call Reports"
 	End if 
 	

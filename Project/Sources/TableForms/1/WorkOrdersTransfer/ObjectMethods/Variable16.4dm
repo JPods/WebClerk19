@@ -32,7 +32,7 @@ If ($cntRec>0)
 		C_LONGINT:C283($i; $k)
 		C_LONGINT:C283($dtcurrent)
 		
-		$dtcurrent:=DateTime_Enter
+		$dtcurrent:=DateTime_DTTo
 		READ WRITE:C146([WorkOrder:66])  // ### jwm ### 20150114_1455 was accidentally commented out
 		//CREATE SET([WorkOrder];"Current")
 		For ($i; 1; $k)

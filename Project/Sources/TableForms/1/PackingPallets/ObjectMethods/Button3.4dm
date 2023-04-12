@@ -24,10 +24,10 @@ If (OK=1)
 		If ([LoadTag:88]dtShipOn:10#0)
 			CONFIRM:C162("Set Date Shipped")
 			If (ok=1)
-				[LoadTag:88]dtShipOn:10:=DateTime_Enter
+				[LoadTag:88]dtShipOn:10:=DateTime_DTTo
 			End if 
 		Else 
-			[LoadTag:88]dtShipOn:10:=DateTime_Enter
+			[LoadTag:88]dtShipOn:10:=DateTime_DTTo
 		End if 
 		$curUniqueID:=[LoadTag:88]idNum:1  //###_jwm_###
 		PKPalletWeightReCalc($curUniqueID)

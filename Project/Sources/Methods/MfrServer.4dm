@@ -30,7 +30,7 @@ If (((vlUserRec>0) & ([RemoteUser:57]tableNum:9=111)) | (vWccPrimeRec>-1))
 	If (vWccSecurity<1)  //WCC procudures use vWccSecurity to test.
 		//force them to allow wider use by non-employees.    
 	End if 
-	QUERY:C277([ManufacturerTerm:111]; [ManufacturerTerm:111]customerID:1=[Customer:2]customerID:1)
+	QUERY:C277([zzzManufacturerTerm:111]; [zzzManufacturerTerm:111]customerID:1=[Customer:2]customerID:1)
 	//push past Wcc Restrictions
 	vWccSecurity:=viEndUserSecurityLevel
 	$notFinished:=True:C214
@@ -53,13 +53,13 @@ If (((vlUserRec>0) & ([RemoteUser:57]tableNum:9=111)) | (vWccPrimeRec>-1))
 					[Item:4]itemNum:1:=String:C10(CounterNew(->[Item:4]))
 					WC_Parse(Table:C252(->[Item:4]); $2; True:C214)
 					If (Record number:C243([Item:4])>-1)
-						[Item:4]mfrID:53:=[ManufacturerTerm:111]customerID:1
+						[Item:4]mfrID:53:=[zzzManufacturerTerm:111]customerID:1
 						SAVE RECORD:C53([Item:4])
 					End if 
 				: ($theRecordNum>0)
 					$saveAction:=WCapi_GetParameter("SaveAction"; "")
 					GOTO RECORD:C242([Item:4]; $theRecordNum)
-					If (([Item:4]mfrID:53=[ManufacturerTerm:111]customerID:1) | (vWccPrimeRec>-1))
+					If (([Item:4]mfrID:53=[zzzManufacturerTerm:111]customerID:1) | (vWccPrimeRec>-1))
 						Case of 
 							: ($saveAction="Clone")
 								$itemNum:=WCapi_GetParameter("ItemNum"; "")
@@ -90,7 +90,10 @@ If (((vlUserRec>0) & ([RemoteUser:57]tableNum:9=111)) | (vWccPrimeRec>-1))
 						vResponse:="[Item] and manufactureID not matched"
 					End if 
 				Else 
-					Http_ItemsNar($1; $2; [ManufacturerTerm:111]customerID:1)
+					
+					// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+					
+					//Http_ItemsNar($1; $2; [zzzManufacturerTerm]customerID)
 					$sendPage:=False:C215
 			End case 
 			Case of 
@@ -121,7 +124,7 @@ If (((vlUserRec>0) & ([RemoteUser:57]tableNum:9=111)) | (vWccPrimeRec>-1))
 					End if 
 				: ($theRecordNum>0)
 					GOTO RECORD:C242([MfrCustomerXRef:110]; $theRecordNum)
-					If (([MfrCustomerXRef:110]mfrID:3=[ManufacturerTerm:111]customerID:1) | (vWccPrimeRec>-1))
+					If (([MfrCustomerXRef:110]mfrID:3=[zzzManufacturerTerm:111]customerID:1) | (vWccPrimeRec>-1))
 						$saveAction:=WCapi_GetParameter("SaveAction"; "")
 						If ($saveAction="save")
 							WC_Parse(Table:C252(->[MfrCustomerXRef:110]); $2; True:C214)
@@ -133,7 +136,7 @@ If (((vlUserRec>0) & ([RemoteUser:57]tableNum:9=111)) | (vWccPrimeRec>-1))
 						vResponse:="[MfrsCarried] matched"
 					End if 
 				Else 
-					QUERY:C277([MfrCustomerXRef:110]; [MfrCustomerXRef:110]mfrID:3=[ManufacturerTerm:111]customerID:1)
+					QUERY:C277([MfrCustomerXRef:110]; [MfrCustomerXRef:110]mfrID:3=[zzzManufacturerTerm:111]customerID:1)
 			End case 
 			Case of 
 				: (Records in selection:C76([MfrCustomerXRef:110])=1)

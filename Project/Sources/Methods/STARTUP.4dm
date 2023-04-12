@@ -39,32 +39,31 @@ DELETE SELECTION:C66([CounterPending:135])
 
 // ### jwm ### 20190227_1731
 //If (Application type#4D Server)
-//ConsoleMessage ("Launch")
+//Console_Log ("Launch")
 //End if
 
 
 // MustFixQQQZZZ: Bill James (2021-12-07T06:00:00Z)
 // These will are no longer needed and can be eliminated once non-table forms are shifted to Forms
-QUERY:C277([Control:1]; [Control:1]idNum:7=0)
-If (Records in selection:C76([Control:1])>0)
-	ALL RECORDS:C47([Control:1])
-	DELETE SELECTION:C66([Control:1])
+QUERY:C277([Admin:1]; [Admin:1]idNum:7=0)
+If (Records in selection:C76([Admin:1])>0)
+	ALL RECORDS:C47([Admin:1])
+	DELETE SELECTION:C66([Admin:1])
 	For ($i; 1; 100)
-		CREATE RECORD:C68([Control:1])
-		SAVE RECORD:C53([Control:1])
+		CREATE RECORD:C68([Admin:1])
+		SAVE RECORD:C53([Admin:1])
 	End for 
 	// ### bj ### 20180913_2345 already in the create record
 	// UUIDResetValues (->[Control]id)
 End if 
-REDUCE SELECTION:C351([Control:1]; 0)
+REDUCE SELECTION:C351([Admin:1]; 0)
 
 // ### jwm ### 20160412_1549 initialize Console to OFF
-C_TEXT:C284(<>vConsoleMessage)
-C_LONGINT:C283($found; <>consoleProcess; <>tcPrsMemory; <>consoleDirection)
+
+C_LONGINT:C283($found; <>tcPrsMemory)
 If (<>tcPrsMemory=0)
 	<>tcPrsMemory:=128000
 End if 
-<>consoleDirection:=2  // new at bottom
 
 // launch Console window before Sales Splash Screen
 // check DefaultSetups for ConsoleLaunch // ### jwm ### 20170509_1040
@@ -84,11 +83,11 @@ If (Application type:C494=4D Remote mode:K5:5)
 	End case 
 End if 
 
-ConsoleMessage("Current User: "+Current user:C182)
+ConsoleLog("Current User: "+Current user:C182)
 
 If (Records in selection:C76([DefaultSetup:86])>0)
 	ConsoleLaunch
-	ConsoleMessage("Startup: "+String:C10(Current time:C178))
+	ConsoleLog("Startup: "+String:C10(Current time:C178))
 End if 
 
 
@@ -102,7 +101,7 @@ If (Records in table:C83([CounterPending:135])<50)  // new database
 	//  P_OrdHeader Remove these from SuperReports
 	
 	C_LONGINT:C283($found; <>consoleProcess; <>tcPrsMemory)
-	// ConsoleMessage ("ConsoleLaunch")
+	// Console_Log ("ConsoleLaunch")
 	
 	// setup
 	
@@ -124,7 +123,6 @@ If (Records in table:C83([CounterPending:135])<50)  // new database
 	// ### bj ### 20190721_2248
 	FixWorkOrdersDTtoHR
 	
-	Version14_DeletezzzRecords
 	
 	If (False:C215)  // do not force UniqueIDs
 		CONFIRM:C162("Force UniqueIDs for version 14.")
@@ -183,10 +181,10 @@ C_TEXT:C284(<>WindowPosition)
 C_BOOLEAN:C305(<>WindowToBack)
 
 // Modified by: William James (2013-08-03T00:00:00)
-C_LONGINT:C283(<>theProcessList; <>cronDelay; <>windowsize)
+C_LONGINT:C283(<>cronDelay; <>windowsize)
 // If ((Screen width>1024) & ([Employee]ScreenSizeSmall=False))  // ### jwm ### 20170906_2052
 <>windowsize:=1024
-FORM SET INPUT:C55([Control:1]; "DeptSales")
+FORM SET INPUT:C55([Admin:1]; "DeptSales")
 
 <>cronDelay:=60
 allowAlerts_boo:=True:C214
@@ -227,12 +225,12 @@ ARRAY TEXT:C222(<>aExtensionValue; 0)  // need to keep from initializing in ever
 ARRAY TEXT:C222(<>aContentType; 0)
 $doFirst:=True:C214
 If (False:C215)  // (Records in table([Control])>0)
-	DEFAULT TABLE:C46([Control:1])
+	DEFAULT TABLE:C46([Admin:1])
 	myOK:=1
-	FORM SET INPUT:C55([Control:1]; "StartUp")
-	ALL RECORDS:C47([Control:1])
-	FIRST RECORD:C50([Control:1])
-	Pict_InputLo(->[Control:1]; 1; 8)  //get PICT resc 21001
+	FORM SET INPUT:C55([Admin:1]; "StartUp")
+	ALL RECORDS:C47([Admin:1])
+	FIRST RECORD:C50([Admin:1])
+	Pict_InputLo(->[Admin:1]; 1; 8)  //get PICT resc 21001
 	SET WINDOW TITLE:C213("Automating Sales for Time-Profit-Control")
 	DISPLAY RECORD:C105
 	$doFirst:=False:C215
@@ -261,18 +259,7 @@ End if
 
 If (Application type:C494#4D Server:K5:6)
 	
-	If (Test path name:C476(Storage:C1525.folder.jitF+"jitIndex.txt")<0)
-		StructureWrite("NoDialog")
-		//myDoc:=create document(Storage.folder.jitF+"jitIndex.txt")
-		//If (OK=1)
-		//CLOSE DOCUMENT(myDoc)
-		//End if 
-	End if 
-	// <>vlOnCD:=Get_FileLocked (Storage.folder.jitF+"jitIndex.txt")  //check if locked
 End if 
-//
-//
-//.compiler //why do we need this second one?????
 
 Licenses
 
@@ -282,7 +269,7 @@ C_BOOLEAN:C305(<>CalcHere; <>WriteHere)
 // ### bj ### 20180911_2005
 // gmgmgm do we want to eliminate thise
 // <>WriteHere:=Is license available(4D Write license)
-//ConsoleMessage ("TEST: <>WriteHere = "+String(Num(<>WriteHere)))
+//Console_Log ("TEST: <>WriteHere = "+String(Num(<>WriteHere)))
 //End if 
 //$result:=SW_Register ("bRx-05958-3177";"bAe-23939-9076")
 
@@ -302,27 +289,8 @@ C_LONGINT:C283(<>UserRunPrcs)
 C_BOOLEAN:C305(<>learnMode)
 <>UserRunPrcs:=Current process:C322
 C_LONGINT:C283($k; $i)
-$k:=Records in table:C83([Control:1])
-//Case of 
-//: ($k=0)
-//CREATE RECORD([Control])
-//C_DATE(<>tc_ActDate)
-//<>tc_ActDate:=Current date
-//ControlFill 
-//SAVE RECORD([Control])
-//UNLOAD RECORD([Control])
-//jCenterWindow (318;218;1)
-//DIALOG([Control];"diaSignOn")
-//CLOSE WINDOW
-////: ($k>1000)
-////ALL RECORDS
-////SUB_SELECTION TO ARRAY(aTmpLong1;
-//End case 
-//jsetChArrays //must be before new Co records
+$k:=Records in table:C83([Admin:1])
 
-ARRAY TEXT:C222(<>aPrsName; 0)
-ARRAY LONGINT:C221(<>aPrsNum; 0)
-ARRAY LONGINT:C221(<>aPrsDTActiv; 0)
 
 
 If (Records in table:C83([Default:15])=0)
@@ -375,8 +343,8 @@ MESSAGES OFF:C175
 
 // RijuQQQ Example
 C_OBJECT:C1216($obEmployeeRec)
-$obEmployeeRec:=New object:C1471
-$obEmployeeRec:=ds:C1482.Employee.query("nameID = :1 "; "Admin")
+$obRec:=New object:C1471
+$obRec:=ds:C1482.Employee.query("nameID = :1 "; "Admin").first()
 If ($obRec=Null:C1517)
 	$obRec:=ds:C1482.Employee.new()
 	$result_o:=$obRec.save()
@@ -400,16 +368,16 @@ End if
 UNLOAD RECORD:C212([Employee:19])
 UNLOAD RECORD:C212([RemoteUser:57])
 //
-ptCurTable:=(->[Control:1])
+ptCurTable:=(->[Admin:1])
 jsetDefaultFile(->[Customer:2])
 //
 
 C_BOOLEAN:C305($doMySales)
-Default_Employee
+
 
 Dept_Sales
 
-SET WINDOW TITLE:C213(Storage:C1525.default.menuTitle)
+SET WINDOW TITLE:C213(Storage:C1525.default.MenuTitle)
 
 MESSAGES ON:C181
 //

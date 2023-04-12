@@ -50,4 +50,4 @@ If ($adminPassword="theodoropoulos")
 		End if 
 	End if 
 End if 
-//$err:=WC_PageSendWithTags ($1;<>WebFolder+$thePage;0)
+//$err:=WC_PageSendWithTags ($1;Storage.wc.webFolder+$thePage;0)

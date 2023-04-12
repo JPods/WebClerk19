@@ -52,9 +52,11 @@ Case of
 		// var $obWindows: object
 		// $obWindows:=WindowCountToShow  // example
 		//$win_l:=Open form window([Control]; $form_t; Plain form window; $obWindows.leftOffset; 53+$obWindows.topOffset;*)
-		$win_l:=Open form window:C675([Control:1]; $form_t; Plain form window:K39:10; Screen width:C187-690; 53+20)
+		$win_l:=Open form window:C675($form_t; Plain form window:K39:10; Screen width:C187-690; 53+20)
+		
+		
 		process_o.window:=$win_l
-		DIALOG:C40([Control:1]; $form_t)
+		DIALOG:C40([Admin:1]; $form_t)
 		
 		ARRAY LONGINT:C221(<>aLsSrRec; 0)
 		ARRAY LONGINT:C221(<>aItemLines; 0)
@@ -77,10 +79,7 @@ Case of
 		If (<>vItemNum#"")
 			POST OUTSIDE CALL:C329(<>aPrsNum{$found})
 		End if 
-		If (Frontmost process:C327#<>aPrsNum{$found})
-			POST OUTSIDE CALL:C329(<>aPrsNum{$found})
-			BRING TO FRONT:C326(<>aPrsNum{$found})
-		End if 
+		BRING TO FRONT:C326($found)
 	Else   // : (Count parameters=0)
 		If (ptCurTable#Null:C1517)
 			$tableName:=Table name:C256(ptCurTable)

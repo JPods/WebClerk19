@@ -37,19 +37,19 @@ If (Count parameters:C259>2)
 	End if 
 End if 
 If ($doRecord)
-	CREATE RECORD:C68([CallReport:34])
-	[CallReport:34]tableNum:2:=$1
-	[CallReport:34]customerID:1:=$2
-	[CallReport:34]actionBy:3:=Current user:C182
-	[CallReport:34]initiatedBy:23:=Current user:C182
-	[CallReport:34]dtAction:4:=DateTime_Enter
-	[CallReport:34]dateDocument:17:=!2017-06-01!  // Current date
-	[CallReport:34]complete:7:=True:C214
-	[CallReport:34]action:15:=$3
-	[CallReport:34]comment:16:=$comment
-	[CallReport:34]email:38:=$email
-	[CallReport:34]profile1:26:=$profile
-	SAVE RECORD:C53([CallReport:34])
+	CREATE RECORD:C68([Call:34])
+	[Call:34]tableNum:2:=$1
+	[Call:34]customerID:1:=$2
+	[Call:34]actionBy:3:=Current user:C182
+	[Call:34]initiatedBy:23:=Current user:C182
+	[Call:34]dtAction:4:=DateTime_DTTo
+	[Call:34]dateDocument:17:=!2017-06-01!  // Current date
+	[Call:34]complete:7:=True:C214
+	[Call:34]action:15:=$3
+	[Call:34]comment:16:=$comment
+	[Call:34]email:38:=$email
+	[Call:34]profile1:26:=$profile
+	SAVE RECORD:C53([Call:34])
 End if 
 
 

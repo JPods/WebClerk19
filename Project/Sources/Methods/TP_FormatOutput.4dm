@@ -141,7 +141,7 @@ Case of
 		End case 
 	: ($viType=Is longint:K8:6)
 		If ($vtFieldName="DT@")
-			jDateTimeRecov($vpPointer->; ->vDate1; ->vTime1)
+			DateTime_DTFrom($vpPointer->; ->vDate1; ->vTime1)
 			Case of 
 				: ($vtOutputFormat="DateOnly")
 					$0:=String:C10(vDate1; 1)

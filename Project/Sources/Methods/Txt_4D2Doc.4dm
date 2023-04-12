@@ -68,7 +68,7 @@ If ($myOK=1)
 		
 		If (<>viDebugMode>410)  //added to accumulate shopping cart
 			theText:=$docText
-			ConsoleMessage(theText)
+			ConsoleLog(theText)
 		End if 
 		$myDoc:=Create document:C266($myPath)
 		SEND PACKET:C103($myDoc; $docText)

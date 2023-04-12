@@ -75,7 +75,7 @@ If (OK=1)
 		$thisPage:=Replace string:C233($thisPage; "/"; "")
 		$thisPage:=Replace string:C233($thisPage; ","; "")
 		$thisPage:="ItMn"+$thisPage+".html"
-		$thisPagePath:=<>WebFolder+$thisPage
+		$thisPagePath:=Storage:C1525.wc.webFolder+$thisPage
 		If (HFS_Exists($thisPagePath)=1)
 			$err:=HFS_Delete($thisPagePath)
 		End if 
@@ -99,7 +99,7 @@ If (OK=1)
 			ARRAY LONGINT:C221($aCatNum; 0)
 			ARRAY LONGINT:C221($aSeqNum; 0)
 			ARRAY LONGINT:C221($aRecNum; 0)
-			SELECTION TO ARRAY:C260([Item:4]itemNum:1; $aItemNum; [Item:4]description:7; $aItemDescript; [Item:4]unitOfMeasure:11; $aUoM; [Item:4]path:61; $aURL; [Item:4]mfrItemNum:39; $aMfgrNum; [Item:4]liComment:66; $aliComment; [Item:4]priceA:2; $aAPrice; [Item:4]; $aRecNum; [Item:4]indicator1:95; $aCatNum; [Item:4]indicator2:96; $aCatSeq; [Item:4]type:26; $atypeID)
+			SELECTION TO ARRAY:C260([Item:4]itemNum:1; $aItemNum; [Item:4]description:7; $aItemDescript; [Item:4]unitOfMeasure:11; $aUoM; [Item:4]path:61; $aURL; [Item:4]mfrItemNum:39; $aMfgrNum; [Item:4]descriptionDetail:66; $aliComment; [Item:4]priceA:2; $aAPrice; [Item:4]; $aRecNum; [Item:4]indicator1:95; $aCatNum; [Item:4]indicator2:96; $aCatSeq; [Item:4]type:26; $atypeID)
 			//   
 			MULTI SORT ARRAY:C718($aCatNum; >; $aCatSeq; >; $aItemNum; >; $aItemDescript; $aUoM; $aURL; $aMfgrNum; $aliComment; $aAPrice; $aRecNum)
 			//
@@ -143,8 +143,8 @@ If (OK=1)
 						$addQty{$wLineSize}:=$vAddQty
 						$addUoM{$wLineSize}:=$aUoM{$iRay}
 						$addPrice{$wLineSize}:=String:C10($aAPrice{$iRay}; "###,##0.00")
-						If (([Item:4]mfrItemNum:39#"") & ([Item:4]liComment:66#""))
-							$addDescription{$wLineSize}:=[Item:4]mfrItemNum:39+"<BR>"+[Item:4]liComment:66
+						If (([Item:4]mfrItemNum:39#"") & ([Item:4]descriptionDetail:66#""))
+							$addDescription{$wLineSize}:=[Item:4]mfrItemNum:39+"<BR>"+[Item:4]descriptionDetail:66
 						Else 
 							$addDescription{$wLineSize}:=$aItemDescript{$iRay}
 						End if 
@@ -192,7 +192,7 @@ If (OK=1)
 		End if 
 	End for 
 	UNLOAD RECORD:C212([Item:4])
-	$thisPagePath:=<>WebFolder+"ItMn111.html"
+	$thisPagePath:=Storage:C1525.wc.webFolder+"ItMn111.html"
 	If (HFS_Exists($thisPagePath)=1)
 		$err:=HFS_Delete($thisPagePath)
 	End if 

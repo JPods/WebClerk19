@@ -203,7 +203,7 @@ Case of
 					If ($pEnd=0)
 						$buildText:=$buildText+$workText
 					Else 
-						$imageText:=Substring:C12($workText; 1; $pEnd-1)  //<>WebFolder+"/"+
+						$imageText:=Substring:C12($workText; 1; $pEnd-1)  //Storage.wc.webFolder+"/"+
 						$imageText:=Replace string:C233($imageText; "\\"; "/")
 						$imageText:=Replace string:C233($imageText; ":"; "/")
 						$imageText:=Replace string:C233($imageText; "//"; "/")

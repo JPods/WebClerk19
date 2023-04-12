@@ -43,7 +43,7 @@ $vtString:=""
 $vtString:=$1
 $vtDecoded:=""
 
-//ConsoleMessage ($vtString)
+//Console_Log ($vtString)
 
 $vi1:=0
 $vi2:=Length:C16($vtString)
@@ -151,6 +151,6 @@ If ($vi2>0)
 	Until ($vi1=$vi2)
 	
 End if 
-//ConsoleMessage ($vtDecoded)
+//Console_Log ($vtDecoded)
 
 $0:=$vtDecoded

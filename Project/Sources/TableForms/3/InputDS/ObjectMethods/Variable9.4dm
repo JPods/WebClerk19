@@ -16,9 +16,11 @@ If (False:C215)
 	viOrdLnCnt:=0
 	$backlog:=OrdersFlowToCommission(4)  //Item record must already be the selection
 	//[Order]Flow:=4
-	CMANewCommOrderLine(-1; $backlog; $backlog; Current date:C33; "CommWindow"; "exact"; $inTest; vR2; vR4)
-	viOrdLnCnt:=MaxValueReturn(viOrdLnCnt; [OrderLine:49]seq:30)
-	CMAComOrderOneLine(4)
+	
+	// UpdateWithResources by: Bill James (2023-01-03T06:00:00Z)
+	//CMANewCommOrderLine(-1; $backlog; $backlog; Current date; "CommWindow"; "exact"; $inTest; vR2; vR4)
+	//viOrdLnCnt:=MaxValueReturn(viOrdLnCnt; [OrderLine]seq)
+	//CMAComOrderOneLine(4)
 	
 	OrdLnFillRays
 	If (eOrdList#0)

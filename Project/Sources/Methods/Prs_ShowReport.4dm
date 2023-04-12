@@ -57,5 +57,5 @@ If (Application type:C494#4D Server:K5:6)
 		GOTO RECORD:C242([UserReport:46]; $recordNumUserReport)
 		MODIFY SELECTION:C204([UserReport:46])
 	End if 
-	POST OUTSIDE CALL:C329(<>theProcessList)
+	POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 End if 

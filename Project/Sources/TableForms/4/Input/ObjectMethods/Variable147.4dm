@@ -1,1 +1,0 @@
-entryEntity.Profile14:=DE_PopUpArray(Self:C308)

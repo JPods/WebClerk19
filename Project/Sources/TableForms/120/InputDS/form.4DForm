@@ -1,0 +1,679 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 20,
+	"markerBody": 276,
+	"markerBreak": 303,
+	"markerFooter": 331,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Rectangle2_1": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 151,
+					"width": 701,
+					"height": 293,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle1_2": {
+					"type": "rectangle",
+					"top": 213,
+					"left": 151,
+					"width": 701,
+					"height": 76,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle37_3": {
+					"type": "rectangle",
+					"top": 90,
+					"left": 151,
+					"width": 236,
+					"height": 95,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_PROP_ItemModifier_idUnique_4": {
+					"type": "input",
+					"top": 91,
+					"left": 154,
+					"width": 232,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]idUnique:1"
+				},
+				"_PROP_ItemModifier_mfrid_5": {
+					"type": "input",
+					"top": 110,
+					"left": 154,
+					"width": 232,
+					"height": 17,
+					"dataSource": "entry_o.mfrid",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]mfrid:2"
+				},
+				"_PROP_ItemModifier_ModifierID_6": {
+					"type": "input",
+					"top": 129,
+					"left": 154,
+					"width": 232,
+					"height": 17,
+					"dataSource": "entry_o.ModifierID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]ModifierID:3"
+				},
+				"_PROP_ItemModifier_Description_7": {
+					"type": "input",
+					"top": 148,
+					"left": 154,
+					"width": 232,
+					"height": 17,
+					"dataSource": "entry_o.Description",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]Description:4"
+				},
+				"_PROP_ItemModifier_PriceMatrixID_8": {
+					"type": "input",
+					"top": 167,
+					"left": 154,
+					"width": 232,
+					"height": 17,
+					"dataSource": "entry_o.PriceMatrixID",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]PriceMatrixID:20"
+				},
+				"_PROP_ItemModifier_CharName1_9": {
+					"type": "input",
+					"top": 214,
+					"left": 154,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharName1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharName1:7"
+				},
+				"_PROP_ItemModifier_CharString1_10": {
+					"type": "input",
+					"top": 214,
+					"left": 387,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharString1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharString1:11"
+				},
+				"_PROP_ItemModifier_CharReal1_11": {
+					"type": "input",
+					"top": 214,
+					"left": 620,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharReal1",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharReal1:15"
+				},
+				"_PROP_ItemModifier_CharName2_12": {
+					"type": "input",
+					"top": 233,
+					"left": 154,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharName2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharName2:8"
+				},
+				"_PROP_ItemModifier_CharString2_13": {
+					"type": "input",
+					"top": 233,
+					"left": 387,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharString2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharString2:12"
+				},
+				"_PROP_ItemModifier_CharReal2_14": {
+					"type": "input",
+					"top": 233,
+					"left": 620,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharReal2",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharReal2:16"
+				},
+				"_PROP_ItemModifier_CharString3_15": {
+					"type": "input",
+					"top": 252,
+					"left": 154,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharString3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharString3:13"
+				},
+				"_PROP_ItemModifier_CharString3_16": {
+					"type": "input",
+					"top": 252,
+					"left": 387,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharString3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharString3:13"
+				},
+				"_PROP_ItemModifier_CharReal3_17": {
+					"type": "input",
+					"top": 252,
+					"left": 620,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharReal3",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharReal3:17"
+				},
+				"_PROP_ItemModifier_CharName4_18": {
+					"type": "input",
+					"top": 271,
+					"left": 154,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharName4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharName4:10"
+				},
+				"_PROP_ItemModifier_CharString4_19": {
+					"type": "input",
+					"top": 271,
+					"left": 387,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharString4",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharString4:14"
+				},
+				"_PROP_ItemModifier_CharReal4_20": {
+					"type": "input",
+					"top": 271,
+					"left": 620,
+					"width": 231,
+					"height": 17,
+					"dataSource": "entry_o.CharReal4",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]CharReal4:18"
+				},
+				"_PROP_ItemModifier_Comment_21": {
+					"type": "input",
+					"top": 289,
+					"left": 154,
+					"width": 682,
+					"height": 291,
+					"dataSource": "entry_o.Comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[ItemModifier:120]Comment:6"
+				},
+				"_Text_UniqueID_22": {
+					"type": "text",
+					"top": 93,
+					"left": 17,
+					"width": 129,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "UniqueID"
+				},
+				"_Text_mfrID_23": {
+					"type": "text",
+					"top": 112,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "mfrID"
+				},
+				"_Text_PriceMatrixID_24": {
+					"type": "text",
+					"top": 169,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "PriceMatrixID"
+				},
+				"_Text_ModifierID_25": {
+					"type": "text",
+					"top": 131,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ModifierID"
+				},
+				"_Text_Description_26": {
+					"type": "text",
+					"top": 150,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Description"
+				},
+				"_Text_Comment_27": {
+					"type": "text",
+					"top": 295,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Comment"
+				},
+				"_Text_Characteristic1_28": {
+					"type": "text",
+					"top": 216,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Characteristic 1"
+				},
+				"_Text_Characteristic2_29": {
+					"type": "text",
+					"top": 235,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Characteristic 2"
+				},
+				"_Text_Characteristic3_30": {
+					"type": "text",
+					"top": 254,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Characteristic 3"
+				},
+				"_Text_Characteristic4_31": {
+					"type": "text",
+					"top": 273,
+					"left": 18,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Characteristic 4"
+				},
+				"_Text_Name_32": {
+					"type": "text",
+					"top": 194,
+					"left": 154,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Name"
+				},
+				"_Text_String_33": {
+					"type": "text",
+					"top": 194,
+					"left": 387,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "String"
+				},
+				"_Text_Real_34": {
+					"type": "text",
+					"top": 194,
+					"left": 620,
+					"width": 128,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Real"
+				},
+				"_VAR_<>pNavPallet_35": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_36": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_37": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_38": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_39": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_40": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

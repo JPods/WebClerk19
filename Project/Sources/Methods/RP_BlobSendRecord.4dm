@@ -35,15 +35,15 @@ C_BLOB:C604(HTTP_IncomingBlob)
 //HTTP_Port    //port
 //HTTP_Data    //blob of data to send
 
-CREATE RECORD:C68([ETLJob:104])  // long the transaction  Consolidate into SyncRecord
-[ETLJob:104]dtCreated:5:=DateTime_Enter
+CREATE RECORD:C68([SyncJob:104])  // long the transaction  Consolidate into SyncRecord
+[SyncJob:104]dtCreated:5:=DateTime_DTTo
 //[ETLJob]idCustomer:=[SyncRelation]idNum
-[ETLJob:104]addressSending:7:=[SyncRelation:103]partner1URL:2
-[ETLJob:104]status:4:="Processing"
-[ETLJob:104]description:2:=eventID_Cookie
-[ETLJob:104]comment:15:=$commentText
+[SyncJob:104]addressSending:7:=[SyncRelation:103]partner1URL:2
+[SyncJob:104]status:4:="Processing"
+[SyncJob:104]description:2:=eventID_Cookie
+[SyncJob:104]comment:15:=$commentText
 //[SyncExchange]CountSyncBlobs:=$k
-SAVE RECORD:C53([ETLJob:104])
+SAVE RECORD:C53([SyncJob:104])
 <>vConnectionStatus:="Have heart_beat"
 
 
@@ -73,9 +73,9 @@ Else
 	[SyncRecord:109]ideRemote:27:=Num:C11(WCapi_GetParameter("SyncRecordIDRemote"; ""))
 	[SyncRecord:109]statusReceive:19:=WCapi_GetParameter("StatusRemote"; "")
 	If ([SyncRecord:109]statusReceive:19="Received")  // if it times out or does not get acknowledged.
-		[ETLJob:104]countAccepted:8:=[ETLJob:104]countAccepted:8+1
+		[SyncJob:104]countAccepted:8:=[SyncJob:104]countAccepted:8+1
 	Else 
-		[ETLJob:104]countRejected:9:=[ETLJob:104]countRejected:9+1
+		[SyncJob:104]countRejected:9:=[SyncJob:104]countRejected:9+1
 	End if 
 	[SyncRecord:109]statusSend:17:="Acknowledged"
 	[SyncRecord:109]dtComplete:8:=Num:C11(WCapi_GetParameter("DTCompleted"; ""))

@@ -38,8 +38,8 @@ Case of
 End case 
 
 If ($doMore)  //action for the form regardless of new or existing record
-	If ([SyncRelation:103]PartnerNumber:14=0)
-		[SyncRelation:103]PartnerNumber:14:=1
+	If ([SyncRelation:103]partnerNumber:14=0)
+		[SyncRelation:103]partnerNumber:14:=1
 	End if 
 	// related records not addressed by (P) RelatedGet
 	// form calculations
@@ -47,10 +47,10 @@ If ($doMore)  //action for the form regardless of new or existing record
 	$doMore:=False:C215
 	
 	
-	iLoText7:=BLOB to text:C555([SyncRelation:103]PrivateKey:45; UTF8 text without length:K22:17)
-	iLoText8:=BLOB to text:C555([SyncRelation:103]PublicKey:46; UTF8 text without length:K22:17)
+	iLoText7:=BLOB to text:C555([SyncRelation:103]privateKey:45; UTF8 text without length:K22:17)
+	iLoText8:=BLOB to text:C555([SyncRelation:103]publicKey:46; UTF8 text without length:K22:17)
 	
-	jDateTimeRecov([SyncRelation:103]DTLastUpdate:6; ->iLoDate1; ->iLoTime1)
+	DateTime_DTFrom([SyncRelation:103]dtLastUpdate:6; ->iLoDate1; ->iLoTime1)
 	Before_New(ptCurTable)  //last thing to do
 End if 
 

@@ -43,16 +43,16 @@ $viValid:=Test path name:C476($thePath)
 Case of 
 	: ($viValid<0)
 		If ($v411=411)
-			ConsoleMessage("vtLocalPath invalid: "+$ptPath->)
+			ConsoleLog("vtLocalPath invalid: "+$ptPath->)
 		End if 
 	: ($viValid=0)
 		$ptPath->:=$ptPath->+"\\"
 		If ($v411=411)
-			ConsoleMessage("vtLocalPath,folder: "+$ptPath->)
+			ConsoleLog("vtLocalPath,folder: "+$ptPath->)
 		End if 
 	: ($viValid=1)
 		If ($v411=411)
-			ConsoleMessage("vtLocalPath,doc: "+$ptPath->)
+			ConsoleLog("vtLocalPath,doc: "+$ptPath->)
 		End if 
 End case 
 

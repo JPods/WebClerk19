@@ -49,7 +49,7 @@ If (OK=1)
 					[Customer:2]balanceOpenOrders:78:=[Customer:2]balanceOpenOrders:78-[Order:3]amountBackLog:54
 					SAVE RECORD:C53([Customer:2])
 					[Order:3]status:59:="Completed"
-					[Order:3]lng:34:=DateTime_Enter
+					[Order:3]lng:34:=DateTime_DTTo
 					[Order:3]dateInvoiceComp:6:=Current date:C33
 					QUERY:C277([OrderLine:49]; [OrderLine:49]idNumOrder:1=[Order:3]idNum:2)
 					$w:=Records in selection:C76([OrderLine:49])

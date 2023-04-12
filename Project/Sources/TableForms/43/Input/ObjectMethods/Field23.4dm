@@ -1,1 +1,0 @@
-[ProposalLine:43]unitWeight:22:=Round:C94([ProposalLine:43]extendedWt:19/[ProposalLine:43]qty:3; 4)

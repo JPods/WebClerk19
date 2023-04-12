@@ -12,7 +12,7 @@ If (iLoText1="")
 	ALERT:C41("Load Docs for a draft html page.")
 Else 
 	$shortname:=Replace string:C233(HFS_ShortName(iLoText1); Folder separator:K24:12; "")+".html"
-	myDoc:=EI_UniqueDoc(<>WebFolder+$shortname)
+	myDoc:=EI_UniqueDoc(Storage:C1525.wc.webFolder+$shortname)
 	C_LONGINT:C283($recID)
 	$doThumbs:=False:C215
 	If (OK=1)

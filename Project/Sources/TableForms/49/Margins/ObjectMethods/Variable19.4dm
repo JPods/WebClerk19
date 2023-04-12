@@ -1,0 +1,1 @@
+diaItemSpec(->aOItemNum{aoLineAction}; ->aODescpt{aoLineAction})

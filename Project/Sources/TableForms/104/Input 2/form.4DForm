@@ -1,0 +1,709 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 412,
+	"markerBreak": 412,
+	"markerFooter": 424,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Variable132": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable133": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"AddressSending": {
+					"type": "input",
+					"top": 33,
+					"left": 306,
+					"width": 363,
+					"height": 17,
+					"dataSource": "[ETLJob:104]addressSending:7",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Cookie": {
+					"type": "input",
+					"top": 56,
+					"left": 306,
+					"width": 363,
+					"height": 17,
+					"dataSource": "[ETLJob:104]description:2",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CountAccepted": {
+					"type": "input",
+					"top": 125,
+					"left": 306,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]countAccepted:8",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CountRejected": {
+					"type": "input",
+					"top": 157,
+					"left": 416,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]countRejected:9",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CountSyncBlobs": {
+					"type": "input",
+					"top": 180,
+					"left": 416,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]dtLastRun:6",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"dtLastSync": {
+					"type": "input",
+					"top": 203,
+					"left": 416,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]dtCreated:5",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Status": {
+					"type": "input",
+					"top": 226,
+					"left": 416,
+					"width": 270,
+					"height": 17,
+					"dataSource": "[ETLJob:104]status:4",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"SyncRelationIDLocal": {
+					"type": "input",
+					"top": 249,
+					"left": 416,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]idCustomer:3",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"SyncRelationIDRemote": {
+					"type": "input",
+					"top": 272,
+					"left": 416,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]syncRelationIDRemote:12",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueID1": {
+					"type": "input",
+					"top": 295,
+					"left": 416,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]idNum:1",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueIDRemote": {
+					"type": "input",
+					"top": 318,
+					"left": 416,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]ideRemote:11",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"UniqueTitle": {
+					"type": "input",
+					"top": 10,
+					"left": 306,
+					"width": 363,
+					"height": 17,
+					"dataSource": "[ETLJob:104]uniqueTitle:10",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable134": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable135": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable136": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Variable139": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text17": {
+					"type": "text",
+					"top": 35,
+					"left": 142,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "AddressSending : "
+				},
+				"Text18": {
+					"type": "text",
+					"top": 58,
+					"left": 142,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Cookie : "
+				},
+				"Text19": {
+					"type": "text",
+					"top": 127,
+					"left": 142,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "CountAccepted : "
+				},
+				"Text4": {
+					"type": "text",
+					"top": 159,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "CountRejected : "
+				},
+				"Text5": {
+					"type": "text",
+					"top": 182,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "CountSyncBlobs : "
+				},
+				"Text6": {
+					"type": "text",
+					"top": 205,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "dtLastSync : "
+				},
+				"Text7": {
+					"type": "text",
+					"top": 228,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Status : "
+				},
+				"Text8": {
+					"type": "text",
+					"top": 251,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "SyncRelationIDLocal : "
+				},
+				"Text25": {
+					"type": "text",
+					"top": 274,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "SyncRelationIDRemote : "
+				},
+				"Text26": {
+					"type": "text",
+					"top": 297,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueID : "
+				},
+				"Text27": {
+					"type": "text",
+					"top": 320,
+					"left": 252,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueIDRemote : "
+				},
+				"Text28": {
+					"type": "text",
+					"top": 12,
+					"left": 142,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "UniqueTitle : "
+				},
+				"Variable": {
+					"type": "input",
+					"top": 203,
+					"left": 525,
+					"width": 62,
+					"height": 17,
+					"dataSource": "iLo20String1",
+					"class": "cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 203,
+					"left": 592,
+					"width": 62,
+					"height": 17,
+					"dataSource": "iLo20String2",
+					"class": "cssInput",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"CountAccepted1": {
+					"type": "input",
+					"top": 79,
+					"left": 306,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]duration:14",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 81,
+					"left": 142,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "Duration"
+				},
+				"CountAccepted2": {
+					"type": "input",
+					"top": 102,
+					"left": 306,
+					"width": 104,
+					"height": 17,
+					"dataSource": "[ETLJob:104]config:13",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"top": 104,
+					"left": 142,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"text": "CountSent : "
+				},
+				"Button8": {
+					"type": "button",
+					"top": 98,
+					"left": 567,
+					"width": 102,
+					"height": 22,
+					"dataSource": "B16",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "Remote",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Field": {
+					"type": "input",
+					"top": 598,
+					"left": 24,
+					"width": 770,
+					"height": 49,
+					"dataSource": "[ETLJob:104]comment:15",
+					"class": "cssInput",
+					"scrollbarHorizontal": "visible",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 365,
+					"left": 29,
+					"width": 156,
+					"height": 12,
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Config:"
+				},
+				"Field1": {
+					"type": "input",
+					"top": 384,
+					"left": 24,
+					"width": 770,
+					"height": 193,
+					"dataSource": "[ETLJob:104]config:13",
+					"class": "cssInput",
+					"scrollbarHorizontal": "visible",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 11,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

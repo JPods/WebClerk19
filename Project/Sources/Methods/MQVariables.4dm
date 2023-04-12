@@ -54,9 +54,9 @@ If ($action="send")
 	DateTimeDTEpoch("ToEpoch"; ->[WorkOrder:66]dtAction:5; ->dtEpochPlanned)
 	DateTimeDTEpoch("ToEpoch"; ->[WorkOrder:66]dtStarted:79; ->dtEpochStarted)
 	// ### bj ### 20190428_0958  so they are always aligned
-	[WorkOrder:66]dtBeginPlanned:107:=DateTime_Enter([WorkOrder:66]dateBegin:106; [WorkOrder:66]timeBegin:109)
+	[WorkOrder:66]dtBeginPlanned:107:=DateTime_DTTo([WorkOrder:66]dateBegin:106; [WorkOrder:66]timeBegin:109)
 	DateTimeDTEpoch("ToEpoch"; ->[WorkOrder:66]dtBeginPlanned:107; ->dtEpochBeginPlan)
-	[WorkOrder:66]dtEndPlanned:69:=DateTime_Enter([WorkOrder:66]dateEnd:108; [WorkOrder:66]timeEnd:110)
+	[WorkOrder:66]dtEndPlanned:69:=DateTime_DTTo([WorkOrder:66]dateEnd:108; [WorkOrder:66]timeEnd:110)
 	DateTimeDTEpoch("ToEpoch"; ->[WorkOrder:66]dtEndPlanned:69; ->dtEpochEndPlan)
 	
 	DateTimeDTEpoch("ToEpoch"; ->[WorkOrder:66]dtComplete:6; ->dtEpochCompleted)
@@ -72,7 +72,7 @@ If ($action="send")
 		: ([WorkOrder:66]unitTime:18="Min@")
 			vrdurationplanned:=Round:C94([WorkOrder:66]durationPlanned:10*60*1000; 0)
 		: ([WorkOrder:66]unitTime:18="Day@")
-			DefaultSetupsCreate("<>hoursInWorkDay"; "8"; "Is longint"; "metrics"; "WorkOrder"; "Convert time for javascripts and gantt charts")
+			
 			C_LONGINT:C283(<>hoursInWorkDay)
 			If (<>hoursInWorkDay=0)
 				<>hoursInWorkDay:=8

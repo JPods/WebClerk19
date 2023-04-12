@@ -16,7 +16,7 @@ End if
 vResponse:="Error: No TallyMasters Record"
 C_TEXT:C284($vtPurpose; $vtName; $vtSecurityLevel; $vtParameters)
 C_LONGINT:C283($visecurityLevel)
-$viSecurityLevel:=[QQQRemoteUser:57]securityLevel:4
+$viSecurityLevel:=[RemoteUser:57]securityLevel:4
 If (voState.request.parameters.tmapi=Null:C1517)
 	vResponse:="Error: tmapi: not defined"
 Else 
@@ -24,12 +24,12 @@ Else
 	If ($vtName="")
 		vResponse:="Error: tmapi: tmapi name is empty."
 	Else 
-		QUERY:C277([TallyMaster:60]; [TallyMaster:60]Purpose:3="tmapi"; *)
-		QUERY:C277([TallyMaster:60];  & ; [TallyMaster:60]Name:8=$vtName)
+		QUERY:C277([TallyMaster:60]; [TallyMaster:60]purpose:3="tmapi"; *)
+		QUERY:C277([TallyMaster:60];  & ; [TallyMaster:60]name:8=$vtName)
 		If (Records in selection:C76([TallyMaster:60])=0)
 			vResponse:="Error: tmapi: tmapi name: "+$vtName+" does not exist."
 		Else 
-			ExecuteText(0; [TallyMaster:60]Script:9; "ExecuteTM Name: "+[TallyMaster:60]Name:8+"; Purpose: "+[TallyMaster:60]Purpose:3)
+			ExecuteText(0; [TallyMaster:60]script:9; "ExecuteTM Name: "+[TallyMaster:60]name:8+"; Purpose: "+[TallyMaster:60]purpose:3)
 		End if 
 	End if 
 End if 

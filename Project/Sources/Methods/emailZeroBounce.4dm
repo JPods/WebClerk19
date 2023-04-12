@@ -51,7 +51,7 @@ Else
 End if 
 
 If ($vtBatch#"")
-	ConsoleMessage("ZeroBounce file size: "+String:C10(Length:C16($vtBatch)))
+	ConsoleLog("ZeroBounce file size: "+String:C10(Length:C16($vtBatch)))
 	$vtBatch:=Replace string:C233($vtBatch; Storage:C1525.char.crlf; "\r")
 	$vtBatch:=Replace string:C233($vtBatch; "\n"; "\r")
 	// convert to CSV to tabs
@@ -80,7 +80,7 @@ If ($vtBatch#"")
 			
 			QUERY:C277([Customer:2]; [Customer:2]email:81=$aTOneAddress{1})
 			vi4:=Records in selection:C76([Customer:2])
-			ConsoleMessage($aTOneAddress{1}+" record count: "+String:C10(vi4))
+			ConsoleLog($aTOneAddress{1}+" record count: "+String:C10(vi4))
 			FIRST RECORD:C50([Customer:2])
 			vi3:=0
 			For (vi3; 1; vi4)

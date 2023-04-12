@@ -37,15 +37,15 @@ If ($sizeResponse>0)
 	If ([SyncRelation:103]idNum:1#vUniqueID)
 		QUERY:C277([SyncRelation:103]; [SyncRelation:103]idNum:1=vUniqueID)
 	End if 
-	CREATE RECORD:C68([ETLJob:104])
+	CREATE RECORD:C68([SyncJob:104])
 	
-	[ETLJob:104]dtCreated:5:=DateTime_Enter
+	[SyncJob:104]dtCreated:5:=DateTime_DTTo
 	//[ETLJob]idCustomer:=[SyncRelation]idNum
-	[ETLJob:104]addressSending:7:=[SyncRelation:103]partner1URL:2
-	[ETLJob:104]status:4:="Processing"
-	[ETLJob:104]description:2:=eventID_Cookie
+	[SyncJob:104]addressSending:7:=[SyncRelation:103]partner1URL:2
+	[SyncJob:104]status:4:="Processing"
+	[SyncJob:104]description:2:=eventID_Cookie
 	//[SyncExchange]CountSyncBlobs:=$k
-	SAVE RECORD:C53([ETLJob:104])
+	SAVE RECORD:C53([SyncJob:104])
 	<>vConnectionStatus:="Have heart_beat"
 	//VARIABLE TO VARIABLE(<>ProcThermoProcess;vNewThermometerTitle;<>vConnectionStatus)
 	
@@ -54,7 +54,7 @@ If ($sizeResponse>0)
 	
 	
 	POST OUTSIDE CALL:C329(<>ProcThermoProcess)
-	HTTP_Path:="/search_user?username="+vUsername+"&password="+vPassword+"&jitPageOne=noticeOnly&emailsender="+[SyncRelation:103]partner1Email:18+"&SecurityLevel=5&syncExchangeRemote="+String:C10([ETLJob:104]idNum:1)+"&syncRelationID="+String:C10([SyncRelation:103]idNum:1)+"&syncRelation="+[SyncRelation:103]name:8
+	HTTP_Path:="/search_user?username="+vUsername+"&password="+vPassword+"&jitPageOne=noticeOnly&emailsender="+[SyncRelation:103]partner1Email:18+"&SecurityLevel=5&syncExchangeRemote="+String:C10([SyncJob:104]idNum:1)+"&syncRelationID="+String:C10([SyncRelation:103]idNum:1)+"&syncRelation="+[SyncRelation:103]name:8
 	
 	// "jitPageOne=noticeOnly" is required so the returning message sends "Password=Approved"
 	
@@ -71,10 +71,10 @@ If ($sizeResponse>0)
 		vWCPayload:=Substring:C12($httpHeader; $p+6)
 		WC_ParseRequestParameter
 		
-		[ETLJob:104]ideRemote:11:=Num:C11(WCapi_GetParameter("syncExchangeRemote"; ""))
-		[ETLJob:104]syncRelationIDRemote:12:=Num:C11(WCapi_GetParameter("syncRelationID"; ""))
+		[SyncJob:104]ideRemote:11:=Num:C11(WCapi_GetParameter("syncExchangeRemote"; ""))
+		[SyncJob:104]syncRelationIDRemote:12:=Num:C11(WCapi_GetParameter("syncRelationID"; ""))
 		
-		SAVE RECORD:C53([ETLJob:104])
+		SAVE RECORD:C53([SyncJob:104])
 		HTTP_Cancel:=""
 		If (Position:C15("Password=Approved"; $httpHeader)<1)
 			ALERT:C41("Signin Failed")
@@ -87,7 +87,7 @@ If ($sizeResponse>0)
 			//SET PROCESS VARIABLE(thermoProcess;vNewThermometerTitle;<>vConnectionStatus)
 			POST OUTSIDE CALL:C329(thermoProcess)
 			//jMessageWindow (<>vConnectionStatus;2)
-			dtSession:=DateTime_Enter
+			dtSession:=DateTime_DTTo
 			
 			
 			
@@ -101,28 +101,28 @@ If ($sizeResponse>0)
 			SET BLOB SIZE:C606(HTTP_Data; 0)
 			$sizeResponse:=WC_Request("GET"; HTTP_URL+"/heart_beat"; "")  //Sends empth 
 			
-			HTTP_Path:="RP_StatusExchange?syncExchangeRemote="+String:C10([ETLJob:104]ideRemote:11)+"&action=completeexchange"
+			HTTP_Path:="RP_StatusExchange?syncExchangeRemote="+String:C10([SyncJob:104]ideRemote:11)+"&action=completeexchange"
 			
 			If ($error>0)
 				$httpHeader:=BLOB to text:C555(HTTP_IncomingBlob; UTF8 text without length:K22:17)
 				$p:=Position:C15("message=ReceiveComplete"; $httpHeader)
 				If ($p>0)
-					[ETLJob:104]status:4:="SendCompleted"
+					[SyncJob:104]status:4:="SendCompleted"
 				Else 
-					[ETLJob:104]status:4:="NotClosed"
+					[SyncJob:104]status:4:="NotClosed"
 				End if 
 			Else 
-				[ETLJob:104]status:4:="Terminated"
+				[SyncJob:104]status:4:="Terminated"
 			End if 
-			[ETLJob:104]duration:14:=DateTime_Enter-dtSession
-			SAVE RECORD:C53([ETLJob:104])
+			[SyncJob:104]duration:14:=DateTime_DTTo-dtSession
+			SAVE RECORD:C53([SyncJob:104])
 			//
 			
 			// QUERY([SyncRecord];[SyncRecord]DTCreated=dtSession)
 			//QUERY([SyncRecord];[SyncRecord]SynExchangeIDLocal=[SyncExchange]UniqueID)
 			DB_ShowCurrentSelection(->[SyncRecord:109])
 			ALERT:C41("Posting complete.")
-			DB_ShowCurrentSelection(->[ETLJob:104])
+			DB_ShowCurrentSelection(->[SyncJob:104])
 		End if 
 		
 		

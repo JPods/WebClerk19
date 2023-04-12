@@ -125,7 +125,7 @@ If (Size of array:C274($arrayText)>0)
 	If ($mfgID="")
 		$mfgID:="UKNPub"
 	End if 
-	$theFullPath:=<>WebFolder+"jitArticles"+Folder separator:K24:12+$mfgID+Folder separator:K24:12
+	$theFullPath:=Storage:C1525.wc.webFolder+"jitArticles"+Folder separator:K24:12+$mfgID+Folder separator:K24:12
 	If (HFS_Exists($theFullPath)=0)
 		$error:=New_Folder($theFullPath)
 	End if 
@@ -136,7 +136,7 @@ If (Size of array:C274($arrayText)>0)
 	theDocumentURL:="jitArticles"+Folder separator:K24:12+$mfgID+Folder separator:K24:12+String:C10(Year of:C25(Current date:C33))+"_"+String:C10(Month of:C24(Current date:C33))+Folder separator:K24:12+[Item:4]itemNum:1+".html"
 	$theFullPathDoc:=$theFullPath+[Item:4]itemNum:1+".html"
 	If (HFS_Exists($theFullPathDoc)=0)
-		Txt_4D2Doc(<>WebFolder+"jitArticles"+Folder separator:K24:12+"NC_Template.html"; ""; False:C215)
+		Txt_4D2Doc(Storage:C1525.wc.webFolder+"jitArticles"+Folder separator:K24:12+"NC_Template.html"; ""; False:C215)
 		$theDocName:=HFS_ShortName(document)
 		$err:=HFS_Move(document; $theFullPath)
 		$theFullPath:=$theFullPath+$theDocName

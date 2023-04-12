@@ -151,7 +151,7 @@ For (vi1; 1; vi2)
 				
 		End case 
 		
-		[InvoiceLine:54]profileReal2:62:=vrMultiplier
+		
 		SAVE RECORD:C53([InvoiceLine:54])
 		
 		If ([Item:4]class:92#"")
@@ -196,28 +196,28 @@ For (vi1; 1; vi2)
 		End if 
 		
 		// Get GroupID
-		QUERY:C277([Customer:2]; [Customer:2]customerID:1=[InvoiceLine:54]customerid:2)
+		QUERY:C277([Customer:2]; [Customer:2]customerID:1=[InvoiceLine:54]customerID:2)
 		vtGroupID:=[Customer:2]profile5:30
 		UNLOAD RECORD:C212([Customer:2])
 		
-		QUERY:C277([Invoice:26]; [Invoice:26]invoiceNum:2=[InvoiceLine:54]invoiceNum:1)
+		QUERY:C277([Invoice:26]; [Invoice:26]idNum:2=[InvoiceLine:54]idNumInvoice:1)
 		
 		vtMonth:=String:C10(Month of:C24([InvoiceLine:54]dateShipped:25); "00")
 		vtYear:=String:C10(Year of:C25([InvoiceLine:54]dateShipped:25); "0000")
 		vtDateCode:="'"+vtYear+vtMonth
 		
 		APPEND TO ARRAY:C911(atUniqueID; String:C10([InvoiceLine:54]idNum:47))
-		APPEND TO ARRAY:C911(atcustomerID; [InvoiceLine:54]customerid:2)
+		APPEND TO ARRAY:C911(atcustomerID; [InvoiceLine:54]customerID:2)
 		APPEND TO ARRAY:C911(atGroupID; vtGroupID)  //### jwm ### 20130611_1557
 		APPEND TO ARRAY:C911(atTypeSale; [InvoiceLine:54]typeSale:27)
-		APPEND TO ARRAY:C911(atInvoiceNum; String:C10([InvoiceLine:54]invoiceNum:1))
+		APPEND TO ARRAY:C911(atInvoiceNum; String:C10([InvoiceLine:54]idNumInvoice:1))
 		APPEND TO ARRAY:C911(atDateShipped; String:C10([InvoiceLine:54]dateShipped:25; 1))  //### jwm ### 20130611_1624
 		APPEND TO ARRAY:C911(atDateCode; vtDateCode)  //### jwm ### 20130611_1624
 		APPEND TO ARRAY:C911(atYear; vtYear)  //### jwm ### 20130613_0852 for pivot tables by year
 		APPEND TO ARRAY:C911(atItemNum; [InvoiceLine:54]itemNum:4)
-		APPEND TO ARRAY:C911(atAltItem; [InvoiceLine:54]altItem:29)
+		APPEND TO ARRAY:C911(atAltItem; [InvoiceLine:54]itemNumAlt:29)
 		APPEND TO ARRAY:C911(atClass; vtClass)  //### jwm ### 20130611_1625
-		APPEND TO ARRAY:C911(atQtyShip; String:C10([InvoiceLine:54]qtyShipped:7))
+		APPEND TO ARRAY:C911(atQtyShip; String:C10([InvoiceLine:54]qty:7))
 		APPEND TO ARRAY:C911(atUnitPrice; String:C10([InvoiceLine:54]unitPrice:9))
 		APPEND TO ARRAY:C911(atDiscount; String:C10([InvoiceLine:54]discount:10))
 		APPEND TO ARRAY:C911(atDiscountPrice; String:C10([InvoiceLine:54]discountedPrice:59))
@@ -240,7 +240,7 @@ For (vi1; 1; vi2)
 		
 		//Repairs
 		If ([InvoiceLine:54]itemNum:4="R-@")
-			vrRepairs:=vrRepairs+([InvoiceLine:54]qtyShipped:7*[InvoiceLine:54]unitPrice:9)
+			vrRepairs:=vrRepairs+([InvoiceLine:54]qty:7*[InvoiceLine:54]unitPrice:9)
 		End if 
 		
 	End if   //Item Number Found

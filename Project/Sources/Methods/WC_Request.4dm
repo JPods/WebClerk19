@@ -68,7 +68,7 @@ If (($path="build") | ($path=""))  // data or path is being passed in as paramet
 	If (HTTP_URL="")
 		$myOK:=-1
 		vDataReceived:="HTTP_URL is empty."
-		ConsoleMessage(vDataReceived)
+		ConsoleLog(vDataReceived)
 	Else 
 		If (HTTP_Path="")
 			$path:="/"
@@ -154,14 +154,14 @@ If ($myOK=1)
 	
 	If (<>viDebugMode>410)
 		
-		ConsoleMessage("requestMethod: "+$requestMethod)
-		ConsoleMessage("headers: "+"\r"+$headers)
+		ConsoleLog("requestMethod: "+$requestMethod)
+		ConsoleLog("headers: "+"\r"+$headers)
 		C_TEXT:C284($vtOutgoingSent)
 		$vtOutgoingSent:=BLOB to text:C555(HTTP_SendingBlob; Mac text without length:K22:10)
 		If (Length:C16($vtOutgoingSent)>8000)
 			$vtOutgoingSent:="Clipped to 8000: "+Substring:C12($vtOutgoingSent; 1; 8000)
 		End if 
-		ConsoleMessage("sent: "+"\r"+$vtOutgoingSent)
+		ConsoleLog("sent: "+"\r"+$vtOutgoingSent)
 		[SyncRecord:109]packingNotes:14:=$vtOutgoingSent
 	End if 
 	
@@ -178,7 +178,7 @@ If ($myOK=1)
 	$responseSize:=-1
 	If (voState.socket=0)
 		vResponse:="Failed socket: WebService Request, host: "+HTTP_Host+", Port: "+String:C10(HTTP_Port)+", options: "+$options
-		ConsoleMessage(vResponse)
+		ConsoleLog(vResponse)
 	Else 
 		C_BLOB:C604($signalBlob)
 		SET BLOB SIZE:C606($signalBlob; 0)
@@ -243,10 +243,10 @@ If ($myOK=1)
 		
 		If ($responseSize>0)
 			If (<>viDebugMode>410)
-				ConsoleMessage("Response, "+HTTPClient_URL+" returned HTTP_IncomingBlob size: "+String:C10($responseSize))
+				ConsoleLog("Response, "+HTTPClient_URL+" returned HTTP_IncomingBlob size: "+String:C10($responseSize))
 			End if 
 		Else 
-			ConsoleMessage("WebService Request, "+HTTPClient_URL+" returned no value or timed out.")
+			ConsoleLog("WebService Request, "+HTTPClient_URL+" returned no value or timed out.")
 		End if 
 		
 	End if 

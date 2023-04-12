@@ -1,0 +1,487 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 300,
+	"markerBreak": 300,
+	"markerFooter": 304,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Rectangle1_1": {
+					"type": "rectangle",
+					"top": 124,
+					"left": 203,
+					"width": 262,
+					"height": 20,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle4_2": {
+					"type": "rectangle",
+					"top": 68,
+					"left": 203,
+					"width": 183,
+					"height": 20,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle3_3": {
+					"type": "rectangle",
+					"top": 50,
+					"left": 203,
+					"width": 183,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Rectangle2_4": {
+					"type": "rectangle",
+					"top": 32,
+					"left": 203,
+					"width": 183,
+					"height": 19,
+					"fill": "transparent",
+					"stroke": "#666666"
+				},
+				"_Text__16792130_5": {
+					"type": "text",
+					"top": 110,
+					"left": 210,
+					"width": 60,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,130"
+				},
+				"_Text__16792131_6": {
+					"type": "text",
+					"top": 110,
+					"left": 290,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,131"
+				},
+				"_Text__16791106_7": {
+					"type": "text",
+					"top": 110,
+					"left": 339,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16791,106"
+				},
+				"_Text_CarrierID_8": {
+					"type": "text",
+					"top": 35,
+					"left": 117,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"textDecoration": "underline",
+					"text": "CarrierID"
+				},
+				"_VAR_<>pNavPallet_9": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_10": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"_PROP_CarrierZone_CarrierID_11": {
+					"type": "input",
+					"top": 33,
+					"left": 204,
+					"width": 180,
+					"height": 17,
+					"dataSource": "entry_o.CarrierID",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]CarrierID:7"
+				},
+				"_PROP_CarrierZone_idUniqueCarrier_12": {
+					"type": "input",
+					"top": 51,
+					"left": 204,
+					"width": 180,
+					"height": 17,
+					"dataSource": "entry_o.idUniqueCarrier",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]idUniqueCarrier:6"
+				},
+				"_PROP_CarrierZone_idUnique_13": {
+					"type": "input",
+					"top": 70,
+					"left": 204,
+					"width": 180,
+					"height": 17,
+					"dataSource": "entry_o.idUnique",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]idUnique:5"
+				},
+				"_PROP_CarrierZone_Rs1_14": {
+					"type": "input",
+					"top": 71,
+					"left": 386,
+					"width": 126,
+					"height": 17,
+					"dataSource": "entry_o.Rs1",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]Rs1:4"
+				},
+				"_PROP_CarrierZone_ZipLow_15": {
+					"type": "input",
+					"top": 125,
+					"left": 204,
+					"width": 66,
+					"height": 17,
+					"dataSource": "entry_o.ZipLow",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]ZipLow:1"
+				},
+				"_PROP_CarrierZone_ZipHigh_16": {
+					"type": "input",
+					"top": 125,
+					"left": 273,
+					"width": 67,
+					"height": 17,
+					"dataSource": "entry_o.ZipHigh",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]ZipHigh:2"
+				},
+				"_PROP_CarrierZone_Zone_17": {
+					"type": "input",
+					"top": 125,
+					"left": 343,
+					"width": 46,
+					"height": 17,
+					"dataSource": "entry_o.Zone",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]Zone:3"
+				},
+				"_VAR_bAccept_18": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"_VAR_bPrevious_19": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_20": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_21": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"_Text_UniqueIDCarrier_22": {
+					"type": "text",
+					"top": 54,
+					"left": 117,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"textDecoration": "underline",
+					"text": "UniqueIDCarrier"
+				},
+				"_Text_UniqueID_23": {
+					"type": "text",
+					"top": 73,
+					"left": 117,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"textDecoration": "underline",
+					"text": "UniqueID"
+				},
+				"_Text_Automated_24": {
+					"type": "text",
+					"top": 55,
+					"left": 393,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"fontStyle": "italic",
+					"textDecoration": "underline",
+					"text": "Automated"
+				},
+				"_Text_siteID_25": {
+					"type": "text",
+					"top": 110,
+					"left": 396,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000099",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "siteID"
+				},
+				"_PROP_CarrierZone_Zone_26": {
+					"type": "input",
+					"top": 125,
+					"left": 392,
+					"width": 72,
+					"height": 17,
+					"dataSource": "entry_o.Zone",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[CarrierZone:143]Zone:3"
+				},
+				"_VAR_<>asiteIDs_27": {
+					"type": "dropdown",
+					"top": 105,
+					"left": 394,
+					"width": 53,
+					"height": 17,
+					"dataSource": "<>asiteIDs",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable124.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

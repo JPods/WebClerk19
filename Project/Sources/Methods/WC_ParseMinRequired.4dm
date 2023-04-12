@@ -10,17 +10,17 @@ C_BOOLEAN:C305($0; $doSave)
 $0:=True:C214
 Case of 
 	: ($1=(->[Order:3]))
-		If ([Order:3]orderNum:2=0)
-			[Order:3]orderNum:2:=CounterNew(->[Order:3])
+		If ([Order:3]idNum:2=0)
+			[Order:3]idNum:2:=CounterNew(->[Order:3])
 			// $0:=False
 			// vResponse:="Echo of another order. Check for commands on a page."
 		End if 
 	: ($1=(->[Invoice:26]))
-		If ([Invoice:26]invoiceNum:2=0)
-			[Invoice:26]invoiceNum:2:=CounterNew(->[Invoice:26])
+		If ([Invoice:26]idNum:2=0)
+			[Invoice:26]idNum:2:=CounterNew(->[Invoice:26])
 		End if 
-		If ([Invoice:26]orderNum:1=0)
-			[Order:3]orderNum:2:=1
+		If ([Invoice:26]idNumOrder:1=0)
+			[Order:3]idNum:2:=1
 		End if 
 	: ($1=(->[Customer:2]))
 		If ([Customer:2]customerID:1="")
@@ -30,16 +30,7 @@ Case of
 			[Customer:2]company:2:=[Customer:2]nameLast:23+", "+[Customer:2]nameFirst:73
 			[Customer:2]individual:72:=True:C214
 		End if 
-	: ($1=(->[Lead:48]))
-		If (([Lead:48]company:5="") & ([Lead:48]nameLast:2="") & ([Lead:48]phone:4="") & ([Lead:48]email:33=""))
-			$0:=False:C215
-			vResponse:="You must enter at least Company, LastName, Phone or Email"
-		Else 
-			If ([Lead:48]company:5="")
-				[Lead:48]company:5:=[Lead:48]nameLast:2+", "+[Lead:48]nameFirst:1
-				[Lead:48]individual:31:=True:C214
-			End if 
-		End if 
+		
 	: ($1=(->[Item:4]))
 		If ([Item:4]itemNum:1="")
 			[Item:4]itemNum:1:=String:C10(CounterNew(->[Item:4]))
@@ -62,7 +53,7 @@ Case of
 				[Payment:28]status:46:="HOLD_web"
 			End if 
 			
-			[Payment:28]dateReceived:10:=Current date:C33
+			[Payment:28]dateDocument:10:=Current date:C33
 			
 			If (Is new record:C668([Payment:28]))
 				[Payment:28]change:45:=0
@@ -87,13 +78,13 @@ Case of
 					// process the credit card in WccAcceptTasks after the record is saved
 				End if 
 			End if 
-			If ([Payment:28]orderNum:2>9)
-				If ([Order:3]orderNum:2#[Payment:28]orderNum:2)
-					QUERY:C277([Order:3]; [Order:3]orderNum:2=[Payment:28]orderNum:2)
+			If ([Payment:28]idNumOrder:2>9)
+				If ([Order:3]idNum:2#[Payment:28]idNumOrder:2)
+					QUERY:C277([Order:3]; [Order:3]idNum:2=[Payment:28]idNumOrder:2)
 				End if 
 				[Order:3]tendered:113:=[Order:3]tendered:113+[Payment:28]tendered:44
 				[Order:3]tenderedChange:114:=[Order:3]tenderedChange:114+[Payment:28]change:45
-				If ([Order:3]orderNum:2>0)
+				If ([Order:3]idNum:2>0)
 					SAVE RECORD:C53([Order:3])
 				Else 
 					[EventLog:75]areYouHuman:36:="zeroOrder"
@@ -102,16 +93,16 @@ Case of
 			End if 
 		End if 
 	: ($1=(->[PO:39]))
-		If ([PO:39]poNum:5=0)
-			[PO:39]poNum:5:=CounterNew(->[PO:39])
+		If ([PO:39]idNum:5=0)
+			[PO:39]idNum:5:=CounterNew(->[PO:39])
 		End if 
 	: ($1=(->[Proposal:42]))
-		If ([Proposal:42]proposalNum:5=0)
-			[Proposal:42]proposalNum:5:=CounterNew(->[Proposal:42])
+		If ([Proposal:42]idNum:5=0)
+			[Proposal:42]idNum:5:=CounterNew(->[Proposal:42])
 		End if 
 		
 	: ($1=(->[OrderLine:49]))
-		If ([OrderLine:49]orderNum:1=0)
+		If ([OrderLine:49]idNumOrder:1=0)
 			$0:=False:C215
 			vResponse:="You must have an existing Order to save an Order Line"
 		Else 
@@ -122,7 +113,7 @@ Case of
 			End if 
 		End if 
 	: ($1=(->[InvoiceLine:54]))
-		If ([InvoiceLine:54]invoiceNum:1=0)
+		If ([InvoiceLine:54]idNumInvoice:1=0)
 			$0:=False:C215
 			vResponse:="You must have an existing Invoice to save an Invoice Line"
 		Else 
@@ -132,7 +123,7 @@ Case of
 			End if 
 		End if 
 	: ($1=(->[ProposalLine:43]))
-		If ([ProposalLine:43]proposalNum:1=0)
+		If ([ProposalLine:43]idNumProposal:1=0)
 			$0:=False:C215
 			vResponse:="You must have an existing Proposal to save an Proposal Line"
 		Else 
@@ -140,7 +131,7 @@ Case of
 		End if 
 		
 	: ($1=(->[POLine:40]))
-		If ([POLine:40]poNum:1=0)
+		If ([POLine:40]idNumPO:1=0)
 			$0:=False:C215
 			vResponse:="You must have an existing PO to save an PO Line"
 		End if 

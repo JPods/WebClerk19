@@ -28,7 +28,7 @@ If (Count parameters:C259=4)
 	[DefaultSetup:86]type:8:=$3
 	[DefaultSetup:86]howUsed:10:=$4
 	//
-	[DefaultSetup:86]dtCreated:19:=DateTime_Enter
+	[DefaultSetup:86]dtCreated:19:=DateTime_DTTo
 	SAVE RECORD:C53([DefaultSetup:86])
 Else 
 	ALERT:C41("Default setup requires Value, Type, Name and How Used.")

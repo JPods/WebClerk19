@@ -3,7 +3,7 @@
 //If (CmdKey=1)
 //$doLineChange:=true
 //End if 
-entryEntity.typeSale:=DE_PopUpArray(Self:C308)
+process_o.entry_o.typeSale:=DE_PopUpArray(Self:C308)
 DscntSetAll(<>tcbManyType; [Customer:2]customerID:1; [Proposal:42]typeSale:20; [Proposal:42]dateNeeded:4)
 Copy_NewEntry(->[Customer:2]; ->[Proposal:42]typeSale:20; ->[Customer:2]typeSale:18)
 // zzzqqq U_DTStampFldMod(->[Proposal:42]commentProcess:64; ->[Proposal:42]typeSale:20)

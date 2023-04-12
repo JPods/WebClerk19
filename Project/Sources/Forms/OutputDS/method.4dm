@@ -5,66 +5,89 @@
 // Parameters
 // ----------------------------------------------------
 
-var $event_o : Object
+var $event_o; $related_o : Object
 var Formeventcode : Integer
 var ptCurTable; ptCurID : Pointer
 var $tableNum_l; $fieldNum_l : Integer
 
 $event_o:=FORM Event:C1606
 Case of 
+	: (FORM Event:C1606.objectName#Null:C1517)  // avoid action 
 		
-	: (Form event code:C388=-122)
+	: (Form event code:C388=On Load:K2:1)
+		// https://discuss.4d.com/t/cant-see-form-object-bound-variable-in-subforms/20446/5
+		// Form cannot be seen in subform without:
+		
+		// keep things in the their own subforms and add to process_o
+		
+		process_o._setInit()
+		If (process_o.menu=Null:C1517)
+			process_o.menu:=1
+		End if 
+		process_o.setMenu(process_o.menu)
+		// subform name, table, form name
+		
+		
+		If (process_o.source=Null:C1517)
+			process_o.setSource(ds:C1482[process_o.dataClassName].all())  //
+			// data source must be set
+			process_o.setTitle()
+		End if 
+		
+		
+		
+		//  set list subForm
+		// Fix_QQQ by: Bill James (2023-04-06T05:00:00Z)
+		// shift to FC record pulling in the form
+		OBJECT SET SUBFORM:C1138(*; process_o.sf.list.nameSF; "ListSelection")
+		
+		
+		// Fix_QQQ by: Bill James (2023-04-06T05:00:00Z)
+		// change this to load the subform or build the columns depending of fc
+		
+		
+		//  set entry subForm
+		// Fix_QQQ by: Bill James (2023-04-06T05:00:00Z)
+		// shift to FC record pulling in the form
+		OBJECT SET SUBFORM:C1138(*; process_o.sf.entry.nameSF; (process_o.dataClassPtr)->; process_o.sf.entry.nameForm)
+		
+		
+		
+		ARRAY TEXT:C222(aLayouts; 0)
+		If (This:C1470.relatedForms#Null:C1517)
+			COLLECTION TO ARRAY:C1562(process_o.layouts.list; aLayouts)
+			aLayouts:=Find in array:C230(aLayouts; "Selection")
+		End if 
+		
+		// why entry_o is lost is unclear
+		// must be here to populate the variable onLoad, do the same onClick
+		// this should be a class behavior
+		var entrySF : cs:C1710.cEntry
+		entrySF:=cs:C1710.cEntry.new()
+		entrySF.entry_o:=process_o.entry_o
+		
+		entry_o:=process_o.entry_o
+		entrySF._getRelated()
+		
+		// process_o.dataClassName+"; Selection: "+String(process_o.ents)+"; Entry: "+entry_o.humanKey
+		//setup to drag between listboxes
+		dragFrom:=""
+		
+	: (Form event code:C388=-100)
+		// OBJECT SET SUBFORM(*; "SF_List"; process_o.layoutList)
+		
 		
 	: (Form event code:C388=On Selection Change:K2:29)
-		
-		var $subForm_o : Object
-		var $methodName_t : Text
-		$subForm_o:=New object:C1471("tableName"; process_o.tableName; \
-			"id"; process_o.cur.id)
-		$methodName_t:="SF_InputLoad"
-		// load a change in .cur into the input form
-		EXECUTE METHOD IN SUBFORM:C1085("SF_Entry"; $methodName_t; *; $subForm_o)
-		process_o.old:=process_o.cur.clone()
-		process_o.entsOther[process_o.tableName]:=Form:C1466.cur
-		
-		// do this when process_o.cur changes
-		// Storage_LastRecord(process_o.tableName; process_o.cur.id)
+		// in listbox
 		
 	: (Form event code:C388=On Clicked:K2:4)
 		
-		
-		
-		SET WINDOW TITLE:C213(process_o.tableName+" displayed/selected: "+String:C10(process_o.ents.length)+"/"+String:C10(process_o.displayedSelected.length))
-		
-		
+		entry_o:=process_o.listClick()
+		process_o.titleSet()
 		
 		
 		FormEventOnDisplayDetail
-	: (Form event code:C388=On Load:K2:1)
-		SET MENU BAR:C67(1)
-		// this works with the data being populated in the form
-		OBJECT SET SUBFORM:C1138(*; "SF_List"; "ListSelection")
-		OBJECT SET SUBFORM:C1138(*; "SF_Input"; ptCurTable->; "InputDS")
-		var $o : Object
-		//33//$o:=New object("tableName"; aSalesTables{aSalesTables}; "tableParent"; "Customer"; "id"; entryEntity.id)
-		//33//EXECUTE METHOD IN SUBFORM("SF_Sales"; "SF_Sales_Execute"; *; $o)
-		// organize the tools
-		Form_TaskActions
-		Form_TaskNames
-		Form_TaskScripts
-		Form_TaskQueries
-		Form_TaskDetails
 		
-		If (True:C214)
-			process_o.cur:=process_o.ents.first()
-			process_o.old:=process_o.cur.clone()
-			SET WINDOW TITLE:C213(process_o.tableName+" displayed/selected: "+String:C10(process_o.ents.length)+" / "+String:C10(process_o.sel.length))
-		Else 
-			
-			SET WINDOW TITLE:C213(process_o.tableName+" displayed/selected: "+String:C10(Form:C1466.ents.length)+" / "+String:C10(Form:C1466.sel.length))
-			
-			
-		End if 
 	: (Form event code:C388=On Activate:K2:9)
 		FormEventOnActivate
 	: (Form event code:C388=On Close Detail:K2:24)

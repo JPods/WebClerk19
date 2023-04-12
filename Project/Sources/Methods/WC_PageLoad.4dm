@@ -37,7 +37,7 @@ End if
 $maxSecurity:=WC_PathSecurityReturn($documentPath)  //Check if there is a security setting in path that exceeds the user.
 If ($maxSecurity>viSecureLvl)
 	vResponse:="Path Security Level Exceeded"
-	$documentPath:=<>WebFolder+"error.html"
+	$documentPath:=Storage:C1525.wc.webFolder+"error.html"
 	$result:=-1
 End if 
 
@@ -81,6 +81,6 @@ If (<>viDebugMode>910)
 	C_TEXT:C284($webLog)
 	$webLog:="<WC_PageLoad>"+$documentPath+", OS: "+WCapi_GetParameter("User-Agent"; "")+", jitSecure: "+String:C10($jitSecure)+", <>vlSecurityBump: "+String:C10(<>vlSecurityBump)+", UserSecurity: "+String:C10(viSecureLvl)
 	$webLog:=$webLog+", WccSecurity: "+String:C10(vWccSecurity)+", vResponse: "+vResponse+"</WC_PageLoad>"
-	ConsoleMessage($webLog)
+	ConsoleLog($webLog)
 End if 
 

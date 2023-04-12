@@ -49,7 +49,7 @@ Case of
 	: ($1>0)
 		SELECTION TO ARRAY:C260([WorkOrder:66]cause:27; aWoCause; [WorkOrder:66]idNumTask:22; aWoOrdertaskID; [WorkOrder:66]seq:26; aWoSeq; [WorkOrder:66]rate:23; aWoRate; [WorkOrder:66]processCodes:24; aWoCodeSeq; [WorkOrder:66]description:3; aWoDescrpt; [WorkOrder:66]dtAction:5; aWoDTNeed; [WorkOrder:66]dtComplete:6; aWoDTCmpltd; [WorkOrder:66]ideTemplate:57; aWoTemplateUniqueID)
 		SELECTION TO ARRAY:C260([WorkOrder:66]actionBy:8; aWoNameID; [WorkOrder:66]activity:7; aWoActivity; [WorkOrder:66]comment:17; aWoComment; [WorkOrder:66]idNumTask:22; aWoOrdertaskID; [WorkOrder:66]durationPlanned:10; aWoDurationPlan; [WorkOrder:66]codeID:25; aWoNature; [WorkOrder:66]lineRefNum:20; aWoOrdLn; [WorkOrder:66]; aWoRecNum; [WorkOrder:66]publish:30; aWoPublish)
-		SELECTION TO ARRAY:C260([WorkOrder:66]company:36; aWOCompany; [WorkOrder:66]address1:50; aWOAddress1; [WorkOrder:66]woNum:29; aWoNum)
+		SELECTION TO ARRAY:C260([WorkOrder:66]company:36; aWOCompany; [WorkOrder:66]address1:50; aWOAddress1; [WorkOrder:66]idNum:29; aWoNum)
 		UNLOAD RECORD:C212([WorkOrder:66])
 		ARRAY LONGINT:C221(aWoTimeNd; $1)
 		ARRAY DATE:C224(aWoDateNd; $1)
@@ -57,9 +57,9 @@ Case of
 		ARRAY DATE:C224(aWoDateCmp; $1)
 		ARRAY TEXT:C222(aWoCodeSeq; $1)
 		For ($i; 1; $1)
-			jDateTimeRecov(aWoDTNeed{$i}; ->aWoDateNd{$i}; ->aWoTimeNd{$i})
+			DateTime_DTFrom(aWoDTNeed{$i}; ->aWoDateNd{$i}; ->aWoTimeNd{$i})
 			aWoTimeNd{$i}:=aWoTimeNd{$i}*1
-			jDateTimeRecov(aWoDTCmpltd{$i}; ->aWoDateCmp{$i}; ->aWoTimeCmp{$i})
+			DateTime_DTFrom(aWoDTCmpltd{$i}; ->aWoDateCmp{$i}; ->aWoTimeCmp{$i})
 			aWoTimeCmp{$i}:=aWoTimeCmp{$i}*1
 		End for 
 		ARRAY LONGINT:C221(aWoStepLns; 0)
@@ -128,8 +128,8 @@ Case of
 		[WorkOrder:66]rate:23:=aWoRate{$2}
 		[WorkOrder:66]processCodes:24:=aWoCodeSeq{$2}
 		[WorkOrder:66]description:3:=aWoDescrpt{$2}
-		aWoDTNeed{$2}:=DateTime_Enter(aWoDateNd{$2}; aWoTimeNd{$2})
-		aWoDTCmpltd{$2}:=DateTime_Enter(aWoDateCmp{$2}; aWoTimeCmp{$2})
+		aWoDTNeed{$2}:=DateTime_DTTo(aWoDateNd{$2}; aWoTimeNd{$2})
+		aWoDTCmpltd{$2}:=DateTime_DTTo(aWoDateCmp{$2}; aWoTimeCmp{$2})
 		[WorkOrder:66]dtAction:5:=aWoDTNeed{$2}
 		[WorkOrder:66]dtComplete:6:=aWoDTCmpltd{$2}
 		[WorkOrder:66]actionBy:8:=aWoNameID{$2}
@@ -159,8 +159,8 @@ Case of
 			For ($incRay; 1; $sizeRay)
 				// aTmp10Str1{$incRay}:=
 				aWoOrdertaskID{$incRay}:=[Order:3]idNum:2
-				aWoDTNeed{$incRay}:=DateTime_Enter(aWoDateNd{$incRay}; aWoTimeNd{$incRay})
-				aWoDTCmpltd{$incRay}:=DateTime_Enter(aWoDateCmp{$incRay}; aWoTimeCmp{$incRay})
+				aWoDTNeed{$incRay}:=DateTime_DTTo(aWoDateNd{$incRay}; aWoTimeNd{$incRay})
+				aWoDTCmpltd{$incRay}:=DateTime_DTTo(aWoDateCmp{$incRay}; aWoTimeCmp{$incRay})
 				aTmpLong1{$incRay}:=CounterNew(->[WorkOrder:66])
 				
 				//ARRAY TO SELECTION(aWoCause;[WorkOrder]Cause;aWoOrdertaskID;[WorkOrder]taskID;aWoSeq;[WorkOrder]Sequence;aWoRate;[WorkOrder]Rate;aWoCodeSeq;[WorkOrder]ProcessCodes;aWoDescrpt;[WorkOrder]Description;aWoDTNeed;[WorkOrder]DTAction;aWoDTCmpltd;[WorkOrder]DTCompleted;aWoPublish;[WorkOrder]Publish;aWoTemplateUniqueID;[WorkOrder]TemplateUniqueID)
@@ -212,7 +212,7 @@ Case of
 				
 				Case of 
 					: (aWoOrdertaskID{$incRay}#0)
-					: ((ptCurTable=(->[Order:3])) | (ptCurTable=(->[Control:1])))
+					: ((ptCurTable=(->[Order:3])) | (ptCurTable=(->[Base:1])))
 						TaskIDAssign(->[Order:3]idNumTask:85)
 						aWoOrdertaskID{$incRay}:=[Order:3]idNumTask:85
 						$customerID:=[Order:3]customerID:1
@@ -222,8 +222,8 @@ Case of
 						$customerID:=[Proposal:42]customerID:1
 				End case 
 				//aWoOrdertaskID{$incRay}:=[Order]OrderNum
-				aWoDTNeed{$incRay}:=DateTime_Enter(aWoDateNd{$incRay}; aWoTimeNd{$incRay})
-				aWoDTCmpltd{$incRay}:=DateTime_Enter(aWoDateCmp{$incRay}; aWoTimeCmp{$incRay})
+				aWoDTNeed{$incRay}:=DateTime_DTTo(aWoDateNd{$incRay}; aWoTimeNd{$incRay})
+				aWoDTCmpltd{$incRay}:=DateTime_DTTo(aWoDateCmp{$incRay}; aWoTimeCmp{$incRay})
 				
 				// [WorkOrder]WONum:=
 				[WorkOrder:66]customerID:28:=$customerID
@@ -258,7 +258,7 @@ Case of
 		For ($incWO; 1; $cntWO)
 			GOTO RECORD:C242([WorkOrder:66]; aWoRecNum{$incWO})
 			Case of 
-				: ((ptCurTable=(->[Order:3])) | (ptCurTable=(->[Control:1])))
+				: ((ptCurTable=(->[Order:3])) | (ptCurTable=(->[Base:1])))
 					If ([WorkOrder:66]idNumTask:22=0)
 						TaskIDAssign(->[Order:3]idNumTask:85)
 						[WorkOrder:66]idNumTask:22:=[Order:3]idNumTask:85
@@ -302,8 +302,8 @@ Case of
 		aWOCompany{$2}:=[WorkOrder:66]company:36
 		aWOAddress1{$2}:=[WorkOrder:66]address1:50
 		
-		jDateTimeRecov(aWoDTNeed{$2}; ->aWoDateNd{$2}; ->aWoTimeNd{$2})
-		jDateTimeRecov(aWoDTCmpltd{$2}; ->aWoDateCmp{$2}; ->aWoTimeCmp{$2})
+		DateTime_DTFrom(aWoDTNeed{$2}; ->aWoDateNd{$2}; ->aWoTimeNd{$2})
+		DateTime_DTFrom(aWoDTCmpltd{$2}; ->aWoDateCmp{$2}; ->aWoTimeCmp{$2})
 		
 		
 	: ($1=-7)
@@ -333,11 +333,11 @@ Case of
 		[WorkOrder:66]phone:56:=[Order:3]phone:67
 		[WorkOrder:66]publish:30:=1
 		//
-		[WorkOrder:66]dtAction:5:=DateTime_Enter(vDate9; vTime9)
+		[WorkOrder:66]dtAction:5:=DateTime_DTTo(vDate9; vTime9)
 		//[WorkOrder]codeID:="p"
 		[WorkOrder:66]customerID:28:=[Order:3]customerID:1
 		SAVE RECORD:C53([WorkOrder:66])
 		If ((schWOTypeNum>1) & (schWOTypeNum<=Size of array:C274(<>aWoTypes)))
-			WOTemplate2Tasks([WorkOrder:66]woNum:29; <>aWoTypes{schWOTypeNum})
+			WOTemplate2Tasks([WorkOrder:66]idNum:29; <>aWoTypes{schWOTypeNum})
 		End if 
 End case 

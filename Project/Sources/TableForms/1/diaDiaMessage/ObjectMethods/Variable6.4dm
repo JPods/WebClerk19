@@ -19,8 +19,7 @@ If (Size of array:C274(aSrvLines)>0)
 			//End case 
 		: (aServiceTableName{aSrvLines{1}}="ct")
 			GOTO RECORD:C242([Contact:13]; aServiceRecs{aSrvLines{1}})
-		: (aServiceTableName{aSrvLines{1}}="L")
-			GOTO RECORD:C242([Lead:48]; aServiceRecs{aSrvLines{1}})
+			
 		: (aServiceTableName{aSrvLines{1}}="Pp")
 			BEEP:C151
 		: (aServiceTableName{aSrvLines{1}}="Po")

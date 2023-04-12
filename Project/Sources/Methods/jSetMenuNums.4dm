@@ -15,12 +15,7 @@
 
 
 C_LONGINT:C283($1; $2; $3)
-If ($1#0)
-	splashMenu:=$1
-End if 
-If ($2#0)
-	oLoMenu:=$2
-End if 
-If ($3#0)
-	iLoMenu:=$3
-End if 
+
+splashMenu:=1
+oLoMenu:=2
+iLoMenu:=3

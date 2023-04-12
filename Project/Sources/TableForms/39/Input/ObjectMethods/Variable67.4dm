@@ -1,1 +1,0 @@
-entryEntity.status:=DE_PopUpArray(Self:C308)

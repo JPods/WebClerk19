@@ -51,13 +51,13 @@ Else
 			[Item:4]qtyOnSalesOrder:16:=0
 			[Item:4]costofSales:50:=0
 			[Item:4]sales:49:=0
-			[Item:4]dtItemDate:33:=DateTime_Enter
+			[Item:4]dtItemDate:33:=DateTime_DTTo
 			// add objects
 			[Item:4]dtReviewed:85:=0
-			jDateTimeRecov([Item:4]dtItemDate:33; ->vDate1; ->vTime1)
-			jDateTimeRecov([Item:4]dtBestUseStart:102; ->iLoDate6)
-			jDateTimeRecov([Item:4]dtBestUseEnd:103; ->iLoDate7)
-			jDateTimeRecov([Item:4]dtReviewed:85; ->iLoDate8)
+			DateTime_DTFrom([Item:4]dtItemDate:33; ->vDate1; ->vTime1)
+			DateTime_DTFrom([Item:4]dtBestUseStart:102; ->iLoDate6)
+			DateTime_DTFrom([Item:4]dtBestUseEnd:103; ->iLoDate7)
+			DateTime_DTFrom([Item:4]dtReviewed:85; ->iLoDate8)
 			[Item:4]dateLastCost:54:=!00-00-00!
 			OBJECT SET ENTERABLE:C238([Item:4]itemNum:1; True:C214)
 			OBJECT SET ENTERABLE:C238(srItemNum; True:C214)

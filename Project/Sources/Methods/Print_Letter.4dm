@@ -20,7 +20,7 @@ Case of
 	Else 
 		$new_o:=process_o
 		$new_o.processParent:=Current process:C322
-		$win_l:=New process:C317("Print_Letter"; 0; "Letter for "+process_o.tableName; $new_o)
+		$win_l:=New process:C317("Print_Letter"; 0; "Letter for "+process_o.dataClassName; $new_o)
 End case 
 //   Modal form dialog boxLongint1
 //  Movable form dialog boxLongint5

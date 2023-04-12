@@ -121,7 +121,7 @@ C_OBJECT:C1216($voObject2)
 OB_CopyField(->$voObject1; "TextVariable"; ->$voObject2; "TextVariable")
 If (OB Get:C1224($voObject2; "TextVariable")#"Value")
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: TextVariable")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: TextVariable")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -129,7 +129,7 @@ OB_CopyField(->$voObject1; "ArrayText"; ->$voObject2; "ArrayText")
 OB GET ARRAY:C1229($voObject2; "ArrayText"; $atOutput)
 If ($atOutput{1}#$vtInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayText")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayText")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -137,7 +137,7 @@ OB_CopyField(->$voObject1; "ArrayPointers"; ->$voObject2; "ArrayPointers")
 OB GET ARRAY:C1229($voObject2; "ArrayPointers"; $apOutput)
 If ($apOutput{1}#$vpInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayPointers")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayPointers")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -145,7 +145,7 @@ OB_CopyField(->$voObject1; "ArrayDate"; ->$voObject2; "ArrayDate")
 OB GET ARRAY:C1229($voObject2; "ArrayDate"; $adOutput)
 If ($adOutput{1}#$vdInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayDate")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayDate")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -153,7 +153,7 @@ OB_CopyField(->$voObject1; "ArrayBoolean"; ->$voObject2; "ArrayBoolean")
 OB GET ARRAY:C1229($voObject2; "ArrayBoolean"; $abOutput)
 If ($abOutput{1}#$vbInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayBoolean")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayBoolean")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -161,7 +161,7 @@ OB_CopyField(->$voObject1; "ArrayInt"; ->$voObject2; "ArrayInt")
 OB GET ARRAY:C1229($voObject2; "ArrayInt"; $aiOutput)
 If ($aiOutput{1}#$viInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayInt")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayInt")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -169,7 +169,7 @@ OB_CopyField(->$voObject1; "ArrayReal"; ->$voObject2; "ArrayReal")
 OB GET ARRAY:C1229($voObject2; "ArrayReal"; $arOutput)
 If ($arOutput{1}#$vrInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayReal")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayReal")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -177,7 +177,7 @@ OB_CopyField(->$voObject1; "ArrayObject"; ->$voObject2; "ArrayObject")
 OB GET ARRAY:C1229($voObject2; "ArrayObject"; $aoOutput)
 If (OB Get:C1224($aoOutput{1}; "Key")#OB Get:C1224($voInput; "Key"))
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayObject")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayObject")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -190,7 +190,7 @@ OB_CopyField(->$voObject2; "ArrayPointers"; ->$voObject2; "ArrayPointersCopy")
 OB GET ARRAY:C1229($voObject2; "ArrayPointersCopy"; $apOutput)
 If ($apOutput{1}#$vpInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayPointersCopy")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayPointersCopy")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -199,7 +199,7 @@ OB_CopyField(->$voObject2; "ArrayDate"; ->$voObject2; "ArrayDateCopy")
 OB GET ARRAY:C1229($voObject2; "ArrayDateCopy"; $adOutput)
 If ($adOutput{1}#$vdInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayDateCopy")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayDateCopy")
 End if 
 CLEAR VARIABLE:C89($voObject2)
 
@@ -208,6 +208,6 @@ OB_CopyField(->$voObject2; "ArrayBoolean"; ->$voObject2; "ArrayBooleanCopy")
 OB GET ARRAY:C1229($voObject2; "ArrayBooleanCopy"; $abOutput)
 If ($abOutput{1}#$vbInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayBooleanCopy")
+	ConsoleLog("Tests_OB_CopyField: Error when running method: OB_CopyField: ArrayBooleanCopy")
 End if 
 CLEAR VARIABLE:C89($voObject2)

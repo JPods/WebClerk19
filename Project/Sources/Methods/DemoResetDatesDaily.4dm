@@ -88,7 +88,7 @@ If ($vtUUIDKey="pass@")
 	
 	$obSel:=ds:C1482.Customer.query("customerID = 002002 ")
 	If ($obSel.first()=Null:C1517)
-		ConsoleMessage("customerID = 002002 is missing")
+		ConsoleLog("customerID = 002002 is missing")
 	Else 
 		$obRec:=$obSel.first()
 		$obRec.actionBy:="Dale"
@@ -122,13 +122,13 @@ If ($vtUUIDKey="pass@")
 	var $orders_t; $queryStr_t : Text
 	var $orders_c : Collection
 	$orders_t:="1020,3019,3020,3021"
-	$orders_c:=Split string:C1554($orders_t; ",")
+	$orders_c:=Split string:C1554($orders_t; ";")
 	For each ($queryStr_t; $orders_c)
 		$obRec:=ds:C1482.Order.query("orderNum = :1 "; $queryStr_t).first()
 		If ($obRec=Null:C1517)
-			ConsoleMessage("Set to Dale: orderNum is missing; "+$queryStr_t)
+			ConsoleLog("Set to Dale: orderNum is missing; "+$queryStr_t)
 		Else 
-			ConsoleMessage("Set to Dale: orderNum "+$queryStr_t)
+			ConsoleLog("Set to Dale: orderNum "+$queryStr_t)
 			$obRec.actionBy:="Dale"
 			$obRec.actionDate:=Current date:C33
 			$result_o:=$obRec.save()
@@ -196,9 +196,9 @@ If ($vtUUIDKey="pass@")
 	
 	$obSel:=ds:C1482.Invoice.query("invoiceNum = 3010 ")
 	If ($obSel.first()=Null:C1517)
-		ConsoleMessage("Invoice 3010 is missing")
+		ConsoleLog("Invoice 3010 is missing")
 	Else 
-		ConsoleMessage("Invoice 3010 set to Dale")
+		ConsoleLog("Invoice 3010 set to Dale")
 		$obRec:=$obSel.first()
 		$obRec.actionBy:="Dale"
 		$obRec.actionDate:=Current date:C33
@@ -206,9 +206,9 @@ If ($vtUUIDKey="pass@")
 	End if 
 	$obSel:=ds:C1482.Invoice.query("invoiceNum = 2010 ")
 	If ($obSel.first()=Null:C1517)
-		ConsoleMessage("Invoice 2010 is missing")
+		ConsoleLog("Invoice 2010 is missing")
 	Else 
-		ConsoleMessage("Invoice 2010 set to Dale")
+		ConsoleLog("Invoice 2010 set to Dale")
 		$obRec:=$obSel.first()
 		$obRec.actionBy:="Dale"
 		$obRec.actionDate:=Current date:C33
@@ -241,9 +241,9 @@ If ($vtUUIDKey="pass@")
 	
 	$obSel:=ds:C1482.Proposal.query("proposalNum = 1006 ")
 	If ($obSel.first()=Null:C1517)
-		ConsoleMessage("Proposal 1006 is missing")
+		ConsoleLog("Proposal 1006 is missing")
 	Else 
-		ConsoleMessage("Proposal 1006 set to Dale")
+		ConsoleLog("Proposal 1006 set to Dale")
 		$obRec:=$obSel.first()
 		$obRec.actionBy:="Dale"
 		$obRec.actionDate:=Current date:C33

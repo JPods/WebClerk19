@@ -6,7 +6,7 @@ C_TEXT:C284($1; $thePathandDoc; $vtShortName; $docPath)  //Name of file to creat
 $thePathandDoc:=$1
 
 If ($thePathandDoc="")
-	$0:=Open document:C264(Storage:C1525.folder.jitF+"UNKCallforUniqueDoc"+String:C10(DateTime_Enter)+".txt")
+	$0:=Open document:C264(Storage:C1525.folder.jitF+"UNKCallforUniqueDoc"+String:C10(DateTime_DTTo)+".txt")
 Else 
 	If (Test path name:C476($thePathandDoc)<0)
 		$0:=Create document:C266($thePathandDoc)

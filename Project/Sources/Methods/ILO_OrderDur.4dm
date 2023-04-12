@@ -37,10 +37,11 @@ If (ptCurTable#(->[Order:3]))
 			//  CHOPPED  ContactsLoad(-1)
 	End case 
 	//  CHOPPED QA_LoOnEntry(eAnsListOrders; Table(->[Order]); [Order]customerID; [Order]idNum; [Order]idNumTask)
-	jsetDuringIncl(->[Order:3]; changeOrd)  //File and true if my side button code is used
+	//jsetDuringIncl(->[Order]; changeOrd)  //File and true if my side button code is used
+	
+	// into an lines class
 	ItemSetButtons((Size of array:C274(aoLineAction)>0); True:C214)
-	//  --  CHOPPED  AL_UpdateArrays(eProfilesOrder; -2)
-	//  --  CHOPPED  AL_UpdateArrays(eItemOrd; -2)
+	//entry class
 	Ord_Comment(0)
 	
 	If ($doExch=True:C214)
@@ -75,12 +76,11 @@ If ($curRecNum>-1)  //existing record has changed by coming from another record 
 	End if 
 	If (Locked:C147([Order:3]))
 		OBJECT SET RGB COLORS:C628(*; "srCustomer"; Yellow:K11:2; Red:K11:4)
-		
-		// _O_OBJECT SET COLOR(srCustomer; -(Yellow+(256*Red)))
-		_O_OBJECT SET COLOR:C271(srAcct; -(Yellow:K11:2+(256*Red:K11:4)))
-		_O_OBJECT SET COLOR:C271(srZip; -(Yellow:K11:2+(256*Red:K11:4)))
-		_O_OBJECT SET COLOR:C271(srPhone; -(Yellow:K11:2+(256*Red:K11:4)))
-		_O_OBJECT SET COLOR:C271(srSO; -(Yellow:K11:2+(256*Red:K11:4)))
+		OBJECT SET RGB COLORS:C628(*; "srAcct"; Yellow:K11:2; Red:K11:4)
+		OBJECT SET RGB COLORS:C628(*; "srAcct"; Yellow:K11:2; Red:K11:4)
+		OBJECT SET RGB COLORS:C628(*; "srZip"; Yellow:K11:2; Red:K11:4)
+		OBJECT SET RGB COLORS:C628(*; "srPhone"; Yellow:K11:2; Red:K11:4)
+		OBJECT SET RGB COLORS:C628(*; "srSO"; Yellow:K11:2; Red:K11:4)
 	End if 
 	
 End if 
@@ -90,38 +90,13 @@ If ((aPages#FORM Get current page:C276) | (vbNxPvPage))  //changing layout  page
 	//vbNxPvPage:=False//use to adj to menu changes in pages        
 	Case of 
 		: (aPages=1)  //change to case statement if multiple AreaList on multiple pages            
-			// -- AL_SetScroll(eOrdList; 1; 1)
-			// -- AL_SetScroll(eOrdLn2POs; 0; 0)
-			// -- AL_SetScroll(eItemOrd; 1; 1)
-			// -- AL_SetScroll(eOrdMatlDrw; 0; 0)
-			// -- AL_SetScroll(eOrdTime; 0; 0)
-			// -- AL_SetScroll(eOrdWos; 0; 0)
-			// -- AL_SetScroll(eOrdLnCost; 0; 0)
-			// -- AL_SetScroll(eProfilesOrder; 0; 0)
-			// -- AL_SetScroll(eAnsListOrders; 0; 0)
-			// -- AL_SetScroll(eListDocuments; 0; 0)
-			//// -- AL_SetScroll (eLoadTagsOrders;0;0)
-			//// -- AL_SetScroll (eLoadItemsOrders;0;0)
-			//  --  CHOPPED  AL_UpdateArrays(eItemOrd; -2)
-			//  --  CHOPPED  AL_UpdateArrays(eOrdList; -2)
+			
 			QQSetColor(eItemOrd; ->aLsItemNum)  //###_jwm_### 20101112
 			QQSetColor(eOrdList; ->aOItemNum)  //###_jwm_### 20101112
 			
 		: ((aPages=2) | (aPages=3))  //change to case statement if multiple AreaList on multiple pages            
-			// -- AL_SetScroll(eOrdList; 0; 0)
-			// -- AL_SetScroll(eOrdLn2POs; 0; 0)
-			// -- AL_SetScroll(eItemOrd; 0; 0)
-			// -- AL_SetScroll(eOrdMatlDrw; 0; 0)
-			// -- AL_SetScroll(eOrdTime; 0; 0)
-			// -- AL_SetScroll(eOrdWos; 0; 0)
-			// -- AL_SetScroll(eOrdLnCost; 0; 0)
-			// -- AL_SetScroll(eProfilesOrder; 0; 0)
-			// -- AL_SetScroll(eAnsListOrders; 0; 0)
-			// -- AL_SetScroll(eListDocuments; 0; 0)
-			//// -- AL_SetScroll (eLoadTagsOrders;0;0)
-			//// -- AL_SetScroll (eLoadItemsOrders;0;0)
+			
 			Profiles_Relate(eProfilesOrder)
-			//  --  CHOPPED  AL_UpdateArrays(eProfilesOrder; -2)
 			
 			
 			If (aPages=3)

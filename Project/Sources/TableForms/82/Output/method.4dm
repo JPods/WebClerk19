@@ -24,7 +24,7 @@ Case of
 		End if 
 		jsetInHeader(->[CronJob:82])
 		OLO_HereAndMenu
-		//jDateTimeRecov (TEvt_NextDT ;->vDate2;->vTime2)
+		//DateTime_DTFrom (TEvt_NextDT ;->vDate2;->vTime2)
 		//: ($formEvent=On Header)
 	: ($formEvent=On Outside Call:K2:11)  // (Outside call)
 		Prs_OutsideCall

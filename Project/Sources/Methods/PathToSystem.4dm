@@ -33,7 +33,7 @@
 //         1.2.1. saved in local format
 //         1.2.2. saved in server format
 If (False:C215)
-	ConsoleMessage("Paths: "+JSON Stringify:C1217(Storage:C1525.paths))
+	ConsoleLog("Paths: "+JSON Stringify:C1217(Storage:C1525.paths))
 	var $obPaths : Object
 	$obPaths:=Storage:C1525.paths  // these are already in the local OS format
 	// POSIX Mac
@@ -71,7 +71,7 @@ $path:=$1
 $0:=$path
 
 If (<>viDebugMode=411)
-	ConsoleMessage("start path: "+$path)
+	ConsoleLog("start path: "+$path)
 End if 
 If ($path="")
 	$0:=""
@@ -83,7 +83,7 @@ Else
 		If (Test path name:C476($path)>=0)  // path works
 			$0:=$path
 		Else 
-			ConsoleMessage("ERROR: "+String:C10($result)+"  NOT FOUND, try server and local\r"+$path)
+			ConsoleLog("ERROR: "+String:C10($result)+"  NOT FOUND, try server and local\r"+$path)
 			BEEP:C151
 			$w:=Position:C15("CommerceExpert"; $path)
 			If ($w>0)
@@ -95,12 +95,12 @@ Else
 				If (Test path name:C476($pathServer)=1)
 					$0:=$pathServer
 				Else 
-					ConsoleMessage("ERROR: "+String:C10($result)+"  Server FOUND\r"+$pathServer)
+					ConsoleLog("ERROR: "+String:C10($result)+"  Server FOUND\r"+$pathServer)
 					$pathLocal:=Storage:C1525.paths.localComEx+$pathStub
 					If (Test path name:C476($pathLocal)=1)
 						$0:=$pathLocal
 					Else 
-						ConsoleMessage("ERROR: "+String:C10($result)+"  Local FOUND\r"+$pathLocal)
+						ConsoleLog("ERROR: "+String:C10($result)+"  Local FOUND\r"+$pathLocal)
 					End if 
 				End if 
 			End if 
@@ -122,7 +122,7 @@ If (False:C215)
 		Else 
 			If (Storage:C1525.paths.shareName="")
 				$0:="Error: no shareName to convert from -- "+$path
-				ConsoleMessage($0)
+				ConsoleLog($0)
 			Else 
 				$p:=(Position:C15(Storage:C1525.paths.shareName; $path))
 				If ($p<1)  // the path has a shareName
@@ -138,7 +138,7 @@ If (False:C215)
 						End case 
 					Else 
 						$0:="Error: path does not contain the shareName "+Storage:C1525.paths.shareName+" -- "+$path
-						ConsoleMessage($0)
+						ConsoleLog($0)
 					End if 
 				Else 
 					$docPathStub:=Substring:C12($path; $p+Length:C16(Storage:C1525.paths.shareName)+1)  /// convert from a Mac server format to Windows
@@ -159,7 +159,7 @@ If (False:C215)
 						$0:=$path
 					Else 
 						$0:="Error: not a valid path -- "+$path
-						ConsoleMessage($0)
+						ConsoleLog($0)
 					End if 
 				End if 
 			End if 
@@ -268,7 +268,7 @@ If (False:C215)
 				If ($error>=0)
 					$0:=$path  // path worked and the effort ends
 					If (<>viDebugMode=411)
-						ConsoleMessage("valid server path: "+$path)
+						ConsoleLog("valid server path: "+$path)
 					End if 
 				End if 
 			End if 
@@ -277,7 +277,7 @@ If (False:C215)
 				If ($p<1)
 					$0:=$path  // return what we were given. There is no server or ComEx paths to test
 					If (<>viDebugMode=411)
-						ConsoleMessage("No server, path failed, no CommerceExpert folder: "+$rootPath)
+						ConsoleLog("No server, path failed, no CommerceExpert folder: "+$rootPath)
 					End if 
 				Else   // test ComEx folders locally and on server
 					$comExPath:=Substring:C12($rootPath; $p)
@@ -286,7 +286,7 @@ If (False:C215)
 					If ($error>=0)  // valid local path
 						$0:=$path
 						If (<>viDebugMode=411)
-							ConsoleMessage("Local ComEx path valid: "+$path)
+							ConsoleLog("Local ComEx path valid: "+$path)
 						End if 
 					Else 
 						If ($serverPath#"")
@@ -296,7 +296,7 @@ If (False:C215)
 								// valid server path
 								$0:=$path
 								If (<>viDebugMode=411)
-									ConsoleMessage("Server ComEx path valid: "+$path)
+									ConsoleLog("Server ComEx path valid: "+$path)
 								End if 
 							End if 
 						End if 

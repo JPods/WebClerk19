@@ -19,7 +19,10 @@ C_REAL:C285($10; $11; $12; $15)
 
 If (($9#"") & ($9#"Comment") & (($10#0) | ($11#0)))
 	$w:=Size of array:C274(dType)+1
-	Ray_InsertElems($w; 1; ->dItemNumKey; ->dQtyOnHand; ->dQtyOnSO; ->dQtyOnPO; ->dQtyOnWO; ->dQtyOnAdj; ->dUnitCost; ->dJobID; ->dDocID; ->dLineNum; ->dReceiptID; ->dSource; ->dReason; ->dType; ->dDTCreated; ->dNote; ->dTakeAction; ->dSite; ->dUnitPrice; ->dChangeBy; ->dTableNum)
+	Ray_InsertElems($w; 1; ->dItemNumKey; ->dQtyOnHand; ->dQtyOnSO; ->dQtyOnPO; \
+		->dQtyOnWO; ->dQtyOnAdj; ->dUnitCost; ->dJobID; ->dDocID; ->dLineNum; ->dReceiptID; \
+		->dSource; ->dReason; ->dType; ->dDTCreated; ->dNote; ->dTakeAction; \
+		->dSite; ->dUnitPrice; ->dChangeBy; ->dTableNum)
 	dType{$w}:=$1
 	dDocID{$w}:=$2  //[Order]OrderNum
 	dReceiptID{$w}:=$3  //Alt Id For INship ID
@@ -48,7 +51,7 @@ If (($9#"") & ($9#"Comment") & (($10#0) | ($11#0)))
 	End case 
 	dUnitCost{$w}:=$12
 	dNote{$w}:=$13
-	dDTCreated{$w}:=DateTime_Enter
+	dDTCreated{$w}:=DateTime_DTTo
 	dSite{$w}:=$14
 	dUnitPrice{$w}:=$15
 	dChangeBy{$w}:=Current user:C182

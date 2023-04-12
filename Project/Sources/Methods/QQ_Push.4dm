@@ -27,7 +27,7 @@ If ($found>0)
 	End if 
 	<>viItemsProfilecessAction:=5  //build QQList from BOM 
 	POST OUTSIDE CALL:C329(<>aPrsNum{$found})
-	BRING TO FRONT:C326(<>aPrsNum{$found})
+	
 End if 
 //
 CmdKey:=0

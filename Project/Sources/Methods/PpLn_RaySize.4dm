@@ -118,7 +118,7 @@ Case of
 						DELETE RECORD:C58([ProposalLine:43])
 				End case 
 				If ($errorText#"")
-					ConsoleMessage($errorText)
+					ConsoleLog($errorText)
 				End if 
 			End for 
 		End if 

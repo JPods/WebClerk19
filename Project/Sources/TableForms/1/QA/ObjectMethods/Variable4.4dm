@@ -9,15 +9,7 @@ If (<>CustAcct#srAcct)
 		v3:=[Customer:2]nameLast:23
 		srAcct:=[Customer:2]customerID:1
 		ptFile:=(->[Customer:2])
-	Else 
-		QUERY:C277([Lead:48]; [Lead:48]idNum:32=Num:C11(<>CustAcct))
-		QUERY:C277([QA:70]; [QA:70]customerID:1=<>CustAcct; *)
-		QUERY:C277([QA:70];  & [QA:70]tableNum:11=Table:C252(<>ptCurTable))
-		v1:=[Lead:48]company:5
-		v2:=[Lead:48]nameFirst:1
-		v3:=[Lead:48]nameLast:2
-		srAcct:=String:C10([Lead:48]idNum:32)
-		ptFile:=(->[Lead:48])
+		
 	End if 
 	//  CHOPPED QA_FillAnswRay(Records in selection([QA]))
 	//  --  CHOPPED  AL_UpdateArrays(eAList; -2)

@@ -82,7 +82,7 @@ If (vSearchBy#"")
 				CREATE RECORD:C68(Table:C252(curTableNum)->)
 				If (curTableNum=4)
 					[Item:4]itemNum:1:=aImpFields{$fld}
-					[Item:4]dtReviewed:85:=DateTime_Enter(!2001-01-01!; ?00:00:00?)
+					[Item:4]dtReviewed:85:=DateTime_DTTo(!2001-01-01!; ?00:00:00?)
 				End if 
 				jimportSaveRay
 			: (Records in selection:C76(Table:C252(curTableNum)->)=1)

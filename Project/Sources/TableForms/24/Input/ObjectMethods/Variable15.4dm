@@ -1,1 +1,0 @@
-OPEN URL:C673("http://localhost:8080/jQueryGantt/gantt18.html")

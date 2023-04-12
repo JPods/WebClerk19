@@ -3,9 +3,8 @@
 C_LONGINT:C283($found)
 $found:=Prs_CheckRunnin("Inship")
 If ($found>0)
-	If (Frontmost process:C327#<>aPrsNum{$found})
-		BRING TO FRONT:C326(<>aPrsNum{$found})
-	End if 
+	BRING TO FRONT:C326($found)
+	
 Else 
 	//<>ptCurFile:=(->[TechNote])   ###_jwm_###
 	<>prcControl:=1

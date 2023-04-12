@@ -23,7 +23,7 @@ If (Application type:C494#4D Server:K5:6)
 	WindowOpenTaskOffSets
 	ControlRecCheck
 	//DISABLE MENU ITEM(1;4)
-	FORM SET INPUT:C55([Control:1]; "SalesActions")
-	ProcessTableOpen(->[Control:1])
-	//Prs_ListActive 
+	FORM SET INPUT:C55([Base:1]; "SalesActions")
+	ProcessTableOpen(->[Base:1])
+	//Process_ListActive 
 End if 

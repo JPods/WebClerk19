@@ -37,7 +37,7 @@ Else
 				
 				
 			: (iLoRecordNew)  //set in iLoProcedure only once, new record
-				[TallyResult:73]dtCreated:11:=DateTime_Enter
+				[TallyResult:73]dtCreated:11:=DateTime_DTTo
 				If ([UserReport:46]idNum:17=0)
 					READ WRITE:C146([TallyResult:73])
 					
@@ -65,7 +65,7 @@ Else
 			If (Not:C34($doChange))
 				OBJECT SET ENTERABLE:C238([TallyResult:73]publish:36; False:C215)
 			End if 
-			jDateTimeRecov([TallyResult:73]dtReport:12; ->vDate1; ->vTime1)
+			DateTime_DTFrom([TallyResult:73]dtReport:12; ->vDate1; ->vTime1)
 			Before_New(ptCurTable)  //last thing to do
 		End if 
 		//every cycle

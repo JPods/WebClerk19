@@ -34,7 +34,7 @@ Else
 	DscntSpecialClr([Invoice:26]typeSale:49)
 End if 
 If (Record number:C243([Invoice:26])>-1)
-	[Invoice:26]autoFreight:32:=False:C215
+	[Invoice:26]shipAuto:32:=False:C215
 	SAVE RECORD:C53([Invoice:26])
 End if 
 //Added the EDI block on Thursday, December 10, 1998
@@ -58,14 +58,14 @@ If (allowAlerts_boo)  //all these edi blocks could be consolidated.  No time
 	If ((Not:C34($doChange)) & (Current user:C182#[Invoice:26]salesNameID:23))
 		C_LONGINT:C283($theColor)
 		$theColor:=14
-		_O_OBJECT SET COLOR:C271([Invoice:26]salesCommission:36; -$theColor+(256*$theColor))
-		_O_OBJECT SET COLOR:C271(vComSales; -$theColor+(256*$theColor))
+		OBJECT SET RGB COLORS:C628(*; "[Invoice]salesCommission"; $theColor; 256*$theColor)
+		OBJECT SET RGB COLORS:C628(*; "vComSales"; $theColor; 256*$theColor)
 	End if 
 	If ((Not:C34($doChange)) & (Current user:C182#[Invoice:26]repID:22))
 		C_LONGINT:C283($theColor)
 		$theColor:=14
-		_O_OBJECT SET COLOR:C271([Invoice:26]repCommission:28; -$theColor+(256*$theColor))
-		_O_OBJECT SET COLOR:C271(vComRep; -$theColor+(256*$theColor))
+		OBJECT SET RGB COLORS:C628(*; "[Invoice]repCommission"; $theColor; 256*$theColor)
+		OBJECT SET RGB COLORS:C628(*; "vComRep"; $theColor; 256*$theColor)
 	End if 
 	
 	// ### jwm ### 20160219_1240 get current window Title
@@ -150,9 +150,9 @@ If (allowAlerts_boo)  //all these edi blocks could be consolidated.  No time
 		PayLoadShow(Records in selection:C76([Payment:28]))
 	End if 
 	//
-	OBJECT SET ENTERABLE:C238([Invoice:26]shipFreightCost:15; Not:C34([Invoice:26]autoFreight:32))
-	OBJECT SET ENTERABLE:C238([Invoice:26]shipMiscCosts:16; Not:C34([Invoice:26]autoFreight:32))
-	//<>tcAutoFrght:=Num([Invoice]AutoFreight=True)
+	OBJECT SET ENTERABLE:C238([Invoice:26]shipFreightCost:15; Not:C34([Invoice:26]shipAuto:32))
+	OBJECT SET ENTERABLE:C238([Invoice:26]shipMiscCosts:16; Not:C34([Invoice:26]shipAuto:32))
+	//<>tcAutoFrght:=Num([Invoice]shipAuto=True)
 	//
 	vrOldValue:=[Order:3]amountBackLog:54
 	//

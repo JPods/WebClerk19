@@ -6,5 +6,5 @@ vtChar:=""
 vText:="Return"
 vtChar:=String:C10(Character code:C91("\r"))
 If (vText#"")
-	ConsoleMessage(vtChar+"\t"+vText)
+	ConsoleLog(vtChar+"\t"+vText)
 End if 

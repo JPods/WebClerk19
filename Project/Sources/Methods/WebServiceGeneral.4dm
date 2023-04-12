@@ -12,7 +12,7 @@ If (Count parameters:C259=1)
 	//
 	If (<>vSoapTrack=3)
 		CREATE RECORD:C68([EventLog:75])
-		[EventLog:75]dtEvent:1:=DateTime_Enter
+		[EventLog:75]dtEvent:1:=DateTime_DTTo
 		
 		[EventLog:75]groupid:3:="WebTaxTest"  ///  -4
 	End if 

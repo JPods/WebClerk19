@@ -48,7 +48,7 @@ Case of
 		
 	: ($1=-12)
 		READ WRITE:C146([LoadTag:88])
-		QUERY:C277([LoadTag:88]; [LoadTag:88]documentID:17=[Invoice:26]invoiceNum:2)
+		QUERY:C277([LoadTag:88]; [LoadTag:88]documentID:17=[Invoice:26]idNum:2)
 		$k:=Records in selection:C76([LoadTag:88])
 		LT_FillArrayFromTable($k)
 		
@@ -117,7 +117,7 @@ Case of
 						INSERT IN ARRAY:C227(aLiUnitWt; $startElement; $numElements)
 						INSERT IN ARRAY:C227(aLiTagGroup; $startElement; $numElements)
 						aLiLoadTagID{$startElement}:=0
-						aLiDocID{$startElement}:=[Order:3]orderNum:2
+						aLiDocID{$startElement}:=[Order:3]idNum:2
 						aLiLineID{$startElement}:=aOLineNum{$i}
 						aLiItemNum{$startElement}:=aOItemNum{$i}
 						aLiItemDescription{$startElement}:=aODescpt{$i}
@@ -187,14 +187,14 @@ Case of
 		// not called but needs to be removed as an option
 		READ WRITE:C146([LoadItem:87])
 		QUERY:C277([LoadItem:87]; [LoadItem:87]tableNum:1=Table:C252(->[Order:3]); *)
-		QUERY:C277([LoadItem:87];  & [LoadItem:87]orderNum:2=[Order:3]orderNum:2)
+		QUERY:C277([LoadItem:87];  & [LoadItem:87]idNumOrder:2=[Order:3]idNum:2)
 		C_LONGINT:C283($diffRecCnt)
 		$diffRecCnt:=Records in selection:C76([LoadItem:87])-Size of array:C274(aLiRecordNum)
 		If ($diffRecCnt>0)
 			REDUCE SELECTION:C351([LoadItem:87]; $diffRecCnt)
 			DELETE SELECTION:C66([LoadItem:87])
 			QUERY:C277([LoadItem:87]; [LoadItem:87]tableNum:1=Table:C252(->[Order:3]); *)
-			QUERY:C277([LoadItem:87];  & [LoadItem:87]orderNum:2=[Order:3]orderNum:2)
+			QUERY:C277([LoadItem:87];  & [LoadItem:87]idNumOrder:2=[Order:3]idNum:2)
 		End if 
 		$k:=Size of array:C274(aLiDocID)
 		// ARRAY LONGINT($aTableType;$k)
@@ -211,7 +211,7 @@ Case of
 			//[LoadItem]UnitWeight:=aLiUnitWt{$incRay}
 			//[LoadItem]PackGroupID:=aLiTagGroup{$incRay}
 		End for 
-		ARRAY TO SELECTION:C261($aTableType; [LoadItem:87]tableNum:1; aLiDocID; [LoadItem:87]orderNum:2; aLiLineID; [LoadItem:87]lineid:5; aLiItemNum; [LoadItem:87]itemNum:3; aLiItemDescription; [LoadItem:87]itemDescription:4; aLiHazardClass; [LoadItem:87]hazardClass:10; aLiQty; [LoadItem:87]quantity:7; aLiUnitWt; [LoadItem:87]unitWeight:6; aLiTagGroup; [LoadItem:87]packGroupid:9)
+		ARRAY TO SELECTION:C261($aTableType; [LoadItem:87]tableNum:1; aLiDocID; [LoadItem:87]idNumOrder:2; aLiLineID; [LoadItem:87]lineid:5; aLiItemNum; [LoadItem:87]itemNum:3; aLiItemDescription; [LoadItem:87]itemDescription:4; aLiHazardClass; [LoadItem:87]hazardClass:10; aLiQty; [LoadItem:87]quantity:7; aLiUnitWt; [LoadItem:87]unitWeight:6; aLiTagGroup; [LoadItem:87]packGroupid:9)
 		
 		
 		UNLOAD RECORD:C212([LoadItem:87])
@@ -221,12 +221,12 @@ Case of
 		
 		ALERT:C41("This feature is superseded.")
 		
-		ConsoleMessage("TEST: vModLoadTags")
+		ConsoleLog("TEST: vModLoadTags")
 		
 		//TRACE
 		If (vModLoadTags)
 			READ WRITE:C146([LoadItem:87])
-			QUERY:C277([LoadItem:87]; [LoadTag:88]invoiceNum:19=[Invoice:26]invoiceNum:2)  //;*)
+			QUERY:C277([LoadItem:87]; [LoadTag:88]idNumInvoice:19=[Invoice:26]idNum:2)  //;*)
 			//QUERY([LoadItem];&[LoadTag]LoadTagID=-3)
 			C_LONGINT:C283($diffRecCnt)
 			DELETE SELECTION:C66([LoadItem:87])

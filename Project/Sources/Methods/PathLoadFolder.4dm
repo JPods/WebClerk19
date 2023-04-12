@@ -166,7 +166,7 @@ Else
 					//[DocPath]Creator:=Document creator($thePathAndDoc)
 					$obRec.seq:=$incRay
 					$obRec.dateEntered:=Current date:C33
-					$obRec.dtDocument:=DateTime_Enter($vdCreatedOn; $vhCreatedAt)  // document date time
+					$obRec.dtDocument:=DateTime_DTTo($vdCreatedOn; $vhCreatedAt)  // document date time
 					$result_o:=$obRec.save()
 				End if 
 			End if 

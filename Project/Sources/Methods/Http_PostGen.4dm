@@ -24,7 +24,7 @@ If ([EventLog:75]remoteUserRec:10>-1)
 	//
 	Case of 
 		: ($4="Forum")
-			[Forum:80]dtSubmitted:6:=DateTime_Enter
+			[Forum:80]dtSubmitted:6:=DateTime_DTTo
 			[Forum:80]publish:7:=1
 			[Forum:80]dateEntered:9:=Current date:C33
 			[Forum:80]timeEntered:10:=Current time:C178
@@ -43,7 +43,7 @@ If ([EventLog:75]remoteUserRec:10>-1)
 					[Service:6]customerID:1:="GDwebClerk"
 					[Service:6]company:48:=[Customer:2]company:2
 			End case 
-			[Service:6]dtDocument:16:=DateTime_Enter
+			[Service:6]dtDocument:16:=DateTime_DTTo
 			[Service:6]dtBegin:15:=[Service:6]dtDocument:16
 			Case of 
 				: ([Service:6]noteType:21="Reservation")
@@ -64,16 +64,16 @@ If ([EventLog:75]remoteUserRec:10>-1)
 		: ($4="Call")
 			GOTO RECORD:C242([RemoteUser:57]; [EventLog:75]remoteUserRec:10)
 			If (([EventLog:75]tableNum:9=(Table:C252(->[Rep:8]))) | ([EventLog:75]tableNum:9=(Table:C252(->[Employee:19]))))
-				[CallReport:34]tableNum:2:=[EventLog:75]tableNum:9
+				[Call:34]tableNum:2:=[EventLog:75]tableNum:9
 				If ([EventLog:75]tableNum:9=(Table:C252(->[Rep:8])))
 					GOTO RECORD:C242([Rep:8]; [EventLog:75]customerRecNum:8)
-					[CallReport:34]customerID:1:=[Rep:8]RepID:1
+					[Call:34]customerID:1:=[Rep:8]repID:1
 				Else 
 					GOTO RECORD:C242([Employee:19]; [EventLog:75]customerRecNum:8)
-					[CallReport:34]actionBy:3:=[Employee:19]nameID:1
+					[Call:34]actionBy:3:=[Employee:19]nameID:1
 				End if 
-				[CallReport:34]dateDocument:17:=Current date:C33
-				[CallReport:34]dtAction:4:=DateTime_Enter(Date:C102($strDate))
+				[Call:34]dateDocument:17:=Current date:C33
+				[Call:34]dtAction:4:=DateTime_DTTo(Date:C102($strDate))
 			End if 
 			
 			

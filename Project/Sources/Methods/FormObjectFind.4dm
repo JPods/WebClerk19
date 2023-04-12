@@ -105,5 +105,5 @@ If (<>viDebugMode>410)
 		vText:=vText+(atNames{$vi1}+"\t"+String:C10(aiNums{$vi1})+"\r")
 	End for 
 	SET TEXT TO PASTEBOARD:C523(vText)
-	ConsoleMessage(vText)
+	ConsoleLog(vText)
 End if 

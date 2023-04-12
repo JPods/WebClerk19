@@ -27,14 +27,14 @@ End if
 $code:=WCapi_GetParameter("code"; "")
 $userEmail:=WCapi_GetParameter("email"; "")
 If ($userEmail="")
-	If (<>vbWCRegisterLeads)
+	If (Storage:C1525.wc.bWCRegisterLeads)
 		$userEmail:=WCapi_GetParameter("_jit_Leads_Emailjj"; "")
 	Else 
 		$userEmail:=WCapi_GetParameter("_jit_Customers_Emailjj"; "")
 	End if 
 End if 
 C_LONGINT:C283($dtCurrent)
-$dtCurrent:=DateTime_Enter
+$dtCurrent:=DateTime_DTTo
 If (([EventLog:75]id:54=$code) & ([EventLog:75]email:56=$userEmail))
 	// found by cookie on the same machine
 Else 
@@ -56,7 +56,7 @@ If ([EventLog:75]id:54#$code)
 Else 
 	[EventLog:75]id:54:=[EventLog:75]id:54+"E4"  // prevent them from resubmitting from the email
 	C_LONGINT:C283($dtCurrent)
-	$dtCurrent:=DateTime_Enter
+	$dtCurrent:=DateTime_DTTo
 	If ($dtCurrent>[EventLog:75]dtExpires:55)
 		vResponse:="Registration period expired in 2 hours. Current server time: "+String:C10(Current time:C178)+". Resubmit email: "+$userEmail
 	Else 
@@ -65,7 +65,7 @@ Else
 		
 		
 		CREATE RECORD:C68([Customer:2])
-		DBCustomer_init
+		DB_InitCustomer
 		[Customer:2]adSource:62:="webClerk"
 		[Customer:2]action:60:="New Registration"
 		WC_Parse(2; $2)  //      automatically fill in customerID  

@@ -58,7 +58,7 @@ If (($doTableNum=-1) | ($doTableNum=Table:C252(->[Contact:13])))
 					$i:=$k
 				End if 
 				If ([Contact:13]nameLast:4#"")
-					Parse_UnWanted(entryEntity.nameLast)
+					Parse_UnWanted(process_o.entry_o.nameLast)
 					SAVE RECORD:C53([Contact:13])
 				End if 
 				NEXT RECORD:C51([Contact:13])
@@ -84,12 +84,12 @@ If (($doTableNum=-1) | ($doTableNum=Table:C252(->[Customer:2])))
 				//$i:=$k
 				//End if 
 				If (Position:C15(","; [Customer:2]company:2)>0)
-					Parse_UnWanted(entryEntity.company)
+					Parse_UnWanted(process_o.entry_o.company)
 					SAVE RECORD:C53([Customer:2])
 				End if 
 				If (False:C215)
 					If ([Customer:2]nameLast:23#"")
-						Parse_UnWanted(entryEntity.nameLast)
+						Parse_UnWanted(process_o.entry_o.nameLast)
 						SAVE RECORD:C53([Customer:2])
 					End if 
 				End if 
@@ -102,36 +102,7 @@ If (($doTableNum=-1) | ($doTableNum=Table:C252(->[Customer:2])))
 	UNLOAD RECORD:C212([Customer:2])
 End if 
 //
-If (($doTableNum=-1) | ($doTableNum=Table:C252(->[Lead:48])))
-	CONFIRM:C162("Click OK to parse out of [Lead]LastName field to first & last names.")
-	If (OK=1)
-		QUERY:C277([Lead:48])
-		If (OK=1)
-			FIRST RECORD:C50([Lead:48])
-			$k:=Records in selection:C76([Lead:48])
-			//ThermoInitExit ("Converting Leads Last Name";$k;True)
-			$viProgressID:=Progress New
-			
-			For ($i; 1; $k)
-				//Thermo_Update ($i)
-				ProgressUpdate($viProgressID; $i; $k; "Converting Leads Last Name")
-				If (ThermoAbort)
-					$i:=$k
-				End if 
-				If ([Lead:48]nameLast:2#"")
-					Parse_UnWanted(entryEntity.nameLast)
-					SAVE RECORD:C53([Lead:48])
-				End if 
-				NEXT RECORD:C51([Lead:48])
-			End for 
-			//Thermo_Close 
-			Progress QUIT($viProgressID)
-			v1:=""
-		End if 
-	End if 
-	UNLOAD RECORD:C212([Lead:48])
-End if 
-//
+
 If (($doTableNum=-1) | ($doTableNum=Table:C252(->[Contact:13])))
 	CONFIRM:C162("Click OK to replace [Customer]First/LastNames with contacts.")
 	If (OK=1)

@@ -2,7 +2,7 @@
 
 CONFIRM:C162("Import Pay Approvals")
 If (OK=1)
-	sumDoc:=Create document:C266("PayPost"+String:C10(DateTime_Enter))
+	sumDoc:=Create document:C266("PayPost"+String:C10(DateTime_DTTo))
 	myDoc:=Open document:C264("")
 	If (OK=1)
 		ARRAY TEXT:C222(aText1; 31)

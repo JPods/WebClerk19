@@ -13,7 +13,11 @@ Else
 End if 
 $vtTables:=$obRec.textBlk1
 $vtReport:=$vtReport+"172"+"\t"+"Project"+"\t"+"Manipulated"+"\r"
-TextToArray($vtTables; ->$aTables; ",")
+
+var $c : Collection
+$c:=Split string:C1554($response; ";")
+COLLECTION TO ARRAY:C1562($c; $aTables)
+
 C_LONGINT:C283($incTable; $cntTable)
 $cntTable:=Get last table number:C254
 For ($incTable; 1; $cntTable)

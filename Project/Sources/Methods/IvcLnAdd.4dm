@@ -49,7 +49,7 @@ aiUniqueID{$1}:=-3
 
 // Modified by: William James (2013-11-11T00:00:00)
 // changed from [Invoice]OrderNum#1 in case there is some invoice with ordernum = 0
-If (([Invoice:26]orderNum:1>10) & (viInvcLnCnt<=viOrdLnCnt))
+If (([Invoice:26]idNumOrder:1>10) & (viInvcLnCnt<=viOrdLnCnt))
 	TRACE:C157
 	viInvcLnCnt:=viOrdLnCnt+1
 	viOrdLnCnt:=viOrdLnCnt+1
@@ -175,7 +175,7 @@ If (allowAlerts_boo)
 		End if 
 	End if 
 	If ([Item:4]alertMessage:52#"")
-		ConsoleMessage([Item:4]itemNum:1+"\r"+"\r"+[Item:4]alertMessage:52)
+		ConsoleLog([Item:4]itemNum:1+"\r"+"\r"+[Item:4]alertMessage:52)
 	End if 
 End if 
 If ($3)

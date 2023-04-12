@@ -31,7 +31,7 @@ End if
 [SyncRecord:109]host:45:=vWCRequestHost
 
 [SyncRecord:109]dtAction:2:=0
-[SyncRecord:109]dtCreated:15:=DateTime_Enter
+[SyncRecord:109]dtCreated:15:=DateTime_DTTo
 [SyncRecord:109]dtComplete:8:=0
 [SyncRecord:109]date:26:=Current date:C33
 

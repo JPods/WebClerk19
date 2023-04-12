@@ -77,7 +77,7 @@ Else
 			vText1:=vText1+"</TABLE>"
 		End if 
 		
-		ConsoleMessage(vText1)
+		ConsoleLog(vText1)
 	End if 
 	
 	INSERT IN ARRAY:C227(aText1; 1; 1)

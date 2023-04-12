@@ -166,7 +166,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 	SAVE RECORD:C53([TallyMaster:60])
 	
 	If (HTTPClient_Response="")
-		ConsoleMessage("ERROR: NO RESPONSE")
+		ConsoleLog("ERROR: NO RESPONSE")
 		vText:=HTTPClient_Response
 	Else 
 		
@@ -175,7 +175,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 		
 		vlError:=Position:C15("ERROR"; XML_Response)  //test response for error message
 		If (vlError#0)
-			ConsoleMessage("UPS Request generated an Error")
+			ConsoleLog("UPS Request generated an Error")
 		End if 
 		
 		//===========================
@@ -206,11 +206,11 @@ If (Records in selection:C76([TallyMaster:60])=1)
 		Struct_Ref:=DOM Parse XML variable:C720(XML_Response)  //get reference to XML response
 		
 		If (OK=0)
-			ConsoleMessage("ERROR: XML Respnse could not be parsed")
+			ConsoleLog("ERROR: XML Respnse could not be parsed")
 		Else 
 			vFound:=DOM Find XML element:C864(Struct_Ref; "/TimeInTransitResponse/TransitResponse")  // find transit response
 			If (OK=0)
-				ConsoleMessage("ERROR: TimeInTransitResponse Not Found")
+				ConsoleLog("ERROR: TimeInTransitResponse Not Found")
 			Else 
 				
 				DOM GET XML ELEMENT NAME:C730(vFound; value)
@@ -223,7 +223,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 				vSummaryRef:=DOM Find XML element:C864(vFound; "TransitResponse/ServiceSummary")
 				
 				If (OK=0)  // not found
-					ConsoleMessage("ERROR: TransitResponse/ServiceSummary Not Found")
+					ConsoleLog("ERROR: TransitResponse/ServiceSummary Not Found")
 				Else 
 					
 					vText:=""  // initialize vText
@@ -234,7 +234,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtCode)
 							APPEND TO ARRAY:C911(atCode; vtCode)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/Service/Code Not Found")
+							ConsoleLog("ERROR: ServiceSummary/Service/Code Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/Service/Description")
@@ -242,7 +242,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtDescription)
 							APPEND TO ARRAY:C911(atDescription; vtDescription)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/Service/Description Not Found")
+							ConsoleLog("ERROR: ServiceSummary/Service/Description Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/Guaranteed/Code")
@@ -250,7 +250,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtGuaranteed)
 							APPEND TO ARRAY:C911(atGuaranteed; vtGuaranteed)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/Guaranteed/Code Not Found")
+							ConsoleLog("ERROR: ServiceSummary/Guaranteed/Code Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/EstimatedArrival/BusinessTransitDays")
@@ -258,7 +258,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtBusinessTransitDays)
 							APPEND TO ARRAY:C911(atBusinessTransitDays; vtBusinessTransitDays)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/EstimatedArrival/BusinessTransitDays Not Found")
+							ConsoleLog("ERROR: ServiceSummary/EstimatedArrival/BusinessTransitDays Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/EstimatedArrival/Time")
@@ -266,7 +266,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtMyTime)
 							APPEND TO ARRAY:C911(atTime; vtMyTime)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/EstimatedArrival/Time Not Found")
+							ConsoleLog("ERROR: ServiceSummary/EstimatedArrival/Time Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/EstimatedArrival/PickupDate")
@@ -274,7 +274,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtPickupDate)
 							APPEND TO ARRAY:C911(atPickupDate; vtPickupDate)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/EstimatedArrival/PickupDate Not Found")
+							ConsoleLog("ERROR: ServiceSummary/EstimatedArrival/PickupDate Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/EstimatedArrival/PickupTime")
@@ -282,7 +282,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtPickupTime)
 							APPEND TO ARRAY:C911(atPickupTime; vtPickupTime)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/EstimatedArrival/PickupTime Not Found")
+							ConsoleLog("ERROR: ServiceSummary/EstimatedArrival/PickupTime Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/EstimatedArrival/Date")
@@ -290,7 +290,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtDate)
 							APPEND TO ARRAY:C911(atDate; vtDate)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/EstimatedArrival/Date Not Found")
+							ConsoleLog("ERROR: ServiceSummary/EstimatedArrival/Date Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/EstimatedArrival/DayOfWeek")
@@ -298,7 +298,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtDayOfWeek)
 							APPEND TO ARRAY:C911(atDayOfWeek; vtDayOfWeek)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/EstimatedArrival/DayOfWeek Not Found")
+							ConsoleLog("ERROR: ServiceSummary/EstimatedArrival/DayOfWeek Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "ServiceSummary/EstimatedArrival/CustomerCenterCutoff")
@@ -306,7 +306,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtCustomerCenterCutoff)
 							APPEND TO ARRAY:C911(atCustomerCenterCutoff; vtCustomerCenterCutoff)
 						Else 
-							ConsoleMessage("ERROR: ServiceSummary/EstimatedArrival/CustomerCenterCutoff Not Found")
+							ConsoleLog("ERROR: ServiceSummary/EstimatedArrival/CustomerCenterCutoff Not Found")
 						End if 
 						
 						//jMessagewindow( vtCode + " - "+vtDescription+"\r"+"\r"+"Transit Days = " + vtDays)
@@ -384,7 +384,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 			
 			vFound:=DOM Find XML element:C864(Struct_Ref; "/TimeInTransitResponse/TransitToList")  // find transit response
 			If (OK=0)
-				ConsoleMessage("ERROR: /TimeInTransitResponse/TransitToList Not Found")
+				ConsoleLog("ERROR: /TimeInTransitResponse/TransitToList Not Found")
 			Else 
 				DOM GET XML ELEMENT NAME:C730(vFound; value)
 				//jMessagewindow("The name of the element is: \""+value+"\"")
@@ -396,7 +396,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 				vSummaryRef:=DOM Find XML element:C864(vFound; "TransitToList/Candidate")
 				
 				If (OK=0)
-					ConsoleMessage("ERROR: TransitToList/Candidate Not Found")
+					ConsoleLog("ERROR: TransitToList/Candidate Not Found")
 				Else 
 					
 					vText:="UPS Could not find your address and suggests the following"+vtcrlf+vtcrlf  // initialize vText
@@ -407,7 +407,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtCity)
 							APPEND TO ARRAY:C911(atCity; vtCity)
 						Else 
-							ConsoleMessage("ERROR: Candidate/AddressArtifactFormat/PoliticalDivision2 Not Found")
+							ConsoleLog("ERROR: Candidate/AddressArtifactFormat/PoliticalDivision2 Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "Candidate/AddressArtifactFormat/PoliticalDivision1")
@@ -423,7 +423,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtCountry)
 							APPEND TO ARRAY:C911(atCountry; vtCountry)
 						Else 
-							ConsoleMessage("ERROR: Candidate/AddressArtifactFormat/Country Not Found")
+							ConsoleLog("ERROR: Candidate/AddressArtifactFormat/Country Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "Candidate/AddressArtifactFormat/CountryCode")
@@ -431,7 +431,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtCountryCode)
 							APPEND TO ARRAY:C911(atCountryCode; vtCountryCode)
 						Else 
-							ConsoleMessage("ERROR: Candidate/AddressArtifactFormat/CountryCode Not Found")
+							ConsoleLog("ERROR: Candidate/AddressArtifactFormat/CountryCode Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "Candidate/AddressArtifactFormat/PostcodePrimaryLow")
@@ -439,7 +439,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtZipLow)
 							APPEND TO ARRAY:C911(atZipLow; vtZipLow)
 						Else 
-							ConsoleMessage("ERROR: Candidate/AddressArtifactFormat/PostcodePrimaryLow Not Found")
+							ConsoleLog("ERROR: Candidate/AddressArtifactFormat/PostcodePrimaryLow Not Found")
 						End if 
 						
 						vRef:=DOM Find XML element:C864(vSummaryRef; "Candidate/AddressArtifactFormat/PostcodePrimaryHigh")
@@ -448,7 +448,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 							DOM GET XML ELEMENT VALUE:C731(vRef; vtZipHigh)
 							APPEND TO ARRAY:C911(atZipHigh; vtZipHigh)
 						Else 
-							ConsoleMessage("ERROR: Candidate/AddressArtifactFormat/PostcodePrimaryHigh Not Found")
+							ConsoleLog("ERROR: Candidate/AddressArtifactFormat/PostcodePrimaryHigh Not Found")
 						End if 
 						
 						//jMessagewindow( vtCode + " - "+vtDescription+"\r"+"\r"+"Transit Days = " + vtDays)
@@ -496,7 +496,7 @@ If (Records in selection:C76([TallyMaster:60])=1)
 	
 	
 Else 
-	ConsoleMessage("UPS TimeInTransit TallyMaster not Found")
+	ConsoleLog("UPS TimeInTransit TallyMaster not Found")
 End if 
 
 UNLOAD RECORD:C212([TallyMaster:60])

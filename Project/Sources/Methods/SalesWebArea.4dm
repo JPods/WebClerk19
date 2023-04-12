@@ -15,9 +15,7 @@ C_LONGINT:C283($found)
 $cntPara:=Count parameters:C259
 $found:=Prs_CheckRunnin("SalesCalendar")
 If ($found>0)
-	If (Frontmost process:C327#<>aPrsNum{$found})
-		BRING TO FRONT:C326(<>aPrsNum{$found})
-	End if 
+	BRING TO FRONT:C326($found)
 Else 
 	If ($cntPara=0)
 		<>ptCurTable:=ptCurTable

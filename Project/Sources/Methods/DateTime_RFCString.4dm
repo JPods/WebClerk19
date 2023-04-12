@@ -24,7 +24,7 @@ End if
 //$rfcdate:=AP Timestamp to GMT ($date;$time;$gmtdate;$gmttime)
 //
 $hourAfterGMT:=6
-$dtLong:=DateTime_Enter($date; $time)
+$dtLong:=DateTime_DTTo($date; $time)
 $dtLong:=$dtLong+(60*60*$hourAfterGMT)
 $date:=jDateTimeRDate($dtLong)
 $time:=jDateTimeRTime($dtLong)

@@ -25,7 +25,7 @@ Else
 	If (process_o=Null:C1517)  // we are not in the Default record, OK to save
 		$obRec.save()
 	Else 
-		If (process_o.tableName="Default")  // we are in the Default Record so save it
+		If (process_o.dataClassName="Default")  // we are in the Default Record so save it
 			[Default:15]sharePath:179:=$obRec.sharePath
 			SAVE RECORD:C53([Default:15])
 			$obRec:=ds:C1482.Default.query("primeDefault = 1").first()
@@ -115,13 +115,13 @@ End if
 
 C_LONGINT:C283(<>viDebugMode)
 If (<>viDebugMode>210)
-	ConsoleMessage("Storage.paths: "+JSON Stringify:C1217(Storage:C1525.paths))
+	ConsoleLog("Storage.paths: "+JSON Stringify:C1217(Storage:C1525.paths))
 Else 
-	ConsoleMessage("Storage.paths.saveComEx: "+Storage:C1525.paths.saveComEx)
-	ConsoleMessage("Storage.paths.serverComEx: "+Storage:C1525.paths.serverComEx)
-	ConsoleMessage("Storage.paths.shareServer (pc): "+Storage:C1525.paths.shareServer)
-	ConsoleMessage("Storage.paths.shareName (pc & mac): "+Storage:C1525.paths.shareName)
-	ConsoleMessage("Storage.paths.driveLaunch (pc & mac): "+Storage:C1525.paths.driveLaunch)
+	ConsoleLog("Storage.paths.saveComEx: "+Storage:C1525.paths.saveComEx)
+	ConsoleLog("Storage.paths.serverComEx: "+Storage:C1525.paths.serverComEx)
+	ConsoleLog("Storage.paths.shareServer (pc): "+Storage:C1525.paths.shareServer)
+	ConsoleLog("Storage.paths.shareName (pc & mac): "+Storage:C1525.paths.shareName)
+	ConsoleLog("Storage.paths.driveLaunch (pc & mac): "+Storage:C1525.paths.driveLaunch)
 End if 
 
 

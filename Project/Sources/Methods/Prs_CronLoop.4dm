@@ -24,7 +24,7 @@ $viDelay:=60-$viSeconds  //seconds to delay until the next minute   //### jwm ##
 $vtThen:="00:00:"+String:C10($viDelay; "00")
 $vhNext:=$vhNow+Time:C179($vtThen)
 
-$dtDueNow:=DateTime_Enter+$viDelay
+$dtDueNow:=DateTime_DTTo+$viDelay
 
 // get all valid cronjobs for Current User and Machine
 Get_Cronjobs

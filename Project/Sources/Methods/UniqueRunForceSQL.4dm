@@ -20,7 +20,7 @@ $timeStart:=Current time:C178
 
 If (False:C215)  // already run to create the id field
 	
-	ConsoleMessage("ConsoleLaunch")
+	ConsoleLog("ConsoleLaunch")
 	
 	C_LONGINT:C283($i; $k; $cntRecords)
 	C_POINTER:C301($ptTable)
@@ -36,11 +36,11 @@ If (False:C215)  // already run to create the id field
 		Else 
 			$cntRecords:=Records in selection:C76($ptTable->)
 			REDUCE SELECTION:C351($ptTable->; 0)
-			ConsoleMessage($tableName+": records "+String:C10($cntRecords))
+			ConsoleLog($tableName+": records "+String:C10($cntRecords))
 			$textCommand:="EXECUTE FORMULA("+Char:C90(Double quote:K15:41)+"SET INDEX(["+$tableName+"]id;true)"+Char:C90(Double quote:K15:41)+")"
 			ExecuteText(0; $textCommand)
 		End if 
 	End for 
-	ConsoleMessage("Complete: "+String:C10(Current time:C178-$timeStart))
+	ConsoleLog("Complete: "+String:C10(Current time:C178-$timeStart))
 	
 End if 

@@ -15,7 +15,7 @@
 
 
 
-ConsoleMessage("STR_Permissions")
+ConsoleLog("STR_Permissions")
 
 // ******************************************************************************************** //
 // ** BUILD TEMPLATE FOR EMPTY RESOURCE DEFINITION ******************************************** //

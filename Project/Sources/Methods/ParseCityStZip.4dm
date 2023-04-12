@@ -23,7 +23,7 @@ var $i; $k; $w : Integer
 $rawData:=$1
 
 var $cByc; $cBycr : Collection
-$cByc:=Split string:C1554($1; ",")  // try to break it 
+$cByc:=Split string:C1554($1; ";")  // try to break it 
 $cBycr:=Split string:C1554($1; Storage:C1525.char.cr)  // try to break it 
 
 // contains @ email

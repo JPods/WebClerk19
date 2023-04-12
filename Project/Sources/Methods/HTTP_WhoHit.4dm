@@ -13,7 +13,7 @@
 //End if 
 //CREATE RECORD([EventLog])
 // 
-//[EventLog]DTEvent:=DateTime_Enter 
+//[EventLog]DTEvent:=DateTime_DTTo 
 //[EventLog]Group:="NetOrd"
 //[EventLog]MessageID:=$remoteHost
 //Else 
@@ -28,13 +28,13 @@
 //GOTO RECORD([Contact];[EventLog]CustomerRecNum)
 //SEARCH([Customer];[Customer]customerID=[Contact]customerID)
 //End case 
-//If (([EventLog]DTEvent-DateTime_Enter >14400)|($3=1))//update from
+//If (([EventLog]DTEvent-DateTime_DTTo >14400)|($3=1))//update from
 // within the order layout
 //[EventLog]Message:=""//else we want to add to the order, so leave it
 // alone
 //[EventLog]Qty:=0
 //[EventLog]Value:=0
 //End if 
-//[EventLog]DTEvent:=DateTime_Enter 
+//[EventLog]DTEvent:=DateTime_DTTo 
 //viSaleID:=Record number([EventLog])
 //End if 

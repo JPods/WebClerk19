@@ -29,19 +29,19 @@ If (Macintosh command down:C546)
 End if 
 C_LONGINT:C283(<>letMeIn_i)
 If (<>letMeIn_i>0)
-	ConsoleMessage("<>letMeIn_i Security Setting: "+String:C10(<>letMeIn_i))
+	ConsoleLog("<>letMeIn_i Security Setting: "+String:C10(<>letMeIn_i))
 End if 
 If (voState.user.wcc.securityLevel=Null:C1517)
-	ConsoleMessage("user.wcc.security is null, voState.urlOriginal: "+voState.urlOriginal)
+	ConsoleLog("user.wcc.security is null, voState.urlOriginal: "+voState.urlOriginal)
 End if 
 Case of 
 		//: ((voState.user.wcc.securityLevel<5000) & (<>letMeIn_i=0))
 		// vResponse:="Error: Security level must be > 4,999 to use WC_apiServer"
 	: (voState.request.parameters=Null:C1517)
 		vResponse:="Error: malformed or no payload"
-		ConsoleMessage(vResponse+": "+voState.urlOriginal)
+		ConsoleLog(vResponse+": "+voState.urlOriginal)
 		If (<>viDeBugMode>310)
-			ConsoleMessage("voState: "+JSON Stringify:C1217(voState))
+			ConsoleLog("voState: "+JSON Stringify:C1217(voState))
 		End if 
 	: ((voState.url="/SelectListsAll") | (voState.url="/Admin/SelectListsAll"))
 		SelectList_ReturnAll

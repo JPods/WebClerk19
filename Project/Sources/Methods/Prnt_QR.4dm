@@ -39,7 +39,7 @@ Else
 			
 			$error:=HFS_Delete($myDocName)
 		Else 
-			ConsoleMessage("QuickReport Error: "+[UserReport:46]name:2+"; couldn't save locally. Temporary layout provided.")
+			ConsoleLog("QuickReport Error: "+[UserReport:46]name:2+"; couldn't save locally. Temporary layout provided.")
 			PrintControls
 			QR REPORT:C197(Table:C252([UserReport:46]tableNum:3)->; ""; False:C215; True:C214; False:C215)
 		End if 
@@ -58,7 +58,7 @@ If (<>viDebugMode>410)
 	If (([UserReport:46]tableNum:3>0) & ([UserReport:46]tableNum:3<=Get last table number:C254))
 		$cntRecs:=Records in selection:C76(Table:C252([UserReport:46]tableNum:3)->)
 	End if 
-	ConsoleMessage("Printed: "+[UserReport:46]name:2+" "+[UserReport:46]tableName:47+" count: "+String:C10($cntRecs))
+	ConsoleLog("Printed: "+[UserReport:46]name:2+" "+[UserReport:46]tableName:47+" count: "+String:C10($cntRecs))
 End if 
 
 

@@ -138,7 +138,7 @@ If (Size of array:C274($aFieldAll)>0)
 		End if 
 		If ($makeCustomer)
 			CREATE RECORD:C68([Customer:2])
-			DBCustomer_init
+			DB_InitCustomer
 			[Customer:2]profile1:26:=$groupName
 			[Customer:2]profile5:30:="vCard"
 			$w:=Find in array:C230($aField; "Tel;type=CELL@")
@@ -168,7 +168,7 @@ If (Size of array:C274($aFieldAll)>0)
 					$p:=Length:C16($aData{$w})
 				End if 
 				[Customer:2]nameLast:23:=Substring:C12($aData{$w}; 1; $p)
-				Parse_UnWanted(entryEntity.nameLast)
+				Parse_UnWanted(process_o.entry_o.nameLast)
 			Else 
 				$w:=Find in array:C230($aField; "N")
 				If ($w>0)
@@ -193,15 +193,18 @@ If (Size of array:C274($aFieldAll)>0)
 				[Customer:2]domain:90:=$aData{$w}
 			End if 
 			$w:=Find in array:C230($aField; "ORG@")
+			var $c : Collection
 			If ($w>0)
-				TextToArray($aData{$w}; ->aText1; ";")
+				$c:=Split string:C1554($aData{$w}; ";")
+				COLLECTION TO ARRAY:C1562($c; aText1)
 				[Customer:2]company:2:=aText1{1}
 			Else 
 				[Customer:2]company:2:=[Customer:2]nameLast:23+(", "*Num:C11([Customer:2]nameLast:23#""))+[Customer:2]nameFirst:73
 			End if 
 			$w:=Find in array:C230($aField; "@ADR;@")
 			If ($w>0)
-				TextToArray($aData{$w}; ->aText1; ";")
+				$c:=Split string:C1554($aData{$w}; ";")
+				COLLECTION TO ARRAY:C1562($c; aText1)
 				$k:=Size of array:C274(aText1)
 				Case of 
 					: ($k=5)

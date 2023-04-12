@@ -19,10 +19,10 @@ If (($k>0) & (Size of array:C274(aFCItem)>0))
 		End if 
 	End for 
 	READ WRITE:C146([Item:4])
-	<>ptCurTable:=(->[Control:1])
+	<>ptCurTable:=(->[Base:1])
 	<>prcControl:=1  //needed to trip new process variables & window
 	<>processAlt:=New process:C317("IVT_VndLowItems"; <>tcPrsMemory; String:C10(Count user processes:C343)+"-"+"Low Items")
-	Prs_ListActive
+	Process_ListActive
 Else 
 	BEEP:C151
 End if 

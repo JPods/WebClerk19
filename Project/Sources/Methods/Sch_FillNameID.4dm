@@ -13,8 +13,8 @@ End if
 //QUERY([WorkOrder];[WorkOrder]DTCompleted=0;*)
 QUERY:C277([WorkOrder:66]; [WorkOrder:66]actionBy:8=$1->; *)
 If ($2#!00-00-00!)
-	vlDTStart:=DateTime_Enter($beginDate; ?00:00:00?)
-	vlDTEnd:=DateTime_Enter($endDate; ?23:59:59?)
+	vlDTStart:=DateTime_DTTo($beginDate; ?00:00:00?)
+	vlDTEnd:=DateTime_DTTo($endDate; ?23:59:59?)
 	QUERY:C277([WorkOrder:66];  & [WorkOrder:66]dtAction:5>=vlDTStart; *)
 	QUERY:C277([WorkOrder:66];  & [WorkOrder:66]dtAction:5<=vlDTEnd; *)
 End if 

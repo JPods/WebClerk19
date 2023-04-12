@@ -71,7 +71,7 @@ Case of
 		End case 
 	: ($typeField=Is longint:K8:6)  //9)//Longint
 		If (Field name:C257($1)="DT@")
-			jDateTimeRecov($1->; ->vDate1; ->vTime1)
+			DateTime_DTFrom($1->; ->vDate1; ->vTime1)
 			Case of 
 				: ($2="DateOnly")
 					$0:=String:C10(vDate1; 1)

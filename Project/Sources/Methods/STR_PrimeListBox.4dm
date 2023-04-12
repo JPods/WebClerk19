@@ -11,17 +11,28 @@ $lbName:=$1
 //      $appPath:=Path to object(Application file)
 //  If (Test path name(($appPath.parentFolder)+"XRAYCAPT.DLL")#Is a document)
 
-
-If (Test path name:C476(Storage:C1525.folder.jitF+"jitPrefs"+Folder separator:K24:12+"PrimeTables.txt")=1)
-	$tableList_t:=Document to text:C1236(Storage:C1525.folder.jitF+"jitPrefs"+Folder separator:K24:12+"PrimeTables.txt")
-Else 
-	$tableList_t:="Contact,Customer,Invoice,Item,Order,PO,Project,Proposal,Vendor,WebClerk"
+var $rec_fc : Object
+$rec_fc:=ds:C1482.FC.query("purpose = PrimeTables").first()
+Case of 
+	: (Test path name:C476(Storage:C1525.folder.jitF+"jitPrefs"+Folder separator:K24:12+"PrimeTables.txt")=1)
+		$tableList_t:=Document to text:C1236(Storage:C1525.folder.jitF+"jitPrefs"+Folder separator:K24:12+"PrimeTables.txt")
+		$tableList_t:=Replace string:C233($tableList_t; ","; ";")
+	: ($rec_fc#Null:C1517)
+		$tableList_t:=$rec_fc.data.primeTables
+	Else 
+		$tableList_t:="Contact;Customer;Invoice;Item;Order;PO;Project;Proposal;Vendor;WebClerk"
+End case 
+If ($rec_fc=Null:C1517)
+	$rec_fc:=ds:C1482.FC.new()
+	$rec_fc.obGeneral:=Init_obGeneral
+	$rec_fc.data:=New object:C1471("primeTables"; "Contact;Customer;Invoice;Item;Order;PO;Project;Proposal;Vendor;WebClerk")
+	$rec_fc.save()
 End if 
 
 C_COLLECTION:C1488($cTemp; $cWorking)
 $cTemp:=New collection:C1472
 $cWorking:=New collection:C1472
-$cTemp:=Split string:C1554($tableList_t; ",")
+$cTemp:=Split string:C1554($tableList_t; ";")
 
 C_TEXT:C284($vtProperty)
 var $tableNum : Integer

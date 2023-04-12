@@ -20,12 +20,6 @@ Case of
 		srPhone:=[Vendor:38]phone:10
 		srZip:=[Vendor:38]zip:8
 		srDisplayEmail:=[Vendor:38]email:59
-	: ($1=Table:C252(->[Lead:48]))
-		srAcct:=String:C10([Lead:48]idNum:32)
-		srCustomer:=[Lead:48]company:5
-		srPhone:=[Lead:48]phone:4
-		srZip:=[Lead:48]zip:10
-		srDisplayEmail:=[Lead:48]email:33
 End case 
 If ((allowAlerts_boo) & ($1#0))
 	Alert_OPiP

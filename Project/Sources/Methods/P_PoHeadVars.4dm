@@ -61,7 +61,7 @@ pveMailAddressiS:=pveMailAddressiS
 
 $tempSecureLevel:=vWccSecurity
 vWccSecurity:=0
-WccExecuteTask("PrintHeader"; process_o.tableName)
+WccExecuteTask("PrintHeader"; process_o.dataClassName)
 vWccSecurity:=$tempSecureLevel
 curLines:=0
 

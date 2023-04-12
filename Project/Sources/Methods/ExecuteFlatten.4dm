@@ -24,11 +24,11 @@ C_LONGINT:C283(viRecursive; $p; $myRecursive)
 viRecursive:=viRecursive+1  // track how deep we are going
 If (viRecursive=1)
 	If (<>viDebugMode>=5)
-		ConsoleMessage("// ExecuteFlatten: Begin = "+String:C10(viRecursive))
+		ConsoleLog("// ExecuteFlatten: Begin = "+String:C10(viRecursive))
 	End if 
 Else 
 	If (<>viDebugMode>=5)
-		ConsoleMessage("// ExecuteFlatten: Recursive = "+String:C10(viRecursive)+"\r"+$1)
+		ConsoleLog("// ExecuteFlatten: Recursive = "+String:C10(viRecursive)+"\r"+$1)
 	End if 
 End if 
 
@@ -64,7 +64,7 @@ If (Position:C15("Execute_TallyMaster"; $1)>0)  // ### jwm ### 20170508_1720 fla
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25>0)
 				If (Records in selection:C76([TallyMaster:60])=1)
 					If (<>viDebugMode>=4)
-						ConsoleMessage("// ExecuteFlatten: "+String:C10(viRecursive)+": Execute_TallyMaster Name: "+$myName+": Purpose: "+$myPurpose+"\r")
+						ConsoleLog("// ExecuteFlatten: "+String:C10(viRecursive)+": Execute_TallyMaster Name: "+$myName+": Purpose: "+$myPurpose+"\r")
 					End if 
 					$vTextFlattened:=ExecuteFlatten([TallyMaster:60]script:9)  // when directly added to the following line, it trucated vScriptRecursive
 					$vTextOutPut:=$vTextOutPut+"\r"+$vTextFlattened
@@ -74,16 +74,16 @@ If (Position:C15("Execute_TallyMaster"; $1)>0)  // ### jwm ### 20170508_1720 fla
 					$vTextOutPut:=$vTextOutPut+"\r"+$errMessage
 					$vTextOutPut:=$vTextOutPut+"\r"+$aWorkingText{$incArray}  // if unresolved return as received
 					If (<>viDebugMode>=4)
-						ConsoleMessage("// ExecuteFlatten: "+$errMessage+"\r")
+						ConsoleLog("// ExecuteFlatten: "+$errMessage+"\r")
 					End if 
 				End if 
 				// $frText:=$frText+ExecuteFlatten ($aWorkingText{$incArray}
 				If (viRecursive<=0)
 					ALERT:C41("viRecursive is "+String:C10(viRecursive)+". See Console")
-					ConsoleMessage("// ExecuteFlatten: viRecursive is "+String:C10(viRecursive)+"\r"+$vTextOutPut+"\r"+"\r"+"\r")
+					ConsoleLog("// ExecuteFlatten: viRecursive is "+String:C10(viRecursive)+"\r"+$vTextOutPut+"\r"+"\r"+"\r")
 				End if 
 				If ($myRecursive#viRecursive)
-					ConsoleMessage("// ExecuteFlatten: viRecursive changed elsewhere "+String:C10(viRecursive)+" : "+String:C10($myRecursive)+"\r")
+					ConsoleLog("// ExecuteFlatten: viRecursive changed elsewhere "+String:C10(viRecursive)+" : "+String:C10($myRecursive)+"\r")
 				End if 
 			: ($aWorkingText{$incArray}="Execute_Text@")  // ($aWorkingText{$incArray}="Execute_Text@")
 				$vTextOutPut:=$vTextOutPut+"\r"+"  //  "+$aWorkingText{$incArray}
@@ -106,9 +106,9 @@ If (viRecursive=1)
 	
 	Case of 
 		: (<>VIDEBUGMODE>=3)
-			ConsoleMessage("\r"+"// ExecuteFlatten: Final:"+"\r"+$vTextOutPut)
+			ConsoleLog("\r"+"// ExecuteFlatten: Final:"+"\r"+$vTextOutPut)
 		: (<>VIDEBUGMODE>=2)
-			ConsoleMessage($vTextOutPut)
+			ConsoleLog($vTextOutPut)
 	End case 
 	
 End if 
@@ -147,11 +147,11 @@ If (False:C215)
 	viRecursive:=viRecursive+1  // track how deep we are going
 	If (viRecursive=1)
 		If (<>viDebugMode>=3)
-			ConsoleMessage("// ExecuteFlatten: Begin = "+String:C10(viRecursive))
+			ConsoleLog("// ExecuteFlatten: Begin = "+String:C10(viRecursive))
 		End if 
 	Else 
 		If (<>viDebugMode>=3)
-			ConsoleMessage("// ExecuteFlatten: Recursive = "+String:C10(viRecursive)+"\r"+$1)
+			ConsoleLog("// ExecuteFlatten: Recursive = "+String:C10(viRecursive)+"\r"+$1)
 		End if 
 	End if 
 	$vTextOutPut:=""  // empty
@@ -196,7 +196,7 @@ If (False:C215)
 				QUERY:C277([TallyMaster:60];  & [TallyMaster:60]publish:25>0)
 				If (Records in selection:C76([TallyMaster:60])=1)
 					If (<>viDebugMode>=3)
-						ConsoleMessage("// ExecuteFlatten: "+String:C10(viRecursive)+": Execute_TallyMaster Name: "+$myName+": Purpose: "+$myPurpose+"\r")
+						ConsoleLog("// ExecuteFlatten: "+String:C10(viRecursive)+": Execute_TallyMaster Name: "+$myName+": Purpose: "+$myPurpose+"\r")
 					End if 
 					$vTextFlattened:=ExecuteFlatten([TallyMaster:60]script:9)  // when directly added to the following line, it trucated vScriptRecursive
 					$vTextOutPut:=$vTextOutPut+"\r"+$vTextFlattened
@@ -206,16 +206,16 @@ If (False:C215)
 					$vTextOutPut:=$vTextOutPut+"\r"+$errMessage
 					$vTextOutPut:=$vTextOutPut+"\r"+$aWorkingText{$incArray}  // if unresolved return as received
 					If (<>viDebugMode>=3)
-						ConsoleMessage("// ExecuteFlatten: "+$errMessage+"\r")
+						ConsoleLog("// ExecuteFlatten: "+$errMessage+"\r")
 					End if 
 				End if 
 				// $frText:=$frText+ExecuteFlatten ($aWorkingText{$incArray}
 				If (viRecursive<=0)
 					ALERT:C41("viRecursive is "+String:C10(viRecursive)+". See Console")
-					ConsoleMessage("// ExecuteFlatten: viRecursive is "+String:C10(viRecursive)+"\r"+$vTextOutPut+"\r"+"\r"+"\r")
+					ConsoleLog("// ExecuteFlatten: viRecursive is "+String:C10(viRecursive)+"\r"+$vTextOutPut+"\r"+"\r"+"\r")
 				End if 
 				If ($myRecursive#viRecursive)
-					ConsoleMessage("// ExecuteFlatten: viRecursive changed elsewhere "+String:C10(viRecursive)+" : "+String:C10($myRecursive)+"\r")
+					ConsoleLog("// ExecuteFlatten: viRecursive changed elsewhere "+String:C10(viRecursive)+" : "+String:C10($myRecursive)+"\r")
 				End if 
 			: (aText11{2}="Execute_Text@")  // ($aWorkingText{$incArray}="Execute_Text@")
 				$vTextOutPut:=$vTextOutPut+"\r"+"  //  "+$aWorkingText{$incArray}
@@ -245,7 +245,7 @@ If (False:C215)
 	
 	If (viRecursive=1)
 		If (<>VIDEBUGMODE>=2)
-			ConsoleMessage("\r"+"// ExecuteFlatten: Final:"+"\r"+$vTextOutPut)
+			ConsoleLog("\r"+"// ExecuteFlatten: Final:"+"\r"+$vTextOutPut)
 		End if 
 	End if 
 	$0:=$vTextOutPut  // always output the text

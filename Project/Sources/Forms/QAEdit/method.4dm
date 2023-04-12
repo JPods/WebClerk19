@@ -10,68 +10,7 @@ Case of
 		questionCnt_i:=101
 		Form:C1466.LBFrom:=""
 		
-		If (False:C215)
-			$fieldsQuestions:="question,seq,questionType,idNum,id"
-			
-			$lb_Question_o:=New object:C1471("listboxName"; "LB_QAQuestion"; "tableName"; "QAQuestion"; "fieldList"; $fieldsQuestions; "priority"; "fieldList")
-			//$lb_Question_o:=LBX_DraftFromFieldString($lb_Question_o)
-			
-			$lb_Question_o:=LBX_FieldListClean($lb_Question_o)
-			LBX_ColumnBuild($lb_Question_o)
-			LISTBOX SET COLUMN WIDTH:C833(*; "Column_QAQuestion_question_"; 200)
-			
-			
-			
-			$fieldsAnswers:="answer,seq"
-			
-			$LB_QAAnswer_o:=New object:C1471("listboxName"; "LB_QAAnswer"; "tableName"; "QAAnswer"; "fieldList"; $fieldsAnswers; "priority"; "fieldList")
-			//$LB_QAAnswer_o:=LBX_DraftFromFieldString($LB_QAAnswer_o)
-			
-			$LB_QAAnswer_o:=LBX_FieldListClean($LB_QAAnswer_o)
-			LBX_ColumnBuild($LB_QAAnswer_o)
-			LISTBOX SET COLUMN WIDTH:C833(*; "Column_QAAnswer_answer_"; 230)
-		End if 
 		
-		If (False:C215)  // could not get it to work, using na array below
-			
-			$fieldsQuestionTypes:="questionType"
-			
-			$lb_QuestionTypes_o:=New object:C1471("listboxName"; "LB_QuestionTypes"; "tableName"; "jjQAType"; "fieldList"; $fieldsQuestionTypes; "priority"; "fieldList")
-			
-			$columnAdder_t:=""
-			var field_o : Object
-			var $inc; $cnt : Integer
-			var $columnSetup_o : Object
-			$columnSetup_o:=New object:C1471
-			$cFilter:=New collection:C1472
-			$cFilter:=Split string:C1554($fieldList_t; ",")
-			$inc:=0
-			$tableName:="jjQAType"
-			For each ($vtFieldName; $cFilter)
-				$inc:=$inc+1
-				$columnSetup_o[String:C10($inc)]:=New object:C1471("tableName"; $tableName; "fieldName"; $vtFieldName; "formula"; "This."+$vtFieldName; "width"; 110; "alignment"; Align left:K42:2; "format"; "")
-				
-				
-				$vtFieldName:=$columnSetup_o[$vtProperty].fieldName
-				$viCount:=Num:C11($vtProperty)
-				
-				$vtColumnName:="Column_"+$tableName+"_"+$vtFieldName+"_"+$columnAdder_t
-				$vtHeader:="Header_"+$tableName+"_"+$vtFieldName+"_"+$columnAdder_t
-				$ptHeaderVar:=$NilPtr  // Get pointer($vtHeader)
-				$vtColumnFormula:=$columnSetup_o[$vtProperty].formula
-				$vtColumnFormula:="Form."+$vtFieldName
-				LISTBOX INSERT COLUMN FORMULA:C970(*; $lbName_t; $viCount; $vtColumnName; $vtColumnFormula; $obDateStore[$vtFieldName].fieldType; $vtHeader; $NilPtr)
-				var $vtTitle : Text
-				$vtTitle:=Uppercase:C13($vtFieldName[[1]])+Substring:C12($vtFieldName; 2; Length:C16($vtFieldName))
-				OBJECT SET TITLE:C194(*; $vtHeader; $vtTitle)
-				
-				LISTBOX SET COLUMN WIDTH:C833(*; $vtColumnName; 120)
-				OBJECT SET HORIZONTAL ALIGNMENT:C706(*; $vtColumnName; Align left:K42:2)
-				
-				
-			End for each 
-			
-		End if 
 		
 		var $c; $c2 : Collection
 		$c:=New collection:C1472

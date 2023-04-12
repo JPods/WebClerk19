@@ -13,9 +13,7 @@ If (Count parameters:C259=0)
 	C_LONGINT:C283($found)
 	$found:=Prs_CheckRunnin("WebClientTester")
 	If ($found>0)
-		If (Frontmost process:C327#<>aPrsNum{$found})
-			BRING TO FRONT:C326(<>aPrsNum{$found})
-		End if 
+		BRING TO FRONT:C326($found)
 	Else 
 		<>ptCurTable:=ptCurTable
 		<>prcControl:=1
@@ -26,12 +24,12 @@ Else
 	READ ONLY:C145([SyncRelation:103])
 	QUERY:C277([SyncRelation:103]; [SyncRelation:103]name:8=$1)
 	
-	FORM SET INPUT:C55([Control:1]; "ClientTester")
-	ptCurTable:=(->[Control:1])
+	FORM SET INPUT:C55([Base:1]; "ClientTester")
+	ptCurTable:=(->[Base:1])
 	// calSupport:=File([Service])//to be used for mixing calanders between files
-	ProcessTableOpen(->[Control:1]; "skip")
+	ProcessTableOpen(->[Base:1]; "skip")
 	DELAY PROCESS:C323(Current process:C322; 30)
-	POST OUTSIDE CALL:C329(<>theProcessList)
+	POST OUTSIDE CALL:C329(Storage:C1525.process.processList)
 End if 
 
 

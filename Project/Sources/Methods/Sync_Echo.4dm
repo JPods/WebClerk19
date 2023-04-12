@@ -41,7 +41,7 @@ If ($rslt=0)
 	
 	//[Service]ActionDate:=Current date
 	//[Service]ActionTime:=Current time
-	[Service:6]dtAction:35:=DateTime_Enter
+	[Service:6]dtAction:35:=DateTime_DTTo
 	[Service:6]actionBy:12:=Current user:C182
 	[Service:6]process:4:="Echo Errors"
 	[Service:6]action:20:="Echo Errors"

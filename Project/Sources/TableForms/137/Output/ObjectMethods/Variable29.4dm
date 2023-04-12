@@ -68,7 +68,7 @@ CREATE RECORD:C68([GenericChild2:91])
 [GenericChild2:91]purpose:4:="NamedSelection"
 [GenericChild2:91]name:3:=$nameOfSelection
 [GenericChild2:91]t01:32:=vText1
-[GenericChild2:91]dtLastSync:45:=DateTime_Enter
+[GenericChild2:91]dtLastSync:45:=DateTime_DTTo
 SAVE RECORD:C53([GenericChild2:91])
 
 $cntRecords:=Records in selection:C76([DInventory:36])

@@ -10,7 +10,7 @@ Case of
 		$obSel.orderBy("listName")
 		$cTemp:=New collection:C1472
 		C_COLLECTION:C1488($cFilter)
-		$cFilter:=Split string:C1554("listName,arrayName,whereUsed,id"; ",")
+		$cFilter:=Split string:C1554("listName,arrayName,whereUsed,id"; ";")
 		$cTemp:=$obSel.toCollection($cFilter)
 		
 		Form:C1466.cPopup:=$cTemp

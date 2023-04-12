@@ -37,7 +37,7 @@ CREATE RECORD:C68([Service:6])
 [Service:6]actionBy:12:=Current user:C182
 //[Service]ActionDate:=Current date
 //[Service]ActionTime:=Current time
-[Service:6]dtAction:35:=DateTime_Enter
+[Service:6]dtAction:35:=DateTime_DTTo
 [Service:6]dtBegin:15:=[Service:6]dtAction:35
 [Service:6]action:20:="Update Open Order"
 ////

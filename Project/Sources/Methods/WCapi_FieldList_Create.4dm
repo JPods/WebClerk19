@@ -46,7 +46,7 @@
 // End if 
 // 
 // // a list of lists
-// $obSel:=ds.FieldCharacteristic.query($vtQuery; $vtRole; $viSecureLvl)
+// $obSel:=ds.FC.query($vtQuery; $vtRole; $viSecureLvl)
 // $rayCnt:=$obSel.length
 // If ($rayCnt>0)
 // C_OBJECT($voByTable)
@@ -67,7 +67,7 @@
 // $vtFieldList:=FieldList_ForceUUIDFirst($vtFieldList)
 // $voFieldListByTable[$tableName]:=$vtFieldList
 // 
-// $voFCCreate:=ds.FieldCharacteristic.new()
+// $voFCCreate:=ds.FC.new()
 // $voFCCreate.tableName:=$tableName
 // $voFCCreate.purpose:="List_"+$vtRole
 // $voFCCreate.obGeneral:=New object
@@ -83,7 +83,7 @@
 // End for each 
 // $vtFieldList:=Substring($vtFieldList; 1; Length($vtFieldList)-1)
 // $voFieldListByTable[$tableName]:=$vtFieldList
-// $voFCCreate:=ds.FieldCharacteristic.new()
+// $voFCCreate:=ds.FC.new()
 // $voFCCreate.tableName:=$tableName
 // $voFCCreate.purpose:="List_"+$vtRole
 // $voFCCreate.obGeneral:=New object

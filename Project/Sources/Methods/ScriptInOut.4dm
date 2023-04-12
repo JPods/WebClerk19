@@ -14,7 +14,7 @@
 //
 // Parameters
 // ----------------------------------------------------
-//ConsoleMessage ("Launch")
+//Console_Log ("Launch")
 C_TEXT:C284($1; $sendDirection)
 C_TEXT:C284($2; $directionTable)
 C_TEXT:C284($tagScript_B; $tagScript_E; $tagBuild_B; $tagBuild_E; $tagAfter_B; $tagAfter_E; $tagHead_B; $tagHead_B)
@@ -83,7 +83,7 @@ Case of
 				FIRST RECORD:C50([TallyMaster:60])
 				vtext2:=vText9
 				For (vi1; 1; vi2)
-					ConsoleMessage("Sending TM: "+String:C10([TallyMaster:60]idNum:4))
+					ConsoleLog("Sending TM: "+String:C10([TallyMaster:60]idNum:4))
 					vtext1:=""
 					[TallyMaster:60]script:9:=Tx_ConvertScripts([TallyMaster:60]script:9)
 					[TallyMaster:60]build:6:=Tx_ConvertScripts([TallyMaster:60]build:6)
@@ -94,7 +94,7 @@ Case of
 					vtext1:=vtext1+"\r"+"\r"+":($1="+String:C10([TallyMaster:60]idNum:4)+")"+"\r"
 					vText10:="// "+[TallyMaster:60]purpose:3+":_:"+[TallyMaster:60]name:8+":_:"+[TallyMaster:60]status:33
 					vtext1:=vtext1+"\r"+vText10+"\r"
-					vtext1:=vtext1+"Consolemessage("+Txt_Quoted("TM"+String:C10([TallyMaster:60]idNum:4)+": "+[TallyMaster:60]status:33)+")"+"\r"+"\r"
+					vtext1:=vtext1+"ConsoleLog("+Txt_Quoted("TM"+String:C10([TallyMaster:60]idNum:4)+": "+[TallyMaster:60]status:33)+")"+"\r"+"\r"
 					vtext1:=vtext1+"\r"+vText11+"\r"+""+"\r"+[TallyMaster:60]script:9+"\r"+"// scriptEnd"+"\r"
 					vtext1:=vtext1+"\r"+vText12+"\r"+"// buildBegin"+"\r"+[TallyMaster:60]build:6+"\r"+"// buildEnd"+"\r"
 					vtext1:=vtext1+"\r"+vText13+"\r"+"// afterBegin"+"\r"+[TallyMaster:60]after:7+"\r"+"// afterEnd"+"\r"
@@ -113,7 +113,7 @@ Case of
 				FIRST RECORD:C50([CronJob:82])
 				vtext2:=vText9
 				For (vi1; 1; vi2)
-					ConsoleMessage("Sending TM: "+String:C10([CronJob:82]idNum:1))
+					ConsoleLog("Sending TM: "+String:C10([CronJob:82]idNum:1))
 					vtext1:=""
 					[CronJob:82]script:11:=Tx_ConvertScripts([CronJob:82]script:11)
 					[CronJob:82]scriptAfter:25:=Tx_ConvertScripts([CronJob:82]scriptAfter:25)
@@ -122,7 +122,7 @@ Case of
 					vtext1:=vtext1+"\r"+"\r"+":($1="+String:C10([CronJob:82]idNum:1)+")"+"\r"
 					vText10:="// "+[CronJob:82]nameID:10+":_:"+[CronJob:82]machineName:22+":_:"+[CronJob:82]cronString:28
 					vtext1:=vtext1+"\r"+vText10+"\r"
-					vtext1:=vtext1+"Consolemessage("+Txt_Quoted("CR"+String:C10([CronJob:82]idNum:1)+": "+[CronJob:82]nameID:10)+")"+"\r"+"\r"
+					vtext1:=vtext1+"ConsoleLog("+Txt_Quoted("CR"+String:C10([CronJob:82]idNum:1)+": "+[CronJob:82]nameID:10)+")"+"\r"+"\r"
 					vtext1:=vtext1+"\r"+vText11+[CronJob:82]script:11+"\r"
 					vtext1:=vtext1+"\r"+vText13+[CronJob:82]scriptAfter:25+"\r"
 					vtext1:=vtext1+"\r"+vText15
@@ -218,7 +218,7 @@ Case of
 							// add some status
 							SAVE RECORD:C53([TallyMaster:60])
 							UNLOAD RECORD:C212([TallyMaster:60])
-							ConsoleMessage("Updates TM: "+$stringRec)
+							ConsoleLog("Updates TM: "+$stringRec)
 						End if 
 						
 						// vText3:=$scriptText+"\r"+"\r"+"\r"+"\r"+$buildScript+"\r"+"\r"+"\r"+"\r"+$afterScript+"\r"+"\r"+"\r"+"\r"+$headerScript

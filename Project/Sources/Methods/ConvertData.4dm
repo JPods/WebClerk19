@@ -17,29 +17,29 @@
 
 
 
-FIRST RECORD:C50([QQQCustomer:2])
-$k:=Records in selection:C76([QQQCustomer:2])
+FIRST RECORD:C50([Customer:2])
+$k:=Records in selection:C76([Customer:2])
 //ThermoInitExit ("Converting Customers Last Name";$k;True)
 For ($i; 1; $k)
-	If ([QQQCustomer:2]nameLast:23#"")
-		Parse_UnWanted(entryEntity.nameLast)
-		SAVE RECORD:C53([QQQCustomer:2])
+	If ([Customer:2]nameLast:23#"")
+		Parse_UnWanted(process_o.entry_o.nameLast)
+		SAVE RECORD:C53([Customer:2])
 	End if 
-	NEXT RECORD:C51([QQQCustomer:2])
+	NEXT RECORD:C51([Customer:2])
 End for 
-UNLOAD RECORD:C212([QQQCustomer:2])
+UNLOAD RECORD:C212([Customer:2])
 
 
 
 
-FIRST RECORD:C50([QQQContact:13])
-$k:=Records in selection:C76([QQQContact:13])
+FIRST RECORD:C50([Contact:13])
+$k:=Records in selection:C76([Contact:13])
 //ThermoInitExit ("Converting Customers Last Name";$k;True)
 For ($i; 1; $k)
-	If ([QQQContact:13]NameLast:4#"")
-		Parse_UnWanted(entryEntity.NameLast)
-		SAVE RECORD:C53([QQQContact:13])
+	If ([Contact:13]nameLast:4#"")
+		Parse_UnWanted(process_o.entry_o.NameLast)
+		SAVE RECORD:C53([Contact:13])
 	End if 
-	NEXT RECORD:C51([QQQContact:13])
+	NEXT RECORD:C51([Contact:13])
 End for 
-UNLOAD RECORD:C212([QQQContact:13])
+UNLOAD RECORD:C212([Contact:13])

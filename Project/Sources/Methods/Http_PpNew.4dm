@@ -28,12 +28,12 @@ If (Record number:C243([Customer:2])<0)
 	vResponse:="Must be signed in as a customer, contact or lead to use this feature."
 	
 Else 
-	QUERY:C277([WebTempRec:101]; [WebTempRec:101]idEventLog:1=vleventID; *)
-	QUERY:C277([WebTempRec:101];  & [WebTempRec:101]qtyOrdered:4#0; *)
-	QUERY:C277([WebTempRec:101];  & [WebTempRec:101]posted:5=False:C215)
-	$k:=Records in selection:C76([WebTempRec:101])
-	FIRST RECORD:C50([WebTempRec:101])
-	If (Records in selection:C76([WebTempRec:101])=0)
+	QUERY:C277([zzzWebTempRec:101]; [zzzWebTempRec:101]idEventLog:1=vleventID; *)
+	QUERY:C277([zzzWebTempRec:101];  & [zzzWebTempRec:101]qtyOrdered:4#0; *)
+	QUERY:C277([zzzWebTempRec:101];  & [zzzWebTempRec:101]posted:5=False:C215)
+	$k:=Records in selection:C76([zzzWebTempRec:101])
+	FIRST RECORD:C50([zzzWebTempRec:101])
+	If (Records in selection:C76([zzzWebTempRec:101])=0)
 		vResponse:="There are no items is your shopping cart."
 		
 	Else 
@@ -53,8 +53,8 @@ Else
 		
 		WC_Parse(Table:C252(->[Proposal:42]); $2; True:C214)  //  
 		
-		If ([Proposal:42]proposalNum:5=0)
-			//vResponse:="Proposal not processed.  Likely no FieldCharacteristics."
+		If ([Proposal:42]idNum:5=0)
+			//vResponse:="Proposal not processed.  Likely no FC."
 		Else 
 			//[Proposal]ProposalNum:=CounterNew (->[Proposal])
 			[Proposal:42]takenBy:61:=Current user:C182
@@ -86,19 +86,19 @@ Else
 			End if 
 			TRACE:C157
 			For ($i; 1; $k)
-				$pQtyOrd:=[WebTempRec:101]qtyOrdered:4
-				QUERY:C277([Item:4]; [Item:4]itemNum:1=[WebTempRec:101]itemNum:3)
+				$pQtyOrd:=[zzzWebTempRec:101]qtyOrdered:4
+				QUERY:C277([Item:4]; [Item:4]itemNum:1=[zzzWebTempRec:101]itemNum:3)
 				
 				If ($doDebug)
 					//SEND PACKET(myDoc;[WebTempRec]ItemNum+"\r")
 				End if 
 				pPartNum:=[Item:4]itemNum:1
-				pDescript:=[WebTempRec:101]description:15
+				pDescript:=[zzzWebTempRec:101]description:15
 				[Item:4]qtySaleDefault:15:=$pQtyOrd
 				//viPrplLnCnt:=viPrplLnCnt+1
 				PpLnAdd((Size of array:C274(aPLineNum)+1); 1; False:C215)
 				PpLnExtend(viPrplLnCnt)
-				Http_ItemAdds(pvItemNum; [WebTempRec:101]addsDescripts:20; $pQtyOrd; aPLineAction)
+				Http_ItemAdds(pvItemNum; [zzzWebTempRec:101]addsDescripts:20; $pQtyOrd; aPLineAction)
 				
 				If ($doDebug)
 					ALERT:C41("PpLnAdd")
@@ -109,9 +109,9 @@ Else
 				aPProfile1{viPrplLnCnt}:=pvLnProfile1
 				apProfile2{viPrplLnCnt}:=pvLnProfile2
 				apProfile3{viPrplLnCnt}:=pvLnProfile3
-				[WebTempRec:101]posted:5:=True:C214
-				SAVE RECORD:C53([WebTempRec:101])
-				NEXT RECORD:C51([WebTempRec:101])
+				[zzzWebTempRec:101]posted:5:=True:C214
+				SAVE RECORD:C53([zzzWebTempRec:101])
+				NEXT RECORD:C51([zzzWebTempRec:101])
 			End for 
 			If ($doDebug)
 				ALERT:C41("Find Ship Zone")
@@ -166,7 +166,7 @@ Else
 				Else 
 					vtEmailReceiver:=[Customer:2]email:81
 				End if 
-				vtEmailSubject:="Web Order "+String:C10([Proposal:42]proposalNum:5; "0000-0000")
+				vtEmailSubject:="Web Order "+String:C10([Proposal:42]idNum:5; "0000-0000")
 				
 				READ ONLY:C145([TallyMaster:60])
 				QUERY:C277([TallyMaster:60]; [TallyMaster:60]name:8="WebClerk_NewProposal"; *)  //"WebClerk_NewOrder""

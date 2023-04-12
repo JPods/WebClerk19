@@ -62,7 +62,7 @@ Case of
 						DELAY PROCESS:C323(Current process:C322; 2)  // Pause
 						$FailSafe:=$FailSafe+1
 					End while 
-					ConsoleMessage("FaileSafe: "+String:C10($FailSafe))
+					ConsoleLog("FaileSafe: "+String:C10($FailSafe))
 				End if 
 				
 			End if 

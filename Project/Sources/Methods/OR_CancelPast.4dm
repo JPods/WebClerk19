@@ -86,7 +86,7 @@ If (UserInPassWordGroup("AdminControl"))
 							If ($doDone=0)
 								[Order:3]status:59:="Cancel"
 							End if 
-							[Order:3]lng:34:=DateTime_Enter
+							[Order:3]lng:34:=DateTime_DTTo
 							[Order:3]dateInvoiceComp:6:=Current date:C33
 							$w:=Records in selection:C76([OrderLine:49])
 							FIRST RECORD:C50([OrderLine:49])

@@ -10,8 +10,8 @@ Case of
 		aSPOFPPONum{$index}:=-aPOSerialRc{$1}
 		aSPOPOLnNum{$index}:=-aPOLineNum{$1}
 		aPOSerialRc{$1}:=<>ciSRUnknown
-		aPOSerialNm{$1}:=""
+		aPOSerialNm{$1}:=Null:C1517
 	: ($index>0)  //changed only in the current unsaved array of serial numbers
 		Ray_DeleteElems($index; 1; ->aSPOItmAlph; ->aSPOItmDesc; ->aSPOSerialN; ->aSPOModelN; ->aSPOPOLnNum; ->aSPOOnFP; ->aSPOFPlanID; ->aSPOFPLnNum; ->aSPOFPExpir; ->aSPOFPPONum; ->aSPOFPVndID)
-		aPOSerialNm{$1}:=""
+		aPOSerialNm{$1}:=Null:C1517
 End case 

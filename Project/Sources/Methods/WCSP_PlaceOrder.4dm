@@ -57,7 +57,7 @@ $voOrder.DateShipOn:=Current date:C33+<>tcNeedDelay
 $voOrder.DateOrdered:=Current date:C33
 $voOrder.DateReceived:=Current date:C33
 $voOrder.TimeOrdered:=Current time:C178
-$voOrder.DTSync:=DateTime_Enter
+$voOrder.DTSync:=DateTime_DTTo
 $voOrder.AutoFreight:=(<>tcAutoFrght=1)
 $voOrder.FOB:=Storage:C1525.default.fob
 $voOrder.siteID:=DSGetMachineSiteID
@@ -139,7 +139,7 @@ For each ($voCartLine; $voCart.ChildCartLines)
 	
 	// CREATE ORDER RECORD
 	
-	$voOrderLine:=ds:C1482.OrderLines.new()
+	$voOrderLine:=ds:C1482.OrderLine.new()
 	
 	// ADD HARDCODED DATA
 	
@@ -211,7 +211,7 @@ For each ($voCartLine; $voCart.ChildCartLines)
 	$vodInventory.customerID:=$voOrder.customerID
 	$vodInventory.Reason:="oi new line"
 	$vodInventory.typeID:="SO"
-	$vodInventory.DTCreated:=DateTime_Enter
+	$vodInventory.DTCreated:=DateTime_DTTo
 	$vodInventory.DateCreated:=Current date:C33
 	$vodInventory.TimeCreated:=Current time:C178
 	$vodInventory.Note:=""
@@ -248,7 +248,7 @@ $voOrder.save()
 $voCustomer.LastSaleDate:=Current date:C33
 $voCustomer.LastSaleAmount:=$voOrder.Amount
 $voCustomer.BalanceOpenOrders:=Round:C94($voCustomer.BalanceOpenOrders+$voOrder.Amount; <>tcDecimalTt)
-$voCustomer.DTSync:=DateTime_Enter
+$voCustomer.DTSync:=DateTime_DTTo
 $voCustomer.save()
 
 

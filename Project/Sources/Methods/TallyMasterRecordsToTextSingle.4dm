@@ -11,7 +11,7 @@
 // Parameters
 // ----------------------------------------------------
 // ### jwm ### 20160929_1406 removed header
-// ### jwm ### 20160929_1627 added consolemessage
+// ### jwm ### 20160929_1627 added Console_Log
 
 C_TEXT:C284($1; $direction)
 
@@ -42,7 +42,7 @@ Case of
 			$recCnt:=Records in selection:C76([TallyMaster:60])
 			FIRST RECORD:C50([TallyMaster:60])
 			For ($recInc; 1; $recCnt)
-				ConsoleMessage("Sending TM: "+String:C10([TallyMaster:60]idNum:4))
+				ConsoleLog("Sending TM: "+String:C10([TallyMaster:60]idNum:4))
 				//ExportScriptWithHeader ($theFolder;String([TallyMaster]UniqueID)+"_Script.txt";[TallyMaster]Name;[TallyMaster]Script)
 				//ExportScriptWithHeader ($theFolder;String([TallyMaster]UniqueID)+"_Build.txt";[TallyMaster]Name;[TallyMaster]Build)
 				//ExportScriptWithHeader ($theFolder;String([TallyMaster]UniqueID)+"_After.txt";[TallyMaster]Name;[TallyMaster]After)
@@ -76,7 +76,7 @@ Case of
 					$uniqueID:=Num:C11(Substring:C12($arrayDocuments{$recInc}; 1; $p-1))
 					QUERY:C277([TallyMaster:60]; [TallyMaster:60]idNum:4=$uniqueID)
 					If (Records in selection:C76([TallyMaster:60])=1)
-						ConsoleMessage("Importing TM: "+String:C10([TallyMaster:60]idNum:4))  // ### jwm ### 20160929_1627
+						ConsoleLog("Importing TM: "+String:C10([TallyMaster:60]idNum:4))  // ### jwm ### 20160929_1627
 						Case of 
 							: (Position:C15("Script"; $arrayDocuments{$recInc})>0)
 								[TallyMaster:60]script:9:=DocumentToText($pathname+$arrayDocuments{$recInc})

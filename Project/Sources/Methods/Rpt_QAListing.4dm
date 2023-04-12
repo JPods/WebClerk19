@@ -19,12 +19,11 @@ C_TEXT:C284($commo)
 //If (<>vlCalc=0)
 KeyModifierCurrent
 Rpt_RayManage(0)
-If ((Size of array:C274(aSrvLines)>0) & (ptCurTable=(->[Control:1])))
+If ((Size of array:C274(aSrvLines)>0) & (ptCurTable=(->[Base:1])))
 	Case of 
 		: ((aServiceTableName{aSrvLines{1}}="S") | (aServiceTableName{aSrvLines{1}}="C"))
 			$dofile:=2
-		: (aServiceTableName{aSrvLines{1}}="L")
-			$dofile:=Table:C252(->[zzzLead:48])
+			
 	End case 
 Else 
 	$dofile:=Table:C252(ptCurTable)
@@ -40,16 +39,6 @@ Case of
 		pvPhone:=Format_Phone([Customer:2]phone:13)
 		pvFAX:=Format_Phone([Customer:2]fax:66)
 		$commo:="Phone: "+pvPhone+"\r"+"FAX: "+pvPhone+"\r"+"eMail: "+[Customer:2]email:81
-	: ($dofile=Table:C252(->[zzzLead:48]))
-		$theFile:=Table:C252(->[zzzLead:48])
-		$theAcct:=String:C10([zzzLead:48]idNum:32)
-		QUERY:C277([TallyResult:73]; [TallyResult:73]tableNum:3=$theFile; *)
-		QUERY:C277([TallyResult:73];  & [TallyResult:73]purpose:2=$theAcct; *)
-		QUERY:C277([TallyResult:73];  & [TallyResult:73]name:1="Q&ARays")
-		CustAddress:=PVars_AddressFull("Lead")
-		pvPhone:=Format_Phone([zzzLead:48]phone:4)
-		pvFAX:=Format_Phone([zzzLead:48]fax:29)
-		$commo:="Phone: "+pvPhone+"\r"+"FAX: "+pvPhone+"\r"+"eMail: "+[zzzLead:48]email:33
 End case 
 C_PICTURE:C286($emptyPict)
 //[TallyResult]PictBlk1:=$emptyPict

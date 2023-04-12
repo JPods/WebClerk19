@@ -16,7 +16,7 @@ If (Count parameters:C259>2)
 	End if 
 End if 
 REDUCE SELECTION:C351([Item:4]; 0)
-$theDT:=DateTime_Enter
+$theDT:=DateTime_DTTo
 $k:=Records in selection:C76([POLine:40])
 FIRST RECORD:C50([POLine:40])
 C_LONGINT:C283($incPOLines; $cntPOLines; $leadTime)

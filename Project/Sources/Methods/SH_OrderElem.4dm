@@ -17,22 +17,23 @@ C_REAL:C285($rateFOB)
 FIRST RECORD:C50([DInventory:36])
 For ($index; 1; $cntRecs)
 	LOAD RECORD:C52([DInventory:36])
-	If (Locked:C147([DInventory:36]))
-		CREATE RECORD:C68([TallyChange:65])
-		
-		[TallyChange:65]fileNum:1:=Table:C252(->[DInventory:36])
-		[TallyChange:65]fieldNum:2:=Table:C252(->[DInventory:36]pacing:23)
-		[TallyChange:65]longIntKey:4:=Record number:C243([DInventory:36])
-		[TallyChange:65]booleanValue:8:=True:C214
-		SAVE RECORD:C53([TallyChange:65])
-	End if 
+	//PPP 19-FORCED
+	//If (Locked([DInventory]))
+	//CREATE RECORD([TallyChange])
+	
+	//[TallyChange]idAlpha:=Table(->[DInventory])
+	//[TallyChange]fieldNum:=Table(->[DInventory]pacing)
+	//[TallyChange]idNumKey:=Record number([DInventory])
+	//[TallyChange]booleanValue:=True
+	//SAVE RECORD([TallyChange])
+	//End if 
 	$doOrd:=False:C215
 	$doInv:=False:C215
 	Case of 
 		: ([DInventory:36]pacing:23=False:C215)
-		: ([DInventory:36]typeid:14="so")
+		: ([DInventory:36]typeID:14="so")
 			$doOrd:=True:C214
-		: ([DInventory:36]typeid:14="iv")
+		: ([DInventory:36]typeID:14="iv")
 			$doInv:=True:C214
 			//(([dInventory]QtyOnSO#0)&([dInventory]TakeAction=4))   //invoice direct
 			If ((([DInventory:36]qtyOnHand:2<0) & ([DInventory:36]qtyOnSO:3>[DInventory:36]qtyOnHand:2)) | (([DInventory:36]qtyOnHand:2>0) & ([DInventory:36]qtyOnSO:3<[DInventory:36]qtyOnHand:2)) | (([DInventory:36]qtyOnSO:3#0) & ([DInventory:36]takeAction:19=4)))
@@ -45,20 +46,20 @@ For ($index; 1; $cntRecs)
 		SH_FillRays(-3; $w; 1)
 		aTmpLong2{$w}:=2
 		aQtyNact{$w}:=-[DInventory:36]qtyOnHand:2
-		If ([Invoice:26]invoiceNum:2#[DInventory:36]docid:9)
-			QUERY:C277([Invoice:26]; [Invoice:26]invoiceNum:2=[DInventory:36]docid:9)
+		If ([Invoice:26]idNum:2#[DInventory:36]docid:9)
+			QUERY:C277([Invoice:26]; [Invoice:26]idNum:2=[DInventory:36]docid:9)
 		End if 
 		Case of 
-			: ([Invoice:26]orderNum:1=1)
+			: ([Invoice:26]idNumOrder:1=1)
 				REDUCE SELECTION:C351([Order:3]; 0)
-			: ([Order:3]orderNum:2#[Invoice:26]orderNum:1)
-				QUERY:C277([Order:3]; [Order:3]orderNum:2=[Invoice:26]orderNum:1)
+			: ([Order:3]idNum:2#[Invoice:26]idNumOrder:1)
+				QUERY:C277([Order:3]; [Order:3]idNum:2=[Invoice:26]idNumOrder:1)
 		End case 
 		If ([Rep:8]repID:1#[Invoice:26]repID:22)
 			QUERY:C277([Rep:8]; [Rep:8]repID:1=[Invoice:26]repID:22)
 		End if 
-		If ([Customer:2]customerID:1#[DInventory:36]custVendid:12)
-			QUERY:C277([Customer:2]; [Customer:2]customerID:1=[DInventory:36]custVendid:12)
+		If ([Customer:2]customerID:1#[DInventory:36]customerID:12)
+			QUERY:C277([Customer:2]; [Customer:2]customerID:1=[DInventory:36]customerID:12)
 		End if 
 		If ([TallyResult:73]name:1#[Invoice:26]fob:39)
 			QUERY:C277([TallyResult:73]; [TallyResult:73]name:1=[Invoice:26]fob:39; *)
@@ -69,7 +70,7 @@ For ($index; 1; $cntRecs)
 		aTmp20Str1{$w}:=[Invoice:26]fob:39
 		aTmp20Str2{$w}:=[Invoice:26]profile2:66
 		aTmp20Str3{$w}:=[Invoice:26]profile3:70
-		aTmpLong1{$w}:=[Invoice:26]invoiceNum:2
+		aTmpLong1{$w}:=[Invoice:26]idNum:2
 		//aTmpLong2{$w}:=[Invoice]OrderNum
 		aCustRep{$w}:=[Invoice:26]repID:22
 		aText1{$w}:=Substring:C12([Customer:2]customerID:1; 1; 1)
@@ -82,7 +83,7 @@ For ($index; 1; $cntRecs)
 		End if 
 		aPartNum{$w}:=[DInventory:36]itemNum:1
 		aPartDesc{$w}:=[Item:4]description:7
-		aText3{$w}:=[Item:4]typeid:26  //Group
+		aText3{$w}:=[Item:4]type:26  //Group
 		aText4{$w}:=[Item:4]profile1:35  //Model
 		aSaleNact{$w}:=Round:C94([DInventory:36]unitPrice:21*aQtyNact{$w}; 2)  // Sales
 		aScpNPlan{$w}:=Round:C94(aSaleNact{$w}*$rateFOB*0.01; 2)  // hidden Frieght
@@ -99,11 +100,11 @@ For ($index; 1; $cntRecs)
 		$w:=Size of array:C274(aTmpLong1)+1
 		SH_FillRays(-3; $w; 1)
 		aTmpLong2{$w}:=1
-		If ([Order:3]orderNum:2#[DInventory:36]docid:9)
-			QUERY:C277([Order:3]; [Order:3]orderNum:2=[DInventory:36]docid:9)
+		If ([Order:3]idNum:2#[DInventory:36]docid:9)
+			QUERY:C277([Order:3]; [Order:3]idNum:2=[DInventory:36]docid:9)
 		End if 
-		If ([Customer:2]customerID:1#[DInventory:36]custVendid:12)
-			QUERY:C277([Customer:2]; [Customer:2]customerID:1=[DInventory:36]custVendid:12)
+		If ([Customer:2]customerID:1#[DInventory:36]customerID:12)
+			QUERY:C277([Customer:2]; [Customer:2]customerID:1=[DInventory:36]customerID:12)
 		End if 
 		If ([TallyResult:73]name:1#[Order:3]fob:45)
 			QUERY:C277([TallyResult:73]; [TallyResult:73]name:1=[Order:3]fob:45)
@@ -120,12 +121,12 @@ For ($index; 1; $cntRecs)
 		//If ([Rep]RepID#[Order]RepID)
 		//SEARCH([Rep];[Rep]RepID=[Order]RepID)
 		//End if 
-		If ([DInventory:36]typeid:14="i@")
+		If ([DInventory:36]typeID:14="i@")
 			aQtyNact{$w}:=Abs:C99([DInventory:36]qtyOnSO:3-[DInventory:36]qtyOnHand:2)  //Qty
 		Else 
 			aQtyNact{$w}:=[DInventory:36]qtyOnSO:3  //Qty
 		End if 
-		aTmpLong1{$w}:=[Order:3]orderNum:2
+		aTmpLong1{$w}:=[Order:3]idNum:2
 		aText1{$w}:=Substring:C12([Customer:2]customerID:1; 1; 1)
 		aCustomers{$w}:=[Customer:2]company:2
 		aCustAcct{$w}:=[Customer:2]customerID:1
@@ -133,7 +134,7 @@ For ($index; 1; $cntRecs)
 		aText2{$w}:=[Customer:2]country:9
 		aPartNum{$w}:=[DInventory:36]itemNum:1
 		aPartDesc{$w}:=[Item:4]description:7
-		aText3{$w}:=[Item:4]typeid:26  //Group
+		aText3{$w}:=[Item:4]type:26  //Group
 		aText4{$w}:=[Item:4]profile1:35  //Model
 		aCustRep{$w}:=[Order:3]repID:8  //
 		aSaleNact{$w}:=Round:C94([DInventory:36]unitPrice:21*aQtyNact{$w}; 2)  // vR1, sales

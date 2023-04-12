@@ -139,5 +139,5 @@ End if
 If (<>viDebugMode>410)
 	C_TEXT:C284($tagConvert)
 	$tagConvert:=$actionText+": "+vWebTagTable+": "+vWebTagField+": "+vWebTagFormat
-	ConsoleMessage($tagConvert)
+	ConsoleLog($tagConvert)
 End if 

@@ -26,7 +26,7 @@ vResponse:="Error: no RemoteUsers found"
 
 C_LONGINT:C283($cntFoundEmails)
 If (<>viDebugMode>410)
-	ConsoleMessage("PasswordReset")
+	ConsoleLog("PasswordReset")
 End if 
 $cntFoundEmails:=EmailQuery(->[RemoteUser:57]email:14; $userEmail; ->vResponse)
 Case of 
@@ -37,7 +37,7 @@ Case of
 		CREATE RECORD:C68([TallyResult:73])
 		[TallyResult:73]name:1:=$userEmail
 		[TallyResult:73]purpose:2:="ErrorEmail"
-		[TallyResult:73]dtReport:12:=DateTime_Enter
+		[TallyResult:73]dtReport:12:=DateTime_DTTo
 		[TallyResult:73]dateCreated:53:=Current date:C33
 		[TallyResult:73]profile1:17:="open"
 		[TallyResult:73]profile2:18:="multiple emails"
@@ -56,7 +56,7 @@ Case of
 		EventLogsMessage("\r"+"Password Reset Pending: "+$userEmail)
 		[EventLog:75]email:56:=$userEmail
 		C_LONGINT:C283($dtCurrent)
-		$dtCurrent:=DateTime_Enter
+		$dtCurrent:=DateTime_DTTo
 		
 		[EventLog:75]dtExpires:55:=$dtCurrent+7200  // start 2 hours
 		SAVE RECORD:C53([EventLog:75])

@@ -65,6 +65,8 @@ For each ($voRec; $voSel)
 	$voSingleEmployeeInfo.dept:=$voRec.dept
 	$voSingleEmployeeInfo.jobTitle:=$voRec.title
 	$voSingleEmployeeInfo.role:=$voRec.role
+	$voSingleEmployeeInfo.securityLevel:=$voRec.securityLevel
+	
 	// will update ane existing object
 	<>voEmployeeInfo[$voSingleEmployeeInfo.nameid]:=$voSingleEmployeeInfo
 	

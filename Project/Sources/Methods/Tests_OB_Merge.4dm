@@ -133,52 +133,52 @@ $voMerged:=OB_Merge($voBase; $voMergeDown)
 
 If (OB Get:C1224($voMerged; "TextVariableOne")#"OriginalValue")
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: TextVariableOne")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: TextVariableOne")
 End if 
 
 If (OB Get:C1224($voMerged; "TextVariableTwo")#"NewValue")
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: TextVariableTwo")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: TextVariableTwo")
 End if 
 
 OB GET ARRAY:C1229($voMerged; "ArrayText"; $atOutput)
 If ($atOutput{1}#$vtInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: ArrayText")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: ArrayText")
 End if 
 
 OB GET ARRAY:C1229($voMerged; "ArrayPointers"; $apOutput)
 If ($apOutput{1}#$vpInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: ArrayPointers")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: ArrayPointers")
 End if 
 
 OB GET ARRAY:C1229($voMerged; "ArrayDate"; $adOutput)
 If ($adOutput{1}#$vdInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: ArrayDate")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: ArrayDate")
 End if 
 
 OB GET ARRAY:C1229($voMerged; "ArrayBoolean"; $abOutput)
 If ($abOutput{1}#$vbInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: ArrayBoolean")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: ArrayBoolean")
 End if 
 
 OB GET ARRAY:C1229($voMerged; "ArrayInt"; $aiOutput)
 If ($aiOutput{1}#$viInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: ArrayInt")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: ArrayInt")
 End if 
 
 OB GET ARRAY:C1229($voMerged; "ArrayReal"; $arOutput)
 If ($arOutput{1}#$vrInput)
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: ArrayReal")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: ArrayReal")
 End if 
 
 OB GET ARRAY:C1229($voMerged; "ArrayObject"; $aoOutput)
 If (OB Get:C1224($aoOutput{1}; "Key")#OB Get:C1224($voInput; "Key"))
 	$0:=False:C215
-	ConsoleMessage("Tests_OB_Merge: Error when running method: OB_Merge: ArrayObject")
+	ConsoleLog("Tests_OB_Merge: Error when running method: OB_Merge: ArrayObject")
 End if 

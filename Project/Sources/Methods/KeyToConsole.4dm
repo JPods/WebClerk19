@@ -6,8 +6,8 @@
 // ----------------------------------------------------
 // Method: KeyToConsole
 // Description
-// UUIDKey_ToConsoleMessage
-//UUIDKeyToConsoleMessage
+// UUIDKey_ToConsole_Log
+//UUIDKeyToConsole_Log
 // Parameters
 // ----------------------------------------------------
 
@@ -18,7 +18,7 @@ $tableName:=Table name:C256(ptCurTable)
 C_POINTER:C301($ptUUIDKey)
 $ptUUIDKey:=STR_GetFieldPointer($tableName; "id")
 If (Is nil pointer:C315($ptUUIDKey))
-	ConsoleMessage("No id for Table: "+$tableName)
+	ConsoleLog("No id for Table: "+$tableName)
 Else 
-	ConsoleMessage("id record in Table: "+$tableName+": "+$ptUUIDKey->)
+	ConsoleLog("id record in Table: "+$tableName+": "+$ptUUIDKey->)
 End if 

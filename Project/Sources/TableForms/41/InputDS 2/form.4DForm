@@ -1,0 +1,682 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #11",
+	"markerBody": 220,
+	"markerBreak": 220,
+	"markerFooter": 230,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"_Text_Counters_1": {
+					"type": "text",
+					"top": 80,
+					"left": 28,
+					"width": 52,
+					"height": 14,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"fontWeight": "bold",
+					"text": "Counters"
+				},
+				"_Text_Counter__2": {
+					"type": "text",
+					"top": 121,
+					"left": 15,
+					"width": 85,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Counter : "
+				},
+				"_Text_dtLastSync__3": {
+					"type": "text",
+					"top": 147,
+					"left": 15,
+					"width": 85,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "dtLastSync : "
+				},
+				"_Text_TableName__4": {
+					"type": "text",
+					"top": 173,
+					"left": 15,
+					"width": 85,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TableName : "
+				},
+				"_Text_TableNum__5": {
+					"type": "text",
+					"top": 199,
+					"left": 15,
+					"width": 85,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "TableNum : "
+				},
+				"Counter": {
+					"type": "input",
+					"top": 119,
+					"left": 106,
+					"width": 128,
+					"height": 17,
+					"dataSource": "[Counter:41]counter:1",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Counter.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"dtLastSync": {
+					"type": "input",
+					"top": 145,
+					"left": 106,
+					"width": 128,
+					"height": 17,
+					"dataSource": "[Counter:41]status:5",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableName": {
+					"type": "input",
+					"top": 171,
+					"left": 106,
+					"width": 289,
+					"height": 17,
+					"dataSource": "[Counter:41]tableName:2",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableNum": {
+					"type": "input",
+					"top": 197,
+					"left": 106,
+					"width": 128,
+					"height": 17,
+					"dataSource": "[Counter:41]tableNum:4",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_<>pNavPallet_10": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_11": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_12": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_13": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"action": "previousRecord",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_14": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"action": "nextRecord",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_15": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_UniqueID__16": {
+					"type": "text",
+					"top": 226,
+					"left": 15,
+					"width": 85,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "UniqueID : "
+				},
+				"TableNum1": {
+					"type": "input",
+					"top": 224,
+					"left": 106,
+					"width": 128,
+					"height": 17,
+					"dataSource": "[Counter:41]idNum:6",
+					"dataSourceTypeHint": "integer",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP___18": {
+					"type": "input",
+					"top": 226,
+					"left": 262,
+					"width": 125,
+					"height": 16,
+					"dataSource": "entry_o.",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field5.4dm",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onHeader",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"zzzdataSource": "iLoLongInt1"
+				},
+				"_PROP___19": {
+					"type": "input",
+					"top": 226,
+					"left": 397,
+					"width": 125,
+					"height": 16,
+					"dataSource": "entry_o.",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "iLoLongInt2"
+				},
+				"_PROP___20": {
+					"type": "input",
+					"top": 226,
+					"left": 535,
+					"width": 80,
+					"height": 16,
+					"dataSource": "entry_o.",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "iLoLongInt3"
+				},
+				"_Text_PendingMin_21": {
+					"type": "text",
+					"top": 209,
+					"left": 262,
+					"width": 125,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "PendingMin"
+				},
+				"_Text_PendingMax_22": {
+					"type": "text",
+					"top": 209,
+					"left": 397,
+					"width": 125,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "PendingMax"
+				},
+				"_Text_Records_23": {
+					"type": "text",
+					"top": 209,
+					"left": 535,
+					"width": 65,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "center",
+					"text": "Records"
+				},
+				"bRebuildPending": {
+					"type": "button",
+					"top": 143,
+					"left": 262,
+					"width": 140,
+					"height": 22,
+					"dataSource": "b12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "Rebuild Pending",
+					"style": "bevel",
+					"method": "ObjectMethods/bRebuildPending.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"iLoText1": {
+					"type": "input",
+					"top": 256,
+					"left": 27,
+					"width": 937,
+					"height": 421,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "iLoText1",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_SetableCounters\r[Customer]\r[Invoice]\r[Item]\r[Order]\r[PO]\r[Proposal]\r[Rep]\r[Vendor]\r[WorkOrder]_26": {
+					"type": "text",
+					"top": 68,
+					"left": 455,
+					"width": 150,
+					"height": 134,
+					"class": "cssInputLabel",
+					"text": "Setable Counters\r[Customer]\r[Invoice]\r[Item]\r[Order]\r[PO]\r[Proposal]\r[Rep]\r[Vendor]\r[WorkOrder]"
+				},
+				"bShowPending": {
+					"type": "button",
+					"top": 116,
+					"left": 262,
+					"width": 140,
+					"height": 22,
+					"dataSource": "b11",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "Show Pending",
+					"style": "bevel",
+					"method": "ObjectMethods/bShowPending.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_AutomaticCounters\rAllwithUniqueIDnamedfieldandEventLogs\r_28": {
+					"type": "text",
+					"top": 68,
+					"left": 688,
+					"width": 135,
+					"height": 50,
+					"class": "cssInputLabel",
+					"text": "Automatic Counters\rAll with UniqueID named field and EventLogs\r"
+				},
+				"_Text_Scripts_\r$protectedFieldNum_=STR_GetUniqueFieldNum{$tableNum})\r$protectedFieldSigned_=<>aUniqueFieldUnSorted{$tableNum}_29": {
+					"type": "text",
+					"top": 8,
+					"left": 122,
+					"width": 333,
+					"height": 62,
+					"class": "cssInputLabel",
+					"text": "Scripts:\r$protectedFieldNum:=STR_GetUniqueFieldNum{$tableNum})\r$protectedFieldSigned:=<>aUniqueFieldUnSorted{$tableNum}"
+				},
+				"bSListSequences": {
+					"type": "button",
+					"top": 110,
+					"left": 688,
+					"width": 140,
+					"height": 22,
+					"dataSource": "b21",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "List Sequences",
+					"style": "bevel",
+					"method": "ObjectMethods/bSListSequences.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bSetSequenceNum": {
+					"type": "button",
+					"top": 184,
+					"left": 688,
+					"width": 140,
+					"height": 22,
+					"dataSource": "b22",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "Set Sequence Num",
+					"style": "bevel",
+					"method": "ObjectMethods/bSetSequenceNum.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP___32": {
+					"type": "input",
+					"top": 113,
+					"left": 852,
+					"width": 80,
+					"height": 16,
+					"dataSource": "entry_o.",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "iLoLongInt4"
+				},
+				"_Text_SequenceCurrent_33": {
+					"type": "text",
+					"top": 91,
+					"left": 852,
+					"width": 109,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Sequence Current"
+				},
+				"_PROP___34": {
+					"type": "input",
+					"top": 187,
+					"left": 852,
+					"width": 80,
+					"height": 16,
+					"dataSource": "entry_o.",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput16",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					],
+					"zzzdataSource": "iLoLongInt5"
+				},
+				"_Text_SequenceDesired_35": {
+					"type": "text",
+					"top": 169,
+					"left": 852,
+					"width": 109,
+					"height": 14,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "Sequence Desired"
+				},
+				"bAllRecords": {
+					"type": "button",
+					"top": 16,
+					"left": 547,
+					"width": 140,
+					"height": 22,
+					"dataSource": "b23",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "All Records",
+					"style": "bevel",
+					"method": "ObjectMethods/bAllRecords.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNewRecord": {
+					"type": "button",
+					"top": 16,
+					"left": 769,
+					"width": 140,
+					"height": 22,
+					"dataSource": "b24",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"focusable": false,
+					"text": "New Record",
+					"style": "bevel",
+					"method": "ObjectMethods/bNewRecord.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line": {
+					"type": "line",
+					"top": 89,
+					"left": 649,
+					"width": 1,
+					"height": 155,
+					"stroke": "#808080",
+					"startPoint": "bottomLeft"
+				},
+				"_Text_Status__39": {
+					"type": "text",
+					"top": 69,
+					"left": 168,
+					"width": 85,
+					"height": 14,
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Status : "
+				},
+				"Counter1": {
+					"type": "input",
+					"top": 67,
+					"left": 259,
+					"width": 136,
+					"height": 18,
+					"dataSource": "[Counter:41]status:5",
+					"class": "cssInput",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Counter1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

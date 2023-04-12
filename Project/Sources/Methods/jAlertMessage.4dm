@@ -183,7 +183,7 @@ End case
 If (Storage:C1525.vbEDIPass)
 	ALERT:C41($messageText)
 Else 
-	ConsoleMessage($messageText)
+	ConsoleLog($messageText)
 End if 
 
 

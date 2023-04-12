@@ -24,7 +24,7 @@ If (UserInPassWordGroup("UnlockRecord"))
 	GOTO SELECTED RECORD:C245([Profile:59]; $selected)
 	
 	If (Record number:C243([Profile:59])>-1)
-		ConsoleMessage("Deleting Profile - "+[Profile:59]name:4+" - "+[Profile:59]value:5)
+		ConsoleLog("Deleting Profile - "+[Profile:59]name:4+" - "+[Profile:59]value:5)
 	End if 
 	
 	If (Record number:C243([Profile:59])>-1)

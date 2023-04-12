@@ -6,7 +6,7 @@ Case of
 	: ($formevent=On Close Box:K2:21)
 		CANCEL:C270
 	: ($formEvent=On Timer:K2:25)
-		Prs_ListActive
+		Process_ListActive
 		REDRAW WINDOW:C456  //([Control];"Processes")
 		SET TIMER:C645(60*60)  // every minute
 		
@@ -39,12 +39,12 @@ Case of
 		If ($w>0)
 			OBJECT SET ENABLED:C1123(b8; True:C214)
 			OBJECT SET ENABLED:C1123(b7; False:C215)
-			_O_OBJECT SET COLOR:C271(iloText1; -(Black:K11:16+(256*Yellow:K11:2)))
+			OBJECT SET RGB COLORS:C628(*; "iloText1"; Black:K11:16; Yellow:K11:2)
 			
 		Else 
 			OBJECT SET ENABLED:C1123(b8; False:C215)
 			OBJECT SET ENABLED:C1123(b7; True:C214)
-			_O_OBJECT SET COLOR:C271(iloText1; -(Black:K11:16+(256*White:K11:1)))
+			OBJECT SET RGB COLORS:C628(*; "iloText1"; Black:K11:16; White:K11:1)
 		End if 
 	: ($formEvent=On Outside Call:K2:11)
 		DELAY PROCESS:C323(Current process:C322; 30)  // Give the closing process time to close
@@ -52,7 +52,7 @@ Case of
 			Quit_Processes
 			<>vlQuitOne:=-1
 		Else 
-			Prs_ListActive
+			Process_ListActive
 			REDRAW WINDOW:C456  //([Control];"Processes")
 		End if 
 End case 

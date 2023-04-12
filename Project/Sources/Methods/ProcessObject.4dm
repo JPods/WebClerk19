@@ -10,10 +10,10 @@ If (process_o=Null:C1517)
 	process_o.user:=Storage:C1525.user
 End if 
 var $vtScript; tableName : Text
-If (process_o.tableName=Null:C1517)
+If (process_o.dataClassName=Null:C1517)
 	tableName:="Customer"
 Else 
-	tableName:=process_o.tableName
+	tableName:=process_o.dataClassName
 End if 
 var $rec_ent : Object
 var $ptTable; $ptID : Pointer
@@ -41,7 +41,7 @@ Else
 		: (process_o.task="ShowRecord@")
 			USE ENTITY SELECTION:C1513(process_o.entitySelection)
 		: (process_o.task="by_id")
-			$rec_ent:=ds:C1482[process_o.tableName].get(process_o.id)
+			$rec_ent:=ds:C1482[process_o.dataClassName].get(process_o.id)
 			USE ENTITY SELECTION:C1513($rec_ent)  // remove this at some point
 		: (process_o.task="Script")
 			// $vtScript:=
@@ -70,7 +70,7 @@ If (process_o.form#Null:C1517)  // override standard forms
 	// shift this to OutputDS at some point
 	$form_t:=process_o.form
 End if 
-Prs_ListActive
+Process_ListActive
 If ($form_t="")
 	If (Records in selection:C76($ptTable->)=1)
 		$form_t:="Input"

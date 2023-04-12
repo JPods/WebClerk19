@@ -29,7 +29,7 @@ Else
 	$curRec:=Record number:C243([Item:4])
 	If ($curRec>-1)
 		If (<>viDebugMode>410)
-			ConsoleMessage("Pushing ItemChange")
+			ConsoleLog("Pushing ItemChange")
 		End if 
 		PUSH RECORD:C176([Item:4])
 		QUERY:C277([Item:4]; [Item:4]itemNum:1=srItemNum)
@@ -38,7 +38,7 @@ Else
 				POP RECORD:C177([Item:4])
 				[Item:4]itemNum:1:=srItemNum
 				If (<>viDebugMode>410)
-					ConsoleMessage("ItemNum Pop Record")
+					ConsoleLog("ItemNum Pop Record")
 				End if 
 			: (($curRec=-3) & (Records in selection:C76([Item:4])=1))
 				POP RECORD:C177([Item:4])
@@ -47,7 +47,7 @@ Else
 			: (($curRec>-1) & (OptKey=1) & (Records in selection:C76([Item:4])=1))  //
 				
 				If (<>viDebugMode>410)
-					ConsoleMessage("ItemNum ConsolidateRecs One Record")
+					ConsoleLog("ItemNum ConsolidateRecs One Record")
 				End if 
 				POP RECORD:C177([Item:4])
 				$doCombine:=ConsolidateRecs(->[Item:4]; ->[Item:4]itemNum:1; ->srItemNum)
@@ -60,7 +60,7 @@ Else
 				End if 
 			: (Records in selection:C76([Item:4])=0)
 				If (<>viDebugMode>410)
-					ConsoleMessage("ItemNum ConsolidateRecs No Records")
+					ConsoleLog("ItemNum ConsolidateRecs No Records")
 				End if 
 				POP RECORD:C177([Item:4])
 				$doCombine:=ConsolidateRecs(->[Item:4]; ->[Item:4]itemNum:1; ->srItemNum)

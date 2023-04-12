@@ -42,4 +42,3 @@ Case of
 	Else 
 		$0:="error_Tag Table: "+vWebTagTable+" Field: "+vWebTagField
 End case 
-// ((<>consoleDirection#0) & (<>consoleDirection#4) & (<>viDebugMode>0)) // ### jwm ### 20160927_1435 double check this

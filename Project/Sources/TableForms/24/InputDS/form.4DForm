@@ -1,0 +1,1587 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Menu Bar #8",
+	"markerBody": 467,
+	"markerBreak": 467,
+	"markerFooter": 467,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onLoadRecord",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"_VAR_<>pNavPallet_1": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 106,
+					"height": 55,
+					"dataSource": "<>pNavPallet",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#000000",
+					"fontSize": 10,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_aPages_2": {
+					"type": "dropdown",
+					"top": 31,
+					"left": 3,
+					"width": 99,
+					"height": 17,
+					"dataSource": "aPages",
+					"dataSourceTypeHint": "arrayNumber",
+					"numberFormat": ":16789,13",
+					"class": "cssPopups",
+					"textAlign": "center",
+					"method": "ObjectMethods/Variable133.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAccept_3": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 71,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bAccept",
+					"shortcutKey": "[Enter]",
+					"shortcutAccel": true,
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitSave.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable134.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bPrevious_4": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 35,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bPrevious",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavLeft.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable135.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bNext_5": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 53,
+					"width": 15,
+					"height": 23,
+					"dataSource": "bNext",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/NavRight.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable136.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bCancel_6": {
+					"type": "pictureButton",
+					"top": 3,
+					"left": 3,
+					"width": 29,
+					"height": 23,
+					"dataSource": "bCancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/ButtonExitCancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable139.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b1_7": {
+					"type": "button",
+					"top": 11,
+					"left": 505,
+					"width": 120,
+					"height": 20,
+					"dataSource": "b1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16792,247",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_Project_projectNum_8": {
+					"type": "input",
+					"top": 15,
+					"left": 261,
+					"width": 132,
+					"height": 17,
+					"dataSource": "entry_o.projectNum",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]projectNum:1"
+				},
+				"_PROP_Project_publish_9": {
+					"type": "input",
+					"top": 15,
+					"left": 397,
+					"width": 32,
+					"height": 17,
+					"dataSource": "entry_o.publish",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]publish:29"
+				},
+				"_VAR_ePopDate_10": {
+					"type": "plugin",
+					"top": 13,
+					"left": 645,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_Project_name_11": {
+					"type": "input",
+					"top": 35,
+					"left": 261,
+					"width": 401,
+					"height": 17,
+					"dataSource": "entry_o.name",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]name:27"
+				},
+				"_PROP_Project_description_12": {
+					"type": "input",
+					"top": 55,
+					"left": 261,
+					"width": 401,
+					"height": 17,
+					"dataSource": "entry_o.description",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]description:2"
+				},
+				"_PROP_Project_scope_13": {
+					"type": "input",
+					"top": 75,
+					"left": 261,
+					"width": 401,
+					"height": 17,
+					"dataSource": "entry_o.scope",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]scope:21"
+				},
+				"_VAR_lbCustomer_14": {
+					"type": "input",
+					"top": 97,
+					"left": 164,
+					"width": 91,
+					"height": 12,
+					"dataSource": "lbCustomer",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_srCustomer_15": {
+					"type": "input",
+					"top": 95,
+					"left": 261,
+					"width": 222,
+					"height": 17,
+					"dataSource": "srCustomer",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable6.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_VAR_lbAcct_16": {
+					"type": "input",
+					"top": 97,
+					"left": 487,
+					"width": 75,
+					"height": 12,
+					"dataSource": "lbAcct",
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_srAcct_17": {
+					"type": "input",
+					"top": 95,
+					"left": 568,
+					"width": 94,
+					"height": 17,
+					"dataSource": "srAcct",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Variable7.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_Project_active_18": {
+					"type": "checkbox",
+					"top": 34,
+					"left": 117,
+					"width": 62,
+					"height": 14,
+					"dataSource": "entry_o.active",
+					"text": "Active",
+					"stroke": "#000000",
+					"class": "cssCheckboxLable",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]active:3"
+				},
+				"_Text_UniqueID_Publish_19": {
+					"type": "text",
+					"top": 17,
+					"left": 150,
+					"width": 105,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "UniqueID/Publish"
+				},
+				"_Text_Name_20": {
+					"type": "text",
+					"top": 37,
+					"left": 156,
+					"width": 99,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Name"
+				},
+				"_Text_Scope_21": {
+					"type": "text",
+					"top": 77,
+					"left": 156,
+					"width": 99,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Scope"
+				},
+				"_Text_Description_22": {
+					"type": "text",
+					"top": 57,
+					"left": 156,
+					"width": 99,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Description"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_Text_Action_23": {
+					"type": "text",
+					"top": 82,
+					"left": 677,
+					"width": 112,
+					"height": 14,
+					"stroke": "#0000CD",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Action"
+				},
+				"_Text__1678996_24": {
+					"type": "text",
+					"top": 302,
+					"left": 10,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,96"
+				},
+				"_PROP_Project_id_25": {
+					"type": "input",
+					"top": 15,
+					"left": 793,
+					"width": 203,
+					"height": 17,
+					"dataSource": "entry_o.id",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]id:23"
+				},
+				"_PROP_Project_dateStarted_26": {
+					"type": "input",
+					"top": 35,
+					"left": 793,
+					"width": 98,
+					"height": 17,
+					"dataSource": "entry_o.dateStarted",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]dateStarted:10"
+				},
+				"_PROP_Project_dateComplete_27": {
+					"type": "input",
+					"top": 35,
+					"left": 896,
+					"width": 100,
+					"height": 17,
+					"dataSource": "entry_o.dateComplete",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]dateComplete:11"
+				},
+				"_VAR_<>aNameID_28": {
+					"type": "dropdown",
+					"top": 55,
+					"left": 713,
+					"width": 77,
+					"height": 17,
+					"dataSource": "<>aNameID",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 11,
+					"method": "ObjectMethods/Variable37.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_Project_actionBy_29": {
+					"type": "input",
+					"top": 57,
+					"left": 793,
+					"width": 203,
+					"height": 17,
+					"dataSource": "entry_o.actionBy",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field171.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]actionBy:30"
+				},
+				"_VAR_<>aActionsProjects_30": {
+					"type": "dropdown",
+					"top": 79,
+					"left": 753,
+					"width": 36,
+					"height": 17,
+					"dataSource": "<>aActionsProjects",
+					"display": false,
+					"fontFamily": "Geneva",
+					"fontSize": 13,
+					"method": "ObjectMethods/Variable95.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_Project_action_31": {
+					"type": "input",
+					"top": 79,
+					"left": 793,
+					"width": 203,
+					"height": 18,
+					"dataSource": "entry_o.action",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/Field173.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]action:31"
+				},
+				"_VAR_ePopDate4_32": {
+					"type": "plugin",
+					"top": 101,
+					"left": 771,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopDate4",
+					"pluginAreaKind": "%MM_PopArea",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable96.4dm",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_Project_actionDate_33": {
+					"type": "input",
+					"top": 101,
+					"left": 793,
+					"width": 88,
+					"height": 17,
+					"dataSource": "entry_o.actionDate",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]actionDate:32"
+				},
+				"_VAR_ePopTime4_34": {
+					"type": "plugin",
+					"top": 101,
+					"left": 885,
+					"width": 17,
+					"height": 17,
+					"dataSource": "ePopTime4",
+					"pluginAreaKind": "%TM_PopArea",
+					"borderStyle": "none",
+					"method": "ObjectMethods/Variable97.4dm",
+					"events": [
+						"onClick",
+						"onPluginArea"
+					]
+				},
+				"_PROP_Project_actionTime_35": {
+					"type": "input",
+					"top": 101,
+					"left": 906,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.actionTime",
+					"dataSourceTypeHint": "time",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "center",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_am",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]actionTime:33"
+				},
+				"Subform2": {
+					"type": "subform",
+					"top": 134,
+					"left": 107,
+					"width": 880,
+					"height": 165,
+					"dataSourceTypeHint": "text",
+					"table": 42,
+					"detailForm": "iProposals_9",
+					"listForm": "IncProposals",
+					"focusable": false,
+					"scrollbarVertical": "visible",
+					"enterableInList": false,
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_PROP_Project_proposalTotal_37": {
+					"type": "input",
+					"top": 153,
+					"left": 10,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.proposalTotal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]proposalTotal:5"
+				},
+				"Subform3": {
+					"type": "subform",
+					"top": 300,
+					"left": 107,
+					"width": 880,
+					"height": 191,
+					"dataSourceTypeHint": "text",
+					"table": 3,
+					"detailForm": "iOrders_9",
+					"listForm": "InclCustomers",
+					"focusable": false,
+					"scrollbarVertical": "visible",
+					"enterableInList": false,
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_PROP_Project_orderTotal_39": {
+					"type": "input",
+					"top": 321,
+					"left": 10,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.orderTotal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]orderTotal:6"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 492,
+					"left": 107,
+					"width": 880,
+					"height": 188,
+					"dataSourceTypeHint": "text",
+					"table": 26,
+					"detailForm": "iInvoices_9",
+					"listForm": "inclInvoice2Order",
+					"focusable": false,
+					"scrollbarVertical": "visible",
+					"enterableInList": false,
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_PROP_Project_invoiceTotal_41": {
+					"type": "input",
+					"top": 514,
+					"left": 10,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.invoiceTotal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]invoiceTotal:7"
+				},
+				"_Text__1679287_42": {
+					"type": "text",
+					"top": 135,
+					"left": 10,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,87"
+				},
+				"_Text__1678931_43": {
+					"type": "text",
+					"top": 496,
+					"left": 10,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,31"
+				},
+				"_VAR_bAdd1_44": {
+					"type": "button",
+					"top": 230,
+					"left": 19,
+					"width": 67,
+					"height": 34,
+					"dataSource": "bAdd1",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"fontWeight": "bold",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Add",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable355.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAdd2_45": {
+					"type": "button",
+					"top": 400,
+					"left": 19,
+					"width": 67,
+					"height": 33,
+					"dataSource": "bAdd2",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"fontWeight": "bold",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Add",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable356.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bAdd3_46": {
+					"type": "button",
+					"top": 589,
+					"left": 19,
+					"width": 67,
+					"height": 33,
+					"dataSource": "bAdd3",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"fontWeight": "bold",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Add",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable357.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b13_47": {
+					"type": "button",
+					"top": 494,
+					"left": 29,
+					"width": 73,
+					"height": 17,
+					"dataSource": "b13",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b12_48": {
+					"type": "button",
+					"top": 300,
+					"left": 29,
+					"width": 73,
+					"height": 17,
+					"dataSource": "b12",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b11_49": {
+					"type": "button",
+					"top": 132,
+					"left": 29,
+					"width": 73,
+					"height": 17,
+					"dataSource": "b11",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable10.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_DateStart_Complete_50": {
+					"type": "text",
+					"top": 37,
+					"left": 665,
+					"width": 124,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "DateStart / Complete"
+				},
+				"id": {
+					"type": "text",
+					"top": 17,
+					"left": 682,
+					"width": 107,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "id"
+				},
+				"_Text_ActionBy_52": {
+					"type": "text",
+					"top": 58,
+					"left": 677,
+					"width": 112,
+					"height": 14,
+					"stroke": "#0000CD",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "ActionBy"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_Project_profile1_53": {
+					"type": "input",
+					"top": 13,
+					"left": 802,
+					"width": 185,
+					"height": 17,
+					"dataSource": "entry_o.profile1",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]profile1:18"
+				},
+				"_PROP_Project_profile2_54": {
+					"type": "input",
+					"top": 33,
+					"left": 802,
+					"width": 185,
+					"height": 17,
+					"dataSource": "entry_o.profile2",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]profile2:19"
+				},
+				"_PROP_Project_profile3_55": {
+					"type": "input",
+					"top": 53,
+					"left": 802,
+					"width": 185,
+					"height": 17,
+					"dataSource": "entry_o.profile3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]profile3:20"
+				},
+				"Subform4": {
+					"type": "subform",
+					"top": 133,
+					"left": 104,
+					"width": 880,
+					"height": 291,
+					"dataSourceTypeHint": "text",
+					"table": 39,
+					"detailForm": "Input1",
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_PROP_Project_poTotal_57": {
+					"type": "input",
+					"top": 152,
+					"left": 10,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.poTotal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]poTotal:8"
+				},
+				"Subform5": {
+					"type": "subform",
+					"top": 434,
+					"left": 104,
+					"width": 880,
+					"height": 246,
+					"dataSourceTypeHint": "text",
+					"table": 29,
+					"detailForm": "Input1",
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_PROP_Project_inventoryTotal_59": {
+					"type": "input",
+					"top": 453,
+					"left": 7,
+					"width": 90,
+					"height": 17,
+					"dataSource": "entry_o.inventoryTotal",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"textAlign": "right",
+					"focusable": false,
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]inventoryTotal:12"
+				},
+				"_VAR_bDupPOs_60": {
+					"type": "button",
+					"top": 217,
+					"left": 5,
+					"width": 98,
+					"height": 25,
+					"dataSource": "bDupPOs",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"fontFamily": "System Font",
+					"fontSize": 13,
+					"stroke": "#000000",
+					"focusable": false,
+					"text": ":16792,249",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable18.4dm",
+					"events": [
+						"onClick",
+						"onHeader"
+					]
+				},
+				"_Text__16792250_61": {
+					"type": "text",
+					"top": 136,
+					"left": 9,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,250"
+				},
+				"_Text__16792251_62": {
+					"type": "text",
+					"top": 436,
+					"left": 6,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16792,251"
+				},
+				"_VAR_bPO_63": {
+					"type": "button",
+					"top": 133,
+					"left": 29,
+					"width": 73,
+					"height": 17,
+					"dataSource": "bPO",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable46.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_b21_64": {
+					"type": "button",
+					"top": 434,
+					"left": 26,
+					"width": 73,
+					"height": 17,
+					"dataSource": "b21",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Profile1": {
+					"type": "text",
+					"top": 15,
+					"left": 715,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile1"
+				},
+				"Profile2": {
+					"type": "text",
+					"top": 35,
+					"left": 715,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile2"
+				},
+				"Profile3": {
+					"type": "text",
+					"top": 55,
+					"left": 715,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile3"
+				},
+				"_PROP_Project_profile3_68": {
+					"type": "input",
+					"top": 73,
+					"left": 802,
+					"width": 185,
+					"height": 17,
+					"dataSource": "entry_o.profile3",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]profile3:20"
+				},
+				"Profile4": {
+					"type": "text",
+					"top": 75,
+					"left": 715,
+					"width": 81,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Profile3"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Subform6": {
+					"type": "subform",
+					"top": 137,
+					"left": 107,
+					"width": 880,
+					"height": 337,
+					"dataSourceTypeHint": "text",
+					"table": 6,
+					"listForm": "inclCustShort",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_PROP_Project_comment_71": {
+					"type": "input",
+					"top": 483,
+					"left": 107,
+					"width": 880,
+					"height": 187,
+					"dataSource": "entry_o.comment",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[Project:24]comment:13"
+				},
+				"_Text__16789185_72": {
+					"type": "text",
+					"top": 139,
+					"left": 10,
+					"width": 91,
+					"height": 16,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": ":16789,185"
+				},
+				"_Text_Comment_73": {
+					"type": "text",
+					"top": 486,
+					"left": 11,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Comment"
+				},
+				"_VAR_b31_74": {
+					"type": "button",
+					"top": 138,
+					"left": 29,
+					"width": 73,
+					"height": 16,
+					"dataSource": "b31",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_VAR_bDateTime2_75": {
+					"type": "pictureButton",
+					"top": 524,
+					"left": 46,
+					"width": 41,
+					"height": 33,
+					"dataSource": "bDateTime2",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/library/DateTimeButton.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Variable176.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"_VAR_b41_76": {
+					"type": "button",
+					"top": 57,
+					"left": 742,
+					"width": 136,
+					"height": 23,
+					"dataSource": "b41",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"fontWeight": "bold",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Gantt Chart",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Subform7": {
+					"type": "subform",
+					"top": 127,
+					"left": 107,
+					"width": 877,
+					"height": 264,
+					"dataSourceTypeHint": "text",
+					"table": 66,
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"Objectives": {
+					"type": "input",
+					"top": 570,
+					"left": 107,
+					"width": 893,
+					"height": 17,
+					"dataSource": "[Project:24]objectives:24",
+					"borderStyle": "solid",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/Objectives.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_PROP_Project_metrics_79": {
+					"type": "input",
+					"top": 593,
+					"left": 107,
+					"width": 893,
+					"height": 87,
+					"dataSource": "entry_o.metrics",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick"
+					],
+					"zzzdataSource": "[Project:24]metrics:26"
+				},
+				"_Text_WorkOrders_80": {
+					"type": "text",
+					"top": 129,
+					"left": 10,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "WorkOrders"
+				},
+				"_VAR_b31_81": {
+					"type": "button",
+					"top": 128,
+					"left": 29,
+					"width": 73,
+					"height": 17,
+					"dataSource": "b31",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_Text_Objective_82": {
+					"type": "text",
+					"top": 572,
+					"left": 6,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Objective"
+				},
+				"_Text_Metrics_83": {
+					"type": "text",
+					"top": 598,
+					"left": 6,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Metrics"
+				},
+				"_VAR_b41_84": {
+					"type": "button",
+					"top": 57,
+					"left": 742,
+					"width": 136,
+					"height": 23,
+					"dataSource": "b41",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"class": "cssInput16",
+					"fontWeight": "bold",
+					"stroke": "#000000",
+					"focusable": false,
+					"text": "Gantt Chart",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Variable15.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Subform8": {
+					"type": "subform",
+					"top": 397,
+					"left": 107,
+					"width": 877,
+					"height": 164,
+					"dataSourceTypeHint": "text",
+					"table": 145,
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "single",
+					"printFrame": "fixed",
+					"borderStyle": "sunken"
+				},
+				"_Text_Objectives_86": {
+					"type": "text",
+					"top": 398,
+					"left": 10,
+					"width": 91,
+					"height": 12,
+					"stroke": "#009900",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "Objectives"
+				},
+				"_VAR_b32_87": {
+					"type": "button",
+					"top": 397,
+					"left": 29,
+					"width": 73,
+					"height": 17,
+					"dataSource": "b32",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Report123456789"
+					},
+					"display": false,
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"_PROP_Project_ganttStatus_88": {
+					"type": "input",
+					"top": 90,
+					"left": 770,
+					"width": 185,
+					"height": 17,
+					"dataSource": "entry_o.ganttStatus",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]ganttStatus:16"
+				},
+				"_Text_GanttStatus_89": {
+					"type": "text",
+					"top": 92,
+					"left": 675,
+					"width": 89,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "right",
+					"text": "GanttStatus"
+				}
+			}
+		},
+		{
+			"objects": {
+				"_PROP_Project_obGeneral_90": {
+					"type": "input",
+					"top": 131,
+					"left": 8,
+					"width": 992,
+					"height": 549,
+					"dataSource": "entry_o.obGeneral",
+					"dataSourceTypeHint": "object",
+					"stroke": "#000000",
+					"class": "cssInput",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					],
+					"zzzdataSource": "[Project:24]obGeneral:28"
+				},
+				"_Text_ObGeneral_91": {
+					"type": "text",
+					"top": 110,
+					"left": 11,
+					"width": 91,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "cssInputLabel",
+					"textAlign": "left",
+					"text": "ObGeneral"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

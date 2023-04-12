@@ -1,4 +1,12 @@
 //%attributes = {"publishedWeb":true}
+
+// Modified by: Bill James (2023-01-04T06:00:00Z)
+// Method: JSrchEnd
+// Description 
+// Parameters
+// ----------------------------------------------------
+
+
 C_LONGINT:C283($1; $2)  //$1; $recNum
 Case of 
 	: ((vHere>1) & (Records in selection:C76(ptCurTable->)=0))

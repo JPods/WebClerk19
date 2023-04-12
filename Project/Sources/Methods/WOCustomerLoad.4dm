@@ -39,22 +39,22 @@ If (Not:C34($noOrd))
 	End if 
 End if 
 
-jDateTimeRecov([WorkOrder:66]dtCreated:44; ->iLoDate1; ->iLoTime1)
-jDateTimeRecov([WorkOrder:66]dtRequested:31; ->iLoDate2; ->iLoTime2)
-jDateTimeRecov([WorkOrder:66]dtAction:5; ->vdWoAction; ->vtWoAction)
-jDateTimeRecov([WorkOrder:66]dtStarted:79; ->iLoDate4; ->iLoTime4)
-jDateTimeRecov([WorkOrder:66]dtUpdated:78; ->iLoDate5; ->iLoTime5)
-jDateTimeRecov([WorkOrder:66]dtComplete:6; ->iLoDate6; ->iLoTime6)
-jDateTimeRecov([WorkOrder:66]dtArchived:81; ->iLoDate7; ->iLoTime7)
+DateTime_DTFrom([WorkOrder:66]dtCreated:44; ->iLoDate1; ->iLoTime1)
+DateTime_DTFrom([WorkOrder:66]dtRequested:31; ->iLoDate2; ->iLoTime2)
+DateTime_DTFrom([WorkOrder:66]dtAction:5; ->vdWoAction; ->vtWoAction)
+DateTime_DTFrom([WorkOrder:66]dtStarted:79; ->iLoDate4; ->iLoTime4)
+DateTime_DTFrom([WorkOrder:66]dtUpdated:78; ->iLoDate5; ->iLoTime5)
+DateTime_DTFrom([WorkOrder:66]dtComplete:6; ->iLoDate6; ->iLoTime6)
+DateTime_DTFrom([WorkOrder:66]dtArchived:81; ->iLoDate7; ->iLoTime7)
 
-QUERY:C277([WorkOrderEvent:121]; [WorkOrderEvent:121]woNum:5=[WorkOrder:66]woNum:29)
+QUERY:C277([WorkOrderEvent:121]; [WorkOrderEvent:121]woNum:5=[WorkOrder:66]idNum:29)
 WOEvents_FillArrays(Records in selection:C76([WorkOrderEvent:121]))
 If (eWOEvents>0)
 	//  --  CHOPPED  AL_UpdateArrays(eWOEvents; -2)
 End if 
 REDUCE SELECTION:C351([WorkOrderEvent:121]; 0)
 ////  --  CHOPPED  AL_UpdateArrays (eWOEvents;-2)
-QUERY:C277([WorkOrderTask:67]; [WorkOrderTask:67]woNum:10=[WorkOrder:66]woNum:29)
+QUERY:C277([WorkOrderTask:67]; [WorkOrderTask:67]woNum:10=[WorkOrder:66]idNum:29)
 WoTasksFillArrays(Records in selection:C76([WorkOrderTask:67]))
 If (eWOEvents>0)
 	//  --  CHOPPED  AL_UpdateArrays(eWOTasks; -2)
@@ -65,7 +65,7 @@ $doChange:=(UserInPassWordGroup("UnlockRecord"))
 If (Not:C34($doChange))
 	OBJECT SET ENTERABLE:C238([WorkOrder:66]publish:30; False:C215)
 End if 
-srWO:=[WorkOrder:66]woNum:29
+srWO:=[WorkOrder:66]idNum:29
 pPartNum:=[WorkOrder:66]itemNum:12
 //
 iLoDate7:=Current date:C33

@@ -39,7 +39,7 @@ Case of
 		
 		
 		If (allowAlerts_boo)
-			TallyMasterPopupScirpts(->[ManufacturerTerm:111])
+			TallyMasterPopupScirpts(->[zzzManufacturerTerm:111])
 			TallyMasterPopupScirpts(->[Customer:2])
 			jrelateClrFiles(1)  //force all arrays to be empty
 		End if 
@@ -65,7 +65,7 @@ Case of
 		If (Is new record:C668([Customer:2]))
 			bRetired:=0
 			OBJECT SET ENTERABLE:C238([Customer:2]customerID:1; True:C214)
-			DBCustomer_init
+			DB_InitCustomer
 			srVarLoad(Table:C252(->[Customer:2]))
 			DISABLE MENU ITEM:C150(2; 1)  //no cloning new records
 			srAcct:=[Customer:2]customerID:1
@@ -95,7 +95,7 @@ Case of
 		
 		RelatedRelease(0)  // ### jwm ### 20171003_1635 Selection to Array takes forever.
 		
-		//ConsoleMessage ("TEST: jrelateClrFiles")
+		//Console_Log ("TEST: jrelateClrFiles")
 		
 		//SET TIMER(60*60*1)
 		srVarLoad(Table:C252(->[Customer:2]))  // calls Alert popup
@@ -134,16 +134,16 @@ Case of
 		If (Locked:C147([Customer:2]))
 			// ### bj ### 20200313_1449 Make a locked record more vididly locked
 			//OBJECT SET RGB COLORS(*; "srCustomer"; Yellow; Red)
-			_O_OBJECT SET COLOR:C271(srCustomer; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srAcct; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srZip; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srPhone; -(Yellow:K11:2+(256*Red:K11:4)))
+			OBJECT SET RGB COLORS:C628(*; "srCustomer"; Yellow:K11:2; Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srAcct"; Yellow:K11:2; Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srZip"; Yellow:K11:2; Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srPhone"; Yellow:K11:2; Red:K11:4)
 			
-			_O_OBJECT SET COLOR:C271([Customer:2]nameFirst:73; -(Yellow:K11:2+(256*Red:K11:4)))
+			OBJECT SET RGB COLORS:C628(*; "[Customer]nameFirst"; Yellow:K11:2; Red:K11:4)
 		End if 
 		
 		//Format_CreditCd (->[Customer]CreditCardNum)
-		//ConsoleMessage ("TEST: Format_CreditCd")
+		//Console_Log ("TEST: Format_CreditCd")
 		<>CustAcct:=[Customer:2]customerID:1
 		<>ptCurTable:=(->[Customer:2])
 		

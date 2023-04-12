@@ -28,7 +28,7 @@ $tableNum:=STR_GetTableNumber($tableName)
 
 If ($tableNum<1)
 	If (<>viDebugMode>410)
-		ConsoleMessage("Bad TableName, jsonRecordToObject: "+$tableName)
+		ConsoleLog("Bad TableName, jsonRecordToObject: "+$tableName)
 	End if 
 	OB SET:C1220($vobData; "Error"; "NoSuchTableName")
 Else 

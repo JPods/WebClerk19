@@ -20,7 +20,7 @@ $cntRec:=Size of array:C274(aRecvRecs)
 CONFIRM:C162("Clone, there is no UnDo?")
 If (OK=1)
 	C_LONGINT:C283($dtcurrent)
-	$dtcurrent:=DateTime_Enter
+	$dtcurrent:=DateTime_DTTo
 	//CREATE SET([WorkOrder];"Current")
 	$cntRec:=Size of array:C274(aRecvRecs)
 	ARRAY LONGINT:C221($aUniqueIDs; 0)
@@ -30,14 +30,14 @@ If (OK=1)
 	End for 
 	READ ONLY:C145([Item:4])
 	For ($incRec; 1; $cntRec)
-		QUERY:C277([WorkOrder:66]; [WorkOrder:66]woNum:29=$aUniqueIDs{$incRec})
+		QUERY:C277([WorkOrder:66]; [WorkOrder:66]idNum:29=$aUniqueIDs{$incRec})
 		If (Records in selection:C76([WorkOrder:66])=1)
 			DUPLICATE RECORD:C225([WorkOrder:66])
-			[WorkOrder:66]woNum:29:=CounterNew(->[WorkOrder:66])
-			[WorkOrder:66]qtyActual:14:=0
+			[WorkOrder:66]idNum:29:=CounterNew(->[WorkOrder:66])
+			[WorkOrder:66]qty:14:=0
 			[WorkOrder:66]action:33:="RequestedTransfer"
 			[WorkOrder:66]dtComplete:6:=0
-			[WorkOrder:66]dtAction:5:=DateTime_Enter(iLoDate1)
+			[WorkOrder:66]dtAction:5:=DateTime_DTTo(iLoDate1)
 			[WorkOrder:66]dateComplete:64:=iLoDate1
 			QUERY:C277([Item:4]; [Item:4]itemNum:1=[WorkOrder:66]itemNum:12)
 			[WorkOrder:66]itemDescript:34:=[Item:4]description:7

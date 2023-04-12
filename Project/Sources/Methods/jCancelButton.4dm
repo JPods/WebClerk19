@@ -4,7 +4,7 @@ C_BOOLEAN:C305($1; $noSave; $confirm)
 //If (jCanAccpConfirm)
 //TRACE
 
-//ConsoleMessage ("TEST: jCancelButton")
+//Console_Log ("TEST: jCancelButton")
 $confirm:=True:C214
 If (Count parameters:C259=1)  //false for no confirm, true for confirm
 	$confirm:=$1
@@ -26,7 +26,7 @@ If ($noSave)
 	If (vHere<=2)  //0 cancels to Splash, 1 adds a new order, 3 for between files (cust 2 ords)
 		jNavResetSplash
 	End if 
-	//ConsoleMessage ("TEST: jNavResetSplash")
+	//Console_Log ("TEST: jNavResetSplash")
 	myCycle:=0  //Must reset to 0 is Cancel button is selected.  6 allows the flow to continue  
 	myOK:=0
 	booDuringDo:=False:C215  //be careful of this, side buttons

@@ -132,11 +132,11 @@ Case of
 			Before_New(ptCurTable)
 		End if 
 		If (Locked:C147([Proposal:42]))
-			_O_OBJECT SET COLOR:C271(srCustomer; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srAcct; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srZip; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srPhone; -(Yellow:K11:2+(256*Red:K11:4)))
-			_O_OBJECT SET COLOR:C271(srPp; -(Yellow:K11:2+(256*Red:K11:4)))
+			OBJECT SET RGB COLORS:C628(*; "srCustomer"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srAcct"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srZip"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srPhone"; Yellow:K11:2; 256*Red:K11:4)
+			OBJECT SET RGB COLORS:C628(*; "srPp"; Yellow:K11:2; 256*Red:K11:4)
 		End if 
 		
 		C_LONGINT:C283($i; $k; $incLine)

@@ -33,7 +33,7 @@ If (OK=1)
 				[Item:4]mfrItemNum:39:=aText5{7}
 				// [Item]Description:=aText5{8}
 				[Item:4]indicator1:95:=Num:C11(aText5{9})
-				[Item:4]dtReviewed:85:=DateTime_Enter(Date:C102("1/1/"+aText5{10}))
+				[Item:4]dtReviewed:85:=DateTime_DTTo(Date:C102("1/1/"+aText5{10}))
 				[Item:4]publish:60:=Num:C11(aText5{11})
 				[Item:4]indicator1:95:=Num:C11(aText5{12})
 				

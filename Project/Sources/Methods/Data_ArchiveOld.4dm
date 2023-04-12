@@ -17,7 +17,7 @@ var $new_o : Object
 If (process_o.old#Null:C1517)
 	If (Storage:C1525.archiveDo[$o.tableName])
 		$new_o:=ds:C1482.Archive.new()
-		$new_o.dtDocument:=DateTime_Enter
+		$new_o.dtDocument:=DateTime_DTTo
 		$new_o.idDoc:=$o.id
 		$new_o.TableName:=$o.tableName
 		$new_o.old:=$o

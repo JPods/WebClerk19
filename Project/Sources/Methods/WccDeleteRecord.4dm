@@ -47,13 +47,13 @@ If ($tableName#"")
 				SEND RECORD:C78(ptCurTable->)
 				
 				SET CHANNEL:C77(11)
-				CREATE RECORD:C68([HistoricalRecord:114])
+				//CREATE RECORD([zzzHistoricalRecord])
 				
-				[HistoricalRecord:114]action:5:="WebClerkDelete"
-				[HistoricalRecord:114]dtAction:3:=DateTime_Enter
-				[HistoricalRecord:114]tableNum:2:=Table:C252(ptCurTable)
-				DOCUMENT TO BLOB:C525(myDocName; [HistoricalRecord:114]recordBlob:6)
-				SAVE RECORD:C53([HistoricalRecord:114])
+				//[zzzHistoricalRecord]action:="WebClerkDelete"
+				//[zzzHistoricalRecord]dtAction:=DateTime_DTTo
+				//[zzzHistoricalRecord]tableName:=Table(ptCurTable)
+				//DOCUMENT TO BLOB(myDocName; [zzzHistoricalRecord]recordBlob)
+				//SAVE RECORD([zzzHistoricalRecord])
 				$myOK:=HFS_Delete(myDocName)
 				
 				//Records_Out (ptCurTable;Storage.folder.jitExportsF+"WC"+String($tableNum;"00")+"Recs_"+Date_strYrMmDd +".out";0)
@@ -82,9 +82,9 @@ If ($tableName#"")
 						DeleteCustomer
 						
 					: (ptCurTable=(->[Contact:13]))
-						QUERY:C277([CallReport:34]; [CallReport:34]tableNum:2=13; *)  //customer file number
-						QUERY:C277([CallReport:34];  & [CallReport:34]customerID:1=String:C10([Contact:13]idNum:28))
-						DELETE SELECTION:C66([CallReport:34])
+						QUERY:C277([Call:34]; [Call:34]tableNum:2=13; *)  //customer file number
+						QUERY:C277([Call:34];  & [Call:34]customerID:1=String:C10([Contact:13]idNum:28))
+						DELETE SELECTION:C66([Call:34])
 						QUERY:C277([QA:70]; [QA:70]tableNum:11=13; *)  //customer file number
 						QUERY:C277([QA:70];  & [QA:70]customerID:1=String:C10([Contact:13]idNum:28))
 						DELETE SELECTION:C66([QA:70])
@@ -92,7 +92,7 @@ If ($tableName#"")
 					: (ptCurTable=(->[Item:4]))
 						QUERY:C277([BOM:21]; [BOM:21]childItem:2=[Item:4]itemNum:1)
 						QUERY:C277([ItemSpec:31]; [ItemSpec:31]itemNum:1=[Item:4]specid:62)
-						QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNumMaster:1=[Item:4]itemNum:1)
+						QUERY:C277([ItemXRef:22]; [ItemXRef:22]itemNum:1=[Item:4]itemNum:1)
 						QUERY:C277([DInventory:36]; [DInventory:36]itemNum:1=[Item:4]itemNum:1)
 						QUERY:C277([ItemSerial:47]; [ItemSerial:47]itemNum:1=[Item:4]itemNum:1)
 						DELETE SELECTION:C66([ItemSerial:47])
@@ -102,10 +102,10 @@ If ($tableName#"")
 						DELETE SELECTION:C66([BOM:21])
 						DELETE RECORD:C58([Item:4])
 					: (ptCurTable=(->[Rep:8]))
-						QUERY:C277([RepContact:10]; [RepContact:10]repID:1=[Rep:8]RepID:1)
-						QUERY:C277([Quota:9]; [Quota:9]repID:1=[Rep:8]RepID:1)
-						QUERY:C277([Territory:25]; [Territory:25]repID:2=[Rep:8]RepID:1)
-						DELETE SELECTION:C66([RepContact:10])
+						QUERY:C277([zzzRepContact:10]; [zzzRepContact:10]repID:1=[Rep:8]repID:1)
+						QUERY:C277([Quota:9]; [Quota:9]repID:1=[Rep:8]repID:1)
+						QUERY:C277([Territory:25]; [Territory:25]repID:2=[Rep:8]repID:1)
+						DELETE SELECTION:C66([zzzRepContact:10])
 						DELETE SELECTION:C66([Quota:9])
 						DELETE SELECTION:C66([Territory:25])
 						DELETE RECORD:C58([Rep:8])

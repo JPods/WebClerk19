@@ -30,8 +30,8 @@ Else
 	//vdDateBegin
 	//vdDateBegin
 	C_LONGINT:C283($dtBegin_l; $dtEnd_l)
-	$dtBegin_l:=DateTime_Enter(vdDateBeg; ?00:00:00?)
-	$dtEnd_l:=DateTime_Enter(vdDateEnd; ?23:59:59?)
+	$dtBegin_l:=DateTime_DTTo(vdDateBeg; ?00:00:00?)
+	$dtEnd_l:=DateTime_DTTo(vdDateEnd; ?23:59:59?)
 	
 	C_OBJECT:C1216($voSelection)
 	$voSelection:=New object:C1471

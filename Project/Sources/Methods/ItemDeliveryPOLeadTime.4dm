@@ -22,7 +22,7 @@ If (UserInPassWordGroup("Apply2Selection"))
 			End if 
 		End if 
 	End if 
-	$theDT:=DateTime_Enter
+	$theDT:=DateTime_DTTo
 	$k:=Records in selection:C76([Item:4])
 	FIRST RECORD:C50([Item:4])
 	C_LONGINT:C283($incPOLines; $cntPOLines; $leadTime)

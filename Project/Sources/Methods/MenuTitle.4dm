@@ -20,7 +20,7 @@ If (Count parameters:C259>=1)
 End if 
 
 Case of 
-	: (ptCurTable=(->[Control:1]))
+	: (ptCurTable=(->[Admin:1]))
 		// do nothing. Must be done in the various windows.
 	: (vHere=0)
 		// implement

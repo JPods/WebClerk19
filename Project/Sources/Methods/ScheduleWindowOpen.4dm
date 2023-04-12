@@ -8,9 +8,9 @@ jSetMenuNums(1; 5; 6)
 
 WindowOpenTaskOffSets(0; 1000-762+10; 654-572+60)
 
-ptCurTable:=(->[Control:1])
-FORM SET INPUT:C55([Control:1]; "Scheduler")
-ProcessTableOpen(->[Control:1])
+ptCurTable:=(->[Base:1])
+FORM SET INPUT:C55([Base:1]; "Scheduler")
+ProcessTableOpen(->[Base:1])
 //Process_Running 
 
-POST OUTSIDE CALL:C329(<>theProcessList)
+POST OUTSIDE CALL:C329(Storage:C1525.process.processList)

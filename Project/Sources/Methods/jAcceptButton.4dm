@@ -90,7 +90,7 @@ If (False:C215)
 								
 								// MustFixQQQZZZ: Bill James (2021-11-30T06:00:00Z)
 								// if bouncing between tables. Fix this in 19
-								//$tableName:=process_o.tableName
+								//$tableName:=process_o.dataClassName
 								$obClass:=ds:C1482[$tableName]
 								$viFieldNum:=$obClass["obGeneral"].fieldNumber
 								$ptObGeneral:=Field:C253(Table:C252(ptCurTable); $viFieldNum)
@@ -156,7 +156,7 @@ If (False:C215)
 								AcceptContactsRetired
 							End if 
 							
-							acceptFilePt($unLoad; ->[Customer:2]; ->[Contact:13]; ->[Service:6]; ->[Reference:7]; ->[CallReport:34])
+							acceptFilePt($unLoad; ->[Customer:2]; ->[Contact:13]; ->[Service:6]; ->[Reference:7]; ->[Call:34])
 							acceptFilePt($unLoad; ->[OrderLine:49]; ->[Order:3]; ->[Invoice:26]; ->[Proposal:42]; ->[InvoiceLine:54])
 							
 							If ([Customer:2]mfrLocationid:67<-1999999)
@@ -169,9 +169,9 @@ If (False:C215)
 						: (ptCurTable=(->[InventoryStack:29]))
 							SAVE RECORD:C53([InventoryStack:29])
 							READ ONLY:C145([InventoryStack:29])
-						: (ptCurTable=(->[UserReport:46]))
+						: (ptCurTable=(->[Report:46]))
 							URpt_Accept
-						: (ptCurTable=(->[CallReport:34]))
+						: (ptCurTable=(->[Call:34]))
 							If ((Record number:C243([Customer:2])>-1) & (Modified record:C314([Customer:2])))
 								SAVE RECORD:C53([Customer:2])
 							End if 
@@ -195,12 +195,12 @@ If (False:C215)
 							SAVE RECORD:C53([PopUp:23])
 							
 							$processNum:=New process:C317("jsetChPopups"; <>tcPrsMemory; "ChoiceArray")
-						: (ptCurTable=(->[SpecialDiscount:44]))
+						: (ptCurTable=(->[ItemCatalog:44]))
 							
-							SAVE RECORD:C53([SpecialDiscount:44])
+							SAVE RECORD:C53([ItemCatalog:44])
 							Disc_ArraysDo(-5)
 							$processNum:=New process:C317("setTypeSalePopu"; <>tcPrsMemory; "ChoiceArray")
-						: (ptCurTable=(->[OrderComment:27]))
+						: (ptCurTable=(->[Comment:27]))
 							SAVE RECORD:C53(ptCurTable->)
 							$processNum:=New process:C317("setChOrdCom"; <>tcPrsMemory; "ChoiceArray")
 						: (ptCurTable=(->[Process:16]))
@@ -216,8 +216,8 @@ If (False:C215)
 						: (ptCurTable=(->[Carrier:11]))
 							If ([Carrier:11]idNum:44=0)
 								
-								QUERY:C277([Templateline:132]; [Templateline:132]templateid:2=[Carrier:11]carrierid:10; *)
-								QUERY:C277([Templateline:132];  & [Templateline:132]templateid:2=[Carrier:11]carrierid:10; *)
+								QUERY:C277([zzzTemplateline:132]; [zzzTemplateline:132]templateid:2=[Carrier:11]carrierid:10; *)
+								QUERY:C277([zzzTemplateline:132];  & [zzzTemplateline:132]templateid:2=[Carrier:11]carrierid:10; *)
 							End if 
 							SAVE RECORD:C53([Carrier:11])
 							$processNum:=New process:C317("setChShip"; <>tcPrsMemory; "ChoiceArray")
@@ -225,7 +225,7 @@ If (False:C215)
 							SAVE RECORD:C53(ptCurTable->)
 							$processNum:=New process:C317("setChAds"; <>tcPrsMemory; "ChoiceArray")
 						: (ptCurTable=(->[TaxJurisdiction:14]))
-							[TaxJurisdiction:14]dateTimeSync:6:=DateTime_Enter
+							[TaxJurisdiction:14]dateTimeSync:6:=DateTime_DTTo
 							SAVE RECORD:C53([TaxJurisdiction:14])
 							$processNum:=New process:C317("setChTax"; <>tcPrsMemory; "ChoiceArray")
 							
@@ -249,7 +249,7 @@ If (False:C215)
 							SAVE RECORD:C53(ptCurTable->)
 							$processNum:=New process:C317("Prs_RayRebuild"; <>tcPrsMemory; "ChoiceArray")
 						: (ptCurTable=(->[Rep:8]))
-							[Rep:8]dateTimeSync:16:=DateTime_Enter
+							[Rep:8]dateTimeSync:16:=DateTime_DTTo
 							SAVE RECORD:C53([Rep:8])
 							$processNum:=New process:C317("setChReps"; <>tcPrsMemory; "ChoiceArray")
 							//
@@ -285,26 +285,26 @@ If (False:C215)
 						: (ptCurTable=(->[RemoteUser:57]))
 							SAVE RECORD:C53([RemoteUser:57])
 							
-						: (ptCurTable=(->[DialingInfo:81]))
+						: (ptCurTable=(->[zzzDialingInfo:81]))
 							Dial_AcceptDI
 						: (ptCurTable=(->[CronJob:82]))
 							[CronJob:82]dtNextEvent:20:=CronDTNext([CronJob:82]cronString:28)
 							SAVE RECORD:C53(ptCurTable->)
 							CronJobStartup
-						: ((ptCurTable=(->[QAQuestion:71])) | (ptCurTable=(->[QAQuestion:71])) | (ptCurTable=(->[TallyMaster:60])) | (ptCurTable=(->[WOTemplate:69])))
+						: ((ptCurTable=(->[QAQuestion:71])) | (ptCurTable=(->[QAQuestion:71])) | (ptCurTable=(->[TallyMaster:60])) | (ptCurTable=(->[zzzWOTemplate:69])))
 							SAVE RECORD:C53(ptCurTable->)
 							$processNum:=New process:C317("Prs_RayRebuild"; <>tcPrsMemory; "ChoiceArray")
 						: (ptCurTable=(->[BOM:21]))  //Items
-							//[Item]DTSync:=DateTime_Enter
+							//[Item]DTSync:=DateTime_DTTo
 							AcceptBOM
 						: (ptCurTable=(->[WebClerk:78]))
 							SAVE RECORD:C53(ptCurTable->)
 						: (ptCurTable=(->[WorkOrder:66]))
 							If ([WorkOrder:66]dtCreated:44=0)
-								[WorkOrder:66]dtCreated:44:=DateTime_Enter
+								[WorkOrder:66]dtCreated:44:=DateTime_DTTo
 							End if 
 							// ### bj ### 20201127_2113
-							[WorkOrder:66]dtAction:5:=DateTime_Enter([WorkOrder:66]actionDate:105; [WorkOrder:66]actionTime:111)
+							[WorkOrder:66]dtAction:5:=DateTime_DTTo([WorkOrder:66]actionDate:105; [WorkOrder:66]actionTime:111)
 							SAVE RECORD:C53(ptCurTable->)
 						Else 
 							SAVE RECORD:C53(ptCurTable->)
@@ -327,7 +327,7 @@ If (False:C215)
 						UNLOAD RECORD:C212(ptCurTable->)
 						$obRec:=ds:C1482[$tableName].query("id = :1"; $id_t).first()
 						If ($obRec.obGeneral=Null:C1517)
-							$obRec.obGeneral:=New object:C1471("keyText"; ""; "keyTags"; "")
+							$obRec.obGeneral:=Init_obGeneral
 						End if 
 						$obRec.obGeneral.keyTags:=KeyTagsFromAlphaFields($obRec)
 						//$ptObGeneral->keyTags:=KeyTagsFromAlphaFields($obRec)
@@ -368,7 +368,7 @@ If (False:C215)
 						booSorted:=False:C215
 						myCycle:=0  //if it is new cancel out of current layout
 					End if 
-					If (ptCurTable#(->[Control:1]))
+					If (ptCurTable#(->[Base:1]))
 						Set_Window_Title(ptCurTable)
 					End if 
 					//KeyWordsMake(ptCurTable)
@@ -376,12 +376,13 @@ If (False:C215)
 					viNavAccept:=1  //layout accepted
 					blockServiceRelate:=False:C215
 					vIsNewRecord:=False:C215
+					// create a timeout mechanism for perishable things
 					//If ((<>tcbDoStat)&(vHere=0))
 					//TimeStatus
 					//End if
 					//If (Records in table([TempRec])>0)  //June 7, 1999
 					//ALL RECORDS([TempRec])
-					//jTempFileClear (Records in selection([TempRec]))
+					//TempFileClear (Records in selection([TempRec]))
 					//End if
 				End if 
 			End if 

@@ -49,7 +49,7 @@ Else
 		End case 
 		If ($doMore)  //action for the form regardless of new or existing record
 			
-			jDateTimeRecov([TrackKeyField:98]DTEvent:4; ->vDate1; ->vTime1)
+			DateTime_DTFrom([TrackKeyField:98]dtEvent:4; ->vDate1; ->vTime1)
 			If ([TrackKeyField:98]tableNum:1>0)
 				vText1:=Table name:C256([TrackKeyField:98]tableNum:1)
 			End if 

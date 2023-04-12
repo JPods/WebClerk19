@@ -95,7 +95,7 @@
 //C_TEXT($xml_Struct_Ref)
 //CREATE RECORD([TallyResult])
 
-//[TallyResult]dtCreated:=DateTime_Enter
+//[TallyResult]dtCreated:=DateTime_DTTo
 //$resetbEDIPass:=allowAlerts_boo
 //allowAlerts_boo:=False
 
@@ -147,7 +147,7 @@
 //If (Records in selection([Customer])=0)
 //CREATE RECORD([Customer])
 //[Customer]customerID:=aXMLValue{$foundelement}
-//DBCustomer_init
+//DB_InitCustomer
 //End if 
 //If (False)  //do in the 
 //XMLFillFieldValue("FullName"; ->[ManufacturerTerm]company)
@@ -206,7 +206,7 @@
 //If (Records in selection([Customer])=0)
 //CREATE RECORD([Customer])
 //[Customer]customerID:=aXMLValue{$foundelement}
-//DBCustomer_init
+//DB_InitCustomer
 //End if 
 //XMLFillFieldValue("CustomerName"; ->[Customer]company)
 //XMLFillFieldValue("Address1"; ->[Customer]address1)
@@ -362,7 +362,7 @@
 //[Item]vendorItemNum:=[Item]mfrID+[Item]mfrItemNum
 //UtFillIfTargetIsEmpty(->[Item]vendorID; [Item]mfrID)
 
-//[Item]dtReviewed:=DateTime_Enter(Current date)
+//[Item]dtReviewed:=DateTime_DTTo(Current date)
 
 //UtFillIfTargetIsEmpty(->[Item]publish; "1")
 ////

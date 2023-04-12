@@ -14,7 +14,7 @@
 Case of 
 	: (Count parameters:C259=0)
 		C_LONGINT:C283($currentDT)
-		$currentDT:=DateTime_Enter
+		$currentDT:=DateTime_DTTo
 		C_TEXT:C284(dtEpochCurrent)
 		
 		DateTimeDTEpoch("ToEpoch"; ->$currentDT; ->dtEpochCurrent)

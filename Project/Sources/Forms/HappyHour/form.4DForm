@@ -1,0 +1,209 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onSelectionChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"demo_lb": {
+					"type": "listbox",
+					"left": 41,
+					"top": 58,
+					"width": 480,
+					"height": 464,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.demo_lb.ents",
+					"listboxType": "collection",
+					"currentItemSource": "Form:C1466.demo_lb.cur",
+					"currentItemPositionSource": "Form:C1466.demo_lb.pos",
+					"selectedItemsSource": "Form:C1466.demo_lb.sel",
+					"method": "ObjectMethods/demo_lb.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.company"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.address1"
+						}
+					]
+				},
+				"company": {
+					"type": "input",
+					"left": 538,
+					"top": 96,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.company"
+				},
+				"company1": {
+					"type": "input",
+					"left": 538,
+					"top": 116,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.address1"
+				},
+				"company2": {
+					"type": "input",
+					"left": 538,
+					"top": 136,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.city"
+				},
+				"company3": {
+					"type": "input",
+					"left": 538,
+					"top": 156,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.state"
+				},
+				"company4": {
+					"type": "input",
+					"left": 538,
+					"top": 176,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.phone"
+				},
+				"company5": {
+					"type": "input",
+					"left": 538,
+					"top": 196,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.email"
+				},
+				"company6": {
+					"type": "input",
+					"left": 538,
+					"top": 216,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.action"
+				},
+				"company7": {
+					"type": "input",
+					"left": 538,
+					"top": 236,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.cur.actionBy"
+				},
+				"company8": {
+					"type": "input",
+					"left": 541,
+					"top": 268,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.company"
+				},
+				"company9": {
+					"type": "input",
+					"left": 541,
+					"top": 288,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.address1"
+				},
+				"company10": {
+					"type": "input",
+					"left": 541,
+					"top": 308,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.city"
+				},
+				"company11": {
+					"type": "input",
+					"left": 541,
+					"top": 328,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.state"
+				},
+				"company12": {
+					"type": "input",
+					"left": 541,
+					"top": 348,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.phone"
+				},
+				"company13": {
+					"type": "input",
+					"left": 541,
+					"top": 368,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.email"
+				},
+				"company14": {
+					"type": "input",
+					"left": 541,
+					"top": 388,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.action"
+				},
+				"company15": {
+					"type": "input",
+					"left": 541,
+					"top": 408,
+					"width": 251,
+					"height": 17,
+					"dataSource": "Form:C1466.demo_lb.entry_o.actionBy"
+				}
+			}
+		}
+	],
+	"method": "method.4dm",
+	"geometryStamp": 29,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

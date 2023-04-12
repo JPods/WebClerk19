@@ -1,1 +1,0 @@
-entryEntity.shipVia:=DE_PopUpArray(-><>aShipVia)

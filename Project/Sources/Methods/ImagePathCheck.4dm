@@ -44,7 +44,7 @@ For each ($obRec; $obSel)
 	$result_o:=$obRec.save()
 	$vtReport:=$vtReport+$obRec.itemNum+"\t"+$obRec.imagePath+"\t"+String:C10($obRec.indicator4)
 	$vtReport:=$vtReport+"\t"+$obRec.imagePathTn+"\t"+String:C10($resultTN)+"\r"
-	ConsoleMessage($obRec.itemNum+": Image: "+String:C10($resultImage)+": TN: "+String:C10($obRec.indicator5))
+	ConsoleLog($obRec.itemNum+": Image: "+String:C10($resultImage)+": TN: "+String:C10($obRec.indicator5))
 End for each 
 SET TEXT TO PASTEBOARD:C523($vtReport)
 TEXT TO DOCUMENT:C1237(Storage:C1525.folder.jitExports+"ItemImagePath"+DateTime_RFCString+".txt"; $vtReport)

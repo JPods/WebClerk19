@@ -57,8 +57,8 @@ If (UserInPassWordGroup("MakePayment"))
 			End case 
 			If ($doPay)
 				//
-				If ([Invoice:26]autoFreight:32)
-					[Invoice:26]autoFreight:32:=False:C215
+				If ([Invoice]shipAuto)
+					[Invoice]shipAuto:=False:C215
 					SAVE RECORD:C53([Invoice:26])
 				End if 
 				//

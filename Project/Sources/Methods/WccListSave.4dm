@@ -89,7 +89,7 @@ If ($tableNum>0)
 							[TallyResult:73]tableNum:3:=$madeByTable
 							SAVE RECORD:C53([TallyResult:73])
 							//If ([TallyResult]DTCreated=0)
-							//[TallyResult]DTCreated:=DateTime_Enter 
+							//[TallyResult]DTCreated:=DateTime_DTTo 
 							//End if 
 						: ($tableName="Document")
 							[Document:100]customerID:7:=$madeBy

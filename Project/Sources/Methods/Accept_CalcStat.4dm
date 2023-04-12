@@ -83,7 +83,7 @@ Case of
 						[Order:3]status:59:="Completed"
 					End if 
 					If ([Order:3]dtProdCompl:57=0)
-						[Order:3]dtProdCompl:57:=DateTime_Enter
+						[Order:3]dtProdCompl:57:=DateTime_DTTo
 					End if 
 				End if 
 				If (allowAlerts_boo)
@@ -93,7 +93,7 @@ Case of
 				// ### bj ### 20181112_1906
 				[Order:3]dateInvoiceComp:6:=!00-00-00!
 				If (([Order:3]status:59="Completed") & ([Order:3]dtProdCompl:57=0))
-					[Order:3]dtProdCompl:57:=DateTime_Enter
+					[Order:3]dtProdCompl:57:=DateTime_DTTo
 				End if 
 				// Modified by: William James (2014-03-17T00:00:00 Subrecord eliminated)
 				//  [Order]DateShipOn:=!01/01/2001!   added and removed. This is used to project when something must ship on
