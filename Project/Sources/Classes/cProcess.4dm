@@ -179,9 +179,7 @@ Function _setSFEntry($dateClassName : Text; $parentForm_t : Text; $sfName_t : Te
 	End if 
 	
 	SF_cur:=cs:C1710.cEntry.new($dateClassName; $parentForm_t; $sfName_t)
-	SF_cur._setSubForm($entry_o)  // space between fields
-	//SF_cur._makeEntryChoices($entry_o)  // build the external popup
-	SF_cur.cur:=LB_DataBrowser.cur
+	
 	
 	
 	

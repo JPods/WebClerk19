@@ -93,10 +93,6 @@ Function saveEntity()->$failed : Boolean
 	
 	//MARK:-  build
 	
-Function _setSpacing()
-	// only do this when creating the entry form
-	This:C1470._setSpacing()
-	
 	
 Function _buildFromLayout()
 	subform_o:=This:C1470.data.views[This:C1470.view].layout
@@ -119,7 +115,10 @@ Function _buildFromString()
 	//This.cur:=LB_DataBrowser.cur
 	//End if 
 	
-	This:C1470.spacing.offSet:=0
+	//If 
+	//This.spacing.offSet:=0
+	//End if 
+	
 	For each ($field; $fields_c)
 		This:C1470.setLineEntry($field; $page)
 	End for each 
@@ -281,13 +280,14 @@ or pass in the entire form
 */
 	
 Function _setSubForm($options_o : Object)
-	
+	If (Undefined:C82(This:C1470.spacing.offSet))
+		This:C1470._setSpacing()
+	End if 
 	If (This:C1470.data.views[This:C1470.view].layout#Null:C1517)
 		// get rid of subform_o
 		This:C1470._buildFromLayout()
 	Else 
 		This:C1470._buildFromString()
-		
 	End if 
 	
 Function setLineEntry($field : Text; $page : Object)

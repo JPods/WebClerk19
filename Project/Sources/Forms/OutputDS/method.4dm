@@ -62,12 +62,12 @@ Case of
 		// why entry_o is lost is unclear
 		// must be here to populate the variable onLoad, do the same onClick
 		// this should be a class behavior
-		var entrySF : cs:C1710.cEntry
-		entrySF:=cs:C1710.cEntry.new()
-		entrySF.entry_o:=process_o.entry_o
+		var SF_cur : cs:C1710.cEntry
+		SF_cur:=cs:C1710.cEntry.new()
+		SF_cur.entry_o:=process_o.entry_o
 		
 		entry_o:=process_o.entry_o
-		entrySF._getRelated()
+		SF_cur._getRelated()
 		
 		// process_o.dataClassName+"; Selection: "+String(process_o.ents)+"; Entry: "+entry_o.humanKey
 		//setup to drag between listboxes

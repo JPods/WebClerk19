@@ -27,7 +27,10 @@ Case of
 		
 		process_o._setSFEntry(process_o.dataClassName; Current form name:C1298; "SF_cur")
 		// build the entry form
+		// mist set spacing 
 		//SF_cur._setSpacing()
+		SF_cur._setSubForm($entry_o)  // space between fields
+		SF_cur.cur:=LB_DataBrowser.cur
 		
 End case 
 

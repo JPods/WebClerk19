@@ -33,7 +33,7 @@ Case of
 		//End if 
 		//entry_o:=OBJECT Get subform container value
 		entry_o:=process_o.entry_o
-		entrySF._getRelated()
+		SF_cur._getRelated()
 		var $instanceOf : Variant
 		$instanceOf:=OB Instance of:C1731(entry_o)
 		

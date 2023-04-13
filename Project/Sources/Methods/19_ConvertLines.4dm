@@ -10,8 +10,11 @@ If ($dataClassName#"")
 	
 	var $rec_e; $sel_e; $recLine_e; $selLine_e : Object
 	$sel_e:=ds:C1482[$dataClassName].all()
+	
+	
 	For each ($rec_e; $sel_e)
-		$rec_e.lines:=New object:C1471
+		
+		
 		
 	End for each 
 Else 
