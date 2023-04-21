@@ -32,14 +32,14 @@ End if
 
 CREATE RECORD:C68([Profile:59])
 
-[Profile:59]tableNum:1:=$tableNum
-[Profile:59]DocNumID:2:=$id
-[Profile:59]DocAlphaID:3:=$alpha
-[Profile:59]Name:4:=$name
-[Profile:59]Value:5:=$value
-[Profile:59]Seq:11:=$seq
+[Profile:59]tableName:1:=Table name:C256($tableNum)
+[Profile:59]idNumForeign:2:=$id
+[Profile:59]idForeign:3:=$alpha
+[Profile:59]name:4:=$name
+[Profile:59]value:5:=$value
+[Profile:59]seq:11:=$seq
 // [Profile]TextValue
 SAVE RECORD:C53([Profile:59])
-$0:=[Profile:59]idUnique:9
+$0:=[Profile:59]idNum:9
 UNLOAD RECORD:C212([Profile:59])
 

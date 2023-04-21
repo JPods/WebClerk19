@@ -16,13 +16,22 @@ process_o:=$o
 
 var $obWindows : Object
 $obWindows:=WindowCountToShow
-var $window_i : Integer
+//var $window_i : Integer
 
+//$window_i:=Open form window(\
+process_o.dialog; \
+Plain form window; \
+$obWindows.leftOffset; \
+53+$obWindows.topOffset)
+
+var $leftOS; $topOS : Integer
+$leftOS:=$obWindows.leftOffset
+$topOS:=53+$obWindows.topOffset
 $window_i:=Open form window:C675(\
 process_o.dialog; \
 Plain form window:K39:10; \
-$obWindows.leftOffset; \
-53+$obWindows.topOffset)
+$leftOS; \
+$topOS)
 
 //$window_i:=Open form window(\
 process_o.dialog; \

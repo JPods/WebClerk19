@@ -33,32 +33,32 @@ For each ($rec_o; $sel_o)
 	For each ($rec_ol; $sel_ol)
 		$cnt:=$cnt+1
 		var $ln_o : Object
-		$ln_o:=New object:C1471(\
+		//$ln_o:=New object(\
 			"seq"; $cnt; \
 			"lineNum"; $cnt; \
-			"date"; New object:C1471(\
+			"date"; New object(\
 			"document"; !00-00-00!; \
-			[OrderLine:49]dateProcessed:59; !00-00-00!; \
-			[OrderLine:49]dateRequired:23; !00-00-00!; \
-			[OrderLine:49]dateShipOn:38; !00-00-00!; \
-			[OrderLine:49]dateShipped:39; !00-00-00!; \
-			"source"; New object:C1471(\
-			"vendor"; New object:C1471(\
+			"dateProcessed"; !00-00-00!"; "+\
+			""dateRequired"; !00-00-00!"; \
+			"dateShipOn"; !00-00-00!"; "+\
+			""dateShipped"; !00-00-00!"; \
+			"source"; New object(\
+			"vendor"; New object(\
 			"id"; $rec_ol["vendorID"]; \
 			"itemNum"; $rec_ol["itemNumAlt"]); \
-			"mfr"; New object:C1471(\
+			"mfr"; New object(\
 			"id"; $rec_ol["mfrID"]; \
 			"itemNum"; $rec_ol["itemNumAlt"])); \
-			"location"; New object:C1471("num"; 0; "bin"; ""; \
-			"latlng"; Null:C1517; "warehouse"; ""; \
+			"location"; New object("num"; 0; "bin"; ""; \
+			"latlng"; Null; "warehouse"; ""; \
 			"siteID"; "siteID"); \
-			"po"; Null:C1517; \
-			"proposal"; Null:C1517; \
-			"serial"; Null:C1517; \
-			"history"; Null:C1517; \\
-			"profile"; New object:C1471("type"; $rec_ol.typeItem; \
+			"po"; Null; \
+			"proposal"; Null; \
+			"serial"; Null; \
+			"history"; Null; \\
+			"profile"; New object("type"; $rec_ol.typeItem; \
 			"class"; $rec_ol.class); \
-			"tax"; New object:C1471("juris"; $rec_ol.taxJuris))
+			"tax"; New object("juris"; $rec_ol.taxJuris))
 		
 		
 		For each ($property; $dc)

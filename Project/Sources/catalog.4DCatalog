@@ -7,7 +7,7 @@
 		<field name="keyName" uuid="EA5F6279553A47CEB955EB319FAF2BDD" type="10" limiting_length="25" never_null="true" id="2"/>
 		<field name="obDetails" uuid="AE6D2C1D191C4D96BA2981179DE6CC99" type="21" blob_switch_size="2147483647" never_null="true" id="3"/>
 		<field name="dateActivated" uuid="04ADE74475E743DF9ACB681085B65F98" type="8" never_null="true" id="4"/>
-		<field name="dtActivated" uuid="7E285CC805BC4A3395CEF235034A1BF0" type="4" never_null="true" id="5"/>
+		<field name="obSync" uuid="7E285CC805BC4A3395CEF235034A1BF0" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
 		<field name="dtLastSync" uuid="7050E70A014D410C9B2A5A64899C5E48" type="4" never_null="true" id="6"/>
 		<field name="idNum" uuid="BC30578AC8084D44968DBE9CB73E60D8" type="4" autosequence="true" never_null="true" id="7">
 			<field_extra>
@@ -2170,21 +2170,11 @@
 		<field name="dateDocument" uuid="4B952ABD18414C569C5A9E3E56223367" type="8" never_null="true" id="14"/>
 		<field name="division" uuid="00A8C096A08B4F97BE7E83297F22CA24" type="4" never_null="true" id="15"/>
 		<field name="dtLastSync" uuid="DCE675E1FD02495B92765E70C11EDBBA" type="4" never_null="true" id="16"/>
-		<field name="rs10" uuid="896CE57C7F2F4E569F26DC1839FED949" type="1" never_null="true" id="17"/>
-		<field name="rs11" uuid="5AB015C8A04C4D059615C9C01C8B8ACA" type="1" never_null="true" id="18"/>
-		<field name="rs12" uuid="04E2CF94410E43149C9DDDE25CC0805C" type="1" never_null="true" id="19"/>
-		<field name="rs13" uuid="FAF9EEA3BF434F17B9394C5BDDCC3158" type="1" never_null="true" id="20"/>
-		<field name="rs14" uuid="9C303B0DC714470FA13845174D2C7EC3" type="1" never_null="true" id="21"/>
-		<field name="rs15" uuid="B5247A009EEB4BF0AFA93DC8A0FE614F" type="1" never_null="true" id="22"/>
-		<field name="rs16" uuid="203ACAA672DC42E9A5AD907FE9993650" type="1" never_null="true" id="23"/>
-		<field name="rs17" uuid="E26C2DA2F7294076A9F6E28F74DAF8F0" type="1" never_null="true" id="24"/>
-		<field name="rs18" uuid="C5220613478B45149F418DD462EE10AF" type="1" never_null="true" id="25"/>
-		<field name="rs19" uuid="BEACB3E200FE4696BFE1B1637E3AA451" type="1" never_null="true" id="26"/>
 		<field name="obGeneral" uuid="9B9072BB06AA4603B51B22F42B64DEDB" type="21" never_null="true" id="27"/>
 		<field name="id" uuid="AD233BA5DC754B91AEAC7AEEAEAEE73A" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="28"/>
-		<field name="idCustomer" uuid="AC170449A869432BA31AD77AF99D8621" type="10" autogenerate="true" store_as_UUID="true" never_null="true" id="29"/>
-		<field name="idInvoice" uuid="51E86D0D0F564AF698F49078D583C7B9" type="10" autogenerate="true" store_as_UUID="true" never_null="true" id="30"/>
-		<field name="idPayment" uuid="3EC8A9C821E84513B8CA953EAAF25666" type="10" autogenerate="true" store_as_UUID="true" never_null="true" id="31"/>
+		<field name="idNumCustomer" uuid="AC170449A869432BA31AD77AF99D8621" type="4" autogenerate="true" never_null="true" id="29"/>
+		<field name="idNumInvoice" uuid="51E86D0D0F564AF698F49078D583C7B9" type="4" autogenerate="true" never_null="true" id="30"/>
+		<field name="idNumPayment" uuid="3EC8A9C821E84513B8CA953EAAF25666" type="4" autogenerate="true" never_null="true" id="31"/>
 		<primary_key field_name="id" field_uuid="AD233BA5DC754B91AEAC7AEEAEAEE73A"/>
 		<table_extra input_form="Input" output_form="Output">
 			<editor_table_info displayable_fields_count="33">
@@ -5859,11 +5849,13 @@
 		</field>
 		<field name="comment" uuid="B10657E7F444436384CC34E145B27206" type="10" never_null="true" id="13"/>
 		<field name="used" uuid="D30407C697674D8993CD7406DF0D70B6" type="4" never_null="true" id="14"/>
+		<field name="form" uuid="28EE6333498741D19DBF55218C207761" type="10" limiting_length="80" never_null="true" id="15"/>
+		<field name="subForm" uuid="3DE0C749092340FDAA5AA089BD7A9F98" type="10" limiting_length="80" never_null="true" id="16"/>
 		<primary_key field_name="id" field_uuid="37A08B53071A4927A281CC81254AFD87"/>
 		<table_extra input_form="Input" output_form="Output">
-			<editor_table_info displayable_fields_count="15">
+			<editor_table_info displayable_fields_count="18">
 				<color red="0" green="0" blue="0" alpha="0"/>
-				<coordinates left="2230.5956115722" top="823.2197265625" width="259" height="365.12976074219"/>
+				<coordinates left="2227.3377990722" top="755.3564453125" width="259" height="425.12585449219"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -5925,25 +5917,23 @@
 	</table>
 	<table name="Archive" uuid="9C0D3811BB844E7382C51035B20D0F27" id="97">
 		<field name="TableName" uuid="FE92412A5F0D4FDE893D6D765FDBD516" type="10" limiting_length="80" never_null="true" id="1"/>
-		<field name="tableNum" uuid="61132D09444A4169BC8420A0E556E5D8" type="4" never_null="true" id="2">
+		<field name="dateClassName" uuid="61132D09444A4169BC8420A0E556E5D8" type="10" limiting_length="80" never_null="true" id="2">
 			<field_extra multi_line="false"/>
 		</field>
-		<field name="old" uuid="FEFCF8255A0848ADB53560E4C986036C" type="21" blob_switch_size="2147483647" never_null="true" id="3"/>
-		<field name="other" uuid="2D70EE085FFA488BB7CCC8FD6866360E" type="21" blob_switch_size="2147483647" never_null="true" id="4" hide_in_REST="true"/>
-		<field name="rs5" uuid="F21EAD7303CB4B549CC67C1976840E52" type="1" never_null="true" id="5"/>
+		<field name="obHistory" uuid="FEFCF8255A0848ADB53560E4C986036C" type="21" blob_switch_size="2147483647" never_null="true" id="3"/>
+		<field name="obSync" uuid="2D70EE085FFA488BB7CCC8FD6866360E" type="21" blob_switch_size="2147483647" never_null="true" id="4" hide_in_REST="true"/>
+		<field name="status" uuid="F21EAD7303CB4B549CC67C1976840E52" type="10" limiting_length="80" never_null="true" id="5"/>
 		<field name="dtDocument" uuid="F9C4AE1F46CA471D9B1783E2912B228C" type="4" never_null="true" id="6"/>
-		<field name="idDoc" uuid="E5AF915039884180AB7C7C59EA2BE400" type="10" store_as_UUID="true" never_null="true" id="7"/>
-		<field name="rs1" uuid="FC3F8F14DC664E318350D2293E416041" type="1" never_null="true" id="8"/>
-		<field name="rs2" uuid="5D30F6DB71C94576ACE332BEB36686CC" type="1" never_null="true" id="9"/>
+		<field name="idNumForeign" uuid="E5AF915039884180AB7C7C59EA2BE400" type="4" never_null="true" id="7"/>
+		<field name="dtLastSync" uuid="FC3F8F14DC664E318350D2293E416041" type="4" never_null="true" id="8"/>
+		<field name="idForeign" uuid="5D30F6DB71C94576ACE332BEB36686CC" type="10" store_as_UUID="true" never_null="true" id="9"/>
 		<field name="id" uuid="C9073FFAAE2E4A12BCF3231C312969D8" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="10"/>
-		<field name="rs3" uuid="4D7A269D05964BA29B78BFE757B92F36" type="1" never_null="true" id="11"/>
 		<field name="obGeneral" uuid="82F071582A954683AC05442A6AEC8E7D" type="21" blob_switch_size="2147483647" never_null="true" id="12"/>
-		<field name="rs4" uuid="747B1D84C3944DD3B68DD036851BFDFD" type="1" never_null="true" id="13"/>
 		<primary_key field_name="id" field_uuid="C9073FFAAE2E4A12BCF3231C312969D8"/>
 		<table_extra input_form="Input" output_form="Output">
 			<editor_table_info displayable_fields_count="14">
 				<color red="0" green="0" blue="0" alpha="0"/>
-				<coordinates left="6260.2319335938" top="1832.2969970703" width="184" height="349.15948486328"/>
+				<coordinates left="6314.9194335938" top="2184.3673095703" width="184" height="349.15948486328"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -6384,11 +6374,12 @@
 			<field_extra modifiable="false"/>
 		</field>
 		<field name="obGeneral" uuid="EA6371B92AD748C2A44C5457EC9D1CBD" type="21" never_null="true" id="9"/>
+		<field name="obSync" uuid="47D2C6A240BB41089FAFB928A5DBCC12" type="21" blob_switch_size="2147483647" never_null="true" id="10"/>
 		<primary_key field_name="id" field_uuid="27FE4335B0654DB3B439A63D7F9B8C83"/>
 		<table_extra input_form="Input" output_form="Output">
-			<editor_table_info displayable_fields_count="9">
+			<editor_table_info displayable_fields_count="10">
 				<color red="0" green="0" blue="0" alpha="0"/>
-				<coordinates left="157.33630371094" top="28.188720703125" width="144" height="244.94140625"/>
+				<coordinates left="157.33630371094" top="28.188720703125" width="144" height="262.453125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -13693,6 +13684,11 @@
 			<table_ref uuid="164F9DEC9BB74C62B6D866405CC06578" name="Vendor"/>
 		</field_ref>
 	</index>
+	<index kind="regular" uuid="B5888C0ED5574787966676BC82C7C402" type="7">
+		<field_ref uuid="3DE0C749092340FDAA5AA089BD7A9F98" name="subForm">
+			<table_ref uuid="8788D173D1E9425CA79EB163281D52B9" name="FC"/>
+		</field_ref>
+	</index>
 	<index kind="regular" uuid="B595DB5EA41B49AA9FF229DBA99455AA" type="7">
 		<field_ref uuid="9667FEB4FEB54866B566BE67C5159A1A" name="idNum">
 			<table_ref uuid="D94BA4F8353C4AD29F3750237B83BBFB" name="zzzGenericPC2"/>
@@ -14531,6 +14527,11 @@
 	<index kind="regular" uuid="D6633A6B661E4BEC9FFD81F4B78BA2D9" type="7">
 		<field_ref uuid="498DE814442B49D89F0078271F720DBA" name="linkedAcct">
 			<table_ref uuid="4CC1B75D4A244A25AE120FF4B7CC19C6" name="CashJournal"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D68DBC8BFC9B41A9AB87B21AB44E0366" type="7">
+		<field_ref uuid="28EE6333498741D19DBF55218C207761" name="form">
+			<table_ref uuid="8788D173D1E9425CA79EB163281D52B9" name="FC"/>
 		</field_ref>
 	</index>
 	<index kind="regular" uuid="D6C986AC8E4D482282AF4A2366A1CCAB" type="7">

@@ -22,9 +22,9 @@ C_TEXT:C284($4)
 
 If ($1=-9)
 	If (($3#1) | ($4#""))
-		QUERY:C277([Profile:59]; [Profile:59]tableNum:1=$2; *)
+		QUERY:C277([Profile:59]; [Profile:59]tableName:1=$2; *)
 		If ($4="")
-			QUERY:C277([Profile:59]; [Profile:59]docNumID:2=$3)
+			QUERY:C277([Profile:59]; [Profile:59]idNumForeign:2=$3)
 		Else 
 			QUERY:C277([Profile:59]; [Profile:59]idForeign:3=$4)
 		End if 
@@ -49,18 +49,18 @@ Case of
 	: ($1=-5)  //Save the changes
 		// ### bj ### 20181212_2147
 		// fix this to get rid of selection to array
-		QUERY:C277([Profile:59]; [Profile:59]tableNum:1=$2; *)
+		QUERY:C277([Profile:59]; [Profile:59]tableName:1=$2; *)
 		If ($4="")
-			QUERY:C277([Profile:59]; [Profile:59]docNumID:2=$3)
+			QUERY:C277([Profile:59]; [Profile:59]idNumForeign:2=$3)
 		Else 
 			QUERY:C277([Profile:59]; [Profile:59]idForeign:3=$4)
 		End if 
 		If (Records in selection:C76([Profile:59])>Size of array:C274(aProOrName))
 			REDUCE SELECTION:C351([Profile:59]; Records in selection:C76([Profile:59])-Size of array:C274(aProOrName))
 			DELETE SELECTION:C66([Profile:59])
-			QUERY:C277([Profile:59]; [Profile:59]tableNum:1=$2; *)
+			QUERY:C277([Profile:59]; [Profile:59]tableName:1=$2; *)
 			If ($4="")
-				QUERY:C277([Profile:59]; [Profile:59]docNumID:2=$3)
+				QUERY:C277([Profile:59]; [Profile:59]idNumForeign:2=$3)
 			Else 
 				QUERY:C277([Profile:59]; [Profile:59]idForeign:3=$4)
 			End if 
@@ -74,7 +74,7 @@ Case of
 			$aDocNum{$i}:=$3
 			$aAcct{$i}:=$4
 		End for 
-		ARRAY TO SELECTION:C261(aProOrName; [Profile:59]name:4; aProOrValue; [Profile:59]value:5; $aFileNum; [Profile:59]tableNum:1; $aDocNum; [Profile:59]docNumID:2; $aAcct; [Profile:59]idForeign:3; aProOrSeq; [Profile:59]seq:11)
+		//ARRAY TO SELECTION(aProOrName; [Profile]name; aProOrValue; [Profile]value; $aFileNum; [Profile]tableName; $aDocNum; [Profile]idNumForeign; $aAcct; [Profile]idForeign; aProOrSeq; [Profile]seq)
 	: ($1=-3)  //add a line, $2 for $3 lines    
 		//
 		INSERT IN ARRAY:C227(aProOrName; $2; $3)  //name rays

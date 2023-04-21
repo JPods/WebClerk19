@@ -34,8 +34,8 @@ Case of
 		//entry_o:=OBJECT Get subform container value
 		entry_o:=process_o.entry_o
 		SF_cur._getRelated()
-		var $instanceOf : Variant
-		$instanceOf:=OB Instance of:C1731(entry_o)
+		//var $isObject_b : Boolean
+		//$isObject_b:=OB Instance of(entry_o;)
 		
 	: (Form event code:C388=On Load:K2:1)
 		// 
@@ -95,14 +95,14 @@ Case of
 		//var $o : Object
 		//var $filter_c : Collection
 		//$filter_c:=Split string("itemNum;itemNumAlt;qty;"+\
-																																																			"qtyShipped;qtyBackLogged;qtyCancelled;complete;description;typeSale;"+\
-																																																			"unitPrice;discount;extendedPrice;printNot;seq;locationBin;status;producedBy;"+\
-																																																			"dateRequired;dateShipOn;dateShipped;repID;salesNameID;company;"+\
-																																																			"backOrdAmount;unitCost;extendedCost;taxJuris;salesTax;commRep;"+\
-																																																			"commSales;commRateSales;commRateRep;commRep;commSales;"+\
-																																																			"unitofMeasure;unitWt;extendedWt;location;serialRc;serialNum;comment;"+\
-																																																			"lineProfile1;lineProfile2;lineProfile3;taxCost;discountedPrice;typeItem;class;"+\
-																																																			"profile1;profile2;profile3;profile4;division;vendorID;mfrID"; ";")
+																																																						"qtyShipped;qtyBackLogged;qtyCancelled;complete;description;typeSale;"+\
+																																																						"unitPrice;discount;extendedPrice;printNot;seq;locationBin;status;producedBy;"+\
+																																																						"dateRequired;dateShipOn;dateShipped;repID;salesNameID;company;"+\
+																																																						"backOrdAmount;unitCost;extendedCost;taxJuris;salesTax;commRep;"+\
+																																																						"commSales;commRateSales;commRateRep;commRep;commSales;"+\
+																																																						"unitofMeasure;unitWt;extendedWt;location;serialRc;serialNum;comment;"+\
+																																																						"lineProfile1;lineProfile2;lineProfile3;taxCost;discountedPrice;typeItem;class;"+\
+																																																						"profile1;profile2;profile3;profile4;division;vendorID;mfrID"; ";")
 		
 		
 		// OBJECT SET SUBFORM(*; "SF_Lines"; "OrderLine"; LB_OrderLine.data)

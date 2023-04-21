@@ -34,5 +34,5 @@ Else
 	End if 
 	//every cycle
 	
-	booAccept:=(([Profile:59]tableNum:1#0) | ([Profile:59]DocAlphaID:3#""))
+	booAccept:=(([Profile:59]tableName:1#"") | ([Profile:59]idForeign:3#""))
 End if 

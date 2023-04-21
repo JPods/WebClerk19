@@ -10,13 +10,13 @@ $Source:=$3
 
 CREATE RECORD:C68([Profile:59])
 
-[Profile:59]tableNum:1:=Table:C252(->[Proposal:42])
-[Profile:59]DocNumID:2:=[Proposal:42]proposalNum:5
-[Profile:59]DocAlphaID:3:=""
-[Profile:59]Name:4:=$Name
-[Profile:59]Value:5:=$Value
-[Profile:59]TextValue:6:=$Value
-[Profile:59]Source:7:=$Source
-[Profile:59]LineNum:8:=0
-[Profile:59]Copy:10:=<>ciPrCpyYes
+[Profile:59]tableName:1:=Table name:C256(->[Proposal:42])
+[Profile:59]idNumForeign:2:=[Proposal:42]idNum:5
+[Profile:59]idForeign:3:=""
+[Profile:59]name:4:=$Name
+[Profile:59]value:5:=$Value
+[Profile:59]textValue:6:=$Value
+[Profile:59]source:7:=$Source
+[Profile:59]lineNum:8:=0
+[Profile:59]copy:10:=<>ciPrCpyYes
 SAVE RECORD:C53([Profile:59])

@@ -61,7 +61,7 @@ If (Count parameters:C259>=4)
 	viType:=Type:C295(vpField->)
 	
 	QUERY:C277([Profile:59]; [Profile:59]idForeign:3=vtDocID; *)
-	QUERY:C277([Profile:59];  & ; [Profile:59]tableNum:1=viTableNum; *)
+	QUERY:C277([Profile:59];  & ; [Profile:59]tableName:1=viTableNum; *)
 	QUERY:C277([Profile:59];  & ; [Profile:59]name:4=vtName; *)
 	QUERY:C277([Profile:59];  & ; [Profile:59]value:5=vtValue; *)
 	QUERY:C277([Profile:59])
@@ -86,9 +86,9 @@ If (Count parameters:C259>=4)
 		
 		// Create Profile Record
 		CREATE RECORD:C68([Profile:59])
-		[Profile:59]tableNum:1:=viTableNum
+		[Profile:59]tableName:1:=Table name:C256(viTableNum)
 		If (viType=Is longint:K8:6)
-			[Profile:59]docNumID:2:=Num:C11(vtDocID)  // Secondary field
+			[Profile:59]idNumForeign:2:=Num:C11(vtDocID)  // Secondary field
 		End if 
 		[Profile:59]idForeign:3:=vtDocID  // Primary Field
 		[Profile:59]name:4:=vtName
